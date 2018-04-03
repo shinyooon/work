@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 민다 국내 모바일 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="skip--hidden">
+		<a class="skip__link" href="#container">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="trip"><!-- 트립 관련 페이지에서느 class="trip 추가" -->
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="header__wrap">
+				<h1 class="header__tit">알림 내역</h1>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- alram -->
+				<div class="alram">
+					<ul class="alram__list">
+						<li class="alram__item alram__item--yet">
+							<a href="" class="alram__link">
+								<div class="alram__info">
+									<span class="alram__date">2017-08-08 13:18</span>
+									<p class="alram__tit">[예약확정] – 2017년 9월 15일 , 파리 에펠타워 보러가기, 2개</p>
+								</div>
+							</a>
+						</li>
+						<li class="alram__item alram__item">
+							<a href="" class="alram__link">
+								<div class="alram__info">
+									<span class="alram__date">2017-08-08 13:18</span>
+									<p class="alram__tit">[예약확정] – 2017년 9월 30일 , 파리 에펠타워 보러가기, 1개</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="pagination">
+						<button type="button" class="pagination__prev"><span class="pagination__icon-prev">이전</span></button>
+						<span class="pagination__cnt">
+							<span class="pagination__now">1</span><span class="pagination__total">/8</span>
+						</span>
+						<button type="button" class="pagination__prev"><span class="pagination__icon-next">다음</span></button>
+					</div>
+					<div class="alram__btm alram__btm--fixed">
+						<div class="btn-wrap"><button type="button" class="alram__btn-check">모두 읽음</button></div>
+					</div>
+				</div>
+				<!--// alram -->
+			</div>
+			<!--// contents -->
+		</div>
+		<!-- //container -->
+		<nav class="fnb">
+			<ul class="fnb__nav">
+				<li class="fnb__item is-active"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--4"></span><span class="fnb__txt">알림</span></a></li>
+				<li class="fnb__item"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--5"></span><span class="fnb__txt">더보기</span></a></li>
+			</ul>
+		</nav>
+		<!-- Footer -->
+		<footer id="footer">
+		</footer>
+		<!--// Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- ly -->
+	<div class="ly ly--full is-fade ly-notice">
+		<!-- ly__wrap -->
+		<div class="ly__wrap">
+			<!-- ly__con -->
+			<div class="ly__con">
+				<!-- ly__body -->
+				<div class="ly__body ly__body--fixed">
+					<div class="ly__trip-notice">
+						<h1 class="ly__trip-tit">현재 트립 관리 <br /> 모드에서는 <br /> 알림 기능만<br /> 제공하고 있습니다.</h1>
+						<p class="ly__trip-txt"><strong class="ly__trip-txt--point">예약 상세내역</strong>은 <strong class="ly__trip-txt--point">PC에서</strong> <br /><strong class="ly__trip-txt--point">확인 가능</strong>합니다. <br /><br />빠른 시일 내에 트립 관리 서비스를 <br />제공할 수 있도록 하겠습니다.<br /><br />고맙습니다. </p>
+					</div>
+				</div>
+				<!--// ly__body -->
+				<!-- ly__btm -->
+				<div class="ly__btm">
+					<div class="btn-group">
+						<div class="btn-wrap"><button type="button" class="ly-notice__btn ly-coach__btn-never">다시보지 않기</button></div>
+						<div class="btn-wrap"><button type="button" class="ly-notice__btn ly-coach__btn-clse">닫기</button></div>
+					</div>
+				</div>
+				<!--// ly__btm -->
+			</div>
+			<!--// ly__con -->
+		</div>
+		<!--// ly__wrap -->
+	</div>
+	<!--// ly -->
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/jquery.comiseo.daterangepicker.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript" src="js/Layer.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var ly_notice = new Layer($('.ly-notice'));
+			ly_notice.open();
+			$('.ly-coach__btn-clse,.ly-coach__btn-never').click(function(){
+				ly_notice.close();
+			})
+		})
+	</script>
+</body>
+
+</html>

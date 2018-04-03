@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master"><!-- [D] 숙소주홈 class="master" -->
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="hd_top">
+			<div class="w1260 clearfix">
+				<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_big.png" alt="MINDA 파트너홈"></a></h1>
+				<nav class="d_iblock nav-center">
+					<ul class="clearfix">
+						<li><a href="" class="active">숙소</a></li>
+						<li><a href="">여행정보</a></li>
+						<li><a href="">여행상품</a></li>
+					</ul>
+				</nav>
+				<div class="hd_side">
+					<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+
+<!-- 페이지시작 -->
+
+<div class="content w1260">
+	<aside class="content_aside">
+		<nav class="snb snb-lg">
+			<ul>
+				<li class="active"><a href="">스팟</a></li>
+				<li><a href="">일정</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- 컨텐츠 영역 -->
+	<div class="content_body admin_room_wrp clearfix">
+		<div class="body_tit clearfix">
+			<p class="pull-left fs14"><b class="color_red">*</b> 표시는 필수 입력항목입니다.</p>
+		</div>
+		<form>
+			<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">회사정보 입력양식</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">위치확인 <b class="color_red">*</b></th>
+					<td>
+						<p>[D] 주석확인해주세요!</p>
+						<!-- 검색전 -->
+						<div class="row">
+							<div class="col-xs-11 pr10">
+								<input type="text" class="form-control-basic" title="위치확인">
+							</div>
+							<div class="col-xs-1">
+								<button type="button" class="btn btn-block bg_blk">검색</button>
+							</div>
+						</div>
+						<!-- 검색후 -->
+						<a class="color_mint" href="#"><u>다시 검색하기</u></a>
+					</td>
+				</tr>
+				<!-- 지도입력 -->
+				<tr class="admin_map" style="display:table-row">
+					<td colspan="2">
+						<img class="img-responsive" src="_temp/map.jpg" alt="">
+						<div class="map_tit clearfix">
+							<div class="pull-right">
+								생성하려고 하는 스팟과 위치
+								<button type="button" class="btn btn_border_wh ml10">확인완료</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">주소 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" title="주소" readonly>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">스팟명(한글) <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" title="스팟명(한글)">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">스팟명(현지어)</th>
+					<td>
+						<input type="text" class="form-control-basic" title="스팟명(현지어)">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">카테고리 <b class="color_red">*</b></th>
+					<td>
+						<label class="inline-radio radio_label mb0">
+							<input type="radio" name="radio"> 명소
+						</label>
+						<label class="inline-radio radio_label mb0 ml25">
+							<input type="radio" name="radio"> 맛집
+						</label>
+						<label class="inline-radio radio_label mb0 ml25">
+							<input type="radio" name="radio"> 쇼핑
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">스팟유형 <b class="color_red">*</b></th>
+					<td>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">숙소 근처 스팟
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">추천 스팟
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">숙소에서 <b class="color_red">*</b></th>
+					<td>
+						<label class="inline-radio radio_label mb0">
+							<input type="radio" name="radio2"> 대중교통
+						</label>
+						<label class="inline-radio radio_label mb0 ml25">
+							<input type="radio" name="radio2"> 자동차
+						</label>
+						<label class="inline-radio radio_label mb0 ml25 mr25">
+							<input type="radio" name="radio2"> 도보
+						</label>
+						로
+						<input type="text" class="form-control-basic wid_xs ml5">
+						<select class="form-control-basic wid_xs ml5">
+							<option>분</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">대표사진 <b class="color_red">*</b></th>
+					<td class="upload_img_lst">
+						<ul class="color_mint lst_type_star">
+							<li>이 스팟의 대표 사진을 첨부해주세요.</li>
+						</ul>
+						<label><!-- 0810 추가 -->
+							<input type="file" class="sr-only">
+							<span class="btn bg_mint mt5">이미지 불러오기</span>
+						</label>
+						<div class="pr">
+							<div class="tooltip tooltip_alone top" role="tooltip" style="top:-70px;left:0">
+								<div class="tooltip-arrow" style="left:110px"></div>
+								<div class="tooltip-inner">스팟유형, 숙소에서의 거리, 사진, 추천이유를 입력하시면 나의 사업자 페이지에서는 내가 입력한 내용만 나오므로 꼭 입력하시길 권장합니다.</div>
+								<button type="button" class="no_style" onClick="$(this).parent().fadeOut();" title="닫기">&times;<span class="sr-only">닫기</span></button>
+							</div>
+						</div>
+						<ul class="upload_img_lst row">
+							<li class="col-xs-3">
+								<a href="" class="tmb mainpic"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a><!-- [D] 대표사진에 mainpic 클래스 추가 -->
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="http://v2.theminda.com/manager/common/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">추천이유 <b class="color_red">*</b></th>
+					<td>
+						<textarea class="form-control-basic" rows="5" title="추천이유" placeholder="* 스팟에 대한 설명, 추천 이유를 입력해주세요."></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">영업시간</th>
+					<td>
+						<select class="form-control-basic wid_xs">
+							<option>오전</option>
+						</select>
+						<span class="d_iblock w75 pa5 pl10">몇 <b class="color_blk ml5">시~</b></span>
+						<select class="form-control-basic wid_xs">
+							<option>오후</option>
+						</select>
+						<span class="d_iblock w75 pa5 pl10">몇 <b class="color_blk ml5">시</b></span>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">상시운영(영업시간 없음)
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">소요시간</th>
+					<td>
+						<input class="form-control-basic wid_xs" placeholder="최소">
+						<span class="d_iblock w75 pa5 pl10"><b class="color_blk ml5">시간~</b></span>
+						<input class="form-control-basic wid_xs" placeholder="최대">
+						<span class="d_iblock w75 pa5 pl10"><b class="color_blk ml5">시간</b></span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">입장료(이용료)</th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="입장료(이용료)" placeholder="입장료 또는 이용료를 현지금액으로 입력해주세요.">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">홈페이지주소</th>
+					<td>
+						<input type="text" class="form-control-basic" placeholder="http://" title="홈페이지주소입력">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+			<div class="clearfix pt20 pb60">
+				<div class="pull-left">
+					<button type="submit" class="btn bg_blk w75">미리보기</button>
+				</div>
+				<div class="pull-right">
+						<div class="pr">
+							<div class="tooltip tooltip_alone top" role="tooltip" style="display:block;top:-80px;left:-40px">
+								<div class="tooltip-arrow" style="left:190px"></div>
+								<div class="tooltip-inner" style="width:230px"><span>$구분명$</span>이(가) 입력되지 않습니다.<br>입력 후 다시 저장해주시기 바랍니다.</div>
+							</div>
+						</div>
+					<button type="submit" class="btn bg_grey w75">저장</button>
+					<button type="submit" class="btn bg_org">저장 후 오픈 요청</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+		<a href="" class="split">숙소주 이용약관</a>
+		<a href="" class="split">숙소주 광고이용약관</a>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+<!--  스팟생성 -->
+<div id="createSpot" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal_admin">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<h1>스팟이 생성되어 있는지 확인한 후 진행하시기 바랍니다.</h1>
+		<div class="pa30">
+			<!-- Tab -->
+			<div class="room_detail_hd">
+				<p class="mb10">※ 도시 검색을 하시면 이미 생성되어 있는 스팟을 선택해 바로 사용하실 수 있습니다.</p>
+				<!-- 탭 -->
+				<ul class="basic_step2 tb_fixed">
+					<li class="active"><a href="">스팟명 검색</a></li>
+					<li><a href="">도시 검색</a></li>
+				</ul>
+			</div>
+			<form class="filterwrp row mt40">
+				<div class="col-sm-11 pr15">
+					<input type="text" class="form-control" placeholder="스팟명 또는 주소를 한글/영어/현지어 중 선택하여 입력해주세요.">
+				</div>
+				<div class="col-sm-1">
+					<button class="btn btn-block pt5 pb5 bg_grey fs16" type="submit">검색</button>
+				</div>
+			</form>
+			<!-- 없을 때 -->
+			<div class="no_spot v2">
+				<div>
+					<p>
+						스팟명을 검색하시기 바랍니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+</html>

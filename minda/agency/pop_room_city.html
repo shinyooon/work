@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<? include "inc/rev_form.html" ?>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- ly -->
+	<div class="ly full fade ly-rev">
+		<!-- ly__wrap -->
+		<div class="ly__wrap">
+			<!-- ly__header -->
+			<div class="ly__header">
+				<div class="tit-wrap--hidden">
+					<h1>예약 신청하기</h1>
+				</div>
+				<button type="button" class="modal__btn-clse ly__header__btn">
+					<span class="ly__header__icon">닫기</span>
+				</button>
+			</div>
+			<!--// ly__header -->
+			<!-- ly__con -->
+			<div class="ly__con">
+				<!-- ly__left -->
+				<div class="ly__left">
+					<!-- ly__left__header -->
+					<div class="ly__left__header">
+						<!--<button type="button" class="ly__btn-back"><span class="ly__icon-back"></span></button>-->
+						<!-- ly__tab -->
+						<div class="ly__tab">
+							<ul class="ly__tab-list">
+								<li class="ly__tab-item ly__tab-item--active">
+									<button type="button" class="ly__tab-btn">
+										<span class="ly__tab-icon ly__tab-icon--1"></span>
+										직접 예약하기
+									</button>
+								</li>
+								<li class="ly__tab-item">
+									<button type="button" class="ly__tab-btn">
+										<span class="ly__tab-icon ly__tab-icon--2"></span>
+										민다 추천받기
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!--// ly__tab -->
+					</div>
+					<!--// ly__left__header -->
+					<div class="ly__left__con">
+						<!-- srch-room -->
+						<div class="srch-room">
+							<div class="tit-wrap">
+								<h3 class="tit">도시선택</h3>
+								<div class="tit__right">
+									<div class="input__group">
+										<span class="input-wrap tit__input-srch">
+											<input type="text" title="고객 이름" placeholder="숙소 검색" />
+										</span>
+										<button type="button" class="tit__btn-srch">검색</button>
+									</div>
+								</div>
+							</div>
+							<!--srch-room__city-list  city-list-->
+							<dv class="citylist srch-room__citylist">
+								<!-- citylist__tab -->
+								<div class="citylist__tab">
+									<ul class="citylist__tab-list">
+										<li class="citylist__tab-item citylist__tab-item--active"><a href="#eroup1" class="citylist__tab-btn">서유럽</a></li>
+										<li class="citylist__tab-item"><a href="#eroup2" class="citylist__tab-btn">동북유럽</a></li>
+										<li class="citylist__tab-item"><a href="#asia" class="citylist__tab-btn">아시아</a></li>
+										<li class="citylist__tab-item"><a href="#america" class="citylist__tab-btn">미주</a></li>
+										<li class="citylist__tab-item"><a href="#pacific" class="citylist__tab-btn">남태평양</a></li>
+										<li class="citylist__tab-item"><a href="#africa" class="citylist__tab-btn">아프리카</a></li>
+										<li class="citylist__tab-item"><a href="#domestic" class="citylist__tab-btn">국내</a></li>
+									</ul>
+								</div>
+								<!--// citylist__tab -->
+								<!-- citylist__wrap -->
+								<div class="citylist__wrap">
+									<div id="eroup1" class="citylist__row citylist__row--active">
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">영국</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">런던<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">에딘버러<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">맨체스터<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">펜잔스<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">프랑스</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">파리<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">니스 <span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">칸<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">콜마르<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">클레르몽 페랑<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">엑상프로방스<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">몽펠리에<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">리옹<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">이탈리아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">로마<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">피렌체<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">베네치아<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">밀라노<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">나폴리<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">볼로냐<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">베로나<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">엠폴리<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">토리노<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">몰타</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">그지라 <span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">스위스</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">인터라켄<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">루체른<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">프리부르<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">오스트리아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">비엔나 <span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">잘츠부르크 <span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">벨기에</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">브뤼셀 <span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">리에주<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">겐트<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">스페인</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">바르셀로나<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">마드리드<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">세비야<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">그라나다<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">발렌시아<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">말라가<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">사라고사<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">빌바오<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">산탄데르<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">네덜란드</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">암스테르담 <span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">독일</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">뮌헨<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">프랑크푸르트<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">베를린<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">뒤셀도르프 <span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">쾰른<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">함부르크<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">뉘른베르크<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">슈투트가르트<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">브레멘<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">포르투갈</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">리스본<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+									</div>
+									<div id="eroup2" class="citylist__row">
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">체코</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">프라하<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">체스키크룸로프<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">헝가리</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">부다페스트<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">크로아티아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">자그레브<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">두브로브니크<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">스플리트<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">폴란드</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">브로츠와프<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">빌니우스<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">키예프<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">오스트리아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">비엔나 <span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">잘츠부르크 <span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">스웨덴</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">스톡홀름<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">러시아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">모스크바<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">상트페테르부르크<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">그리스</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">아테네<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">포르투갈</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">리스본<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+									</div>
+									<div id="asia" class="citylist__row">
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">일본</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">도쿄<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">오사카<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">교토<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">고베<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">나라<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">후쿠오카<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">유후인<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">기타큐슈<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">삿포로<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">오키나와<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">대마도<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">요코하마<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">중국</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">북경<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">상해<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">청도<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">광저우<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">연길<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">성도<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">위해<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">싼야<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">대만</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">타이페이<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">지우펀<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">가오슝<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">홍콩</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">홍콩<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">마카오</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">마카오<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">싱가폴</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">싱가폴<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">태국</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">방콕<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">파타야<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">치앙마이<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">베트남</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">호치민<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">라오스</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">비엔티안<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">캄보디아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">프놈펜<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">씨엠립<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">인도</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">뉴델리<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">첸나이<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">콜카타<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">방글라데시</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">다카<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">필리핀</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">마닐라<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">세부<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">말레이시아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">쿠알라룸푸르<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">인도네시아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">자카르타<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">발리<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">이란</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">테헤란<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">사우디아라비아</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">리야드<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">아랍에미리트</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">두바이<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">아부다비<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">카타르</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">도하<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+									</div>
+									<div id="america" class="citylist__row">
+										<div class="citylist__col">
+											<span class="citylist__continent">북미</span>
+											<div class="citylist__row">
+												<div class="citylist__col">
+													<dl class="citylist__country">
+														<dt class="citylist__country-name">미국</dt>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">뉴욕<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">LA<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">하와이<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">샌프란시스코<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">라스베가스<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">나파<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">보스턴<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">워싱턴<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">필라델피아<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">올랜도<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">샌디에고<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">포틀랜드<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">애틀랜타<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">미네아폴리스<span class="citylist__city-cnt">(101)</span></a></dd>
+													</dl>
+												</div>
+												<div class="citylist__col">
+													<dl class="citylist__country">
+														<dt class="citylist__country-name">캐나다</dt>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">토론토<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">밴쿠버<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">밴프<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">몬트리올<span class="citylist__city-cnt">(101)</span></a></dd>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">옐로나이프<span class="citylist__city-cnt">(101)</span></a></dd>
+													</dl>
+												</div>
+											</div>
+										</div>
+										<div class="citylist__col">
+											<span class="citylist__continent">중남미</span>
+											<div class="citylist__row">
+												<div class="citylist__col">
+													<dl class="citylist__country">
+														<dt class="citylist__country-name">브라질</dt>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">상파울루<span class="citylist__city-cnt">(101)</span></a></dd>
+													</dl>
+													<dl class="citylist__country">
+														<dt class="citylist__country-name">아르헨티나</dt>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">부에노스 아이레스<span class="citylist__city-cnt">(101)</span></a></dd>
+													</dl>
+													<dl class="citylist__country">
+														<dt class="citylist__country-name">칠레</dt>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">산티아고<span class="citylist__city-cnt">(101)</span></a></dd>
+													</dl>
+												</div>
+												<div class="citylist__col">
+													<dl class="citylist__country">
+														<dt class="citylist__country-name">온두라스</dt>
+														<dd class="citylist__city"><a href="" class="citylist__city-link">테구시갈파<span class="citylist__city-cnt">(101)</span></a></dd>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="pacific" class="citylist__row">
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">괌</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">괌<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">사이판</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">사이판<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">호주</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">시드니<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">멜버른<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">골드코스트<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">브리즈번<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">호바트<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">뉴질랜드</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">오클랜드<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">크라이스트처치<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">퀸스타운<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+									</div>
+									<div id="africa" class="citylist__row">
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">남아공</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">케이프타운<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">요하네스버그<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">케냐</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">나이로비<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">이집트</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">카이로<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">모로코</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">페스<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+									</div>
+									<!--// citylist__row -->
+									<div id="domestic" class="citylist__row">
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">서울&amp;수도권</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">인천<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">가평<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">용인<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">이천<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">강원도</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">강릉<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">양양<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">고성<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">동해<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">속초<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">경상도</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">부산<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">경주<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">거제<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">포항<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">통영<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">영덕<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">청도<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">함양<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">대구<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">안동<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">문경<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">전라도</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">전주<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">순천<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">광주<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">남원<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">김제<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">완도<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">완주<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">고흥<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">함평<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+										<div class="citylist__col">
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">충청도</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">당진<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">서산<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">보은<span class="citylist__city-cnt">(101)</span></a></dd>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">공주<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+											<dl class="citylist__country">
+												<dt class="citylist__country-name">제주도</dt>
+												<dd class="citylist__city"><a href="" class="citylist__city-link">제주<span class="citylist__city-cnt">(101)</span></a></dd>
+											</dl>
+										</div>
+									</div>
+									<!--// citylist__row -->
+								</div>
+								<!--// citylist__wrap -->
+							</dv>
+							<!--// srch-room__city-list  city-list-->
+						</div>
+						<!--// srch-room -->
+					</div>
+				</div>
+				<!--// ly__left -->
+				<!-- ly__right -->
+				<div class="ly__right">
+					<div class="rev-list">
+						<div class="tit-wrap">
+							<h3 class="tit">예약 목록</h3>
+						</div>
+						<div class="rev-list__direct">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">직접 예약</h3>
+							</div>
+							<div class="rev-list__box">
+								<ul class="rev-list__list">
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__loc">파리</div>
+										<div class="rev-list__name">파리 방진게스트하우스</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">여성 도미토리</span><span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">3박</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">1명</span><span class="rev-list__detail">1박 €20</span><span class="rev-list__detail">총 €60</span>
+											</div>
+										</div>
+									</li>
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__loc">파리</div>
+										<div class="rev-list__name">파리 방진게스트하우스</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">여성 도미토리</span><span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">3박</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">3명</span><span class="rev-list__detail">1박 €20</span><span class="rev-list__detail">총 €60</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="rev-list__recomm">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">추천 예약</h3>
+							</div>
+							<div class="rev-list__box">
+								<ul class="rev-list__list">
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__name">베네치아</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">1명</span><span class="rev-list__detail">3박</span><span class="rev-list__detail">체크인 예정시각 14시</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">도미토리 객실로 부탁드려요.0</span>
+											</div>
+										</div>
+									</li>
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__name">로마</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">2명</span><span class="rev-list__detail">4박</span><span class="rev-list__detail">체크인 예정시각 14시</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">도미토리 객실로 부탁드려요.</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btm-btn">
+							<a href="" class="btm-btn__btn--green">최종선택완료</a>
+						</div>
+					</div>
+				</div>
+				<!--// ly__right -->
+			</div>
+			<!--// ly__con -->
+		</div>
+		<!--// ly__wrap -->
+	</div>
+	<!--// ly -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/Layer.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		lnbCtrl.active(0);
+		var ly_rev = new Layer($('.ly-rev'));
+		ly_rev.open();
+		var citylistTab = new Tab('citylist__tab','citylist__row');
+		var lyTab = new Tab('ly__tab');
+	});
+</script>
+</body>
+</html>

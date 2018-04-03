@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<header id="hd"><!-- yuna :  transparent 추가되있다가 스크롤 내려가면 삭제 -->
+			<h1><a href="">파트너명이길어지면파트너명이길어지면파트너명이길어지면파트너명이길어지면</a></h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+			<a class="icon_mn hd-r" href="" onclick="menuOpen('snb')">메뉴</a>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix"><!-- yuna : no-hd 클래스 추가 -->
+			<!-- 페이지 시작-->
+
+			<!-- 상단탭 -->
+			<nav><!-- yuna guide_hd 밖으로 빠짐 -->
+				<ul class="tab6">
+					<li><a href="">숙소</a></li>
+					<li class="active"><a href="">투어/체험</a></li><!-- 활성화시 active클래스 추가 -->
+					<li><a href="">스팟</a></li>
+					<li><a href="">일정</a></li>
+				</ul>
+			</nav>
+			<!-- filter -->
+			<div class="sort_hd v2 clearfix">
+				<div class="pull-left">
+					<label class="inline-checkbox chk_label chk-gray on" for="tour_type_1"><input name="spot_type" id="tour_type_1" value="1" type="checkbox">현지투어
+					</label>
+					<label class="inline-checkbox chk_label chk-gray" for="tour_type_2"><input name="spot_type" id="tour_type_2" value="2" type="checkbox">교통/입장권
+					</label>
+					<label class="inline-checkbox chk_label chk-gray on" for="tour_type_3"><input name="spot_type" id="tour_type_3" value="3" type="checkbox">체험/액티비티
+					</label>
+				</div>
+				<select id="slt_sort" class="icon_sort_grey pull-right">
+					<option value="popul_cnt">인기순</option>
+					<option value="save_price">가격순</option>
+					<option value="save_review">후기순</option>
+					<option value="last_editdt">최신순</option>
+				</select>
+			</div>
+			<div class="item_card_lst_wrp">
+				<!-- 목록 -->
+				<ul class="item_card_lst v2"><!-- v2클래스 추가 -->
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+											</div>
+											<div class="right cnt">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+											</div>
+											<div class="right cnt">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+											</div>
+											<div class="right cnt">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+											</div>
+											<div class="right cnt">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+											</div>
+											<div class="right cnt">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- 페이징 -->
+				<nav class="text-center">
+					<ul class="pagination clearfix">
+						<li class="prev"><a href="">이전페이지목록보기</a></li>
+						<li>2/7</li>
+						<li class="next"><a href="">다음페이지목록보기</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft" class="bg_blk">
+			<div>
+				<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+				<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+				<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+			</div>
+			<p>
+				(주)사막 사업자등록번호 : 010-86-28116 FAX : 02-722-3478
+			</p>
+			<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+			<ul class="list-inline">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">고객센터</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="color_org">개인정보취급방침</a></li>
+				<li><a href="">PC버전</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	$(function() {
+	});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

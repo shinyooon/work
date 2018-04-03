@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title> MINDA :: 민박다나와 </title>
+    <!-- css -->
+    <link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+
+
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- wrap.screenID -->
+<div id="wrap">
+    <!-- header -->
+    <header id="hd">
+        <h1>트립 예약 내역</h1>
+        <a class="icon_hd_back" href="">뒤로</a>
+        <a class="icon_mn hd-r" href="" onclick="menuOpen('snb')">메뉴</a>
+    </header>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container" class="clearfix">
+        <!-- 페이지 시작-->
+        <!-- pay-wrap -->
+        <div class="pay-wrap">
+            <ul class="tab6 pd_sm">
+                <li class="active"><a href="">전체</a></li><!-- 활성화시 active클래스 추가 -->
+                <!-- [D] nodata추가와 함께 수정-->
+                <li><a href="">예정된 트립</a></li>
+                <li><a href="">다녀온 트립</a></li>
+                <!--// [D] nodata추가와 함께 수정-->
+                <li><a href="">취소·환불</a></li>
+            </ul>
+            <!-- [D] nodata추가 -->
+            <div class="item__nodata">
+                <div class="nodata__wrap">
+                    <span class="nodata__icon nodata__icon--rev"></span>
+                    <p class="nodata__title">트립 예약 내역이 없습니다.</p>
+                    <p class="nodata__txt">민다에서 트립을 예약하고<br />특별하고 가치있는 여행을 준비해보세요!</p>
+                    <a href="" class="nodata__btn">트립 찾기</a>
+                </div>
+            </div>
+            <!--// [D] nodata추가 -->
+        </div>
+        <!-- //페이지 끝-->
+    </div>
+    <!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/bootstrap-datepicker.min.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

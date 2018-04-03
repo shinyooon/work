@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.ly-notice{
+	&.in{
+		@include opacity(0.95);
+	}
+}
+.ly-notice{
+	.ly__body--fixed{
+		& + .ly__btm{
+			background-color:transparent;
+		}
+	}
+}
+.ly__trip-notice{
+	padding:23px 30px 0;
+	// backface-visibility:hidden;
+	// -webkit-backface-visibility:hidden;
+}
+.ly__trip-tit{
+	font-family: AppleSDGothicNeo-Thin;
+	@include text($color__blk,em(30px),100);
+	line-height:em(37px);
+	letter-spacing:-1.8px;
+}
+.ly__trip-txt{
+	margin-top:37px;
+	@include text($color__blk,em(17px),$fw__300);
+	line-height:em(23px);
+	&--point{
+		font-weight:$fw__800;
+	}
+}

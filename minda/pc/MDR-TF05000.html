@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<span class="sub_bg"></span>
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction -->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="" class="icon_house">홈</a></li>
+			<li><a href="">고객센터</a></li>
+			<li>취소환불규정</li>
+		</ul>
+	</div>
+
+	<!-- 서브 헤더 -->
+	<header class="sub_hd">
+		<h2>고객센터</h2>
+	</header>
+
+	<ul class="basic_step2 tb_fixed">
+		<li><a href="">공지사항</a></li>
+		<li><a href="">자주하는 질문</a></li>
+		<li><a href="">고객센터 문의하기</a></li>
+		<li class="active"><a href="">취소환불규정</a></li>
+	</ul>
+
+	<section class="mt60">
+		<h3 class="color_org fs14 pb15">예약취소</h3>
+		<ol class="lst_num_style">
+			<li>예약 취소는 마이페이지에서 직접 취소가 가능합니다.</li>
+			<li>예약 취소시 예약금 환불규정은 대부분의 숙소가 아래와 같이 적용되나, 숙소 별로 특별규정이 있을 경우, 숙소 별 특별규정이 우선시 되므로, 예약 전 숙소정보페이지에 기재된 각 숙소의 개별 ‘취소환불규정’을 반드시 체크하셔야 합니다.</li>
+		</ol>
+		<!-- <ol class="pt10">
+			<li>1) 체크인 30일전 취소 : 예약금 전액환불 (* 포인트 및 쿠폰결제액 제외)</li>
+			<li>2) 체크인 29일전 ~ 취소마감일 이전 취소 : 취소수수료 제외 후 환불 (*취소수수료 : 총 숙박요금의 10%)</li>
+			<li>3) 취소마감일 이후 ~ 당일 취소 : 예약금 전액환불불가      </li>
+		</ol>
+		<p class="pt10">※ 2)항에서 예약금이 총 숙박요금의 10%인 민박인 경우에는 현금 환불액은 없습니다.</p>
+		<p>※ 2)항에서 발생하는 취소수수료는 포인트로 환급해 드립니다. (*환급수수료 : 환급액의 20%) </p>
+		<p>※ ‘포인트 환급’은 현금으로 결제된 금액에 대해서만 적용됩니다.</p>
+		<p>※ 예약금 비율 및 취소마감일은 각 숙소 및 예약 신청일에 따라 다를 수 있습니다</p> -->
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">예약변경</h3>
+		<ol class="lst_num_style">
+			<li>예약변경을 원하실 경우에는 기존 예약을 취소하신 후, 새로 예약하셔야 합니다.</li>
+			<li>변경내용이 숙박수 혹은 인원수 감소인 경우는 민박다나와 고객센터(1661-2892, 운영시간 내)로 전화 접수를 통해서만?변경신청이 가능합니다. 예약변경 가능여부는 숙소별 객실운용정책(최소예약숙박수 등)에 따라 결정되며, 예약변경이 가능할 경우 예약금 차액에 대한 환불여부는 예약 시 동의한 ‘취소환불규정’에 따릅니다(단, 포인트 적립은 되지 않습니다.)</li>
+			<li>예약금 외 숙소직접결제액이 있는 경우, 숙소직접결제액은 예약 시 동의한 취소환불규정의 적용을 받지 않으며, 숙소직접결제액의 환불여부는 숙소와 직접 협의하여야 합니다.</li>
+			<li>민박다나와를 통하지 않고, 숙소와의 직접적인 커뮤니케이션을 통해 예약을 변경(각 숙소 별 민박다나와 Q&A 게시판 이용 포함)하여 문제가 발생할 경우 민박다나와는 이에 대해 책임을 지지 않습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">No-Show</h3>
+		<ol class="lst_num_style">
+			<li>No-Show(숙박일에 아무런 연락 없이 체크인을 하지 않는 것)를 일으켰을 경우, 예약금은 전액환불불가 합니다.</li>
+			<li>No-Show를 발생시킨 회원은 민박다나와에서 제공하는 서비스(숙소예약 등)의 정상적인 이용이 제한될 수 있습니다</li>
+		</ol>
+		<p class="color_org pt15">※ 천재지변, 교통편 취소와 연착, 파업, 시위 등으로 인한 예약취소/변경/No-Show의 경우에도 위 각 항목의 동일한 조항을 적용 받습니다.</p>
+		<p class="color_org">※ 본 규정은 일반회원대상의 규정이며, 여행사 회원님 예약취소/변경/No-Show 에 대한 환불규정은 여행사 예약관리 페이지에 별도 공지된 약관을 따릅니다.</p>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">민박다나와 책임면책 조항</h3>
+		<ol class="lst_num_style">
+			<li>실제와 다른 숙소정보로 인한 직간접 피해에 대해서는 민박다나와에서 책임을 지지 않습니다. (민박다나와의 숙소정보는 예약을 위한 참고자료로 해당 숙소 측에서 직접 관리하고 있으며 숙소 내 자체 변동이나 기타사유로 실제와 차이가 있을 수 있습니다.)</li>
+			<li>숙소 도착 후, 혹은 숙박 후 숙소의 시설 및 서비스가 기대에 못 미쳤다고 하여 예약금 환불을 요청할 수 없습니다.</li>
+			<li>예약신청시 작성한 숙박자의 정보(숙박자명, 연락처, 이메일, 체크인 예정시각, 도착예정지 등)가 정확하지 않거나, 정보 변경 후 민박다나와로 변경신청을 하지 않은 상태에서 발생한 문제에 대해서는 민박다나와에서 책임을 지지 않습니다.</li>
+			<li>숙소에서 직간접적으로 발생된 대인 상해, 질병, 재산상의 손해 등의 비용적 손실에 대해서는 민박다나와에서 책임을 지지 않습니다.</li>
+			<li>고객이 숙소 규정을 지키지 않거나 시설 및 설비, 물품 등에 손해를 입혔을 경우 현지 숙소와의 손해 배상문제에 대해서는 민박다나와에서 책임을 지지 않습니다.</li>
+			<li>예약금을 제외한 나머지 숙소 직접 결제액(현지 결제액)에 대해서는 민박다나와에서 책임을 지지 않습니다.</li>
+			<li>민박다나와 고객센터를 거치지 않은 숙소와의 직접적 커뮤니케이션을 통해 발생한 문제 (예약변경 및 취소 등)에 대해서는 민박다나와에서 책임을 지지 않습니다.</li>
+			<li>천재지변이나 항공사 사정, 내란, 테러 등 국제 여행업 관행상에 인정되지 않는 사유로 인하여 서비스를 제공할 수 없는 경우 서비스 제공에 관한 책임에 대해서는 민박다나와에서 책임을 지지 않습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">[부칙]</h3>
+		<ol class="lst_num_style">
+			<li>본 약관은 2014년 7월 1일부터 시행됩니다.</li>
+			<li>본 약관은 2016년 5월 2일부터 시행됩니다.</li>
+		</ol>
+	</section>
+
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

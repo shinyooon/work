@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body class="page_back bg_wh">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1>포인트/캐쉬/쿠폰</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+<!-- tab -->
+<div class="pa10 pb0">
+	<ul class="tab tab5">
+		<li>
+			<a href="">
+				<img src="http://v2.theminda.com/m/1.0/cust/img/icon_my_info2.png" width="42" alt="">
+				<span class="d_block color_blk mt3">포인트</span>
+				<strong class="fs15 color_mint">245,000</strong><small class="fs12 color_mint">P</small>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="http://v2.theminda.com/m/1.0/cust/img/icon_my_info1.png" width="42" alt="">
+				<span class="d_block color_blk mt3">캐쉬</span>
+				<strong class="fs15 color_mint">245,000</strong><small class="fs12 color_mint">원</small>
+			</a>
+		</li>
+		<li>
+			<a class="on" href="">
+				<img src="http://v2.theminda.com/m/1.0/cust/img/icon_my_info3.png" width="42" alt="">
+				<span class="d_block color_blk mt3">쿠폰</span>
+				<strong class="fs15 color_mint">3</strong><small class="fs12 color_mint">장</small>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="cnt_wrp">
+	<!-- 이용안내 -->
+	<div class="border_grey pr">
+		<h2 class="pa10 text-center fs15">이용안내</h2>
+		<ul class="lst_type_dot pa5 pt0 pb40 fs13" style="display:none">
+			<li>쿠폰은 상품구매나 이벤트 참여 등을 통해 발급됩니다.</li>
+			<li>포인트 및 캐쉬와 함께 중복하여 사용하실 수 있으며, 사용 후 남은 차액금은 자동 소멸됩니다.</li>
+			<li>숙소예약금 결제시 사용할 수 있는 쿠폰 사용액의 한도는 각 예약당 총 숙박요금의 10%까지 입니다.</li>
+			<li>쿠폰은 현금 전환 또는 출금이 불가합니다.</li>
+			<li>쿠폰은 타인에게 양도가 불가합니다.</li>
+		</ul>
+		<div class="btn_open_wrp pull-right" style="position:absolute;bottom:3px;right:5px;">
+			<a class="icon_open" href="#" style="border:0">열기</a>
+		</div>
+	</div>
+	<!-- 쿠폰 리스트 -->
+	<div>
+		<ul class="tab basic mt10">
+			<li class="active"><a href="#mdCoupon" data-toggle="tab"><span>민다쿠폰</span></a></li>
+			<li><a href="#roomCoupon" data-toggle="tab"><span>숙소쿠폰</span></a></li>
+		</ul>
+		<div class="tab-content">
+			<!-- 민다쿠폰 -->
+			<div id="mdCoupon" class="tab-pane active">
+				<ul class="coupon_lst cnt_wrp">
+					<li>
+						<button type="button" class="coupon_bx" data-target="#mdAlert" data-toggle="modal">
+							<span class="txt_wrp">
+								<span>COUPON</span>
+								<strong class="tit">모바일앱 전용 1,000원 할인쿠폰</strong>
+								<span class="meta">유효기간 : 2016.00.00~2016.00.00</span>
+							</span>
+							<i class="coupon_down">사용가능</i>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="coupon_bx" data-target="#mdAlert" data-toggle="modal" disabled>
+							<span class="txt_wrp">
+								<span>COUPON</span>
+								<strong class="tit">모바일앱 전용 1,000원 할인쿠폰</strong>
+								<span class="meta">유효기간 : 2016.00.00~2016.00.00</span>
+							</span>
+							<i class="coupon_use">쿠폰사용</i>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="coupon_bx" data-target="#mdAlert" data-toggle="modal" disabled>
+							<span class="txt_wrp">
+								<span>COUPON</span>
+								<strong class="tit">모바일앱 전용 1,000원 할인쿠폰</strong>
+								<span class="meta">유효기간 : 2016.00.00~2016.00.00</span>
+							</span>
+							<i class="coupon_expire">기간만료</i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<!-- 숙소쿠폰 -->
+			<div id="roomCoupon" class="tab-pane">
+				<ul class="coupon_lst cnt_wrp">
+					<li>
+						<button type="button" class="coupon_bx" data-target="#mdAlert" data-toggle="modal">
+							<span class="txt_wrp">
+								<span>COUPON</span>
+								<strong class="tit">모바일앱 전용 1,000원 할인쿠폰</strong>
+								<span class="meta">유효기간 : 2016.00.00~2016.00.00</span>
+							</span>
+							<i class="coupon_down">사용가능</i>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="coupon_bx" data-target="#mdAlert" data-toggle="modal" disabled>
+							<span class="txt_wrp">
+								<span>COUPON</span>
+								<strong class="tit">모바일앱 전용 1,000원 할인쿠폰</strong>
+								<span class="meta">유효기간 : 2016.00.00~2016.00.00</span>
+							</span>
+							<i class="coupon_use">쿠폰사용</i>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="coupon_bx" data-target="#mdAlert" data-toggle="modal" disabled>
+							<span class="txt_wrp">
+								<span>COUPON</span>
+								<strong class="tit">모바일앱 전용 1,000원 할인쿠폰</strong>
+								<span class="meta">유효기간 : 2016.00.00~2016.00.00</span>
+							</span>
+							<i class="coupon_expire">기간만료</i>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script>
+	$(function  () {
+		$('a.icon_open').click(function(){
+			$(this).toggleClass('on').parent().prev().slideToggle(150);
+			return false;
+		});
+	})
+</script>
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div>
+			<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+			<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+			<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+		</div>
+		<p>
+			(주)사막 사업자등록번호 : 010-86-28116   FAX : 02-722-3478
+		</p>
+		<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+		<ul class="list-inline">
+			<li><a href="">회사소개</a></li>
+			<li><a href="">고객센터</a></li>
+			<li><a href="">이용약관</a></li>
+			<li><a href="" class="color_org">개인정보취급방침</a></li>
+			<li><a href="">PC버전</a></li>
+		</ul>
+		<h1><img class="img-responsive center-block" src="http://v2.theminda.com/m/1.0/cust/img/logo_ft.png" alt="minda"></h1>
+	</div>
+
+	<!-- fixed button-->
+	<div id="quick">
+		<a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+		<a class="icon_mn2" href="#">Menu</a>
+	</div>
+</div>
+<!-- //wrap -->
+
+<!-- modal : coupon -->
+<div id="mdAlert" class="modal fade md_alert" tabindex="-1" role="dialog">
+	<div class="modal-dialog wid_md">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<p>쿠폰이 발급 되었습니다.<br><span class="color_org">마이페이지&gt;포인트/캐쉬/쿠폰&gt;쿠폰</span>에서<br>확인하실 수 있습니다.</p>
+	</div>
+</div>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

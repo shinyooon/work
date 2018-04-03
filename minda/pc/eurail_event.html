@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<!-- 2017-06-13 로고 이미지 변경 -->
+			<h1 class="logo"><a href="index.html"><img src="http://www.theminda.com/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<!--// 2017-06-13 로고 이미지 변경 -->
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">숙소 <span class="icon_up">up</span></a></li>
+					<li class="i4"><a href="">트립</a></li>
+					<li class="i2"><a href="">정보 <span class="icon_new">new</span></a></li>
+					<li class="i5">
+						<a href="">부가상품</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+                    $(function() {
+                        $util = $('.userbx');
+                        $util.on('focusin', function() {
+                            $(this).addClass('open');
+                        });
+
+                    })
+				</script>
+			</nav>
+			<div class="hd-r">
+				<!-- 2017-06-13 태그 순서 위로 올림 -->
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 로그인 후 -->
+				<!-- <div class="util">
+                    <a href="/member/login.php?login_return_page=/main/index.php"> 로그인</a>
+                    <a href="/member/register.php">회원가입</a>
+                </div> -->
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href="">민다톡톡</a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href="">할인&amp;이벤트</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<!-- <button type="button" class="icon_srch_grey">검색</button> -->
+					<!-- 2017-06-13 silde-wrap 클래스 삭제 -->
+					<div class="input-group tb_bx">
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_grey">검색</button>
+							</span>
+						<div class="input-wrap tb-cell">
+							<input type="text" class="form-control" placeholder="키워드를 입력해주세요">
+							<!-- 자동완성 -->
+							<div class="web_automatic">
+								<ul class="city">
+									<li>이탈리아, 로마</li>
+									<li>이탈리아, 베네치아</li>
+									<li>이탈리아, 밀라노</li>
+									<li>이탈리아, 나폴리</li>
+								</ul>
+							</div>
+						</div>
+						<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+	<!-- #container -->
+	<div id="container">
+		<!-- <span class="sub_bg"></span> -->
+		<!-- 페이지시작 -->
+		<div class="content">
+			<div class="eurailpass__contents">
+				<div class="eurailpass__topbg">
+					<div class="eurailpass__topbg-wrap">
+						<img src="/cust/img/addition/bg_sub1.jpg" alt=""  class="pos-center"/>
+					</div>
+					<h3 class="eurailpass__tit">
+						<img src="/cust/img/addition/img_eurail_toptxt.jpg" alt="스마트한 유레일 패스 구입법 유레일패스 30% 할인 프로모션" />
+					</h3>
+				</div>
+				<!-- eurailpass__body -->
+				<div class="eurailpass__body w1100">
+					<h4 class="eurailpass__body-tit">민다 회원님들을 위한<br /> <span class="eurailpass__body-tit--point color_org">다양한 사음품</span><span class="eurailpass__body-tit--sm">소진시까지</span></h4>
+					<!-- eurail__gift -->
+					<div class="eurailpass__gift">
+						<div class="clearfix eurailpass__gift-list">
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--1"></span>
+									<span class="eurailpass__gift-txt">유레일 패스지도</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--2"></span>
+									<span class="eurailpass__gift-txt">유레일 여행자 가이드</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--3"></span>
+									<span class="eurailpass__gift-txt">무료배송</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--4"></span>
+									<span class="eurailpass__gift-txt">민다 숙박 할인쿠폰</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--5"></span>
+									<span class="eurailpass__gift-txt">맥아더글렌 <br />디자이너 아울렛<br />할인교환권</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--6"></span>
+									<span class="eurailpass__gift-txt">우리은행 환율우대 쿠폰</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--7"></span>
+									<span class="eurailpass__gift-txt">융프라우 할인쿠폰&amp;지도</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--8"></span>
+									<span class="eurailpass__gift-txt">융프라우 철도여행 가이드북</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--9"></span>
+									<span class="eurailpass__gift-txt">스위스 여행 TIP</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--10"></span>
+									<span class="eurailpass__gift-txt">이탈리아 트래블북&맵<br /><span class="eurail__gift-txt--point">이탈리아 포함패스 구매자만 제공</span></span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--11"></span>
+									<span class="eurailpass__gift-txt">프랑스 기차여행 가이드북</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+									<span class="eurailpass__gift-img eurailpass__gift-img--12"></span>
+									<span class="eurailpass__gift-txt">파리 가이드맵</span>
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+								</div>
+							</div>
+							<div class="eurailpass__gift-item">
+								<div class="eurailpass__gift-item__wrap">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--// eurailpass__gift -->
+					<div class="eurailpass__info">
+						<dl class="lst_type_bar eurailpass__info-dl">
+							<dt>이벤트 기간 및 대상</dt>
+							<dd>이벤트기간 : 2017년 12월 28일까지</dd>
+							<dd>대상 : 유레일 글로벌 연속/플렉시패스, 유레일 셀렉트패스 4개국</dd>
+							<dt>교환 및 환불</dt>
+							<dd>30% 할인 프로모션 티켓은 발권 후 변경 및 환불이 불가합니다.</dd>
+						</dl>
+						<dl class="lst_type_bar eurailpass__info-dl">
+							<dt>발권 및 주의사항</dt>
+							<dd>이벤트 가격은 현금결제만 가능합니다.</dd>
+							<dd>택배비는 무료입니다. (제주, 산간지역은 추가비용이 발생합니다)</dd>
+							<dd>모든 유레일 패스 발권료 8유로 + 서비스 fee (1인당 10,000원)는 별도 입니다.</dd>
+							<dd>아래의 이벤트 신청란을 통해 신청해주신 패스만 할인이 적용됩니다.</dd>
+							<dd>유레일패스 커버에 travel report 를 기입하셔야 합니다.</dd>
+							<dd>탑승하기 전에 기입하셔야 하고 미 기입시 벌금 50유로가 부과됩니다.</dd>
+						</dl>
+					</div>
+					<div class="eurailpass__btn-wrap text-center">
+						<a href="" class="btn eurailpass__btn">유레일패스 신청하기</a>
+					</div>
+				</div>
+				<!-- eurailpass__body -->
+
+			</div>
+		</div>
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh">information</strong>
+				<div class="ft_info_txt">
+					<span>㈜민다</span>
+					<span>대표 : 김윤희</span>
+					<span>사업자등록번호 : 101-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt">
+					<span>이메일 : help@theminda.com</span>
+					<span>고객센터 : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span>운영시간 : 평일 10시~12시/13시~18시(주말, 공휴일 휴무)</span>
+				</div>
+				<div class="ft_info_txt">
+					<address>서울특별시 중구 동호로15길 27 종하빌딩 A동 5층</address>
+				</div>
+				<div class="footer__right__top">
+					<ul class="footer__partner-list">
+						<li class="footer__partner-item bar"><a href="" class="footer__partner-link">숙소/트립 파트너 홈</a></li>
+						<li class="footer__partner-item"><a href="" class="footer__partner-link">여행사 예약관리 홈</a></li>
+					</ul>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+						<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+						<li><a href="" class="btn">고객센터 문의</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="" target="_blank">회사소개</a></li>
+					<li><a href="" target="_blank">파트너 가입</a></li>
+					<li><a href="">취소환불규정</a></li>
+					<li><a href="">고객센터</a></li>
+					<li class="bar"><a href="">공지사항</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">사업자정보확인</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright? Minda Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+<script type="text/javascript">
+$(function  () {
+	$(".accordion .acc_btn").on('click',function  () {
+		$(this).toggleClass('open').parent().next('.acc_cnt').slideToggle('fast');
+
+	});
+})
+</script>
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

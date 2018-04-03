@@ -1,0 +1,105 @@
+<? include "inc/top.html" ?>
+<style type="text/css">
+    html{background-color:#f7f7f7;}
+</style>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+    </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">더보기</a></h1>
+    <div class="header__right">
+        <!-- 타이틀 우측 3번쨰 버튼 -->
+        <!-- 타이틀 우측 2번쨰 버튼 -->
+        <!-- 타이틀 우측 버튼 -->
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix">
+    <div class="more">
+        <ul class="more-list more-list__discount">
+            <li>
+                <a href="" class="more-list__link">
+                    <span class="more-list__discount-txt">최대</span>
+                    <span class="more-list__discount-num">55.6% 할인</span>
+                    <span class="more-list__discount-tit">땡처리 할인 숙소</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="more-list__link">
+                    <span class="more-list__discount-txt">최대</span>
+                    <span class="more-list__discount-num">55.6% 할인</span>
+                    <span class="more-list__discount-tit">비수기 할인 숙소</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="more-list more-list__event">
+            <li><a href="" class="more-list__link">이벤트/쿠폰</a></li>
+        </ul>
+        <ul class="more-list more-list__community">
+            <li><a href="" class="more-list__link">구인ㆍ구직<span class="more-list__icon_new"></span></a></li>
+            <li><a href="" class="more-list__link">사고ㆍ팔고</a></li>
+        </ul>
+        <!-- 페이지 시작-->
+        <ul class="more-list more-list__etc">
+            <li><a href="" class="more-list__link">공지사항<span class="more-list__icon_new"></span></a></li>
+            <li><a href="" class="more-list__link">자주하는 질문<span class="more-list__icon_new"></span></a></li>
+            <li><a href="" class="more-list__link">이용약관/개인정보처리방침</a></li>
+            <li><a href="" class="more-list__link">취소환불규정</a></li>
+            <li><a href="" class="more-list__link">민다 소개</a></li>
+        </ul>
+        <div class="more-list more-list__app">
+            <!-- 기존에 사용하던 코드(개발에서 include하고있는 소스) 가져옴 -->
+            <div class="mypage pa0">
+                <section class="my_activity bg_wh mt13">
+                    <ul class="basic_line_lst">
+                        <li>
+				<span class="pr">
+					앱 푸시 알림
+					<button id="btn_push" data-toggle="button" type="button" class="btn no_style switchtab btn-switch">
+						<span class="fs11 pull-left on">ON</span>
+						<span class="fs11 pull-right off">OFF</span>
+					</button>
+				</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="more-cs">
+            <dl class="more-cs__dl">
+                <dt>고객센터 안내</dt>
+                <dd>고객센터 : <a href="tel:1661-2892" class="more-cs__txt--point">1661-2892</a></dd>
+                <dd>운영시간 : 평일 10시~12시/13시~18시 (주말, 공휴일 휴무)</dd>
+                <dd>고객센터 운영시간 외에는 1:1 문의로 접수해주시면,</dd>
+                <dd>운영시간에 순차적으로 처리됩니다.</dd>
+                <dd><a href="" class="more-cs__link-1to1">1:1 문의 바로가기</a></dd>
+            </dl>
+        </div>
+    </div>
+    <!-- //페이지 끝-->
+</div>
+<!-- //container -->
+<? include "inc/fnb.html" ?>
+<!-- fixed button-->
+<div id="quick">
+    <a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+    <a class="icon_mn2" href="#">Menu</a>
+</div>
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.nav-btm li').removeClass('on');
+        $('.nav-btm li').eq(4).addClass('on');
+    });
+</script>
+</body>
+
+</html>

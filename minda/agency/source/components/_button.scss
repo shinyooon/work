@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+.btm-btn{
+	@include btm-btn();
+}
+
+.save-rev__btn-add,
+.filter__btn-more{
+	margin-left:7px;
+}
+
+.rev-manage__view__btn-select{
+	@include border-radius(3px);
+	display:inline-block;
+	text-align:center;
+	font-size:13px;
+	padding:9px 12px 8px;
+	color:$color__wh;
+	background-color:$color__grey;
+}
+.rev-manage__view__btn-cancel,
+.rev-manage__view__btn-see{
+	@include border-radius(3px);
+	display:inline-block;
+	text-align:center;
+	font-size:13px;
+	padding:9px 12px 8px;
+	color:$color__wh;
+	background-color:$color__l-blue;
+}
+
+/*grey md*/
+.rev-select__btn,
+.rev-manage__detail__btn-voucher,
+.rev-manage__view__btn-direct,
+.rev-manage__view__btn-recom,
+.rev-manage__view__btn-rev-cancel,
+.save-rev__btn-add,
+.filter__btn-more,
+.tit__btn-srch,
+.tit__btn-1to1,
+.info-manage__btn-zipcode,
+.input-wrap__file__btn,
+.info-manage__btn-save,
+.stats__btn-month,
+.stats__btn-day,
+.modal__invoice__btn-print,
+.modal__voucher__btn-print,
+.modal__voucher__btn-email,
+.rev-manage__view__btn-room,
+.rev-manage__view__btn-print,
+.rev-manage__view__btn-invoice,
+.info-manage__basic__btn-save,
+.info-manage__btn-id{
+	@include btn($color__grey);
+}
+
+/* l-blue md*/
+.save-rev__btn-reset,
+.filter__btn-reset,
+.rev-manage__btn-invoice,
+.info-manage__btn-add{
+	@include btn($color__l-blue);
+}
+/* green md*/
+.rev-from__roomlist__btn{
+	@include btn($color__green);
+}
+/* d-grey md*/
+.rev-agree__btn{
+	@include btn($color__d-grey);
+}
+/*grey xs*/
+.join-term__btn-privacy,
+.srch-room__btn-room-cal{
+	@include btn($color__grey,xs);
+	min-height:31px;
+}
+/*l-blue xs*/
+.rev-manage__view__btn-voucher,
+.rev-from__roomlist__btn-see,
+.rev-from__roomlist__btn-cancel{
+	@include btn($color__l-blue,xs);
+	min-height:31px;
+}
+/* f3f3f3 xs */
+.view-rev__btn-del{
+	@include btn($color__f3f3f3,xs);
+}

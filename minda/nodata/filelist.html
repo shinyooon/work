@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100">
+    <title>MinDa :: 민박다나와 </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/slider.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/daterangepicker.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/nanoscroller.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.dev.css">
+    <!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+    <!-- js -->
+    <!--[if lt IE 9]>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        header {position:fixed;top:0;background:#fff}
+        #wrap {position:relative;padding:20px 0 0 0;}
+        h1 {padding:10px;font-size:25px;}
+        .tb-filelist th, .tb-filelist td {padding:5px;border:1px solid #edeceb;}
+        .tb-filelist tbody td {font-size:13px;}
+        td.ing {color:red;}
+        .link,.link:hover,.link:active,.link:focus{text-decoration:underline;}
+        .tab-content>.tab-pane {display:none;}
+        .tab-content>.tab-pane.active {display:block;}
+        .tab-content {padding-bottom:50px}
+        .state {color:#004fd3;}
+        .state.ing {color:red;}
+        .room_detail_hd [class*=basic_step] {line-height:50px;}
+        .room_detail_hd .basic_step2 li a {font-size:15px;}
+    </style>
+</head>
+
+<body>
+<!-- wrap.screenID -->
+<div id="wrap">
+    <div>
+        <h1>PC 데이터 없음 화면</h1>
+        <div class="tab-content">
+            <div class="tbl-wrap mt20" id="admin">
+                <table class="tb_fixed tb-filelist text-center">
+                    <col style="width:3%">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:7%">
+                    <col style="width:5%">
+                    <col style="width:17%">
+                    <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>1depth</th>
+                        <th>2depth</th>
+                        <th>3depth</th>
+                        <th>4depth</th>
+                        <th>5depth</th>
+                        <th>파일명</th>
+                        <th>최종수정일</th>
+                        <th>작업자</th>
+                        <th>상태</th>
+                        <th>메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mypage_nodata.html">mypage_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>나의활동</td>
+                        <td>리뷰</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/myreview_nodata.html">myreview_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>나의활동</td>
+                        <td>숙소/트립 문의</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/myquestion_nodata.html">myquestion_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>나의활동</td>
+                        <td>고객센터문의</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/my1to1_nodata.html">my1to1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>숙소 예약 내역</td>
+                        <td>진행중인 예약</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/myroom_rev1_nodata.html">myroom_rev1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>숙소 예약 내역</td>
+                        <td>지난예약</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/myroom_rev2_nodata.html">myroom_rev2_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>숙소 예약 내역</td>
+                        <td>환불진행현황</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/myroom_rev3_nodata.html">myroom_rev3_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>전체</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mytrip_rev1_nodata.html">mytrip_rev1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>예정된트립</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mytrip_rev2_nodata.html">mytrip_rev2_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>다녀온트립</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mytrip_rev3_nodata.html">mytrip_rev3_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>취소/환불</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mytrip_rev4_nodata.html">mytrip_rev4_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>포인트</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mypoint_nodata.html">mypoint_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>캐쉬</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mycash_nodata.html">mycash_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>쿠폰</td>
+                        <td>사용가능 쿠폰</td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mycoupon_nodata.html">mycoupon_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>쿠폰</td>
+                        <td>지난 쿠폰</td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mycoupon_nodata2.html">mycoupon_nodata2.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>유레일패스 예약</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/myeurail_rev_nodata.html">myeurail_rev_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>저장목록</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/mysave_nodata.html">mysave_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>할인&amp;이벤트</td>
+                        <td>민다이벤트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/event_minda_nodata.html">event_minda_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>숙소</td>
+                        <td>도시목록</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/2dev_MDR-TA01000.html">2dev_MDR-TA01000.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>숙소</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="pc/room_detail_nodata.html">room_detail_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!--// 관리자 filelist -->
+        </div>
+        <h1>MOBILE 데이터 없음 화면</h1>
+        <div class="tab-content">
+            <div class="tbl-wrap mt20" id="admin">
+                <table class="tb_fixed tb-filelist text-center">
+                    <col style="width:3%">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:7%">
+                    <col style="width:5%">
+                    <col style="width:17%">
+                    <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>1depth</th>
+                        <th>2depth</th>
+                        <th>3depth</th>
+                        <th>4depth</th>
+                        <th>5depth</th>
+                        <th>파일명</th>
+                        <th>최종수정일</th>
+                        <th>작업자</th>
+                        <th>상태</th>
+                        <th>메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>나의활동</td>
+                        <td>리뷰</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/review_nodata.html">review_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>나의활동</td>
+                        <td>고객센터문의</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/my1to1_nodata.html">my1to1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>나의활동</td>
+                        <td>숙소/트립 문의</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/myquestion_nodata.html">myquestion_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>포인트</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mypoint_nodata.html">mypoint_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>캐쉬</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mycash_nodata.html">mycash_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>포인트/캐쉬/쿠폰</td>
+                        <td>쿠폰</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mycoupon1_nodata.html">mycoupon1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td>탭해서 퍼블리싱 확인 가능</td>
+                    </tr>
+
+                    <tr>
+                        <td>마이민다</td>
+                        <td>숙소 예약 내역</td>
+                        <td>진행중인 예약</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/myroom_rev1_nodata.html">myroom_rev1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>숙소 예약 내역</td>
+                        <td>지난예약</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/myroom_rev2_nodata.html">myroom_rev2_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>숙소 예약 내역</td>
+                        <td>환불진행현황</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/myroom_rev3_nodata.html">myroom_rev3_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>전체</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mytour_rev1_nodata.html">mytour_rev1_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>예정된트립</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mytour_rev2_nodata.html">mytour_rev2_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>다녀온트립</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mytour_rev3_nodata.html">mytour_rev3_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>트립예약내역</td>
+                        <td>취소/환불</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/mytour_rev4_nodata.html">mytour_rev4_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <!--<tr>
+                        <td>마이민다</td>
+                        <td>유레일패스 예약</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/myeurail_rev_nodata.html">myeurail_rev_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>-->
+                    <tr>
+                        <td>마이민다</td>
+                        <td>오늘 본 상품</td>
+                        <td>숙소</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/today_room_nodata.html">today_room_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>오늘 본 상품</td>
+                        <td>트립</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/today_tour_nodata.html">today_tour_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>마이민다</td>
+                        <td>저장목록</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/my_save_nodata.html">my_save_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td>할인&amp;이벤트</td>-->
+                        <!--<td>민다이벤트</td>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                        <!--<td><a class="link" target="_blank" href="mobile/event_minda_nodata.html">event_minda_nodata.html</a></td>-->
+                        <!--<td>2017-11-09</td>-->
+                        <!--<td>유나</td>-->
+                        <!--<td class="state">완료</td>-->
+                        <!--<td></td>-->
+                    <!--</tr>-->
+                    <tr>
+                        <td>숙소</td>
+                        <td>도시목록</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/MDR-MTB01010_161121.html">MDR-MTB01010_161121.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>숙소</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/room_detail_nodata.html">room_detail_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>정보</td>
+                        <td>일정</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="link" target="_blank" href="mobile/plan_detail_nodata.html">plan_detail_nodata.html</a></td>
+                        <td>2017-11-09</td>
+                        <td>유나</td>
+                        <td class="state">완료</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--// 관리자 filelist -->
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.tb-filelist').rowspan (0);
+        $('.tb-filelist').rowspan (1);
+        $('.tb-filelist').rowspan (2);
+        $('.tb-filelist').rowspan (3);
+    })
+    $('.tb-filelist tbody tr').each(function(index){
+        $(this).prepend('<td>'+index+'</td>');
+    });
+    $.fn.rowspan = function(colIdx, isStats) {
+        return this.each(function(){
+            var that;
+            $('tr', this).each(function(row) {
+                $('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {
+                    if ($(this).html() != '' && $(this).html() == $(that).html()
+                        && (!isStats
+                            || isStats && $(this).prev().html() == $(that).prev().html()
+                        )
+                    ) {
+                        rowspan = $(that).attr("rowspan") || 1;
+                        rowspan = Number(rowspan)+1;
+
+                        $(that).attr("rowspan",rowspan);
+
+                        // do your action for the colspan cell here
+                        $(this).hide();
+
+                        //$(this).remove();
+                        // do your action for the old cell here
+
+                    } else {
+                        that = this;
+                    }
+
+                    // set the that if not already set
+                    that = (that == null) ? this : that;
+                });
+            });
+        });
+    };
+</script>
+<!-- lib -->
+<script src="http://v2.theminda.com/cust/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/cust/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.theminda.com/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="http://v2.theminda.com/cust/js/common.js"></script>
+</body>
+</html>

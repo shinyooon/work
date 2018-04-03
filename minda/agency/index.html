@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>여행사 예약관리 홈 | 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<!-- main-rev-info -->
+				<section class="main-rev-info">
+					<div class="tit-wrap tit-wrap--hidden">
+						<h3 class="sub-tit">예약정보</h3>
+					</div>
+					<ul class="main-rev-info__list">
+						<li class="main-rev-info__box">
+							<a href="" class="main-rev-info__link">
+								<span class="main-rev-info__icon main-rev-info__icon--1"></span>
+								<dl class="main-rev-info__txt">
+									<dt class="main-rev-info__tit">예약대기</dt>
+									<dd class="main-rev-info__cnt"><span class="main-rev-info__num">6</span>건</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="main-rev-info__box">
+							<a href="" class="main-rev-info__link">
+								<span class="main-rev-info__icon main-rev-info__icon--2"></span>
+								<dl class="main-rev-info__txt">
+									<dt class="main-rev-info__tit">예약진행</dt>
+									<dd class="main-rev-info__cnt"><span class="main-rev-info__num">6</span>건</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="main-rev-info__box">
+							<a href="" class="main-rev-info__link">
+								<span class="main-rev-info__icon main-rev-info__icon--3"></span>
+								<dl class="main-rev-info__txt">
+									<dt class="main-rev-info__tit">확정요청</dt>
+									<dd class="main-rev-info__cnt"><span class="main-rev-info__num">6</span>건</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="main-rev-info__box">
+							<a href="" class="main-rev-info__link">
+								<span class="main-rev-info__icon main-rev-info__icon--4"></span>
+								<dl class="main-rev-info__txt">
+									<dt class="main-rev-info__tit">입금대기</dt>
+									<dd class="main-rev-info__cnt"><span class="main-rev-info__num">6</span>건</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="main-rev-info__box">
+							<a href="" class="main-rev-info__link">
+								<span class="main-rev-info__icon main-rev-info__icon--5"></span>
+								<dl class="main-rev-info__txt">
+									<dt class="main-rev-info__tit">예약완료</dt>
+									<dd class="main-rev-info__cnt"><span class="main-rev-info__num">6</span>건</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<!--// main-rev-info -->
+				<div class="main-info">
+					<div class="main-info__left">
+						<!-- main-grade -->
+						<section class="main-grade">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">멤버십 등급 안내</h3>
+								<span class="tit__right">
+									<a href="" class="tit__more">등급안내보기<span class="tit__more-arr"></span></a>
+								</span>
+							</div>
+							<div class="main-grade__box">
+								<div class="main-grade__before">
+									<span class="main-grade__icon grade__icon--silver"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">8월 나의 등급 SILVER</dt>
+										<dd class="main-grade__desc">지난달 예약완료 숙박수 30박 이상</dd>
+										<dd class="main-grade__desc">커미션 3.0%</dd>
+										<dd class="main-grade__desc">할인쿠폰 3,000원권 5장</dd>
+										<dd class="main-grade__desc">등급 유효기간 1개월</dd>
+									</dl>
+									<!--
+									등급 내용
+									////BRONZE////
+									<span class="main-grade__icon grade__icon--bronze"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">$n월$ 나의 등급 BRONZE</dt>
+										<dd class="main-grade__desc">신규회원</dd>
+										<dd class="main-grade__desc">커미션 3.0%</dd>
+										<dd class="main-grade__desc">첫 예약 시 커미션 5% 적용</dd>
+									</dl>
+
+									////SILVER////
+									<span class="main-grade__icon grade__icon--silver"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">$n월$ 나의 등급 SILVER</dt>
+										<dd class="main-grade__desc">지난달 예약완료 숙박수 30박 이상</dd>
+										<dd class="main-grade__desc">커미션 3.0%</dd>
+										<dd class="main-grade__desc">할인쿠폰 3,000원권 5장</dd>
+										<dd class="main-grade__desc">등급 유효기간 1개월</dd>
+									</dl>
+
+									////GOLD////
+									<span class="main-grade__icon grade__icon--gold"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">$n월$ 나의 등급 GOLD</dt>
+										<dd class="main-grade__desc">지난달 예약완료 숙박수 60박 이상</dd>
+										<dd class="main-grade__desc">커미션 3.5% </dd>
+										<dd class="main-grade__desc">할인쿠폰 5,000원권 3장 / 3,000원권 5장</dd>
+										<dd class="main-grade__desc">등급 유효기간 1개월</dd>
+									</dl>
+
+									//// PLATINUM ////
+									<span class="main-grade__icon grade__icon--platinum"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">$n월$ 나의 등급 PLATINUM</dt>
+										<dd class="main-grade__desc">지난달 예약완료 숙박수 120박 이상</dd>
+										<dd class="main-grade__desc">커미션 4.5%</dd>
+										<dd class="main-grade__desc">할인쿠폰 5,000원권 10장</dd>
+										<dd class="main-grade__desc">등급 유효기간 1개월</dd>
+									</dl>
+
+									//// MASTER  ////
+									<span class="main-grade__icon grade__icon--bronze"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">$n월$ 나의 등급 MASTER</dt>
+										<dd class="main-grade__desc">분기별 예약완료 숙박수 최상위 파트너</dd>
+										<dd class="main-grade__desc">커미션 5.0%</dd>
+										<dd class="main-grade__desc">할인쿠폰 5,000원권 10장</dd>
+										<dd class="main-grade__desc">등급 유효기간 1개월</dd>
+									</dl>
+									-->
+								</div>
+								<div class="main-grade__arr">
+									<div class="main-grade__arr-icon">
+										<span class="main-grade__days">12월 누적 숙박수 100박</span>
+									</div>
+								</div>
+								<div class="main-grade__after">
+									<span class="main-grade__icon grade__icon--gold"></span>
+									<dl class="main-grade__spec">
+										<dt class="main-grade__name">9월 예상 등급 GOLD</dt>
+										<dd class="main-grade__desc">지난달 예약완료 숙박수 60박 이상</dd>
+										<dd class="main-grade__desc">커미션 3.5% </dd>
+										<dd class="main-grade__desc">할인쿠폰 5,000원권 3장 / 3,000원권 5장</dd>
+										<dd class="main-grade__desc">등급 유효기간 1개월</dd>
+									</dl>
+								</div>
+							</div>
+						</section>
+						<!--// main-grade -->
+						<!-- main-notice -->
+						<section class="main-notice">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">공지사항</h3>
+								<span class="tit__right">
+									<a href="" class="tit__more">더보기<span class="tit__more-arr"></span></a>
+								</span>
+							</div>
+							<div class="main-notice__box">
+								<ul class="board-list board-list--sm">
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">[외국인 호스텔] 예약방법 및 체결수 안내</span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">[신규기능] 민박 직접 선택 예약 기능이 추가됩니다!!!! 예약방법 및 체결수 안내 </span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">[이벤트] 겨울 성수기 이벤트 - 숙박 UP! 상품권 UP!</span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">[이벤트] 민박다나와에게 바란다</span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</section>
+						<!--// main-notice -->
+						<!-- main-qna -->
+						<section class="main-qna">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">1:1 문의</h3>
+								<span class="tit__right">
+									<a href="" class="tit__more">더보기<span class="tit__more-arr"></span></a>
+								</span>
+							</div>
+							<div class="main-qna__box">
+								<ul class="board-list--sm">
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">블루여행사 전분홍입니다. 신용훈 고객관련하여 민박..</span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">블루여행사 전분홍입니다. </span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">김수경고객님 예약건문의입니다.</span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+									<li class="board-list__item">
+										<a href="" class="board-list__link">
+											<span class="board-list__subject">신용훈 고객관련하여 민박 확정해주세요.</span>
+											<span class="board-list__date">17.12.10</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</section>
+						<!--// main-qna -->
+					</div>
+					<div class="main-info__right">
+						<!-- main-contact -->
+						<section class="main-contact">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">예약 담당자</h3>
+							</div>
+							<ul class="main-contact__list">
+								<li class="main-contact__box">
+									<span class="main-contact__icon"></span>
+									<div class="main-contact__desc">
+										<span class="main-contact__name">강지윤 사원</span>
+										<ul class="main-contact__way">
+											<li class="main-contact__txt">T. 070-8661-1507</li>
+											<li class="main-contact__txt">E. <a href="mailto:mint_1530@nate.com" class="main-contact__link">mint@theminda.com</a></li>
+											<li class="main-contact__txt">N. mint_1530@nate.com</li>
+										</ul>
+									</div>
+								</li>
+								<li class="main-contact__box">
+									<span class="main-contact__icon"></span>
+									<div class="main-contact__desc">
+										<span class="main-contact__name">박선화 대리</span>
+										<ul class="main-contact__way">
+											<li class="main-contact__txt">T. 070-8661-1503</li>
+											<li class="main-contact__txt">E. <a href="mailto:suddenly@theminda.com" class="main-contact__link">suddenly@theminda.com</a></li>
+											<li class="main-contact__txt">N. ssuna724@nate.com</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</section>
+						<!--// main-contact -->
+						<!-- main-account -->
+						<section class="main-account">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">온라인 입금계좌</h3>
+							</div>
+							<div class="main-account__box">
+								<span class="main-account__icon"></span>
+								<div class="main-account__desc">
+									<span class="main-account__tit">온라인 입금계좌</span>
+									<p class="main-account__txt">우리은행  1005-302-074073<br />예금주  (주)민다</p>
+								</div>
+							</div>
+						</section>
+						<!--// main-account -->
+					</div>
+				</div>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+</body>
+</html>

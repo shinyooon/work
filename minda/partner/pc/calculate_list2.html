@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<!-- <a href="/member/logout.php" class="btn">정보수정</a> -->
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="" class="active">통계/정산</a></li>
+						<li><a href="">파트너 지원</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">통계/정산</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li class="active"><a href="">정산내역</a></li>
+							<li><a href="">수익통계</a></li>
+							<li><a href="">순위별 통계</a></li>
+							<li><a href="">리뷰통계</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="body_tit2 clearfix">
+						<ul class="tit-step pull-left row">
+							<li><a href="">정산예정</a></li>
+							<li class="active"><a href="">정산내역</a></li>
+							<li><a href="">정산규정</a></li>
+						</ul>
+					</div>
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<table class="tb tb-default tb_input tb_fixed">
+							<caption class="sr-only">정산 내역 기간</caption>
+							<colgroup>
+								<col style="width:150px">
+								<col>
+								<col style="width:150px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" class="pl20">기간</th>
+									<td class="pr20 list-top-form">
+										<div class="d_iblock ml10">
+											<span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm calc_date calc_start_date" readonly="readonly" title="정산내역 검색 시작일"></span>
+											<span class="form-control-static">~</span>
+											<span class="input-wrap input-cal"><input type="text" class="form-control-basic wid_sm calc_date calc_end_date" readonly="readonly" title="정산내역 검색 마지막일"></span>
+										</div>
+									</td>
+									<th>검색옵션</th>
+									<td class="pr20">
+										<div class="tb_bx">
+											<span class="w120 pr5">
+												<select class="form-control-basic pl10" title="년도 선택">
+												<option>예약번호</option>
+												<option>여행자 이름</option>
+												</select>
+											</span>
+											<span class="w160 pr5">
+												<input type="" name="" class="form-control-basic">
+											</span>
+											<span>
+												<button type="button" class="btn bg_dark_grey wfull btn-xs fs16">확인</button>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="mb10 mt50 fw500"><p class="color_blk">2017년 6월 01 ~ 2017년 6월 30일</p></div>
+						<div class="tbl-wrap3 text-center tbl-calc">
+							<table class="tb tb-default tb_fixed">
+								<caption class="sr-only">정산 예정인 투어티켓 정산 정보 </caption>
+								<colgroup>
+									<col style="width:90px">
+									<col style="width:110px">
+									<col style="width:90px">
+									<col style="width:110px">
+									<col style="width:90px">
+									<col style="width:110px">
+									<col style="width:90px">
+									<col style="width:110px">
+									<col style="width:90px">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th colspan="4" scope="colgroup">예약완료</th>
+										<th rowspan="2" colspan="2" scope="col">취소</th>
+										<th rowspan="2" colspan="2" scope="col">
+											<div class="dropdown-hover d_iblock ml5">
+												<button class="no_style"><span class="icon_help_grey bg_wh border_grey2">도움말</span></button>
+												<div class="dropdown-content">
+													<div class="inner">
+														<p class="txt">신용카드 등의 온라인 전자결제 및 지불을 대행하는<br />PG(Payment Gateway)사의 수수료 (3%)<br />(*민다 현 PG사 : NHN KCP)</p>
+													</div>
+												</div>
+											</div>
+											PG수수료
+										</th>
+										<th rowspan="2" colspan="2" scope="col">지급액 합계</th>
+									</tr>
+									<tr>
+										<th colspan="2" scope="col">확정건수</th>
+										<th colspan="2" scope="col">부분취소 된 확정</th>
+									</tr>
+									<tr>
+										<th scope="col" class="bg_light_grey4 color_grey2">건수</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">금액</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">건수</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">금액</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">건수</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">금액</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">수수료</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">VAT</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">건수</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">금액</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<td>32</td>
+										<td class="text-right">35,000</td>
+										<td>32</td>
+										<td class="text-right">35,000</td>
+										<td>32</td>
+										<td class="text-right">35,000</td>
+										<td class="text-right">5,000</td>
+										<td class="text-right">29</td>
+										<td>14</td>
+										<td class="text-right">35.000</td>
+									</tr>
+
+								</tfoot>
+							</table>
+						</div>
+						<div class="mb10 mt50 fw500"><p class="color_blk">총 14건</p></div>
+						<div class="tbl-wrap3 text-center mb50">
+							<table class="tb tb-default tb_fixed">
+								<caption class="sr-only"> 기간 내 투어티켓 정산 전체 정보 </caption>
+								<colgroup>
+									<col style="width:85px">
+									<col style="width:85px">
+									<col style="width:85px">
+									<col style="width:85px">
+									<col style="width:140px">
+									<col style="width:65px">
+									<col style="width:85px">
+									<col style="width:70px">
+									<col style="width:70px">
+									<col>
+									<col style="width:95px">
+									<col style="width:65px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th rowspan="2" scope="col" class="bb0">정산일</th>
+										<th rowspan="2"  scope="colgroup">투어일</th>
+										<th rowspan="2"  scope="colgroup">확정일</th>
+										<th rowspan="2" scope="col" class="bb0">취소일</th>
+										<th rowspan="2" scope="col" class="bb0">예약번호</th>
+										<th rowspan="2" scope="col" class="bb0">이름</th>
+										<th rowspan="2" scope="col" class="bb0">정산액</th>
+										<th colspan="2" scope="col" class="bb0">파트너PG</th>
+										<th scope="col" class="bb0">지급액 합계</th>
+										<th rowspan="2" scope="col" class="bb0">예약상태</th>
+										<th rowspan="2" scope="col" class="bb0">지급</th>
+									</tr>
+									<tr>
+										<th scope="col" class="bg_light_grey4 color_grey2">수수료</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">VAT</th>
+										<th scope="col" class="bg_light_grey4 color_grey2">금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>17-06-06</td>
+										<td>17-06-06</td>
+										<td>17-06-06</td>
+										<td>17-06-06</td>
+										<td>TG1497247725677</td>
+										<td>김슬기</td>
+										<td class="text-right">3,000</td>
+										<td class="text-right">100</td>
+										<td class="text-right">100</td>
+										<td class="text-right"></td>
+										<td>예약취소</td>
+										<td>완료</td>
+									</tr>
+									<tr>
+										<td>17-06-06</td>
+										<td>17-06-06</td>
+										<td>17-06-06</td>
+										<td>17-06-06</td>
+										<td>TG1497247725677</td>
+										<td>김슬기</td>
+										<td class="text-right">3,000</td>
+										<td class="text-right">100</td>
+										<td class="text-right">100</td>
+										<td class="text-right"></td>
+										<td>예약취소</td>
+										<td>완료</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td scope="row">총 계</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-right">1,200</td>
+										<td class="text-right">500</td>
+										<td class="text-right">500</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+		var w = $(window);
+		var $tour_wrap = $('.tour-wrap');
+		var tour_pos_y =$tour_wrap.offset().top;
+		w.scroll(function() {
+			var st = w.scrollTop();
+			if(st>= tour_pos_y){
+				$tour_wrap.addClass('fixed');
+			}else{
+				$tour_wrap.removeClass('fixed');
+			}
+		});
+		// 2016-12-02 수정
+		$('.has-tooltip').click(function(){
+			var pos_x = $(this).offset().left - $(this).closest('.btn-justify').offset().left-480;
+			var $tooltip = $(this).siblings('.tooltip');
+			var tooltip_w =$tooltip.width();
+			$tooltip.css({
+				display : 'block',
+				left : '50%',
+				'margin-left':-(tooltip_w/2)+pos_x
+			});
+		})
+		var startDate, endDate
+		$('.calc_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			parentEl: '.tour-contents',
+			opens: 'left',
+			locale: {
+				"format": "YYYY-MM-DD",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+
+		}, function(startDate, endDate) {
+			$('.calc_start_date').val(startDate.format('YYYY-MM-DD'));
+			$('.calc_end_date').val(endDate.format('YYYY-MM-DD'));
+
+		});
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

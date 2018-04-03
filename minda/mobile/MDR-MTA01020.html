@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+<link rel="stylesheet" href="http://v2.theminda.com/min/f=m/1.0/common/css/style.css">
+<!-- css -->
+<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/common.css">
+<!-- <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css"> -->
+<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/common.dev.css">
+<!-- <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css"> -->
+<!-- 민박 검색 CSS -->
+<!-- <link rel="stylesheet" type="text/css" href="http://v2.theminda.com/m/1.0/grp_minbak/css/minbak_search.css" /> -->
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- mobile menu -->
+<div id="snb" class="side_nav">
+	<a class="icon_snb_close" href="#snb" onClick="menuClose();return false;">닫기</a>
+	<header>
+		<h1><a class="btn btn_login" href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_account/login.html');">LOGIN</a></h1>
+		<a class="btn_setting" href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_setting/setting.html')"><span class="icon_setting">설정</span></a>
+	</header>
+	<section>
+		<nav id="gnb">
+			<h2 class="sr-only">메인메뉴</h2>
+			<ul class="clearfix">
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_main/main.html')"><i class="icon_gnb1"></i> <span class="txt">한인숙소</span></a></li>
+				<!-- 여행정보 개선 수정 -->
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_main/main.html?main_tab=tab_spot')"><i class="icon_gnb2"></i> <span class="txt">
+				스팟</span></a></li>
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_main/main.html?main_tab=tab_plan')"><i class="icon_gnb3"></i> <span class="txt">일정</span></a></li>
+				<!--// 여행정보 개선 수정 -->
+				<!--
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=blowout_sale_minbak')"><i class="icon_gnb3"></i> 땡처리 할인</a></li>
+			-->
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_bbs/news_and_event_list.html')"><i class="icon_gnb4"></i><span class="txt">숙소 이벤트
+				</span></a></li>
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_bbs/coupon_zone.html')"><i class="icon_gnb5"></i> <span class="txt">쿠폰존</span></a></li>
+				<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_bbs/notice_list.html')"><i class="icon_gnb6"></i> <span class="txt">공지사항</span></a></li>
+			</ul>
+			<!-- 통합검색 영역 추가 -->
+			<div class="srch-side">
+				<span class="input-wrap">
+					<input class="input-srch no_style" title="통합검색" value="" placeholder="검색어를 입력하세요" type="text">
+					<button type="button" class="icon_srch_blk">검색</button>
+				</span>
+			</div>
+			<!--// 통합검색 영역 추가 -->
+			<div id="snb_mypage">
+				<h2 class="sr-only">MY PAGE</h2>
+				<ul>
+					<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_mypage/my_reservation.html')">숙소 예약 내역
+
+					</a></li>
+					<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/guidebook/main.html')">나의 가이드북(찜한 숙소)
+					</a></li><li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=saw_minbak_today')"> 오늘 본 숙소</a></li>
+					<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_mypage/my_writings.html')">나의 활동</a></li>
+					<li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_mypage/my_point_coupon_cash.html')">포인트/쿠폰/캐쉬</a></li>
+					<!-- 2016-10-18 : 수정 : yuna -->
+					<!-- <li><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_setting/setting.html')">설정</a></li> -->
+				</ul>
+			</div>
+		</nav>
+	</section>
+</div>
+<!-- mobile menu -->
+
+<!-- wrap.screenID -->
+<div id="wrap" class="index">
+
+	<!-- header -->
+	<header id="hd">
+		<h1><a href="javascript:;">전체 도시</a></h1>
+		<!-- 타이틀 우측 2번ㅤㅉㅒㅤ 버튼 -->
+		<a class="icon_hd_clse hd-r" href="javascript:history.back();"></a>	<!-- 타이틀 우측 버튼 -->
+		<!-- 검색 바 -->
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+		<!-- 페이지 시작-->
+
+		<!-- 검색분류 -->
+		<div class="lst-total-city"><!-- 도시리스트 개선 클래스 추가 : yuna -->
+			<!-- 숙소검색 일정/스팟 전체보기에서는 노출되지 않음-->
+			<form class="srch_house">
+				<input id="search_content" type="text" placeholder="도시 또는 숙소명을 입력하세요.">
+				<button type="submit" class="icon_srch_blk">검색</button>
+			</form>
+			<!-- 유럽 -->
+			<div class="sort-main">
+				<div class="tit-wrap"><!-- 도시리스트 개선 클래스 추가 : yuna -->
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">유럽</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div class="">
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001001" alt="">영국</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 103</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 1</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 1</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001002" alt="">프랑스</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">파리 176</a></li>
+									<li class="col-xs-6"><a href="">클레르몽 페랑 1</a></li>
+									<li class="col-xs-6"><a href="">리옹 1</a></li>
+									<li class="col-xs-6"><a href="">엑상프로방스 1</a></li>
+									<li class="col-xs-6"><a href="">칸 1</a></li>
+									<li class="col-xs-6"><a href="">몽펠리에 1</a></li>
+									<li class="col-xs-6"><a href="">콜마르 1</a></li>
+									<li class="col-xs-6"><a href="">리옹 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!--// sort-main-->
+			<!-- 지중해 -->
+			<div class="sort-main">
+				<div class="tit-wrap">
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">지중해</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!--// sort-main-->
+			<!-- 아시아 -->
+			<div class="sort-main">
+				<div class="tit-wrap">
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">아시아</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!--// sort-main-->
+			<!-- 북미 -->
+			<div class="sort-main">
+				<div class="tit-wrap">
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">북미</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!--// sort-main-->
+			<!-- 중/남미 -->
+			<div class="sort-main">
+				<div class="tit-wrap">
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">중/남미</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!-- 오세아니아 -->
+			<div class="sort-main">
+				<div class="tit-wrap">
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">오세아니아</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!--// sort-main-->
+			<!-- 대한민국 -->
+			<div class="sort-main">
+				<div class="tit-wrap">
+					<a class="icon_hd_back" href=""></a>
+					<h1><a href="">대한민국</a></h1>
+				</div>
+				<div class="sort-sub">
+					<div>
+						<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+						<div class="sort-sub2">
+							<div class="sort-list-box cc-list">
+								<ul class="row">
+									<li class="col-xs-6"><a href="">런던 105</a></li>
+									<li class="col-xs-6"><a href="">에딘버러 6</a></li>
+									<li class="col-xs-6"><a href="">맨체스터 3</a></li>
+									<li class="col-xs-6"><a href="">펜잔스 1</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// sort-sub-->
+			</div>
+			<!--// sort-main-->
+		</div>
+		<!-- //페이지 끝-->
+	</div>
+	<!-- //container -->
+	<!-- Footer -->
+	<div id="ft" class="bg_blk">
+		<div>
+			<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+			<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+			<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+		</div>
+		<p>
+			(주)사막 사업자등록번호 : 010-86-28116   FAX : 02-722-3478
+		</p>
+		<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+		<ul class="list-inline">
+			<li><a href="">회사소개</a></li>
+			<li><a href="">고객센터</a></li>
+			<li><a href="">이용약관</a></li>
+			<li><a href="" class="color_org">개인정보취급방침</a></li>
+			<li><a href="">PC버전</a></li>
+		</ul>
+	</div>
+
+	<!-- fixed button-->
+	<div id="quick">
+		<a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+		<a class="icon_mn2" href="#">Menu</a>
+	</div>
+</div>
+<!-- //wrap -->
+<script>
+	jQuery(function($) {
+		$('.sort-main h1 a').click(function(e){
+			e.preventDefault();
+			scrollMove(container,50);
+			$('.sort-main').hide();
+			$(this).closest('.sort-main').show().addClass('open');
+		});
+		$('.sort-main .icon_hd_back').click(function(e){
+			e.preventDefault();
+			$(this).closest('.sort-main').removeClass('open');
+			$('.sort-main').show();
+		});
+	});
+</script>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style type="text/css">
+		html,body {background-color: #f3f3f3 }
+	</style>
+</head>
+<!-- [D]
+닫기만 있는 메뉴 class="page_clse"
+흰배경 class="bg_wh" -->
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<h1><a href="">판매자 문의</a></h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<div class="item_card_lst v2"><!-- v2클래스 추가 -->
+				<div class="btm_info bg_grey2">
+					<div class="itemwrp media">
+						<div class="media-left">
+							<div class="tmb_wrp">
+								<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+								<span class="badge badge_gold">금뱃지</span>
+							</div>
+						</div>
+						<div class="media-body">
+							<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+							<div class="info-detail">
+								<div class="left">
+									<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 페이지 시작-->
+			<div class="frm_wrp pt0">
+				<form action=".">
+					<input type="text" class="form-control pl_grey mb5" placeholder="제목을 입력하세요" title="제목입력">
+					<div class="form-group">
+						<textarea id="inquiryCmt" class="form-control pl_grey" rows="15" placeholder="문의내용을 입력하세요" title="문의내용입력"></textarea>
+					</div>
+					<div class="btm_fixed mt10 pa10">
+						<div class="row">
+							<span class="col-xs-6 pr4"><button type="button" class="btn btn-xl btn-block bg_org">등록</button></span>
+							<span class="col-xs-6 pl4"><button type="button" class="btn btn-xl btn-block bg_dark_grey">취소</button></span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<script>
+	jQuery(function($) {
+		$(".acc_btn").on('click', function() {
+			$(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+			return false;
+		});
+	});
+	</script>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

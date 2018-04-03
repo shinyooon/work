@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<? include "inc/rev_form.html" ?>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- 취소 환불 규정 -->
+	<? include "inc/p.cancel_rule.html" ?>
+	<!--// 취소 환불 규정 -->
+	<!-- 담당자 추가 등록 -->
+	<? include "inc/p.charge.html" ?>
+	<!--// 담당자 추가 등록 -->
+<!--js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Layer.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		lnbCtrl.active(0);
+		var cancelRule = new Layer($('.modal__cancel-rule'));
+		$('#btn_cancel_rule').click(function(e){
+			e.preventDefault();
+			cancelRule.open();
+		});
+		var p_charge = new Layer($('.modal__charge'));
+		$('#btn_charge').click(function(e){
+			e.preventDefault();
+			p_charge.open();
+		})
+		p_charge.open();
+	})
+</script>
+</body>
+</html>

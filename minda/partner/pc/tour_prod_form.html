@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="w1260 clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<a href="/member/logout.php" class="btn">통합ID</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="" class="active">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="">통계/정산</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">상품관리</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">승인된 상품</a></li>
+							<li class="active"><a href="">미승인 상품</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="body_tit2 clearfix">
+						<ul class="tit-step pull-left row">
+							<li class="active"><a href="">기본정보</a></li>
+							<li><a href="">사진/코스</a></li>
+							<li><a href="">요금</a></li>
+							<li><a href="">행사관리</a></li>
+							<li><a href="">예약규정</a></li>
+						</ul>
+						<div class="pull-right pr15">
+							<div class="input-area text-right">
+								<label for="sel-state" class="label-tit">운영상태</label>
+								<select id="sel-state" class="form-control-basic wid_sm ml25" title="운영상태 선택">
+									<option value="">판매중</option>
+									<option value="">판매중지</option>
+								</select>
+								<button class="btn btn-sm bg_dark_grey btn-check">확인</button>
+							</div>
+						</div>
+					</div>
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<div class="pa40 bg_wh pt0">
+							<h3 class="sub_title mt0">
+								기본정보
+							</h3>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only">상품등록 기본 정보 입력 양식</caption>
+								<colgroup>
+									<col style="width:110px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>상품명 <b class="color_red">*</b></th>
+										<td><input type="text" class="form-control-basic" title="상품명" /></td>
+									</tr>
+									<tr>
+										<th>상품유형 <b class="color_red">*</b></th>
+										<td>
+											<select class="form-control-basic wid_sm" title="상품유형 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">현지투어</option>
+												<option value="">교통/입장권</option>
+												<option value="">체험/액티비티</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>진행도시 <b class="color_red">*</b></th>
+										<td>
+											<select class="form-control-basic wid_sm" title="대륙선택">
+												<option value="">선택</option>
+											</select>
+											<select class="form-control-basic wid_sm ml5 mt0" title="국가선택">
+												<option value="">선택</option>
+											</select>
+											<select class="form-control-basic wid_sm ml5 mt0" title="도시선택">
+												<option value="">선택</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>소요시간 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" class="form-control-basic  wid_sm" title="소요시간" />
+											<select class="form-control-basic wid_sm ml5 mt0" title="시간 단위 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">시간</option>
+												<option value="">일</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>이동수단 <b class="color_red">*</b></th>
+										<td><input type="text" class="form-control-basic wid_lg" title="이동수단 입력"></td>
+									</tr>
+									<tr>
+										<th>투어소개 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="투어소개"></textarea></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pa40 bg_light_grey3">
+							<h3 class="sub_title mt0">
+								미팅정보
+							</h3>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only">상품등록 미팅정보 입력 양식</caption>
+								<colgroup>
+									<col style="width:110px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>장소설명 <b class="color_red">*</b></th>
+										<td><input type="text" class="form-control-basic" title="장소설명" /></td>
+									</tr>
+									<tr>
+										<th>출발시간 <b class="color_red">*</b></th>
+										<td>
+											<select class="form-control-basic wid_sm" title="시간 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">00</option>
+												<option value="">01</option>
+												<option value="">02</option>
+												<option value="">03</option>
+												<option value="">04</option>
+												<option value="">05</option>
+												<option value="">06</option>
+												<option value="">07</option>
+												<option value="">08</option>
+												<option value="">09</option>
+												<option value="">10</option>
+												<option value="">11</option>
+												<option value="">12</option>
+												<option value="">13</option>
+												<option value="">14</option>
+												<option value="">15</option>
+												<option value="">16</option>
+												<option value="">17</option>
+												<option value="">18</option>
+												<option value="">19</option>
+												<option value="">20</option>
+												<option value="">21</option>
+												<option value="">22</option>
+												<option value="">23</option>
+											</select>
+											<span class="form-control-static">시</span>
+											<select class="form-control-basic wid_sm ml5 mt0" title="분 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">00</option>
+												<option value="">10</option>
+												<option value="">20</option>
+												<option value="">30</option>
+												<option value="">40</option>
+												<option value="">50</option>
+											</select>
+											<span class="form-control-static">분</span>
+										</td>
+									</tr>
+									<tr>
+										<th class="no_bor">만나는 장소 <b class="color_red">*</b></th>
+										<td class="no_bor">
+											<input type="text" class="form-control-basic wid_lg" title="만나는 장소 입력">
+											<button class="btn bg_dark_grey wid_xs ml5">검색</button>
+											<p class="fs12">아래 지도에 출발위치의 정확한 위치에 마커를 지정해주세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="no_bor pr0 pt0">
+											<div class="map-area">
+												<p>지도가 들어갈곳 / SIZE 990 X 320</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>장소사진<span class="color_mint">(선택)</span></th>
+										<td>
+											<div class="file-control">
+												<label for="meet_spot" class="label_file">
+													<input type="file" name="" id="meet_spot" class="sr-only" />
+													<span class="inner-area img-center"><span class="icon_plus_md">사진추가하기</span></span>
+												</label>
+												<!-- 썸네일 이미지 선택된 이미지가 들어갈곳
+												<div class="img-area"><img class="img-center" src="http://www.theminda.com/data/travel/image/middle/201609/1473150616_0.jpg" /></div> -->
+												<label class="inline-checkbox basic chk_label" for="del_chk">
+													<input type="checkbox" title="파일 선택" id="del_chk">
+													<span class="sr-only">선택 파일 삭제</span>
+												</label>
+											</div>
+											<button class="btn bg_dark_grey wid_xs ml5">삭제</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pa40 bg_wh pb0">
+							<h3 class="sub_title mt0">
+								안내사항
+							</h3>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only"> 안내사항 입력 양식</caption>
+								<colgroup>
+									<col style="width:110px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>포함사항 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="포함사항"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>불포함사항 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="불포함사항"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>공지사항 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="공지사항"></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2016-12-02 수정-->
+						<div class="mb50 mt50 text-center btn-justify pr">
+							<div class="tooltip tooltip_alone top" role="tooltip">
+								<div class="tooltip-arrow"></div>
+								<div class="tooltip-inner"><span>$구분명$</span>이(가) 입력되지 않습니다.<br>입력 후 다시 저장해주시기 바랍니다.</div>
+							</div>
+							<button type="button" class="btn bg_org btn-lg has-tooltip">확인</button>
+							<button type="button" class="btn bg_dark_grey btn-lg ml5 has-tooltip">등록요청</button>
+						</div>
+						<!--// 2016-12-02 수정-->
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			});
+
+		var w = $(window);
+		var $tour_wrap = $('.tour-wrap');
+		var tour_pos_y =$tour_wrap.offset().top;
+		w.scroll(function() {
+			var st = w.scrollTop();
+			if(st>= tour_pos_y){
+				$tour_wrap.addClass('fixed');
+			}else{
+				$tour_wrap.removeClass('fixed');
+			}
+		});
+		// 2016-12-02 수정
+		$('.has-tooltip').click(function(){
+			var pos_x = $(this).offset().left - $(this).closest('.btn-justify').offset().left-480;
+			var $tooltip = $(this).siblings('.tooltip');
+			var tooltip_w =$tooltip.width();
+			$tooltip.css({
+				display : 'block',
+				left : '50%',
+				'margin-left':-(tooltip_w/2)+pos_x
+			});
+		})
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

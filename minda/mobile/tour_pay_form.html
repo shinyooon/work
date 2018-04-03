@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd" class="no_fixed">
+			<h1>예약하기</h1>
+			<button class="icon_hd_clse" href="">닫기</buton>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<!-- 페이지 시작-->
+			<!-- pay-wrap -->
+			<div class="bg_grey2 pay-wrap pb10">
+				<ul class="tab6 step">
+					<li class="active">예약/결제</li><!-- 활성화시 active클래스 추가 -->
+					<li>결제완료</li>
+				</ul>
+
+				<ul class="item_card_lst v2"><!-- v2클래스 추가 -->
+					<li class="pa0">
+						<div class="partner-info media">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+									<span class="badge badge_gold">금뱃지</span>
+								</div>
+							</div>
+							<div class="media-body">
+								<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+							</div>
+						</div>
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+							<!-- <div class="ribbon_wrp">
+								<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장안됨</button>
+							</div> -->
+						</div>
+						<div class="btm_info">
+							<div class="itemwrp media">
+								<div class="media-body">
+									<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<section class="info-bx-wrap">
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">일정</dt>
+							<dd class="tb_cell">2017-01-01</dd>
+						</dl>
+					</div>
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">옵션</dt>
+							<dd class="tb_cell">성인(\10,000) * 1명<br />아동(\5,000) * 2명</dd>
+						</dl>
+					</div>
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">합계금액</dt>
+							<dd class="tb_cell"><span class="color_red fw500">€160</span></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="info-bx-wrap">
+					<h2 class="sub_tit">예약자 정보</h2>
+					<div class="bx-wh form-group valid">
+						<!-- [D] 2017-02-10 수정 -->
+						<dl class="tb_bx">
+							<dt class="tb_cell">이름</dt>
+							<dd class="tb_cell">
+								<div class="input-wrap">
+									<input type="text" class="no_style pl_grey" placeholder="이름" title="이름">
+									<button class="icon_clse_input">입력취소</button>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="bx-wh form-group valid">
+						<!-- [D] 2017-02-10 수정 -->
+						<dl class="tb_bx">
+							<dt class="tb_cell">연락처</dt>
+							<dd class="tb_cell code">
+								<div class="input-wrap input-sel input-sel-code d_iblock">
+									<select title="국가번호 선택">
+										<option>+79</option>
+										<option>+80</option>
+										<option>+81</option>
+										<option selected="selected">+825 대한민국</option>
+										<option>+888</option>
+									</select>
+								</div>
+								<div class="input-wrap">
+									<input type="text" id="pay-phone" class="no_style pl_grey pl5" placeholder="휴대폰번호 입력" title="휴대폰 번호 입력">
+									<button class="icon_clse_input">입력취소</button>
+								</div>
+								<p class="form-control-static">직접 연락할 때 필요하므로 정확하게 입력해주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- [D] 2017-02-10 수정 -->
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">이메일</dt>
+							<dd class="tb_cell">
+								<div class="input-wrap">
+									<input type="text" class="no_style pl_grey" placeholder="이메일을 입력해주세요" title="이메일 입력">
+									<button class="icon_clse_input">입력취소</button>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="bx-wh">
+						<div class="tb_bx">
+							<div class="form-group valid_chk">
+								<span class="input-wrap input-ta">
+									<textarea class="no_style pl_grey" placeholder="요청사항을 입력해주세요." title="요청사항 입력"></textarea>
+								</span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="info-bx-wrap">
+					<h2 class="sub_tit">결제금액</h2>
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">포인트</dt>
+							<dd class="tb_cell">
+								<!-- [D] 2017-01-11 -->
+								<input type="text" class="no_style pl_grey" placeholder="잔액 0" title="포인트 잔액" value="잔액 150P" readonly="readonly">
+							</dd>
+							<dd class="tb_cell btn_cell">
+								<button class="btn color_blk">사용</button>
+							</dd>
+						</dl>
+					</div>
+					<div class="bx-wh">
+						<!-- [D] 2017-02-10 수정 -->
+						<dl class="tb_bx">
+							<dt class="tb_cell">쿠폰선택</dt>
+							<dd class="tb_cell">
+								<div class="input-wrap input-sel">
+									<select title="쿠폰선택" class="d_block">
+										<option selected="selected">선택해주세요</option>
+										<option>쿠폰1</option>
+										<option>쿠폰2</option>
+										<option>쿠폰3</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">캐쉬</dt>
+							<dd class="tb_cell">
+								<!-- [D] 2017-01-11 -->
+								<input type="text" class="no_style pl_grey" placeholder="잔액 0" title="캐쉬 잔액" value="잔액 ￦2,000" readonly="readonly">
+							</dd>
+							<dd class="tb_cell btn_cell">
+								<button class="btn color_blk">사용</button>
+							</dd>
+						</dl>
+					</div>
+					<div class="bx-wh form-group valid">
+						<!-- [D] 2017-02-10 수정 -->
+						<dl class="tb_bx">
+							<dt class="tb_cell">적립포인트</dt>
+							<dd class="tb_cell">
+								<span class="color_red fw500">830P</span>
+								<p class="form-control-static">적립포인트는 여행일정 이후 리뷰글 작성 시 적립됩니다.</p>
+							</dd>
+						</dl>
+
+					</div>
+				</section>
+				<section class="info-bx-wrap total_info">
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">합계금액</dt>
+							<dd class="tb_cell text-right"><span class="fw500">￦20,000</span></dd>
+						</dl>
+					</div>
+					<div class="bx-wh">
+						<dl class="tb_bx">
+							<dt class="tb_cell">할인금액</dt><!-- [D] 2017-02-10 수정 -->
+							<dd class="tb_cell text-right">
+								<dl class="dl_inline dl_discount">
+									<dt class="color_light_grey">포인트</dt>
+									<dd  class="fw500">-￦1,000</dd>
+								</dl>
+								<dl class="dl_inline dl_discount">
+									<dt class="color_light_grey">쿠폰</dt>
+									<dd class="fw500">-￦1,000</dd>
+								</dl>
+								<dl class="dl_inline dl_discount">
+									<dt class="color_light_grey">캐쉬</dt>
+									<dd class="fw500">-￦2,000</dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+					<div class="bx-wh result">
+						<dl class="tb_bx">
+							<dt class="tb_cell">결제금액</dt>
+							<dd class="tb_cell text-right"><span class="fw500 color_red">￦15,500</span></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="info-bx-wrap info-pay-select">
+					<h2 class="sub_tit">결제수단</h2>
+					<div class="bx-wh pa0 ">
+						<ul class="tb_bx fix_type_org" data-toggle="buttons">
+							<li class="tb_cell btn-group"><label for="pay_card" class="btn no_style"><input type="radio" name="sel_pay" id="pay_card" />신용카드</label></li>
+							<li class="tb_cell btn-group"><label for="pay_small"  class="btn no_style"><input type="radio" name="sel_pay" id="pay_small" />핸드폰 소액결제</label></li>
+							<li class="tb_cell btn-group"><label for="pay_account"  class="btn no_style"><input type="radio" name="sel_pay" id="pay_account" />실시간 계좌이체</label></li>
+						</ul>
+					</div>
+				</section>
+				<section class="info-bx-wrap">
+					<h2 class="sub_tit">취소환불규정</h2>
+					<div class="bx-wh pa15">
+						파트너의 취소환불 규정이 들어갈곳!!! 아래는 샘플입니다.
+						<table class="tb text-center">
+							<thead>
+								<tr>
+									<th>취소일</th>
+									<th>환불액</th>
+									<th>포인트 적립</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>30일전 취소</td>
+									<td>전액환불</td>
+									<td>없음</td>
+								</tr>
+								<tr>
+									<td>29일~22일전</td>
+									<td>70%</td>
+									<td>8%</td>
+								</tr>
+								<tr>
+									<td>21일~15일전</td>
+									<td>60%</td>
+									<td>8%</td>
+								</tr>
+								<tr>
+									<td>14일~4일전</td>
+									<td>50%</td>
+									<td>8%</td>
+								</tr>
+								<tr>
+									<td>3일~당일취소 및 <br>No-Show</td>
+									<td>40%</td>
+									<td>없음</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btm-check-area">
+						<label class="chk_label mint">
+							<input type="checkbox">취소환불규정을 확인하였고 내용에 동의합니다.
+						</label>
+					</div>
+					<div>
+						<div class="btn-wrap ma0">
+							<a class="btn btn-xl d_block bg_mint" href="">결제하기</a>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--// pay-wrap -->
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script>
+jQuery(function($){
+	$('.input-wrap > input:text').keyup(function(){
+		if($(this).val()){
+			$(this).siblings('.icon_clse_input').show();
+		}else{
+			$(this).siblings('.icon_clse_input').hide()
+		}
+	});
+	$('.icon_clse_input').click(function(){
+		$(this).siblings('input:text').val('');
+		$(this).hide();
+	})
+});
+
+
+</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-datepicker.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

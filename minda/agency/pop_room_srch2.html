@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/bootstrap-slider.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body--hidden">
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<? include "inc/rev_form.html" ?>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- ly -->
+	<div class="ly full fade ly-rev">
+		<!-- ly__wrap -->
+		<div class="ly__wrap">
+			<!-- ly__header -->
+			<div class="ly__header">
+				<div class="tit-wrap--hidden">
+					<h1>예약 신청하기</h1>
+				</div>
+				<button type="button" class="modal__btn-clse ly__header__btn">
+					<span class="ly__header__icon">닫기</span>
+				</button>
+			</div>
+			<!--// ly__header -->
+			<!-- ly__con -->
+			<div class="ly__con">
+				<!-- ly__left -->
+				<div class="ly__left">
+					<!-- ly__left__header -->
+					<div class="ly__left__header">
+						<button type="button" class="ly__btn-back"><span class="ly__icon-back"></span></button>
+						<!-- ly__tab -->
+						<div class="ly__tab">
+							<ul class="ly__tab-list">
+								<li class="ly__tab-item ly__tab-item--active">
+									<button type="button" class="ly__tab-btn">
+										<span class="ly__tab-icon ly__tab-icon--1"></span>
+										직접 예약하기
+									</button>
+								</li>
+								<li class="ly__tab-item">
+									<button type="button" class="ly__tab-btn">
+										<span class="ly__tab-icon ly__tab-icon--2"></span>
+										민다 추천받기
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!--// ly__tab -->
+					</div>
+					<!--// ly__left__header -->
+					<!-- ly__left__con -->
+					<div class="ly__left__con">
+						<!-- srch-room -->
+						<div class="srch-room">
+							<div class="tit-wrap">
+								<h3 class="tit">숙소명 검색 (하우스)</h3>
+							</div>
+							<!-- srch-room__filter -->
+							<div class="srch-room__filter filter">
+								<div class="table table--v2">
+									<div class="table__body">
+										<div class="table__row">
+											<span class="table__col table__col__tit">
+												날짜
+											</span>
+											<span class="table__col">
+												<div class="input-group input-group__checkin">
+													<span class="input-wrap input-wrap__cal">
+														<input type="text" title="체크인 날짜" placeholder="체크인" class="input-cal">
+													</span>
+													<span class="input-wrap input-wrap__select">
+														<select title="숙발일 수">
+															<option>선택</option>
+															<option>1박</option>
+															<option>2박</option>
+															<option>3박</option>
+															<option>4박</option>
+															<option>5박</option>
+															<option>6박</option>
+															<option>7박</option>
+															<option>8박</option>
+															<option>9박</option>
+															<option>10박</option>
+															<option>11박</option>
+															<option>12박</option>
+															<option>13박</option>
+															<option>14박</option>
+															<option>15박</option>
+														</select>
+													</span>
+												</div>
+											</span>
+										</div>
+										<div class="table__row">
+											<span class="table__col table__col__tit">
+												객실유형
+											</span>
+											<span class="table__col">
+												<div class="see-more">
+													<div class="see-more__wrap">
+														<div class="see-more__con">
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type1">
+																<label for="room_type1">도미토리</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type2">
+																<label for="room_type2">개인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type3">
+																<label for="room_type3">콘도형</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type4">
+																<label for="room_type4">여성도미토리</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type5">
+																<label for="room_type5">남성도미토리</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type6">
+																<label for="room_type6">혼성도미토리</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type8">
+																<label for="room_type8">1인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type9">
+																<label for="room_type9">2인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type10">
+																<label for="room_type10">3인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type11">
+																<label for="room_type11">4인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type12">
+																<label for="room_type12">5인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type13">
+																<label for="room_type13">6인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type14">
+																<label for="room_type14">7인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type15">
+																<label for="room_type15">8인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type16">
+																<label for="room_type16">9인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type17">
+																<label for="room_type17">10인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type18">
+																<label for="room_type18">11인실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_type19">
+																<label for="room_type19">12인실</label>
+															</span>
+														</div>
+													</div>
+													<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+												</div>
+											</span>
+											<span class="table__col table__col__tit">
+												객실시설
+											</span>
+											<span class="table__col">
+												<div class="see-more">
+													<div class="see-more__wrap">
+														<div class="see-more__con">
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility1">
+																<label for="room_facility1">전용욕실</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility2">
+																<label for="room_facility2">주방시설</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility3">
+																<label for="room_facility3">컴퓨터</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility4">
+																<label for="room_facility4">TV</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility5">
+																<label for="room_facility5">에이컨</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility6">
+																<label for="room_facility6">냉장고</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility7">
+																<label for="room_facility7">세탁기</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility8">
+																<label for="room_facility8">전기밥솥</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility9">
+																<label for="room_facility9">전자레인지</label>
+															</span>
+															<span class="input-wrap__chk input-wrap__chk--green">
+																<input type="checkbox" name="" id="room_facility10">
+																<label for="room_facility10">커피포트</label>
+															</span>
+														</div>
+													</div>
+													<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+												</div>
+											</span>
+										</div>
+										<div class="filter--hidden">
+											<div class="table__row">
+												<span class="table__col table__col__tit">
+													숙소유형
+												</span>
+												<span class="table__col">
+													<div class="see-more">
+														<div class="see-more__wrap">
+															<div class="see-more__con">
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category1">
+																	<label for="room_category1">민박(게스트하우스)</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category2">
+																	<label for="room_category2">펜션/콘도</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category3">
+																	<label for="room_category3">호스텔</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category4">
+																	<label for="room_category4">호텔</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category5">
+																	<label for="room_category5">아파트</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category6">
+																	<label for="room_category6">한옥</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category7">
+																	<label for="room_category7">캠핑장</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category8">
+																	<label for="room_category8">글램핑장</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category9">
+																	<label for="room_category9">카라반</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_category10">
+																	<label for="room_category10">료칸</label>
+																</span>
+															</div>
+														</div>
+														<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+													</div>
+												</span>
+												<span class="table__col table__col__tit">
+													객실시설
+												</span>
+												<span class="table__col">
+													<div class="see-more">
+														<div class="see-more__wrap">
+															<div class="see-more__con">
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_zone1">
+																	<label for="room_zone1">1존</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_zone2">
+																	<label for="room_zone2">2존</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_zone3">
+																	<label for="room_zone3">3존</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_zone4">
+																	<label for="room_zone4">4존</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_zone5">
+																	<label for="room_zone5">5존 이상</label>
+																</span>
+															</div>
+														</div>
+														<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+													</div>
+												</span>
+											</div>
+											<div class="table__row">
+												<span class="table__col table__col__tit">
+													식사
+												</span>
+												<span class="table__col">
+													<div class="see-more">
+														<div class="see-more__wrap">
+															<div class="see-more__con">
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_food1">
+																	<label for="room_food1">조식</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_food2">
+																	<label for="room_food2">중식</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_food3">
+																	<label for="room_food3">석식</label>
+																</span>
+															</div>
+														</div>
+														<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+													</div>
+												</span>
+												<span class="table__col table__col__tit">
+													공용시설
+												</span>
+												<span class="table__col">
+													<div class="see-more">
+														<div class="see-more__wrap">
+															<div class="see-more__con">
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public1">
+																	<label for="room_public1">레스토랑</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public2">
+																	<label for="room_public2">휴게실</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public3">
+																	<label for="room_public3">카페</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public4">
+																	<label for="room_public4">정원</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public5">
+																	<label for="room_public5">수영장</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public6">
+																	<label for="room_public6">스파시설</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public7">
+																	<label for="room_public7">헬스시설</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public8">
+																	<label for="room_public8">게스트 부엌</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public9">
+																	<label for="room_public9">전자렌지</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public10">
+																	<label for="room_public10">커피포트</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public11">
+																	<label for="room_public11">토스트기</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public12">
+																	<label for="room_public12">바베큐시설</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public13">
+																	<label for="room_public13">주차가능</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public14">
+																	<label for="room_public14">개인사물함</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public15">
+																	<label for="room_public15">엘리베이터</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public16">
+																	<label for="room_public16">공용PC</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public17">
+																	<label for="room_public17">Wifi</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public18">
+																	<label for="room_public18">프린터 사용</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public19">
+																	<label for="room_public19">팩스 사용</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public20">
+																	<label for="room_public20">TV</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public21">
+																	<label for="room_public21">헤어드라이기</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_public22">
+																	<label for="room_public22">다리미</label>
+																</span>
+															</div>
+														</div>
+														<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+													</div>
+												</span>
+											</div>
+											<div class="table__row">
+												<span class="table__col table__col__tit">
+													욕실
+												</span>
+												<span class="table__col">
+													<div class="see-more">
+														<div class="see-more__wrap">
+															<div class="see-more__con">
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath1">
+																	<label for="room_bath1">수건</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath2">
+																	<label for="room_bath2">비누</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath3">
+																	<label for="room_bath3">치약</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath4">
+																	<label for="room_bath4">샴푸</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath5">
+																	<label for="room_bath5">린스</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath6">
+																	<label for="room_bath6">바디샴푸</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_bath7">
+																	<label for="room_bath7">1회용 칫솔</label>
+																</span>
+															</div>
+														</div>
+														<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+													</div>
+												</span>
+												<span class="table__col table__col__tit">
+													기타서비스
+												</span>
+												<span class="table__col">
+													<div class="see-more">
+														<div class="see-more__wrap">
+															<div class="see-more__con">
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc1">
+																	<label for="room_etc1">공항픽업</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc2">
+																	<label for="room_etc2">짐 보관 서비스</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc3">
+																	<label for="room_etc3">자전거 대여</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc4">
+																	<label for="room_etc4">24시간 출입자유</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc5">
+																	<label for="room_etc5">여행투어 제공</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc6">
+																	<label for="room_etc6">신용카드 결제가능</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc7">
+																	<label for="room_etc7">세탁 - 조건부 무료</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc8">
+																	<label for="room_etc8">국제전화 무료(한국)</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc9">
+																	<label for="room_etc9">키보증금</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc10">
+																	<label for="room_etc10">흡연가능</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc11">
+																	<label for="room_etc11">외국인 숙박불가</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc12">
+																	<label for="room_etc12">유아 숙박불가</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc13">
+																	<label for="room_etc13">어린이 숙박불가</label>
+																</span>
+																<span class="input-wrap__chk input-wrap__chk--green">
+																	<input type="checkbox" name="" id="room_etc14">
+																	<label for="room_etc14">애완동물 동반가능</label>
+																</span>
+															</div>
+														</div>
+														<button type="button" class="see-more__btn"><span class="see-more__icon">더보기</span></button>
+													</div>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="table__ft">
+										<div class="table__row">
+											<span class="table__col table__col--2">
+												<button type="button" class="filter__btn-reset">검색초기화</button>
+												<button type="button" class="filter__btn-more"><span class="filter__icon-plus">더보기</span>검색조건</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--// srch-room__filter -->
+							<div class="srch-room__result">
+								<div class="tit-wrap">
+									<p class="result-txt">하우스(으)로 검색된 숙소 <span class="result-txt--point">101개</span></p>
+									<div class="tit__right">
+										<div class="input-group">
+											<p class="input-group__txt">정렬기준</p>
+											<span class="input-wrap input-wrap__select--2">
+												<select title="검색결과 정렬">
+													<option>응답시간 우선</option>
+													<option>낮은 가격</option>
+													<option>평점</option>
+													<option>가나다순</option>
+												</select>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- srch-room__list -->
+								<ul class="srch-room__list">
+									<li class="srch-room__item">
+										<a href="" class="srch-room__link srch-room__item__row">
+											<div class="srch-room__item__col srch-room__img-col">
+												<div class="srch-room__img-wrap">
+													<img src="http://www.theminda.com/data/goods/1_59b9d5a7670c3.jpg" alt="" class="srch-room__img" />
+												</div>
+											</div>
+											<div class=" srch-room__item__col srch-room__info">
+												<div class="srch-room__name">
+													<strong>로마 자고가 하우스 Jagoga House</strong>
+												</div>
+												<div class="srch-room__type">
+													<dl class="srch-room__type-dl">
+														<dt>도미토리</dt>
+														<dd>
+															<span class="srch-room__price--before">€42</span>
+															<span class="srch-room__price">€30~</span>
+														</dd>
+														<dt>2인실</dt>
+														<dd>
+															<span class="srch-room__price">€55~</span>
+														</dd>
+														<dt>3인실</dt>
+														<dd>
+															<span class="srch-room__price">€70~</span>
+														</dd>
+														<dt>4인실</dt>
+														<dd>
+															<span class="srch-room__price">€110~</span>
+														</dd>
+													</dl>
+												</div>
+												<div class="srch-room__desc">
+													<p class="txt">아침, 저녁 제공 · [1존] <1,2호점> 킹스크로스역(유로스타역)에서 도보 10~12분(버스 5분), 런던 최고의 교통요지, 시내 관광코스 어디라도 지하철 10분아침, 저녁 제공 · [1존] <1,2호점> 킹스크로스역(유로스타역)에서 도보 10~12분(버스 5분), 런던 최고의 교통요지, 시내 관광코스 어디라도 지하철 10분</p>
+												</div>
+												<div class="srch-room__cnt">
+													<ul class="srch-room__cnt-list">
+														<li>
+															<span class="srch-room__star-wrap star-wrap">
+																<span class="srch-room__star star-wrap__item" style="width:90%"></span>
+															</span>
+															리뷰  314
+														</li>
+														<li>저장  118</li>
+													</ul>
+													<ul class="srch-room__info-list">
+														<li>커미션 있음</li>
+														<li class="is-active">SALE</li><!-- 해당 정보가 존재할때 is-active 클래스 추가 -->
+														<li>NEW</li>
+													</ul>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="srch-room__item">
+										<a href="" class="srch-room__link srch-room__item__row">
+											<div class="srch-room__item__col srch-room__img-col">
+												<div class="srch-room__img-wrap">
+													<img src="http://www.theminda.com/data/goods/1_59b9d5a7670c3.jpg" alt="" class="srch-room__img" />
+												</div>
+											</div>
+											<div class=" srch-room__item__col srch-room__info">
+												<div class="srch-room__name">
+													<strong>로마 자고가 하우스 Jagoga House</strong>
+												</div>
+												<div class="srch-room__type">
+													<dl class="srch-room__type-dl">
+														<dt>도미토리</dt>
+														<dd>
+															<span class="srch-room__price--before">€42</span>
+															<span class="srch-room__price">€30~</span>
+														</dd>
+														<dt>2인실</dt>
+														<dd>
+															<span class="srch-room__price">€55~</span>
+														</dd>
+														<dt>3인실</dt>
+														<dd>
+															<span class="srch-room__price">€70~</span>
+														</dd>
+														<dt>4인실</dt>
+														<dd>
+															<span class="srch-room__price">€110~</span>
+														</dd>
+													</dl>
+												</div>
+												<div class="srch-room__desc">
+													<p class="txt">아침, 저녁 제공 · [1존] <1,2호점> 킹스크로스역(유로스타역)에서 도보 10~12분(버스 5분), 런던 최고의 교통요지, 시내 관광코스 어디라도 지하철 10분아침, 저녁 제공 · [1존] <1,2호점> 킹스크로스역(유로스타역)에서 도보 10~12분(버스 5분), 런던 최고의 교통요지, 시내 관광코스 어디라도 지하철 10분</p>
+												</div>
+												<div class="srch-room__cnt">
+													<ul class="srch-room__cnt-list">
+														<li>
+															<span class="srch-room__star-wrap star-wrap">
+																<span class="srch-room__star star-wrap__item" style="width:70%"></span>
+															</span>
+															리뷰  314
+														</li>
+														<li>저장  118</li>
+													</ul>
+                                                    <ul class="srch-room__info-list">
+                                                        <li class="is-active">커미션 있음</li>
+                                                        <li class="is-active">SALE</li><!-- 해당 정보가 존재할때 is-active 클래스 추가 -->
+                                                        <li>NEW</li>
+                                                    </ul>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="srch-room__item">
+										<a href="" class="srch-room__link srch-room__item__row">
+											<div class="srch-room__item__col srch-room__img-col">
+												<div class="srch-room__img-wrap">
+													<img src="http://www.theminda.com/data/goods/1_59b9d5a7670c3.jpg" alt="" class="srch-room__img" />
+												</div>
+											</div>
+											<div class=" srch-room__item__col srch-room__info">
+												<div class="srch-room__name">
+													<strong>로마 자고가 하우스 Jagoga House</strong>
+												</div>
+												<div class="srch-room__type">
+													<dl class="srch-room__type-dl">
+														<dt>도미토리</dt>
+														<dd>
+															<span class="srch-room__price--before">€42</span>
+															<span class="srch-room__price">€30~</span>
+														</dd>
+														<dt>2인실</dt>
+														<dd>
+															<span class="srch-room__price">€55~</span>
+														</dd>
+														<dt>3인실</dt>
+														<dd>
+															<span class="srch-room__price">€70~</span>
+														</dd>
+														<dt>4인실</dt>
+														<dd>
+															<span class="srch-room__price">€110~</span>
+														</dd>
+													</dl>
+												</div>
+												<div class="srch-room__desc">
+													<p class="txt">아침, 저녁 제공 · [1존] <1,2호점> 킹스크로스역(유로스타역)에서 도보 10~12분(버스 5분), 런던 최고의 교통요지, 시내 관광코스 어디라도 지하철 10분아침, 저녁 제공 · [1존] <1,2호점> 킹스크로스역(유로스타역)에서 도보 10~12분(버스 5분), 런던 최고의 교통요지, 시내 관광코스 어디라도 지하철 10분</p>
+												</div>
+												<div class="srch-room__cnt">
+													<ul class="srch-room__cnt-list">
+														<li>
+															<span class="srch-room__star-wrap star-wrap">
+																<span class="srch-room__star star-wrap__item" style="width:80%"></span>
+															</span>
+															리뷰  314
+														</li>
+														<li>저장  118</li>
+													</ul>
+                                                    <ul class="srch-room__info-list">
+                                                        <li>커미션 있음</li>
+                                                        <li>SALE</li><!-- 해당 정보가 존재할때 is-active 클래스 추가 -->
+                                                        <li>NEW</li>
+                                                    </ul>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<!--// srch-room__list -->
+							</div>
+							<!--// srch-room__result -->
+							<div class="btm-btn srch-room__btm-btn">
+								<div class="pagination srch-room__pagination">
+									<a href="" class="pagination__prev"><span class="pagination__icon--prev">이전목록</span></a>
+									<a href="" class="pagination__num pagination__num--active">1</a>
+									<a href="" class="pagination__num">2</a>
+									<a href="" class="pagination__num">3</a>
+									<a href="" class="pagination__num">4</a>
+									<a href="" class="pagination__num">5</a>
+									<a href="" class="pagination__next"><span class="pagination__icon--next">다음목록</span></a>
+								</div>
+							</div>
+						</div>
+						<!--// srch-room -->
+					</div>
+					<!--// ly__left__con -->
+				</div>
+				<!--// ly__left -->
+				<!-- ly__right -->
+				<div class="ly__right">
+					<div class="rev-list">
+						<div class="tit-wrap">
+							<h3 class="tit">예약 목록</h3>
+						</div>
+						<div class="rev-list__direct">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">직접 예약</h3>
+							</div>
+							<div class="rev-list__box">
+								<ul class="rev-list__list">
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__loc">파리</div>
+										<div class="rev-list__name">파리 방진게스트하우스</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">여성 도미토리</span><span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">3박</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">1명</span><span class="rev-list__detail">1박 €20</span><span class="rev-list__detail">총 €60</span>
+											</div>
+										</div>
+									</li>
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__loc">파리</div>
+										<div class="rev-list__name">파리 방진게스트하우스</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">여성 도미토리</span><span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">3박</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">3명</span><span class="rev-list__detail">1박 €20</span><span class="rev-list__detail">총 €60</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="rev-list__recomm">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">추천 예약</h3>
+							</div>
+							<div class="rev-list__box">
+								<ul class="rev-list__list">
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__name">베네치아</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">1명</span><span class="rev-list__detail">3박</span><span class="rev-list__detail">체크인 예정시각 14시</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">도미토리 객실로 부탁드려요.0</span>
+											</div>
+										</div>
+									</li>
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__name">로마</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">2명</span><span class="rev-list__detail">4박</span><span class="rev-list__detail">체크인 예정시각 14시</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">도미토리 객실로 부탁드려요.</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btm-btn">
+							<a href="" class="btm-btn__btn--green">최종선택완료</a>
+						</div>
+					</div>
+				</div>
+				<!--// ly__right -->
+			</div>
+			<!--// ly__con -->
+		</div>
+		<!--// ly__wrap -->
+	</div>
+	<!--// ly -->
+<!-- js -->
+<!--[if lt IE 9]>
+<script  src="/cust/js/jquery.placeholder.js"></script>
+<script  src="/cust/js/html5.js"></script>
+<script  src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-slider.js"></script>
+<script type="text/javascript" src="js/Layer.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		lnbCtrl.active(0);
+		var ly_rev = new Layer($('.ly-rev'));
+		ly_rev.open();
+		filter.init();
+		filter.initFilter();
+		seeMore.init();
+		seeMore.initEvent();
+		lyTab = new Tab('ly__tab');
+
+		$('.filter__btn-more').click(function(){
+			$(this).closest('.filter').toggleClass('is-open');
+		})
+	});
+	var filter= {
+		$filter:null,
+		$filter_item : null,
+		$btn_more:null,
+		$btn_see_all:null,
+		$chk_cnt : 0,
+		init:function(){
+			this.$filter =  $('.filter .see-more');
+			this.$filter_item = this.$filter.find('.input-wrap__chk');
+			this.$btn_more = this.$filter.find('.see-more__btn');
+		},
+		initFilter:function(){
+			var _this = this;
+			this.$filter.each(function(){
+				_this.$chk_cnt = $(this).find('.input-wrap__chk').length;
+				if(_this.$chk_cnt>3){
+					$(this).addClass('see-more--hidden');
+				}
+			});
+		}
+	}
+	var seeMore ={
+		$btn_more:null,
+		$see_more : null,
+		str_open : '',
+		str_hidden : '',
+		init:function(){
+			this.$btn_more = $('.see-more__btn');
+			this.str_open = 'see-more--open';
+			this.str_hidden = 'see-more--hidden';
+		},
+		initEvent:function(){
+			var _this = this;
+			this.$btn_more.on('click', function(e){
+				e.preventDefault();
+				_this.$see_more  = $(this).closest('.see-more');
+				if(_this.$see_more.hasClass(_this.str_hidden)){
+					_this.$see_more.removeClass(_this.str_hidden);
+					_this.$see_more.addClass(_this.str_open);
+				}else{
+					_this.$see_more.removeClass(_this.str_open);
+					_this.$see_more.addClass(_this.str_hidden);
+
+				}
+			})
+		}
+	}
+	var dateToday = new Date();
+	var dateMax = new Date();
+	dateMax.setDate(dateToday.getDate() + 180);
+	$('.input-cal').daterangepicker({
+		minDate : dateToday,
+		maxDate : dateMax,
+		locale: {
+			format: 'YYYY-MM-DD',
+			cancelLabel: '닫기',
+			"daysOfWeek": [
+			"<span class='th-sun'>S</span>",
+			"M",
+			"T",
+			"W",
+			"T",
+			"F",
+			"<span class='th-sat'>S</span>"
+			],
+			"monthNames": [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월"
+			]
+		},
+		singleDatePicker: true,
+		showDropdowns: true,
+		autoUpdateInput: false,
+		autoApply:false
+	});
+	$('.input-cal').on('apply.daterangepicker', function(ev, picker) {
+		$(this).val(picker.startDate.format('YYYY-MM-DD'));
+	});
+</script>
+</body>
+</html>

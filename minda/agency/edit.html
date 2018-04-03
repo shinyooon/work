@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<!-- info-manage -->
+				<div class="info-manage">
+					<div class="tit-wrap">
+						<h3 class="tit">여행사 정보관리</h3>
+					</div>
+					<!-- info-manage__basic -->
+					<div class="info-manage__basic">
+						<div class="tit-wrap">
+							<h4 class="sub-tit">기본정보</h4>
+						</div>
+						<div class="table table--v2 info-manage__basic-list">
+							<div class="table__body">
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										회사명
+									</span>
+									<span class="table__col">
+										(주)젊은여행사블루
+									</span>
+									<span class="table__col table__col__tit">
+										사업자등록번호
+									</span>
+									<span class="table__col">
+										111-11-11111
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										아이디
+									</span>
+									<span class="table__col">
+										$ID$
+									</span>
+									<span class="table__col table__col__tit">
+										대표자명
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="대표자명" value="김지훈" placeholder="대표자명" />
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										비밀번호
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="password" title="비밀번호" value="" placeholder="비밀번호" />
+										</span>
+									</span>
+									<span class="table__col table__col__tit">
+										이메일
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="이메일" value="zeehu@bluetravel.co.kr" placeholder="이메일" />
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										비밀번호
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="password" title="비밀번호확인" value="" placeholder="비밀번호 확인" />
+										</span>
+									</span>
+									<span class="table__col table__col__tit">
+										대표전화번호
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="대표전화번호" value="02-1234-4567" placeholder="대표전화번호" />
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										홈페이지
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="대표전화번호" value="02-1234-4567" placeholder="대표전화번호" />
+										</span>
+									</span>
+									<span class="table__col table__col__tit">
+										팩스번호
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="팩스번호" value="02-1234-4567" placeholder="팩스번호" />
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										주소
+									</span>
+									<span class="table__col table__col__zipcode">
+										<div class="input-group input-group__zipcode">
+											<span class="input-wrap">
+												<input type="text" title="우편번호 앞자리" value="" placeholder="" />
+											</span>
+											<span class="input-group__mid">
+												-
+											</span>
+											<span class="input-wrap">
+												<input type="text" title="우편번호 뒷자리" value="" placeholder=""/>
+											</span>
+											<button type="button" class="info-manage__btn-zipcode"> 우편번호</button>
+										</div>
+									</span>
+									<span class="table__col">
+										<div class="input-group input-group__address">
+											<span class="input-wrap">
+												<input type="text" title="주소" value="" placeholder="주소" />
+											</span>
+											<span class="input-wrap">
+												<input type="text" title="상세주소" value="" placeholder="상세주소" />
+											</span>
+										</div>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										주요 취급지역
+									</span>
+									<span class="table__col">
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area1">
+											<label for="area1">유럽</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area2">
+											<label for="area2">북미</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area3">
+											<label for="area3">아시아</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area4">
+											<label for="area4">지중해</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area5">
+											<label for="area5">오세아니아</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area6">
+											<label for="area6">중/남미</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area7">
+											<label for="area7">아프리카</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="area8">
+											<label for="area8">국내</label>
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										판매유형
+									</span>
+									<span class="table__col">
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="travel_type1">
+											<label for="travel_type1">자유여행</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="travel_type2">
+											<label for="travel_type2">패키지</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="travel_type3">
+											<label for="travel_type3">허니문</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="travel_type4">
+											<label for="travel_type4">인센티브</label>
+										</span>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="travel_type5">
+											<label for="travel_type5">기타</label>
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										바우처 하단<br />출력 정보
+									</span>
+									<span class="table__col">
+										<span class="input-wrap__radio">
+											<input type="radio" name="voucher_btm" id="voucher_btm1">
+											<label for="voucher_btm1">파트너 정보</label>
+										</span>
+										<span class="input-wrap__radio">
+											<input type="radio" name="voucher_btm" id="voucher_btm2">
+											<label for="voucher_btm2">민다 정보</label>
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										회사로고
+									</span>
+									<span class="table__col table__col__logo">
+										<!-- 이미지 등록 전 -->
+										<div class="info-manage__logo-wrap">
+											<div class="info-manage__logo-img">
+												<p class="info-manage__logo-txt">로고파일을<br />등록해주세요.</p>
+											</div>
+										</div>
+										<!-- 이미지 등록 후 -->
+										<div class="info-manage__logo-wrap">
+											<div class="info-manage__logo-img">
+												<img src="http://v2.theminda.com/data/logo/bluetravel.gif" alt="" />
+											</div>
+										</div>
+										<div class="input-group input-group__file">
+											<span class="input-wrap__file">
+												<button type="button" class="input-wrap__file__btn">파일선택</button>
+												<input type="file" title="여행사 로고" />
+											</span>
+											<span class="input-wrap input-wrap__filename">
+												<input type="text" title="팩스번호" value="" readonly="readonly" />
+											</span>
+										</div>
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="chk_delete_logo">
+											<label for="chk_delete_logo">로고삭제</label>
+										</span>
+									</span>
+								</div>
+							</div>
+							<div class="table__ft">
+								<div class="table__row">
+									<span class="table__col table__col-1">
+										<button type="button" class="info-manage__basic__btn-save">저장</button>
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<!--// info-manage__basic -->
+					<!-- info-manage__person 담당자 정보-->
+					<div class="info-manage__person">
+						<div class="tit-wrap">
+							<h4 class="sub-tit">담당자 정보</h4>
+						</div>
+						<div class="table table--v2">
+							<div class="table__hd">
+								<div class="table__row">
+									<span class="table__col table__col--1">No.</span>
+									<span class="table__col table__col--2">이름</span>
+									<span class="table__col table__col--3">부서</span>
+									<span class="table__col table__col--4">직책</span>
+									<span class="table__col table__col--5">이메일</span>
+									<span class="table__col table__col--6">네이트온</span>
+									<span class="table__col table__col--7">직통 전화번호</span>
+									<span class="table__col table__col--8">삭제</span>
+								</div>
+							</div>
+							<div class="table__body">
+								<div class="table__row">
+									<span class="table__col table__col--1">1</span>
+									<span class="table__col table__col--2">
+										<span class="input-wrap">
+											<input type="text" title="담당자 이름" value="" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col--3">
+										<span class="input-wrap">
+											<input type="text" title="담당자 부서" value="" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col--4">
+										<span class="input-wrap">
+											<input type="text" title="담당자 직책" value="" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col--5">
+										<span class="input-wrap">
+											<input type="text" title="담당자 이메일" value="" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col--6">
+										<span class="input-wrap">
+											<input type="text" title="담당자 네이트온 아이디" value="" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col--7">
+										<span class="input-wrap">
+											<input type="text" title="담당자 직통 전화번호" value="" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col--8">
+										<span class="input-wrap__chk">
+											<input type="checkbox" name="" id="chk_delete_person1">
+											<label for="chk_delete_person1"></label>
+										</span>
+									</span>
+								</div>
+							</div>
+							<div class="table__ft">
+								<div class="table__row">
+									<span class="table__col table__col--1">
+										<button type="button" class="info-manage__btn-add">담당자 추가</button>
+										<button type="button" class="info-manage__btn-save">저장</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--// info-manage__person 담당자 정보-->
+					<!-- 입금계좌 정보-->
+					<div class="info-manage__account">
+						<div class="tit-wrap">
+							<h4 class="sub-tit">입금계좌 정보</h4>
+							<div class="tit__right">
+								<p class="info-manage__account-toptxt">입금계좌의 변경을 원하실 경우에는 1:1문의로 변경하실 계좌정보를 접수해주세요.</p>
+							</div>
+						</div>
+						<div class="table">
+							<div class="table__hd">
+								<div class="table__row">
+									<span class="table__col table__col--1">은행명</span>
+									<span class="table__col table__col--2">계좌번호</span>
+									<span class="table__col table__col--3">예금주</span>
+								</div>
+							</div>
+							<div class="table__body">
+								<div class="table__row">
+									<span class="table__col table__col--1">국민은행</span>
+									<span class="table__col table__col--2">
+										000-000-000-00000
+									</span>
+									<span class="table__col table__col--3">
+										㈜ 모두투어
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--// 입금계좌 정보-->
+				</div>
+				<!--// info-manage -->
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			lnbCtrl.active(2,0);
+		});
+	</script>
+</body>
+</html>

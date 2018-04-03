@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- mobile menu -->
+<div id="snb" class="side_nav">
+	<a class="icon_snb_close" href="#snb" onClick="menuClose();return false;">닫기</a>
+	<header>
+		<!-- 비로그인 -->
+		<h1><i class="icon_login"></i> 로그인해주세요.</h1>
+		<a class="btn btn_login" href="">로그인</a>
+		<!-- 로그인
+		<h1>민다</h1>
+		<a class="btn btn_logout" href="">로그아웃</a> -->
+	</header>
+	<section>
+		<nav id="gnb">
+			<h2 class="sr-only">메인메뉴</h2>
+			<ul>
+				<li><a href=""><i class="icon_gnb"></i> 메인</a></li>
+				<li><a href=""><i class="icon_gnb2"></i> 스마트 검색</a></li>
+				<li><a href=""><i class="icon_gnb3"></i> 땡처리 할인</a></li>
+				<li><a href=""><i class="icon_gnb4"></i> 숙소 이벤트<b class="label_new">N</b></a></li>
+				<li><a href=""><i class="icon_gnb5"></i> 공지사항<b class="label_new">N</b></a></li>
+			</ul>
+			<h2>MY PAGE</h2>
+			<ul>
+				<li><a href=""><i class="icon_gnb6"></i> 나의 예약</a></li>
+				<li><a href=""><i class="icon_gnb7"></i> 위시리스트</a></li>
+				<li><a href=""><i class="icon_gnb8"></i> 오늘 본 숙소</a></li>
+				<li><a href=""><i class="icon_gnb9"></i> 나의 활동</a></li>
+				<li><a href=""><i class="icon_gnb10"></i> 포인트/쿠폰/캐쉬</a></li>
+				<li><a href=""><i class="icon_gnb11"></i> 설정</a></li>
+			</ul>
+		</nav>
+	</section>
+</div>
+<!-- mobile menu -->
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1><a href="/"><img class="img-responsive center-block" src="http://v2.theminda.com/m/1.0/cust/img/logo.png" alt=""><span class="sr-only">minda</span></a></h1>
+		<a class="icon_mn" href="#snb" onClick="menuOpen('snb');return false;">메뉴</a>
+		<a class="icon_loc_hd" href="/">지도</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+
+<!-- 메인탭 -->
+<ul class="tab">
+	<li><a href="index.html">홈</a></li>
+	<li><a href="MDR-MTA02000.html">해외</a></li>
+	<li class="active"><a href="MDR-MTA03000.html">국내</a></li>
+</ul>
+<!-- 2차 메뉴 -->
+<div class="bg_mint">
+	<form class="frm_index">
+		<div class="row itx_datepicker_wrp">
+			<div class="col-xs-12">
+				<select class="no_style">
+					<option>도시명을 선택하세요</option>
+				</select>
+			</div>
+			<div class="col-xs-6 chkdate">
+				<input type="text" id="chkin" class="no_style itx_datepicker itx_cal">
+				<label for="chkin">체크인</label>
+			</div>
+			<div class="col-xs-6 chkdate v2">
+				<input type="text" id="chkout" class="no_style itx_datepicker itx_cal">
+				<label for="chkout">체크아웃</label>
+			</div>
+			<div class="col-xs-12 pa10">
+				<button type="submit" class="btn btn-xl btn-block bg_wh color_mint">검색하기</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- 할인 -->
+<section class="pt20">
+	<h2 class="h2 text-center">국내 인기 도시</h2>
+	<ul class="row city_lst">
+		<li class="col-xs-6">
+			<a href=""><img class="img-circle" src="_temp/flag.png" alt=""> 서울<small>(184)</small></a>
+		</li>
+		<li class="col-xs-6">
+			<a href=""><img class="img-circle" src="_temp/flag.png" alt=""> 제주<small>(184)</small></a>
+		</li>
+		<li class="col-xs-6">
+			<a href=""><img class="img-circle" src="_temp/flag.png" alt=""> 부산<small>(184)</small></a>
+		</li>
+		<li class="col-xs-6">
+			<a href=""><img class="img-circle" src="_temp/flag.png" alt=""> 서울<small>(184)</small></a>
+		</li>
+		<li class="col-xs-6">
+			<a href=""><img class="img-circle" src="_temp/flag.png" alt=""> 제주<small>(184)</small></a>
+		</li>
+		<li class="col-xs-6">
+			<a href=""><img class="img-circle" src="_temp/flag.png" alt=""> 부산<small>(184)</small></a>
+		</li>
+	</ul>
+	<div class="pa20">
+		<a class="btn_more" href="#">+ 모든 도시 보기</a>
+	</div>
+</section>
+
+<script>
+// http://www.daterangepicker.com/
+$(function() {
+    var dateToday =[new Date(), new Date()];
+	$('.itx_datepicker').each(function  (idx) {
+		$(this).daterangepicker({
+			autoApply: true,
+			singleDatePicker: true,
+			locale: {
+				format: 'YYYY/MM/DD',
+				daysOfWeek: [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				]
+			}
+		});
+		$(this).on('apply.daterangepicker', function(ev, picker) {
+			$(this).next().hide();
+		});
+	});
+});
+</script>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div>
+			<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+			<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+			<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+		</div>
+		<p>
+			(주)사막 사업자등록번호 : 010-86-28116   FAX : 02-722-3478
+		</p>
+		<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+		<ul class="list-inline">
+			<li><a href="">회사소개</a></li>
+			<li><a href="">고객센터</a></li>
+			<li><a href="">이용약관</a></li>
+			<li><a href="" class="color_org">개인정보취급방침</a></li>
+			<li><a href="">PC버전</a></li>
+		</ul>
+		<h1><img class="img-responsive center-block" src="http://v2.theminda.com/m/1.0/cust/img/logo_ft.png" alt="minda"></h1>
+	</div>
+
+	<!-- fixed button-->
+	<div id="quick">
+		<a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+		<a class="icon_mn2" href="#">Menu</a>
+	</div>
+</div>
+<!-- //wrap -->
+
+<!-- modal : 쿠폰 로그인 -->
+<div id="mdAlert" class="modal fade md_alert" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<p>쿠폰 다운로드를 하려면 <br>로그인이 필요합니다.</p>
+		<h4>로그인 페이지로 이동하시겠습니까?</h4>
+		<div class="text-center mt15">
+			<button type="button" class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>확인</button>
+			<button type="button" class="btn bg_dark_grey btn-lg ml5" data-dismiss="modal"><i class="icon_circle_cancle"></i>취소</button>
+		</div>
+	</div>
+</div>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

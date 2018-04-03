@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style type="text/css">
+	html,
+	body {
+		background-color: #f3f3f3
+	}
+	</style>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<h1><a href="">예약자 정보 수정</a></h1>
+			<button class="icon_hd_clse" href="">닫기</buton>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<!-- 페이지 시작-->
+			<div class="bg_grey2 pay-wrap pb50">
+				<form name="frm_reserve_info">
+					<section class="info-bx-wrap">
+						<h2 class="sub_tit">예약자 정보</h2>
+						<div class="bx-wh form-group valid">
+							<dl class="tb_bx">
+								<dt class="tb_cell">이름<span class="color_red">*</span></dt>
+								<dd class="tb_cell">
+									<span class="input-wrap">
+										<input type="text" name="name" id="name" value="박병진" maxlength="20" class="no_style pl_grey" placeholder="이름" title="이름">
+										<button class="icon_clse_input" style="display: inline-block;">입력취소</button>
+									</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="bx-wh">
+							<dl class="tb_bx">
+								<dt class="tb_cell">이메일<span class="color_red">*</span></dt>
+								<dd class="tb_cell">
+									<div class="input-wrap">
+									<input type="text" name="email" id="email" value="bottle.jinn@gmail.com" maxlength="50" class="no_style pl_grey" placeholder="이메일" title="이메일 입력">
+									<button class="icon_clse_input" style="display: inline-block;">입력취소</button>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="bx-wh form-group valid">
+							<dl class="tb_bx">
+								<dt class="tb_cell">연락처<span class="color_red">*</span></dt>
+								<dd class="tb_cell code">
+									<div class="input-wrap">
+										<input type="text" name="mobile" id="mobile" value="010-0000-0000" maxlength="30" class="no_style pl_grey pl5" placeholder="휴대폰번호 입력" title="휴대폰 번호 입력" onkeyup="return eventUpPhone(event)" onukeydown="return eventDownPhone(event)">
+										<button class="icon_clse_input" style="display: inline-block;">입력취소</button>
+									</div>
+									<p class="form-control-static">직접 연락 시 꼭 필요하므로 정확하게 입력해주세요. (01x 으로 시작하는 번호만 입력 가능)</p>
+								</dd>
+							</dl>
+						</div>
+						<div class="bx-wh form-group valid">
+							<dl class="tb_bx">
+								<dt class="tb_cell">현지 연락처</dt>
+								<dd class="tb_cell code">
+									<div class="input-wrap">
+										<input type="text" name="phone" id="phone" value="" maxlength="30" class="no_style pl_grey pl5" placeholder="현지연락처" title="현지연락처 입력" onkeyup="return eventUpPhone(event)" onukeydown="return eventDownPhone(event)">
+										<button class="icon_clse_input" style="display: none;">입력취소</button>
+									</div>
+									<p class="form-control-static color_mint">여행 시 현지에서 사용할 연락처 또는 해외 거주자의 연락처 입력</p>
+								</dd>
+							</dl>
+						</div>
+						<div class="bx-wh">
+							<dl class="tb_bx">
+								<dt class="tb_cell">카카오톡ID</dt>
+								<dd class="tb_cell">
+									<div class="input-wrap">
+									<input type="text" name="kakao" id="kakao" value="" maxlength="20" class="no_style pl_grey" placeholder="카카오톡 ID" title="카카오톡 입력">
+									<button class="icon_clse_input" style="display: none;">입력취소</button>
+									</div>
+									<p class="form-control-static color_mint">현지에서 긴급상황에 연락 시 필요합니다.</p>
+								</dd>
+							</dl>
+						</div>
+						<div class="bx-wh">
+							<div class="tb_bx">
+								<dt class="tb_cell">요청사항</dt>
+								<dd class="tb_cell">
+									<div class="form-group valid_chk">
+										<span class="input-wrap input-ta">
+											<textarea name="req_memo" id="req_memo" class="no_style pl_grey" placeholder="요청사항(요청의 반영여부는 판매자에 따라 결정되며 보장되지 않습니다.)" title="요청사항 입력"></textarea>
+										</span>
+									</div>
+								</dd>
+							</div>
+						</div>
+					</section>
+				</form>
+				<div class="btm_fixed mt10 pa10">
+					<div class="row">
+						<span class="col-xs-6 pr4"><a class="btn btn-xl d_block bg_mint" onclick="updateTgBook();">등록</a></span>
+						<span class="col-xs-6 pl4"><a class="btn btn-xl d_block bg_light_grey4" onclick="history.back();">취소</a></span>
+					</div>
+					</div>
+				</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script>
+	jQuery(function($) {
+		$('.input-wrap > input:text').keyup(function() {
+			if ($(this).val()) {
+				$(this).siblings('.icon_clse_input').show();
+			} else {
+				$(this).siblings('.icon_clse_input').hide()
+			}
+		});
+		$('.icon_clse_input').click(function() {
+			$(this).siblings('input:text').val('');
+			$(this).hide();
+		})
+	});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-datepicker.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D]
+	1. 뒤로가기가 있는 메뉴 class="page_back"
+-->
+<body class="page_back">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1>나의예약</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+<!-- tab -->
+<ul class="tab3 v2 bg_wh">
+	<li><a class="on" href=""><span>진행중인 예약</span></a></li>
+	<li><a href=""><span>지난 예약</span></a></li>
+	<li><a href=""><span>환불 진행 상황</span></a></li>
+</ul>
+<div class="frm_wrp">
+	<!-- 유의사항 -->
+	<section class="mt10 bx accordion open">
+		<h2 class="bx_hd"><a href="" class="acc_btn color_mint"><i class="icon_alert"></i>유의사항</a></h2>
+		<div class="bx_cnt acc_cnt">
+			<ul class="lst_type_dot fs12">
+				<li>예약진행상태가 '예약가능-입금대기'인 예약은 지금 바로 예약금을 결제해주셔야 예약이 취소되지 않습니다. </li>
+				<li>예약취소를 원하실 경우는 해당 예약의 '예약번호'를 클릭하시면, 상세페이지에서 '예약취소'를 하실 수 있습니다.</li>
+				<li>에약진행상테가 '예약확정-입금완료'인 예약안 [상세보기] 페이지에서 숙소연락처를 확인해 보실 수 있습니다.</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 예약내용리스트 -->
+	<ul>
+		<li class="bx">
+			<div class="bx_hd_wrp">
+				<h2 class="bx_hd color_red">예약가능-입금대기</h2>
+				<small><i class="icon_time"></i>남은시간 39:45</small>
+				<button type="button" class="btn btn-lg bg_mint side">결제하기</button>
+			</div>
+			<div class="bx_cnt">
+				<h3 class="bx_hd2">로마 자고가 하우스 (Jagoga House)</h3>
+				<small class="color_grey">이탈리아 &gt; 로마</small>
+				<hr class="hr">
+				<dl class="dl_lst">
+					<dt>예약 번호</dt>
+					<dd><a href="" class="color_mint txt_line">1459259686476</a></dd>
+					<dt>체크인/아웃</dt>
+					<dd>2016.02.05 - 2016.02.09 (3박 4일)</dd>
+					<dt>신청일</dt>
+					<dd>2016.01.30</dd>
+				</dl>
+			</div>
+		</li>
+		<li class="bx">
+			<div class="bx_hd_wrp">
+				<h2 class="bx_hd color_red">예약대기</h2>
+			</div>
+			<div class="bx_cnt">
+				<h3 class="bx_hd2">로마 자고가 하우스 (Jagoga House)</h3>
+				<small class="color_grey">이탈리아 &gt; 로마</small>
+				<hr class="hr">
+				<dl class="dl_lst">
+					<dt>예약 번호</dt>
+					<dd><a href="" class="color_mint txt_line">1459259686476</a></dd>
+					<dt>체크인/아웃</dt>
+					<dd>2016.02.05 - 2016.02.09 (3박 4일)</dd>
+					<dt>신청일</dt>
+					<dd>2016.01.30</dd>
+				</dl>
+			</div>
+		</li>
+	</ul>
+	<!-- 페이징 -->
+	<nav class="text-center pt10">
+		<ul class="pagination">
+			<li class="prev"><a href="">이전페이지목록보기</a></li>
+			<li>2/7</li>
+			<li class="next"><a href="">다음페이지목록보기</a></li>
+		</ul>
+	</nav>
+
+</div>
+
+<script>
+jQuery(function($){
+	$(".acc_btn").on('click',function  () {
+		$(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+		return false;
+	});
+});
+</script>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="ft">
+		<div>
+			<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+			<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+			<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+		</div>
+		<p>
+			(주)사막 사업자등록번호 : 010-86-28116   FAX : 02-722-3478
+		</p>
+		<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+		<ul class="list-inline">
+			<li><a href="">회사소개</a></li>
+			<li><a href="">고객센터</a></li>
+			<li><a href="">이용약관</a></li>
+			<li><a href="" class="color_org">개인정보취급방침</a></li>
+			<li><a href="">PC버전</a></li>
+		</ul>
+		<h1><img class="img-responsive center-block" src="http://v2.theminda.com/m/1.0/cust/img/logo_ft.png" alt="minda"></h1>
+	</div>
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

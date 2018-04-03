@@ -1,0 +1,151 @@
+<? include "inc/top.html" ?>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a class="icon_hd_clse" href="javascript:history.back();"><span class="header__icon-clse">닫기</span></a>    </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">$도시명</a></h1>
+    <div class="header__right">
+        <button type="button" class="header__btn-map-legend">정보<span class="header__icon-arr-down">범례 보기</span></button>
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+
+<!-- #container -->
+<div id="container" class="clearfix">
+
+    <!-- 페이지 시작-->
+
+    <!-- 지도 -->
+    <!-- [D] 아래 배그라운드 이미지는 데모용-->
+    <div id="map" class="map" style=" background:url(_temp/map.jpg) no-repeat 50% -2px; background-size:cover">
+
+        <!-- 지도영역 -->
+
+        <!-- 마크 -->
+        <a class="marker--shop" href="#" style="position:absolute;top:200px;right:100px"><img src="/m/1.0/common/img/icon/legend/mark_shopping.svg" alt="" /></a>
+        <a class="marker--shop is-active" href="#" style="position:absolute;top:200px;right:120px"><img src="/m/1.0/common/img/icon/legend/mark_shopping_on.svg" alt="" /></a>
+        <!-- [D] 활성화시 a class="is-active" -->
+        <a class="marker--food" href="#" style="position:absolute;top:250px;right:100px"><img src="/m/1.0/common/img/icon/legend/mark_restaurant.svg" alt="" /></a>
+        <a class="marker--food is-active" href="#" style="position:absolute;top:250px;right:120px"><img src="/m/1.0/common/img/icon/legend/mark_restaurant_on.svg" alt="" /></a>
+        <a class="marker--area" href="#" style="position:absolute;top:230px;right:200px"><img src="/m/1.0/common/img/icon/legend/mark_sight.svg" alt="" /></a>
+        <a class="marker--area is-active" href="#" style="position:absolute;top:230px;right:220px"><img src="/m/1.0/common/img/icon/legend/mark_sight_on.svg" alt="" /></a>
+        <a class="marker--traffic" href="#" style="position:absolute;top:200px;right:200px"><img src="/m/1.0/common/img/icon/legend/mark_traffic.svg" alt="" /></a>
+        <a class="marker--traffic is-active" href="#" style="position:absolute;top:200px;right:220px"><img src="/m/1.0/common/img/icon/legend/mark_traffic_on.svg" alt="" /></a>
+        <a class="marker--room" href="#" style="position:absolute;top:250px;right:200px">￦125,800~</a>
+        <a class="marker--room is-active" href="#" style="position:absolute;top:280px;right:100px">￦125,800~</a>
+        <!-- 사이드컨트롤 -->
+        <div class="control_wrp control_wrp--v2 filter ">
+            <div id="filter_btn" class="filter-btn--v2">
+                <button id="filter0" data-type="0" type="button" class="room active"><span class="filter__icon-room">숙소</span></button>
+                <!-- 2018-02-21 교통 추가됨 -->
+                <button id="filter1" data-type="1" type="button" class="area"><span class="filter__icon-sight">명소</span></button>
+                <button id="filter2" data-type="2" type="button" class="food"><span class="filter__icon-restaurant">맛집</span></button>
+                <button id="filter4" data-type="4" type="button" class="shop"><span class="filter__icon-traffic">교통</span></button>
+                <button id="filter3" data-type="3" type="button" class="shop"><span class="filter__icon-shopping">쇼핑</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 마크정보레이어 -->
+    <div class="btm_fixed mark_info mark__traffic" style="bottom:185px">
+        <div class="btm_info">
+            <div class="iteminfo">
+                <strong class="ellipsis tit">교통명교통명</strong>
+            </div>
+        </div>
+        <button class="icon_fix_close">레이어닫기</button>
+    </div>
+
+    <!-- //페이지 끝-->
+
+</div>
+<!-- //container -->
+<div class="btm_fixed">
+    <div id="mapLst" style="background-color:#fff">
+        <ul class="contents-minbak room_lst"><ul class="content-minbak room_lst room-lst--v2">
+            <li>
+                <a href="javascript:;" data-goodsno="1547" data-pageview_type="">
+                    <div class="media">
+                        <div class="media-left">
+                            <div class="tmb_wrp">
+                                <img src="http://www.theminda.com/data/tum/goods_room/0_5a4adaf3e2a81.JPG" class="pos-center" alt="">
+                                <div href="javascript:;" class="tmb_heart_touch_area_right">
+                                    <div class="ribbon_wrp">
+                                        <i class="icon_ribbon" data-goodsno="1547" minbak-code="1547">찜하기</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-body" onclick="javascript:;">
+                            <h3 class="ellipsis room-item__tit">런던 킹스크로스 유로스타 KX HOUSE </h3>
+                            <div class="price">
+                                <span>도미토리</span>
+                                <s class="before_price color_grey">￦125,800~</s>
+                                <span class="current_price">￦225,800~</span>
+                            </div>
+                            <div class="meta room-list__btm">
+                                <div class="room-list__btm-info">
+                                    <ul class="lst_inline dot_lst">
+                                        <li class="is-on">즉시예약</li>
+                                        <li>전액결제</li>
+                                        <li class="is-on">SALE</li>
+                                        <li>NEW</li>
+                                    </ul>
+                                </div>
+                                <div class="room-list__btm-cnt">
+                                    <ul class="lst_inline">
+                                        <li>
+                                            <div class="star_wrp d_iblock">
+                                                <!-- 별점 -->
+                                                <span class="starrating" title="4.41"><span style="width:88.2%">4.41</span></span>리뷰<span class="room-list__btm-cnt-num"><span>613</span></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>저장<span class="room-list__btm-cnt-num">344</span></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- beststay -->
+                <div class="beststay">
+                    <ul class="beststay__list">
+                        <li class="beststay__item dropdown-hover dropdown-hover--top">
+                            <button type="button" class="no_style dropdown__btn beststay__btn"><span class="beststay__icon"><img src="/m/1.0/cust/img/icon_beststay_rev.png" alt=""></span>2017 BEST 예약</button>
+                            <div class="dropdown-content">
+                                <div class="inner">
+                                    <p class="beststay__sub-tit">2017 BEST 예약</p>
+                                    <p class="beststay__desc">확정예약이 가장 많은 숙소입니다.<br>(2017년 1월 ~ 10월 기준)</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--// beststay -->
+
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+<script>
+    $('.header__btn-map-legend').click(function(){
+      $('.control_wrp--v2').toggle();
+    })
+    $('.filter-btn--v2 button').click(function(){
+        $(this).toggleClass('active');
+    })
+</script>
+</body>
+</html>

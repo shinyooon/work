@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D]
+	1. 뒤로가기가 있는 메뉴 class="page_back"
+-->
+<body class="page_back">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1>나의예약</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+		<!-- 페이지 시작-->
+		<!-- tab -->
+		<ul class="tab3 v2 bg_wh">
+			<li><a href=""><span>진행중인 예약</span></a></li>
+			<li><a href=""><span>지난 예약</span></a></li>
+			<li><a class="on" href=""><span>환불 진행 상황</span></a></li>
+		</ul>
+		<div class="frm_wrp">
+			<!-- [D] nodata추가 -->
+			<div class="item__nodata">
+				<div class="nodata__wrap">
+					<span class="nodata__icon nodata__icon--cancel"></span>
+					<p class="nodata__title">환불 진행 건이 없습니다.</p>
+				</div>
+			</div>
+			<!--// [D] nodata추가 -->
+		</div>
+
+		<script>
+            jQuery(function($){
+                $(".acc_btn").on('click',function  () {
+                    $(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+                    return false;
+                });
+            });
+		</script>
+
+		<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

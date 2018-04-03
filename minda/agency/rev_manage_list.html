@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/nanoscroll.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="rev-manage">
+					<div class="tit-wrap">
+						<h4 class="tit">예약관리</h4>
+					</div>
+					<!-- rev-manage__srch -->
+					<div class="rev-manage__srch">
+						<div class="table table--v2 rev-manage__srch-list">
+							<div class="table__body">
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										예약번호
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="예약번호"/>
+										</span>
+									</span>
+									<span class="table__col table__col__tit">
+										이름
+									</span>
+									<span class="table__col">
+										<span class="input-wrap">
+											<input type="text" title="이름" placeholder="" />
+										</span>
+									</span>
+									<span class="table__col table__col__tit">
+										진행상태
+									</span>
+									<span class="table__col">
+										<span class="input-wrap input-wrap__select">
+											<select class="rev-detail__select-sex" title="예약 진행 상태 선택">
+												<option>전체보기</option>
+												<option>예약대기</option>
+												<option>예약진행</option>
+												<option>확정요청</option>
+												<option>입금대기</option>
+												<option>예약완료</option>
+												<option>예약취소</option>
+												<option>결제취소</option>
+											</select>
+										</span>
+									</span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col__tit">
+										예약신청일
+									</span>
+									<span class="table__col">
+										<div class="input-group">
+											<span class="input-wrap input-wrap__cal">
+												<input type="text" title="예약신청일 시작 일자" name="" placeholder="날짜 선택" class="input-cal input-cal__request">
+											</span>
+											<span class="input-group__mid">~</span>
+											<span class="input-wrap input-wrap__cal">
+												<input type="text" title="예약신청일 마지막 일자" name=""  placeholder="날짜 선택" class="input-cal input-cal__request">
+											</span>
+										</div>
+									</span>
+									<span class="table__col table__col__tit">
+										첫 체크인<br />날짜
+									</span>
+									<span class="table__col">
+										<div class="input-group">
+											<span class="input-wrap input-wrap__cal">
+												<input type="text" title="첫 체크인 날짜 시작 일자" name=""  placeholder="날짜 선택" class="input-cal input-cal__checkin">
+											</span>
+											<span class="input-group__mid">~</span>
+											<span class="input-wrap input-wrap__cal">
+												<input type="text" title="첫 체크인 날자 마지막 일자" name=""  placeholder="날짜 선택" class="input-cal input-cal__checkin">
+											</span>
+										</div>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="rev-manage__srch-btn-wrap">
+							<button class="rev-manage__srch-btn"><span class="rev-manage__srch-icon">검색</span></button>
+						</div>
+					</div>
+					<!--// rev-manage__srch -->
+					<!-- rev-manage__list-wrap -->
+					<div class="rev-manage__list-wrap">
+						<div class="tit-wrap">
+							<h3 class="sub-tit">예약목록</h3>
+							<div class="tit__right">
+								<p class="rev-manage__list-toptxt">선바우처 (<span class="rev-manage__icon-voucher">바우처 결제전 발행완료</span>) 아이콘이 있는 예약은 결제전 미리 바우처를 발행해 드린 예약입니다.</p>
+							</div>
+						</div>
+						<div class="table rev-manage__list">
+							<div class="table__hd">
+								<div class="table__row">
+									<span class="table__col table__col--1"><span class="rev-manage__icon-voucher">선바우처</span></span>
+									<span class="table__col table__col--2">예약목록번호<br />(여행사담당자)</span>
+									<span class="table__col table__col--3">첫 체크인 </span>
+									<span class="table__col table__col--4">이름</span>
+									<span class="table__col table__col--5">인원</span>
+									<span class="table__col table__col--6">진행상태</span>
+									<span class="table__col table__col--7">예약 신청일</span>
+									<span class="table__col table__col--8">입금액</span>
+									<span class="table__col table__col--9">입금마감일</span>
+									<span class="table__col table__col--10">invoice</span>
+								</div>
+							</div>
+							<div class="table__body">
+								<div class="table__row">
+									<span class="table__col table__col--1"><span class="rev-manage__icon-voucher">선바우처</span></span>
+									<span class="table__col table__col--2"><a href="" class="rev-manage__list-link"><span class="rev-manage__list-num">7259</span>(김민다)</a></span>
+									<span class="table__col table__col--3">17-07-15</span>
+									<span class="table__col table__col--4">김슬기</span>
+									<span class="table__col table__col--5">2</span>
+									<span class="table__col table__col--6">예약대기</span>
+									<span class="table__col table__col--7">17-07-05</span>
+									<span class="table__col table__col--8">500,000</span>
+									<span class="table__col table__col--9">17-07-25</span>
+									<span class="table__col table__col--10"><button type="button" class="rev-manage__btn-invoice">인보이스</button></span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col--1"><span class="rev-manage__icon-voucher">선바우처</span></span>
+									<span class="table__col table__col--2"><a href="" class="rev-manage__list-link"><span class="rev-manage__list-num">7259</span>(김민다)</a></span>
+									<span class="table__col table__col--3">17-07-15</span>
+									<span class="table__col table__col--4">김슬기</span>
+									<span class="table__col table__col--5">2</span>
+									<span class="table__col table__col--6">예약대기</span>
+									<span class="table__col table__col--7">17-07-05</span>
+									<span class="table__col table__col--8">500,000</span>
+									<span class="table__col table__col--9">17-07-25</span>
+									<span class="table__col table__col--10"><button type="button" class="rev-manage__btn-invoice">인보이스</button></span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col--1"><span class="rev-manage__icon-voucher">선바우처</span></span>
+									<span class="table__col table__col--2"><a href="" class="rev-manage__list-link"><span class="rev-manage__list-num">7259</span>(김민다)</a></span>
+									<span class="table__col table__col--3">17-07-15</span>
+									<span class="table__col table__col--4">김슬기</span>
+									<span class="table__col table__col--5">2</span>
+									<span class="table__col table__col--6">예약대기</span>
+									<span class="table__col table__col--7">17-07-05</span>
+									<span class="table__col table__col--8">500,000</span>
+									<span class="table__col table__col--9">17-07-25</span>
+									<span class="table__col table__col--10"><button type="button" class="rev-manage__btn-invoice">인보이스</button></span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col--1"><span class="rev-manage__icon-voucher">선바우처</span></span>
+									<span class="table__col table__col--2"><a href="" class="rev-manage__list-link"><span class="rev-manage__list-num">7259</span>(김민다)</a></span>
+									<span class="table__col table__col--3">17-07-15</span>
+									<span class="table__col table__col--4">김슬기</span>
+									<span class="table__col table__col--5">2</span>
+									<span class="table__col table__col--6">예약대기</span>
+									<span class="table__col table__col--7">17-07-05</span>
+									<span class="table__col table__col--8">500,000</span>
+									<span class="table__col table__col--9">17-07-25</span>
+									<span class="table__col table__col--10"><button type="button" class="rev-manage__btn-invoice">인보이스</button></span>
+								</div>
+								<div class="table__row">
+									<span class="table__col table__col--1"><span class="rev-manage__icon-voucher">선바우처</span></span>
+									<span class="table__col table__col--2"><a href="" class="rev-manage__list-link"><span class="rev-manage__list-num">7259</span>(김민다)</a></span>
+									<span class="table__col table__col--3">17-07-15</span>
+									<span class="table__col table__col--4">김슬기</span>
+									<span class="table__col table__col--5">2</span>
+									<span class="table__col table__col--6">예약대기</span>
+									<span class="table__col table__col--7">17-07-05</span>
+									<span class="table__col table__col--8">500,000</span>
+									<span class="table__col table__col--9">17-07-25</span>
+									<span class="table__col table__col--10"><button type="button" class="rev-manage__btn-invoice">인보이스</button></span>
+								</div>
+							</div>
+						</div>
+						<div class="pagination notice__pagination">
+							<a href="" class="pagination__prev"><span class="pagination__icon--prev">이전목록</span></a>
+							<a href="" class="pagination__num pagination__num--active">1</a>
+							<a href="" class="pagination__num">2</a>
+							<a href="" class="pagination__num">3</a>
+							<a href="" class="pagination__next"><span class="pagination__icon--next">다음목록</span></a>
+						</div>
+					</div>
+					<!--// rev-manage__list-wrap -->
+				</div>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- 인보이스 -->
+	<? include "inc/p.invoice.html" ?>
+	<!--// 인보이스 -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="js/Layer.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			lnbCtrl.active(1);
+			var p_invoice = new Layer($('.modal__invoice'));
+			$('.rev-manage__btn-invoice').click(function(){
+				p_invoice.open();
+				$(".nano__invoice").nanoScroller();
+			})
+
+		})
+
+		var dateToday = new Date();
+		var dateMax = new Date();
+		dateMax.setDate(dateToday.getDate() + 180);
+		$('.input-cal__checkin').daterangepicker({
+			locale: {
+				format: 'YYYY-MM-DD',
+				cancelLabel: '닫기',
+				"daysOfWeek": [
+				"<span class='th-sun'>S</span>",
+				"M",
+				"T",
+				"W",
+				"T",
+				"F",
+				"<span class='th-sat'>S</span>"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+			minDate: '2012-01-01',
+			maxDate : dateMax,
+			singleDatePicker: true,
+			showDropdowns: true,
+			autoUpdateInput: false,
+			autoApply:false
+		});
+		$('.input-cal').on('apply.daterangepicker', function(ev, picker) {
+			$(this).val(picker.startDate.format('YYYY-MM-DD'));
+		});
+
+		$('.input-cal__request').daterangepicker({
+			locale: {
+				format: 'YYYY-MM-DD',
+				cancelLabel: '닫기',
+				"daysOfWeek": [
+				"<span class='th-sun'>S</span>",
+				"M",
+				"T",
+				"W",
+				"T",
+				"F",
+				"<span class='th-sat'>S</span>"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+			minDate: '2012-01-01',
+			maxDate: new Date(),
+			singleDatePicker: true,
+			showDropdowns: true,
+			autoUpdateInput: false,
+			autoApply:false
+		});
+	</script>
+</body>
+</html>

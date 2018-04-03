@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> 민다(민박다나와) 파트너홈 </title>
+	<link rel="shortcut icon" href="/img/i_mlogo.ico">
+	<!-- 기존 css -->
+	<!-- <link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/style.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/layout.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/ui.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/css/font.css"> -->
+	<!-- //기존 css -->
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/admin.css">
+	<!-- <link rel="stylesheet" href="css/admin.css"> -->
+
+	<!-- jquery 중복 선언으로 인해 modal 동작이 안됨 기존 js는 위로 보내고 신규 js를 아래에 둔다 -->
+	<script src="http://v2.minbakdanawa.com/manager/jquery.js"></script>
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- 기존 js -->
+<script src="http://v2.minbakdanawa.com/manager/common.js"></script>
+<script src="http://v2.minbakdanawa.com/lib/js/common.js"></script>
+<script src="http://v2.minbakdanawa.com/lib/js/chkForm.js" defer=defer></script>
+<script src="http://v2.minbakdanawa.com/lib/js/selectCategory.js"></script>
+<!--<script src="/lib/js/prototype.js"></script>-->
+<!-- script src="http://v2.minbakdanawa.com/manager/jquery.js"></script -->
+<script>var $j = jQuery.noConflict();</script>
+<!-- //기존 js -->
+</head>
+
+<script src="http://v2.minbakdanawa.com/lib/js/popupWindow.js"></script>
+<!-- 수정된 부분 2016-08-31 추가 -->
+<body class="pop-full">
+	<div id="" class="modal" >
+		<div class="modal-dialog">
+			<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+			<h1>타사이트 예약<span class="txt-sub ml20">관리자가 입력한 예약입니다.</span></h1>
+			<div class="pa30 pt0">
+				<div class="tit-wrap"><h2 class="sub_title mt30 mb17">필수 입력항목</h2></div>
+				<div class="tbl-wrap">
+					<table class="tb tb_frm tb-rev">
+						<caption class="sr-only">타사이트 예약 필수 입력 항목</caption>
+						<colgroup>
+							<col style="width:150px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="bdt0">객실이름</th>
+								<td class="bdt0">
+									플라워룸
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">체크인</th>
+								<td>
+									<span class="input-wrap input-cal cal-l">
+										<input type="text" class="form-control-basic wid_md standard_date" placeholder="" title="시작일 날짜" readonly="readonly">
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">체크아웃</th>
+								<td>
+									<span class="input-wrap input-cal cal-l">
+										<input type="text" class="form-control-basic wid_md standard_date" placeholder="" title="종료일 날짜" readonly="readonly">
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">인원</th>
+								<td>
+									<select class="form-control-basic wid_sm" title="인원 수 선택">
+										<option value="">1명</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tit-wrap"><h2 class="sub_title mb17">선택 입력항목</h2></div>
+				<div class="tbl-wrap">
+					<table class="tb tb_frm tb-rev">
+						<caption class="sr-only">타사이트 예약 선택 입력 항목 </caption>
+						<colgroup>
+							<col style="width:150px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="bdt0">예약사이트</th>
+								<td class="bdt0">
+									<select class="form-control-basic wid_md" title="예약사이트 선택">
+										<option value="">옵션 값 미정</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">이름</th>
+								<td><input type="text" class="form-control-basic wid_md" title="이름"></td>
+							</tr>
+							<tr>
+								<th>성별</th>
+								<td>
+									<select class="form-control-basic wid_sm" title="성별 선택">
+										<option value="" selected="selected">선택</option>
+										<option value="">남성</option>
+										<option value="">여성</option>
+										<option value="">혼성</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">총 숙박요금</th>
+								<td class="bdt0"><input type="text" class="form-control-basic wid_md mr5" title="총 숙박요금">원</td>
+							</tr>
+							<tr>
+								<th scope="row">메모</th>
+								<td>
+									<textarea class="form-control-basic plh_mint" rows="6" title="메모" placeholder=""></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="well mt25">
+					<dl class="lst-type-bar">
+						<dt>도움말</dt>
+						<dd>타사이트 예약 시 입력한 기간동안 예약확정 상태로 처리됩니다.</dd>
+						<dd>민다 외 다른 사이트 또는 직접 받은 예약을 입력할 때 사용해주세요.</dd>
+					</dl>
+				</div>
+				<div class="text-center mt25 mb25">
+					<button type="button" class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>확인</button>
+					<button type="button" class="btn bg_dark_grey btn-lg ml5"><i class="icon_circle_cancle"></i>취소</button>
+					<button type="button" class="btn bg_red btn-lg ml5"><i class="icon_circle_cancle"></i>삭제</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(function($){
+			"use strict";
+			var w = $(window);
+			var $body = $('body');
+
+			// scroll
+			w.scroll(function(){
+				if(w.scrollTop()>85){
+					$body.addClass('if_scroll');
+				} else {
+					$body.removeClass('if_scroll');
+				}
+			});
+
+			// input
+			$body
+			.on('click','label.radio_label>input',function(){
+				var t = $(this);
+				$('input[type=radio][name='+t.attr('name')+']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click','label.chk_label>input',function(){
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			});
+			$('[data-toggle="popover"]').popover();
+
+			$('.standard_date').daterangepicker({
+				opens: 'center',
+				locale: {
+					"format": "YYYY-MM-DD",
+					"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+					],
+					"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+					]
+				},
+				singleDatePicker: true,
+				showDropdowns: true
+				//parentEl: '.singleCalWrp'
+			});
+			$body.on({
+				'show.daterangepicker' : function  (ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker' : function  (ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			},'.input-cal input');
+		});
+	</script>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/html5.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+<!-- lib -->
+<script src="http://v2.minbakdanawa.com/manager/common/js/bootstrap-slider.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/moment.min.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/daterangepicker.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.bxslider.min.js"></script>
+</body>
+
+</html>

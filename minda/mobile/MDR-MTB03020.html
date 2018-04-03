@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D]
+	1. 뒤로가기가 있는 메뉴 class="page_back"
+	2. 배경이 하얀색
+-->
+<body class="page_back bg_wh">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1>예약금 결제</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+
+<div class="frm_wrp">
+	<!-- step -->
+	<ol class="step_resev">
+		<li>01.숙박자 정보입력</li>
+		<li class="active">02.예약금 결제</li>
+		<li>03.예약완료</li>
+	</ol>
+
+	<!-- 예약정보 -->
+	<section class="bx">
+		<h2 class="bx_hd">예약정보</h2>
+		<div class="bx_cnt">
+			<div class="room_lst v3 media" href="">
+				<div class="media-left">
+					<div class="tmb_wrp">
+						<a href=""><img src="_temp/room.png" alt=""></a>
+					</div>
+				</div>
+				<div class="media-body media-middle">
+					<h3 class="ellipsis">남성전용도미토리룸</h3>
+					<div class="meta">
+						이탈리아 &gt; 로마
+					</div>
+				</div>
+			</div>
+			<hr class="hr">
+			<dl class="dl_lst">
+				<dt>예약객실</dt>
+				<dd>남성도미토리룸,  플라워</dd>
+				<dt>체크인</dt>
+				<dd>2016.00.00</dd>
+				<dt>체크아웃</dt>
+				<dd>2016.00.00</dd>
+			</dl>
+		</div>
+	</section>
+
+	<!-- 예약 상세용 -->
+	<section class="bx detail_bx">
+		<h2 class="bx_hd">예약 상세용</h2>
+		<div class="bx_cnt">
+			<h3 class="bx_hd2">2016.03.30</h3>
+			<hr class="hr">
+			<dl class="dl_lst">
+				<dt>객실명</dt>
+				<dd><span class="color_org">도미토리</span> - 남성도미토리룸</dd>
+				<dt>인원</dt>
+				<dd>1인￡ 25 x 2명</dd>
+				<dt>요금</dt>
+				<dd>￡ 50</dd>
+			</dl>
+		</div>
+		<div class="bx_cnt">
+			<h3 class="bx_hd2">2016.03.30</h3>
+			<hr class="hr">
+			<dl class="dl_lst">
+				<dt>객실명</dt>
+				<dd><span class="color_org">개인실</span> - 플라워</dd>
+				<dt>인원</dt>
+				<dd>1인￡ 25 x 2명</dd>
+				<dt>요금</dt>
+				<dd>￡ 50</dd>
+			</dl>
+		</div>
+		<div class="tb_total">
+			<dl>
+				<dt>예약금(10%)</dt>
+				<dd><span class="color_org">￡15 </span>( &#8361; 19,100)</dd>
+				<dt>숙소 직접결제액(체크인시)</dt>
+				<dd><span class="color_org">(+)￡135</span></dd>
+				<dt class="total color_org">총 합계 금액</dt>
+				<dd class="total color_org">￡150</dd>
+			</dl>
+		</div>
+	</section>
+
+	<!-- 결제금액 및 할인혜택 -->
+	<section class="mb10">
+		<h2 class="mt15 mb10 fs15 color_blk">결제금액 및 할인혜택</h2>
+		<div class="bx2">
+			<dl class="dl_pay clearfix">
+				<dt>예치금</dt>
+				<dd><p class="form-control-static">66,000원</p></dd>
+				<dt>포인트</dt>
+				<dd>
+					<input type="text" class="form-control d_iblock w180 text-right" placeholder="사용가능한도 22,900"> <span class="d_iblock pt5 color_blk">P</span>
+				</dd>
+				<dt>쿠폰</dt>
+				<dd>
+					<select class="form-control d_iblock input-sm w180">
+						<option>쿠폰선택</option>
+					</select>
+					<p class="pt4 fs11">쿠폰할인 <span class="color_blk">3,000원</span></p>
+				</dd>
+				<dt>캐쉬</dt>
+				<dd>
+					<input type="text" class="form-control d_iblock w180 text-right" placeholder="잔액 973,060"> <span class="d_iblock pt5 color_blk">원</span>
+				</dd>
+				<dt>적립<br>포인트</dt>
+				<dd>
+					<p class="form-control-static color_red">200P</p>
+				</dd>
+			</dl>
+			<hr class="hr">
+			<ul class="lst_type_star color_grey fs12">
+				<li>포인트/쿠폰 할인혜택은 총 숙박요금의 10% 한도 내에서 적용됩니다.</li>
+				<li>적립포인트는 체크인 날짜 이후 리뷰글 작성시 적립됩니다.</li>
+			</ul>
+		</div>
+		<div class="tb_total v2">
+			<dl>
+				<dt>예약금</dt>
+				<dd>66,300 원</dd>
+				<dt>할인금액</dt>
+				<dd>- 6,000 원</dd>
+				<dt class="total">총 결제금액</dt>
+				<dd class="total"><strong class="color_org">60,300</strong> 원</dd>
+			</dl>
+		</div>
+	</section>
+
+	<!-- 예약정보 -->
+	<section class="bx">
+		<h2 class="bx_hd">결제수단 선택</h2>
+		<div class="bx_cnt">
+			<div class="btn-group mb10 fix_type_mint fix_type_org" data-toggle="buttons">
+				<label class="btn btn-default active">
+					<input type="radio" name="pay" checked="">신용카드
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="pay">실시간 계좌이체
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="pay">가상계좌
+				</label>
+			</div>
+			<div class="room_datail_wrp">
+				<div class="bx_more_obj">
+					<ul class="lst_type_rect fs12">
+						<li><span class="color_mint">1,000원 미만 결제시, 무통장입금만 가능</span>하며 '무통장입금'시에는, 뜨는 팝업창에 '입금자명'을 기재하셔야 입금 확인됩니다. <br>
+						(입금시각이 고객센터 운영시각이 아닌 경우에는 입금확인이 조금 늦어질 수 있습니다)</li>
+						<li>포인트/쿠폰/캐쉬를 제외한 총 결제금액이 신용카드일 경우 <span class="color_mint">1,000원 이상</span>, 실시간 계좌이체일 경우?<span class="color_mint">160원</span> 이상일 경우 결제가 가능합니다.</li>
+						<li>[예약과 동시에 확정] 숙소일 경우에도 다음과 같은 방법으로 '가상계좌'로 결제가 가능합니다. <br>
+						→ <a class="color_org" href=""> [예약과 동시에 확정] 숙소 '가상계좌' 진행방법 안내</a></li>
+						<li>'무통장 입금'시에는, 뜨는 팝업창에 '입금자명'을 꼭 기재하셔야 입금 확인됩니다.<br>
+						(입금시각이 고객센터 운영시각이 아닐 경우에는 입금확인이 조금 늦어질 수 있습니다.)</li>
+						<li>신용카드 결제시 <span class="color_mint">해외카드</span>인 경우, 해당 카드사의 <span class="color_mint">3D인증을 받은 카드에 한해서만 결제가 가능</span>합니다.<br><a class="color_org" href="">(해외카드결제 상세내용 안내)</a></li>
+						<li>익스플로러를 제외한 브라우저 (ex. 구글크롬, 파이어폭스 등)에서는 결제가 어려울 수 있으니, 익스플로러 브라우저에서 결제를 진행해주세요.</li>
+						<li>결제수단을 선택하시기 전에 브라우저에 팝업창 차단이 설정되어 있으면 팝업창 차단을 해제해주세요.</li>
+					</ul>
+				</div>
+				<div class="text-right bx_more">
+					<a href="#">더보기 <i class="icon_more"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 취소 환불 규정 -->
+	<section class="bx">
+		<h2 class="bx_hd">취소 환불 규정</h2>
+		<table class="tb text-center">
+			<thead>
+				<tr>
+					<th>취소일</th>
+					<th>환불액</th>
+					<th>포인트 적립</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>30일전 취소</td>
+					<td>전액환불</td>
+					<td>없음</td>
+				</tr>
+				<tr>
+					<td>29일~22일전</td>
+					<td>70%</td>
+					<td>8%</td>
+				</tr>
+				<tr>
+					<td>21일~15일전</td>
+					<td>60%</td>
+					<td>8%</td>
+				</tr>
+				<tr>
+					<td>14일~4일전</td>
+					<td>50%</td>
+					<td>8%</td>
+				</tr>
+				<tr>
+					<td>3일~당일취소 및 <br>No-Show</td>
+					<td>40%</td>
+					<td>없음</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="lst_type_star pa10 fs12">
+			<li>취소일은 현지 체크인 날짜 기준입니다.</li>
+			<li>환불액 및 포인트 적립은 총 숙박요금 기준입니다.</li>
+			<li>전액 환불 될 경우 포인트/쿠폰 결제액은 제외됩니다.</li>
+			<li>취소시 포인트 적립은 포인트/쿠폰 결제액은 제외하고 적립됩니다. </li>
+		</ul>
+	</section>
+
+	<!-- 취소 환불 규정 -->
+	<section class="bx clearfix">
+		<!-- 20160511 -->
+		<div class="pull-left" data-toggle="buttons">
+			<label class="btn no_style bx_hd mb0 text-nowrap">
+				<input type="checkbox" class="sr-only"><i class="icon_chk_label"></i> 민다 취소환불규정 동의
+			</label>
+		</div>
+		<a class="pull-right pa12 fs11 color_org" href="http://www.naver.com/" target="_blank">약관보기</a>
+	</section>
+
+	<!-- 하단 고정 메뉴-->
+	<div class="btm_fixed pa10 bg_wh">
+		<button type="button" class="btn btn-xl btn-block bg_org">결제하기</button>
+	</div>
+</div>
+
+<script>
+jQuery(function($){
+	// 더보기 열기 20160506
+	$('.bx_more>a').click(function(){
+		$(this).parent().prev().toggleClass('open');
+		return false;
+	});
+	$('a.icon_open').click(function(){
+		$(this).toggleClass('on').parent().prev().slideToggle(150);
+		return false;
+	});
+});
+</script>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

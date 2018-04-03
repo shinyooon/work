@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap" class="page_tb">
+		<!-- header -->
+		<header id="hd">
+			<div class="header clearfix">
+				<!-- 2017-06-13 로고 이미지 변경 -->
+				<h1 class="logo"><a href="index.html"><img src="http://www.theminda.com/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+				<!--// 2017-06-13 로고 이미지 변경 -->
+				<nav class="hd-nav">
+					<ul class="gnb">
+						<li class="i1"><a href="">숙소 <span class="icon_up">up</span></a></li>
+						<li class="i4"><a href="">트립</a></li>
+						<li class="i2"><a href="">정보 <span class="icon_new">new</span></a></li>
+						<li class="i5">
+							<a href="" class="active">부가상품</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">티켓/패스</a></li>
+									<li><a href="">유레일패스/기차표</a></li>
+									<li><a href="">렌터카</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<script>
+					$(function() {
+						$util = $('.userbx');
+						$util.on('focusin', function() {
+							$(this).addClass('open');
+						});
+
+					})
+					</script>
+				</nav>
+				<div class="hd-r">
+					<!-- 2017-06-13 태그 순서 위로 올림 -->
+					<div class="util">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+							<ul class="dropdown-menu">
+								<li><a href="">나의 가이드북</a></li>
+								<li><a href="">나의 숙소예약</a></li>
+								<li><a href="">정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 로그인 후 -->
+					<!-- <div class="util">
+						<a href="/member/login.php?login_return_page=/main/index.php"> 로그인</a>
+						<a href="/member/register.php">회원가입</a>
+					</div> -->
+					<ul class="gnb right-gnb clear">
+						<li class="i6">
+							<a href="">민다톡톡</a>
+							<!-- [D] class="active" 추가시 dep2 보여짐 -->
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="">커뮤니티홈</a></li>
+									<li><a href="">톡톡릴레이</a></li>
+									<li><a href="" class="active">구인ㆍ구직</a></li>
+									<li><a href="">사고ㆍ팔고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="i7">
+							<a href="">할인&amp;이벤트</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">이벤트</a></li>
+									<li><a href="">민다특가</a></li>
+									<li><a href="">쿠폰존</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<form action="." class="srch_wrp">
+						<!-- <button type="button" class="icon_srch_grey">검색</button> -->
+						<!-- 2017-06-13 silde-wrap 클래스 삭제 -->
+						<div class="input-group tb_bx">
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_grey">검색</button>
+							</span>
+							<div class="input-wrap tb-cell">
+								<input type="text" class="form-control" placeholder="키워드를 입력해주세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</div>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<div class="dep2_bg"></div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<!-- 서브 헤더 -->
+				<header class="sub_hd">
+					<h2>여행자보험</h2>
+				</header>
+				<ul class="basic_step2 tb_fixed">
+					<li><a href="./rentcar.php">보험료 계산하기</a></li>
+					<li><a href="./rentcar_rule.php">어떤 보험인가요?</a></li>
+					<li class="active"><a href="./rentcar_refund.php">자주하는 질문</a></li>
+					<li><a href="./rentcar_faq.php">문의처 안내</a></li>
+				</ul>
+				<div class="service_info_bx insur_info_bx">
+					<div class="tit-wrap"><h3 class="sub_title v2">자주하는 질문</h3></div>
+					<dl class="accordion faq_lst">
+						<dt><button type="button" class="acc_btn no_style">가입관련 문의는 어떻게 하나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								계약관련 문의는 여행친구 <strong class="color_red fw500">1670-1353</strong>으로 하시면 됩니다. 24시간 대기중입니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">휴대품 손해 보장이 궁금합니다.</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								휴대품 손해 보장은 도난, 파손, 침수 손해 발생 시 보장됩니다.<br />
+가입 금액 한도로 보장되는데, 휴대품 <strong class="color_red fw500">점당 20만원 한도</strong>로 실제 비용이 보상됩니다.<br />
+주의점은 분실 시에는 보장이 되지 않으며, 도난 시에는 도난 지역 가까운 police Station에서 Police Report를 미리 확보하는 것이 중요합니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">해외에서 여려운 경우(아프거나 다치거나 보험사고 발생 시)에 어떻게 연락하나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								해외에서 상해, 질병으로 아프실 경우나 도난을 당하신 경우 “<strong class="color_red fw500">우리말 도움서비스(+82-2-3449-3512/수신자부담)</strong>”로 연락 주시면 24시간 전문 의료진이 현지 병원 입원 및 알선,<br />
+현지 의사와의 의사소통, 보험금 사고 시 대응방법 등을 우리말로 안내해 드립니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">가입 후 가입증명서는 어떻게 확인하나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								가입이 완료되면, 가입 시 입력하신 메일로 국문, 영문 두 종류의 가입증명서가 송부됩니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">해외에 나와 있는데 보험가입이 되나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								비행기 탑승 전까지만 가입이 가능하며, 출국하셨다면 보험가입이 불가합니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">해외 체류 며칠까지 보장이 가능한가요? 보험기간 에러라고 계속 뜹니다.</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								보험기간은 출발일 기준으로 90일까지만 가입 가능합니다. <strong class="color_red fw500">90일</strong>이 초과되면 통칭 해외유학보험이라는 상품으로 다른 사이트에서 가입하셔야합니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">출장을 가게 되었는데 여행보험으로도 보장이 되나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								네. 보장이 됩니다. 명칭이 여행보험일 뿐 여행, 친지 방문, 어학 연수, 출장 등 해외에서 발생하는 위험을 목적과 상관없이 보장합니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">단체로 가입이 되나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								App에서는 개인형, 가족형 두 가지만 운영하고 있습니다. 가족형의 경우 성인 1명에 미성년자 다수로 가입이 가능합니다.<br />
+20명 이상의 단체가입을 원하실 경우에는 <strong class="color_red fw500">1670-1535</strong>로 문의해주시기 바랍니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">일정 및 동행이 변경되는 경우 취소는 어떻게 하나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								출발일 이전까지 가능하고 <strong class="color_red fw500">1670-1535</strong>를 통해 유선으로 신청하셔야 합니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">카드결제가 잘 안되고 에러가 납니다.</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								네트워크 오류나 카드사 전산에러가 나타나는 경우가 종종 발생합니다. 이럴 경우 1670-1535를 통해 안내 받으시면 됩니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">패키지 여행을 가면서 여행사에서 가입했는데, 중복해서 가입하게 되면 어떻게 되나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								중복해서 가입하실 때 중복해서 보상이 되는 보장(사망, 후유장해)과 중복되어도 비례해서 보상되는 보장(기타 보장)이 있습니다.<br />
+통상 여행사 패키지 여행 보장이 다소 부족해서 중복 가입하시는 분들도 많습니다.
+							</p>
+						</dd>
+						<dt><button type="button" class="acc_btn no_style">해외 여행보험 가입이 안되는 나라가 있나요?</button></dt>
+						<dd class="acc_cnt">
+							<p class="txt">
+								네. 외교부가 지정하고 있는 철수 권고지역(3단계), 여행 금지지역(4단계)을 여행하시는 겨우 보험을 가입하시더라도 보상을 받으실 수 없습니다.<br />
+외교부 홈페이지를 참고해주세요.
+							</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh mb3">information</strong>
+					<div class="ft_info_txt fs13">
+						<span>(주)사막</span>
+						<span>대표 : 김윤회</span>
+						<span>사업자등록번호 : 010-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt fs13">
+						<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+						<span>TEL : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+						<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+					</div>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+						<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+						<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+					</ul>
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="">회사소개</a></li>
+						<li><a href="">민박등록신청</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="" class="color_org">개인정보취급방침</a></li>
+						<li><a href="">민박다나와 취소환불규정</a></li>
+						<li><a href="">사이트맵</a></li>
+						<li><a href="">고객센터</a></li>
+						<li><a href="">공지사항</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<div class="fix_btm">
+		<!-- quick  -->
+		<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+	</div>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="/cust/js/bootstrap-slider.js"></script>
+	<script src="/cust/js/jquery.nanoscroller.js"></script>
+	<script src="/cust/js/moment.min.js"></script>
+	<script src="/cust/js/daterangepicker.js"></script>
+	<script src="/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="/cust/js/common.js"></script>
+	<script>
+	$(function  () {
+		$(".accordion .acc_btn").on('click',function  () {
+			$(this).toggleClass('open').parent().next('.acc_cnt').slideToggle('fast');
+		});
+	})
+	</script>
+</body>
+
+</html>

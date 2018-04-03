@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<!-- <link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/normalize.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/main.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- mobile menu -->
+	<div id="snb" class="side_nav">
+		<a class="icon_snb_close" href="#snb" onClick="menuClose();return false;">닫기</a>
+		<header>
+			<!-- 비로그인 -->
+			<h1><i class="icon_login"></i> 로그인해주세요.</h1>
+			<a class="btn btn_login" href="">로그인</a>
+			<!-- 로그인
+		<h1>민다</h1>
+		<a class="btn btn_logout" href="">로그아웃</a> -->
+		</header>
+		<section>
+			<nav id="gnb">
+				<h2 class="sr-only">메인메뉴</h2>
+				<ul>
+					<li><a href=""><i class="icon_gnb1"></i> 한인숙소</a></li>
+					<li><a href=""><i class="icon_gnb2"></i> 스팟</a></li>
+					<li><a href=""><i class="icon_gnb3"></i> 일정</a></li>
+					<li><a href=""><i class="icon_gnb4"></i> 투어<b class="label_new">N</b></a></li>
+					<li><a href=""><i class="icon_gnb5"></i> 티켓패스</a></li>
+					<li><a href=""><i class="icon_gnb6"></i> 할인&amp;이벤트<b class="label_new">N</b></a></li>
+				</ul>
+				<h2>마이페이지</h2>
+				<ul>
+					<li><a href="">숙소 예약 내역</a></li>
+					<li><a href="">투어, 티켓/패스 예약 내역</a></li>
+					<li><a href="">나의 가이드북</a></li>
+					<li><a href="">나의 활동</a></li>
+					<li><a href="">포인트/쿠폰/캐쉬</a></li>
+					<li><a href="">설정</a></li>
+				</ul>
+			</nav>
+		</section>
+	</div>
+	<!-- mobile menu -->
+	<!-- wrap.screenID -->
+	<!-- banner-area -->
+	<div class="cls-banner-area banner-area">
+		<div class="banner-wrap">
+			<img src="http://www.theminda.com/m/1.0/cust/img/banner_app_down_blk.jpg" alt="숙소예약부터 여행정보까지 편리한 민다앱으로! 앱다운로드" />
+			<div class="btn-close-area">
+				<button class="icon_close">배너 닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- banner-area 2016-11-25 수정 -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="main_header" id="hd">
+			<h1><a href="javascript:;">민다<span class="sr-only">minda</span></a></h1>
+			<a class="icon_mn" onclick="menuOpen('snb');return false;">메뉴</a>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<div class="swiper-container main-container">
+				<div class="main-pagination"></div>
+				<div class="swiper-wrapper main-wrapper">
+					<!-- 숙소 -->
+					<div class="swiper-slide main-con main-room">
+						<div class="inner checkin-area">
+							<form class="frm_index v2 bg_wh">
+								<div class="itx_datepicker_wrp">
+									<div class="col-xs-12">
+										<input type="text" class="no_style select_like" placeholder="도시 또는 숙소명을 입력하세요.">
+									</div>
+									<div class="col-xs-6 chkdate">
+										<input type="text" id="chkin" class="no_style itx_datepicker itx_cal" placeholder="체크인">
+									</div>
+									<div class="col-xs-6 chkdate v2">
+										<input type="text" id="chkout" class="no_style itx_datepicker itx_cal" placeholder="체크아웃">
+									</div>
+									<div class="col-xs-12 btn-area">
+										<button type="submit" class="btn btn-lg btn-block bg_mint">검색</button>
+									</div>
+								</div>
+							</form>
+							<script>
+							// http://www.daterangepicker.com/
+							$(function() {
+							    var dateToday =[new Date(), new Date()];
+								$('.itx_datepicker').each(function  (idx) {
+									$(this).daterangepicker({
+										autoApply: true,
+										singleDatePicker: true,
+										locale: {
+											format: 'YYYY/MM/DD',
+											daysOfWeek: [
+												"일",
+												"월",
+												"화",
+												"수",
+												"목",
+												"금",
+												"토"
+											]
+										}
+									});
+									$(this).on('apply.daterangepicker', function(ev, picker) {
+										$(this).next().hide();
+									});
+								});
+							});
+							</script>
+						</div>
+						<!-- banner-area 2016-11-25 수정 -->
+						<div class="banner-area bd-t ">
+							<div class="banner-wrap">
+								<a href="javascript:$('#event-modal').modal();">
+									<img src="http://www.theminda.com/m/1.0/cust/img/banner_newyear.jpg" alt="연말연시이벤트. 현지숙소에서 만나는 특별한행운." />
+								</a>
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div>
+						<!--// banner-area -->
+						<!-- 해외 인기도시 북미, 아시아, 유럽 노출-->
+						<div class="main-city-area foreign-city-area">
+							<div class="tit-wrap bd-t"><h2 class="tit">해외인기도시</h2></div>
+							<div class="inner">
+								<div class="city-container">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide info-slide">
+											<div class="img-area"><img src="_temp/img_city.jpg" alt="" />
+												<div class="txt-area">
+													<h3 class="tit">북미</h3>
+													<p>예술과 낭만의 도시 파리 어떠세요?</p>
+												</div>
+											</div>
+											<div class="inner">
+												<ul class="list-item-row active">
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">You&amp;Me [유앤미_어퍼웨스트</strong>
+															</a>
+															<span class="price">€30</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">뉴욕민박 애니하우스</strong>
+																<span class="price">€30</span>
+															</a>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">LA 우리집민박</strong>
+															</a>
+															<span class="price">€30</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="swiper-slide info-slide">
+											<div class="img-area"><img src="_temp/img_city.jpg" alt="" />
+												<div class="txt-area">
+													<h3 class="tit">아시아</h3>
+													<p>예술과 낭만의 도시 파리 어떠세요?</p>
+												</div>
+											</div>
+											<div class="inner">
+												<ul class="list-item-row active">
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">오사카 자코텔 쓰루하시점</strong>
+															</a>
+															<span class="price">€30</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">도쿄 동대문 민박</strong>
+																<span class="price">€30</span>
+															</a>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">홍콩민박 도미하우스</strong>
+															</a>
+															<span class="price">€30</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="swiper-slide info-slide">
+											<div class="img-area"><img src="_temp/img_city.jpg" alt="" />
+												<div class="txt-area">
+													<h3 class="tit">유럽</h3>
+													<p>예술과 낭만의 도시 파리 어떠세요?</p>
+												</div>
+											</div>
+											<div class="inner">
+												<ul class="list-item-row active">
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">파리 행운민박 1호점</strong>
+															</a>
+															<span class="price">€30</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">로마 비올라민박</strong>
+																<span class="price">€30</span>
+															</a>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">런던 킹스크로스 KX HOUSE</strong>
+															</a>
+															<span class="price">€30</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="inner room-list-area">
+								<div class="btn-area">
+									<a class="btn btn-block btn_border_grey btn-lg" href="">전체도시보기</a>
+								</div>
+							</div>
+						</div>
+						<!--// 해외 인기도시 -->
+						<!-- banner-area  22일 오픈시는 노출되지 않음
+						<div class="banner-area bd-t ">
+							<div class="banner-wrap">
+								<img src="http://v2.theminda.com/m/1.0/cust/img/banner_main.jpg" alt="현지인의 realtip 현지인만 아는 진짜여행 진짜정보" />
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div>
+						// banner-area -->
+						<!-- 국내 인기도시  부산, 제주, 서울 노출-->
+						<div class="main-city-area domestic-city-area">
+							<div class="tit-wrap bd-t"><h2 class="tit">국내인기도시</h2></div>
+							<div class="inner">
+								<div class="city-container">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide info-slide">
+											<div class="img-area">
+												<img src="_temp/img_city.jpg" alt="" />
+												<div class="txt-area">
+													<h3 class="tit">부산</h3>
+													<p>예술과 낭만의 도시 파리 어떠세요?</p>
+												</div>
+											</div>
+											<div class="inner">
+												<ul class="list-item-row active">
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">부산 해운대 헬로우게스트하우스</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">부산 해운대 헬로우게스트하우스</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">부산 숨 게스트하우스(해운대..</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="swiper-slide info-slide">
+											<div class="img-area"><img src="_temp/img_city.jpg" alt="" />
+												<div class="txt-area">
+													<h3 class="tit">제주</h3>
+													<p>예술과 낭만의 도시 파리 어떠세요?</p>
+												</div>
+											</div>
+											<div class="inner">
+												<ul class="list-item-row active">
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">제주 성산 숨비게스트하우스</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">제주 성산 숨비게스트하우스</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">제주 쉼터게스트하우스 </strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="swiper-slide info-slide">
+											<div class="img-area"><img src="_temp/img_city.jpg" alt="" />
+												<div class="txt-area">
+													<h3 class="tit">서울 </h3>
+													<p>예술과 낭만의 도시 파리 어떠세요?</p>
+												</div>
+											</div>
+											<div class="inner">
+												<ul class="list-item-row active">
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">서울 홍대 쉐프게스트하우스</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">서울 호스텔코리아11 창덕궁</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+													<li>
+														<div class="thum">
+															<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+														</div>
+														<div class="info-desc">
+															<a href="">
+																<strong class="tit twoline">서울 홍대 와우힐즈 게스트하우스</strong>
+															</a>
+															<span class="price">￦26,000</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="inner room-list-area">
+								<div class="btn-area">
+									<a class="btn btn-block btn_border_grey btn-lg" href="">전체도시보기</a>
+								</div>
+							</div>
+						</div>
+						<!--// 국내 인기도시 -->
+						<div class="event-area">
+							<ul class="list-even bd-t">
+								<li class="li1 bd-b">
+									<a href="" class="inner">
+										<span class="tit">땡처리숙소</span>
+										<span class="color_red">최대 <strong>34</strong>% 할인</span>
+										<p class="txt">급하게 남은 숙소를 땡처리 가격으로 예약하세요</p>
+										<span class="icon_discount"></span>
+									</a>
+								</li>
+								<li class="li2 bd-b">
+									<a href="" class="inner">
+										<span class="tit">숙소이벤트</span>
+										<span class="color_red">총 <strong>106</strong>개의 이벤트</span>
+										<p class="txt">숙소에서 진행하는 핫한 이벤트를 확인하세요.</p>
+										<span class="icon_room_event"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 스팟 -->
+					<div class="swiper-slide main-con main-spot">
+						<!-- main-top-area -->
+						<div class="inner main-top-area">
+							<div class="top-flag-area">
+								<p class="txt">최근 인기있는 여행지는 어디일까요?</p>
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">라스베가스</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">라스베가스</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-area">
+								<button type="submit" class="btn btn-lg btn-block bg_mint">전체도시보기</button>
+							</div>
+						</div>
+						<!--// main-top-area -->
+
+						<div class="banner-area bd-t ">
+							<div class="banner-wrap">
+								<a href="javascript:$('#event-modal').modal();">
+									<img src="http://www.theminda.com/m/1.0/cust/img/banner_newyear.jpg" alt="연말연시이벤트. 현지숙소에서 만나는 특별한행운." />
+								</a>
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div>
+						<!--// banner-area -->
+						<ul class="list-item bd-t">
+							<!-- 3개 까지 노출 -->
+							<li>
+								<a href="">
+									<div class="img-area">
+										<span class="txt-top-area"><span class="txt">테마</span></span>
+										<img src="_temp/img_city.jpg" alt="" />
+										<div class="txt-area">
+											<span class="tit">세계적인 경기를 눈앞에서</h3>
+											<p>TV로만 보던 세계적인 선수들의 경기를 직접 관람하자</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-area">
+										<span class="txt-top-area"><span class="txt">테마</span></span>
+										<img src="_temp/img_city.jpg" alt="" />
+										<div class="txt-area">
+											<span class="tit">달달한 디저트로 생기충전</h3>
+											<p>꼭 한번 맛보고 싶은 달콤한 디저트의 향연</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-area">
+										<span class="txt-top-area"><span class="txt">테마</span></span>
+										<img src="_temp/img_city.jpg" alt="" />
+										<div class="txt-area">
+											<span class="tit">야경깡패 모여라</h3>
+											<p>아름다운 야경은 언제나 옳아요</p>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<!-- 금주의  현지인 22일 오픈시에는 노출되지 않음
+						<div class="tit-wrap bd-t"><h2 class="tit">금주의 현지인</h2></div>
+						<div class="list-item">
+							<a href="">
+								<div class="img-area">
+									<img src="_temp/partner.jpg" alt="" />
+									<div class="txt-area">
+										<span class="tit">하하하 파리민박</h3>
+										<p>즐거움이 가득한 민박입니다.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						// 금주의  현지인 -->
+						<!-- spot-list-wrap 22일 오픈시에는 노출되지 않음
+						<div class="inner spot-list-wrap">
+							<ul class="list-item-row">
+								<li>
+									<div class="thum">
+										<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+									</div>
+									<div class="info-desc">
+										<ul class="split_lst">
+											<li>이탈리아 로마</li>
+											<li>스팟</li>
+										</ul>
+										<a href="">
+											<strong class="tit twoline">런던 퐁뇌프민박 구 여ㅓ기는 런던 퐁피두 민박</strong>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="thum">
+										<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+									</div>
+									<div class="info-desc">
+										<ul class="split_lst">
+											<li>이탈리아 로마</li>
+											<li>일정</li>
+										</ul>
+										<a href="">
+											<strong class="tit twoline">런던 퐁뇌프민박 구 여ㅓ기는 런던 퐁피두 민박</strong>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						 spot-list-wrap -->
+						<!-- banner-area 22일 오픈시에는 노출되지 않음
+						<div class="banner-area bd-t ">
+							<div class="banner-wrap">
+								<img src="http://v2.theminda.com/m/1.0/cust/img/banner_main.jpg" alt="현지인의 realtip 현지인만 아는 진짜여행 진짜정보" />
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div>
+						// banner-area -->
+
+						<div class="tit-wrap bd-t"><h2 class="tit">인기스팟</h2></div>
+						<div class="item-detail-wrap item_card_lst bd-b">
+							<div class="img-area"><img src="_temp/spot.jpg" alt="" /></div>
+							<div class="clearfix btm_info">
+								<div class="iteminfo">
+									<span class="d_block mb3">미국 뉴욕</span>
+									<strong class="fw500 color_blk tit ellipsis">
+										<span class="color_red">쇼핑</span>
+										우드버리 쇼핑몰
+									</strong>
+									<p class="desc">1447년 비스콘티가의 마지막 자손이 죽고, 시민들에 의한 암브로시아 공화국이 세워졌으나 단명으로 끝나고, 농민의 아들 프란체스코 스포르차가 권좌에 올랐다. 스포르차 가의 루드비코 일 모로는 레오나르도 다 빈치, 브라만테 등 당대의 천재들을 불러들여 밀라노의 오페라의 도시 밀라노 (유럽...</p>
+								</div>
+								<div class="meta clearfix color_grey mt5">
+									<span>현지인 리얼팁 <span class="color_org">(24)</span></span>
+								</div>
+							</div>
+						</div>
+						<div class="item-detail-wrap item_card_lst bd-b">
+							<div class="img-area"><img src="_temp/spot.jpg" alt="" /></div>
+							<div class="clearfix btm_info">
+								<div class="iteminfo">
+									<span class="d_block mb3">프랑스 파리</span>
+									<strong class="fw500 color_blk tit ellipsis">
+										<span class="color_blue">편의</span>
+										24시 약국(리퍼블리크점)
+									</strong>
+									<p class="desc">1447년 비스콘티가의 마지막 자손이 죽고, 시민들에 의한 암브로시아 공화국이 세워졌으나 단명으로 끝나고, 농민의 아들 프란체스코 스포르차가 권좌에 올랐다. 스포르차 가의 루드비코 일 모로는 레오나르도 다 빈치, 브라만테 등 당대의 천재들을 불러들여 밀라노의 오페라의 도시 밀라노 (유럽...</p>
+								</div>
+								<div class="meta clearfix color_grey mt5">
+									<span>현지인 리얼팁 <span class="color_org">(24)</span></span>
+								</div>
+							</div>
+						</div>
+						<div class="item-detail-wrap item_card_lst bd-b">
+							<div class="img-area"><img src="_temp/spot.jpg" alt="" /></div>
+							<div class="clearfix btm_info">
+								<div class="iteminfo">
+									<span class="d_block mb3">미국 뉴욕</span>
+									<strong class="fw500 color_blk tit ellipsis">
+										<span class="color_org">명소</span>
+										스태튼 섬 페리(자유의여신상 무료..
+									</strong>
+									<p class="desc">1447년 비스콘티가의 마지막 자손이 죽고, 시민들에 의한 암브로시아 공화국이 세워졌으나 단명으로 끝나고, 농민의 아들 프란체스코 스포르차가 권좌에 올랐다. 스포르차 가의 루드비코 일 모로는 레오나르도 다 빈치, 브라만테 등 당대의 천재들을 불러들여 밀라노의 오페라의 도시 밀라노 (유럽...</p>
+								</div>
+								<div class="meta clearfix color_grey mt5">
+									<span>현지인 리얼팁 <span class="color_org">(24)</span></span>
+								</div>
+							</div>
+						</div>
+						<!-- 22일 오픈 시에는 노출되지 않음 <div class="tit-wrap bd-t"><h2 class="tit">신규 스팟</h2></div> -->
+					</div>
+					<!-- 일정 -->
+					<div class="swiper-slide main-con main-plan">
+						<!-- main-top-area -->
+						<div class="inner main-top-area">
+							<div class="top-flag-area">
+								<p class="txt">최근 인기있는 여행지는 어디일까요?</p>
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">라스베가스</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">라스베가스</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="">
+											<span class="flag-img"><img src="_temp/flag.jpg" alt="" /></span>
+											<span class="flag-name">오사카</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-area">
+								<button type="submit" class="btn btn-lg btn-block bg_mint">전체도시보기</button>
+							</div>
+						</div>
+						<!--// main-top-area -->
+						<!-- banner-area -->
+						<!-- <div class="banner-area bd-t ">
+							<div class="banner-wrap banner-white">
+								<img src="http://v2.theminda.com/m/1.0/cust/img/banner_app_down.jpg" alt="숙소예약부터 여행정보까지 편리한 민다앱으로! 앱다운로드" />
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div> -->
+						<!-- banner-area 2016-11-25 수정 -->
+						<div class="banner-area bd-t ">
+							<div class="banner-wrap">
+								<a href="javascript:$('#event-modal').modal();">
+									<img src="http://www.theminda.com/m/1.0/cust/img/banner_newyear.jpg" alt="연말연시이벤트. 현지숙소에서 만나는 특별한행운." />
+								</a>
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div>
+						<!--// banner-area -->
+						<!-- 테마리스트 22일 오픈시에는 노출되지 않음
+						<ul class="list-item bd-t">
+							<li>
+								<a href="">
+									<div class="img-area">
+										<span class="txt-top-area"><span class="txt">일정테마</span></span>
+										<img src="_temp/bg_plan3.jpg" alt="">
+										<div class="txt-area">
+											<span class="tit">이탈리아의 진정한 맛집
+											<p>블로그맛집은 가라 진짜 맛집이 온다!</p>
+										</span></div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						// 테마리스트 22일 오픈시에는 노출되지 않음 -->
+						<!-- 금주의  현지인 22일 오픈시에는 노출되지 않음
+						<div class="tit-wrap bd-t"><h2 class="tit">금주의 현지인</h2></div>
+						<div class="list-item">
+							<a href="">
+								<div class="img-area">
+									<img src="_temp/partner.jpg" alt="" />
+									<div class="txt-area">
+										<span class="tit">하하하 파리민박</h3>
+										<p>즐거움이 가득한 민박입니다.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						// 금주의  현지인 -->
+						<!-- spot-list-wrap 22일 오픈시에는 노출되지 않음
+						<div class="inner spot-list-wrap">
+							<ul class="list-item-row">
+								<li>
+									<div class="thum">
+										<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+									</div>
+									<div class="info-desc">
+										<ul class="split_lst">
+											<li>이탈리아 로마</li>
+											<li>스팟</li>
+										</ul>
+										<a href="">
+											<strong class="tit twoline">런던 퐁뇌프민박 구 여ㅓ기는 런던 퐁피두 민박</strong>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="thum">
+										<a href=""><img src="_temp/img_room.jpg" alt="" /></a>
+									</div>
+									<div class="info-desc">
+										<ul class="split_lst">
+											<li>이탈리아 로마</li>
+											<li>일정</li>
+										</ul>
+										<a href="">
+											<strong class="tit twoline">런던 퐁뇌프민박 구 여ㅓ기는 런던 퐁피두 민박</strong>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						 spot-list-wrap -->
+						<!-- banner-area 22일 오픈시에는 노출되지 않음
+						<div class="banner-area bd-t ">
+							<div class="banner-wrap">
+								<img src="http://v2.theminda.com/m/1.0/cust/img/banner_main.jpg" alt="현지인의 realtip 현지인만 아는 진짜여행 진짜정보" />
+								<div class="btn-close-area">
+									<button class="icon_close">배너 닫기</button>
+								</div>
+							</div>
+						</div>
+						// banner-area -->
+						<div class="tit-wrap bd-b2 bd-t"><h2 class="tit">인기 일정</h2></div>
+						<!-- plan-list-area -->
+						<div class="plan-list-area bd-b">
+							<div class="plan-top inner">
+								<span class="d_block">체코 프라하</span>
+								<strong class="fw500 color_blk tit ellipsis">두발로 즐기는 프라하 오전 추천 코스</strong><!-- 0810 추가 -->
+							</div>
+							<ul class="list-plan">
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">1 바츨라프 광장</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan2.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">2 무하 박물관</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">3 하벨시장</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan2.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">4 천문시계</div>
+								</li>
+								<li class="last-more">
+									<div class="txt-plan ellipsis">... 외 <span class="color_org">5</span>개의 스팟이 더 있습니다</div>
+								</li>
+							</ul>
+						</div>
+						<!-- plan-list-area -->
+						<div class="plan-list-area bd-b">
+							<div class="plan-top inner">
+								<span class="d_block">일본 오사카</span>
+								<strong class="fw500 color_blk tit ellipsis">먹고 죽자! 오카사 먹방투어</strong>
+							</div>
+							<ul class="list-plan">
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">1 츠루동탄 우동집</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan2.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">2 파블로 치즈타르트</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">2 파블로 치즈타르트</div>
+								</li>
+							</ul>
+						</div>
+						<!--// plan-list-area -->
+						<!-- plan-list-area -->
+						<div class="plan-list-area bd-b">
+							<div class="plan-top inner">
+								<span class="d_block">미국 뉴욕</span>
+								<strong class="fw500 color_blk tit ellipsis">커피 좋아하니? 어퍼 웨스트는 카페 천국!</strong>
+							</div>
+							<ul class="list-plan">
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">1 버치커피</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan2.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">2 카페 랄로</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">3 어빙 팜 커피 로스터즈</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">4 모모푸쿠 밀크바</div>
+								</li>
+							</ul>
+						</div>
+						<!--// plan-list-area -->
+						<!--// plan-list-area -->
+						<!-- 신규 일정 22일 오픈시엔 노출되지 않음
+						<div class="tit-wrap bd-t bd-b2"><h2 class="tit">신규일정</h2></div>
+						<div class="plan-list-area">
+							<div class="plan-top inner">
+								<span class="d_block">이탈리아 밀라노</span>
+								<strong class="fw500 color_blk tit">이탈리아 밀라노의 밀레공원</strong>
+							</div>
+							<ul class="list-plan">
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">1 바티칸투어바티칸투어바티칸투어바티칸투어바티칸투어</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan2.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">2 바티칸투어바티칸투어바티칸투어바티칸투어바티칸투어</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">3 바티칸투어바티칸투어바티칸투어바티칸투어바티칸투어</div>
+								</li>
+								<li>
+									<div class="img-wrap"><img src="_temp/bg_plan2.jpg" alt="" /></div>
+									<div class="txt-plan ellipsis">4  바티칸투어바티칸투어바티칸투어바티칸투어바티칸투어</div>
+								</li>
+								<li class="last-more">
+									<div class="txt-plan ellipsis">... 외 <span class="color_org">5</span>개의 스팟이 더 있습니다</div>
+								</li>
+							</ul>
+						</div>
+						// 신규 일정 22일 오픈시엔 노출되지 않음 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft" class="bg_blk">
+			<div>
+				<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+				<a href="" target="_blank" class="icon_blog ml2">민다블로그보기</a>
+				<a href="" class="btn ml2">1:1 문의</a>
+				<a href="" class="btn ml2">앱 다운로드</a>
+			</div>
+			<p>
+				(주)사막 사업자등록번호 : 010-86-28116 FAX : 02-722-3478
+			</p>
+			<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+			<ul class="list-inline">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">고객센터</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="color_org">개인정보취급방침</a></li>
+				<li><a href="">PC버전</a></li>
+			</ul>
+		</div>
+		<!-- fixed button-->
+		<div id="quick">
+			<a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+			<a class="icon_mn2" href="#">Menu</a>
+		</div>
+		<!-- 2016-11-25 event banner area -->
+		<div id="event-modal" class="modal fade  pop_event pa0 " tabindex="-1" role="dialog">
+			<div class="modal-dialog ma0">
+				<div class="top-wrap">
+					<button type="button" data-dismiss="modal" aria-label="Close" class="no_style img_clse">
+						<img src="http://www.theminda.com/m/1.0/cust/img/event/201612/img_clse.png" alt="팝업 닫기" />
+					</button>
+				</div>
+				<div class="top-img">
+					<img src="http://www.theminda.com/m/1.0/cust/img/event/201612/top.jpg" alt=""/>
+				</div>
+				<div class="city-wrap">
+					<img src="http://www.theminda.com/m/1.0/cust/img/event/201612/list_city.jpg" alt=""/>
+					<ul class="list-event-city">
+						<li class="d_iblock"><a href="#event_pari"><span>파리</span></a></li>
+						<li class="d_iblock"><a href="#event_london"><span>런던</span></a></li>
+						<li class="d_iblock" style="width:28%"><a href="#event_barcelona"><span>바르세로나</span></a></li>
+						<li class="d_iblock" style="width:18%"><a href="#event_berlin"><span>베를린</span></a></li>
+						<li class="d_iblock" style="width:18%"><a href="#event_osaka"><span>오사카</span></a></li>
+						<li class="d_iblock"><a href="#event_busan"><span>부산</span></a></li>
+					</ul>
+				</div>
+				<ul class="bg_wh event_room_list">
+					<li>
+						<span id="event_pari" class="scroll-pos"></span>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=6681')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room1.jpg" alt="파리 하울민박. 선물 : 11월 16일 ~ 12월 16일 : 5박이상 숙박시 바토뮤수 티켓 제공" /></a>
+					</li>
+					<li>
+						<span id="event_london" class="scroll-pos"></span>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=4369')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room2.jpg" alt="런해뜨(런던 해뜨는민박). 할인 : 11월 11일 ~ 2월 28일 : 뮤지컬 일등석 티켓 선착순 50명에게 50% 할인" /></a>
+					</li>
+					<li>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=1547')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room3.jpg" alt="런던 킹스크로스 KX HOUSE. 파티 : 11월 20일 ~ 3월 31일 : 맥주파티(주 2회), 선물 :11월 20일 ~ 3월 31일 : 3인이상 가족이 4박이상 예약시 과자, 과일, 음료수 세트 제공 " /></a>
+					</li>
+					<li>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=2168')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room4.jpg" alt="런던 워터루민박. 파티: 11월 15일 ~ 1월 31일 : 3박이상 숙박시 삼겹살 파티 (수, 토요일), 선물 : 11월 15일 ~ 1월 31일 : 3박이상 숙박시 무료 야경투어" /></a>
+					</li>
+					<li>
+						<span id="event_barcelona" class="scroll-pos"></span>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=5603')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room5.jpg" alt="바르셀로나 와인하우스. 선물: 12월 20일 ~ 12월 25일 : 체크인 하시는 분에게 와인 1병 제공 " /></a>
+					</li>
+					<li>
+						<span id="event_berlin" class="scroll-pos"></span>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=6647')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room6.jpg" alt="베를린 에비뉴하우스. 선물 : 1월 1일 : 새해맞이 떡국(조식)" /></a>
+					</li>
+					<li>
+						<a href="javascript:MoveGet(http://www.theminda.com/main/view.php?goodsno=6655')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room7.jpg" alt="베를린 미테하우스. 선물 : 1월 1일 : 새해맞이 떡국(조식) 12월 15일 ~ 1월 15일 : 1박당 맥주 1병씩 제공,할인 : 12월 15일 ~ 1월 15일 : 숙박비 10% (현지지불금액) 할인" /></a>
+					</li>
+					<li>
+						<span id="event_osaka" class="scroll-pos"></span>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=5295')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room8.jpg" alt="오사카 구름(9room)하우스. 선물 :  12월 15일 ~ 1월 15일 : 숙박비 10% (현지지불금액)" /></a>
+					</li>
+					<li>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=5893')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room9.jpg" alt="오사카 구름(9room)하우스 2. 선물 : 12월 1일 ~ 12월 31일 : 해당기간에 투숙시 포켓 와이파이 대여" /></a>
+					</li>
+					<li>
+						<span id="event_busan" class="scroll-pos"></span>
+						<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=3468')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room10.jpg" alt="부산 스토리 게스트하우스. 파티 : 11월 11일 ~ 12월 31일 : 달파티, 치맥파티" /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--// 2016-11-25 event banner area -->
+	</div>
+	<!-- //wrap -->
+	<script>
+	jQuery(function($) {
+		var w = $(window);
+		var wW = w.width();
+		var cW = $('#top').width();
+
+		var swiper = new Swiper('.main-container', {
+			pagination: '.main-pagination',
+			paginationClickable: true,
+			calculateHeight:true,
+			loop:true,
+			autoHeight:true,
+			paginationBulletRender: function (index, className) {
+				if(index===0){
+					return '<span class="' + className + '">숙소</span>';
+				}else if(index===1){
+					return '<span class="' + className + '">스팟 </span>';
+				}else if(index===2){
+					return '<span class="' + className + '">일정</span>';
+				}
+			},
+		});
+
+		var citySwiper = new Swiper('.city-container', {
+			slidesPerView: 'auto',
+			spaceBetween: 16,
+			loop:true,
+			calculateHeight:true,
+			autoHeight:true,
+			 onSlideChangeEnd: function(sw){
+			// 	console.log(swiper.activeIndex%3)
+			// 	$('.foreign-city-area').find('.list-item-row').hide();
+			// 	$('.foreign-city-area').find('.list-item-row').eq(swiper.activeIndex%3).show();
+				swiper.onResize();
+			 }
+		});
+
+
+		var flagSwiper = new Swiper('.top-flag-area', {
+			slidesPerView: 'auto'
+		});
+		$('.banner-area .icon_close').click(function(){
+			$(this).closest('.banner-area').stop().slideUp(200,function(){
+				swiper.onResize();
+			});
+		})
+		var $event_city =  $('.pop_event .city-wrap');
+		var $pop_event  = $('.pop_event');
+		var event_city_h = $event_city.innerHeight();
+		$pop_event.scroll(function() {
+			var st = $pop_event.scrollTop();
+			 event_city_pos= $('.top-img').height();
+			if(st>event_city_pos){
+				$pop_event.addClass('fixed');
+				$('.event_room_list').css('padding-top', event_city_h);
+			}else{
+				$pop_event.removeClass('fixed');
+				$('.event_room_list').css('padding-top',0)
+			}
+		})
+		var w = $(window);
+		var $body=$('body');
+		var viewBody=$("#container");
+		w.scroll(function(){
+			var startPos=viewBody.offset().top;
+			//var startPos=50;
+			if(w.scrollTop()>startPos){
+				$body.addClass('view_scroll');
+			} else {
+				$body.removeClass('view_scroll');
+			}
+		});
+	});
+	</script>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

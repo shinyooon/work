@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css?v2">
+	<!-- <link rel="stylesheet" href="css/tour.css"> -->
+
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		html, body {background-color:#eeeff4;}
+	</style>
+</head>
+
+<body class="master">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content tour-wrap tour-form-wrap">
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="tour-form-step clearfix"><!-- 2017-02-24 클래스 추가 -->
+						<div class="top-btn"><a href=""><span class="spr_arr_l"></span>저장 후 목록으로</a></div>
+						<ul class="tit-step row">
+							<li class="li1 active"><a href="">기본정보</a></li>
+							<li class="li2"><a href="">사진/코스</a></li>
+							<li class="li3"><a href="">요금</a></li>
+							<!-- <li><a href="">행사관리</a></li> -->
+							<li class="li4"><a href="">예약규정</a></li>
+						</ul>
+						<div><!-- 2017-02-24 클래스 삭제 -->
+							<div class="input-area">
+								<label for="sel-state" class="label-tit">운영상태</label>
+								<select id="sel-state" class="form-control-basic wid-sm d_iblock" title="운영상태 선택">
+									<option value="">판매중</option>
+									<option value="">판매중지</option>
+								</select>
+								<button type="button" class="btn btn-sm btn-check">확인</button><!-- 2017-02-24 클래스 삭제 -->
+							</div>
+							<!-- 2017-09-18 add-->
+							<div class="input-area pt0">
+								<button type="button" class="btn btn-block btn-sm btn-check">미리보기</button><!-- 2017-02-24 클래스 삭제 -->
+							</div>
+						</div>
+						<!-- 2017-03-30 add -->
+						<div class="btm-btn"><a href=""><span class="spr_arr_l blk"></span>저장하지 않고<br />목록으로</a></div>
+						<!--2017-03-30 삭제 <div class="copyright">
+							<p>Copyright &copy; theminda.com <br/ >All rights reserved. 1661-2892</p>
+						</div> -->
+					</div>
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<!-- 2017-03-30 add -->
+						<div class="pa40 bg_wh pt0">
+							<h3 class="sub_title mt0">
+								투어의 유형을 선택해주세요
+							</h3>
+							<div class="bx-bubble right">
+								<span class="icon_info3 mb5">안내</span>
+								<p class="txt">투어의 유형에 따라<br /> 선택해주세요.<br /> 유형에 대한 궁금증은<br /> <button class="no_style color_sky deco_line" onclick="$('.tour-help-modal').modal();">‘도움말보기’</button>를 클릭 해주세요.</p>
+							</div>
+							<div class="modal fade tour-help-modal" tabindex="-1" role="dialog">
+								<div class="modal-dialog" style="width:720px" >
+									<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+									<h1>숙소추가 신청 내역 조회</h1>
+									<div class="pa30">
+										<div class="tour-apply mt0">
+											<div class="tour_guide bg_wh mb30">
+												<dl>
+													<dt>민박투어</dt>
+													<dd>민박투어는 현지에서 숙소를 운영하고 계신 사장님들이 현지정보를 알려주고 여행자들이 현지체험을<br />할 수 있는 투어입니다.<br /> 단, 숙소를 운영하고 계신 경우에만 등록, 판매가 가능합니다.</dd>
+												</dl>
+											</div>
+											<div class="tour_guide bg_wh mb30">
+												<dl>
+													<dt>가이드투어</dt>
+													<dd>가이드투어는 전문 지식가이드와 함께 단체로 유명 여행지, 유적지, 박물관, 미술관 등을 보고 듣는 투어입니다.<br /> 단, 현지에서 정식 허가를 받은 투어 회사만 등록, 판매가 가능합니다.</dd>
+												</dl>
+											</div>
+											<div class="bx pa30 tour_guide">
+												<dl>
+													<dt>민다에서 판매할 수 있는 가이드투어의 기준</dt>
+													<dd>민다는 여행자들에게 더 신뢰받고, 더 안전하고, 더 가치 있는 투어를 제공하기 위해 기준을 마련하였습니다.<br /> 가이드투어 상품을 등록하기 전에 기준을 반드시 확인하신 후 정산계좌와 증명서를 등록해주시기 바랍니다.<br /> 첨부하신 증명서와 증명서 이름은 여행자들이 확인할 수 있으므로 신중하게 등록해주세요.</dd>
+													<dd>
+														<ul class="lst_num_style mt30">
+															<li>현지에서 정식 허가를 받은 투어 회사</li>
+															<li>현지 법에 위배되지 않고 여행자의 안전을 보장하는 상품</li>
+															<li>여행자에게 가치 있는 경험을 제공하는 전문 가이드 </li>
+														</ul>
+													</dd>
+												</dl>
+												<p class="txt color_red">※위의 기준에 부합하지 않는 경우 가이드투어 상품 등록이 제한될 수 있음을 알려드립니다</p>
+											</div>
+										</div>
+										<div class="text-center mt30">
+											<button type="button" class="btn bg_dark_grey btn-lg w110">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only">투어 유형 선택 양식</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<!-- 투어 동의 후 증명서 등록 했을 때 -->
+									<tr>
+										<th>투어 유형</th>
+										<td>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="rdio_tour1" id="rdio_tour_type1" disabled="disabled"> <label for="rdio_tour_type1">민박투어</label> </div>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="rdio_tour1" id="rdio_tour_type2" checked="checked" disabled="disabled"> <label for="rdio_tour_type2">가이드투어</label> </div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<div class="full-txt-area">
+												<p class="txt fs13">가이드투어는 현지에서 정식 허가를 받은 투어 회사가 진행할 수 있습니다.<br /><span class="color_red">정식 허가를 받지 않아 여행자에게 피해가 발생하는 경우 투어 회사에 책임</span>이 있습니다.<br /> 첨부하신 증명서와 증명서 이름은 여행자들이 확인할 수 있으므로 신중하게 등록해주세요. </p>
+												<a href="" class="btn btn-md bg_light_blue">증명서 추가/수정하기</a>
+											</div>
+										</td>
+									</tr>
+									<!-- 숙소, 투어 동의 후 증명서 등록 안 했을 때 -->
+									<tr>
+										<th>투어 유형</th>
+										<td>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="rdio_tour2" id="rdio_tour_type3" checked="checked" disabled="disabled"> <label for="rdio_tour_type3">민박투어</label> </div>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="rdio_tour2" id="rdio_tour_type4" disabled="disabled" > <label for="rdio_tour_type4">가이드투어</label> </div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<div class="full-txt-area">
+												<p class="txt fs13">가이드투어 등록을 원하시면 증명서를 추가해주세요.</p>
+												<a href="" class="btn btn-md bg_light_blue">증명서 추가하기</a>
+											</div>
+										</td>
+									</tr>
+									<!-- 숙소, 투어 동의 후 증명서 등록 했을 때 -->
+									<tr>
+										<th>투어 유형</th>
+										<td>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="rdio_tour3" id="rdio_tour_type5" > <label for="rdio_tour_type5">민박투어</label> </div>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="rdio_tour3" id="rdio_tour_type6"> <label for="rdio_tour_type6">가이드투어</label> </div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<div class="full-txt-area">
+												<p class="txt fs13">가이드투어는 현지에서 정식 허가를 받은 투어 회사가 진행할 수 있습니다.<br /><span class="color_red">정식 허가를 받지 않아 여행자에게 피해가 발생하는 경우 투어 회사에 책임</span>이 있습니다.<br /> 첨부하신 증명서와 증명서 이름은 여행자들이 확인할 수 있으므로 신중하게 등록해주세요. </p>
+												<a href="" class="btn btn-md bg_light_blue">증명서 추가/수정하기</a>
+											</div>
+										</td>
+									</tr>
+									<!-- 증명서를 관리자가 확인했을 때 -->
+									<tr>
+										<th>투어 유형</th>
+										<!-- 투어 동의 후 증명서 등록 했을 때 -->
+										<td>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="" id="rdio_tour_type7" disabled="disabled"> <label for="rdio_tour_type7">민박투어</label> </div>
+											<div class="chk-wrap default d_iblock"> <input type="radio" name="" id="rdio_tour_type8" checked="checked" disabled="disabled"> <label for="rdio_tour_type8">가이드투어</label> </div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<div class="full-txt-area">
+												<p class="txt fs13">가이드투어는 현지에서 정식 허가를 받은 투어 회사가 진행할 수 있습니다.<br /><span class="color_red">정식 허가를 받지 않아 여행자에게 피해가 발생하는 경우 투어 회사에 책임</span>이 있습니다.<br /> 증명서를 관리자가 확인한 후에 수정/추가하려면 ‘투어 > 파트너 지원 > <a href="" class="deco_line color_blk">1:1문의’</a>로 접수해 주세요. </p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pa40 bg_wh pt0">
+							<h3 class="sub_title mt0">
+								투어의 기본정보를 알려주세요<!-- 2017-02-24 수정-->
+							</h3>
+							<div class="bx-bubble right">
+								<span class="icon_info3 mb5">안내</span>
+								<p class="txt">기본정보를 입력<br />해주세요.<br />여행자가 검색할 때 <br />중요한 기준이 됩니다.</p>
+							</div>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only">상품등록 기본 정보 입력 양식</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>상품명 <b class="color_red">*</b></th>
+										<td><input type="text" class="form-control-basic" title="상품명" placeholder="투어의 이름을 알려주세요." /></td>
+									</tr>
+									<!-- <tr>
+										<th>상품유형 <b class="color_red">*</b></th>
+										<td>
+											<select class="form-control-basic wid_sm" title="상품유형 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">현지투어</option>
+												<option value="">교통/입장권</option>
+												<option value="">체험/액티비티</option>
+											</select>
+										</td>
+									</tr> -->
+									<tr>
+										<th>출발도시 <b class="color_red">*</b></th>
+										<td>
+											<select class="form-control-basic wid_sm" title="대륙선택">
+												<option value="">선택</option>
+											</select>
+											<select class="form-control-basic wid_sm ml5 mt0" title="국가선택">
+												<option value="">선택</option>
+											</select>
+											<select class="form-control-basic wid_sm ml5 mt0" title="도시선택">
+												<option value="">선택</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>최대예약인원<b class="color_red">*</b></th>
+										<td>
+											<input type="text" class="form-control-basic wid_lg" title="이동수단 입력" placeholder="일별로 몇 명까지 예약 가능한가요?">
+											<span class="form-control-static">명</span>
+										</td>
+									</tr>
+									<tr>
+										<th>소요시간 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" class="form-control-basic  wid_sm" title="소요시간" placeholder="얼마나 소요되나요?" />
+											<select class="form-control-basic wid_sm ml5 mt0" title="시간 단위 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">시간</option>
+												<option value="">일</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>이동수단 <b class="color_red">*</b></th>
+										<td><input type="text" class="form-control-basic wid_lg" title="이동수단 입력" placeholder="이동수단(버스,도보,대중교통 등)을 알려주세요."></td>
+									</tr>
+									<tr>
+										<th>투어태그 <b class="color_red">*</b></th>
+										<td class="pr">
+											<div class="bx-bubble right">
+												<span class="icon_info3 mb5">안내</span>
+												<p class="txt"><span class="color_sky">이 투어의 가장 큰 <br /> 특징</span>을 여행자들이 <br /> 알아 볼 수 있게 태그를 <br /> 선택해주세요. </p>
+											</div>
+											<div class="chk-list-area">
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag1"> <label for="chk_tour_tag1">주요명소</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag2"> <label for="chk_tour_tag2">근교</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag3"> <label for="chk_tour_tag3">쇼핑</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag4"> <label for="chk_tour_tag4">골목</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag5"> <label for="chk_tour_tag5">맛집</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag6"> <label for="chk_tour_tag6">자전거</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag7"> <label for="chk_tour_tag7">워킹</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag8"> <label for="chk_tour_tag8">와인</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag9"> <label for="chk_tour_tag9">미술관</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag10"> <label for="chk_tour_tag10">와이너리</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag11"> <label for="chk_tour_tag11">시내투어</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag12"> <label for="chk_tour_tag12">스냅</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag13"> <label for="chk_tour_tag13">집중투어</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag14"> <label for="chk_tour_tag14">야경</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag15"> <label for="chk_tour_tag15">랜드마크</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag16"> <label for="chk_tour_tag16">교통권</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag17"> <label for="chk_tour_tag17">랜드마크</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag18"> <label for="chk_tour_tag18">핵심투어</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag19"> <label for="chk_tour_tag19">반일투어</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag20"> <label for="chk_tour_tag20">소수정예</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag21"> <label for="chk_tour_tag21">한인투어</label> </div>
+												<div class="chk-wrap default d_iblock"> <input type="checkbox" name="" id="chk_tour_tag22"> <label for="chk_tour_tag22">단독투어</label> </div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>투어소개 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="투어소개" placeholder="이 투어의 소개와 장점을 알려주세요."></textarea></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pa40 bg_wh">
+							<h3 class="sub_title mt0">
+								여행자들과 만날 장소에 대해 알려주세요
+							</h3>
+							<div class="bx-bubble right">
+								<span class="icon_info3 mb5">안내</span>
+								<p class="txt">여행자가 투어를 하기 <br /> 위해 <span class="color_sky">꼭 알아야 할 <br /> 내용을 알려주세요.</span><br /> 상세하게 적을수록 <br /> 여행자가 투어에 대한 <br /> 준비를 쉽게 할 수 <br /> 있습니다.</p>
+							</div>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only">상품등록 미팅정보 입력 양식</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>장소설명 <b class="color_red">*</b></th>
+										<td><textarea name="include" class="form-control-basic" rows="5" title="장소설명" placeholder="만나는 장소로 여행자들이 어떻게 갈 수 있는지 알려주세요."></textarea></td>
+									</tr>
+									<tr>
+										<th>출발시간 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" maxlength="50" name="meet_time" class="form-control-basic wid_lg" title="출발시간" placeholder="투어가 출발하는 시간을 알려주세요.">
+											<!-- <select class="form-control-basic wid_sm" title="시간 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">00</option>
+												<option value="">01</option>
+												<option value="">02</option>
+												<option value="">03</option>
+												<option value="">04</option>
+												<option value="">05</option>
+												<option value="">06</option>
+												<option value="">07</option>
+												<option value="">08</option>
+												<option value="">09</option>
+												<option value="">10</option>
+												<option value="">11</option>
+												<option value="">12</option>
+												<option value="">13</option>
+												<option value="">14</option>
+												<option value="">15</option>
+												<option value="">16</option>
+												<option value="">17</option>
+												<option value="">18</option>
+												<option value="">19</option>
+												<option value="">20</option>
+												<option value="">21</option>
+												<option value="">22</option>
+												<option value="">23</option>
+											</select>
+											<span class="form-control-static">시</span>
+											<select class="form-control-basic wid_sm ml5 mt0" title="분 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">00</option>
+												<option value="">10</option>
+												<option value="">20</option>
+												<option value="">30</option>
+												<option value="">40</option>
+												<option value="">50</option>
+											</select>
+											<span class="form-control-static">분</span> -->
+										</td>
+									</tr>
+									<tr>
+										<th class="no_bor">주소<b class="color_red">*</b></th>
+										<td class="no_bor">
+											<input type="text" class="form-control-basic" title="만나는 장소 입력" placeholder="만나는 장소명 또는 주소를 검색하세요. (한글/영어 가능)">
+											<!-- <button class="btn bg_dark_grey wid_xs ml5">검색</button>
+											<p class="fs12">아래 지도에 출발위치의 정확한 위치에 마커를 지정해주세요.</p> -->
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="no_bor pr0 pt2">
+											<div class="map-area">
+												<p>지도가 들어갈곳 / SIZE 990 X 320</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>장소사진<span class="color_mint">(선택)</span></th>
+										<td>
+											<div class="file-control">
+												<label for="meet_spot" class="label_file">
+													<input type="file" name="" id="meet_spot" class="sr-only" />
+													<span class="inner-area img-center"><span class="icon_plus_md">사진추가하기</span></span>
+												</label>
+												<!-- 썸네일 이미지 선택된 이미지가 들어갈곳
+												<div class="img-area"><img class="img-center" src="http://www.theminda.com/data/travel/image/middle/201609/1473150616_0.jpg" /></div> -->
+												<label class="inline-checkbox basic chk_label" for="del_chk">
+													<input type="checkbox" title="파일 선택" id="del_chk">
+													<span class="sr-only">선택 파일 삭제</span>
+												</label>
+											</div>
+											<button class="btn bg_dark_grey wid_xs ml5">삭제</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pa40 bg_wh pb0">
+							<h3 class="sub_title mt0">
+								여행자가 알아야 할 이 투어의 안내사항을 알려주세요
+							</h3>
+							<table class="tb_input tb_fixed">
+								<caption class="sr-only"> 안내사항 입력 양식</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>포함사항 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="포함사항" placeholder="투어 예약 시 요금에 포함 된 사항(입장권, 교통비, 식사비 등)을 알려주세요."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>불포함사항 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="불포함사항" placeholder="투어 시 여행자가 별도로 준비해야 할 사항(교통비, 식사비, 대여비 등)을 알려주세요."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>공지사항 <b class="color_red">*</b></th>
+										<td><textarea class="form-control-basic" rows="8" title="공지사항" placeholder="투어 시 여행자가 유의해야할 사항에 대해 알려주세요."></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2017-04-12 수정-->
+						<div class="btm-btn-area text-right btn-justify pr">
+							<div class="tooltip tooltip_alone top" role="tooltip">
+								<div class="tooltip-arrow"></div>
+								<div class="tooltip-inner" style="width:230px"><span>$구분명$</span>이(가) 입력되지 않습니다.<br>입력 후 다시 저장해주시기 바랍니다.</div>
+							</div>
+							<button type="button" class="btn bg_org btn-lg has-tooltip">다음</button>
+							<!-- <button type="button" class="btn bg_dark_grey btn-lg ml5 has-tooltip">등록요청</button> -->
+						</div>
+						<!--// 2016-12-02 수정-->
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			});
+
+		// 2016-12-02 수정
+		$('.has-tooltip').click(function(){
+			var pos_x = $(this).offset().left - $(this).closest('.btn-justify').offset().left-450;
+			var $tooltip = $(this).siblings('.tooltip');
+			var tooltip_w =$tooltip.width();
+			$tooltip.css({
+				display : 'block',
+				left : '50%',
+				'margin-left':-(tooltip_w/2)+pos_x
+			});
+		})
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

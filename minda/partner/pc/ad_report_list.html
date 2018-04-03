@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100">
+    <title> 민다(민박다나와) 파트너홈 </title>
+    <!-- 기존 css -->
+    <link rel="stylesheet" href="/manager/style.css">
+    <link rel="stylesheet" href="/manager/layout.css">
+    <link rel="stylesheet" href="/manager/ui.css">
+    <link rel="stylesheet" href="/manager/css/font.css">
+    <!-- css -->
+    <link rel="stylesheet" href="/manager/common/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/manager/common/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="/manager/common/css/slider.css">
+    <link rel="stylesheet" href="/manager/common/css/daterangepicker.css">
+    <link rel="stylesheet" href="/manager/common/css/nanoscroller.css">
+    <link rel="stylesheet" href="/manager/common/css/common.css">
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <link rel="stylesheet" href="/manager/common/css/admin.css">
+    <script src="/manager/jquery.js"></script>
+    <!-- js -->
+    <!--[if lt IE 9]>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/manager/common.js"></script>
+    <script src="/lib/js/common.js"></script>
+    <script src="/lib/js/chkForm.js"></script>
+    <script src="/lib/js/selectCategory.js"></script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+
+<body class="master">
+<!-- [D] 숙소주홈 class="master" -->
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+    <!-- header -->
+    <header id="hd">
+        <div class="hd_top">
+            <div class="clearfix">
+                <!--h1 class="logo"><a href="/manager/"><img src="/manager/common/img/logo_big.png" alt="민다(민박다나와) 파트너홈"></a></h1-->
+                <h1 class="logo"><a href="/manager/index.php"><img src="/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+                <!--2016-11-29 yuna nav 위치 수정, 클래스 추가 -->
+                <nav class="d_iblock nav-center">
+                    <ul class="clearfix">
+                        <li><a href="/manager/main/index.php" class="active">숙소</a></li>
+                        <li><a href="/manager/tg/index.php">트립</a></li>
+                        <li><a href="/manager/travel/index.php">정보</a></li>
+                    </ul>
+                </nav>
+                <div class="hd_side">
+                    <!--2016-08-31 yuna 공지사항 주석 -->
+                    <!-- <a href="/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+                    <span class="account">런던 킹스크로스 KX HOUSE 1호점, 2호점님</span>
+                    <a href="/manager/manager_edit.php?actionFlag=M" class="btn">정보수정</a>
+                    <a href="/member/logout.php?url=%2Fmanager%2Findex.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+                    <a href="/main/view.php?goodsno=1547" class="btn link-go" target="_blank"><span class="icon_house_org mr5"></span>숙소 바로가기</a>
+                </div>
+            </div>
+        </div>
+        <div class="hd_gnb clearfix w1260">
+            <nav class="pull-left">
+                <ul class="gnb clearfix">
+                    <li><a href="/manager/main/index.php">홈</a></li>
+                    <li><a href="/manager/booking/calendar.php">예약캘린더</a></li>
+                    <li><a href="/manager/booking/index.php">예약관리</a></li>
+                    <li><a href="/manager/room/index.php">객실관리</a></li>
+                    <li><a href="/manager/mypage/room_edit.php">정보관리</a></li>
+                    <li><a href="/manager/board/qna.php">게시물관리</a></li>
+                    <li><a href="/manager/stats/index.php">통계/정산</a></li>
+                    <li><a href="/manager/ad/index.php" class="active">광고관리</a></li>
+                    <li><a href="/manager/cs/qna.php">파트너 지원</a></li>
+                </ul>
+            </nav>
+            <div class="hd_myinfo pull-right">
+                <div>
+                    <span class="res_rule">예약규정 :일반A(10% 예약과 동시에 확정)</span>
+                    <div class="bizmoney-area"><a href="/manager/mypage/bizmoney.php"><i class="icon_money"></i>비즈머니 <span class="color_red">0원</span></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- 페이지시작 -->
+        <div class="w1260 master_ct">
+            <table style="width:1262px;height:100%;padding:0;margin:0;text-algin:center;">
+                <tr>
+                    <td valign="top" width="178px" style="padding-right:30px" nowrap="">
+                        <aside class="content_aside">
+                            <h2 class="aside_tit">광고</h2>
+                            <nav class="snb snb-lg">
+                                <ul>
+                                    <li>
+
+                                        <a href="info.apply.php">광고 안내</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="application.php">광고 신청</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="list.bidding.php">광고 입찰 내역</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="list.bidding2.php">광고 입찰 취소</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="rule.php">광고 운영정책</a>
+                                    </li>
+                                    <li class="active">
+
+                                        <a href="rule.php">광고 보고서</a>
+                                    </li>
+                                </ul></nav>
+                        </aside>
+                    </td>
+                    <td valign="top">
+                        <!-- ad-report -->
+                        <div class="ad-report">
+                            <!-- ad-report__srch -->
+                            <div class="body_tit2 ad-report__srch">
+                                <form>
+                                <ul class="row list-top-form">
+                                    <li class="col-xs-6">
+                                        <dl class="tb_bx">
+                                            <dt>광고 유형</dt>
+                                            <dd>
+                                                <span class="input-wrap input-wrap__radio input-wrap__radio--blk">
+                                                    <input type="radio" name="ad-report__input-type" id="ad-report__input-type1" checked="checked">
+                                                    <label class="input-wrap__radio-label1" for="ad-report__input-type1">
+                                                     전체
+                                                    </label>
+                                                </span>
+                                                <span class="input-wrap input-wrap__radio input-wrap__radio--blk">
+                                                    <input type="radio" name="ad-report__input-type" id="ad-report__input-type2">
+                                                    <label class="input-wrap__radio-label2" for="ad-report__input-type2">
+                                                     파워
+                                                    </label>
+                                                </span>
+                                                <span class="input-wrap input-wrap__radio input-wrap__radio--blk">
+                                                    <input type="radio" name="ad-report__input-type" id="ad-report__input-type3">
+                                                    <label class="input-wrap__radio-label3" for="ad-report__input-type3">
+                                                     플러스
+                                                    </label>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-xs-6">
+                                        <dl class="tb_bx">
+                                            <dt>광고 순위</dt>
+                                            <dd>
+                                                <select id="sel-state" class="form-control-basic wid_md" title="광고 순위 선택">
+                                                    <option value="" selected="selected">전체</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                    <option value="">4</option>
+                                                    <option value="">5</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-xs-6">
+                                        <dl class="tb_bx">
+                                            <dt>통계 기간</dt>
+                                            <dd>
+                                                <span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm ad-report__date ad-report__date-start" readonly="readonly" title="통계 기간 검색 시작일"></span>
+                                                <span class="form-control-static">~</span>
+                                                <span class="input-wrap input-cal"><input type="text" class="form-control-basic wid_sm ad-report__date ad-report__date-end" readonly="readonly" title="통계 기간 검색 종료일"></span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-xs-6">
+                                        <dl class="tb_bx">
+                                            <dt>등록일</dt>
+                                            <dd>
+                                                <span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm ad-report__date2 ad-report__date2-start" readonly="readonly" title="광고 등록 검색 시작일"></span>
+                                                <span class="form-control-static">~</span>
+                                                <span class="input-wrap input-cal"><input type="text" class="form-control-basic wid_sm ad-report__date2 ad-report__date2-end" readonly="readonly" title="광고 등록 검색 종료일"></span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-xs-6">
+                                        <dl class="tb_bx">
+                                            <dt>확인 여부</dt>
+                                            <dd>
+                                                <span class="input-wrap input-wrap__radio input-wrap__radio--blk">
+                                                    <input type="radio" name="ad-report__input-check" id="ad-report__input-check1" checked="checked">
+                                                    <label class="input-wrap__radio-label1" for="ad-report__input-check1">
+                                                     전체
+                                                    </label>
+                                                </span>
+                                                <span class="input-wrap input-wrap__radio input-wrap__radio--blk">
+                                                    <input type="radio" name="ad-report__input-check" id="ad-report__input-check2">
+                                                    <label class="input-wrap__radio-label2" for="ad-report__input-check2">
+                                                     확인
+                                                    </label>
+                                                </span>
+                                                <span class="input-wrap input-wrap__radio input-wrap__radio--blk">
+                                                    <input type="radio" name="ad-report__input-check" id="ad-report__input-check3">
+                                                    <label class="input-wrap__radio-label3" for="ad-report__input-check3">
+                                                     미확인
+                                                    </label>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                    <div class="btn-area text-center pb30">
+                                        <button type="button" class="btn bg_dark_grey ad-report__btn-srch">검색</button>
+                                        <button type="reset" class="btn bg_wh ad-report__btn-reset">초기화</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--// ad-report__srch -->
+                            <!-- tour-contents -->
+                            <div class="ad-report__contents">
+                                <div class="tbl-wrap bt0">
+                                    <div class="ad-report__list-top">
+                                        <p class="ad-report__list-top-txt">Total 1,235, Page 1/182</p>
+                                    </div>
+                                    <ul class="list-board2 v2">
+                                        <li class="list-hd">
+                                            <span class="w110">번호</span>
+                                            <span class="w110">광고유형</span>
+                                            <span class="w110">순위</span>
+                                            <span>통계 기간</span>
+                                            <span>등록일</span>
+                                            <span class="w160">확인 여부</span>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">1</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">1</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">2</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">2</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">3</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">1</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">4</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">2</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">5</span>
+                                                <span class="w110">플러스</span>
+                                                <span class="w110">3</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">6</span>
+                                                <span class="w110">플러스</span>
+                                                <span class="w110">2</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">7</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">3</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">8</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">1</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">9</span>
+                                                <span class="w110">파워</span>
+                                                <span class="w110">1</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="w110">10</span>
+                                                <span class="w110">플러스</span>
+                                                <span class="w110">2</span>
+                                                <span>2017-12-05 ~ 2017-01-05</span>
+                                                <span>2017-11-18 17:20:35</span>
+                                                <span class="w160">확인</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ad-report__list-pagination text-center">
+                                    <ul class="pagination">
+                                        <li class="prev"><a href="">이전페이지목록보기</a></li>
+                                        <li><a href="">1</a></li>
+                                        <li><a href="" class="active">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><a href="">4</a></li>
+                                        <li class="next"><a href="">다음페이지목록보기</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--// tour-contents -->
+                        </div>
+                        <!--// ad-report -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer 2016-10-28 수정 -->
+    <div id="ft">
+        <p class="d_iblock">Copyright &copy; <a href="http://www.theminda.com" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1661-2892)</p>
+        <!-- <a href="../cs/ruleminbak.php" class="split">숙소주 이용약관</a>
+            <a href="../ad/adrule.php" class="split">숙소주 광고이용약관</a> -->
+    </div>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<!--[if lt IE 9]>
+<script src="/manager/common/js/jquery.placeholder.js"></script>
+<script src="/manager/common/js/html5.js"></script>
+<script src="/manager/common/js/ie9.js"></script>
+<![endif]-->
+<script src="/manager/common/js/bootstrap-slider.js"></script>
+<script src="/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="/manager/common/js/moment.min.js"></script>
+<script src="/manager/common/js/daterangepicker.js"></script>
+<script src="/manager/common/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/manager/common/js/common.js"></script>
+<script>
+    $j(function(){
+        var $body = $j('body');
+
+        // input
+        $body
+        .on({
+            'show.daterangepicker': function(ev, picker) {
+                $j('.input-cal').removeClass('active');
+                $j(this).closest('.input-cal').addClass('active');
+            },
+            'hide.daterangepicker': function(ev, picker) {
+                $j('.input-cal').removeClass('active');
+            }
+        }, '.input-cal input');
+
+        var startDate, endDate;
+        $j('.ad-report__date').daterangepicker({
+            autoUpdateInput: false,
+            startDate: startDate,
+            endDate: endDate,
+            minDate: false,
+            maxDate: false,
+            autoApply: true,
+            parentEl: '.ad-report__srch',
+            opens: 'right',
+            locale: {
+                "format": "YYYY-MM-DD",
+                "daysOfWeek": [
+                    "일",
+                    "월",
+                    "화",
+                    "수",
+                    "목",
+                    "금",
+                    "토"
+                ],
+                "monthNames": [
+                    "1월",
+                    "2월",
+                    "3월",
+                    "4월",
+                    "5월",
+                    "6월",
+                    "7월",
+                    "8월",
+                    "9월",
+                    "10월",
+                    "11월",
+                    "12월"
+                ]
+            },
+
+        }, function(startDate, endDate) {
+            $j('.ad-report__date-start').val(startDate.format('YYYY-MM-DD'));
+            $j('.ad-report__date-end').val(endDate.format('YYYY-MM-DD'));
+
+        });
+
+        $j('.ad-report__date2').daterangepicker({
+            autoUpdateInput: false,
+            startDate: startDate,
+            endDate: endDate,
+            minDate: false,
+            maxDate: false,
+            autoApply: true,
+            parentEl: '.ad-report__srch',
+            opens: 'left',
+            locale: {
+                "format": "YYYY-MM-DD",
+                "daysOfWeek": [
+                    "일",
+                    "월",
+                    "화",
+                    "수",
+                    "목",
+                    "금",
+                    "토"
+                ],
+                "monthNames": [
+                    "1월",
+                    "2월",
+                    "3월",
+                    "4월",
+                    "5월",
+                    "6월",
+                    "7월",
+                    "8월",
+                    "9월",
+                    "10월",
+                    "11월",
+                    "12월"
+                ]
+            },
+
+        }, function(startDate, endDate) {
+            $j('.ad-report__date2-start').val(startDate.format('YYYY-MM-DD'));
+            $j('.ad-report__date2-end').val(endDate.format('YYYY-MM-DD'));
+
+        });
+
+    })
+</script>
+</body>
+
+</html>

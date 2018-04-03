@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D] 하단에 픽스되는 버튼이 있는 페이지 class="page_fix" -->
+<body class="page_fix">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<h1><small>도미토리</small><span>남성전용 미토리룸</span></h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+
+<!-- 숙소 슬라이드 -->
+<div class="room_detail_hd">
+	<div class="swiper-container">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+			<li class="swiper-slide"><img class="img-responsive" src="_temp/tmb2.jpg" alt=""></li>
+		</ul>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</div>
+</div>
+<!-- //숙소 슬라이드 -->
+
+<!-- 숙소설명 -->
+<div class="cnt_bx">
+	<dl class="dl_dot">
+		<dt>객실정원</dt>
+		<dd>1~5명</dd>
+		<dt>최소예약</dt>
+		<dd>2박 이상</dd>
+		<dt>시설</dt>
+		<dd>컴퓨터, TV, 에어컨, 냉장고, 테이블</dd>
+	</dl>
+	<hr class="hr">
+	<ul>
+		<li>2층침대 4개</li>
+		<li>싱글침대 2개 </li>
+		<li>WIFI 가능 </li>
+		<li>(성수기/비수기에 따라 침대 구성은 유동적이며 사진은 곧 업데이트 될 예정입니다)</li>
+	</ul>
+</div>
+
+<!-- 하단고정버튼 -->
+<div class="btm_fixed row room_fix_btn">
+	<span class="col-xs-3"><button type="button" class="btn btn-xl btn-block bg_dark_grey" data-toggle="modal" data-target="#mdShare"><i class="icon_link"></i>공유</button></span>
+	<span class="col-xs-3"><button type="button" class="btn btn-xl btn-block bg_dark_grey"><i class="icon_wish"></i>담기</button></span>
+	<span class="col-xs-6"><button type="button" class="btn btn-xl btn-block bg_mint">즉시예약</button></span>
+</div>
+
+<script>
+jQuery(function($){
+	// slider
+    var swiper = new Swiper('.room_detail_hd .swiper-container', {
+        nextButton: '.room_detail_hd .swiper-button-next',
+		prevButton: '.room_detail_hd .swiper-button-prev',
+        pagination: '.room_detail_hd .swiper-pagination',
+		paginationType: 'fraction'
+    });
+});
+</script>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+
+</div>
+<!-- //wrap -->
+
+<!-- modal : share -->
+<div id="mdShare" class="modal fade share_pop" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="text-center pa10">
+			<div class="mb20">
+				<a class="icon_sns_fb" href="#">페이스북</a>
+				<a class="icon_sns_tw" href="#">트위터</a>
+				<a class="icon_sns_kakao" href="#">카카오톡</a>
+				<a class="icon_sns_url" href="#">URL</a>
+			</div>
+			<button type="button" class="btn btn-default bg_silver btn-block btn-xl" data-dismiss="modal" aria-label="Close">취소</button>
+		</div>
+	</div>
+</div>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,707 @@
+<!--head -->
+<? include "inc/head.html" ?>
+<script type="text/javascript">
+    $(function(){
+        navCtrl(5);
+    })
+</script>
+<!--head -->
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+			<!-- nav -->
+			<? include "inc/nav.html" ?>
+			<!--// nav -->
+			<h1>여행사 예약관리 홈</h1>
+			<div class="tab-content">
+				<!-- 자동발송메일 filelist -->
+				<div class="tbl-wrap mt20" id="admin">
+					<table class="tb_fixed tb-filelist text-center">
+						<col style="width:3%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:7%">
+						<col style="width:5%">
+						<col style="width:17%">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>1depth</th>
+								<th>2depth</th>
+								<th>3depth</th>
+								<th>4depth</th>
+								<th>5depth</th>
+								<th>파일명</th>
+								<th>최종수정일</th>
+								<th>작업자</th>
+								<th>상태</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>메인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/index.html">index.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>정보 입력</td>
+								<td>숙소선택 전</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_form.html">rev_form.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>정보 입력</td>
+								<td>숙소 선택 후</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_form2.html">rev_form2.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>[팝업] 담당자추가등록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_charge_form.html">pop_charge_form.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>[팝업] 취소환불규정보기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_cancel_rule.html">pop_cancel_rule.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>[팝업] 요청사항 보기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_request.html">pop_request.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>숙소예약방식 선택</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_select.html">pop_room_select.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>민다추천받기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_recom.html">pop_room_recom.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>도시선택</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_city.html">pop_room_city.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>숙소목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_srch.html">pop_room_srch.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>숙소검색결과</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_srch2.html">pop_room_srch2.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>숙소상세</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_view.html">pop_room_view.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>숙소상세</td>
+								<td>예약체결 전</td>
+								<td><a class="link" target="_blank" href="agency/pop_room_view2.html">pop_room_view2.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>숙소상세</td>
+								<td>[팝업] 객실상세</td>
+								<td><a class="link" target="_blank" href="agency/pop_room_detail.html">pop_room_detail.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약신청</td>
+								<td>숙소선택</td>
+								<td>직접예약하기</td>
+								<td>숙소상세</td>
+								<td>[팝업] 객실 예약캘린더</td>
+								<td><a class="link" target="_blank" href="agency/pop_room_cal.html">pop_room_cal.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_list.html">rev_manage_list.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>목록</td>
+								<td>[팝업]인보이스</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_invoice.html">pop_invoice.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약대기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view.html">rev_manage_view.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약진행(인보이스)</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view2.html">rev_manage_view2.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약진행(인보이스)</td>
+								<td>[팝업]숙소정보보기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_room_info.html">pop_room_info.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약진행(인보이스)</td>
+								<td>[팝업]인보이스 요청</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_invoice_form.html">pop_invoice_form.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약진행(인보이스)</td>
+								<td>[팝업] 개인정보 제3자제공동의 보기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_privacy.html">pop_privacy.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약진행</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view3.html">rev_manage_view3.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>확정요청</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view4.html">rev_manage_view4.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>입금대기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view5.html">rev_manage_view5.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>입금대기</td>
+								<td>[팝업]바우처 인쇄</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_voucher.html">pop_voucher.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<!-- <tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>입금대기</td>
+								<td>[팝업]인보이스</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/"></a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr> -->
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>결제완료</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view6.html">rev_manage_view6.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약취소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view7.html">rev_manage_view7.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>결제취소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_view8.html">rev_manage_view8.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약상세정보</td>
+								<td>입금대기, 예약완료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_detail.html">rev_manage_detail.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약상세정보</td>
+								<td>예약대기,예약가능, 확정요청상태</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_detail4.html">rev_manage_detail4.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약상세정보</td>
+								<td>예약취소</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_detail3.html">rev_manage_detail3.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>예약목록</td>
+								<td>예약상세정보</td>
+								<td>결제취소</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/rev_manage_detail2.html">rev_manage_detail2.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>정보/통계관리</td>
+								<td>여행사 정보관리</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/edit.html">edit.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>정보/통계관리</td>
+								<td>비즈머니 조회</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/biz.html">biz.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>정보/통계관리</td>
+								<td>할인쿠폰 조회</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/coupon.html">coupon.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>정보/통계관리</td>
+								<td>예약 통계</td>
+								<td>월별</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/stats_month.html">stats_month.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>정보/통계관리</td>
+								<td>예약 통계</td>
+								<td>일별</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/stats_day.html">stats_day.html</a></td>
+								<td>2017-09-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>공지사항</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/notice_list.html">notice_list.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>공지사항</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/notice_view.html">notice_view.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>자주하는 질문</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/faq_list.html">faq_list.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>자주하는 질문</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/faq_view.html">faq_view.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>1:1문의</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/1to1_list.html">1to1_list.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>1:1문의</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/1to1_view.html">1to1_view.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>1:1문의</td>
+								<td>입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/1to1_form.html">1to1_form.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>멤버십안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/membership.html">membership.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>여행사 이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/agency_term.html">agency_term.html</a></td>
+								<td>2017-09-04</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>로그인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/login.html">login.html</a></td>
+								<td>2017-10-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>로그인</td>
+								<td>[팝업]아이디/비밀번호 찾기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/pop_find_id.html">pop_find_id.html</a></td>
+								<td>2017-11-28</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/join_term.html">join_term.html</a></td>
+								<td>2017-10-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>이용약관</td>
+								<td>민다 개인정보 수집 및 이용 전체보기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/join_privacy.html">join_privacy.html</a></td>
+								<td>2017-10-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>정보입력</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/join_form.html">join_form.html</a></td>
+								<td>2017-10-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>가입완료</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="agency/join_finish.html">join_finish.html</a></td>
+								<td>2017-10-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--// 관리자 filelist -->
+			</div>
+		</div>
+	</div>
+	<!-- script -->
+	<? include "inc/script.html" ?>
+	<!--// script -->
+</body>
+</html>

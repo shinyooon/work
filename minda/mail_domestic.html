@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.dev.css">
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+	header {position:fixed;top:0;background:#fff}
+	#wrap {position:relative;padding:20px 0 0 0;}
+	h1 {padding:10px;font-size:25px;}
+	.tb-filelist th, .tb-filelist td {padding:5px;border:1px solid #edeceb;}
+	.tb-filelist tbody td {font-size:13px;}
+	td.ing {color:red;}
+	.link,.link:hover,.link:active,.link:focus{text-decoration:underline;}
+	.tab-content>.tab-pane {display:none;}
+	.tab-content>.tab-pane.active {display:block;}
+	.tab-content {padding-bottom:50px}
+	.state {color:#004fd3;}
+	.state.ing {color:red;}
+	.room_detail_hd [class*=basic_step] {line-height:50px;}
+	.room_detail_hd .basic_step2 li a {font-size:15px;}
+</style>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+			<h1>국내 자동발송메일</h1>
+			<div class="tab-content">
+				<!-- 자동발송메일 filelist -->
+				<div class="tbl-wrap mt20" id="admin">
+					<table class="tb_fixed tb-filelist text-center">
+						<col style="width:3%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:7%">
+						<col style="width:5%">
+						<col style="width:17%">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>1depth</th>
+								<th>2depth</th>
+								<th>3depth</th>
+								<th>4depth</th>
+								<th>5depth</th>
+								<th>파일명</th>
+								<th>최종수정일</th>
+								<th>작업자</th>
+								<th>상태</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>사용자</td>
+								<td>회원가입</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/join.html">join.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p3</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>id/pw찾기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/idpw.html">idpw.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p4</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>휴면안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/dormant.html">dormant.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p5</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>휴면전환안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/dormant2.html">dormant2.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p6</td>
+							</tr>
+							<!-- <tr>
+								<td>사용자</td>
+								<td>회원등급선정안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/grade.html">grade.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p23</td>
+							</tr> -->
+							<tr>
+								<td>사용자</td>
+								<td>생일쿠폰 발급</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/coupon.html">coupon.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p22</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>숙소예약접수</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/rev_receive.html">rev_receive.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p7</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>숙소예약가능</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/possible.html">possible.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p8</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>숙소예약뷸가</td>
+								<td>ex)만실</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/impossible.html">impossible.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p9</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>숙소예약뷸가</td>
+								<td>ex)48시간 응답지연 자동불가</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/impossible2.html">impossible2.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p10</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>미입금 취소</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/cancel_not_paid.html">cancel_not_paid.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p11</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>예약취소</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/cancel.html">cancel.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p12</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>예약확정</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/voucher.html">voucher.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p13</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>환불완료</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/refund.html">refund.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p18</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>리뷰작성+포인트적립</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/point.html">point.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p19</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>No-show처리 안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/noshow.html">noshow.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p26</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>1:1문의 답변 등록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/1to1.html">1to1.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p28</td>
+							</tr>
+							<tr>
+								<td>사용자</td>
+								<td>qna 답변 등록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/cust/qna.html">qna.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p35</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>확정예약취소</td>
+								<td>보상금액 X</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/cancel2.html">cancel2.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p17</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>확정예약취소</td>
+								<td>보상금액 O</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/cancel3.html">cancel3.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p33</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>예약정보변경</td>
+								<td>일정변경</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/rev_change.html">rev_change.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p20</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>예약정보변경</td>
+								<td>예약자정보변경</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/rev_change2.html">rev_change2.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p21</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>대기예약확인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/check_standby.html">check_standby.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p23</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>확정예약확인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/check_fixed.html">check_fixed.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p24</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>No-show 보상액 안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/noshow.html">noshow.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p27</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>예약확정</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/rev_fixed.html">rev_fixed.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p30</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>예약접수</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/rev_receive.html">rev_receive.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p31</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>예약취소</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/cancel.html">cancel.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p32</td>
+							</tr>
+							<!-- <tr>
+								<td>파트너</td>
+								<td>확정예약취소</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/"></a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p38</td>
+							</tr> -->
+							<tr>
+								<td>파트너</td>
+								<td>여행자문의 등록 안내</td>
+								<td>최초작성시</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/qna.html">qna.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p34</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>여행자문의 등록 안내</td>
+								<td>답변지연시</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/qna2.html">qna2.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p25</td>
+							</tr>
+							<tr>
+								<td>파트너</td>
+								<td>1:1문의 답변</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="mail/domestic/partner/1to1.html">1to1.html</a></td>
+								<td>2017-08-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>p29</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--// 관리자 filelist -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.tb-filelist').rowspan (0);
+			$('.tb-filelist').rowspan (1);
+			$('.tb-filelist').rowspan (2);
+			$('.tb-filelist').rowspan (3);
+		})
+		$('.tb-filelist tbody tr').each(function(index){
+			$(this).prepend('<td>'+index+'</td>');
+		});
+		$.fn.rowspan = function(colIdx, isStats) {
+		return this.each(function(){
+		var that;
+		$('tr', this).each(function(row) {
+			$('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {
+				if ($(this).html() != '' && $(this).html() == $(that).html()
+					&& (!isStats
+							|| isStats && $(this).prev().html() == $(that).prev().html()
+							)
+					) {
+					rowspan = $(that).attr("rowspan") || 1;
+					rowspan = Number(rowspan)+1;
+
+					$(that).attr("rowspan",rowspan);
+
+					// do your action for the colspan cell here
+					$(this).hide();
+
+					//$(this).remove();
+					// do your action for the old cell here
+
+				} else {
+					that = this;
+				}
+
+				// set the that if not already set
+				that = (that == null) ? this : that;
+			});
+		});
+	});
+};
+	</script>
+	<!-- lib -->
+	<script src="http://v2.theminda.com/cust/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/cust/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title> MINDA :: 민박다나와 </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/slider.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+</head>
+
+<!-- [D] 닫기만 있는 메뉴 class="page_clse" -->
+<body class="page_clse">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+    <!-- header -->
+    <header id="hd">
+        <h1><a href="/">지도 보기</a></h1>
+        <a class="icon_hd_clse hd-l" href=""></a>
+    </header>
+    <!-- //header -->
+
+    <!-- #container -->
+    <div id="container" class="clearfix">
+
+        <!-- 페이지 시작-->
+
+        <!-- 지도 -->
+        <!-- [D] 아래 배그라운드 이미지는 데모용-->
+        <div id="map" class="map" style=" background:url(_temp/map.jpg) no-repeat 50% -2px; background-size:cover">
+
+            <!-- 지도영역 -->
+
+            <!-- 마크 -->
+            <a class="markerShop active" href="#" style="position:absolute;top:200px;right:100px"></a>
+            <!-- [D] 활성화시 a class="active" -->
+            <a class="markerFood" href="#" style="position:absolute;top:250px;right:100px"></a>
+            <a class="markerArea" href="#" style="position:absolute;top:250px;right:200px"></a>
+            <!-- 사이드컨트롤 -->
+            <div class="control_wrp filter">
+                <!-- 줌컨트롤 -->
+                <div id="filter_btn" class="filter_btn">
+                    <button id="filter0" data-type="0" type="button" class="room active">숙소</button>
+                    <button id="filter1" data-type="1" type="button" class="area">명소</button>
+                    <button id="filter2" data-type="2" type="button" class="food " style="display: none;">맛집</button>
+                    <button id="filter3" data-type="3" type="button" class="shop">쇼핑</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 마크정보레이어 -->
+        <div class="btm_fixed">
+            <div id="mapLst" style="background-color:#fff">
+                <ul class="contents-minbak room_lst">
+                    <ul class="content-minbak room_lst room-lst--v2">
+                        <li data-goodsno="5565">
+                            <a href="">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="tmb_wrp">
+                                            <img src="http://v2.theminda.com/data/tum/goods_room/0_598956b733eef.jpg"
+                                                 class="pos-center" alt="">
+                                            <button href="javascript:;" class="no_style tmb_heart_touch_area_right">
+                                            <span class="ribbon_wrp">
+                                                <i class="icon_ribbon" data-goodsno="5565" minbak-code="5565">찜하기</i>
+                                            </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h3 class="ellipsis room-item__tit"><!-- 2017-11-20 room-lst__tit 클래스 추가 -->
+                                            로마 자고가 하우스 (Jagoga House)
+                                        </h3>
+                                        <div class="price">
+                                            <span>도미토리</span>
+                                            <s class="before_price color_grey">€42</s>
+                                            <span class="current_price">€30</span>
+                                        </div>
+                                        <!-- room-list__btm-->
+                                        <div class="meta room-list__btm">
+                                            <div class="room-list__btm-info">
+                                                <ul class="lst_inline dot_lst">
+                                                    <li class="is-on">즉시예약</li>
+                                                    <li>전액결제</li>
+                                                    <li class="is-on">SALE</li>
+                                                    <li>NEW</li>
+                                                </ul>
+                                            </div>
+                                            <!--// room-list__btm-info -->
+                                            <div class="room-list__btm-cnt">
+                                                <ul class="dot_lst lst_inline">
+                                                    <li>
+                                                        <div class="star_wrp d_iblock ">
+                                                            <!-- 별점 -->
+                                                            <span class="starrating" title="4.38 "><span style="width:87.6% ">4.38</span></span>
+                                                            <!--리뷰 수 -->
+                                                            <span>리뷰<span class="room-list__btm-cnt-num">344</span></span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// room-list__btm-cnt -->
+                                        </div>
+                                        <!--// room-list__btm-->
+                                    </div>
+                                    <!--// media-body -->
+                                </div>
+                            </a>
+                            <!-- beststay -->
+                            <div class="beststay">
+                                <ul class="beststay__list">
+                                    <li class="beststay__item dropdown-hover dropdown-hover--top">
+                                        <button type="button" class="no_style dropdown__btn beststay__btn">  <span class="beststay__icon"><img src="/m/1.0/cust/img/icon_beststay_facility.png" alt=""/></span>2017 BEST STAY 시설</button>
+                                        <div class="dropdown-content">
+                                            <div class="inner">
+                                                <p class="beststay__sub-tit">2017 BEST STAY 시설</p>
+                                                <p class="beststay__desc">실제 숙박자 분들이 남겨주신<br />시설 평점이
+                                                    가장 높은 숙소입니다.</p>
+                                                <p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="beststay__item dropdown-hover dropdown-hover--top">
+                                        <button type="button" class="no_style dropdown__btn beststay__btn"><span class="beststay__icon"><img src="/m/1.0/cust/img/icon_beststay_staff.png" alt=""/></span>2017 BEST STAY 스탭</button>
+                                        <div class="dropdown-content">
+                                            <div class="inner">
+                                                <p class="beststay__sub-tit">2017 BEST STAY 스탭</p>
+                                                <p class="beststay__desc">실제 숙박자 분들이 남겨주신<br />스탭 평점이
+                                                    가장 높은 숙소입니다.</p>
+                                                <p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// beststay -->
+
+                        </li>
+                    </ul>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- //페이지 끝-->
+
+    </div>
+    <!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+<script type="text/javascript">
+    // 2017-11-20 add
+    $(function(){
+        $('.dropdown__btn').click(function(){
+            var $el = $(this).closest('.dropdown-hover');
+            if($el.hasClass('is-open')){
+                $el.removeClass('is-open');
+            }else{
+                $el.addClass('is-open');
+            }
+        });
+    })
+    var target = null;
+    $(document).mouseup(function(e) {
+        var popup = $(".dropdown-content");
+        if(target != e.target){
+            if (!popup.is(e.target) && popup.has(e.target).length == 0) {
+                popup.closest('.dropdown-hover').removeClass('is-open');
+            }
+        }
+        target = e.target;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<!-- 페이지 시작-->
+	<div class="frm_wrp text-center">
+		<span class="logo_org mt40">minda</span>
+		<div class="push-txt-bx text-center">
+			<span class="icon_chkorg_lg"></span><br />
+			<strong class="txt1 color_org">앱 푸시<br />알림<br />수신 동의</strong>
+			<p class="txt2">민다는 여행자들에게<br/ > 꼭 필요한 이벤트 및 할인소식,<br /> 여행정보를 알려드립니다.</p>
+		</div>
+		<p class="fs13 mt30">알림 수신은 ‘설정’에서 언제든지 변경할 수 있습니다.</p>
+		<div class="btm_fixed pa10 bg_wh">
+			<div class="row">
+				<div class="col-xs-4 pr2">
+					<button type="button" class="btn btn-xl btn-block bg_dark_grey2 fw300">동의안함</button>
+				</div>
+				<div class="col-xs-8 pl2">
+					<button type="button" class="btn btn-xl btn-block bg_org fw500">동의</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mdAlert" class="modal fade md_alert v2" tabindex="-1" role="dialog">
+		<div class="modal-dialog wid_md">
+			<button type="button" class="close icon_close_wh2" data-dismiss="modal"></button>
+			<strong class="tit">앱 푸시 알림 동의 안내</strong>
+			<p class="txt1 text-left"> 전송자 : 민다<br /> 수신동의 일시 : 2017년 02월 12일 13시<br /> 처리내용 : 수신동의 처리완료 </p>
+			<p class="fs11 text-left mt20 color_grey2"> 설정에서 변경 가능 </p>
+			<div class="btm_fixed bg_wh">
+				<button type="button" class="btn btn-xl btn-block bg_org" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$("#mdAlert").modal();
+	</script>
+	<!-- //페이지 끝-->
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-datepicker.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css?v3">
+	<!-- <link rel="stylesheet" href="css/tour.css"> -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<a href="/member/logout.php" class="btn">통합ID</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="" class="active">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="">통계/정산</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">예약관리</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">예약목록</a></li>
+							<li class="active"><a href="">예약캘린더</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<!-- <div class="body_tit2 clearfix">
+						<ul class="tit-step pull-left row">
+							<li class="col-xs-3"><a href="">기본정보</a></li>
+							<li class="col-xs-3"><a href="">사진/코스</a></li>
+							<li class="col-xs-3"><a href="">요금/예약규정</a></li>
+							<li class="col-xs-3 active"><a href="">행사관리</a></li>
+						</ul>
+						<div class="pull-right pr20">
+							<div class="input-area text-right">
+								<label for="sel-state" class="label-tit">운영상태</label>
+								<select id="sel-state" class="form-control-basic wid_sm ml25" title="운영상태 선택">
+									<option value="">판매중</option>
+									<option value="">판매중지</option>
+								</select>
+								<button class="btn btn-sm bg_dark_grey btn-check">확인</button>
+							</div>
+						</div>
+					</div> -->
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<!-- top_event_form -->
+						<div class="top_event_form clearfix">
+							<dl class="dl_inline text-center tour_calendar__top">
+								<dt>상품선택</dt>
+								<dd>
+									<select name="itemno" class="form-control-basic" title="상품 선택" onchange="location.href='/manager/tg/event_list.php?itemno='+this.value;">
+										<option value="9" selected="">싱가포르 가든스 바이 더 웨이</option>
+										<option value="17">드라곤여행</option>
+										<option value="39">드라곤 트립</option>
+									</select>
+								</dd>
+							</dl>
+							<!-- <div class="pull-left">
+								<select class="form-control-basic wid_md bg_wh" title="투어 선택">
+									<option value="">등록일순</option>
+									<option value="">파리 워킹투어 반나절1</option>
+									<option value="">파리 워킹투어 반나절2</option>
+									<option value="">파리 워킹투어 반나절3</option>
+								</select>
+								<button type="button" class="btn bg_mint ml5">보기</button>
+							</div> -->
+							<!-- <div class="pull-right text-right">
+								<dl class="dl_top_setting clearfix">
+									<dt>
+										예약가능
+										<div class="dropdown-hover d_iblock ml3">
+											<button class="no_style"><span class="icon_help_grey bg_wh border_grey2">도움말</span></button>
+											<div class="dropdown-content">
+												<div class="inner">
+													<p class="txt">각 요일에 체크를 하실 경우 여행자들이 체크한 <br />요일에 예약을 할 수 있습니다. <br />예약가능하던 요일을 해제하실 경우 기존 <br />예약가능요일에 예약확정건이 있는 날짜에는 <br />적용되지 않습니다.  </p>
+												</div>
+											</div>
+										</div>
+									</dt>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day1">
+											<input type="checkbox" id="chk_day1" checked="checked"><span class="color_red">일요일</span>
+										</label>
+									</dd>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day2">
+											<input type="checkbox" id="chk_day2" checked="checked">월요일
+										</label>
+									</dd>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day3">
+											<input type="checkbox" id="chk_day3" checked="checked">화요일
+										</label>
+									</dd>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day4">
+											<input type="checkbox" id="chk_day4" checked="checked">수요일
+										</label>
+									</dd>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day5">
+											<input type="checkbox" id="chk_day5" checked="checked">목요일
+										</label>
+									</dd>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day6">
+											<input type="checkbox" id="chk_day6" checked="checked">금요일
+										</label>
+									</dd>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="chk_day7">
+											<input type="checkbox" id="chk_day7" checked="checked"><span class="color_blue">토요일</span>
+										</label>
+									</dd>
+								</dl>
+								<button type="button" class="btn bg_mint">저장</button>
+							</div> -->
+						</div>
+						<!--// top_event_form -->
+						<!-- tour_calendar -->
+
+						<div class="room_calendar tour_calendar mb50">
+							<div class="month clearfix calendar-table__set-date">
+								<div class="pull-left">
+									<!-- <button type="button" class="btn bg_mint btn-xs btn-today">오늘</button> -->
+									<span class="prev"><i class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></i></span>
+									<span class="select_month"><span class="yy">2016</span>년 <span class="mm">02</span>월</span>
+									<span class="next"><i class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></i></span>
+								</div>
+								<div class="pull-right tb_input">
+									<div class="pull-left">
+										<span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm manage_date manage_start_date" readonly="readonly" title="예약 적용 시작 일자" placeholder="시작일"></span>
+										<span class="form-control-static">부터</span>
+										<span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm manage_date manage_end_date" readonly="readonly" title="예약 적용 종료 일자" placeholder="종료일"></span>
+										<span class="form-control-static">까지</span>
+									</div>
+									<div class="pull-right">
+										<div class="input-area text-right">
+											<button class="btn btn-sm bg_dark_grey btn-check">예약가능</button>
+											<button class="btn btn-sm bg_dark_grey btn-check ml3">예약마감</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="calendar-table">
+								<table>
+									<caption class="sr-only">투어 상품관리 행사관리 캘린더</caption>
+									<thead>
+										<!-- <tr>
+											<td colspan="7" class="clearfix top-info">
+												<div class="pull-left">
+													<dl class="dl_inline dl_count">
+														<dt class="pr">
+															이달의 행사
+														</dt>
+														<dd>출발 확정 : <span class="color_mint">4건</span></dd>
+														<dd>예약마감 : <span class="color_mint">4건</span></dd>
+													</dl>
+												</div>
+												<div class="pull-right">
+													<select name="itemno" class="form-control-basic wid_md" title="상품 선택" onchange="location.href='/manager/tg/event_list.php?itemno='+this.value;">
+													<option value="9" selected="">싱가포르 가든스 바이 더 웨이</option>
+													<option value="17">드라곤여행</option>
+													<option value="39">드라곤 트립</option>
+													</select>
+												</div>
+											</td>
+										</tr> -->
+										<tr class="day">
+											<th scope="col" class="sun">일</th>
+											<th scope="col">월</th>
+											<th scope="col">화</th>
+											<th scope="col">수</th>
+											<th scope="col">목</th>
+											<th scope="col">금</th>
+											<th scope="col" class="sat">토</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<!--
+											**** td 상태 ****
+											disabled : 현재 달의 이전, 이후 달 날짜
+											inactive : 선택하지 않은 요일
+											closed : 예약 마감
+											fixed : 출발확정
+											today : 오늘
+											 -->
+
+											<td class="sun disabled"><!-- 현재 달의 이전, 이후 달 날짜 disabled처리 -->
+												<a href="" class="td_wrp">
+													<span class="date">27</span>
+												</a>
+											</td>
+											<td class="disabled">
+												<a href="" class="td_wrp">
+													<span class="date">28</span>
+												</a>
+											</td>
+											<td class="disabled fixed">
+												<a href="" class="td_wrp">
+													<span class="date">29</span>
+													<!-- 예약 텍스트 -->
+													<span class="txt pos-center">
+														30개 중 10개 예약됨<br />예약 4건
+													</span>
+												</a>
+											</td>
+											<td class="disabled">
+												<a href="" class="td_wrp">
+													<span class="date">30</span>
+												</a>
+											</td>
+											<td class="disabled">
+												<a href="" class="td_wrp">
+													<span class="date">31</span>
+												</a>
+											</td>
+											<td class="inactive"><!-- 선택하지 않은 요일은 inactive처리 -->
+												<a href="" class="td_wrp">
+													<span class="date">12월 1일</span>
+												</a>
+											</td>
+											<td class="sat">
+												<a href="" class="td_wrp">
+													<span class="date">2</span>
+													<div class="pos_r_top"><span class="marker"><span class="sr-only">변경 사항 있음</span></span></div><!-- 새로운 변경 사항이 있을 시  -->
+													<!-- 예약 텍스트 -->
+													<span class="txt pos-center">
+														10명/30명<br />예약 4건
+													</span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun fixed season season_start">
+												<a href="" class="td_wrp">
+													<span class="date">3</span>
+													<div class="pos_r_top"><span class="manual color_red">수동</span><span class="marker"><span class="sr-only">변경 사항 있음</span></span></div><!-- 수동 + marker -->
+												</a>
+											</td>
+											<td class="season">
+												<a href="" class="td_wrp">
+													<span class="date">4</span>
+													<div class="pos_r_top"><span class="manual color_red">수동</span></div><!-- 수동 -->
+												</a>
+											</td>
+											<td class="season">
+												<a href="" class="td_wrp">
+													<span class="date">5</span>
+												</a>
+											</td>
+											<td class="season">
+												<a href="" class="td_wrp">
+													<span class="date">6</span>
+												</a>
+											</td>
+											<td class="today season"><!-- 오늘 today 처리 -->
+												<a href="" class="td_wrp">
+													<span class="date">7</span>
+												</a>
+											</td>
+											<td class="inactive season">
+												<a href="" class="td_wrp">
+													<div class="pos_r_top marker-wrap"><span class="marker" id="divRead"><span class="sr-only">변경 사항 있음</span></span><span class="manual color_wh">수동</span></div>
+													<span class="date">8</span>
+												</a>
+											</td>
+											<td class="sat season">
+												<a href="" class="td_wrp">
+													<span class="date">2</span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun season">
+												<a href="" class="td_wrp">
+													<span class="date">10</span>
+												</a>
+											</td>
+											<td class="season">
+												<a href="" class="td_wrp">
+													<span class="date">11</span>
+												</a>
+											</td>
+											<td class="season">
+												<a href="" class="td_wrp">
+													<span class="date">12</span>
+												</a>
+											</td>
+											<td class="season">
+												<a href="" class="td_wrp">
+													<span class="date">13</span>
+													<!-- 예약 텍스트 -->
+													<span class="txt pos-center">
+														30개 중 10개 예약됨<br />예약 4건
+													</span>
+												</a>
+											</td>
+											<td class="closed season">
+												<a href="" class="td_wrp">
+													<span class="date">14</span>
+												</a>
+											</td>
+											<td class="inactive season season_end">
+												<a href="" class="td_wrp">
+													<span class="date">15</span>
+												</a>
+											</td>
+											<td class="sat">
+												<a href="" class="td_wrp">
+													<span class="date">16</span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun closed">
+												<a href="" class="td_wrp">
+													<span class="date">17</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">18</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">19</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">20</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">21</span>
+												</a>
+											</td>
+											<td class="inactive">
+												<a href="" class="td_wrp">
+													<span class="date">22</span>
+												</a>
+											</td>
+											<td class="sat">
+												<a href="" class="td_wrp">
+													<span class="date">23</span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun">
+												<a href="" class="td_wrp">
+													<span class="date">24</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">25</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">26</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">27</span>
+												</a>
+											</td>
+											<td>
+												<a href="" class="td_wrp">
+													<span class="date">28</span>
+												</a>
+											</td>
+											<td class="inactive">
+												<a href="" class="td_wrp">
+													<span class="date">29</span>
+												</a>
+											</td>
+											<td class="sat">
+												<a href="" class="td_wrp">
+													<span class="date">30</span>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+									<!-- // 0503 수정사항 -->
+								</table>
+								<div class="color-info-wrap">
+									<!-- dropdown-hover-->
+									<div class="dropdown-hover d_iblock">
+										<button class="no_style"><span class="icon_help_grey bg_wh">도움말</span></button>
+										<div class="dropdown-content">
+											<div class="inner">
+												<ul class="lst_type_rect">
+													<li>예약가능 : 여행자들이 예약 가능한 상태</li>
+													<li>예약불가 : 여행자들이 예약 불가능한 상태</li>
+													<li>예약마감 : 1일 최대예약수량만큼 예약수량이 차거나 파트너가 직접 <br>예약마감상태로 변경되어 더 이상 예약이 불가능한 상태</li>
+													<li>확인요망 : 새로운 예약이 들어온 경우, 예약이 취소된 경우, <br>1일 최대예약수량이 차서 예약마감 상태로 변경된 경우 표시되는 상태.</li>
+													<li>수동 : 해당 날짜의 행사상태를 직접 예약마감으로 변경한 경우 표시되는 상태</li>
+													<li>시즌 : 시즌요금/행사 적용기간</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!--// dropdown-hover-->
+									<dl class="dl_color_info dl_inline d_iblock">
+										<dt>흰색 배경</dt>
+										<dd>예약가능</dd>
+										<dt class="inactive">회색 배경</dt>
+										<dd>예약불가</dd>
+										<!-- <dt class="fixed">붉은색 배경</dt>
+										<dd>출발 확정</dd> -->
+										<dt class="closed">파란색 배경</dt>
+										<dd>예약 마감</dd>
+										<dt><span class="marker"></span></dt>
+										<dd>확인요망</dd>
+										<dt class="no_bor"><span class="icon_season"></span></dt>
+										<dd>시즌</dd>
+										<dt class="no_bor"><span class="color_red">수동</span></dt>
+										<dd>행사상태 직접 변경</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<!--// tour_calendar -->
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+
+		var startDate, endDate;
+		$('.manage_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			opens: 'center',
+			locale: {
+				"format": "DD/MM/YYYY",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+		}, function(startDate, endDate) {
+			$('.manage_start_date').val(startDate.format('DD/MM/YYYY'));
+			$('.manage_end_date').val(endDate.format('DD/MM/YYYY'));
+		});
+	});
+	</script>
+</body>
+
+</html>

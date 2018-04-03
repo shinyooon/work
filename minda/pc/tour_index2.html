@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<!-- <link rel="stylesheet" href="css/common.css"> -->
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					var $gnb = $('.gnb'),
+						$link = $('.gnb>li>a'),
+						$active = $('.gnb>li>a.active'),
+						num = $active.parent().index(),
+						$util = $('.userbx');
+					$depth2_bg = $('.dep2');
+
+					function gnbReset() {
+						$link.removeClass('active');
+						num > -1 && $gnb.children().eq(num).children('a').addClass('active');
+					}
+
+					$link.on({
+						'focus': function() {
+							$util.removeClass('open');
+							$(this).addClass('active').parent().siblings().children().removeClass('active')
+						},
+						'mouseenter': function() {
+							$gnb.children().eq(num).children('a').removeClass('active');
+						}
+					});
+
+					$gnb.on('mouseleave', gnbReset);
+					$('#hd *').not('.gnb a').on('focus', gnbReset);
+
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+	<!-- #container -->
+	<div id="container">
+		<div class="sub_bg">
+			<!-- main-top-area -->
+			<div class="main-top-area">
+				<ul class="main-top-silde sub-top-slide">
+					<li>
+						<div class="img-wrap full">
+							<img src="img/@sample_tour_top.jpg" alt="" class="pos-center">
+						</div>
+						<div class="txt-area">
+							<h2 class="hd_title">특별한 여행, 가치있는 경험</h2>
+						</div>
+					</li>
+					<li>
+						<div class="img-wrap full">
+							<img src="http://www.theminda.com/cust/img/main/img_main_top10.jpg" alt="" class="pos-center">
+						</div>
+						<div class="txt-area">
+							<h2 class="hd_title">특별한 여행, 가치있는 경험</h2>
+						</div>
+					</li>
+				</ul>
+				<div class="main-top-arr">
+					<div class="icon_main_prev prev"></div>
+					<div class="icon_main_next next"></div>
+				</div>
+			</div>
+			<!--// main-top-area -->
+		</div>
+		<!-- 페이지시작 -->
+		<div class="content">
+			<!-- sub-main-wrap -->
+			<div class="sub-main-wrap">
+				<section class="con1">
+					<div class="w1100">
+						<h3 class="sr-only">인기도시</h3>
+						<ul class="clearfix list-main-city">
+							<li>
+								<a href="">
+									<img src="img/img_city_pari.jpg" alt="" >
+									<span class="txt pos-center">파리</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_city_roma.jpg" alt="" >
+									<span class="txt pos-center">로마</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_city_barc.jpg" alt="" >
+									<span class="txt pos-center">바르셀로나</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_city_fire.jpg" alt="" >
+									<span class="txt pos-center">피렌체</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_city_prah.jpg" alt="" >
+									<span class="txt pos-center">프라하</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="con2 w1100">
+					<div class="tour-list-tit">
+						<ul class="dot_lst lst_inline">
+							<li class="active"><a href="" class="has-vedio" >파리에서 미각여행</a></li>
+							<li><a href="" class="has-vedio" >로마 고대 유적지를 찾아서</a></li>
+							<li><a href="" class="has-img">즐거운 가우디 여행</a></li>
+							<li><a href="" class="has-img" >프라하의 음악이 있는 여행</a></li>
+							<li><a href="" class="has-img" >파리 현지음식 쿠킹클래스</a></li>
+						</ul>
+					</div>
+					<div class="tour-list-desc">
+						<!-- desc-con -->
+						<div class="desc-con">
+							<!-- txt-area -->
+							<div class="txt-area">
+								<a href="">
+									<h3 class="tit fw400">파리에서 미각여행<br /> 숨어있는 맛집을 찾자</h3>
+									<div class="desc">
+										<p class="txt color_light_grey">1997년 파리에 의상 공부하러 왔다가 프랑스인과 사랑에 <br /> 빠지는 바람에 정착한 19년차 파리지기입니다. <br /> 파리는 그야말로 보물창고와 같은 곳입니다. </p>
+									</div>
+									<ul class="dot_lst lst_inline">
+										<li>파리 온누리 민박</li>
+										<li>맛집</li>
+										<li>워킹</li>
+										<li>6시간</li>
+									</ul>
+									<div class="price-area">
+										<p class="font_lato color_light_grey">150,000</p>
+									</div>
+								</a>
+							</div>
+							<!-- txt-area -->
+							<div class="txt-area">
+								<a href="">
+									<h3 class="tit fw400">로마 고대<br />유적지를 찾아서</h3>
+									<div class="desc">
+										<p class="txt color_light_grey">아름다운 로마의 밤을 경험하세요! <br />골프카트를 타고 도시의 아름다운 광장들과<br />분수를 둘러보는 투어입니다. </p>
+									</div>
+									<ul class="dot_lst lst_inline">
+										<li>로마 온누리 민박</li>
+										<li>야경</li>
+										<li>자동차</li>
+										<li>3시간</li>
+									</ul>
+									<div class="price-area">
+										<p class="font_lato color_light_grey">150,000</p>
+									</div>
+								</a>
+							</div>
+							<!-- txt-area -->
+							<div class="txt-area">
+								<a href="">
+									<h3 class="tit fw400">즐거운 <br />가우디 여행</h3>
+									<div class="desc">
+										<p class="txt color_light_grey">1997년 파리에 의상 공부하러 왔다가 프랑스인과 사랑에 <br /> 빠지는 바람에 정착한 19년차 파리지기입니다. <br /> 파리는 그야말로 보물창고와 같은 곳입니다. </p>
+									</div>
+									<ul class="dot_lst lst_inline">
+										<li>파리 온누리 민박</li>
+										<li>맛집</li>
+										<li>워킹</li>
+										<li>6시간</li>
+									</ul>
+									<div class="price-area">
+										<p class="font_lato color_light_grey">150,000</p>
+									</div>
+								</a>
+							</div>
+							<!-- txt-area -->
+							<div class="txt-area">
+								<a href="">
+									<h3 class="tit fw400">프라하의<br /> 음악이 있는 여행</h3>
+									<div class="desc">
+										<p class="txt color_light_grey">1997년 파리에 의상 공부하러 왔다가 프랑스인과 사랑에 <br /> 빠지는 바람에 정착한 19년차 파리지기입니다. <br /> 파리는 그야말로 보물창고와 같은 곳입니다. </p>
+									</div>
+									<ul class="dot_lst lst_inline">
+										<li>파리 온누리 민박</li>
+										<li>맛집</li>
+										<li>워킹</li>
+										<li>6시간</li>
+									</ul>
+									<div class="price-area">
+										<p class="font_lato color_light_grey">150,000</p>
+									</div>
+								</a>
+							</div>
+							<!-- txt-area -->
+							<div class="txt-area">
+								<a href="">
+									<h3 class="tit fw400">파리 현지음식 쿠킹클래스<br /> 숨어있는 맛집을 찾자</h3>
+									<div class="desc">
+										<p class="txt color_light_grey">1997년 파리에 의상 공부하러 왔다가 프랑스인과 사랑에 <br /> 빠지는 바람에 정착한 19년차 파리지기입니다. <br /> 파리는 그야말로 보물창고와 같은 곳입니다. </p>
+									</div>
+									<ul class="dot_lst lst_inline">
+										<li>파리 온누리 민박</li>
+										<li>맛집</li>
+										<li>워킹</li>
+										<li>6시간</li>
+									</ul>
+									<div class="price-area">
+										<p class="font_lato color_light_grey">150,000</p>
+									</div>
+								</a>
+							</div>
+							<!-- media-area -->
+							<div class="media-area">
+								<div class="media-wrap">
+									<div class="video-area">
+										<video id="videoTour" autoplay="autoplay" muted="muted" poster="http://www.html5videoplayer.net/poster/toystory.jpg" loop="true" preload="auto" playsinline="true">
+											<source id="video-src" src="http://www.html5videoplayer.net/videos/toystory.mp4" type="video/mp4">
+										</video>
+										<div class="video-controls">
+											<div class="pos-center start-ctrl">
+												<a href="" class="icon_pause">일시정지</a>
+											</div>
+											<div class="sound-ctrl">
+												<a href="" class="icon_sound_on">소리켬</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// desc-con -->
+					</div>
+					<!-- tour-list-desc-->
+				</section>
+				<section class="con3">
+					<!-- img-top-area -->
+					<div class="main-top-area sub-mid-area">
+						<ul class="sub-mid-slide">
+							<li class="li1">
+								<div class="img-wrap full">
+									<img src="img/@sample_tour_mid.jpg" alt="" class="pos-center">
+								</div>
+								<div class="txt-area">
+									<h3 class="hd_title">바르셀로나의 바다를 즐기다</h3>
+									<p class="txt1">바르셀로나의 유니크한 액티비티투어</p>
+									<div class="btn-area">
+										<a href="" class="btn bg_wh btn-lg">투어 자세히보기</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="main-top-arr">
+							<div class="icon_sub_prev prev"></div>
+							<div class="icon_sub_next next"></div>
+						</div>
+					</div>
+					<!--// img-top-area -->
+				</section>
+				<section class="con4 w1100">
+					<h3 class="tit">가치있는 <br />여행을 만드는 사람들</h3>
+					<ul class="row list-guide">
+						<li class="col-xs-4">
+							<a href="">
+								<div class="img-area">
+									<img src="img/@sample_guide1.jpg" alt="">
+								</div>
+								<div class="txt-area">
+									<h4 class="sub-tit">끼있는 젊은<br />지식가이드 팀</h4>
+									<span class="name">투어콘서트</span>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="img-area">
+									<img src="img/@sample_guide2.jpg" alt="">
+								</div>
+								<div class="txt-area">
+									<h4 class="sub-tit">로마 근교<br />전문 투어사</h4>
+									<span class="name">우노트래블</span>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="img-area">
+									<img src="img/@sample_guide3.jpg" alt="">
+								</div>
+								<div class="txt-area">
+									<h4 class="sub-tit">현지인 맛집<br />한바퀴 둘러보세요</h4>
+									<span class="name">로마 자고가 민박</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<!--// sub-main-wrap -->
+		</div>
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+<script>
+$(function  () {
+	 topVisualCtrl();
+	 subVisualCtrl();
+	 subDescCtrl();
+	 videoCtrl();
+})
+function topVisualCtrl(){
+	$('.main-top-silde').bxSlider({
+		mode: 'fade',
+		//auto: true,
+		//randomStart:true,
+		infiniteLoop : true,
+		controls: true,
+		nextText :'이전',
+		prevText : '다음',
+		nextSelector: '.icon_main_next',
+		prevSelector: '.icon_main_prev'
+	});
+}
+function subVisualCtrl(){
+	$('.sub-mid-slide').bxSlider({
+		//mode: 'fade',
+		//auto: true,
+		//randomStart:true,
+		infiniteLoop : true,
+		controls: true,
+		nextText :'이전',
+		prevText : '다음',
+		nextSelector: '.icon_sub_next',
+		prevSelector: '.icon_sub_prev'
+	});
+}
+
+function subDescCtrl(){
+	var $desc = $('.desc-con .txt-area');
+	$desc.hide();
+	$desc.eq(0).show();
+	$('.tour-list-tit li a').click(function(e){
+		e.preventDefault();
+		var idx = $(this).closest('li').index();
+		$('.tour-list-tit li').removeClass('active');
+		$(this).closest('li').addClass('active');
+		$desc.fadeOut();
+		$desc.eq(idx).fadeIn();
+		mediaVisible(idx);
+	});
+}
+function mediaVisible(idx){
+	var $video_area = $('.video-area');
+	var $video = $('#videoTour');
+	var video_src  = [
+		"http://www.html5videoplayer.net/videos/toystory.mp4",
+		"https://www.w3schools.com/html/mov_bbb.mp4",
+		"",
+		"",
+		""
+	];
+	var img_src = [
+		"http://www.html5videoplayer.net/poster/toystory.jpg",
+		"https://peach.blender.org/wp-content/uploads/bbb-splash.png",
+		"/data/travel/image_server/middle/201609/1472797641_1.jpg",
+		"/data/travel/image_server/middle/201609/1472711957_2.jpg",
+		"/data/travel/image_server/middle/201609/1472781731_1.jpg"
+	];
+	$('.tour-list-desc .media-wrap').css('background-image', 'url(' + img_src[idx] + ')');
+	if(video_src[idx]===''){
+		$video_area.hide();
+		$video.get(0).pause();
+	}else{
+		$video_area.show();
+		$('#video-src').attr('src',video_src[idx]);
+		$video.attr('poster',video_src[idx])
+		$video.load();
+		$video.get(0).play();
+	}
+}
+function videoCtrl(){
+	var $video = $('#videoTour').get(0);
+	$('.icon_pause').on('click', function(e) {
+		e.preventDefault();
+		if($video.paused) {
+			$video.play();
+			$(this).closest('.start-ctrl').removeClass('on');
+		}
+		else {
+			$video.pause();
+			$(this).closest('.start-ctrl').addClass('on');
+		}
+		return false;
+	});
+	$('.icon_sound_on').click(function(e) {
+		e.preventDefault();
+		$video.muted = !$video.muted;
+		$(this).closest('.sound-ctrl').toggleClass('on');
+		return false;
+	});
+}
+</script>
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

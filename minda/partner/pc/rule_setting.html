@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> 민다(민박다나와) 파트너홈 </title>
+	<!-- 기존 css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/style.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/layout.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/ui.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/css/font.css">
+	<style>
+	.yellow {
+		color: #fff83e;
+	}
+	</style>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<script src="http://v2.theminda.com/manager/jquery.js"></script>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common.js"></script>
+	<script src="http://v2.theminda.com/lib/js/common.js"></script>
+	<script src="http://v2.theminda.com/lib/js/chkForm.js"></script>
+	<script src="http://v2.theminda.com/lib/js/selectCategory.js"></script>
+	<script>
+	var $j = jQuery.noConflict();
+	</script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!--h1 class="logo"><a href="http://v2.theminda.com/manager/"><img src="http://v2.theminda.com/manager/common/img/logo_big.png" alt="민다(민박다나와) 파트너홈"></a></h1-->
+					<h1 class="logo"><a href="http://v2.theminda.com/manager/index.php"><img src="http://v2.theminda.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--2016-11-29 yuna nav 위치 수정, 클래스 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="http://v2.theminda.com/manager/index.php" class="active">숙소</a></li>
+							<li><a href="http://v2.theminda.com/manager/travel/index.php">여행정보</a></li>
+							<li><a href="http://v2.theminda.com/manager/tg/index.php">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!--2016-08-31 yuna 공지사항 주석 -->
+						<!-- <a href="http://v2.theminda.com/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+						<a href="http://v2.theminda.com/manager/manager_edit.php?actionFlag=M" class="account">괌 제이 게스트하우스님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+						<a href="javascript:showOneIdModal();" class="btn btn-xs btn_border_grey">통합ID</a>
+						<a href="/main/view.php?goodsno=3492" class="btn link-go"><span class="icon_house_org mr5"></span>숙소 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="http://v2.theminda.com/manager/main/index.php">홈</a></li>
+						<li><a href="http://v2.theminda.com/manager/booking/calendar.php">예약캘린더</a></li>
+						<li><a href="http://v2.theminda.com/manager/booking/index.php">예약관리</a></li>
+						<li><a href="http://v2.theminda.com/manager/room/index.php">객실관리</a></li>
+						<li><a href="http://v2.theminda.com/manager/mypage/room_edit.php" class="active">정보관리</a></li>
+						<li><a href="http://v2.theminda.com/manager/board/qna.php">게시물관리</a></li>
+						<li><a href="http://v2.theminda.com/manager/stats/index.php">통계/정산</a></li>
+						<li><a href="http://v2.theminda.com/manager/ad/index.php">광고관리</a></li>
+						<li><a href="http://v2.theminda.com/manager/cs/qna.php">고객센터</a></li>
+					</ul>
+				</nav>
+				<div class="hd_myinfo pull-right">
+					<div>
+						<span class="res_rule">예약규정 :일반C(30% 예약과 동시에 확정)</span>
+						<div class="bizmoney-area"><a href="http://v2.theminda.com/manager/mypage/bizmoney.php"><i class="icon_money"></i>비즈머니 <span class="color_red">25,600원</span></a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="w1260 master_ct">
+				<table style="width:1262px;height:100%;padding:0;margin:0;text-algin:center;">
+					<tr>
+						<td valign="top" width="170px" style="padding-right:20px" nowrap>
+							<aside class="content_aside">
+								<h2 class="aside_tit">정보관리</h2>
+								<nav class="snb">
+									<ul>
+										<li>
+											<a href="room_edit.php">숙소 정보</a>
+										</li>
+										<li>
+											<a href="room_location.php">주소/위치/지도</a>
+										</li>
+										<li>
+											<a href="coupon.php">쿠폰 관리</a>
+										</li>
+										<li>
+											<a href="bizmoney.php">비즈머니</a>
+										</li>
+										<li>
+											<a href="rule_base.php" class="active">예약규정</a>
+										</li>
+										<li>
+											<a href="cancel_info.php">
+												<font color="red">[관]</font>호스텔 환불규정</a>
+										</li>
+								</nav>
+							</aside>
+							<!--
+		<div id="menu">
+				<div id="title">정보관리</div>
+
+		<div id="menutop"></div>
+		<ul>
+												<li>
+				<a href="room_edit.php">숙소 정보</a>
+								</li>
+												<li>
+				<a href="room_location.php">주소/위치/지도</a>
+								</li>
+												<li>
+				<a href="coupon.php">쿠폰 관리</a>
+								</li>
+												<li>
+				<a href="bizmoney.php">비즈머니</a>
+								</li>
+												<li>
+				<a href="rule_base.php">예약규정</a>
+								</li>
+												<li>
+				<a href="cancel_info.php"><font color="red">[관]</font>호스텔 환불규정</a>
+								</li>
+						</ul>
+				<div id="menubottom"></div>
+		</div>
+-->
+						</td>
+						<td valign="top">
+							<link href="../font.css" rel="stylesheet" type="text/css">
+							<style type="text/css">
+							.style14 {
+								color: #ffffff;
+								font-weight: bold;
+							}
+
+							.style16 {
+								font-family: verdana;
+								font-size: 16pt;
+							}
+
+							.style18 {
+								color: #333333
+							}
+
+							.style4 {
+								color: #e72b00
+							}
+
+							.style19 {
+								color: #000000
+							}
+
+							.style20 {
+								color: #FF0000
+							}
+							</style>
+							<div class="cancel-rule-contents">
+								<div class="t mt0">예약규정 설정</div>
+								<div class="sub-t mt10 mb3">현재 사용 중인 규정 : $규정명$ $예약금%$</div>
+								<p class="txt">지역별 특별규정을 사용 중인 경우 변경하지 않으셔도 됩니다.</p>
+								<script>
+								function chkRule(fm) {
+									if (!chkForm(fm)) return false;
+
+									fm.rule.value = "";
+									for (var i = 0; i < fm.rule_select.length; i++) {
+										if (fm.rule_select[i].checked) {
+											fm.rule.value = fm.rule_select[i].value;
+											break;
+										}
+									}
+
+									if (Number("0") > 0) {
+										alert("이미 예약규정 변경이 접수되어 관리자의 승인대기중에 있습니다.\r\n\'예약규정 변경내역'에서 [접수취소]를 클릭하여 취소 후 다시 신청해 주세요");
+										return false;
+									}
+
+									if (fm.rule.value == "") {
+										alert("\'예약규정\'을 선택하세요.");
+										return false;
+									}
+
+									if (fm.rule.value == "3") {
+										alert("이미 설정되어 있는 \'예약 규정\'과 동일합니다");
+										return false;
+									}
+
+									return confirm('예약규정 변경을 신청하시겠습니까?');
+								}
+								</script>
+								<!--
+	<table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
+		<tr align="center">
+			<td width="10" background="../img/tab_back_170.gif"><strong></strong></td>
+			<td width="220" background="../img/tab_on_220.gif"><strong><a href="../mypage/rule_base.php">기본 예약규정</a></strong></td>
+	<td width="220" background="../img/tab_off_220.gif"><strong><a href="../mypage/rule_season.php">시즌별 예약규정</a></strong></td>
+			<td background="../img/tab_back_170.gif">&nbsp;</td>
+		</tr>
+	</table><br><br>
+	-->
+								<div class="room_refund pr80 mt30">
+									<table class="tb tb_fixed">
+										<caption class="sr-only">날짜별 환불규정</caption>
+										<colgroup>
+											<col style="width:330px">
+											<col>
+											<col style="width:218px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+												<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+												<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center">30일 전 취소</td>
+												<td class="text-center">전액환불<span class="d_block color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+												<td class="text-center">없음</td>
+											</tr>
+											<tr>
+												<td class="text-center">29~4일 전 취소</td>
+												<td class="text-center">70%</td>
+												<td class="text-center">8%</td>
+											</tr>
+											<tr>
+												<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+												<td class="text-center">40%</td>
+												<td class="text-center">없음</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- 2017-02-20 add -->
+								<div class="list-rule mt60">
+									<dl class="accordion">
+										<dt>
+											<div class="radio-wrap">
+												<input type="radio" name="rule_select" id="radio-cancel1" value="1" alt="1" checked="checked">
+												<label for="radio-cancel1" class="acc_btn label btn btn-lg open"><span class="label_recomm">권장</span>일반A
+												</label>
+											</div>
+										</dt>
+										<dd class="acc_cnt room_refund">
+											<table class="tb tb_fixed">
+												<caption class="sr-only">날짜별 환불규정</caption>
+												<colgroup>
+													<col style="width:330px">
+													<col>
+													<col style="width:218px">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+														<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+														<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center">30일 전 취소</td>
+														<td class="text-center">전액환불<span class="color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+														<td class="text-center">없음</td>
+													</tr>
+													<tr>
+														<td class="text-center">29~4일 전 취소</td>
+														<td class="text-center">70%</td>
+														<td class="text-center">8%</td>
+													</tr>
+													<tr>
+														<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+														<td class="text-center">40%</td>
+														<td class="text-center">없음</td>
+													</tr>
+												</tbody>
+											</table>
+										</dd>
+									</dl>
+									<dl class="accordion">
+										<dt>
+											<div class="radio-wrap">
+												<input type="radio" name="rule_select" id="radio-cancel2" value="1" alt="1">
+												<label for="radio-cancel2" class="acc_btn label btn btn-lg">일반B</label>
+											</div>
+										</dt>
+										<dd class="acc_cnt room_refund" style="display:none;">
+											<table class="tb tb_fixed">
+												<caption class="sr-only">날짜별 환불규정</caption>
+												<colgroup>
+													<col style="width:330px">
+													<col>
+													<col style="width:218px">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+														<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+														<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center">30일 전 취소</td>
+														<td class="text-center">전액환불<span class="d_block color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+														<td class="text-center">없음</td>
+													</tr>
+													<tr>
+														<td class="text-center">29~4일 전 취소</td>
+														<td class="text-center">70%</td>
+														<td class="text-center">8%</td>
+													</tr>
+													<tr>
+														<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+														<td class="text-center">40%</td>
+														<td class="text-center">없음</td>
+													</tr>
+												</tbody>
+											</table>
+										</dd>
+									</dl>
+									<dl class="accordion">
+										<dt>
+											<div class="radio-wrap">
+												<input type="radio" name="rule_select" id="radio-cancel3" value="1" alt="1">
+												<label for="radio-cancel3" class="acc_btn label btn btn-lg">$규정명$ : 예약금$ 예약금%$</label>
+											</div>
+										</dt>
+										<dd class="acc_cnt room_refund" style="display:none;">
+											<table class="tb tb_fixed">
+												<caption class="sr-only">날짜별 환불규정</caption>
+												<colgroup>
+													<col style="width:330px">
+													<col>
+													<col style="width:218px">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+														<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+														<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center">30일 전 취소</td>
+														<td class="text-center">전액환불<span class="d_block color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+														<td class="text-center">없음</td>
+													</tr>
+													<tr>
+														<td class="text-center">29~4일 전 취소</td>
+														<td class="text-center">70%</td>
+														<td class="text-center">8%</td>
+													</tr>
+													<tr>
+														<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+														<td class="text-center">40%</td>
+														<td class="text-center">없음</td>
+													</tr>
+												</tbody>
+											</table>
+										</dd>
+									</dl>
+								</div>
+								<div class="sub-t">안내사항</div>
+								<ul class="lst_type_dot">
+									<li>예약수수료는 총 숙박비의 10%입니다.</li>
+									<li>위 예약규정은 ‘여행자’의 예약에 대한 규정입니다. ‘여행사 고객’은 별도 규정에 따라 취소보상 정책을 적용합니다.</li>
+								</ul>
+								<div class="t">계좌정보 입력</div>
+								<div class="sub-t mt0">현재정보 : $현재 계좌정보$ <button class="btn bg_dark_grey btn-edit">변경하기</button></div>
+								<div class="account-area" style="display:none">
+									<select class="form-control-basic wid_smd mr5 select_bank" title="은행명 선택">
+										<option value="" selected="">은행명</option>
+										<option value="">SC제일은행</option>
+										<option value="">경남은행</option>
+										<option value="">광주은행</option>
+										<option value="">국민은행</option>
+										<option value="">기업은행</option>
+										<option value="">농협</option>
+										<option value="">대구은행</option>
+										<option value="">부산은행</option>
+										<option value="">산업은행</option>
+										<option value="">수협</option>
+										<option value="">신한은행</option>
+										<option value="">우리은행</option>
+										<option value="">전북은행</option>
+										<option value="">제주은행</option>
+										<option value="">하나(외환)은행</option>
+										<option value="16">직접입력</option>
+									</select>
+									<script type="text/javascript">
+									$j(".select_bank").on('change', function() {
+										console.log(this.value);
+										if (this.value == 16) {
+											$j('.bank_input').show();
+										} else {
+											$j('.bank_input').hide();
+										}
+									});
+									</script>
+									<input type="text" class="form-control-basic wid_smd mr5 bank_input" maxlength="12" name="banknm" placeholder="은행명" style="display:none">
+									<input type="text" class="form-control-basic wid_smd mr5 mt0" maxlength="20" name="accno" value="" placeholder="계좌번호">
+									<input type="text" class="form-control-basic wid_smd mt0" maxlength="12" name="accnm" value="" placeholder="예금주명">
+								</div>
+								<div class="sub-t">안내사항</div>
+								<ul class="lst_type_dot">
+									<li>예약수수료는 총 숙박비의 10%입니다.</li>
+									<li>위 예약규정은 ‘여행자’의 예약에 대한 규정입니다. ‘여행사 고객’은 별도 규정에 따라 취소보상 정책을 적용합니다.</li>
+								</ul>
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" style="display:none">
+									<tr>
+										<td width="100%" valign="top">
+											<strong><img src="../img/green_bullet.gif" width="9" height="9"><font color="#1B6800"> 예약규정 설정</font></strong>
+											<br>
+											<form method="post" action="indb.rule.php" onsubmit="return chkRule(this)">
+												<input type="hidden" name="mode" id="mode" value="request">
+												<input type="hidden" name="cur_ruleno" id="cur_ruleno" value="3">
+												<input type="hidden" name="rule" id="rule" value="3">
+												<input type="hidden" name="goodsno" id="goodsno" value="3492">
+												<input type="hidden" name="rule_use_type_cd" id="rule_use_type_cd" value="B">
+												<!--기본-->
+												<input type="hidden" name="req_type_cd" id="req_type_cd" value="2">
+												<!--변경-->
+												<table width="100%" border="0" cellspacing="0">
+													<tr>
+														<td align="center">
+															<table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dddddd" border="0" class="view_tbl2">
+																<tr>
+																	<td rowspan="2" align="center" bgcolor="#777777">
+																		<font color="#ffffff"><strong>예약규정</strong></font>
+																	</td>
+																	<td colspan="2" align="center" bgcolor="#777777">
+																		<font color="#ffffff"><strong>총숙박요금</strong></font>
+																	</td>
+																	<td colspan="3" align="center" bgcolor="#777777">
+																		<font color="#ffffff"><strong>취소보상정책</strong></font>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="center" bgcolor="#777777"><strong><font color="#ffffff">예약금</font></strong></td>
+																	<td align="center" bgcolor="#777777"><strong><font color="#ffffff">숙소직접결제액 </font></strong></td>
+																	<td align="center" bgcolor="#777777"><strong><font color="#ffffff">취소일<br>(현지 체크인 날짜 기준)</font></strong></td>
+																	<td align="center" bgcolor="#777777"><strong><font color="#ffffff">현금보상액<br>(총 숙박요금 기준)</font>)</strong></td>
+																	<td align="center" bgcolor="#777777"><strong><font color="#ffffff">비즈머니 적립<br>(총 숙박요금 기준)</font></strong></td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td rowspan="2" align="left" bgcolor="#eeeeee" style="padding-left:20px;width:100px;">
+																		<strong><input type="radio" name="rule_select" value="1" ><font color="#1B6800">일반A</font></strong>
+																	</td>
+																	<td rowspan="2" align="center">
+																		10% </td>
+																	<td rowspan="2" align="center">
+																		90% </td>
+																	<td align="center">
+																		3일전 ~ 당일 취소 및 No-Show </td>
+																	<td align="center">
+																		없음 </td>
+																	<td align="center">
+																		8% </td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td align="center">
+																		29 ~ 4일전 취소 </td>
+																	<td align="center">
+																		없음 </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr bgcolor="#ffffff">
+																	<td height="1" colspan="6" align="center" bgcolor="#dddddd" class="line-h-0"><strong><img src="../img/empty.gif"></strong></td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td rowspan="2" align="left" bgcolor="#eeeeee" style="padding-left:20px;width:100px;">
+																		<strong><input type="radio" name="rule_select" value="2" ><font color="#1B6800">일반B</font></strong>
+																	</td>
+																	<td rowspan="2" align="center">
+																		20% </td>
+																	<td rowspan="2" align="center">
+																		80% </td>
+																	<td align="center">
+																		3일전 ~ 당일 취소 및 No-Show </td>
+																	<td align="center">
+																		10% </td>
+																	<td align="center">
+																		8% </td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td align="center">
+																		29 ~ 4일전 취소 </td>
+																	<td align="center">
+																		없음 </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr bgcolor="#ffffff">
+																	<td height="1" colspan="6" align="center" bgcolor="#dddddd" class="line-h-0"><strong><img src="../img/empty.gif"></strong></td>
+																</tr>
+																<tr bgcolor="ffffe1">
+																	<td rowspan="2" align="left" bgcolor="fffec8" style="padding-left:20px;width:100px;">
+																		<strong><input type="radio" name="rule_select" value="3" checked><font color="#1B6800">일반C</font></strong>
+																	</td>
+																	<td rowspan="2" align="center">
+																		30% </td>
+																	<td rowspan="2" align="center">
+																		70% </td>
+																	<td align="center">
+																		3일전 ~ 당일 취소 및 No-Show </td>
+																	<td align="center">
+																		20% </td>
+																	<td align="center">
+																		8% </td>
+																</tr>
+																<tr bgcolor="ffffe1">
+																	<td align="center">
+																		29 ~ 4일전 취소 </td>
+																	<td align="center">
+																		없음 </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr bgcolor="#ffffff">
+																	<td height="1" colspan="6" align="center" bgcolor="#dddddd" class="line-h-0"><strong><img src="../img/empty.gif"></strong></td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td rowspan="5" align="left" bgcolor="#eeeeee" style="padding-left:20px;width:100px;">
+																		<strong><input type="radio" name="rule_select" value="101" ><font color="#1B6800">규정B</font></strong>
+																	</td>
+																	<td rowspan="5" align="center">
+																		50% </td>
+																	<td rowspan="5" align="center">
+																		50% </td>
+																	<td align="center">
+																		당일 취소 및 No-Show </td>
+																	<td align="center">
+																		40% </td>
+																	<td align="center">
+																		8% </td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td align="center">
+																		6 ~ 1일전 취소 </td>
+																	<td align="center">
+																		20% </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td align="center">
+																		14 ~ 7일전 취소 </td>
+																	<td align="center">
+																		10% </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td align="center">
+																		29 ~ 15일전 취소 </td>
+																	<td align="center">
+																		없음 </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr bgcolor="ffffff">
+																	<td align="center">
+																		~ 30일전 취소 </td>
+																	<td align="center">
+																		없음 </td>
+																	<td align="center">
+																		없음 </td>
+																</tr>
+																<tr>
+																	<td height="140" colspan="6" align="center" bgcolor="#dddddd">
+																		<input type="checkbox" name="agree2" class="cbox" required msg="예약취소/변경/환불규정에 동의해주세요">
+																		<strong>위 '예약규정'에 동의합니다.</strong>
+																		<br>
+																		<br>
+																		<input type="image" src="../img/b_md_modify2.gif" style="border:0">
+																	</td>
+																</tr>
+															</table>
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td height="20" valign="top">
+																		<br> * 정산과 관련된 내용은 <a href="../stats/index.php">[통계/정산]</a> 메뉴에서 자세히 보실 수 있습니다.
+																		<br> * 위 예약규정은 '일반고객'의 예약에 대한 규정입니다. '여행사 고객'은 별도 규정에 따라 취소보상정책이 적용됩니다.
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</form>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<br>
+											<br>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td height="20" valign="top">
+														<strong><font color="1B6800"><img src="../img/green_bullet.gif" width="9" height="9"></font> <font color="1B6800">예약규정 변경내역</font></strong>
+													</td>
+												</tr>
+											</table>
+											<form name="fmList" method="post" action="indb.rule.php">
+												<input type="hidden" name="mode" value="cancel_req">
+												<input type="hidden" name="cancel_reqno" value="">
+												<input type="hidden" name="cancel_req_type_cd" value="">
+												<input type="hidden" name="old_req_state_cd" value="">
+												<input type="hidden" name="rule_use_type_cd" value="B">
+												<!--기본-->
+												<table width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td height="1" colspan="6" bgcolor=cccccc class="line-h-0"><img src="../img/empty.gif" width="1" height="1" class="line-h-0"></td>
+													</tr>
+													<tr>
+														<th width="40" height="35">접수번호</th>
+														<th>규정명(예약금)</th>
+														<th>신청일</th>
+														<th>처리일</th>
+														<th>신청 구분</th>
+														<th>상태</th>
+													</tr>
+													<tr>
+														<td height="1" colspan="6" bgcolor=cccccc class="line-h-0"><img src="../img/empty.gif" width="1" height="1"></td>
+													</tr>
+													<tr>
+														<td height="40" align="center">
+															<a href="javascript:popupLayer('rule_request_view.php?reqno=12635')">12635</a>
+														</td>
+														<td align="center">일반C(30%)</td>
+														<td align="center">2016-04-25 14:38:25</td>
+														<td align="center">2016-04-25 14:38:25</td>
+														<td align="center">신규</td>
+														<td align="center">
+															승인
+														</td>
+													</tr>
+													<tr>
+														<td height="1" colspan="6" align="center" background="../img/line.gif" class="line-h-0"><img src="../img/empty.gif" width="1" height="1"></td>
+													</tr>
+												</table>
+											</form>
+											<br>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center">
+														<div class="page"> <b class=red style='font:bold 9pt tahoma'>1</b> </div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<script>
+								function cancel_rule_req(cancel_reqno, cancel_req_type_cd, old_req_state_cd) {
+									if (confirm("접수취소 하시겠습니까?")) {
+										var fmList = document.fmList;
+										fmList.cancel_reqno.value = cancel_reqno;
+										fmList.cancel_req_type_cd.value = cancel_req_type_cd;
+										fmList.old_req_state_cd.value = old_req_state_cd;
+										fmList.submit();
+									}
+								}
+								</script>
+								<div class="rule-agree text-center">
+									<label class="inline-checkbox basic chk_label">
+										<input type="checkbox" name="agree2" class="cbox" required>위 예약규정에 동의합니다.</label>
+									<div class="btn-wrap mt10"><a href="" class="btn bg_org btn- color_wh">저장</a></div>
+								</div>
+								<div class="t">예약규정 변경내역</div>
+								<div class="tbl-wrap1">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tb tb-default text-center">
+										<col style="width:120px">
+										<col style="width:auto;">
+										<col style="width:160px">
+										<col style="width:160px">
+										<col style="width:140px">
+										<col style="width:140px">
+										<thead>
+											<tr>
+												<th width="40" height="35">접수번호</th>
+												<th>규정명(예약금)</th>
+												<th>신청일</th>
+												<th>처리일</th>
+												<th>신청 구분</th>
+												<th>상태</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+											<tr>
+												<td height="40" align="center">
+													<a href="javascript:popupLayer('rule_request_view.php?reqno=12477')">12477</a>
+												</td>
+												<td align="center">일반A(10%)</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">2016-04-25 14:38:25</td>
+												<td align="center">신규</td>
+												<td align="center">
+													승인
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="text-left mb50 clearfix">
+									<ul class="pagination text-center ">
+										<li class="prev "><a href=" ">이전페이지목록보기</a></li>
+										<li><a href="">1</a></li>
+										<li><a href="" class="active ">2</a></li>
+										<li><a href="">3</a></li>
+										<li><a href="">4</a></li>
+										<li class="next "><a href=" ">다음페이지목록보기</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer 2016-10-28 수정 -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="http://www.theminda.com" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1661-2892)</p>
+			<!-- <a href="../cs/ruleminbak.php" class="split">숙소주 이용약관</a>
+				<a href="../ad/adrule.php" class="split">숙소주 광고이용약관</a> -->
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script>
+	$j(function() {
+		var $beforeEl = $j('.acc_cnt').eq(0);
+		$j(".accordion .acc_btn").on('click', function() {
+			if ($j(this) !== $beforeEl) {
+				$j('.acc_cnt').stop().slideUp('fast');
+				$beforeEl.removeClass('open');
+				$j(this).addClass('open').closest('dt').next('.acc_cnt').stop().slideDown('fast');
+				$beforeEl = $j(this);
+			}
+		});
+		$j('label.chk_label>input').on('click', function() {
+			var t = $j(this);
+			t.parent('label').toggleClass('on');
+		});
+		$j('.btn-edit').click(function(){
+			$j(this).parent().next('.account-area').slideDown('fast');
+		})
+	})
+	</script>
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+$ko: 'Noto Sans CJK KR','Noto Sans KR', 'Apple SD Gothic Neo', NanumBarunGothic, dotum, sans-serif;
+$baseFontSize: 14;
+
+// notosanskr
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+// @import url(https://fonts.googleapis.com/css?family=Lato:700,400);
+
+// px to em
+@function em($target, $context: $baseFontSize) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+html {
+  -webkit-text-size-adjust:none;
+}
+
+body,input,button,textarea,select {
+  font-family: $ko;
+  font-size: $baseFontSize + px;
+  line-height: 1.125em;
+  -webkit-text-size-adjust:none;
+  color : $color__default;
+  font-weight: $fw__300;
+  letter-spacing: -0.04em;
+}
+a {
+  color : $color__default;
+}
+/*input, textarea, keygen, select, button, meter, progress, */button {
+  font-family: $ko;
+}

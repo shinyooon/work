@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>[민다관리자]</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<link rel="stylesheet" href="http://v2.theminda.com/admin/style.css" type="text/css">
+	<!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/admin/ui.css" type="text/css">
+	<!--
+<link rel="shortcut icon" href="../http://v2.theminda.com/admin/img//i_mlogo.ico">
+-->
+	<link rel="shortcut icon" href="../http://v2.theminda.com/admin/img//i_minda_logo.ico">
+	<!-- 	<style>
+	body {
+		margin: 0 0 0 10px;
+		background: url(http://v2.theminda.com/admin/img//top_bg.gif) repeat-x;
+	}
+	</style> yuna 삭제-->
+	<script src="http://v2.theminda.com/lib/js/common.js"></script>
+	<script src="http://v2.theminda.com/lib/js/chkForm.js"></script>
+	<script src="http://v2.theminda.com/lib/js/popupLayer.js"></script>
+	<script src="http://v2.theminda.com/lib/js/selectCategory.js"></script>
+	<script src="http://v2.theminda.com/lib/js/cssRound.js"></script>
+	<!-- 도시별통계 날짜 자동 오류 수정 je -->
+	<!--<script src="http://v2.theminda.com/lib/js/prototype.js"></script>-->
+	<script src="http://v2.theminda.com/lib/js/jquery.js"></script>
+	<script>
+	var $j = jQuery.noConflict();
+	</script>
+	<script src="http://v2.theminda.com/lib/js/jquery.cookie.js"></script>
+</head>
+
+<body>
+	<!-- popup일때에는 pop_body 클래스 추가 -->
+	<div align="center" class="wrap">
+		<!-- yuna : wrap추가, 메인페이지 일때 main 클래스 추가 -->
+		<div id="layout_container">
+			<!-- 상단 대메뉴바 -->
+			<div id="layout_top" class="header">
+				<!-- yuna : header 추가 -->
+				<div class="left">
+					<h1 class="logo"><a href="../index.php"><img src="http://v2.theminda.com/admin/img/common/logo_org.png" alt="민다 로고"/><span class="txt"></span>관리자</a></h1>
+				</div>
+				<div class="center">
+					<!-- 활성화 시 active 클래스 추가 -->
+					<a href="">기본 설정</a>
+					<a href="" class="active">숙소 관리</a>
+					<a href="">숙소 예약 관리</a>
+					<a href="">숙소 게시판 관리</a>
+					<a href="">여행정보 관리</a>
+					<a href="">여행정보 관리</a>
+					<a href=""> 통계관리</a>
+					<a href="">자동발송 메일/문자</a>
+				</div>
+				<div class="right">
+					<a href="../../index.php" target="_blank">사용자 홈</a>
+					<a href="http://webmail.minbakdanawa.com/" target="_blank">메일</a>
+					<a href="http://www.samack.com/freeboard/zboard.php?id=test1" target="_blank">인트라넷</a>
+					<a href="../../member/logout.php?mode=admin">로그아웃</a>
+				</div>
+			</div>
+			<!--// header end -->
+			<!-- 왼쪽 메뉴바 -->
+			<div class="container">
+				<!-- yuna : container 클래스로 layout_left, layout_main 감쌈  -->
+				<div id="layout_left" class="lnb">
+					<!-- yuna : lnb 추가 -->
+					<div id="menu">
+						<div class="title">예약관리</div>
+						<ul>
+							<li class="item"><a href="list.php?step=default&amp;bookdt[]=-6month" class="chk">예약리스트</a></li>
+							<li class="item"><a href="list.php?step=confirm">확정예약</a></li>
+							<li class="item"><a href="list_standby.php?step=standby">예약대기</a></li>
+							<li class="item"><a href="list.php?step=refund">확정 후 불가</a></li>
+							<li class="item"><a href="list.php?step=overbook">오버부킹</a></li>
+							<li class="item"><a href="list.php?step=double">더블불가</a></li>
+							<li class="item"><a href="list.php?step=noshow">No Show</a></li>
+							<li class="item"><a href="list.reject.php?bookdt[]=-10day">불가응답</a></li>
+						</ul>
+						<div class="title">문자관리</div>
+						<ul>
+							<li class="item"><a href="list.php?step=paydt">마감일임박</a></li>
+							<li class="item"><a href="list_confi.php?step=checkin">체크인임박 확정</a></li>
+							<li class="item"><a href="list_possi.php?step=checkin_possi">체크인임박 가능</a></li>
+							<li class="item"><a href="list_sendSMS.php">문자배치발송</a></li>
+						</ul>
+						<div class="title">예약변경</div>
+						<ul>
+							<li class="item"><a href="chg_book.php">예약스텝 변경</a></li>
+							<li class="item"><a href="modify.php">예약상세 변경</a></li>
+							<li class="item"><a href="log.php">예약변경 로그</a></li>
+						</ul>
+						<div class="title">환불/정산관리</div>
+						<ul>
+							<li class="item"><a href="refund.php">여행자환불관리</a></li>
+							<li class="item"><a href="acc.deposit.php">민박정산관리</a></li>
+							<li class="item"><a href="acc.salesdaily.php">일일매출표</a></li>
+						</ul>
+						<div class="title">여행사예약</div>
+						<ul>
+							<li class="item"><a href="list.agency_v2.php">예약문의</a></li>
+							<li class="item"><a href="list.agency_v2.php?step=17">확정요청</a></li>
+							<li class="item"><a href="list.agency3_v2.php">개별예약대기</a></li>
+							<li class="item"><a href="list.agency4_v2.php">개별예약가능</a></li>
+							<li class="item"><a href="list.agency2.php">개별예약</a></li>
+							<li class="item"><a href="acc.agency.php">정산관리</a></li>
+						</ul>
+						<div class="title">유레일예약</div>
+						<ul>
+							<li class="item"><a href="eurail.php">예약리스트</a></li>
+							<li class="item"><a href="rts.php">구간권리스트</a></li>
+							<li class="item"><a href="eurail.php?mode=deadline">마감일임박</a></li>
+						</ul>
+						<div class="title">민박다나와수익</div>
+						<ul>
+							<li class="item"><a href="acc.php">민박다나와수익</a></li>
+							<li class="item"><a href="acc2.php">민박다나와수익2</a></li>
+						</ul>
+						<div class="title">정리예정</div>
+						<ul>
+							<li class="item"><a href="list.php?step=chgreserve">예약변경</a></li>
+							<li class="item"><a href="list.php?step=cancel">예약취소</a></li>
+							<li class="item"><a href="list.php?step=past">지난예약조회</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--// lnb end-->
+				<style>
+				.forToggleClass {
+					display: none;
+				}
+				</style>
+				<script>
+				$j("#menu div.title").click(function() {
+					$j(this).next().toggleClass("forToggleClass");
+				});
+				</script>
+				<!-- 본문영역 -->
+				<div id="layout_main" class="contents">
+					<!-- yuna contents 클래스 추가 -->
+					<script src="http://v2.theminda.com/lib/js/calendar.js"></script>
+					<iframe id="calObj" style="position:absolute;display:none;background:#ffffff;width:200px;height:166px;z-index:999" frameborder="0" scrolling="no"></iframe>
+					<style>
+					#tb_list td {
+						margin: 0;
+						padding-top: 6px;
+						font: 11px 돋움;
+						letter-spacing: -1px;
+					}
+					</style>
+					<div class="t">예약리스트</div>
+					<form name="searchFm">
+						<table class="tb1">
+							<tbody>
+								<tr>
+									<th>예약신청일</th>
+									<td>
+										<input type="text" name="bookdt[]" value="2016-05-03" onclick="calendar()" size="12" class="bold"> ~
+										<input type="text" name="bookdt[]" value="" onclick="calendar()" size="12" class="bold">
+									</td>
+									<th>규정명(숙소예약금)</th>
+									<td class="null">
+										<input type="checkbox" name="cancelrule[]" value="1">일반A(0%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="2">일반B(10%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="3">일반C(20%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="4">북미A(90%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="91">국내A (90%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="93">대만A(90%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="95">이프 테스트(50%)&nbsp;
+										<input type="checkbox" name="cancelrule[]" value="97">대만(테스트)(90%)&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<th>분류검색</th>
+									<td>
+										<div id="category[]">
+											<select name="category[]">
+												<option value="" style="color: rgb(255, 255, 255); background-color: rgb(113, 134, 176);"> 1차 분류 </option>
+												<option value="001"> 유럽</option>
+												<option value="002"> 지중해</option>
+												<option value="003"> 아시아</option>
+												<option value="005"> 북미</option>
+												<option value="006"> 중/남미</option>
+												<option value="007"> 오세아니아</option>
+												<option value="008"> 아프리카</option>
+												<option value="009"> 국내</option>
+												<option value="010"> 테스트</option>
+											</select>
+											<select name="category[]">
+												<option value="" style="color: rgb(255, 255, 255); background-color: rgb(113, 134, 176);"> 2차 분류 </option>
+											</select>
+											<select name="category[]">
+												<option value="" style="color: rgb(255, 255, 255); background-color: rgb(113, 134, 176);"> 3차 분류 </option>
+											</select>
+										</div>
+										<script>
+										var x = new selectCategory('category[]', 3, '', "");
+										</script>
+										<input type="radio" name="isabroad" value="0" checked=""> 전체
+										<input type="radio" name="isabroad" value="2"> 해외
+										<input type="radio" name="isabroad" value="1"> 국내
+									</td>
+									<th>결제방법</th>
+									<td>
+										<select name="paymethod">
+											<option value="">전체
+											</option>
+											<option value="b">무통장 </option>
+											<option value="c">신용카드 </option>
+											<option value="f">해외카드 </option>
+											<option value="o">실시간 계좌이체 </option>
+											<option value="v">가상계좌 </option>
+											<option value="x">할인쿠폰/포인트 결제 </option>
+											<option value="w">캐쉬 결제 </option>
+											<option value="a">여행사결제 </option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="2">검색옵션</th>
+									<td rowspan="2">
+										<input type="checkbox" name="read" class="null">미확인(X)
+										<input type="checkbox" name="memo" class="null">메모(<img src="http://v2.theminda.com/admin/img//i_comment.gif">)
+										<input type="checkbox" name="chgreserve" class="null">예약변경
+										<input type="checkbox" name="refundchk" class="null">환불
+										<!-- <input type="checkbox" name="otherok"  class="null">딴데확정 -->
+										<input type="checkbox" name="no_parity" class="null"> 최근6개월간 미평가
+										<br>
+										<input type="checkbox" name="flag[]" value="1"> 확정후불가
+										<input type="checkbox" name="flag[]" value="2"> 컴플레인
+										<input type="checkbox" name="flag[]" value="4"> 클레임
+										<br>
+										<select name="mine">
+											<option value="">담당자선택
+											</option>
+											<option value="enhye0329"> 산들 </option>
+											<option value="eu004"> 라씨 </option>
+											<option value="geoudn33"> 케이트 </option>
+											<option value="guchil"> 바다 </option>
+											<option value="guswjd836"> 제니 </option>
+											<option value="heen23"> 희아 </option>
+											<option value="sg9587"> 방진 </option>
+											<option value="sunhwa724"> 써드니 </option>
+										</select>
+									</td>
+									<th>예약형식</th>
+									<td>
+										<input type="checkbox" name="booktype" value="1" class="null">24
+										<input type="checkbox" name="booktype" value="9" class="null">실 </td>
+								</tr>
+								<tr>
+									<th>접속경로</th>
+									<td>
+										<input type="checkbox" name="accesspath[]" value="" class="null">사이트(PC)
+										<input type="checkbox" name="accesspath[]" value="M" class="null">사이트(모바일)
+										<input type="checkbox" name="accesspath[]" value="AP" class="null">안드로이드앱
+										<br>
+										<input type="checkbox" name="accesspath[]" value="iP" class="null">아이폰앱
+										<input type="checkbox" name="accesspath[]" value="MA" class="null">모바일웹(안드로이드)
+										<input type="checkbox" name="accesspath[]" value="MW" class="null">모바일웹(아이폰)
+									</td>
+								</tr>
+								<tr>
+									<th>체크인날짜</th>
+									<td>
+										<input type="text" name="staydt[]" value="" onclick="calendar()" size="12"> ~
+										<input type="text" name="staydt[]" value="" onclick="calendar()" size="12">
+									</td>
+									<th>부분취소</th>
+									<td class="null">
+										<input type="radio" name="cpart" value="0" checked=""> 전체
+										<input type="radio" name="cpart" value="1"> 부분취소 예약
+									</td>
+								</tr>
+								<tr>
+									<th>예약확정일</th>
+									<td>
+										<input type="text" name="paydt[]" value="" onclick="calendar()" size="12"> ~
+										<input type="text" name="paydt[]" value="" onclick="calendar()" size="12">
+									</td>
+									<th>예약취소일</th>
+									<td>
+										<input type="text" name="canceldt[]" value="" onclick="calendar()" size="12"> ~
+										<input type="text" name="canceldt[]" value="" onclick="calendar()" size="12">
+									</td>
+								</tr>
+								<tr>
+									<th>검색</th>
+									<td>
+										<select name="stype">
+											<option value="">선택해주세요
+											</option>
+											<option value="a.bookno">예약번호
+											</option>
+											<option value="a.goodsnm">민박명
+											</option>
+											<option value="a.name">이름
+											</option>
+											<option value="a.mid">아이디
+											</option>
+											<option value="a.namepayer">입금자명
+											</option>
+											<option value="a.stayday">숙박일수
+											</option>
+											<option value="a.mobile">핸드폰
+											</option>
+											<option value="a.phone">전화번호
+											</option>
+											<option value="a.email">이메일
+											</option>
+											<option value="a.bookpricekor">예약금
+											</option>
+											<option value="a.memo">관리자/여행사메모
+											</option>
+										</select>
+										<input type="text" name="sword" value="" style="width:200px">
+										<br>
+										<select name="stype2">
+											<option value="">선택해주세요
+											</option>
+											<option value="a.bookno">예약번호
+											</option>
+											<option value="g.goodsnm">민박명
+											</option>
+											<option value="a.name">이름
+											</option>
+											<option value="a.mid">아이디
+											</option>
+											<option value="a.namepayer">입금자명
+											</option>
+											<option value="a.stayday">숙박일수
+											</option>
+											<option value="a.mobile">핸드폰
+											</option>
+											<option value="a.phone">전화번호
+											</option>
+											<option value="a.email">이메일
+											</option>
+											<option value="a.bookpricekor">예약금
+											</option>
+											<option value="a.memo">관리자/여행사메모
+											</option>
+										</select>
+										<input type="text" name="sword2" value="" style="width:200px">
+									</td>
+									<th>예약상태</th>
+									<td>
+										<select name="astep">
+											<option value="">선택해주세요
+											</option>
+											<option value="1">예약대기 </option>
+											<option value="3">예약가능 </option>
+											<option value="9">예약확정 </option>
+											<option value="-29">예약불가 </option>
+											<option value="-19">예약취소 </option>
+											<option value="-99">결제취소 </option>
+											<option value="-89">확정후불가 </option>
+											<option value="-1">결제시도 </option>
+											<option value="-9">결제실패 </option>
+											<option value="-39">미입금취소 </option>
+											<option value="-49">무응답취소 </option>
+											<option value="-59">더블불가 </option>
+											<option value="-69">오버부킹 </option>
+											<option value="-79">No Show </option>
+										</select>
+										&nbsp;&nbsp;
+										<input type="checkbox" name="inbank" class="null"> 무통장입금
+									</td>
+								</tr>
+								<tr>
+									<th>객실형태 / 객실명</th>
+									<td>
+										<select name="kind">
+											<option value="">객실형태
+											</option>
+											<option value="1">도미토리
+											</option>
+											<option value="2">일반실
+											</option>
+											<option value="3">콘도
+											</option>
+										</select>
+										<select name="type">
+											<option value="">객실형태
+											</option>
+										</select>
+										<input type="text" name="roomnm" value="" style="width:200px">
+									</td>
+									<th>결체취소 환불상태</th>
+									<td class="null">
+										<input type="checkbox" name="canceltype[]" value="1"> 민박주보상
+										<input type="checkbox" name="canceltype[]" value="2"> 여행자환불
+										<input type="checkbox" name="canceltype[]" value="3"> 민박주+여행자환불
+									</td>
+								</tr>
+								<tr>
+									<th>예약자구분</th>
+									<td>
+										<input type="radio" name="bt" value="" checked=""> 전체
+										<input type="radio" name="bt" value="1"> B2C (일반예약)
+										<input type="radio" name="bt" value="2"> B2B (여행사예약)
+									</td>
+									<th>체크인전 취소</th>
+									<td>
+										체크인
+										<input type="text" name="datediff[]" value="" size="3">일 ~
+										<input type="text" name="datediff[]" value="" size="3">일 전 취소
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btn">
+							<input type="image" src="http://v2.theminda.com/admin/img//btn_submit.gif" class="null">
+						</div>
+					</form>
+					<form method="post" action="indb.php" onsubmit="return chkForm(this)">
+						<input type="hidden" name="mode" value="bookPay">
+						<table class="tb9">
+							<tbody>
+								<tr>
+									<th>기능 아이콘</th>
+									<th>표시 아이콘</th>
+								</tr>
+								<tr>
+									<td valign="top">
+										<font color="blue">
+											<img src="http://v2.theminda.com/admin/img//i_s.gif"> : 예약스탭(Step) 변경 (예약상태값, 무통장체크기능 등)
+											<br>
+											<img src="http://v2.theminda.com/admin/img//i_d.gif"> : 예약상세(Detail) 변경 (예약정보, 숙박수, 인원수 등)
+											<br>
+											<img src="http://v2.theminda.com/admin/img//i_link.gif"> : [연결] 클릭하면 여행자/민박주 홈으로 새창이 뜸
+											<br>
+											<img src="http://v2.theminda.com/admin/img//btn_delete_small.gif"> : '결제시도' '결제실패' 일 경우에만 작용하는 '예약삭제'기능. DB에서 아예 삭제됨.</font>
+									</td>
+									<td valign="top">
+										<font color="blue">
+											<img src="http://v2.theminda.com/admin/img//i_comment.gif" style="vertical-align:middle; margin-bottom:5px; margin-left:16px;"> : 민다관리자메모(코멘트)가 있는 예약
+											<br>
+											<img src="http://v2.theminda.com/admin/img//i_plus.gif" style="vertical-align:middle; margin-bottom:5px; margin-left:15px;"> : 예약한 객실이 2개 이상일 경우 표기
+											<br>
+											<img src="http://v2.theminda.com/admin/img//i_bathroom.gif" style="vertical-align:middle; margin-bottom:2px;"> : 전용욕실표기. 일반객실(1~6인실)에서만 표기됨.
+											<br> 접속경로 : M-사이트(모바일), AP-안드로이드앱, iP-아이폰앱, MA-모바일웹(안드로이드), MW-모바일웹(아이폰)
+										</font>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<div>
+							<div style="padding:5px" class="eng left">
+								Total <b>869</b>, Page <b>1</b> / 44 </div>
+							<div class="right">
+								<a href="javascript:dnExcel()"><img src="http://v2.theminda.com/admin/img//sbtn_dn_excel.gif"></a>
+							</div>
+						</div>
+						<style>
+						.eng {
+							font: 8pt tahoma !important;
+							letter-spacing: 0 !important;
+						}
+
+						#tb_list,
+						.recinfo {
+							position: relative;
+							width: 1440px;
+						}
+
+						.page {
+							width: 1400px;
+						}
+						/*.tb_list_wrap {position:relative; height:1000px;}*/
+
+						#layout_container {
+							width: 1603px;
+						}
+						</style>
+						<script language="javascript">
+						<!--
+						function ReallyDEL() {
+							if (confirm('정말로 삭제하시겠습니까?\n\n삭제하시면 복구가 불가능합니다.')) return true;
+							return false;
+						}
+						//-->
+						</script>
+						<div class="tb_list_wrap">
+							<table class="tb2" id="tb_list">
+								<tbody>
+									<tr bgcolor="#f7f7f7">
+										<th rowspan="2">선
+											<br>택</th>
+										<th rowspan="2" class="_orderby" name="a.memo" style="cursor: pointer;"><img src="http://v2.theminda.com/admin/img//i_comment.gif"></th>
+										<th rowspan="2" class="_orderby" name="a.booktype" style="cursor: pointer;">유
+											<br>형</th>
+										<th rowspan="2" class="_orderby" name="a.accesspath" style="cursor: pointer;">접
+											<br>속</th>
+										<th rowspan="2" class="_orderby" name="a.goodsno" style="cursor: pointer;">예약번호</th>
+										<th rowspan="2" class="_orderby" name="a.name" style="cursor: pointer;">이름
+											<br>(ID)</th>
+										<th rowspan="2" class="_orderby" name="g.goodsnm" style="cursor: pointer;">민박명
+											<br>(객실명)</th>
+										<th rowspan="2" class="_orderby" name="a.staydt" style="cursor: pointer;">체크인</th>
+										<th rowspan="2" class="_orderby" name="a.stayday" style="cursor: pointer;">박</th>
+										<th rowspan="2" class="_orderby" name="checkout" style="cursor: pointer;">체크아웃</th>
+										<th rowspan="2" class="_orderby" name="a.bookdt" style="cursor: pointer;">신청일</th>
+										<th rowspan="2" class="_orderby" name="a.waittime" style="cursor: pointer;">대기
+											<br>(h)</th>
+										<th rowspan="2" class="_orderby" name="a.paydt" style="cursor: pointer;">확정일</th>
+										<th rowspan="2" class="_orderby" name="a.canceldt" style="cursor: pointer;">취소일</th>
+										<th rowspan="2" class="_orderby" name="a.read" style="cursor: pointer;">확
+											<br>인</th>
+										<th rowspan="2" class="_orderby" name="a.astep" style="cursor: pointer;">상태</th>
+										<th rowspan="2" class="_orderby" name="a.tprice" style="cursor: pointer;">예약금</th>
+										<th rowspan="2" class="_orderby" name="a.bookpricekor" style="cursor: pointer;">예약수수료
+											<br>(현지화)
+											<br>
+										</th>
+										<th rowspan="2">
+											<a class="_orderby" name="a.depositpricekor" style="cursor: pointer;">
+												<font color="white">숙소예약금</font>
+											</a>
+											<br> (%/마감일)
+										</th>
+										<th colspan="4">결제수단</th>
+									</tr>
+									<tr bgcolor="#f7f7f7">
+										<th>
+											<a class="_orderby" name="a.dccoupon" style="cursor: pointer;">
+												<font color="white">쿠폰</font>
+											</a>
+										</th>
+										<th>
+											<a class="_orderby" name="a.emoney" style="cursor: pointer;">
+												<font color="white">포인트</font>
+											</a>
+										</th>
+										<th>
+											<a class="_orderby" name="a.ecash" style="cursor: pointer;">
+												<font color="white">캐쉬</font>
+											</a>
+										</th>
+										<th>
+											<a class="_orderby" name="a.tprice" style="cursor: pointer;">
+												<font color="white">실결제</font>
+											</a>
+										</th>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td>iP</td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478074324792&amp;step=default"><b class="red">1478074324792</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478074324792"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478074324792"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(네싸룸)</font>
+											<img src="http://v2.theminda.com/admin/img//i_bathroom.gif">
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-29</td>
+										<!--박-->
+										<td class="eng">5</td>
+										<!--체크아웃-->
+										<td class="eng">17-01-03</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng"></td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											예약확정 </td>
+										<!--예약금-->
+										<td class="eng" align="right">34,000</td>
+										<!--수수료-->
+										<td class="eng" align="right">34,000
+											<br>
+											<font color="#AAA">(850)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">3,000</td>
+										<!--포인트-->
+										<td align="right" class="eng">31,000</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">0</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td>iP</td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478073925535&amp;step=default"><b class="red">1478073925535</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478073925535"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478073925535"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(6 bed 도미토리)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-29</td>
+										<!--박-->
+										<td class="eng">7</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-06</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng"></td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											예약확정 </td>
+										<!--예약금-->
+										<td class="eng" align="right">24,400</td>
+										<!--수수료-->
+										<td class="eng" align="right">24,400
+											<br>
+											<font color="#AAA">(610)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">1,000</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">23,400</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478063626781&amp;step=default"><b class="red">1478063626781</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478063626781"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478063626781"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(20 bed 네싸꼬야)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-20</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-20</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">32,400</td>
+										<!--수수료-->
+										<td class="eng" align="right">32,400
+											<br>
+											<font color="#AAA">(810)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">1,000</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">31,400</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478063553856&amp;step=default"><b class="red">1478063553856</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478063553856"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478063553856"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(6 bed 도미토리)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-22</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-22</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">14,400</td>
+										<!--수수료-->
+										<td class="eng" align="right">14,400
+											<br>
+											<font color="#AAA">(360)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">1,000</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">13,400</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478063358184&amp;step=default"><b class="red">1478063358184</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478063358184"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478063358184"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(네싸룸2)</font>
+											<img src="http://v2.theminda.com/admin/img//i_bathroom.gif">
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-14</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-14</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">92,800</td>
+										<!--수수료-->
+										<td class="eng" align="right">92,800
+											<br>
+											<font color="#AAA">(2,320)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">92,800</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478062356876&amp;step=default"><b class="red">1478062356876</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478062356876"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478062356876"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(20 bed 네싸꼬야)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-29</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">17-01-05</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">25,200</td>
+										<!--수수료-->
+										<td class="eng" align="right">25,200
+											<br>
+											<font color="#AAA">(630)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">25,200</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478062117528&amp;step=default"><b class="red">1478062117528</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478062117528"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478062117528"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(20 bed 네싸꼬야)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-06</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-13</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											No Show </td>
+										<!--예약금-->
+										<td class="eng" align="right">20,000</td>
+										<!--수수료-->
+										<td class="eng" align="right">20,000
+											<br>
+											<font color="#AAA">(500)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">20,000</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478062034013&amp;step=default"><b class="red">1478062034013</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478062034013"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478062034013"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(네싸룸)</font>
+											<img src="http://v2.theminda.com/admin/img//i_bathroom.gif">
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-29</td>
+										<!--박-->
+										<td class="eng">7</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-06</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											확정후불가 </td>
+										<!--예약금-->
+										<td class="eng" align="right">62,000</td>
+										<!--수수료-->
+										<td class="eng" align="right">62,000
+											<br>
+											<font color="#AAA">(1,550)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">62,000</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478061824869&amp;step=default"><b class="red">1478061824869</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478061824869"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478061824869"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(6 bed 도미토리)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">17-01-04</td>
+										<!--박-->
+										<td class="eng">6</td>
+										<!--체크아웃-->
+										<td class="eng">17-01-10</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											오버부킹 </td>
+										<!--예약금-->
+										<td class="eng" align="right">21,600</td>
+										<!--수수료-->
+										<td class="eng" align="right">21,600
+											<br>
+											<font color="#AAA">(540)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">21,600</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478054116303&amp;step=default"><b class="red">1478054116303</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478054116303"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478054116303"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=lassi04" target="_blank">조우영</a>
+											<a href="../../member/_conn_admin.php?mid=lassi04" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(lassi04)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5481" target="_blank">드니드니 게스하우스</a></b>
+											<a href="../../manager/_conn_admin.php?mid=sunsun0724" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(6 bed 남자도미토리(최소 3박))</font>
+											<span class="green">(3박이상숙박가능)</span>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-25</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-11-28</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">9,400</td>
+										<!--수수료-->
+										<td class="eng" align="right">9,400
+											<br>
+											<font color="#AAA">(7)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">1,000</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">8,400</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">0</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478053980662&amp;step=default"><b class="red">1478053980662</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478053980662"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478053980662"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=lassi04" target="_blank">조우영</a>
+											<a href="../../member/_conn_admin.php?mid=lassi04" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(lassi04)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5481" target="_blank">드니드니 게스하우스</a></b>
+											<a href="../../manager/_conn_admin.php?mid=sunsun0724" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(6 bed 남자도미토리(최소 3박))</font>
+											<span class="green">(3박이상숙박가능)</span>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-29</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-02</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">10,100</td>
+										<!--수수료-->
+										<td class="eng" align="right">10,100
+											<br>
+											<font color="#AAA">(7.5)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">10,100</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">0</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478053444042&amp;step=default"><b class="red">1478053444042</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478053444042"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478053444042"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(20 bed 네싸꼬야)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-01</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-01</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">12,800</td>
+										<!--수수료-->
+										<td class="eng" align="right">12,800
+											<br>
+											<font color="#AAA">(320)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">1,000</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">11,800</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478051912790&amp;step=default"><b class="red">1478051912790</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478051912790"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478051912790"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(20 bed 네싸꼬야)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-12-30</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">17-01-03</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">28,800</td>
+										<!--수수료-->
+										<td class="eng" align="right">28,800
+											<br>
+											<font color="#AAA">(720)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">28,800</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td></td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478050511594&amp;step=default"><b class="red">1478050511594</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478050511594"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478050511594"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=mon11033" target="_blank">황은주</a>
+											<a href="../../member/_conn_admin.php?mid=mon11033" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(mon11033)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=5399" target="_blank">[테스트] 대만의 집 </a></b>
+											<a href="../../manager/_conn_admin.php?mid=sg4419587" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(20 bed 네싸꼬야)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-27</td>
+										<!--박-->
+										<td class="eng">0</td>
+										<!--체크아웃-->
+										<td class="eng">16-12-02</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng">16-11-02</td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											결제취소 </td>
+										<!--예약금-->
+										<td class="eng" align="right">15,200</td>
+										<!--수수료-->
+										<td class="eng" align="right">15,200
+											<br>
+											<font color="#AAA">(380)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">15,200</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">0</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td>MA</td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478050493842&amp;step=default"><b class="red">1478050493842</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478050493842"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478050493842"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=redberre" target="_blank">전지전능</a>
+											<a href="../../member/_conn_admin.php?mid=redberre" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(redberre)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=1120" target="_blank">쾰른로뎀민박</a></b>
+											<a href="../../manager/_conn_admin.php?mid=rodem" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(2인실-1)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-09</td>
+										<!--박-->
+										<td class="eng">6</td>
+										<!--체크아웃-->
+										<td class="eng">16-11-15</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng"></td>
+										<!--확인-->
+										<td>O</td>
+										<!--상태-->
+										<td>
+											예약확정 </td>
+										<!--예약금-->
+										<td class="eng" align="right">54,200</td>
+										<!--수수료-->
+										<td class="eng" align="right">54,200
+											<br>
+											<font color="#AAA">(40.2)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">54,200</font>
+										</td>
+									</tr>
+									<tr align="center">
+										<!--선택-->
+										<td>
+										</td>
+										<!--코멘트-->
+										<td></td>
+										<!--유형-->
+										<td>실</td>
+										<!--접속경로-->
+										<td>MA</td>
+										<!--예약번호-->
+										<td class="eng"><a href="view.php?bookno=1478049172576&amp;step=default"><b class="red">1478049172576</b></a>
+											<br>
+											<a href="./chg_book.php?bookno=1478049172576"><img src="http://v2.theminda.com/admin/img//i_s.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+											<a href="./modify.php?bookno=1478049172576"><img src="http://v2.theminda.com/admin/img//i_d.gif" alt="" style="vertical-align:middle; margin-bottom:5px; margin-left:4px;" border="0"></a>
+										</td>
+										<!--이름-->
+										<td>
+											<a href="../member/write.php?mode=modiMember&amp;mid=redberre" target="_blank">가득하네</a>
+											<a href="../../member/_conn_admin.php?mid=redberre" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999" face="verdana">(redberre)</font>
+										</td>
+										<!--민박명-->
+										<td class="c1">
+											<b><a href="../goods/write.php?mode=modify&amp;goodsno=1120" target="_blank">쾰른로뎀민박</a></b>
+											<a href="../../manager/_conn_admin.php?mid=rodem" target="_blank"><img src="http://v2.theminda.com/admin/img//i_link.gif" border="0"></a>
+											<br>
+											<font color="999999">(2인실-2)</font>
+										</td>
+										<!--체크인-->
+										<td class="eng">16-11-14</td>
+										<!--박-->
+										<td class="eng">2</td>
+										<!--체크아웃-->
+										<td class="eng">16-11-16</td>
+										<!--신청일-->
+										<td class="eng">16-11-02</td>
+										<!--대기-->
+										<td class="eng">0</td>
+										<!--확정일-->
+										<td class="eng">16-11-02</td>
+										<!--취소일-->
+										<td class="eng"></td>
+										<!--확인-->
+										<td>X</td>
+										<!--상태-->
+										<td>
+											예약확정 </td>
+										<!--예약금-->
+										<td class="eng" align="right">27,000</td>
+										<!--수수료-->
+										<td class="eng" align="right">27,000
+											<br>
+											<font color="#AAA">(20)</font>
+										</td>
+										<!--숙소예약금-->
+										<td align="right" class="eng">
+											<div>0</div>(0 / 4)</td>
+										<!--쿠폰-->
+										<td align="right" class="eng">0</td>
+										<!--포인트-->
+										<td align="right" class="eng">0</td>
+										<!--캐쉬-->
+										<td align="right" class="eng">0</td>
+										<!--실결제-->
+										<td align="right" class="eng">
+											<font color="blue">27,000</font>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="recinfo btn">
+							<input type="submit" value="입금확인" style="padding:5px;border:0px" onclick="return confirm('정말로 입금확인하시겠습니까?')">
+						</div>
+					</form>
+					<div class="page"> <b class="red" style="font:bold 9pt tahoma">1</b>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=2" style="font:9pt tahoma">2</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=3" style="font:9pt tahoma">3</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=4" style="font:9pt tahoma">4</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=5" style="font:9pt tahoma">5</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=6" style="font:9pt tahoma">6</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=7" style="font:9pt tahoma">7</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=8" style="font:9pt tahoma">8</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=9" style="font:9pt tahoma">9</a>
+						<font color="#C3C3C3">/</font> <a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=10" style="font:9pt tahoma">10</a>
+						<a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=11" style="font:7pt 돋움">▶</a>
+						<a href="/admin/reserve/list.php?step=default&amp;bookdt%5B0%5D=2016-05-03&amp;orderby=a.bookno+desc&amp;page=44" style="font:9pt tahoma">44</a>
+					</div>
+				</div>
+				<!-- //contents end -->
+			</div>
+			<!--// container end-->
+			<!-- 하단영역 -->
+			<div id="layout_bottom" class="footer">
+				<!-- yuna footer 클래스 추가 -->
+				Copyright (c)2008 <b>icnsoft</b> co. All rights reserved.
+			</div>
+		</div>
+	</div>
+	<div id="objPopupLayerBg" style="height:1639px;width:100%"></div><!-- yuna : 기존 스크립트 width, height, top, left값 유지 -->
+	<div id="objPopupLayer" style=" left: 667.5px; top: 210px; width: 506px; height: 320px;"><!-- yuna : 기존 스크립트 width, height, top, left값 유지 -->
+		<!-- 닫기 -->
+		<div id="bottomCloseArea">
+			<a href="javascript:closeLayer()">CLOSE</a>
+		</div>
+		<!--// 닫기 -->
+		<!-- 아이프레임으로 들어가 있던 부분 -->
+		<div class="pop-contents">
+			<!--pop-contents 라는 div추가하여 popup-contents를 감쌈-->
+			<div class=t>스팟 미승인 사유입력</div>
+			<form onsubmit="return onCheck(this);" encType=multipart/form-data method=post name=reject_fm action=indb.php>
+				<input type=hidden value=spot_reject name=mode>
+				<input type=hidden value=967 name=reqno>
+				<input type=hidden name=planno>
+				<input type=hidden value=1 name=req_type_cd>
+				<input type=hidden value=2 name=reject_type_cd>
+				<div>
+					<select onchange=javascript:onSelected() name=select_text>
+						<option selected value="">선택하세요
+						<option value="작성해주신 내용에 오타와 잘못된 맞춤법이 눈에 띄어 오픈을 하기 어렵습니다.">오타, 맞춤법 틀린것이 너무 많아요.
+						<option value="작성해주신 내용에 광고, 홍보 내용이 있습니다. 해당 페이지는 스팟에 대한 리얼팁, 여행팁 등 여행자들을 위한 정보공유가 목적이므로 목적에 맞는 내용으로 입력해주시기 바랍니다.">광고, 홍보가 있어요.
+						<option value="작성해주신 내용은 해당 스팟과 맞지 않는 내용으로 판단됩니다. 혹시 스팟을 잘못 알고 계신 건 아닌지 확인해주시기 바랍니다.">스팟과 맞지 않은 내용이에요.
+						<option value="등록하신 사진은 해당 스팟의 사진이 아닙니다. 다시 한번 확인하신 후 스팟의 사진을 등록해주시기 바랍니다.">해당 스팟이 아니에요.
+						<option value="사진에 얼굴이 노출되면 추후 초상권에 문제가 있을 수 있습니다. 초상권에 문제가 없도록 사진 촬영을 하시거나 얼굴을 센스있게 가려 등록해 주시기 바랍니다.">초상권에 문제가 있는 사진입니다.
+						<option value="등록하신 사진은 공공질서에 위배가 되는 사진으로 보여집니다. 앞으로는 이러한 사진을 절대 등록하지 마시길 당부 부탁드립니다.">공공질서에 위배가 되는 사진입니다.</OPTION>
+					</select>
+					<BR>
+					<TEXTAREA style="WIDTH: 100%" rows=10 name=admin_comment msg="미승인  사유를 입력하세요" required></TEXTAREA>
+					<div class=btn>
+						<input class=null src="http://www.theminda.com/admin/img/btn_submit.gif" type=image title="확인" />
+						<A href="javascript:parent.closeLayer()">
+							<IMG src="http://www.theminda.com/admin/img/btn_cancel.gif" alt="취소">
+						</A>
+					</div>
+				</div>
+			</FORM>
+		</div>
+		<!--// 아이프레임으로 들어가 있던 부분 -->
+	</div>
+</body>
+
+</html>

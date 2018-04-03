@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100">
+    <title> 민다(민박다나와) 파트너홈 </title>
+    <!-- 기존 css -->
+    <link rel="stylesheet" href="/manager/style.css">
+    <link rel="stylesheet" href="/manager/layout.css">
+    <link rel="stylesheet" href="/manager/ui.css">
+    <link rel="stylesheet" href="/manager/css/font.css">
+    <!-- css -->
+    <link rel="stylesheet" href="/manager/common/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/manager/common/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="/manager/common/css/slider.css">
+    <link rel="stylesheet" href="/manager/common/css/daterangepicker.css">
+    <link rel="stylesheet" href="/manager/common/css/nanoscroller.css">
+    <link rel="stylesheet" href="/manager/common/css/common.css">
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <link rel="stylesheet" href="/manager/common/css/admin.css">
+    <script src="/manager/jquery.js"></script>
+    <!-- js -->
+    <!--[if lt IE 9]>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/manager/common.js"></script>
+    <script src="/lib/js/common.js"></script>
+    <script src="/lib/js/chkForm.js"></script>
+    <script src="/lib/js/selectCategory.js"></script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+
+<body class="master">
+<!-- [D] 숙소주홈 class="master" -->
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+    <!-- header -->
+    <header id="hd">
+        <div class="hd_top">
+            <div class="clearfix">
+                <!--h1 class="logo"><a href="/manager/"><img src="/manager/common/img/logo_big.png" alt="민다(민박다나와) 파트너홈"></a></h1-->
+                <h1 class="logo"><a href="/manager/index.php"><img src="/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+                <!--2016-11-29 yuna nav 위치 수정, 클래스 추가 -->
+                <nav class="d_iblock nav-center">
+                    <ul class="clearfix">
+                        <li><a href="/manager/main/index.php" class="active">숙소</a></li>
+                        <li><a href="/manager/tg/index.php">트립</a></li>
+                        <li><a href="/manager/travel/index.php">정보</a></li>
+                    </ul>
+                </nav>
+                <div class="hd_side">
+                    <!--2016-08-31 yuna 공지사항 주석 -->
+                    <!-- <a href="/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+                    <span class="account">런던 킹스크로스 KX HOUSE 1호점, 2호점님</span>
+                    <a href="/manager/manager_edit.php?actionFlag=M" class="btn">정보수정</a>
+                    <a href="/member/logout.php?url=%2Fmanager%2Findex.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+                    <a href="/main/view.php?goodsno=1547" class="btn link-go" target="_blank"><span class="icon_house_org mr5"></span>숙소 바로가기</a>
+                </div>
+            </div>
+        </div>
+        <div class="hd_gnb clearfix w1260">
+            <nav class="pull-left">
+                <ul class="gnb clearfix">
+                    <li><a href="/manager/main/index.php">홈</a></li>
+                    <li><a href="/manager/booking/calendar.php">예약캘린더</a></li>
+                    <li><a href="/manager/booking/index.php">예약관리</a></li>
+                    <li><a href="/manager/room/index.php">객실관리</a></li>
+                    <li><a href="/manager/mypage/room_edit.php">정보관리</a></li>
+                    <li><a href="/manager/board/qna.php">게시물관리</a></li>
+                    <li><a href="/manager/stats/index.php">통계/정산</a></li>
+                    <li><a href="/manager/ad/index.php" class="active">광고관리</a></li>
+                    <li><a href="/manager/cs/qna.php">파트너 지원</a></li>
+                </ul>
+            </nav>
+            <div class="hd_myinfo pull-right">
+                <div>
+                    <span class="res_rule">예약규정 :일반A(10% 예약과 동시에 확정)</span>
+                    <div class="bizmoney-area"><a href="/manager/mypage/bizmoney.php"><i class="icon_money"></i>비즈머니 <span class="color_red">0원</span></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- 페이지시작 -->
+        <div class="w1260 master_ct">
+            <table style="width:1262px;height:100%;padding:0;margin:0;text-algin:center;">
+                <tr>
+                    <td valign="top" width="178px" style="padding-right:30px" nowrap="">
+                        <aside class="content_aside">
+                            <h2 class="aside_tit">광고</h2>
+                            <nav class="snb snb-lg">
+                                <ul>
+                                    <li>
+
+                                        <a href="info.apply.php">광고 안내</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="application.php">광고 신청</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="list.bidding.php">광고 입찰 내역</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="list.bidding2.php">광고 입찰 취소</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="rule.php">광고 운영정책</a>
+                                    </li>
+                                    <li class="active">
+
+                                        <a href="rule.php">광고 보고서</a>
+                                    </li>
+                                </ul></nav>
+                        </aside>
+                    </td>
+                    <td valign="top">
+                        <!-- ad-report -->
+                        <div class="ad-report ad-report__view">
+                            <div class="ad-report__contents">
+                                <div class="ad-report__top">
+                                    <h3 class="ad-report__tit">광고 보고서</h3>
+                                    <ul class="lst_type_dot ad-report__txt-list">
+                                        <li>광고 위치 : $광고유형$ $광고순위$</li>
+                                        <li>통계 기간 : $광고 시작일$ ~ $광고 마감일$</li>
+                                        <li>광고 비용 : $결제금액$ (비즈머니 $사용액$ 사용)</li>
+                                    </ul>
+                                    <div class="ad-report__comment">
+                                        <strong class="ad-report__comment-tit">담당자 코멘트</strong>
+                                        <p class="ad-report__comment-txt">통계 기간 도중 예약시스템을 변경하시는 경우 이용한 기간만큼의 데이터만 보여집니다.</p>
+                                    </div>
+                                    <h4 class="ad-report__subtit">범례</h4>
+                                    <ul class="lst_type_dot ad-report__txt-list">
+                                        <li>광고 위치 : $광고유형$ $광고순위$</li>
+                                        <li>통계 기간 : $광고 시작일$ ~ $광고 마감일$</li>
+                                        <li>광고 비용 : $결제금액$ (비즈머니 $사용액$ 사용)</li>
+                                    </ul>
+                                </div>
+                                <!-- ad-report__statistics -->
+                                <div class="ad-report__statistics">
+                                    <h4 class="ad-report__subtit">예약 통계 요약</h4>
+                                    <div class="tbl-group">
+                                        <div class="tbl-wrap4">
+                                            <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">예약 신청 수</strong></span></div>
+                                            <div class="tb_bx">
+                                                <span class="tb_cell">미광고 숙소</span>
+                                                <span class="tb_cell">나의 숙소</span>
+                                                <span class="tb_cell">대비</span>
+                                            </div>
+                                            <div class="tb_bx ad-report__result">
+                                                <span class="tb_cell">100</span>
+                                                <span class="tb_cell">200</span>
+                                                <span class="tb_cell color_red"><span class="ad-report__icon-up">상승</span>100</span>
+                                            </div>
+                                        </div>
+                                        <div class="tbl-wrap4">
+                                            <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">예약 확정 수</strong></span></div>
+                                            <div class="tb_bx">
+                                                <span class="tb_cell">미광고 숙소</span>
+                                                <span class="tb_cell">나의 숙소</span>
+                                                <span class="tb_cell">대비</span>
+                                            </div>
+                                            <div class="tb_bx ad-report__result">
+                                                <span class="tb_cell">100</span>
+                                                <span class="tb_cell">200</span>
+                                                <span class="tb_cell color_red"><span class="ad-report__icon-up">상승</span>100</span>
+                                            </div>
+                                        </div>
+                                        <div class="tbl-wrap4">
+                                            <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">예약 불가율</strong></span></div>
+                                            <div class="tb_bx">
+                                                <span class="tb_cell">미광고 숙소</span>
+                                                <span class="tb_cell">나의 숙소</span>
+                                                <span class="tb_cell">대비</span>
+                                            </div>
+                                            <div class="tb_bx ad-report__result">
+                                                <span class="tb_cell">100</span>
+                                                <span class="tb_cell">200</span>
+                                                <span class="tb_cell color_sky"><span class="ad-report__icon-down">하락</span>100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// ad-report__statistics -->
+                                <!-- ad-report__statistics -->
+                                <div class="ad-report__statistics">
+                                    <h4 class="ad-report__subtit">클릭 통계 요약</h4>
+                                    <div class="tbl-group">
+                                        <div class="tbl-wrap4">
+                                            <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">클릭 수(페이지뷰)</strong></span></div>
+                                            <div class="tb_bx">
+                                                <span class="tb_cell">미광고 숙소</span>
+                                                <span class="tb_cell">나의 숙소</span>
+                                                <span class="tb_cell">대비</span>
+                                            </div>
+                                            <div class="tb_bx ad-report__result">
+                                                <span class="tb_cell">100</span>
+                                                <span class="tb_cell">200</span>
+                                                <span class="tb_cell color_red"><span class="ad-report__icon-up">상승</span>100</span>
+                                            </div>
+                                        </div>
+                                        <div class="tbl-wrap4">
+                                            <div class="tb_bx"><span class="tb_cell">
+                                                <strong class="ad-report__tbl-tit">클릭률</strong>
+                                                <div class="d_iblock dropdown-hover top right">
+														<button class="no_style"><img src="/manager/common/img/icon_hint_grey.png" alt="안내" /></button>
+														<div class="dropdown-content">
+															<div class="inner">
+                                                                <p>노출 수 대비 클릭 수에 대한 비율입니다.</p>
+															</div>
+														</div>
+													</div>
+                                            </span></div>
+                                            <div class="tb_bx">
+                                                <span class="tb_cell">미광고 숙소</span>
+                                                <span class="tb_cell">나의 숙소</span>
+                                                <span class="tb_cell">대비</span>
+                                            </div>
+                                            <div class="tb_bx ad-report__result">
+                                                <span class="tb_cell">100</span>
+                                                <span class="tb_cell">200</span>
+                                                <span class="tb_cell color_red"><span class="ad-report__icon-up">상승</span>100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// ad-report__statistics -->
+                                <!-- ad-report__detail 상세 보고서 -->
+                                <div class="ad-report__statistics ad-report__detail">
+                                    <h4 class="ad-report__subtit">상세 보고서</h4>
+                                    <!-- ad-report__detail-tbl -->
+                                    <div class="tbl-wrap4  ad-report__detail-tbl">
+                                        <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">예약 신청 수</strong></span></div>
+                                        <div class="tb_bx ad-report__result">
+                                            <span class="tb_cell ad-report__color-info">
+                                                <dl class="ad-report__color-list">
+                                                    <dt><span class="ad-report__color ad-report__color--org"></span>나의 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--grey"></span>미광고 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--mint"></span>대비</dt>
+                                                    <dd><span class="ad-report__icon-up">상승</span> 100</dd>
+                                                </dl>
+                                            </span>
+                                            <span class="tb_cell">
+                                                <!-- 그래프 영역 -->
+                                                <div id="ad_report_graph"  class="ad-report__graph-area"></div>
+                                                <!--// 그래프 영역 -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// ad-report__detail-tbl -->
+                                    <!-- ad-report__detail-tbl -->
+                                    <div class="tbl-wrap4  ad-report__detail-tbl">
+                                        <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">예약 확정 수</strong></span></div>
+                                        <div class="tb_bx ad-report__result">
+                                            <span class="tb_cell ad-report__color-info">
+                                                <dl class="ad-report__color-list">
+                                                    <dt><span class="ad-report__color ad-report__color--org"></span>나의 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--grey"></span>미광고 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--mint"></span>대비</dt>
+                                                    <dd><span class="ad-report__icon-up">상승</span> 100</dd>
+                                                </dl>
+                                            </span>
+                                            <span class="tb_cell">
+                                                <!-- 그래프 영역 -->
+                                                <div id="ad_report_graph2"  class="ad-report__graph-area"></div>
+                                                <!--// 그래프 영역 -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// ad-report__detail-tbl -->
+                                    <!-- ad-report__detail-tbl -->
+                                    <div class="tbl-wrap4  ad-report__detail-tbl">
+                                        <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">예약 불가율</strong></span></div>
+                                        <div class="tb_bx ad-report__result">
+                                            <span class="tb_cell ad-report__color-info">
+                                                <dl class="ad-report__color-list">
+                                                    <dt><span class="ad-report__color ad-report__color--org"></span>나의 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--grey"></span>미광고 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--mint"></span>대비</dt>
+                                                    <dd><span class="ad-report__icon-up">상승</span> 100</dd>
+                                                </dl>
+                                            </span>
+                                            <span class="tb_cell">
+                                                <!-- 그래프 영역 -->
+                                                <div id="ad_report_graph3"  class="ad-report__graph-area"></div>
+                                                <!--// 그래프 영역 -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// ad-report__detail-tbl -->
+                                    <!-- ad-report__detail-tbl -->
+                                    <div class="tbl-wrap4  ad-report__detail-tbl">
+                                        <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">클릭 수(페이지뷰)</strong></span></div>
+                                        <div class="tb_bx ad-report__result">
+                                            <span class="tb_cell ad-report__color-info">
+                                                <dl class="ad-report__color-list">
+                                                    <dt><span class="ad-report__color ad-report__color--org"></span>나의 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--grey"></span>미광고 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--mint"></span>대비</dt>
+                                                    <dd><span class="ad-report__icon-up">상승</span> 100</dd>
+                                                </dl>
+                                            </span>
+                                            <span class="tb_cell">
+                                                <!-- 그래프 영역 -->
+                                                <div id="ad_report_graph4"  class="ad-report__graph-area"></div>
+                                                <!--// 그래프 영역 -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// ad-report__detail-tbl -->
+                                    <!-- ad-report__detail-tbl -->
+                                    <div class="tbl-wrap4  ad-report__detail-tbl">
+                                        <div class="tb_bx tb__hd"><span class="tb_cell"><strong class="ad-report__tbl-tit">클릭률(페이지뷰)</strong></span></div>
+                                        <div class="tb_bx ad-report__result">
+                                            <span class="tb_cell ad-report__color-info">
+                                                <dl class="ad-report__color-list">
+                                                    <dt><span class="ad-report__color ad-report__color--org"></span>나의 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--grey"></span>미광고 숙소</dt>
+                                                    <dd>200</dd>
+                                                    <dt><span class="ad-report__color ad-report__color--mint"></span>대비</dt>
+                                                    <dd><span class="ad-report__icon-up">상승</span> 100</dd>
+                                                </dl>
+                                            </span>
+                                            <span class="tb_cell">
+                                                <!-- 그래프 영역 -->
+                                                <div id="ad_report_graph5"  class="ad-report__graph-area"></div>
+                                                <!--// 그래프 영역 -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// ad-report__detail-tbl -->
+                                </div>
+                                <!--// ad-report__detail 상세 보고서-->
+                                <!-- ad-report__next  다음 광고 신청일 안내-->
+                                <div class="ad-report__statistics ad-report__next">
+                                    <h4 class="ad-report__subtit">다음 광고 신청일 안내</h4>
+                                    <div class="tbl-wrap4">
+                                        <div class="tb_bx tb__hd">
+                                            <span class="tb_cell">광고유형</span>
+                                            <span class="tb_cell">순위</span>
+                                            <span class="tb_cell">신청 가능일</span>
+                                            <span class="tb_cell">입찰 시작가</span>
+                                        </div>
+                                        <div class="tb_bx">
+                                            <span class="tb_cell">파워</span>
+                                            <span class="tb_cell">1</span>
+                                            <span class="tb_cell">2017-11-16</span>
+                                            <span class="tb_cell">290,000원</span>
+                                        </div>
+                                        <div class="tb_bx">
+                                            <span class="tb_cell">파워</span>
+                                            <span class="tb_cell">1</span>
+                                            <span class="tb_cell">2017-11-16</span>
+                                            <span class="tb_cell">290,000원</span>
+                                        </div>
+                                        <div class="tb_bx">
+                                            <span class="tb_cell">파워</span>
+                                            <span class="tb_cell">1</span>
+                                            <span class="tb_cell">2017-11-16</span>
+                                            <span class="tb_cell">290,000원</span>
+                                        </div>
+                                        <div class="tb_bx">
+                                            <span class="tb_cell">파워</span>
+                                            <span class="tb_cell">1</span>
+                                            <span class="tb_cell">2017-11-16</span>
+                                            <span class="tb_cell">290,000원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// ad-report__next  다음 광고 신청일 안내-->
+                            </div>
+                        </div>
+                        <!--// ad-report -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer 2016-10-28 수정 -->
+    <div id="ft">
+        <p class="d_iblock">Copyright &copy; <a href="http://www.theminda.com" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1661-2892)</p>
+        <!-- <a href="../cs/ruleminbak.php" class="split">숙소주 이용약관</a>
+            <a href="../ad/adrule.php" class="split">숙소주 광고이용약관</a> -->
+    </div>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<!--[if lt IE 9]>
+<script src="/manager/common/js/jquery.placeholder.js"></script>
+<script src="/manager/common/js/html5.js"></script>
+<script src="/manager/common/js/ie9.js"></script>
+<![endif]-->
+<script src="/manager/common/js/bootstrap-slider.js"></script>
+<script src="/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="/manager/common/js/moment.min.js"></script>
+<script src="/manager/common/js/daterangepicker.js"></script>
+<script src="/manager/common/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/manager/common/js/common.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    $j(function(){
+        var $body = $j('body');
+
+        // input
+        $body
+        .on({
+            'show.daterangepicker': function(ev, picker) {
+                $j('.input-cal').removeClass('active');
+                $j(this).closest('.input-cal').addClass('active');
+            },
+            'hide.daterangepicker': function(ev, picker) {
+                $j('.input-cal').removeClass('active');
+            }
+        }, '.input-cal input');
+
+        var startDate, endDate;
+        $j('.ad-report__date').daterangepicker({
+            autoUpdateInput: false,
+            startDate: startDate,
+            endDate: endDate,
+            minDate: false,
+            maxDate: false,
+            autoApply: true,
+            parentEl: '.ad-report__srch',
+            opens: 'right',
+            locale: {
+                "format": "YYYY-MM-DD",
+                "daysOfWeek": [
+                    "일",
+                    "월",
+                    "화",
+                    "수",
+                    "목",
+                    "금",
+                    "토"
+                ],
+                "monthNames": [
+                    "1월",
+                    "2월",
+                    "3월",
+                    "4월",
+                    "5월",
+                    "6월",
+                    "7월",
+                    "8월",
+                    "9월",
+                    "10월",
+                    "11월",
+                    "12월"
+                ]
+            },
+
+        }, function(startDate, endDate) {
+            $j('.ad-report__date-start').val(startDate.format('YYYY-MM-DD'));
+            $j('.ad-report__date-end').val(endDate.format('YYYY-MM-DD'));
+
+        });
+
+        $j('.ad-report__date2').daterangepicker({
+            autoUpdateInput: false,
+            startDate: startDate,
+            endDate: endDate,
+            minDate: false,
+            maxDate: false,
+            autoApply: true,
+            parentEl: '.ad-report__srch',
+            opens: 'left',
+            locale: {
+                "format": "YYYY-MM-DD",
+                "daysOfWeek": [
+                    "일",
+                    "월",
+                    "화",
+                    "수",
+                    "목",
+                    "금",
+                    "토"
+                ],
+                "monthNames": [
+                    "1월",
+                    "2월",
+                    "3월",
+                    "4월",
+                    "5월",
+                    "6월",
+                    "7월",
+                    "8월",
+                    "9월",
+                    "10월",
+                    "11월",
+                    "12월"
+                ]
+            },
+
+        }, function(startDate, endDate) {
+            $j('.ad-report__date2-start').val(startDate.format('YYYY-MM-DD'));
+            $j('.ad-report__date2-end').val(endDate.format('YYYY-MM-DD'));
+
+        });
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['숙소', '예약 신청 수', { role: 'style' }, { role: 'annotation' },'예약 신청 수'],
+                ['나의 숙소', 200, '#f58850','200',200],
+                ['미광고 숙소', 100, '#888','100',100],
+            ]);
+            var data2 = google.visualization.arrayToDataTable([
+                ['숙소', '예약 확정 수', { role: 'style' }, { role: 'annotation' },'예약 확정 수'],
+                ['나의 숙소', 400, '#f58850','400',400],
+                ['미광고 숙소', 300, '#888','300',300],
+            ]);
+            var data3 = google.visualization.arrayToDataTable([
+                ['숙소', '예약 불가율', { role: 'style' }, { role: 'annotation' },'예약 불가율'],
+                ['나의 숙소', 200, '#f58850','200',200],
+                ['미광고 숙소', 100, '#888','100',100],
+            ]);
+            var data4 = google.visualization.arrayToDataTable([
+                ['숙소', '클릭 수(페이지뷰)', { role: 'style' }, { role: 'annotation' },'클릭 수(페이지뷰)'],
+                ['나의 숙소', 400, '#f58850','400',400],
+                ['미광고 숙소', 300, '#888','300',300],
+            ]);
+            var data5 = google.visualization.arrayToDataTable([
+                ['숙소', '클릭률(페이지뷰)', { role: 'style' }, { role: 'annotation' },'클릭률(페이지뷰)'],
+                ['나의 숙소', 200, '#f58850','200',200],
+                ['미광고 숙소', 100, '#888','100',100],
+            ]);
+
+
+
+            var options = {
+                chartArea: {width: '73%'},
+                hAxis: {
+                    minValue: 0,
+                    maxValue: 400
+                },
+                bars: 'horizontal', // Required for Material Bar Charts.
+                bar: {groupWidth: "80%"},
+                legend: { position: "none" },
+                seriesType: 'bars',
+                series: {1: {type: 'line',color:'#42b9b5'}}
+            };
+            var options2 = {
+                chartArea: {width: '73%'},
+                hAxis: {
+                    minValue: 0,
+                    maxValue: 500
+                },
+                bars: 'horizontal', // Required for Material Bar Charts.
+                bar: {groupWidth: "80%"},
+                legend: { position: "none" },
+                seriesType: 'bars',
+                series: {1: {type: 'line',color:'#42b9b5'}}
+            };
+
+
+            var chart = new google.visualization.BarChart(document.getElementById('ad_report_graph'));
+            var chart2 = new google.visualization.BarChart(document.getElementById('ad_report_graph2'));
+            var chart3 = new google.visualization.BarChart(document.getElementById('ad_report_graph3'));
+            var chart4 = new google.visualization.BarChart(document.getElementById('ad_report_graph4'));
+            var chart5 = new google.visualization.BarChart(document.getElementById('ad_report_graph5'));
+            chart.draw(data, options);
+            chart2.draw(data2, options2);
+            chart3.draw(data3, options);
+            chart4.draw(data4, options2);
+            chart5.draw(data5, options);
+
+        }
+
+    })
+</script>
+</body>
+
+</html>

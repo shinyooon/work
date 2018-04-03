@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+	<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<? include "inc/header.html" ?>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+
+		<script src="/cust/js/common2.js"></script>
+
+		<!-- 페이지시작 -->
+		<div class="content w1100">
+			<!-- 서브 헤더 -->
+			<header class="sub_hd">
+				<h2>숙소 즉시예약</h2>
+			</header>
+			<!-- 단계 -->
+			<ol class="row acc_step v2">
+				<li class="col-xs-4">01. 숙박자 정보입력</li>
+				<li class="col-xs-4 active">02. 예약금 결제</li>
+				<li class="col-xs-4">03. 예약완료</li>
+			</ol>
+			<div class="well alert mt60 mb20 b20">
+				<ul class="lst_type_rect pt10 pb10">
+					<li>
+						<span class="color_mint">실시간</span> 바로 예약금을 결제하지 않으시면 예약은 자동으로 취소됩니다.
+					</li>
+					<li>같은 일정을 동시에 예약한 타 여행자가 먼저 입금해 버린 경우에도 예약은 취소될 수 있으며, 중복 입금인 경우 나중 입금고객의 예약금은 전액 환불해 드립니다.</li>
+				</ul>
+			</div>
+			<form>
+
+				<!-- 예약정보 -->
+				<section>
+					<h3 class="sub_title">
+						예약정보
+						<span class="rt_area pull-right text-nowrap">
+                <span>취소환불 규정 예약금 10%  <a class="color_org" href="javascript:showCancelRule();"><u>규정보기</u></a></span>
+            </span>
+					</h3>
+					<table class="tb text-center">
+						<caption class="sr-only">예약정보</caption>
+						<thead>
+						<tr>
+							<th scope="col">숙소</th>
+							<th scope="col">객실</th>
+							<th scope="col">체크인</th>
+							<th scope="col">체크아웃</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="td_itm">
+								<div class="media itm_wrp">
+									<div class="media-left">
+										<img src="http://v2.theminda.com/data/tum/goods_room/0_5191f56c696a3.jpg" width="199" />
+									</div>
+									<div class="media-body media-middle">
+										<h4>런던 킹스크로스 KX HOUSE 1호점, 2호점</h4>
+										<div class="loc">영국 런던</div>
+									</div>
+								</div>
+							</td>
+							<td class="td_itm_roomnm">
+								6 bed [1호점] 여성 도미토리 룸 A					</td>
+							<td>2017-12-12</td>
+							<td>2017-12-14</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<!-- 숙박자 정보 -->
+				<section>
+					<h3 class="sub_title">
+						숙박자 정보
+					</h3>
+					<table class="tb tb_frm">
+						<caption class="sr-only">숙박자 정보</caption>
+						<tbody>
+						<tr>
+							<th scope="row">이름</th>
+							<td>유나</td>
+							<th scope="row">성별</th>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<th scope="row">핸드폰</th>
+							<td>010-6316-0831</td>
+							<th scope="row">체크인 예정시각</th>
+							<td>오후 3시</td>
+						</tr>
+						<tr>
+							<th scope="row">현지 연락처</th>
+							<td>010-6316-0831</td>
+							<th scope="row">도착예정지/시각</th>
+							<td>킹스크로스, 오전 11시</td>
+						</tr>
+						<tr>
+							<th scope="row">카카오톡 ID</th>
+							<td>yuna</td>
+							<th scope="row">이메일</th>
+							<td>yuna@theminda.com</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<!-- 예약 상세내용 -->
+				<section>
+					<h3 class="sub_title">
+						예약 상세내용
+					</h3>
+					<table class="tb tb_fixed">
+						<caption class="sr-only">예약 상세내용</caption>
+						<colgroup>
+							<col style="width:10%">
+							<col style="width:40%">
+							<col style="width:25%">
+							<col style="width:10%">
+							<col style="width:15%">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">날짜</th>
+							<th scope="col">객실유형</th>
+							<th scope="col">1박 단가</th>
+							<th scope="col">인원</th>
+							<th scope="col">요금</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="text-nowrap text-center">2017-12-12</td>
+							<td>
+                        <span class="color_blk">
+                                                    6 bed
+                                                [1호점] 여성 도미토리 룸 A                                                </span>
+							</td>
+							<td class="text-nowrap">
+								<ul>
+									<li class="clear">
+                                <span class="pull-left">
+                                1인 가격                                                                </span>
+										<span class="pull-right">￡100                                                                </span>
+									</li>
+								</ul>
+							</td>
+							<td class="text-center">2명</td>
+							<td class="text-right"><span class="color_red">￡200</span></td>
+						</tr>
+						<tr>
+							<td class="text-nowrap text-center">2017-12-13</td>
+							<td>
+                        <span class="color_blk">
+                                                    6 bed
+                                                [1호점] 여성 도미토리 룸 A                                                </span>
+							</td>
+							<td class="text-nowrap">
+								<ul>
+									<li class="clear">
+                                <span class="pull-left">
+                                1인 가격                                                                </span>
+										<span class="pull-right">￡100                                                                </span>
+									</li>
+								</ul>
+							</td>
+							<td class="text-center">2명</td>
+							<td class="text-right"><span class="color_red">￡200</span></td>
+						</tr>
+						</tbody>
+					</table>
+					<table class="tb_total tb_fixed">
+						<caption class="sr-only">총 합계 금액</caption>
+						<tbody>
+						<tr>
+							<td>
+								<i class="alert_info"></i> 나머지 숙박요금 <span class="color_org">￡<span class="remain">360</span></span>은 체크인시 해당 숙소에 직접 결제하시면 됩니다.
+							</td>
+							<td class="td_total">
+								<dl>
+									<dt>예약금(10%)</dt>
+									<dd><span class="color_org">￡40</span>(60,800원)</dd>
+									<dt>숙소 직접결제액(체크인시)</dt>
+									<dd><span class="color_org">(+)￡360</span></dd>
+									<dt class="total color_org">총 합계 금액</dt>
+									<dd class="total color_org">￡400</dd>
+								</dl>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<!-- 결제 정보 -->
+				<section>
+					<h3 class="sub_title">
+						결제 정보
+					</h3>
+					<table class="tb2">
+						<caption class="sr-only">결제 정보</caption>
+						<colgroup>
+							<col style="width:66%">
+							<col>
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">캐쉬 및 할인 혜택 사용</th>
+							<th class="tb2_border">결제금액</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<dl class="dl_pay">
+									<dt>포인트</dt>
+									<dd>
+										<input name="emoneychk" type="text" id="textfield2" class="itx w110" value="0"><span class="w30">P</span>
+										<button type="button" class="btn btn_itx bg_mint" onclick="setEmoney(1)">사용</button>
+										<button type="button" class="btn btn_itx bg_blk" onclick="setEmoney(0)">취소</button>
+										<span class="ml10">( 사용가능한도 <span id="max_emoney" class="max_emoney">0</span>P / 잔액 (0P)</span>
+									</dd>
+									<dt>쿠폰</dt>
+									<dd>
+										<input type="hidden" id="dccoupon" name="dccoupon" value="0">
+										<select id="coupon" name="coupon" onchange="chkCoupon(fmOrder.coupon)" class="itx w240">
+											<option value="" data-dccoupon="0">사용가능한 쿠폰이 없습니다</option>
+										</select>
+									</dd>
+									<dt>캐쉬</dt>
+									<dd>
+										<input type="text" name="ecashchk" id="textfield4" value="0" class="itx w110"> <span class="w30">원</span>
+										<button type="button" class="btn btn_itx bg_mint" onclick="setEcash(1)">사용</button>
+										<button type="button" class="btn btn_itx bg_blk" onclick="setEcash(0)">취소</button>
+										<span class="ml10">( 잔액 0원 )</span>
+									</dd>
+									<dt>예상적립포인트</dt>
+									<dd class="pt3">
+										<strong class="color_red"><span id="Femoney" class="Femoney">6,080</span>P</strong>
+									</dd>
+								</dl>
+								<hr class="hr2">
+								<ul class="lst_type_star color_grey">
+									<li>포인트/쿠폰 할인혜택은 총 숙박요금의 10% 한도 내에서 적용됩니다.</li>
+									<li>적립포인트는 체크인 날짜 이후 리뷰글 작성시 적립됩니다.</li>
+								</ul>
+							</td>
+							<!-- 결제금액 -->
+							<td class="tb2_border pr">
+								<dl class="dl_pay">
+									<dt class="color_blk">예약금 (10%)</dt>
+									<dd class="text-right"><span class="color_org">60,800</span> <small class="color_org">원</small></dd>
+								</dl>
+								<div id="vEmoney" class="vEmoney" style="display:none">
+									<dl class="dl_pay">
+										<dt>포인트할인</dt>
+										<dd class="text-right"><span id="emoney_txt" class="emoney_txt color_blk"></span> <small>P</small></dd>
+									</dl>
+								</div>
+								<div id="vCoupon" class="vCoupon" style="display:none">
+									<dl class="dl_pay">
+										<dt>쿠폰 할인</dt>
+										<dd class="text-right"><span id="coupon_txt" class="coupon_txt color_blk"></span> <small>원</small></dd>
+									</dl>
+								</div>
+								<div id="vEcash" class="vEcash" style="display:none">
+									<dl class="dl_pay" style="margin-bottom:80px">
+										<dt>캐시사용</dt>
+										<dd class="text-right"><span id="ecash_txt" class="ecash_txt color_blk"></span> <small>원</small></dd>
+									</dl>
+								</div>
+								<div class="total_count fixed_btm clearfix">
+									<h4 class="pull-left">총 결제금액</h4>
+									<div class="price pull-right">
+										<strong class="color_org"><span id="vPayprice" class="vPayprice">60,800</span></strong> 원
+									</div>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<!-- 결제수단 선택 -->
+				<section>
+					<h3 class="sub_title">
+						결제수단 선택
+					</h3>
+					<table class="tb2">
+						<caption class="sr-only">결제수단</caption>
+						<colgroup>
+							<col style="width:66%">
+							<col>
+						</colgroup>
+						<thead>
+						<tr>
+							<td class="text-nowrap">
+								<div id="paymethod_emoney" class="paymethod_emoney radio-inline" style="display:none;">
+									<input type="radio" name="paymethod" value="x" required="">포인트/쿠폰 결제&nbsp;&nbsp;
+								</div>
+								<div id="paymethod_ecash" class="paymethod_ecash radio-inline" style="display:none;">
+									<input type="radio" name="paymethod" value="w" required="">포인트/쿠폰/캐쉬 결제&nbsp;&nbsp;
+								</div>
+								<div id="paymethod" class="paymethod" style="display: block;">
+									<div class="radio-inline">
+										<label for="paymethod_c" class="radio_label dot on"><input id="paymethod_c" type="radio" name="paymethod" value="c" required="" onclick="_pg_select(this)" checked="">신용카드</label>
+									</div>
+									<div class="radio-inline">
+                                        <label for="paymethod_o" class="radio_label dot on"><input id="paymethod_o" type="radio" name="paymethod" value="o" required="" onclick="_pg_select(this)">신용카드</label>
+                                        <input type="radio" name="paymethod" value="o" required="" onclick="_pg_select(this)">실시간 계좌이체&nbsp;&nbsp;
+                                    </div>
+									<div class="radio-inline"><input type="radio" name="paymethod" value="m" required="" onclick="_pg_select(this)">휴대폰 소액 결제&nbsp;&nbsp;</div>
+								</div>
+							</td>
+							<th class="tb2_border">총 결제금액</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="pt0">
+								<hr class="hr2 mt0">
+								<ul class="lst_type_rect">
+									<li>신용카드 또는 실시간 계좌이체로 결제할 경우 포인트/쿠폰/캐쉬를 제외한 총 결제금액이 <span class="color_mint">1,000원 이상</span>일 때 가능합니다.</li>
+									<li>[즉시예약] 숙소일 경우에도 다음과 같은 방법으로 '가상계좌'로 결제가 가능합니다. <br>
+										→ <a class="color_org" href="http://www.theminda.com/helpcenter/faq.php?no=45" target="_blank"> [즉시예약] 숙소 '가상계좌' 진행방법 안내</a></li>
+									<li>신용카드 결제시 <span class="color_mint">해외카드</span>인 경우, 해당 카드사의 <span class="color_mint">3D인증을 받은 카드에 한해서만 결제가 가능</span>합니다.<br><a class="color_org" href="http://www.theminda.com/helpcenter/faq.php?no=40" target="_blank">(해외카드결제 상세내용 안내)</a></li>
+									<!-- li>익스플로러를 제외한 브라우저 (ex. 구글크롬, 파이어폭스 등)에서는 결제가 어려울 수 있으니, 익스플로러 브라우저에서 결제를 진행해주세요.</li -->
+									<li>결제수단을 선택하시기 전에 브라우저에 팝업창 차단이 설정되어 있으면 팝업창 차단을 해제해주세요. </li>
+								</ul>
+							</td>
+							<!-- 총 결제금액 -->
+							<td class="tb2_border">
+								<div class="total_count v2">
+									<strong class="color_org"><span id="vPayprice2" class="vPayprice2">60,800</span></strong> 원
+								</div>
+								<ul class="lst_type_rect mt10">
+									<li>민다 취소환불규정에 동의를 해주셔야 결제가 가능합니다.</li>
+								</ul>
+								<hr class="hr2 mt10">
+								<div class="mb20">
+									<label class="checkbox-inline text-nowrap mt9">
+										<input name="agree" type="checkbox" required="" msg="민다 취소환불규정동의를 해주세요."> 민다 취소환불규정동의&nbsp;&nbsp;
+									</label>
+									<a id="chkrule" href="javascript:popup('/cust/include/common_cancelrule_popup.php',590,900);onRequired();" class="btn btn-xs btn_border_org mt9">취소환불규정 보기 [필수확인]</a>
+								</div>
+								<button type="button" class="btn btn-lg bg_org btn-block" onclick="startCharge();"><i class="icon_card"></i> 결제하기</button>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+			</form>
+			<!-- 숙소 취소환불규정 모달 -->
+			<div id="cancel_rule_modal" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+				<div class="modal-dialog review-pop">
+					<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+					<h1>숙소 취소환불규정</h1>
+					<div class="content">
+
+						<div>
+							<h4 class="mb30 fs20"><span class="color_mint">런던 킹스크로스 KX HOUSE 1호점, 2호점</span>의 취소환불규정</h4>
+							<!-- 취소환불규정 2015.04.30 -->
+							<section id="view3" class="room_refund">
+								<table class="tb tb_fixed">
+									<caption class="sr-only">날짜별 환불규정</caption>
+									<colgroup>
+										<col style="width:30%">
+										<col style="width:50%">
+										<col style="width:20%">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+										<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+										<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td class="text-center">
+											30일 전 취소
+										</td>
+										<td class="text-center">
+											전액환불<span class="color_grey">(포인트/쿠폰 결제액 제외)</span>
+										</td>
+										<td class="text-center">
+											없음
+
+										</td>
+									</tr>
+									<tr>
+										<td class="text-center">
+											29일 ~ 4일 전 취소                                            </td>
+										<td class="text-center">
+											취소수수료<span class="color_grey">(총 숙박요금의 10%)</span> 공제후 환불
+										</td>
+										<td class="text-center">
+											8%
+
+										</td>
+									</tr>
+									<tr>
+										<td class="text-center">
+											3일 ~ 당일취소 및 No-Show                                            </td>
+										<td class="text-center">
+											환불불가
+										</td>
+										<td class="text-center">
+											없음
+
+										</td>
+									</tr>
+									</tbody>
+								</table>
+								<p class="mt30">※ 취소시 포인트 적립은 포인트/쿠폰 결제액은 제외하고 적립됩니다.</p>
+								<div class="mt30">
+									<strong class="minda_term">민다 취소환불규정</strong><a href="javascript:popup('/cust/include/common_cancelrule_popup.php',590,900);onRequired();" class="btn btn-xs btn_border_grey">규정보기</a>
+								</div>
+
+							</section>
+						</div>
+						<div class="text-center mt25">
+							<button type="button" class="btn bg_org btn-lg" data-dismiss="modal"><i class="icon_circle_ok"></i>확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- Footer -->
+		<!-- 이프 [2016.05.10] - 필수 객체이므로 삭제하지 말것!! -->
+		<iframe style="display: none; width: 100%; height: 800px" name="hiddenIfrm" title="필수 객체 전송 hidden iframe"></iframe>
+		<!-- 이프 [2016.05.10] - 필수 객체이므로 삭제하지 말것!! -->
+		<!-- Footer -->
+		<div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh">information</strong>
+					<div class="ft_info_txt">
+						<span>㈜민다</span>
+						<span>대표 : 김윤희</span>
+						<span>사업자등록번호 : 101-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt">
+						<span>이메일 : help@theminda.com</span>
+						<span>고객센터 : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span>운영시간 : 평일 10시~12시/13시~18시(주말, 공휴일 휴무)</span>
+					</div>
+					<div class="ft_info_txt">
+						<address>서울특별시 중구 동호로15길 27 종하빌딩 A동 5층</address>
+					</div>
+					<div class="footer__right__top">
+						<ul class="footer__partner-list">
+							<li class="footer__partner-item bar"><a href="http://partner.v2.theminda.com" class="footer__partner-link">숙소/트립 파트너 홈</a></li>
+							<li class="footer__partner-item"><a href="http://agency.v2.theminda.com" class="footer__partner-link">여행사 예약관리 홈</a></li>
+						</ul>
+						<ul class="about_lst clearfix">
+							<li><a href="https://www.facebook.com/pages/%EB%AF%BC%EB%B0%95%EB%8B%A4%EB%82%98%EC%99%80-minbakdanawa/1472332716317239" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+							<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+							<li><a href="/mypage/my_m2m.php?mode=write" class="btn">고객센터 문의</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="/about/about.php" target="_blank">회사소개</a></li>
+						<li><a href="/manager/partner/partner_edit.php" target="_blank">파트너 가입</a></li>
+						<li><a href="/helpcenter/rule.php">취소환불규정</a></li>
+						<li><a href="/community/list.php?id=notice">고객센터</a></li>
+						<li class="bar"><a href="/community/list.php?id=notice">공지사항</a></li>
+						<li><a href="/document/document.php">이용약관</a></li>
+						<li><a href="/document/privacy.php">개인정보처리방침</a></li>
+						<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">사업자정보확인</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright? Minda Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div>	<!-- //Footer -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- header -->
+	<? include "inc/footer.html" ?>
+	<!-- //header -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

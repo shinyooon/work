@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_v2.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+		<div class="hd_search d_iblock clearfix">
+			<form action=".">
+				<input type="text" class="form-control" placeholder="여행지를 입력해주세요" title="여행지검색">
+				<button type="submit" class="icon_srch_grey pull-left">검색</button>
+			</form>
+		</div>
+		<div class="pull-right">
+			<nav id="gnb" class="d_iblock">
+				<ul class="gnb clearfix">
+					<li><a href="">한인숙소</a></li>
+					<li><a href="">커뮤니티</a></li>
+					<li><a href="">티켓/패스</a></li>
+					<li><a href="">투어팟</a></li>
+					<li><a href="">현지인</a></li>
+				</ul>
+				<ul class="gnb clearfix side">
+					<li><a href="" class="side_evt">이벤트</a></li>
+					<li><a href="" class="side_minda">민다특가</a></li>
+					<li><a href="" class="side_coupon">쿠폰존</a></li>
+				</ul>
+			</nav>
+			<div class="util">
+				<div class="dropdown d_iblock">
+					<a href="#" data-toggle="dropdown" class="bg_org">민다엔젤<i class="icon_arr"></i></a>
+					<ul class="dropdown-menu">
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">나의예약</a></li>
+						<li><a href="">위시리스트</a><span class="label labe_org">24</span></li>
+						<li><a href="">정보수정</a></li>
+						<li><a href="">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- <a href="" class="alarm bg_org" title="알림메시지보기"><span class="sr-only">새알람</span><span class="num">2</span></a> -->
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<span class="sub_bg"></span>
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- 서브 헤더 -->
+	<header class="sub_hd">
+		<h2>회원가입</h2>
+	</header>
+	<!-- 단계 -->
+	<ol class="join_step row">
+		<li class="col-xs-4"><i class="icon_join_step1"></i><small class="font_lato">01_</small>약관동의</li>
+		<li class="col-xs-4 active"><i class="icon_join_step2"></i><small class="font_lato">02_</small>정보입력</li>
+		<li class="col-xs-4"><i class="icon_join_step3"></i><small class="font_lato">03_</small>가입완료</li>
+	</ol>
+	<div class="term_hd clearfix">
+		<h3 class="sub_title pull-left">정보입력</h3>
+	</div>
+
+	<form>
+	<p class="mt35"><b class="color_red">*</b> 표시는 필수 입력항목입니다.</p>
+	<!-- 회사정보 -->
+	<section class="term_bx mt15">
+		<h4 class="tit">회사정보</h4>
+		<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">회사정보 입력양식</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">회사명 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="회사명입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">대표자명 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="대표자명입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사업자번호 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="사업자번호입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">대표번호 <b class="color_red">*</b></th>
+					<td class="tel_form">
+						<input type="text" class="form-control-basic wid_sm" title="대표번호 첫번째 자리"><i></i>
+						<input type="text" class="form-control-basic wid_sm" title="대표번호 두번째 자리"><i></i>
+						<input type="text" class="form-control-basic wid_sm" title="대표번호 세번째 자리">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">팩스</th>
+					<td class="tel_form">
+						<input type="text" class="form-control-basic wid_sm" title="팩스번호 첫번째 자리"><i></i>
+						<input type="text" class="form-control-basic wid_sm" title="팩스번호 두번째 자리"><i></i>
+						<input type="text" class="form-control-basic wid_sm" title="팩스번호 세번째 자리">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">홈페이지주소</th>
+					<td>
+						<input type="text" class="form-control-basic" placeholder="http://" title="홈페이지주소입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_md" placeholder="minda" title="이메일 주소 아이디부분">
+						<span class="form-control-static">@</span>
+						<input type="text" class="form-control-basic wid_md" placeholder="naver.com" title="이메일 주소 도메인부분">
+						<select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+							<option value="">직접입력</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">주소 <b class="color_red">*</b></th>
+					<td>
+						<div class="tel_form">
+							<input type="text" class="form-control-basic wid_sm" title="우편번호 앞자리"><i></i>
+							<input type="text" class="form-control-basic wid_sm" title="우편번호 뒷자리">
+							<button type="button" class="btn btn-xs btn_border_org mb5 ml5">우편번호</button>
+						</div>
+						<div class="row mt10">
+							<span class="col-xs-7 pr10"><input type="text" class="form-control-basic" title="주소입력"></span>
+							<span class="col-xs-5"><input type="text" class="form-control-basic" title="상세주소입력"></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">주요취급지역 <b class="color_red">*</b></th>
+					<td>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">유럽
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">북미
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">아시아
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">오세아니아
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">중/남미
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">아프리카
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">국내
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">바우처 하단<br>출력정보 선택</th>
+					<td>
+						<label class="inline-radio radio_label mb0">
+							<input type="radio" name="voucher"> 여행사정보
+						</label>
+						<label class="inline-radio radio_label mb0 ml25">
+							<input type="radio" name="voucher"> 민다정보
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">여행사 전문</th>
+					<td>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">하나투어전판
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">모두투어전판
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">박람회/전시회/출장전문
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">FIT 여행사
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">패키지전문여행사
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">맞춤여행전문
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">유학원
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">회사로고</th>
+					<td class="upload_img_lst">
+							<div class="pr pt10">
+								<span class="tmb mt0"><img src="/cust/img/upload.jpg" alt=""></span>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</div>
+						<label class="mt10">
+							<input type="file" class="sr-only">
+							<span class="btn btn-xs bg_mint w75 mb3 mr5">파일선택</span>
+						</label>
+						<input type="text" class="form-control-basic wid_md" title="업로드된이미지명" readonly>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<!-- 관리자정보 -->
+	<section class="term_bx mt45">
+		<h4 class="tit">관리자정보</h4>
+		<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">관리자정보 입력 요소</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">아이디 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="아이디입력">
+						<p class="form-control-static error">이미 사용중인 아이디입니다.</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">비밀번호 <b class="color_red">*</b></th>
+					<td>
+						<div>
+							<input type="password" class="form-control-basic wid_lg mb10" placeholder="비밀번호" title="비밀번호입력">
+							<p class="form-control-static color_org">*영문/숫자 조합 8자~12자 이내로 입력하세요</p>
+						</div>
+						<div>
+							<input type="password" class="form-control-basic wid_lg" placeholder="비밀번호 확인" title="비밀번호재입력">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">담당자명 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" title="담당자명 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">부서/직책 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_sm" title="부서명 입력">
+						<span class="form-control-static">/</span>
+						<input type="text" class="form-control-basic wid_sm" title="직책명 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_md" placeholder="minda" title="이메일 주소 아이디부분">
+						<span class="form-control-static">@</span>
+						<input type="text" class="form-control-basic wid_md" placeholder="naver.com" title="이메일 주소 도메인부분">
+						<select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+							<option value="">직접입력</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">핸드폰 <b class="color_red">*</b></th>
+					<td class="tel_form">
+						<input type="text" class="form-control-basic wid_sm" title="핸드폰 첫번째 자리"><i></i>
+						<input type="text" class="form-control-basic wid_sm" title="핸드폰 두번째 자리"><i></i>
+						<input type="text" class="form-control-basic wid_sm" title="핸드폰 세번째 자리">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">직통연락처 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="직통연락처 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">네이트온</th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="네이트온 입력">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<!-- 입금계좌 정보( 예약취소 및 환불 시 입금 받으실 계좌정보 ) -->
+	<section class="term_bx mt45">
+		<h4 class="tit">입금계좌 정보( 예약취소 및 환불 시 입금 받으실 계좌정보 )</h4>
+		<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">입금계좌 정보 입력 요소</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">은행명 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="은행명입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">계좌번호 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="계좌번호입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">예금주 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="예금주입력">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	</form>
+
+
+	<div class="text-center mt25">
+		<button type="button" class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>확인</button>
+		<button type="button" class="btn bg_dark_grey btn-lg ml5"><i class="icon_circle_cancle"></i>취소</button>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+<!-- 우편번호검색 -->
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog postcode-srch">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<h1>우편번호검색</h1>
+		<div class="content">
+			<!-- tab -->
+			<ul class="basic_step2 tb_fixed">
+				<li><a href="">도로명 주소의 우편번호</a></li>
+				<li class="active"><a href="">지번주소의 우편번호</a></li>
+			</ul>
+			<!-- 컨텐츠 -->
+			<div class="tab-content">
+				<p class="mt15">
+					<span class="d_block fs17">찾고 싶으신 주소의 동(읍/면) 이름을 입력하세요.</span>
+					<span class="color_grey">예) 청담동, 화도읍, 수지면</span>
+				</p>
+				<div class="well form-horizontal mb10">
+					<div class="form-group mb0">
+						<label for="dong" class="control-label color_blk">동입력</label>
+						<input id="dong" type="text" class="form-control-basic wid_md">
+						<button type="button" class="btn bg_dark_grey w75 ml3">검색</button>
+					</div>
+				</div>
+
+				<div class="nano">
+					<table class="tb tb_fixed">
+						<caption class="sr-only">우편번호 검색내역</caption>
+						<colgroup>
+							<col style="width:80px">
+							<col>
+							<col style="width:100px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">우편번호</th>
+								<th scope="col">주소</th>
+								<th scope="col">선택</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+							<tr>
+								<td class="color_blk text-center">133-821</td>
+								<td>서울특별시 성동구 왕십리로 105(성수동 1가)</td>
+								<td class="text-center"><button type="button" class="btn btn-xs btn_border_grey">선택</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="text-center mt25">
+				<button type="button" class="btn bg_dark_grey btn-lg"><i class="icon_circle_cancel"></i>닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(".modal").modal();
+</script>
+
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

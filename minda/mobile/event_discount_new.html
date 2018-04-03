@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 공항 픽업서비스 이벤트 |  민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<style type="text/css">
+		h2,h3,h4 {line-height:0}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- event-pickup-wrap -->
+		<header id="hd" class="transparent">
+			<h1 class="sr-only">민다</h1>
+			<a class="icon_close_wh hd-l" href="#"></a>
+			<a onclick="showShare();" class="icon_hd_link btn btn_like hd-r"></a>
+		</header>
+		<div id="container" class="clearfix no-hd event_201703">
+			<div class="top-img-wrap">
+				<span id="event_hd" class="scroll-pos"></span>
+				<img src="http://theminda.com/event/img/201703/mobile/img_top.jpg" alt="통큰할인 50%부터 3월 한 달간 여행자들께 드리는 최소 반값 할인! 여행경비 줄인 만큼 더 많이 여행하세요." style="width:100%" />
+			</div>
+			<div class="pop_event">
+				<div class="city-wrap">
+					<select class="form-control-basic city_name">
+						<option value="event_hd">도시 선택</option>
+						<option value="event_osaka">오사카</option>
+						<option value="event_tokyo">도쿄</option>
+						<option value="event_okinawa">오키나와</option>
+						<option value="event_pari">파리</option>
+						<option value="event_london">런던</option>
+						<option value="event_firenze">피렌체</option>
+						<option value="event_barcelona">바르셀로나</option>
+						<option value="event_newyork">뉴욕</option>
+						<option value="event_toronto">토론토</option>
+					</select>
+				</div>
+			</div>
+			<div class="room-list-wrap">
+				<h3 class="tit"><span class="tit-inner color_blk">아시아</span></h3>
+				<ul class="list-room row clearfix">
+					<!-- room -->
+					<li class="closed"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<span id="event_osaka" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=6709" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58a940ab1056e.JPG" alt=""/>
+								<span class="label color_red">64%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 브라더<br />게스트 하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">2.27~3.2</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥5,000~</strong>
+									<s>￥14,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="closed">
+						<a href="http://www.theminda.com/main/view.php?goodsno=6373" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_57f469cadc768jpeg" alt=""/>
+								<span class="label color_red">53%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 해피마미</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 6 ~ 3. 7</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥4,400~ </strong>
+									<s>￥9,500~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=3364" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58622d2454102.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카<br />한마당 민박</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 7</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥2,500~ </strong>
+									<s>￥5,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=6107" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/5_57af460f69eac.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 민박 <br />유히가오카 하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 22</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥2,500~</strong>
+									<s>￥5,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=2488" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_5722bf277cb07.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파크in 오사카</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 7</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥4,000~</strong>
+									<s>￥8,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=6711" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/5_58b0075214ee9.JPG" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 난바 <br />오렌지하우스 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 10</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥4,000~</strong>
+									<s>￥8,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<span id="event_tokyo" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=3516" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_582d06c68abe5.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">도쿄<br />나루터 민박</h4>
+								<span class="d_block type">도미토리</span>
+								<span class="d_block color_blk date">3. 6 ~ 3. 8</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥1,500~</strong>
+									<s>￥3,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=6859" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_586f2880534d9.jpg" alt=""/>
+								<span class="label color_red">55%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">도쿄<br />해피하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 20 ~ 3. 21</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥4,400~</strong>
+									<s>￥9,800~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<span id="event_okinawa" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=6273" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_57b3f5b2d5007.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오키나와<br />카타르시스</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￥3,000~ </strong>
+									<s>￥6,000~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- //////////////////////////////////유렵/////////////////////////////// -->
+				<h3 class="tit"><span class="tit-inner color_blk">유럽</span></h3>
+				<ul class="list-room row clearfix">
+					<!-- room -->
+					<li class="">
+						<span id="event_pari" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=4035" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_57a7e113b622f.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">유로텔파리</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1~3. 5</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 40~</strong>
+									<s>€ 80~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=5859" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/5_57c8e2e61bd66.JPG" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파리 힐링민박</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 20 ~ 3. 24</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 20~</strong>
+									<s>€ 40~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=3304" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/6_55c2aa3bc9a87.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">해피파리</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 8</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 50~</strong>
+									<s>€ 100~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=2480" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_53cf57058c0ef.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">올레파리</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 27 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 50~</strong>
+									<s>€ 100~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=2638" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_5610126878aca.JPG" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파리 홀릭민박</h4>
+								<span class="d_block type">도미토리, 개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 20~</strong>
+									<s>€ 40~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=1383" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_575af0911d0b6.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파리인콘도</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 10</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 50~</strong>
+									<s>€ 100~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=1257" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_576362a522e67.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파리 다음민박</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 40~</strong>
+									<s>€ 80~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=6197" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/4_578de4dceea78.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파리<br />라메종 피아노</h4>
+								<span class="d_block type">도미토리, 개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 17</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 20~</strong>
+									<s>€ 40~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<span id="event_london" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=5075" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/3_568eec5bc5c8b.png" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">런던 빅토리아<br />코치하우스</h4>
+								<span class="d_block type">도미토리</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 2</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">￡15~</strong>
+									<s>€ 30~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<span id="event_firenze" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=2045" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/1_536b1af92fbeb.jpg" alt=""/>
+								<span class="label color_red">53%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">피렌체 현우네</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 70~</strong>
+									<s>€ 150~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<span id="event_barcelona" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=1466" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/room/69f47ee8fd130f7a74b50a61911bed2e" alt=""/>
+								<span class="label color_red">51%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">바르셀로나<br />까미노 하우스</h4>
+								<span class="d_block type">도미토리</span>
+								<span class="d_block color_blk date">3. 2 ~ 3. 3</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">€ 16~</strong>
+									<s>€ 33~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- //////////////////////////////////북미/////////////////////////////// -->
+				<h3 class="tit"><span class="tit-inner color_blk">북미</span></h3>
+				<ul class="list-room row clearfix">
+					<!-- room -->
+					<li class="">
+						<span id="event_newyork" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=1815" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58290ca4cd41d.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">스테이뉴욕35<br />맨하튼고급독실독채</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3. 1</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">US$ 54~</strong>
+									<s>US$ 109~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=6899" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/room/2879d7e32f80f4e209c0eb7982849f86" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">응답하라뉴욕</h4>
+								<span class="d_block type">도미토리</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">US$ 20~</strong>
+									<s>US$ 40~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<a href="http://www.theminda.com/main/view.php?goodsno=7039" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/2_58ab8476434cb.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">독채전용 뉴욕 <br />제이제이하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 1 ~ 3. 31</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">US$ 25~</strong>
+									<s>US$ 50~</s>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li class="">
+						<span id="event_toronto" class="scroll-pos"></span>
+						<a href="http://www.theminda.com/main/view.php?goodsno=3156" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/6_577b5af03095f.jpg" alt=""/>
+								<span class="label color_red">50%</span>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">토론토 YOLO <br />Guest house</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3. 17 ~ 3. 26</span>
+								<span class="price d_block">
+									<strong class="color_red fw700">CAD 37~ </strong>
+									<s>CAD 75~ </s>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //wrap -->
+	<!-- modal : share -->
+	<div id="mdShare" class="modal fade share_pop" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="text-center pa10">
+				<div class="mb20">
+					<a class="icon_sns_fb" href="#">페이스북</a>
+					<a class="icon_sns_tw" href="#">트위터</a>
+					<a class="icon_sns_kakao" href="#">카카오톡</a>
+					<a class="icon_sns_url" href="#">URL</a>
+				</div>
+				<button type="button" class="btn btn-default bg_silver btn-block btn-xl" data-dismiss="modal" aria-label="Close">취소</button>
+			</div>
+		</div>
+	</div>
+	<script>
+	jQuery(function($) {
+		var $w = $(window);
+		var event_city_pos =  $('.city-wrap').offset().top;
+		var $pop_event  = $('.event_201703');
+		$w.scroll(function() {
+			var st = $w.scrollTop();
+			if(st>event_city_pos){
+				$pop_event.addClass('fixed');
+			}else{
+				$pop_event.removeClass('fixed');
+			}
+		})
+		$('.pop_event .city_name').on('change', function(){
+			scrollMove('#' + $(this).val(),70);
+			return false;
+		});
+	});
+	function showShare(){
+		$("#mdShare").modal();
+	}
+	</script>
+	<!-- js -->
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+
+	<!-- wrap.screenID -->
+	<div id="wrap" class="page_tb">
+		<!-- header -->
+		<header id="hd">
+			<div class="header clearfix">
+				<!-- 2017-06-13 로고 이미지 변경 -->
+				<h1 class="logo"><a href="index.html"><img src="http://www.theminda.com/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+				<!--// 2017-06-13 로고 이미지 변경 -->
+				<nav class="hd-nav">
+					<ul class="gnb">
+						<li class="i1"><a href="">숙소 <span class="icon_up">up</span></a></li>
+						<li class="i4"><a href="">트립</a></li>
+						<li class="i2"><a href="">정보 <span class="icon_new">new</span></a></li>
+						<li class="i5">
+							<a href="">부가상품</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">티켓/패스</a></li>
+									<li><a href="">유레일패스/기차표</a></li>
+									<li><a href="">렌터카</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<script>
+					$(function() {
+						$util = $('.userbx');
+						$util.on('focusin', function() {
+							$(this).addClass('open');
+						});
+
+					})
+					</script>
+				</nav>
+				<div class="hd-r">
+					<!-- 2017-06-13 태그 순서 위로 올림 -->
+					<div class="util">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+							<ul class="dropdown-menu">
+								<li><a href="">나의 가이드북</a></li>
+								<li><a href="">나의 숙소예약</a></li>
+								<li><a href="">정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 로그인 후 -->
+					<!-- <div class="util">
+						<a href="/member/login.php?login_return_page=/main/index.php"> 로그인</a>
+						<a href="/member/register.php">회원가입</a>
+					</div> -->
+					<ul class="gnb right-gnb clear">
+						<li class="i6">
+							<a href="">민다톡톡</a>
+							<!-- [D] class="active" 추가시 dep2 보여짐 -->
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="">커뮤니티홈</a></li>
+									<li><a href="">톡톡릴레이</a></li>
+									<li><a href="" class="active">구인ㆍ구직</a></li>
+									<li><a href="">사고ㆍ팔고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="i7">
+							<a href="">할인&amp;이벤트</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">이벤트</a></li>
+									<li><a href="">민다특가</a></li>
+									<li><a href="">쿠폰존</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<form action="." class="srch_wrp">
+						<!-- <button type="button" class="icon_srch_grey">검색</button> -->
+						<!-- 2017-06-13 silde-wrap 클래스 삭제 -->
+						<div class="input-group tb_bx">
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_grey">검색</button>
+							</span>
+							<div class="input-wrap tb-cell">
+								<input type="text" class="form-control" placeholder="키워드를 입력해주세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</div>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<div class="dep2_bg"></div>
+		</header>
+		<!-- //header -->
+
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<!-- 검색결과 -->
+				<div class="total_srch_result">
+					<div class="total_txt_wrap mb20">
+						<p class="total_srch_txt color_blk fs16"><b>바티칸</b> 검색결과</p>
+					</div>
+					<header>
+						<ul class="basic_step2">
+							<li><a href="">통합 102</a></li>
+							<li><a href="">숙소 33</a></li>
+							<li><a href="">트립 68</a></li>
+							<li class="active"><a href="">일정 10</a></li>
+							<li><a href="">장소 5</a></li>
+						</ul>
+						<ul class="nav-dep2 lst_inline text-center">
+							<li class="active"><a href="">전체</a></li>
+							<li><a href="">일정명</a></li>
+							<li><a href="">여행코스</a></li>
+							<li><a href="">정보</a></li>
+						</ul>
+					</header>
+					<!-- 일정 -->
+					<section class="result_bx result_plan_bx">
+						<!-- 일정명 -->
+						<article class="result_2dep">
+							<div class="tit-wrap2 clearfix">
+								<h4 class="pull-left tit"><span class="icon_result plan"></span>일정명 10</h4>
+								<div class="result_hd_side"><a href="" class="btn fs12 more">더보기<span class="icon_result plus"></span></a></div>
+							</div>
+							<!-- room_detail_lst -->
+							<ul class="room_detail_lst row auto">
+								<li class="pr col-xs-6">
+									<a href="">
+										<div class="item clearfix">
+											<div class="pull-left thumb">
+												<img src="http://www.theminda.com/data/travel/image/middle/201609/1473338452_0.jpeg" alt="">
+												<button type="button" class="icon_heart tmb_heart btn">저장안됨</button>
+											</div>
+											<!-- room_des -->
+											<div class="room_des">
+												<span class="d_block mb3">파리</span>
+												<strong class="srch tit twoline">파리 3대박물관 오전출발 워킹투어</strong>
+												<div class="btm_info split_lst mt5">
+													<div class="name">
+														<span class="ellipsis">샹젤리제니</span>의 추천 일정
+													</div>
+													<div class="cnt-area">
+														<span>여행자 리뷰</span>
+														<span>223</span>
+													</div>
+													<div class="cnt-area">
+														<span class="icon_result save"></span>
+														<span>저장 18</span>
+													</div>
+												</div>
+											</div>
+											<!--// room_des -->
+										</div>
+									</a>
+								</li>
+								<li class="pr col-xs-6">
+									<a href="">
+										<div class="item clearfix">
+											<div class="pull-left thumb">
+												<img src="http://www.theminda.com/data/travel/image/middle/201609/1473338452_0.jpeg" alt="">
+												<button type="button" class="icon_heart tmb_heart btn">저장안됨</button>
+											</div>
+											<!-- room_des -->
+											<div class="room_des">
+												<span class="d_block mb3">파리</span>
+												<strong class="srch tit twoline">파리 3대박물관 오전출발 워킹투어</strong>
+												<div class="btm_info split_lst mt5">
+													<div class="name">
+														<span class="ellipsis">샹젤리제니</span>의 추천 일정
+													</div>
+													<div class="cnt-area">
+														<span>여행자 리뷰</span>
+														<span>223</span>
+													</div>
+													<div class="cnt-area">
+														<span class="icon_result save"></span>
+														<span>저장 18</span>
+													</div>
+												</div>
+											</div>
+											<!--// room_des -->
+										</div>
+									</a>
+								</li>
+								<li class="pr col-xs-6">
+									<a href="">
+										<div class="item clearfix">
+											<div class="pull-left thumb">
+												<img src="http://www.theminda.com/data/travel/image/middle/201609/1473338452_0.jpeg" alt="">
+												<button type="button" class="icon_heart tmb_heart btn">저장안됨</button>
+											</div>
+											<!-- room_des -->
+											<div class="room_des">
+												<span class="d_block mb3">파리</span>
+												<strong class="srch tit twoline">파리 3대박물관 오전출발 워킹투어</strong>
+												<div class="btm_info split_lst mt5">
+													<div class="name">
+														<span class="ellipsis">샹젤리제니</span>의 추천 일정
+													</div>
+													<div class="cnt-area">
+														<span>여행자 리뷰</span>
+														<span>223</span>
+													</div>
+													<div class="cnt-area">
+														<span class="icon_result save"></span>
+														<span>저장 18</span>
+													</div>
+												</div>
+											</div>
+											<!--// room_des -->
+										</div>
+									</a>
+								</li>
+								<li class="pr col-xs-6">
+									<a href="">
+										<div class="item clearfix">
+											<div class="pull-left thumb">
+												<img src="http://www.theminda.com/data/travel/image/middle/201609/1473338452_0.jpeg" alt="">
+												<button type="button" class="icon_heart tmb_heart btn">저장안됨</button>
+											</div>
+											<!-- room_des -->
+											<div class="room_des">
+												<span class="d_block mb3">파리</span>
+												<strong class="srch tit twoline">파리 3대박물관 오전출발 워킹투어</strong>
+												<div class="btm_info split_lst mt5">
+													<div class="name">
+														<span class="ellipsis">샹젤리제니</span>의 추천 일정
+													</div>
+													<div class="cnt-area">
+														<span>여행자 리뷰</span>
+														<span>223</span>
+													</div>
+													<div class="cnt-area">
+														<span class="icon_result save"></span>
+														<span>저장 18</span>
+													</div>
+												</div>
+											</div>
+											<!--// room_des -->
+										</div>
+									</a>
+								</li>
+							</ul>
+						</article>
+						<!--// result-2dep -->
+						<!-- 여행코스 -->
+						<article class="result_2dep">
+							<div class="tit-wrap2 clearfix">
+								<h4 class="pull-left tit"><span class="icon_result loc"></span>여행코스 32</h4>
+								<div class="result_hd_side"><a href="" class="btn fs12 more">더보기<span class="icon_result plus"></span></a></div>
+							</div>
+							<ul class="list-board">
+								<li>
+									<a href="">
+										<header class="board-hd">
+											<p class="tit fs20 color_blk">런던 1존 민박</p>
+										</header>
+										<div class="board-contents">
+											<p class="fs15 srch">런던 <b>바티칸</b> 민박 퇴근길 트립에 따르면 직장인의 100%는 퇴근을 빨리 하고 싶어하는 것으로 나타났다. </p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<header class="board-hd">
+											<p class="tit fs20 color_blk">로마 <b>바티칸</b> 민박</p>
+										</header>
+										<div class="board-contents">
+											<p class="fs15 srch">런던 <b>바티칸</b> 민박 퇴근길 트립에 따르면 직장인의 100%는 퇴근을 빨리 하고 싶어하는 것으로 나타났다. </p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<header class="board-hd">
+											<p class="tit fs20 color_blk">인천 집앞 게스트하우스박</p>
+										</header>
+										<div class="board-contents">
+											<p class="fs15 srch">런던 <b>바티칸</b> 민박 퇴근길 트립에 따르면 직장인의 100%는 퇴근을 빨리 하고 싶어하는 것으로 나타났다. </p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</article>
+						<!--// result-2dep -->
+						<!-- 정보 -->
+						<article class="result_2dep">
+							<div class="tit-wrap2 clearfix">
+								<h4 class="pull-left tit"><span class="icon_result doc"></span>정보 32</h4>
+								<div class="result_hd_side"><a href="" class="btn fs12 more">더보기<span class="icon_result plus"></span></a></div>
+							</div>
+							<ul class="list-board">
+									<li>
+										<a href="">
+											<header class="board-hd">
+												<p class="tit fs20 color_blk">런던 1존 민박</p>
+											</header>
+											<div class="board-contents">
+												<p class="fs15 srch"><span class="color_mint">소요시간</span> 6시간 · <span class="color_mint">이동수단</span> 도보(바티칸까지 30분)</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<header class="board-hd">
+												<p class="tit fs20 color_blk">로마 <b>바티칸</b> 민박</p>
+											</header>
+											<div class="board-contents">
+												<p class="fs15 srch"><span class="color_mint">소요시간</span> 6시간 · <span class="color_mint">이동수단</span> 도보(바티칸까지 30분)</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<header class="board-hd">
+												<p class="tit fs20 color_blk">인천 집앞 게스트하우스박</p>
+											</header>
+											<div class="board-contents">
+												<p class="fs15 srch"><span class="color_mint">소요시간</span> 6시간 · <span class="color_mint">이동수단</span> 도보(바티칸까지 30분)</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+						</article>
+						<!--// result-2dep -->
+					</section>
+					<!--// 일정 -->
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+
+		<!-- Footer -->
+		<div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh mb3">information</strong>
+					<div class="ft_info_txt fs13">
+						<span>(주)사막</span>
+						<span>대표 : 김윤회</span>
+						<span>사업자등록번호 : 010-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt fs13">
+						<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+						<span>TEL : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+						<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+					</div>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+						<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+						<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+					</ul>
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="">회사소개</a></li>
+						<li><a href="">민박등록신청</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="" class="color_org">개인정보취급방침</a></li>
+						<li><a href="">민박다나와 취소환불규정</a></li>
+						<li><a href="">사이트맵</a></li>
+						<li><a href="">고객센터</a></li>
+						<li><a href="">공지사항</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+
+	<div class="fix_btm">
+		<!-- quick  -->
+		<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+	</div>
+
+	<!-- modal -->
+	<div id="nationMore" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog total-nation">
+			<button type="button" class="icon_close_org" data-dismiss="modal" aria-label="Close">닫기</button>
+			<h1 class="color_org">한인숙소 전체도시</h1>
+			<ul class="total_nation_lst">
+				<li><a href="">런던(2)</a></li>
+				<li><a href="">에딘버러(4)</a></li>
+				<li><a href="">맨체스터(2)</a></li>
+				<li><a href="">펜잔스(1)</a></li>
+				<li><a href="">파리(186)</a></li>
+				<li><a href="">니스(2)</a></li>
+				<li><a href="">아비뇽(1)</a></li>
+				<li><a href="">보르도(1)</a></li>
+				<li><a href="">콜마르(1)</a></li>
+				<li><a href="">클레르몽 페랑(1)</a></li>
+				<li><a href="">샤모니(1)</a></li>
+				<li><a href="">런던(2)</a></li>
+				<li><a href="">에딘버러(4)</a></li>
+				<li><a href="">맨체스터(2)</a></li>
+				<li><a href="">펜잔스(1)</a></li>
+				<li><a href="">파리(186)</a></li>
+				<li><a href="">니스(2)</a></li>
+				<li><a href="">아비뇽(1)</a></li>
+				<li><a href="">보르도(1)</a></li>
+				<li><a href="">콜마르(1)</a></li>
+				<li><a href="">클레르몽 페랑(1)</a></li>
+				<li><a href="">샤모니(1)</a></li>
+				<li><a href="">런던(2)</a></li>
+				<li><a href="">에딘버러(4)</a></li>
+				<li><a href="">맨체스터(2)</a></li>
+				<li><a href="">펜잔스(1)</a></li>
+				<li><a href="">파리(186)</a></li>
+				<li><a href="">니스(2)</a></li>
+				<li><a href="">아비뇽(1)</a></li>
+				<li><a href="">보르도(1)</a></li>
+				<li><a href="">콜마르(1)</a></li>
+				<li><a href="">클레르몽 페랑(1)</a></li>
+				<li><a href="">샤모니(1)</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

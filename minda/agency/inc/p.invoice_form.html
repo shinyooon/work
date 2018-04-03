@@ -1,0 +1,54 @@
+	<div class="modal fade modal__invoice-form">
+	<div class="modal-dialog">
+		<!-- modal__contents -->
+		<div class="modal__contents">
+			<!-- modal__hd -->
+			<div class="modal__hd">
+				<h1 class="modal__tit">인보이스 요청</h1>
+			</div>
+			<!--// modal__hd -->
+			<!-- modal__body -->
+			<div class="modal__body modal__invoice-form__body">
+				<div class="invoice__form">
+					<dl class="invoice__form__list">
+						<dt class="invoice__form__tit">비즈머니</dt>
+						<dd class="invoice__form__input">
+								<span class="input-wrap">
+									<input type="text" class="rev-detail__text" value="12,000" title="비즈머니 금액" placeholder="">
+								</span>
+							<span class="input-wrap__right-txt">잔액 12,000</span>
+						</dd>
+						<dt class="invoice__form__tit">할인쿠폰</dt>
+						<dd class="invoice__form__input">
+								<span class="input-wrap input-wrap__select rev-detail__sex">
+									<select class="rev-detail__select-sex" title="할인 쿠폰 선택">
+										<option>쿠폰 선택</option>
+										<option>쿠폰111</option>
+										<option>쿠폰222</option>
+									</select>
+								</span>
+						</dd>
+						<dt class="invoice__form__tit">입금마감일</dt>
+						<dd class="invoice__form__input">
+								<span class="input-wrap input-wrap__cal">
+									<input type="text" class="rev-detail__text input-cal input-cal__deadline" title="입금마감일" placeholder="" disabled="disabled">
+								</span>
+							<span class="input-wrap__right-txt">
+									<span class="input-wrap__chk chk_deadline_change">
+										<input type="checkbox" name="" id="chk_deadline_change" title="입금마감일 조정">
+										<label for="chk_deadline_change">입금마감일 조정</label>
+									</span>
+								</span>
+						</dd>
+					</dl>
+				</div>
+				<div class="btm-btn">
+					<button type="button" class="btm-btn__btn--l-blue modal__btn-clse">취소</button>
+					<button type="button" class="btm-btn__btn--green modal__btn-clse">인보이스 요청</button>
+				</div>
+			</div>
+			<!--// modal__body -->
+		</div>
+		<!--// modal__contents -->
+	</div>
+</div>

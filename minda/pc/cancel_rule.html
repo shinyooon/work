@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap" class="page_tb">
+		<!-- header -->
+		<header id="hd">
+			<div class="header">
+				<h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+				<nav class="hd-nav">
+					<ul class="gnb">
+						<li class="i1">
+							<a href="javascript:showNationList('#category_001');">숙소 </a>
+						</li>
+						<li class="i4"><a href="">트립</a></li>
+						<li class="i2"><a href="">정보 </a></li>
+						<li class="i5"><!-- 티켓패스 개편완료 후 링크 변경/ticketpass/ticketpass_list.php -->
+							<a href="">티켓/상품<!--2016-12-14수정 --></a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<!-- <li><a href="/ticketpass/ticketpass_list.php" >티켓/패스</a></li> -->
+									<li><a href="">융프라우 할인권</a></li>
+									<li><a href="">유레일패스</a></li>
+									<li><a href="" class="active">여행자 보험</a></li>
+									<li><a href="">포켓 와이파이</a></li>
+									<li><a href="">공연/티켓</a></li>
+									<li><a href="">유럽기차</a></li>
+									<li><a href="">렌터카</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div class="hd-r">
+					<div class="util">
+
+						<div id="div_login_btn" class="util">
+							<a href=""> 로그인</a>
+							<a href="">회원가입</a>
+						</div>
+						<div id="div_top_user_menu" style="display:none">
+							<div class="userbx">
+								<a href="" class="user"><span class="color_org" id="top_user_name"></span>님 <img id="top_user_profile_img" src="/cust/img/admin_profile_none.png" alt="" onerror="this.src='/cust/img/admin_profile_none.png'"></a>
+								<ul class="dropdown-menu">
+									<li><a href="">마이민다</a></li>
+									<li><a href="">숙소 예약 내역</a></li>
+									<li><a href="">트립 예약내역</a></li>
+									<li><a href="">저장 목록</a></li>
+									<li><a href="">정보 수정</a></li>
+									<li><a href="">로그아웃</a></li>
+								</ul>
+							</div>
+							<div class="dep2">
+								<strong class="sr-only">마이민다</strong>
+								<ul class="clearfix">
+									<li><a href="">마이민다</a></li>
+									<li><a href="">숙소 예약 내역</a></li>
+									<li><a href="">트립 예약내역</a></li>
+									<!-- <li><a href="/mypage/booking_tour.php" >트립 예약내역</a></li> -->
+									<li><a href="">저장 목록</a></li>
+									<li><a href="">정보 수정</a></li>
+									<li><a href="">나의 활동</a></li>
+									<li><a href="">포인트/캐쉬/쿠폰</a></li>
+									<li><a href="">유레일패스 예약</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="gnb right-gnb clear">
+						<li class="i6">
+							<a href="">커뮤니티</a><!-- [D] class="active" 추가시 dep2 보여짐 -->
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="">커뮤니티</a></li>
+									<li><a href="">구인·구직</a></li>
+									<li><a href="">사고·팔고</a></li>
+									<li><a href="">톡톡 릴레이</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="i7">
+							<a href="">할인&amp;이벤트</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="">땡처리 할인</a></li>
+									<li><a href="">비수기 할인</a></li>
+									<li><a href="">숙소 쿠폰</a></li>
+									<li><a href="">민다 이벤트</a></li>
+									<li><a href="">숙소 이벤트</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- 상단 검색창은 아이콘 클릭으로만 검색이 작동해야 합니다.페이지 하단에 생길수 있는 다른 페이지의 폼입력과 구분이 되지 않을수 있기 때문에 -->
+					<form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+						<input type="hidden" name="part" value="keyword_search">
+						<!-- 전달되는 키워드는 구분자('__SP__')로 구분 하여 전달 -->
+						<input type="hidden" name="keywords" id="keywords" value="">
+						<input type="hidden" name="country">
+						<input type="hidden" name="city">
+						<input type="hidden" name="unit">
+						<!-- <button type="button" class="icon_srch_gnb">검색</button> -->
+						<!-- <div class="silde-wrap"> -->
+						<div class="input-group">
+                            <span class="btn-wrap">
+                                <button type="button" id="city_search_btn" class="icon_srch_grey">검색</button>
+                            </span>
+							<span class="input-wrap">
+                                <input type="text" name="keyword" id="keyword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="검색어를 입력하세요." title="검색어 입력" autocomplete="off" style="ime-mode:active;">
+                            </span>
+							<span class="close-btn-wrap">
+                                <button type="button" class="icon_date_close" style="display: none;">검색 취소</button>
+                            </span>
+							<!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+						</div>
+						<!-- </div> -->
+					</form>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<!-- loaction -->
+				<div class="bread_crumb text-right">
+					<ul class="d_iblock clearfix">
+						<li><a href="" class="icon_house">홈</a></li>
+						<li><a href="">고객센터</a></li>
+						<li>취소환불규정</li>
+					</ul>
+				</div>
+				<!-- 서브 헤더 -->
+				<header class="sub_hd">
+					<h2>고객센터</h2>
+				</header>
+				<ul class="basic_step2 tb_fixed">
+					<li><a href="">공지사항</a></li>
+					<li><a href="">자주하는 질문</a></li>
+					<li><a href="">고객센터 문의하기</a></li>
+					<li class="active"><a href="">취소환불규정</a></li>
+				</ul>
+				<!-- 2017-05-17 add -->
+				<div class="pt50">
+					<ul class="split_lst tap-service text-center">
+						<li class="active"><a href="#tab_room" data-toggle="tab" class="fw500">숙소</a></li>
+						<li><a href="#tab_trip" data-toggle="tab" class="fw500">트립</a></li>
+					</ul>
+				</div>
+				<!--// 2017-05-17 add -->
+				<div class="tab-content">
+					<div id="tab_room" class="tab-pane fade in active">
+						<section class="mt60">
+							<h3 class="color_org fs14 pb15">예약취소</h3>
+							<ol class="lst_num_style">
+								<li>예약 취소는 마이페이지에서 직접 취소가 가능합니다.</li>
+								<li>취소시 환불규정은 숙소마다 상이할 수 있으니, 예약 전 각 숙소정보 페이지에 기재된 취소환불규정을 반드시 확인하셔야 합니다.</li>
+							</ol>
+						</section>
+						<section class="pt30">
+							<h3 class="color_org fs14 pb15">예약변경</h3>
+							<ol class="lst_num_style">
+								<li>예약변경을 원하실 경우에는 기존 예약을 취소하신 후, 새로 예약하셔야 합니다.</li>
+								<li>변경내용이 숙박수 혹은 인원수 감소인 경우는 민다 고객센터(1661-2892, 운영시간 내)로 전화 접수를 통해서만 변경신청이 가능합니다. 예약변경 가능여부는 숙소별 객실운용정책(최소예약숙박수 등)에 따라 결정되며, 예약변경이 가능할 경우 예약금 차액에 대한 환불여부는 예약 시 동의한 ‘취소환불규정’에 따릅니다 (단, 포인트 적립은 되지 않습니다.)</li>
+								<li>예약금 외 숙소직접결제액이 있는 경우, 숙소직접결제액은 예약 시 동의한 취소환불규정의 적용을 받지 않으며, 숙소직접결제액의 환불여부는 숙소와 직접 협의하여야 합니다.</li>
+								<li>민다를 통하지 않고, 숙소와의 직접적인 커뮤니케이션을 통해 예약을 변경(각 숙소 별 민다 Q&A 게시판 이용 포함)하여 문제가 발생할 경우 민다는 이에 대해 책임을 지지 않습니다.</li>
+							</ol>
+						</section>
+						<section class="pt30">
+							<h3 class="color_org fs14 pb15">No-Show</h3>
+							<ol class="lst_num_style">
+								<li>No-Show(예약취소 및 연락 없이 숙박 당일 체크인 하지 않는 것)를 일으켰을 경우, 예약금 환불여부는 예약 시 동의한 ‘취소환불규정’에 따릅니다.
+									<br>(단, 환불액이 있는 경우 체크인 날짜로부터 2주 이내로 반드시 고객센터로 접수해주셔야만 환불 받을 수 있습니다.)</li>
+								<li>No-Show를 발생시킨 회원은 민다에서 제공하는 서비스(숙소예약 등)의 정상적인 이용이 제한될 수 있습니다.</li>
+							</ol>
+							<p class="color_org pt15">※ 천재지변, 교통편 취소와 연착, 파업, 시위, 테러 등으로 인한 예약취소/변경/No-Show의 경우에도 위 각 항목의 동일한 조항을 적용 받습니다.</p>
+							<p class="color_org">※ 본 규정은 일반회원대상의 규정이며, 여행사 회원님 예약취소/변경/No-Show에 대한 환불규정은 여행사 예약관리 페이지에 별도 공지된 약관을 따릅니다.</p>
+						</section>
+						<section class="pt30">
+							<h3 class="color_org fs14 pb15">민다 책임면책 조항</h3>
+							<ol class="lst_num_style">
+								<li>실제와 다른 숙소정보로 인한 직간접 피해에 대해서는 민다에서 책임을 지지 않습니다.(민다의 숙소정보는 예약을 위한 참고자료로 해당 숙소 측에서 직접 관리하고 있으며 숙소 내 자체 변동이나 기타사유로 실제와 차이가 있을 수 있습니다.)</li>
+								<li>숙소 도착 후, 혹은 숙박 후 숙소의 시설 및 서비스가 기대에 못 미쳤다고 하여 예약금 환불을 요청할 수 없습니다.</li>
+								<li>예약신청시 작성한 숙박자의 정보(숙박자명, 연락처, 이메일, 체크인 예정시각, 도착예정지 등)가 정확하지 않거나, 정보 변경 후 민다로 변경신청을 하지 않은 상태에서 발생한 문제에 대해서는 민다에서 책임을 지지 않습니다.</li>
+								<li>숙소에서 직간접적으로 발생된 대인 상해, 질병, 재산상의 손해 등의 비용적 손실에 대해서는 민다에서 책임을 지지 않습니다.</li>
+								<li>고객이 숙소 규정을 지키지 않거나 시설 및 설비, 물품 등에 손해를 입혔을 경우 현지 숙소와의 손해 배상문제에 대해서는 민다에서 책임을 지지 않습니다. </li>
+								<li>예약금을 제외한 나머지 숙소직접결제액이 있는 경우,숙소직접결제액에 대해서는 민다에서 책임을 지지 않습니다.</li>
+								<li>민다 고객센터를 거치지 않은 숙소와의 직접적 커뮤니케이션을 통해 발생한 문제(예약변경 및 취소 등)에 대해서는 민다에서 책임을 지지 않습니다.</li>
+								<li>천재지변이나 항공사 사정, 내란, 테러 등 국제 여행업 관행상에 인정되지 않는 사유로 인하여 서비스를 제공할 수 없는 경우 서비스 제공에 관한 책임에 대해서는 민다에서 책임을 지지 않습니다.</li>
+							</ol>
+						</section>
+						<section class="pt30">
+							<h3 class="color_org fs14 pb15">[부칙]</h3>
+							<ol class="lst_num_style">
+								<li>본 약관은 2014년 7월 1일부터 시행됩니다.</li>
+								<li>본 약관은 2016년 5월 2일부터 시행됩니다.</li>
+							</ol>
+						</section>
+					</div>
+					<div id="tab_trip" class="tab-pane fade in">
+						<section>
+							<h3 class="color_org fs14 pb5">예약취소</h3>
+							<ol class="lst_num_style">
+								<li>예약 취소는 마이페이지에서 직접 취소가 가능하다.</li>
+								<li> 취소시 예약규정은 상품마다 상이할 수 있으니, 예약 전 각 상품정보 페이지에 기재된 예약규정을 반드시 확인해야 한다.</li>
+								<li>교통편 취소와 연착, 파업, 시위, 테러 등으로 인한 예약취소/변경의 경우, 예약금 환불여부는 예약 시 동의한 '예약규정'에 따른다.
+									<br />
+								</li>
+							</ol>
+							<p class="pt15">※ 천재지변으로 인해 투어가 불가피할 경우 취소기간과 무관하게 환불 가능하다.</p>
+						</section>
+						<section class="pt20">
+							<h3 class="color_org fs14 pb5">예약변경</h3>
+							<ol class="lst_num_style">
+								<li>예약변경은 고객센터 문의 or QnA, 파트너의 연락처(전화, 이메일)를 통해서 변경 가능하다. (날짜변경 및 인원부분취소 외의 예약변경은 불가, 당일으로 변경 불가)</li>
+								<li>변경내용이 투어일자 또는 인원부분취소인 경우는 고객센터 문의를 통해서만 변경신청이 가능하다. 예약변경 가능여부는 상품별 운용정책에 따라 결정되며, 예약변경이 가능할 경우 예약금 차액에 대한 환불여부는 예약 시 동의한 ‘예약규정’에 따른다. (단, 포인트 적립은 되지 않는다.)</li>
+								<li>예약일 변경 후 취소시 변경된 투어일을 기준으로 적용된다.</li>
+							</ol>
+						</section>
+						<section class="pt20">
+							<h3 class="color_org fs14 pb5">민다 책임면책 조항</h3>
+							<ol class="lst_num_style">
+								<li>실제와 다른 투어정보로 인한 직간접 피해에 대해서는 민다에서 책임지지 않는다.
+									<br /> (민다의 투어정보는 예약을 위한 참고자료로 해당 업체 측에서 직접 관리하고 있으며 상황에 따라 변동이나 기타사유로 일정과 차이가 있을 수 있다.)</li>
+								<li>제공받은 투어 서비스가 기대에 못 미쳤다고 하여 예약금 환불을 요청할 수 없다.</li>
+								<li>예약신청시 작성한 여행자의 정보(참가자 성명, 연락처, 이메일 등)가 정확하지 않거나, 정보 변경 후 민다로 변경신청을
+									<br /> 하지 않은 상태에서 발생한 문제에 대해서는 민다에서 책임지지 않는다.</li>
+								<li>투어서비스와 직간접적으로 발생된 대인 상해, 질병, 재산상의 손해 등의 비용적 손실에 대해서는 민다에서 책임지지 않는다.</li>
+								<li>고객이 투어 진행시 규정을 지키지 않거나 손해를 입혔을 경우 업체와의 손해 배상문제에 대해서는 민다에서 책임지지 않는다.</li>
+							</ol>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh">information</strong>
+					<div class="ft_info_txt">
+						<span>㈜민다</span>
+						<span>대표 : 김윤희</span>
+						<span>사업자등록번호 : 101-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt">
+						<span>이메일 : help@theminda.com</span>
+						<span>고객센터 : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span>운영시간 : 평일 10시~12시/13시~18시(주말, 공휴일 휴무)</span>
+					</div>
+					<div class="ft_info_txt">
+						<address>서울특별시 중구 동호로15길 27 종하빌딩 A동 5층</address>
+					</div>
+					<div class="footer__right__top">
+						<ul class="footer__partner-list">
+							<li class="footer__partner-item bar"><a href="" class="footer__partner-link">숙소/트립 파트너 홈</a></li>
+							<li class="footer__partner-item"><a href="" class="footer__partner-link">여행사 예약관리 홈</a></li>
+						</ul>
+						<ul class="about_lst clearfix">
+							<li><a href="" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+							<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+							<li><a href="" class="btn">고객센터 문의</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="" target="_blank">회사소개</a></li>
+						<li><a href="" target="_blank">파트너 가입</a></li>
+						<li><a href="">취소환불규정</a></li>
+						<li><a href="">고객센터</a></li>
+						<li class="bar"><a href="">공지사항</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="">개인정보처리방침</a></li>
+						<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">사업자정보확인</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright? Minda Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<div class="fix_btm">
+		<!-- quick  -->
+		<div id="quickMenu" class="quick d_iblock">
+			<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+		</div>
+		<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+	</div>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="/cust/js/bootstrap-slider.js"></script>
+	<script src="/cust/js/jquery.nanoscroller.js"></script>
+	<script src="/cust/js/moment.min.js"></script>
+	<script src="/cust/js/daterangepicker.js"></script>
+	<script src="/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="/cust/js/common.js"></script>
+</body>
+
+</html>

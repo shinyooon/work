@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title> 민다(민박다나와) 파트너홈 </title>
+
+<!-- 기존 css -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/style.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/layout.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/ui.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/css/font.css">
+<style>
+.yellow {color:#fff83e;}
+</style>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+<!-- <link rel="stylesheet" href="css/common.css"> -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+<script src="http://v2.theminda.com/manager/jquery.js"></script>
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="http://v2.theminda.com/manager/common.js"></script>
+<script src="http://v2.theminda.com/lib/js/common.js"></script>
+<script src="http://v2.theminda.com/lib/js/chkForm.js"></script>
+<script src="http://v2.theminda.com/lib/js/selectCategory.js"></script>
+<script>var $j = jQuery.noConflict();</script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!--h1 class="logo"><a href="http://v2.theminda.com/manager/"><img src="http://v2.theminda.com/manager/common/img/logo_big.png" alt="민다(민박다나와) 파트너홈"></a></h1-->
+					<h1 class="logo"><a href="http://v2.theminda.com/manager/index.php"><img src="http://v2.theminda.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--2016-11-29 yuna nav 위치 수정, 클래스 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="http://v2.theminda.com/manager/index.php" class="active">숙소</a></li>
+							<li><a href="http://v2.theminda.com/manager/travel/index.php">여행정보</a></li>
+							<li><a href="http://v2.theminda.com/manager/tg/index.php">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!--2016-08-31 yuna 공지사항 주석 -->
+						<!-- <a href="http://v2.theminda.com/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+						<a href="" class="account">테스트 이프민바5님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="partner_join">
+			<!-- 페이지시작 -->
+			<div class="w1260 addinfo_step">
+				<!--link href="../font.css" rel="stylesheet" type="text/css"-->
+				<style type="text/css">
+				.style14 {
+					color: #ffffff;
+					font-weight: bold;
+				}
+
+				.style16 {
+					font-family: verdana;
+					font-size: 16pt;
+				}
+
+				.style18 {
+					color: #333333
+				}
+
+				.style4 {
+					color: #e72b00
+				}
+
+				.style19 {
+					color: #000000
+				}
+
+				.style20 {
+					color: #FF0000
+				}
+				</style>
+				<h2 class="master_tit null">숙소 추가정보 입력</h2>
+				<!--div class="ever_changing"><a href="javascript:" onClick="fnSave();alert('현재까지 작성한 내용이 임시저장 되었습니다.');" class="btn bg_org ml10">임시저장</a></div-->
+				<!-- step -->
+				<ol class="w1260 join_step clearfix">
+					<li><a href="javascript:fnStep('1');"><span class="d_block">STEP1</span>숙소주 약관동의</a></li>
+					<li><a href="javascript:fnStep('2');"><span class="d_block">STEP2</span>숙소정보</a></li>
+					<li><a href="javascript:fnStep('3');"><span class="d_block">STEP3</span>위치정보</a></li>
+					<li><a href="javascript:fnStep('4');"><span class="d_block">STEP4</span>객실정보</a></li>
+					<li><a href="javascript:fnStep('5');"><span class="d_block">STEP5</span>시즌요금 설정<small class="d_block">(선택입력)</small></a></li>
+					<li><a href="javascript:fnStep('6');"><span class="d_block">STEP6</span>객실현황 설정<small class="d_block">(선택입력)</small></a></li>
+					<li><a href="javascript:fnStep('7');"><span class="d_block">STEP7</span>예약시스템<br>규정 설정</a></li>
+					<li class="active"><a href="javascript:fnStep('8');"><span class="d_block">STEP8</span>완료<small class="d_block">(오픈요청)</small></a></li>
+				</ol>
+				<script>
+				function chkRule(fm) {
+					if (!chkForm(fm)) return false;
+
+					fm.rule.value = "";
+					for (var i = 0; i < fm.rule_select.length; i++) {
+						if (fm.rule_select[i].checked) {
+							fm.rule.value = fm.rule_select[i].value;
+							break;
+						}
+					}
+
+					if (Number("0") > 0) {
+						//alert("이미 예약규정 변경이 접수되어 관리자의 승인대기중에 있습니다.\r\n\'예약규정 변경내역'에서 [접수취소]를 클릭하여 취소 후 다시 신청해 주세요");
+						//return false;
+					}
+
+					if (fm.rule.value == "") {
+						alert("\'예약규정\'을 선택하세요.");
+						return false;
+					}
+
+					if (fm.rule.value == "1") {
+						//alert("이미 설정되어 있는 \'예약 규정\'과 동일합니다");
+						//return false;
+					}
+					return true;
+
+					//return confirm('예약규정 변경을 신청하시겠습니까?');
+				}
+				</script>
+				<!-- [D] 2017-02-20 div추가 -->
+				<div class="cancel-rule-contents">
+					<div class="t mt30">예약시스템 설정</div>
+					<form name="fm" method="post" action="indb.rule.php" onsubmit="return chkRule(this)">
+						<ul class="list-reserv">
+							<li class="d_iblock">
+								<div class="radio-wrap">
+									<input type="radio" name="booktype" value="9" required="" label="예약시스템" style="border:0px" id="reserv_1" checked="checked">
+									<label for="reserv_1" class="label btn btn-lg"><span class="pr"><span class="label_recomm">권장</span>즉시예약</span></label>
+								</div>
+							</li>
+							<li class="d_iblock">
+								<div class="radio-wrap">
+									<input type="radio" name="booktype" value="1" required="" label="예약시스템" style="border:0px" id="reserv_2">
+									<label for="reserv_2" class="label btn btn-lg"><span class="pr">대기 예약</span></label>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix desc-list-reserv">
+							<dl class="pull-left ">
+								<dt class="sub-t">즉시예약이란?</dt>
+								<dd>즉시예약은 여행자가 예약신청과 동시에 예약금이 입금되고 <br /> 예약이 확정되는 예약시스템입니다. <br /> 예약신청 후 숙소 측의 응답을 기다려야하는 ‘대기예약’ 시스템에  <br /> 비해 <span class="color_red">여행자들의 선호도가 높아 예약율이 높으며 민다 홈페이지에서도 <br />목록 상위에 노출</span>됩니다.</dd>
+							</dl>
+							<dl class="d_iblock">
+								<dt class="sub-t">대기예약이란?</dt>
+								<dd>대기예약은 여행자가 예약 신청 후 숙소측에서 24시간 이내에 숙박가능여부를 <br /> 여행자에게 회신하면여행자가 예약금을 입금하여 예약이 확정되는 예약 형태입니다. <br /> 대기시간으로 인해 즉시예약에 비해 예약율이 낮으며 결제 시한 내 여행자가 예약해야하므로 <br /> 미입금으로 인한 자동취소가 종종 발생하여 즉시예약에 비해 예약확정되는 비율은 적으나 <br /> 객실 운용을 유연하게 할 수 있습니다.</dd>
+							</dl>
+						</div>
+						<!-- <div id="reservation_ly1" class="modal fade" role="dialog">
+							<div class="modal-dialog modal-reserv">
+								<font color="1B6800"><b>실시간 예약(예약과 동시에 확정)이란?</b></font>
+								<br>
+								<br> 실시간 예약은 고객이
+								<font color="E72B00"><b>예약신청과 동시에 예약금이 입금되고 자동으로 예약이 확정</b></font>되는 예약형태를 말합니다.
+								<br>
+								<br>
+								<img src="http://minbakdanawa.com/manager/img/image_real.gif">
+								<br>
+								<br> 대기시간 없이 즉시 예약이 가능함으로 예약신청 후 민박 측의 응답을 기다려야 하는'대기예약'에 비해 여행자들이 선호도가 높아 예약이 더 많이 들어올 수 있다는 장점이 있습니다.
+								<br> 반면, 빈객실과 예약된 객실의 상태가 항상 정확하게 유지되고 있어야 하기 때문에, 개별 민박 홈페이지 및, 타 민박예약 사이트를 통해서도 예약을 받고 있는 민박인 경우, 같은 일자, 같은 객실에 중복예약이 되지 않도록, 제공되는 관리자 페이지를 통해 날짜 별로 빈객실과 예약된 객실의 상태를 항상 정확하게 유지시켜 주셔야 합니다. 타 사이트를 통한 예약건과 중복예약을 피하기 위해 민박다나와에서는 전체 객실 중 일부만을 등록하여 시스템을 사용할 수도 있습니다.
+								<div class="btn">
+									<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+								</div>
+							</div>
+						</div> -->
+						<!-- <div id="reservation_ly2" class="modal fade" role="dialog">
+							<div class="modal-dialog modal-reserv">
+								<font color="1B6800"><b>대기 예약(24시간 이내 회신)이란 ?</b></font>
+								<br>
+								<br> 대기 예약은 고객이 예약신청후, 민박측에서 24시간 이내에 해당 객실이 예약가능 여부를 고객에게 다시 통보하면,
+								<br> 그때 고객이 예약금을 입금(결제시한 : 예약가능 여부 회신 후 해외 2일(48시간) / 국내 1일(24시간)이내)하여 예약이 확정되는 예약형태를 말합니다.
+								<br>
+								<br>
+								<img src="http://minbakdanawa.com/manager/img/image_waiting.gif">
+								<br>
+								<br> 민박측에서 객실예약가능 여부를 회신을 주어야만 예약이 계속 진행되므로,
+								<br> 실시간 예약에 비해 상황에 따라서 객실을 운용할 수 있는 장점이 있는 반면, 대기시간으로 인해 실시간 예약에 비해 여행자 선호도는 떨어집니다.
+								<br> 또한, 결제시한내, 고객의 예약금 미입금으로 예약이 자동 취소되는 경우가 종종 있어, 실시간 예약에 비해 예약확정 비율은 적습니다.
+								<div class="btn">
+									<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+								</div>
+							</div>
+						</div> -->
+						<div class="t">예약규정 설정</div>
+						<input type="hidden" name="mode" id="mode" value="request">
+						<input type="hidden" name="cur_ruleno" id="cur_ruleno" value="1">
+						<input type="hidden" name="rule" id="rule" value="1">
+						<input type="hidden" name="goodsno" id="goodsno" value="5411">
+						<input type="hidden" name="rule_use_type_cd" id="rule_use_type_cd" value="B">
+						<!--기본-->
+						<input type="hidden" name="req_type_cd" id="req_type_cd" value="2">
+						<!--변경-->
+						<input type="hidden" id="rurl" name="rurl" value="goods_step8.php">
+
+						<!-- 2017-02-20 add -->
+						<div class="list-rule">
+							<dl class="accordion">
+								<dt>
+									<div class="radio-wrap">
+										<input type="radio" name="rule_select" id="radio-cancel1" value="1" alt="1" checked="checked"><label for="radio-cancel1" class="acc_btn label btn btn-lg open"><span class="label_recomm" ce>권장</span>일반A
+										</label>
+									</div>
+								</dt>
+								<dd class="acc_cnt room_refund">
+									<table class="tb tb_fixed">
+										<caption class="sr-only">날짜별 환불규정</caption>
+										<colgroup>
+											<col style="width:330px">
+											<col>
+											<col style="width:218px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+												<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+												<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center">30일 전 취소</td>
+												<td class="text-center">전액환불<span class="color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+												<td class="text-center">없음</td>
+											</tr>
+											<tr>
+												<td class="text-center">29~4일 전 취소</td>
+												<td class="text-center">70%</td>
+												<td class="text-center">8%</td>
+											</tr>
+											<tr>
+												<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+												<td class="text-center">40%</td>
+												<td class="text-center">없음</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+							<dl class="accordion">
+								<dt><div class="radio-wrap"><input type="radio" name="rule_select" id="radio-cancel2" value="1" alt="1"><label for="radio-cancel2" class="acc_btn label btn btn-lg">일반B</label></div></dt>
+								<dd class="acc_cnt room_refund" style="display:none;">
+									<table class="tb tb_fixed">
+										<caption class="sr-only">날짜별 환불규정</caption>
+										<colgroup>
+											<col style="width:330px">
+											<col>
+											<col style="width:218px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+												<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+												<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center">30일 전 취소</td>
+												<td class="text-center">전액환불<span class="d_block color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+												<td class="text-center">없음</td>
+											</tr>
+											<tr>
+												<td class="text-center">29~4일 전 취소</td>
+												<td class="text-center">70%</td>
+												<td class="text-center">8%</td>
+											</tr>
+											<tr>
+												<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+												<td class="text-center">40%</td>
+												<td class="text-center">없음</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+							<dl class="accordion">
+								<dt><div class="radio-wrap"><input type="radio" name="rule_select" id="radio-cancel3" value="1" alt="1"><label for="radio-cancel3" class="acc_btn label btn btn-lg">$규정명$ : 예약금$ 예약금%$</label></div></dt>
+								<dd class="acc_cnt room_refund" style="display:none;">
+									<table class="tb tb_fixed">
+										<caption class="sr-only">날짜별 환불규정</caption>
+										<colgroup>
+											<col style="width:330px">
+											<col>
+											<col style="width:218px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+												<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+												<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center">30일 전 취소</td>
+												<td class="text-center">전액환불<span class="d_block color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+												<td class="text-center">없음</td>
+											</tr>
+											<tr>
+												<td class="text-center">29~4일 전 취소</td>
+												<td class="text-center">70%</td>
+												<td class="text-center">8%</td>
+											</tr>
+											<tr>
+												<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+												<td class="text-center">40%</td>
+												<td class="text-center">없음</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</div>
+						<!-- <table width="100%" border="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td align="center">
+										<table cellspacing="1" cellpadding="3" width="100%" bgcolor="#FFFFFF" border="0">
+											<tbody>
+												<tr style="height:30px;">
+													<td rowspan="2" style="border:1px solid #dddddd;background:#777777;text-align:center;">
+														<font color="#ffffff"><strong>예약규정</strong></font>
+													</td>
+													<td colspan="2" style="border:1px solid #dddddd;background:#777777;text-align:center;">
+														<font color="#ffffff"><strong>총숙박요금</strong></font>
+													</td>
+													<td colspan="3" style="border:1px solid #dddddd;background:#777777;text-align:center;">
+														<font color="#ffffff"><strong>취소보상정책</strong></font>
+													</td>
+												</tr>
+												<tr style="height:45px;">
+													<td style="border:1px solid #dddddd;background:#777777;text-align:center;"><strong><font color="#ffffff">예약금</font></strong></td>
+													<td style="border:1px solid #dddddd;background:#777777;text-align:center;"><strong><font color="#ffffff">숙소직접결제액 </font></strong></td>
+													<td style="border:1px solid #dddddd;background:#777777;text-align:center;"><strong><font color="#ffffff">취소일<br>(현지 체크인 날짜 기준)</font></strong></td>
+													<td style="border:1px solid #dddddd;background:#777777;text-align:center;"><strong><font color="#ffffff">현금보상액<br>(총 숙박요금 기준)</font>)</strong></td>
+													<td style="border:1px solid #dddddd;background:#777777;text-align:center;"><strong><font color="#ffffff">비즈머니 적립<br>(총 숙박요금 기준)</font></strong></td>
+												</tr>
+												<tr bgcolor="ffffe1">
+													<td rowspan="2" align="left" bgcolor="fffec8" style="padding-left:20px;width:100px;">
+														<strong><input type="radio" name="rule_select" value="1" alt="1" CHECKED><font color="#1B6800">일반A</font></strong>
+													</td>
+													<td rowspan="2" align="center">
+														10% </td>
+													<td rowspan="2" align="center">
+														90% </td>
+													<td align="center">
+														3일전 ~ 당일 취소 및 No-Show </td>
+													<td align="center">
+														없음 </td>
+													<td align="center">
+														8% </td>
+												</tr>
+												<tr bgcolor="ffffe1">
+													<td align="center">
+														29 ~ 4일전 취소 </td>
+													<td align="center">
+														없음 </td>
+													<td align="center">
+														없음 </td>
+												</tr>
+												<tr bgcolor="#ffffff">
+													<td height="1" colspan="6" align="center" bgcolor="#dddddd"></td>
+												</tr>
+												<tr bgcolor="ffffff">
+													<td rowspan="5" align="left" bgcolor="#eeeeee" style="padding-left:20px;width:100px;">
+														<strong><input type="radio" name="rule_select" value="101" alt="1" ><font color="#1B6800">규정B</font></strong>
+													</td>
+													<td rowspan="5" align="center">
+														50% </td>
+													<td rowspan="5" align="center">
+														50% </td>
+													<td align="center">
+														당일 취소 및 No-Show </td>
+													<td align="center">
+														40% </td>
+													<td align="center">
+														8% </td>
+												</tr>
+												<tr bgcolor="ffffff">
+													<td align="center">
+														6 ~ 1일전 취소 </td>
+													<td align="center">
+														20% </td>
+													<td align="center">
+														없음 </td>
+												</tr>
+												<tr bgcolor="ffffff">
+													<td align="center">
+														14 ~ 7일전 취소 </td>
+													<td align="center">
+														10% </td>
+													<td align="center">
+														없음 </td>
+												</tr>
+												<tr bgcolor="ffffff">
+													<td align="center">
+														29 ~ 15일전 취소 </td>
+													<td align="center">
+														없음 </td>
+													<td align="center">
+														없음 </td>
+												</tr>
+												<tr bgcolor="ffffff">
+													<td align="center">
+														~ 30일전 취소 </td>
+													<td align="center">
+														없음 </td>
+													<td align="center">
+														없음 </td>
+												</tr>
+											</tbody>
+										</table>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tbody>
+												<tr>
+													<td height="20" valign="top">
+														<br>
+														<p style="color:#FF0000;">* 예약 수수료는 총 숙박비의 10% 입니다.</p>
+														<p>* 위 예약규정은 '일반고객'의 예약에 대한 규정입니다. '여행사 고객'은 별도 규정에 따라 취소보상정책이 적용됩니다.</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table> -->
+						<div class="sub-t">안내사항</div>
+						<ul class="lst_type_dot">
+							<li>예약수수료는 총 숙박비의 10%입니다.</li>
+							<li>위 예약규정은 ‘여행자’의 예약에 대한 규정입니다. ‘여행사 고객’은 별도 규정에 따라 취소보상 정책을 적용합니다.</li>
+						</ul>
+						<div class="t">계좌정보 입력</div>
+						<ul>
+							<li>
+								<select class="form-control-basic wid_smd mr5 select_bank" title="은행명 선택">
+									<option value="" selected="">은행명</option>
+									<option value="">SC제일은행</option>
+									<option value="">경남은행</option>
+									<option value="">광주은행</option>
+									<option value="">국민은행</option>
+									<option value="">기업은행</option>
+									<option value="">농협</option>
+									<option value="">대구은행</option>
+									<option value="">부산은행</option>
+									<option value="">산업은행</option>
+									<option value="">수협</option>
+									<option value="">신한은행</option>
+									<option value="">우리은행</option>
+									<option value="">전북은행</option>
+									<option value="">제주은행</option>
+									<option value="">하나(외환)은행</option>
+									<option value="16">직접입력</option>
+								</select>
+								<script type="text/javascript">
+									$j(".select_bank").on('change', function(){
+										console.log(this.value);
+										if(this.value==16){
+											$j('.bank_input').show();
+										}else{
+											$j('.bank_input').hide();
+										}
+									});
+								</script>
+								<input type="text" class="form-control-basic wid_smd mr5 bank_input" maxlength="12" name="banknm"  placeholder="은행명" style="display:none">
+								<input type="text" class="form-control-basic wid_smd mr5 mt0" maxlength="20" name="accno" value="" placeholder="계좌번호">
+								<input type="text" class="form-control-basic wid_smd mt0" maxlength="12" name="accnm" value="" placeholder="예금주명">
+							</li>
+						</ul>
+						<div class="sub-t">안내사항</div>
+						<ul class="lst_type_dot">
+							<li>예약금 정산분을 받을 계좌정보(은행명, 계좌번호, 예금주명 순)를 적어주세요.</li>
+							<li>해외계좌의 경우 영문으로 입력하셔야 하며 수수료는 보낼 때 민다가, 찾으실 때 숙소측에서 부담합니다.</li>
+						</ul>
+						<div class="t">여행사예약 설정</div>
+						<!-- <div style='font-weight:bold;'>여행사 고객을 추가로 받으시겠어요?</div> -->
+						<br>
+
+						<ul class="list-reserv">
+							<li class="d_iblock">
+								<div class="radio-wrap">
+									<input type="radio" name="_agency_book" value="o" class="null" required msg="여행사예약 설정을 선택하세요" id="agency_radio1" checked="checked">
+									<label for="agency_radio1" class="label btn btn-lg"><span class="pr"><span class="label_recomm">권장</span>허용</span></label>
+								</div>
+							</li>
+							<li class="d_iblock">
+								<div class="radio-wrap">
+									<input type="radio" name="_agency_book" value="x" class="null" id="agency_radio2">
+									<label for="agency_radio2" class="label btn btn-lg"><span class="pr">불가</span> </label>
+								</div>
+							</li>
+						</ul>
+						<div class="sub-t">안내사항</div>
+						<ul class="lst_type_dot">
+							<li>여행사를 통한 예약을 추가로 받을 경우 매출 향상에 도움됩니다.</li>
+							<li>여행사를 통한 예약은 예약수수료 15%입니다.</li>
+							<li>자세한 내용은 숙소주 이용약관 17조,18조를 참고해주세요.</li>
+						</ul>
+						<a href="#" class="btn btn-xs bg_grey color_wh" onclick="popup('/member/p.ruleminbak.php',700,600)">숙소주 이용약관 보기</a>
+						<!-- <table width="100%" border="0" cellpadding="8" cellspacing="1" bgcolor="cccccc">
+							<tr bgcolor="ffffff">
+								<td>
+									일반 고객 외에 여행사를 통한 고객을 추가로 받으시겠어요? (여행사 고객예약을 추가로 받을 시 매출 향상에 도움이 됩니다.)
+									<br />
+
+									<ul class="border_grey  pa20 mt10">
+										<li>* 여행사 고객은 예약 수수료 15%입니다.</li>
+										<li>* 자세한 내용은 숙소주 이용약관 17조,18조를 참고해주세요</li>
+									</ul>
+									<a href="#" class="btn btn-xs bg_grey" onclick="popup('/member/p.ruleminbak.php',700,600)">숙소주 이용약관 보기</a>
+									<p>
+								</td>
+							</tr>
+						</table> -->
+						<div class="clearfix mt25">
+							<button type="button" class="btn btn-lg bg_dark_grey pull-left" onClick="location.href='goods_step6.php';"><i class="icon_circle_prev"></i>뒤로</button>
+							<button type="submit" class="btn btn-lg bg_org pull-right" style="margin-left:10px;">저장 후 다음<i class="icon_circle_next ml7 mr0"></i></button>
+						</div>
+					</form>
+					<form name="fmList" method="post" action="indb.rule.php">
+						<input type="hidden" name="mode" value="cancel_req">
+						<input type="hidden" name="cancel_reqno" value="">
+						<input type="hidden" name="cancel_req_type_cd" value="">
+						<input type="hidden" name="old_req_state_cd" value="">
+						<input type="hidden" name="rule_use_type_cd" value="B">
+						<input type="hidden" id="rurl" name="rurl" value="goods_step7.php">
+					</form>
+					<script>
+					function fnSave() {
+						if (!chkRule(document.fm)) return false;
+						document.getElementById('rurl').value = "goods_step7.php";
+						fm.submit();
+					}
+
+					function cancel_rule_req(cancel_reqno, cancel_req_type_cd, old_req_state_cd) {
+						if (confirm("접수취소 하시겠습니까?")) {
+							var fmList = document.fmList;
+							fmList.cancel_reqno.value = cancel_reqno;
+							fmList.cancel_req_type_cd.value = cancel_req_type_cd;
+							fmList.old_req_state_cd.value = old_req_state_cd;
+							fmList.submit();
+						}
+					}
+					</script>
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer 2016-10-28 수정 -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1661-2892)</p>
+			<!-- <a href="http://v2.theminda.com/manager/minbak_rule_01.php" class="split">숙소주 이용약관</a>
+		<a href="http://v2.theminda.com/manager/minbak_rule_02.php" class="split">숙소주 광고이용약관</a> -->
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script>
+		$j(function  () {
+			var $beforeEl = $j('.acc_cnt').eq(0);
+			$j(".accordion .acc_btn").on('click',function  () {
+				if($j(this)!== $beforeEl){
+					$j('.acc_cnt').stop().slideUp('fast');
+					$beforeEl.removeClass('open');
+					$j(this).addClass('open').closest('dt').next('.acc_cnt').stop().slideDown('fast');
+					$beforeEl = $j(this);
+				}
+			});
+			booktypeCheck();
+			$j("input[name='booktype']").click(function(){
+				booktypeCheck();
+			})
+
+			function booktypeCheck(){
+				var idx = $j("input[name='booktype']:checked").closest("li").index();
+				$j(".desc-list-reserv dl").hide();
+				$j(".desc-list-reserv dl").eq(idx).show();
+			}
+
+		})
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

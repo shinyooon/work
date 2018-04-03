@@ -1,0 +1,76 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header.html" ?>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- <span class="sub_bg"></span> -->
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <? include "inc/event_top.html" ?>
+            <!-- 이벤트 내용 시작 -->
+            <div style="margin: 0px auto; position: relative; max-width: 1080px;">
+                <div class="pr">
+                    <img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/together/img.jpg" alt="민다숙소 + 민다트립. HAPPY TOGETHER."/>
+                    <p class="sr-only">숙소 예약하면 트립 전 상품 최대 2만원 할인!</p>
+                    <p class="sr-only">숙소 예약하고 할인된 가격으로 트립도 예약하세요!</p>
+                    <dl class="sr-only">
+                        <dt>숙소 5박 이상 결제 시</dt>
+                        <dd>민다트립 20,000</dd>
+                        <dt>숙소 4박 결제 시</dt>
+                        <dd>민다트립 10,000</dd>
+                        <dt>숙소 3박 결제 시</dt>
+                        <dd>민다트립 5,000</dd>
+                    </dl>
+                    <dl class="sr-only">
+                        <dt>프로모션 기간</dt>
+                        <dd>2018-01-18(목) ~ 02.28(수) </dd>
+                        <dt>쿠폰사용 기간</dt>
+                        <dd>2018-01-18(목) ~ 02.28(수) </dd>
+                    </dl>
+                    <div><a href="http://www.theminda.com/main/list.php?category=" class="event__together-link" onclick="ga('send','event','event_page_button','click','button_event_lodge&trip_coupon');" style="display:inline-block;position:absolute;width:40.7%;height:4.4%;top:69.5%;left:29.7%"><span class="sr-only">민다 숙소 예약하기</span></a></div>
+                    <dl class="sr-only">
+                        <dt>이벤트 참여 전 꼭 알아두세요!</dt>
+                        <dd>민다 트립 1만원 쿠폰(숙소 4박 결제 시)은 5천원 쿠폰 2매로 발급됩니다.</dd>
+                        <dd>민다 트립 2만원 쿠폰(숙소 5박 이상 결제 시)은 1만원 쿠폰 2매로 발급됩니다.</dd>
+                        <dd>쿠폰 사용 시 차액이 남더라도 해당 쿠폰은 사용 완료된 것으로 처리되어. 남은 차액에 대한 적립 및 사용이 불가합니다.</dd>
+                        <dd>숙소 예약 취소 시, 발급된 트립 쿠폰은 사용이 불가하며, 추후에 트립 쿠폰 사용 금앤에 대해 청구될 수 있습니다.</dd>
+                        <dd>쿠폰은 사용기간 내에만 아용할 수 있으며, 사용기간 이후에는 자동으로 소멸됩니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <script type="text/javascript"> $(function() {
+                var href = '';
+                var filter = 'win16|win32|win64|mac';
+                if (navigator.platform) {
+                    if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+                        $('.event__together-link').attr('href','/m/1.0/grp_main/accom.html');
+                    }
+                }
+                $('.event__together-link').click(function(e) {
+                    href = $(this).attr('href');
+                    if (navigator.platform) {
+                        if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+                            /*Mobile*/
+                        } else {/*PC*/
+                            e.preventDefault();
+                            var citycode = href+'001001001'; //도시코드
+                            AppInvokeOpenNewPage(citycode, 'y', 'y');
+                        }
+                    }
+                });
+            });</script>
+            <!-- 이벤트 내용 끝 -->
+            <? include "inc/event_bottom.html" ?>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<? include "inc/bottom.html" ?>

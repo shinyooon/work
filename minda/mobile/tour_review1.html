@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style type="text/css">
+		html,body{background-color: #f3f3f3}
+	</style>
+</head>
+
+<body class="page_clse bg_wh">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<h1><a href="">리뷰 작성하기</a></h1>
+			<button class="icon_hd_clse" href="">닫기</buton>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<!-- 페이지 시작-->
+			<!-- pay-wrap -->
+			<div class="bg_grey2 pay-wrap pb50">
+				<ul class="item_card_lst v2"><!-- v2클래스 추가 -->
+					<li class="pa0">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+							<!-- <div class="price_wrp"> 1인 <span class="price">€50</span> </div> -->
+							<div class="meta_wrp">
+								<span class="square_label red"><span>예약마감</span></span>
+								<span class="square_label blue"><span>출발확정</span></span>
+								<span class="square_label green"><span>예약가능</span></span>
+							</div>
+						</div>
+						<div class="btm_info">
+							<div class="itemwrp media">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+										<span class="badge badge_gold">금뱃지</span>
+									</div>
+								</div>
+								<div class="media-body">
+									<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+									<div class="info-detail">
+										<div class="left">
+											<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<form action=".">
+					<!-- 위치 -->
+					<div class="info-bx-wrap v2">
+						<h2 class="sub_tit">별점</h2>
+						<div class="bx-wh clearfix">
+							<div class="tb_bx pt12">
+								<div class="choicerating pull-left">
+									<label class="on">
+										<input type="radio" name="rating" class="sr-only">1.0</label>
+									<label class="on">
+										<input type="radio" name="rating" class="sr-only">2.0</label>
+									<label class="on">
+										<input type="radio" name="rating" class="sr-only">3.0</label>
+									<label class="on">
+										<input type="radio" name="rating" class="sr-only">4.0</label>
+									<label>
+										<input type="radio" name="rating" class="sr-only">5.0</label>
+								</div>
+								<span class="txt color_mint pull-right">4.0</span>
+							</div>
+						</div>
+						<h2 class="sub_tit">코멘트</h2>
+						<div class="bx-wh">
+							<div class="tb_bx">
+								<span class="input-wrap input-ta review-ta">
+									<textarea id="reviewCmt" class="no_style pl_grey d_block" title="리뷰 상세 내용 입력" placeholder="리뷰를 남겨주세요."></textarea>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="btm_fixed mt10 pa10">
+						<div class="row">
+							<span class="col-xs-6 pr4"><a class="btn btn-xl d_block bg_mint" href="">등록</a></span>
+							<span class="col-xs-6 pl4"><a class="btn btn-xl d_block bg_light_grey4" href="">취소</a></span>
+						</div>
+					</div>
+				</form>
+				<script>
+				$('.choicerating label').click(function() {
+					var txt = $(this).text();
+					$(this).parent().next('.txt').text(txt);
+					$(this).addClass('on').prevAll().addClass('on').end().nextAll().removeClass('on')
+					return false;
+				});
+				</script>
+			</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<script>
+	jQuery(function($) {
+		$(".acc_btn").on('click', function() {
+			$(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+			return false;
+		});
+	});
+	</script>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

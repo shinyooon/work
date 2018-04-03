@@ -1,0 +1,160 @@
+<? include "../../mobile/inc/top.html" ?>
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a></div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">로마</a></h1>
+    <div class="header__right">
+        <!-- 타이틀 우측 3번쨰 버튼 -->
+        <!-- 타이틀 우측 2번쨰 버튼 -->
+        <a href="/m/1.0/grp_main/search.html?type=tour&amp;area=001" class="header__btn-total-city">전체도시</a>
+        <!-- 타이틀 우측 버튼 -->
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix has-fnb has-filter"><!-- yuna : no-hd 클래스 추가 -->
+    <!-- 상단탭 -->
+    <nav>
+        <ul class="tab6">
+            <li class=""><a href="/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=001003001">숙소</a></li>
+            <li class="active"><a href="/m/1.0/tg/list.html?category=001003001">트립</a></li>
+            <li class=""><a href="/m/1.0/spot/list.html?spot_list_type=city&amp;category=001003001">정보</a></li>
+        </ul>
+    </nav>
+    <!-- filter -->
+    <div class="dep3">
+        <form class="frm_index">
+            <div class="srch__date--before">
+                <button type="button" class="srch__date-btn--before">
+                    <span class="srch__date-icon-cal"></span>트립일 선택
+                </button>
+            </div>
+            <div class="itx_datepicker_wrp">
+			<span class="input-wrap input__wrap-tour-cal">
+				<input id="resv_date" value="" type="text" class="no_style input-tour-cal" title="트립 일자" placeholder=""
+                       readonly="readonly">
+			</span>
+            </div>
+        </form>
+        <div class="mtb_srch_filter">
+            <div class="srch__btm">
+                <button id="filter_btn" type="button" class="srch__btn-filter active"><i class="srch__icon-filter"></i>필터
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--<div class="trip-top-msg">
+        <p class="txt">민다 트립은 대기시간 없이 <storng class="txt&#45;&#45;point">즉시예약</storng>됩니다.</p>
+    </div>-->
+    <!-- 2018-02-13 -->
+    <!--<div class="trip-list__banner-area">-->
+        <!--<a href="">-->
+            <!--<div class="banner__usj">-->
+                <!--<p class="banner__usj-txt">유니버셜 스튜디오 재팬 입장권? <span class="banner__usj-txt&#45;&#45;point">바로 여기!</span></p>-->
+            <!--</div>-->
+        <!--</a>-->
+    <!--</div>-->
+    <div class="trip-top-msg">
+        <p class="txt"><storng class="txt--point">대기시간 없이 즉시 예약</storng> 가능한 민다트립 <span id="totalCnt">00</span>개</p>
+    </div>
+    <!--// 2018-02-13 -->
+    <div class="item_card_lst_wrp trip__list">
+        <!-- 2018-03-19 add -->
+        <div class="item__nodata">
+            <div class="nodata__wrap">
+                <span class="nodata__icon trip-contact__icon-custom"></span>
+                <p class="nodata__title">민다트립 맞춤투어 문의</p>
+                <p class="nodata__txt">나만의 특별한 맞춤투어를 받고 싶으신가요?<br />
+                    원하시는 투어의 내용을 알려주시면 확인 후 연락을 드립니다.</p>
+                <a href="https://goo.gl/forms/ad3fJxOS24xoE1jI3" target="_blank" class="nodata__btn">맞춤투어 문의하러 가기</a>
+            </div>
+        </div>
+        <!--// 2018-03-19 add -->
+    </div>
+    <!-- //페이지 끝-->
+</div>
+<!-- //container -->
+</div>
+<!-- //wrap -->
+<? include "../../mobile/inc/fnb.html" ?>
+<!-- js -->
+<script type="text/javascript">
+    $(function() {
+        var $beforeBtn = $('.srch__date-btn--before');
+        var $cal_input = $('.input-tour-cal');
+        var $btn_cal_reset = $('.itx_datepicker_wrp .icon_clse_input');
+        var dateToday = new Date();
+        if ($beforeBtn !== null) {
+            $beforeBtn.click(function() {
+                $cal_input.click();
+            });
+        }
+        $btn_cal_reset.click(function() {
+            $beforeBtn.show();
+        });
+        if ($cal_input.val()) {
+            $beforeBtn.hide();
+        }
+
+        $cal_input.daterangepicker({
+            autoApply: true,
+            minDate: dateToday,
+            parentEl: '.sort_hd ',
+            singleDatePicker: true,
+            showCustomRangeLabel: true,
+            cancelClass: 'icon_close_blk2', //2017-04-06 add
+            locale: {
+                format: 'YYYY-MM-DD',
+                'daysOfWeek': [
+                    '일',
+                    '월',
+                    '화',
+                    '수',
+                    '목',
+                    '금',
+                    '토',
+                ],
+                'monthNames': [
+                    '1월',
+                    '2월',
+                    '3월',
+                    '4월',
+                    '5월',
+                    '6월',
+                    '7월',
+                    '8월',
+                    '9월',
+                    '10월',
+                    '11월',
+                    '12월',
+                ],
+            },
+        });
+        /*2017-04-06 add*/
+        $cal_input.on({
+            'hide.daterangepicker': function(ev, picker) {
+                if ($cal_input.val()) {
+                    $cal_input.siblings('.icon_clse_input').show();
+                } else {
+                    $cal_input.siblings('.icon_clse_input').hide();
+                }
+            },
+            'apply.daterangepicker': function(ev, picker) {
+                $beforeBtn.hide();
+            },
+        });
+        $('.icon_clse_input').click(function() {
+            $(this).siblings('input:text').val('');
+            $(this).hide();
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

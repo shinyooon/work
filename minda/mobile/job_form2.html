@@ -1,0 +1,76 @@
+<? include "inc/top.html" ?>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a> </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">구인ㆍ구직</a></h1>
+    <div class="header__right">
+        <a href="/m/1.0/grp_main/search.html?type=tour&amp;area=001" class="header__btn-edit">수정</a>
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix has-fnb">
+    <!-- 페이지 시작-->
+    <!-- 탭 -->
+    <!-- [D] 2017-01-03 탭 추가-->
+    <div class=""
+    <!-- community-form -->
+        <form class="community-form">
+            <dl class="community-form__dl">
+                <dt class="community-form__tit">분류선택</dt>
+                <dd>
+                    <span class="input__wrap--radio"><input id="radio-offer" type="radio" name="radio_community" checked="checked"><label class="input__wrap--label" for="radio-offer">구인</label></span>
+                    <span class="input__wrap--radio"><input id="radio-seek" type="radio" name="radio_community"><label class="input__wrap--label" for="radio-seek">구직</label></span>
+                </dd>
+                <dt class="community-form__tit">제목</dt>
+                <dd>
+                    <span class="input__wrap"><input id="tit_community" type="text" placeholder="제목을 입력해주세요." title="구인ㆍ구직 제목 입력" value="런던에서 근무하실 분 모집합니다."></span>
+                </dd>
+                <dt class="community-form__tit">내용</dt>
+                <dd>
+                    <span class="input__wrap"><textarea title="구인ㆍ구직 내용 입력" placeholder="내용을 입력해주세요.">런던에서 근무하실 분 모집합니다. 런던에서 근무하
+실 분 모집합니다. 런던에서 근무하실 분 모집합니
+다. 런던에서 근무하실 분 모집합니다. 런던에서
+근무하실 분 모집합니다. 런던에서 근무하실 분
+모집합니다. 런던에서 근무하실 분 모집합니다.
+런던에서 근무하실 분 모집합니다. 런던에서근무
+하실 분 모집합니다.</textarea></span>
+                </dd>
+            </dl>
+            <div class="community-form__btm-btn btn__group">
+                <div class="btn-wrap community-form__btm-cancel"><a href="" class="community-form__btn-cancle">취소</a></div>
+                <div class="btn-wrap"><a href="" class="community-form__btn-write">수정</a></div>
+            </div>
+        </form>
+        <!--// community-form__btm-btn -->
+    </div>
+    <!--// community-form__wrap-->
+</div>
+<!-- //container -->
+<!-- fixed button-->
+<div id="quick">
+    <a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+</div>
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $(document).on('click', '.bx-slide__btn' ,function(){
+            $(this).closest('.bx-slide__wrap').toggleClass('is-open');
+        })
+
+        //퍼블리싱 확인을 위한 스크립트 개발시 삭제
+        $('.nav-btm li').removeClass('active');
+        $('.nav-btm li').eq(4).addClass('active');
+    })
+</script>
+
+</html>

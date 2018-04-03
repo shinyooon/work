@@ -1,0 +1,167 @@
+.skip--hidden {
+	position:relative;
+}
+.skip__link {
+	position:absolute;
+	padding:5px;
+	width:100%;
+	top:-30px;
+	background:$color__wh;
+	height:auto;
+	text-decoration:none;
+	&:focus, &:active {
+		top:0px;
+	}
+}
+html,body{
+	height:100%;
+}
+.wrap{
+	position:relative;
+	min-width:1600px;
+	min-height:100%;
+}
+.container{
+	padding-left:$right-side__w;
+}
+
+.contents {
+	width:1600px - $right-side__w;
+	padding: 60px 60px 50px;
+}
+
+
+.daterangepicker{
+	display:none;
+
+	@include border-radius();
+	@include box-shadow(0,0,5px,rgba(220,225,232,.78));
+	background-color:$color__wh;
+	padding:30px 15px 28px;
+	overflow:hidden;
+	table{
+		border-collapse:inherit;
+		border-spacing:6px 2px;
+	}
+	.calendar{
+		th{
+		@include text($color__aaa, 13px);
+		}
+		td{
+			@include text($color__blk, 14px);
+			padding:7px;
+			height:30px;
+			width:28px;
+			min-width:28px;
+			min-height:30px;
+		}
+		thead{
+			tr:nth-child(2){
+				th{
+					padding-bottom:1px;
+				}
+			}
+		}
+		.today{
+			color:#3b9dd7;
+		}
+	}
+	.ranges{
+		float:none !important;
+		margin:18px 0 0;
+		&:after{
+			@include clearboth();
+		}
+	}
+	&.show-calendar{
+		display:block;
+		.ranges{
+			display:block!important;
+		}
+	}
+	.applyBtn {
+		display:none!important;
+	}
+	.off{
+		opacity:0.3;
+	}
+	th.available:hover{
+		background-color:$color__wh;
+	}
+	.prev, .next{
+		i{
+			display:inline-block;
+			width:5px;
+			height:9px;
+			background-image:url(../img/spr_arr.png);
+			@include opacity(0.5)
+		}
+	}
+	.prev i{
+		background-position: 0 -30px;
+	}
+	.th-sun{
+		color:$color__red;
+	}
+	.th-sat{
+		color:#3b9dd7;
+	}
+	.month, .prev, .next{
+		padding-bottom:18px;
+	}
+
+	td.active,td.available:hover, td.active:hover{
+		background-color:$color__green !important;
+		border-width:0;
+		color:$color__wh!important;
+	}
+	select.yearselect, select.monthselect{
+		width:calc(100% + 33px);
+		font-size:14px;
+		font-family: "Noto Sans CJK KR","Noto Sans KR","Apple SD Gothic Neo",NanumBarunGothic,"나눔바른고딕",Malgun Gothic,"맑은 고딕",dotum,sans-serif;
+		letter-spacing:-1px;
+	}
+	.input-wrap__select{
+		width:80px;
+		margin:0 3px;
+		padding:2px 5px;
+	}
+	&.single{
+		.calendar.left{
+			margin:0;
+			float:none;
+			max-width:none;
+			.calendar-table{
+				padding:0;
+			}
+		}
+	}
+	.range_inputs{
+		float:right;
+		text-align:right;
+	}
+	.cancelBtn{
+		font-size:14px;
+		display:inline-block;
+		border-radius:0;
+		color:$color__ccc;
+	}
+	.txt_today{
+		float:left;
+		font-size:14px;
+		color:$color__ccc;
+		padding-left:10px;
+	}
+}
+
+
+.body--full{
+	.container{
+		padding:0;
+	}
+	.contents{
+		width:1243px;
+		padding:0;
+		margin:0 auto;
+	}
+}

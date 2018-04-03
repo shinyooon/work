@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title> MINDA :: 민박다나와 </title>
+    <!-- css -->
+    <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+    <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <style type="text/css">
+        html,
+        body {
+            background-color: #f3f3f3
+        }
+    </style>
+</head>
+
+<body>
+<!-- wrap.screenID -->
+<div id="wrap">
+    <!-- header -->
+    <header id="hd">
+        <h1><a href="">숙박자 정보 수정</a></h1>
+        <button class="icon_hd_clse hd-l" href="">닫기</buton>
+    </header>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container" class="clearfix">
+        <!-- 페이지 시작-->
+        <div class="bg_grey2 pay-wrap pb70">
+            <form name="frm_reserve_info">
+                <section class="info-bx-wrap room__info-bx-wrap">
+                    <h2 class="sub_tit">숙박자 정보</h2>
+                    <div class="bx-wh form-group valid">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">이름 <span class="color_red">*</span></dt>
+                            <dd class="tb_cell">
+									<span class="input-wrap">
+										<input type="text" name="name" id="name" value="" maxlength="20" class="no_style pl_grey" placeholder="이름을 입력해주세요." title="이름">
+										<button class="icon_clse_input">입력취소</button>
+									</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bx-wh form-group valid">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">성별 <span class="color_red">*</span></dt>
+                            <dd class="tb_cell">
+                                <label for="sex_m" class="radio_label dot on mr8"><input type="radio" name="w_reason" id="sex_m" checked="checked">남성</label>
+                                <label for="sex_f" class="radio_label dot mr8"><input type="radio" name="w_reason" id="sex_f">여성</label>
+                                <label for="sex_mf" class="radio_label dot"><input type="radio" name="w_reason" id="sex_mf">남성&amp;여성</label>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- 2017-10-30 eidt : 추가 -->
+                    <div class="bx-wh form-group valid">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">체크인<br/>예정시각 <span class="color_red">*</span></dt>
+                            <dd class="tb_cell">
+                                <div class="tb_bx pa0 room-edit__checkin">
+                                    <span class="tb_cell room-edit__checkin--1">
+                                        <select class="btn btn-default btn-block">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="AM">오전</option>
+                                            <option value="PM">오후</option>
+                                        </select>
+                                    </span>
+                                    <span class="tb_cell room-edit__checkin--2">
+                                        <select class="btn btn-default btn-block" title="체크인 예정시각">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bx-wh form-group valid">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">도착예정지<br/>/시각 <span class="color_red">*</span></dt>
+                            <dd class="tb_cell">
+                                <div class="input-wrap room-edit__arrive--1">
+                                    <input type="text" name="email" id="email" value="" maxlength="50" class="no_style pl_grey" placeholder="도착장소를 입력해주세요." title="도착 장소 입력">
+                                    <button class="icon_clse_input">입력취소</button>
+                                </div>
+                                <div class="tb_bx pa0 room-edit__arrive">
+                                    <span class="tb_cell room-edit__arrive--2">
+                                        <select class="btn btn-default btn-block">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="AM">오전</option>
+                                            <option value="PM">오후</option>
+                                        </select>
+                                    </span>
+                                    <span class="tb_cell room-edit__arrive--3">
+                                        <select  class="btn btn-default btn-block" title="해당도시 도착예정시각">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--// 2017-10-30 eidt : 추가 -->
+                    <div class="bx-wh">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">이메일 <span class="color_red">*</span></dt>
+                            <dd class="tb_cell">
+                                <div class="input-wrap">
+                                    <input type="text" name="email" id="email" value="" maxlength="50" class="no_style pl_grey" placeholder="메일 주소를 입력해주세요." title="이메일 입력">
+                                    <button class="icon_clse_input">입력취소</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bx-wh form-group valid">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">핸드폰 <span class="color_red">*</span></dt>
+                            <dd class="tb_cell code">
+                                <div class="input-wrap">
+                                    <input type="text" name="mobile" id="mobile" value="" maxlength="30" class="no_style pl_grey" placeholder="핸드폰 번호를 입력해주세요." title="휴대폰 번호 입력">
+                                    <button class="icon_clse_input">입력취소</button>
+                                </div>
+                                <p class="form-control-static">안내전화시 사용될 번호이니 정확하게 입력해주세요.</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bx-wh form-group">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">현지 연락처</dt>
+                            <dd class="tb_cell code">
+                                <div class="input-wrap">
+                                    <input type="text" name="phone" id="phone" value="" maxlength="30" class="no_style pl_grey" placeholder="현지 연락처를 입력해주세요." title="현지연락처 입력">
+                                    <button class="icon_clse_input">입력취소</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bx-wh">
+                        <dl class="tb_bx">
+                            <dt class="tb_cell">카카오톡 ID</dt>
+                            <dd class="tb_cell">
+                                <div class="input-wrap">
+                                    <input type="text" name="kakao" id="kakao" value="" maxlength="20" class="no_style pl_grey" placeholder="카카오톡 ID를 입력해주세요." title="카카오톡 입력">
+                                    <button class="icon_clse_input">입력취소</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+            </form>
+            <!-- 2017-10-30 eidt -->
+            <div class="btm_fixed mt10 pa10">
+                <div class="row">
+                    <span class="col-xs-6 pr4"><a class="btn btn-xl d_block bg_light_grey4">취소</a></span>
+                    <span class="col-xs-6 pl4"><a class="btn btn-xl d_block bg_mint">저장</a></span>
+                </div>
+            </div>
+            <!--// 2017-10-30 eidt -->
+        </div>
+        <!-- //페이지 끝-->
+    </div>
+    <!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script>
+    jQuery(function($) {
+        $('.input-wrap > input:text').keyup(function() {
+            if ($(this).val()) {
+                $(this).siblings('.icon_clse_input').show();
+            } else {
+                $(this).siblings('.icon_clse_input').hide();
+            }
+        });
+        $('.icon_clse_input').click(function() {
+            $(this).siblings('input:text').val('');
+            $(this).hide();
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-datepicker.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

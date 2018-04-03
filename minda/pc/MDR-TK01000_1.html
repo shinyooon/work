@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<span class="sub_bg"></span>
+
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction --> <!-- 2016.05.16 로케이션 추가 -->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="" class="icon_house">홈</a></li>
+			<li><a href="">서비스 이용약관</a></li>
+		</ul>
+	</div>
+
+	<h2 class="sub_title v2">서비스 이용약관</h2>
+	<strong class="fs18 color_blk fw500">[민박다나와 서비스 이용약관]</strong>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 1 조 (목적)</h3>
+		<p>이 약관은 ㈜사막(이하 '회사'라 합니다)이 민박다나와사이트(http://www.minbakdanawa.com 이하 ‘사이트’라 합니다)를 통하여 제공하는숙소예약 등 모든 서비스(이하 ‘서비스’라 합니다)의 이용과 관련하여 회사와 이용고객(이하 '회원'이라 합니다)간의 권리, 의무, 책임사항 및 기타 제반사항을 규정함을 목적으로 합니다. </p>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 2 조 (용어의 정의)</h3>
+		<p>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</p>
+		<ol class="lst_num_style">
+			<li>회원이라 함은 회사에 개인정보를 제공하여 회원등록을 한 자로서, 회사가 제공하는 서비스를 이용하는 이용자를 말합니다.</li>
+			<li>닉네임이라 함은 사이트의 게시판 등에서 보여지게 되는 회원의 가명을 말합니다.</li>
+			<li>아이디라 함은 아이디로 식별되는 회원의 본인 여부를 검증하기 위하여 회원이 설정하여 회사에 등록한 고유의 문자와 숫자의 조합을 말합니다.</li>
+			<li>상세 개인정보 수집 항목, 용도, 보유 및 이용기간은 아래 표와 같습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 3 조 (약관의 게시와 개정)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 이 약관의 내용과 상호, 영업소 소재지, 대표자의 성명, 사업자등록번호, 연락처(전화, 팩스 등)등을 이용자가 알 수 있도록 회사 사이트 화면에 게시합니다.</li>
+			<li>합리적인 사유가 발생할 경우 회사는 관련 법령에 위배되지 않는 범위 안에서 개정할 수 있습니다.</li>
+			<li>회사는 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 회사의 초기화면 또는 전자게시판에 그 적용일자 7일이전부터 적용일자 전일까지 공지합니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 4 조 (약관 외 준칙)</h3>
+		<ol class="lst_num_style">
+			<li>이 약관은 회사와 회원간에 성립되는 서비스 이용계약의 기본약정입니다. 회사는 필요한 경우 개별 운영정책을 공지할 수 있으며, 회원이 이러한 개별 운영정책에 동의하는 경우에는 개별 운영정책이 우선적으로 효력을 갖습니다.</li>
+			<li>회사는 필요한 경우 서비스 이용과 관련된 개별 운영정책을 정하여 회사의 사이트 또는 이메일 등을 통하여 공지할 수 있습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 5 조 (이용신청의 성립)</h3>
+		<p>이용신청은 서비스 이용을 원하는 이용자가 본 약관 내용을 읽고 ‘동의함’버튼을 클릭하여 신청한 이용신청에 대하여 회사의 이용승낙으로 성립합니다.</p>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 6 조 (서비스 이용 신청)</h3>
+		<ol class="lst_num_style">
+			<li>회원으로 가입하여 서비스를 이용하고자 하는 이용자는 회사에서 요청하는 정보(아이디, 비밀번호, 이름, 연락처 등)를 제공하여야 합니다.</li>
+			<li>모든 회원은 반드시 회원 본인의 정보를 제공하여야만 서비스를 이용할 수 있으며, 타인의 정보를 도용하거나 허위의 정보를 등록하는 등 본인의 진정한 정보를 등록하지 않은 회원은 서비스 이용과 관련하여 아무런 권리를 주장할 수 없으며, 관계 법령에 따라 처벌 받을 수 있습니다.</li>
+			<li>회원가입은 반드시 본인의 정보를 통하여만 가입할 수 있으며 회사는 회원이 등록한 정보에 대하여 확인조치를 할 수 있습니다. 회원은 회사의 확인조치에 대하여 적극 협력하여야 하며, 만일 이를 준수하지 아니할 경우 회사는 회원이 등록한 정보가 부정한 것으로 처리할 수 있습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 7 조 (개인정보의 보호 및 사용)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 관계 법령이 정하는 바에 따라 회원의 개인정보를 보호하기 위해 노력합니다. 개인정보의 보호 및 사용에 대해서는 관련 법령 및 회사의 개인정보 보호정책이 적용됩니다.</li>
+			<li>회사는 회원의 개인식별이 가능한 개인정보를 수집하는 때에는 반드시 회원의 동의를 받습니다.</li>
+			<li>회원은 비밀번호 등이 타인에게 노출되지 않도록 철저히 관리해야 하며 회사는 회원의 귀책사유로 인해 노출된 정보에 대해서 책임을 지지 않습니다.</li>
+			<li>
+				<p>회사는 다음과 같은 경우에 법이 허용하는 범위 내에서 회원의 개인정보를 제3자에게 제공할 수 있습니다.</p>
+				<ul>
+					<li>① 수사기관이나 기타 정부기관으로부터 정보제공을 요청 받은 경우</li>
+					<li>② 회원 법령 또는 약관의 위반을 포함하여 부정행위 확인 등의 정보보호 업무를 위해 필요한경우</li>
+					<li>③ 기타 법률에 의해 요구되는 경우</li>
+				</ul>
+			</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 8 조 (이용 신청의 승낙과 제한)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 제5조, 제6조의 규정에 의한 이용신청에 대하여 업무 수행상 또는 기술상 지장이 없는 경우에 서비스 이용을 승낙합니다.</li>
+			<li>
+				<p>회사는 아래사항에 해당하는 경우에 대해서 승낙을 하지 않거나, 사후에 이용계약을 해지할 수 있습니다.</p>
+				<ul>
+					<li>① 실명이 아니거나 타인의 명의를 이용하는 경우</li>
+					<li>② 등록내용에 허위, 기재누락, 오기가 있는 경우</li>
+					<li>③ 이미 가입된 회원과 연락처 및 이메일 주소 등 가입정보가 중복되거나 동일한 경우</li>
+					<li>④ 법령 위반 또는 사회의 안녕과 질서, 미풍양속을 저해하거나 부정한 목적으로 신청한 경우</li>
+					<li>⑤ 영리 추구를 목적으로 본 서비스를 이용하고자 하는 경우</li>
+					<li>⑥ 법령 또는 약관을 위반하여 이용계약이 해지된 적이 있는 이용자가 신청하는 경우</li>
+					<li>⑦ 기타 규정한 제반 사항을 위반하며 신청하는 경우</li>
+				</ul>
+			</li>
+			<li>
+				<p>회사는 서비스 이용신청이 다음 각 호에 해당하는 경우에는 그 신청에 대하여 승낙 제한사유가 해소될 때까지 승낙을 유보할 수 있습니다.</p>
+				<ul>
+					<li>① 사가 설비의 여유가 없거나 기술상 지장이 있는 경우</li>
+					<li>② 기타 회사의 귀책사유로 이용승낙이 곤란한 경우</li>
+				</ul>
+			</li>
+			<li>회사는 이용신청고객이 관계 법령에서 규정하는 미성년자일 경우에 서비스별 안내에서 정하는 바에 따라 승낙을 보류할 수 있습니다.</li>
+			<li>회사는 회원 가입 절차 완료 이후 제2항 각 호에 따른 사유가 발견된 경우 이용 승낙을 철회할 수 있습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 9 조 (아이디 부여 및 변경)</h3>
+		<ol class="lst_num_style">
+			<li>회사는회원에 대하여 약관에 정하는 바에 따라 아이디를 부여합니다.</li>
+			<li>아이디는 원칙적으로 변경이 불가하며 부득이한 사유로 인하여 변경 하고자 하는 경우에는 해당 아이디를 해지하고 재가입해야 합니다.</li>
+			<li>사이트의 아이디는 회원 본인의 동의 하에 회사 또는 자회사가 운영하는 사이트의 아이디와 연결될 수 있습니다.</li>
+			<li>
+				<p>아이디는 다음 각 호에 해당하는 경우에는 민박의 요청 또는 회사의 직권으로 변경 또는 이용을 정지할 수 있습니다.</p>
+				<ul>
+					<li>① 아이디가 전화번호 또는 주민등록번호 등으로 등록되어 사생활 침해가 우려되는 경우</li>
+					<li>② 타인에게 혐오감을 주거나 미풍양속에 어긋나는 경우</li>
+					<li>③ 회사의 서비스 또는 서비스 운영자 등의 명칭과 동일하거나 오인 등의 우려가 있는 경우</li>
+					<li>④ 기타 합리적인 사유가 있는 경우</li>
+				</ul>
+			</li>
+			<li>아이디 및 비밀번호의 관리책임은 회원에게 있습니다. 자신의 ID 및 비밀번호를 제 3자에게 이용하게 하는 등 이를 소홀이 관리하여 발생하는 서비스 이용상의 손해 또는 제3자에 의한 부정이용 등에 대한 책임은 회원에게 있으며 회사는 그에 대한 책임을 지지 않습니다.</li>
+			<li>회원은 아이디(ID) 또는 비밀번호를 도난 당하거나 제3자가 무단으로 이를 사용하고 있음을 인지한 경우, 바로 회사에 통보하고 회사의 안내가 있는 경우에는 그에 따라야 합니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 10 조 (회사의 의무)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 지속적이고 안정된 서비스를 제공해야 하며 설비에 장애가 생기거나 멸실된 때에는 부득이한 사유가 없는 한 지체 없이 이를 수리 또는 복구합니다.</li>
+			<li>회사는 개인정보 보호를 위해 개인정보 보호정책을 공시하고 준수합니다.</li>
+			<li>회사는회원으로부터 제기되는 의견이나 불만이 정당하다고 객관적으로 인정될 경우에는 적절한 절차를 거쳐 즉시 처리하여야 합니다. 다만, 즉시 처리가 곤란한 경우는 회원에게 전자우편등을 통하여 그 사유와 처리일정을 통보하여야 합니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 11 조 (회원의 의무)</h3>
+		<ol class="lst_num_style">
+			<li>회원은 회원가입 신청 또는 회원정보 변경 시 모든 사항을 사실에 근거하여 본인의 정보로 작성하여야 하며, 허위 또는 타인의 정보를 등록할 경우 이와 관련된 모든 권리를 주장할 수 없습니다.</li>
+			<li>회원은 약관에서 규정하는 사항과 기타 회사가 정한 제반 규정, 공지사항 등 회사가 공지하는 사항 및 관계 법령을 준수하여야 하며, 기타 회사의 업무에 방해가 되는 행위, 회사의 명예를 손상시키는 행위, 타인에게 피해를 주는 행위를 해서는 안됩니다.</li>
+			<li>회원은 주소, 연락처, 전자우편 주소 등 이용계약사항이 변경된 경우에 해당 절차를 거쳐 이를 회사에 즉시 알려야 할 의무가 있으며 수정되지 않은 정보로 인하여 발생한 각종손해는 당해 회원이 부담, 회사는 이에 대해 아무런 책임을 지지 않습니다.</li>
+			<li>회원은 회사의 사전 승낙 없이 서비스를 이용하여 영업활동을 할 수 없으며, 그 영업활동의 결과에 대해 회사는 책임을 지지 않습니다. 또한 회원은 이와 같은 영업활동으로 회사가 손해를 입은 경우, 회원은 회사에 대해 손해배상의무를 지며, 회사는 해당 회원에 대해 서비스 이용제한 및 적법한 절차를 거쳐 손해배상 등을 청구할 수 있습니다.</li>
+			<li>회원은 회사 및 제3자의 지적 재산권을 포함한 제반 권리를 침해하거나 제17조 2항에 해당하는 행위를 해서는 안됩니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 12 조 (서비스의 중단)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 컴퓨터 등 정보통신설비의 보수점검/교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.</li>
+			<li>제 1항에 의한 서비스 중단의 경우에는 회사는 제18조에 정한 방법으로 회원에게 통지합니다.</li>
+			<li>회사는 제 1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 회원 또는 제3자가 입은 손해에 대하여 배상합니다.<br>단, 회사에 고의 또는 과실이 없는 경우에는 그러하지 아니합니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 13 조 (회원의 게시물 등)</h3>
+		<ol class="lst_num_style">
+			<li>게시물이라 함은 회원이 서비스를 이용하면서 게시한 글, 사진, 각종 파일 등을 말합니다.</li>
+			<li>회원이 서비스에 등록하는 게시물 등으로 인하여 본인 또는 타인에게 손해나 기타 문제가 발생하는 경우 해당 회원은 이에 대한 책임을 지게되며, 회사는 특별한 사정이 없는 한 이에 대하여 책임을 지지 않습니다.</li>
+			<li>
+				<p>회사는 다음 각 호에 해당하는 게시물 등을 회원의 사전 동의 없이 임시게시 중단, 수정, 삭제,이동 또는 등록 거부 등의 관련 조치를 취할수 있습니다.</p>
+				<ul>
+					<li>① 아무 코멘트나 이유없이 비추, 강추, 별로 등 낮은 점수 혹은 높은 점수의 리뷰글을 올렸을 경우</li>
+					<li>② 현지취소' 또는 'no-show' 등 숙박하지 않고 리뷰글을 올렸을 경우</li>
+					<li>③ 약속되지 않은 서비스에 대해 무리한 요구가 받아들여지지 않은 불만으로 리뷰글을 올렸을 경우</li>
+					<li>④ 다른회원 또는 제 3자에게 직접적인 욕설 등 심한 모욕을 주거나 명예를 손상시키는 내용인 경우</li>
+					<li>⑤ 타업체의 실명 등을 거론하거나 타사이트의 온라인 주소를 링크하여 홍보 및 비방을 한 경우</li>
+					<li>⑥ 허위정보로 등록된 아이디로 올린 게시물인 경우</li>
+					<li>⑦ 공공질서 및 미풍양속에 위반되는 내용을 유포하거나 링크시키는 경우</li>
+					<li>⑧ 불법복제 또는 해킹을 조장하는 내용인 경우</li>
+					<li>⑨ 영리를 목적으로 하는 광고일 경우</li>
+					<li>⑩ 범죄와 결부된다고 객관적으로 인정되는 내용일 경우</li>
+					<li>⑪ 허위사실이라고 객관적으로 인정되는 내용일 경우</li>
+					<li>⑫ 회사 및 다른 회원 또는 제 3자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+					<li>⑬ 사적인 정치적 판단이나 종교적 견해의 내용으로 회사가 서비스 성격에 부합하지 않는다고 판단하는 경우</li>
+					<li>⑭ 회사에서 규정한 게시물 원칙에 어긋나거나, 게시판 성격에 부합하지 않는 경우</li>
+					<li>⑮ 기타 관계법령에 위배된다고 판단되는 경우</li>
+				</ul>
+			</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 14 조 (게시물에 대한 저작권)</h3>
+		<ol class="lst_num_style">
+			<li>
+				<p>회원이 서비스 내에 게시한 게시물의 저작권은 게시한 회원에게 귀속됩니다. 단, 회사는 서비스의 운영, 전시, 전송, 배포, 홍보의 목적으로 회원의 별도의 허락 없이 무상으로 저작권법에 규정하는 공정한 관행에 합치되게 합리적인 범위 내에서 다음과 같이 회원이 등록한 게시물을 사용할 수 있습니다.</p>
+				<ul>
+					<li>① 서비스 내에서 회원 게시물의 복제, 수정, 개조, 전시, 전송, 배포 및 저작물성을 해치지 않는 범위 내에서의 편집 저작물 작성</li>
+					<li>② 미디어, 통신사 등 서비스 제휴 파트너에게 회원의 게시물 내용을 제공, 전시 혹은 홍보하게 하는 것.단, 이 경우 회사는 별도의 동의 없이 회원의 아이디 외에 회원의 개인정보를 제공하지 않습니다.</li>
+				</ul>
+			</li>
+			<li>회사는 제1항 이외의 방법으로 회원의 게시물을 이용하고자 하는 경우, 전화, 팩스, 전자우편 등의 방법을 통해 사전에 회원의 동의를 얻어야 합니다.</li>
+			<li>회원이 이용계약 해지를 한 경우 본인 계정에 기록된 게시물(찜한민박 등) 일체는 삭제됩니다. 단, 공용 게시판에 등록된 게시물 등은 그러하지 않습니다.</li>
+			<li>회사가 작성한 게시물 또는 저작물에 대한 저작권 기타 지적재산권은 회사에 귀속합니다.</li>
+			<li>회사가 작성한 게시물 또는 저작물에 대해 제3자가 사전 승낙없이 복제, 배포, 출판, 그외 기타 방법에 의해 영리 목적으로 이용하거나 제 3자에게 이용하게 해서는 안됩니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 15 조 (정보의 제공)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 회원에게 서비스 이용에 필요가 있다고 인정되는 각종 정보에 대해서 전자우편이나 서신, 우편, SMS, 전화 등의 방법으로 회원에게 제공할 수 있습니다.</li>
+			<li>회사는 서비스 개선 및 서비스 소개 등의 목적으로 회원의 동의 하에 관련 법령에 따라 추가적인 개인 정보를 수집할 수 있습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 16 조 (광고게재 및 광고주와의 거래)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 회원이 이용하는 서비스 중에서 광고를 노출하거나, 전자우편을 통해 회원에게 광고정보를 제공할 수 있습니다. 단, 회원은 언제든지 전자우편등을 통하여 수신거부를 할 수 있습니다.</li>
+			<li>회사는 서비스상에 게재되어 있거나 서비스를 통한 광고주의 판촉활동에 회원이 참여하거나 교신 또는 거래를 함으로써 발생하는 손실과 손해에 대해 책임을 지지 않습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 17 조 (계약 해지 및 이용제한)</h3>
+		<ol class="lst_num_style">
+			<li>회원이 이용계약을 해지하고자 하는 때에는 회원 본인이 사이트 내의 고객센터를 이용해 가입해지를 해야 하며, 이 과정에서 회사가 요구하는 서류가 있을 경우 회원은 관련 서류를 제출하여야 합니다.</li>
+			<li>
+				<p>회사는 회원이 서비스 이용내용에 있어서 본 약관 제 11조 내용을 위반하거나, 다음 각 호에 해당하는 경우 서비스 이용 제한, 초기화, 이용계약 해지 및 기타 해당 조치를 할 수 있습니다.</p>
+				<ul>
+					<li>① 타인의 아이디, 비밀번호 기타 개인정보를 도용하는 행위 또는 아이디를 타인과 거래하거나 제공하는 행위</li>
+					<li>② 공공질서 및 미풍양속에 위반되는 저속, 음란한 내용 또는 타인의 명예나 프라이버시를 침해할 수 있는 내용의 정보 및 컴퓨터 바이러스 프로그램 등을 게시하거나 전자우편 또는 기타의 방법으로 타인 에게 유포하는 행위</li>
+					<li>③ 회사의 운영진, 직원 또는 관계자를 사칭하거나 고의로 서비스를 방해하는 등 정상적인 서비스 운영에 방해가 될 경우</li>
+					<li>④ 정보통신 윤리위원회 등 관련 공공기관의 시정 요구가 있는 경우</li>
+					<li>⑤ 회원에게 책임이 있는 사유로 인하여 회사가 명예 실추 등 유.무형적인 손해를 입을 가능성이 있다고 판단될 경우</li>
+					<li>⑥ 약관을 포함하여 회사가 정한 제반 규정을 위반한 경우</li>
+				</ul>
+			</li>
+			<li>회사가 해지를 하는 경우 회사는 회원에게 유선 또는 이메일, 기타의 방법을 통하여 해지사유를 밝혀 해지의사를 통보합니다. 이 경우 회사는 해당 회원에게 사전에 해지사유에 대한 의견진술의 기회를 부여할 수 있습니다. 단, 회원과 관련된 거래는 회사에 의해 별도의 통지없이 취소될 수 있습니다.</li>
+			<li>이용계약은 회원이 제공한 연락처 정보의 오류로 인하여 회원에게 해지의사를 통지할 수 없는 경우에는 제18조에 따라 통지함으로써 효력이 발생합니다.</li>
+			<li>계약해지와 동시에 회원에게 부가적으로 제공된 각종 혜택(포인트,쿠폰 등)은 자동소멸 처리되며 재가입시에도 혜택은 복구되지 않습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 18조 (회원에 대한 통지)</h3>
+		<ol class="lst_num_style">
+			<li>회사의 회원에 대한 통지는 회원이 제공한 전자우편 주소로 할 수 있으며, 수정하지 않은 정보로 인하여 발생한 각종 손해는 당해 회원이 부담, 회사는 이에 대해 아무런 책임을 지지 않습니다.</li>
+			<li>회사는 불특정다수 회원에 대한 통지의 경우 1주일이상 회사 게시판에 게시함으로써 개별 통지에 갈음할 수 있습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 19조 (책임제한)</h3>
+		<ol class="lst_num_style">
+			<li>회사는 천재지변, 전쟁, 기간통신사업자의 서비스 중지 및 기타 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 대한 책임이 면제됩니다.</li>
+			<li>회사는 서비스용 설비의 보수, 교체, 정기점검, 공사 등 부득이한 사유로 발생한 손해에 대한 책임이 면제됩니다.</li>
+			<li>회사는 회원의 귀책사유로 발생하는 서비스 장애 등으로 손해가 발생한 경우 책임을 지지 않습니다.</li>
+			<li>회사는 통신판매중개자로서 온라인 거래장소를 제공하고 기타 부가정보를 제공할 뿐 회원이 서비스에 게재한 각종 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 대하여 책임을 지지 않으며, 회원 상호간 및 회원과 제 3자 상호 간에 서비스를 매개로 발생한 분쟁에 대해 개입할 의무가 없고, 이로 인한 손해에 대해 책임을 지지 않습니다.</li>
+			<li>회사는회원이 게시물을 등록하기 전에 사전심사 하거나 게시물을 등록한 후 상시적으로 게시물의 내용을 확인 또는 검토하여야 할 의무가 없으며, 그 결과에 대한 책임을 지지 아니합니다.</li>
+			<li>회사는 피연결회사(사이트의 서비스 화면과 링크 등으로 연결된 사이트를 운영하는 회사를 말합니다)와 독자적으로 운영되며, 회사는 피연결회사와 이용자간에 이루어진 거래에 대하여는 책임을 지지 않습니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">제 20 조 (준거법 및 재판관할)</h3>
+		<ol class="lst_num_style">
+			<li>회사와 회원간 제기된 소송은 대한민국법을 준거법으로 합니다.</li>
+			<li>회사와 회원간 발생한 분쟁에 관한 소송은 민사소송법상의 관할법원에 제소합니다.</li>
+		</ol>
+	</section>
+
+	<section class="pt30">
+		<h3 class="color_org fs14 pb15">[부칙]</h3>
+		<ol class="lst_num_style">
+			<li>본 약관은 2008년 6월 10일부터 시행됩니다.</li>
+			<li>본 약관은 2010년 10월 12일부터 시행됩니다.</li>
+			<li>본 약관은 2013년 11월 29일부터 시행됩니다.</li>
+			<li>본 약관은 2014년 7월 1일부터 시행됩니다.</li>
+		</ol>
+	</section>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

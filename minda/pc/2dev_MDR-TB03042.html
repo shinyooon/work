@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- 스팟상세타이틀 -->
+	<div class="room_detail_hd room_nearby_spot row">
+		<div class="spot_detail">
+			<div class="explain_txt">
+				<span>이탈리아 피렌체</span>
+				<h2>기차역을 박물관으로 활용한 오르세 미술관</h2>
+			</div>
+		</div>
+	</div>
+	<!-- 스팟 상세내용 -->
+	<div id="detailContent" class="spot_view_body datail_view">
+		<!-- 탭 -->
+		<nav id="tabNav" class="scroll_nav">
+			<ul class="nav nav-justified">
+				<li class="is"><a href="#view1">정보</a></li>
+				<li><a href="#view3">Q&amp;A(3)</a></li>
+			</ul>
+			<div class="side_btn_wrp">
+				<a href="" class="btn bg_org btn-xs"><i class="icon_cal"></i>포함 일정보기</a>
+				<div class="split">
+					<button type="button" class="no_style btn" data-toggle="button"><i class="icon_like_mint"></i>저장</button><span class="color_mint ml3">( 32 )</span>
+				</div>
+				<div class="dropdown split">
+					<button type="button" class="no_style" data-toggle="dropdown"><i class="icon_link"></i>공유</button>
+					<ul class="dropdown-menu social_lst clearfix">
+						<li><a href="" class="icon_link_face">페이스북에 공유하기</a></li>
+						<li><a href="" class="icon_link_twi">트위터에 공유하기</a></li>
+						<li><a href="" class="icon_link_kakao">카카오톡에 공유하기</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 사이드고정퀵  -->
+		<div id="viewSide" class="column_right fix_bx">
+			<div id="calendarWrp" class="hd_select_wrp daterange">
+				<div class="datewrp">
+					<input type="text" id="tourDate" class="form-control input-lg" placeholder="투어 예약일자를 선택하세요">
+					<label for="tourDate" class="label_tour_date">투어 예약일자를 선택하세요</label>
+				</div>
+<script type="text/javascript">
+	$(function() {
+		var dateToday = new Date();
+		$('.daterange .form-control').on({
+			focus : function  () {
+				$(this).parent().addClass('active');
+			},
+			blur : function  () {
+				!$('.daterangepicker').is(':visible') && $(this).parent().removeClass('active');
+			}
+		});
+		$('.daterange .form-control').daterangepicker({
+			autoApply: true,
+			minDate: dateToday,
+			parentEl: '#calendarWrp',
+			singleDatePicker: true,
+			opens: 'center',
+			locale: {
+				format: 'YYYY/MM/DD'
+			}
+		});
+		$('.daterange .form-control').on({
+			'apply.daterangepicker' : function  (ev, picker) {
+				$(".daterange label").addClass("hidden").parent().removeClass('active');
+			},
+			'hide.daterangepicker' : function  (ev, picker) {
+				$(".daterange .datewrp").removeClass('active');
+			}
+		});
+	});
+</script>
+			</div>
+			<!-- 투어리스트 -->
+			<div class="select_tour_wrp">
+				<div class="nano">
+					<ul class="select_tour_lst nano-content">
+						<li class="tour_item">
+							<span class="name">오전 - 성인 1인</span>
+							<div class="clearfix">
+								<div class="pull-left"><span class="color_blk">€54.00</span><small>(71,820원)</small></div>
+								<div class="pull-right order-quantity clearfix">
+									<span class="down"><button type="button" class="icon_quantity_down">수량1개감소</button></span>
+									<input type="text" class="form-control" value="0">
+									<span class="up"><button type="button" class="icon_quantity_up">수량1개증가</button></span>
+								</div>
+							</div>
+						</li>
+						<li class="tour_item">
+							<span class="name">오전 - 성인 3인, 유아 5인 파리 1박 2일 투어 일정</span>
+							<div class="clearfix">
+								<div class="pull-left"><span class="color_blk">€54.00</span><small>(71,820원)</small></div>
+								<div class="pull-right order-quantity clearfix">
+									<span class="down"><button type="button" class="icon_quantity_down">수량1개감소</button></span>
+									<input type="text" class="form-control" value="0">
+									<span class="up"><button type="button" class="icon_quantity_up">수량1개증가</button></span>
+								</div>
+							</div>
+						</li>
+						<li class="tour_item">
+							<span class="name">오전 - 성인 3인, 유아 5인 파리 1박 2일 투어 일정</span>
+							<div class="clearfix">
+								<div class="pull-left"><span class="color_blk">€54.00</span><small>(71,820원)</small></div>
+								<div class="pull-right order-quantity clearfix">
+									<span class="down"><button type="button" class="icon_quantity_down">수량1개감소</button></span>
+									<input type="text" class="form-control" value="0">
+									<span class="up"><button type="button" class="icon_quantity_up">수량1개증가</button></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<dl class="total_price clearfix">
+					<dt class="pull-left">총합계 금액</dt>
+					<dd class="pull-right color_org"><b>€54,00</b><small>(71,820원)</small></dd>
+				</dl>
+			</div>
+			<!-- //투어리스트 -->
+			<div class="btn_wrp">
+				<button class="btn btn-block bg_org">투어 예약하기</button>
+				<!-- [D] 비활성화시 disabled 추가 <button class="btn btn-block bg_org disabled" disabled>투어 예약하기</button> -->
+			</div>
+		</div>
+		<!-- 탭컨텐츠 -->
+		<div class="column_left">
+			<!-- 정보 -->
+			<section id="view1" class="spot_info">
+				<h3 class="sr-only">스팟 정보</h3>
+				<div class="spot_gellery">
+					<div class="slider_bx">
+						<!-- 큰 이미지 -->
+						<ul class="gallery_big_slider">
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+							<li><img src="_temp/slide.jpg" alt=""></li>
+						</ul>
+						<!-- 슬라이드컨트롤 -->
+						<div class="gallery_num">
+							<span class="current color_org"></span>/<span class="total"></span>
+						</div>
+						<div class="gallery_Controls">
+							<a href="javascript:void(0)" class="bxprev"></a>
+							<a href="javascript:void(0)" class="bxnext"></a>
+						</div>
+					</div>
+					<div class="spot_info_detail">
+						<dl class="dl-horizontal">
+							<dt>지역</dt>
+							<dd>파리</dd>
+							<dt>영업시간</dt>
+							<dd>오전10시~오후6시</dd>
+							<dt>홈페이지</dt>
+							<dd><a href="" target="_blank">http://www.museedorsay.com</a></dd>
+						</dl>
+						<a href="" class="btn btn_border_grey"><i class="icon_map_org"></i>지도보기</a>
+						<p class="detail-txt">안녕하세요.<br>
+						여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다. 여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.여행이란 우리의 생각과 편견을 바꿔주는 소중한 경험인 것 같습니다.</p>
+					</div>
+				</div>
+			</section>
+			<!-- 포함사항 -->
+			<section class="spot_tour_issues">
+				<h3 class="sub_title">포함 사항</h3>
+				<ul class="lst_type_rect txt_bx">
+					<li>한국어 가이드</li>
+					<li>투어비용</li>
+				</ul>
+			</section>
+			<!-- 불포함사항 -->
+			<section class="spot_tour_issues">
+				<h3 class="sub_title">불포함 사항</h3>
+				<ul class="lst_type_rect txt_bx">
+					<li>점심식사</li>
+					<li>기타 개인비용</li>
+				</ul>
+			</section>
+			<!-- 공지사항 -->
+			<section class="spot_tour_notice">
+				<h3 class="sub_title">공지사항</h3>
+				<!-- 꼭 알아두세요 -->
+				<div class="tour_notice">
+					<h4 class="color_org_title">꼭 알아두세요</h4>
+					<ul class="lst_type_rect txt_bx">
+						<li>1인 예약시 투어 업체 일정상 진행이 불가능 할 수 있습니다.</li>
+						<li>해양스포츠를 이용하지 않으셔도 요금은 동일합니다.</li>
+						<li>투어 진행 최소 인원은 2명입니다. 1명 예약시 현지 예약 현황 확인 후 조인이 가능할 경우, 예약이 확정됩니다.</li>
+					</ul>
+				</div>
+				<!-- 주의사항 -->
+				<div class="tour_notice">
+					<h4 class="color_org_title">배송안내사항</h4>
+					<ul class="lst_type_rect txt_bx">
+						<li>안내사항1</li>
+						<li>안내사항2</li>
+					</ul>
+				</div>
+			</section>
+			<!-- 취소환불규정 -->
+			<section id="view2" class="room_refund">
+				<h3 class="sub_title">취소환불규정</h3>
+				<table class="tb tb_fixed">
+					<caption class="sr-only">날짜별 환불규정</caption>
+					<colgroup>
+						<col>
+						<col style="width:250px">
+						<col style="width:175px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+							<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+							<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">30일 전 취소</td>
+							<td class="text-center">전액환불<span class="d_block color_grey">(포인트/쿠폰 결제액 제외)</span></td>
+							<td class="text-center">없음</td>
+						</tr>
+						<tr>
+							<td class="text-center">29~22일 전 취소</td>
+							<td class="text-center">70%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">21일~15일 전 취소</td>
+							<td class="text-center">60%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">14일~4일 전 취소</td>
+							<td class="text-center">50%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+							<td class="text-center">40%</td>
+							<td class="text-center">없음</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="mt30">※ 취소시 포인트 적립은 포인트/쿠폰 결제액은 제외하고 적립됩니다.</p>
+				<div class="mt30">
+					<strong class="minda_term">민박다나와 취소환불규정</strong><a href="" class="btn btn-xs btn_border_grey">규정보기</a>
+				</div>
+			</section>
+			<!-- QnA -->
+			<section id="view3" class="spot_qna room_qna">
+				<h3 class="sub_title">Q&amp;A <span class="color_org fs14">(52)</span></h3>
+				<!-- QnA안내 및 내용입력 -->
+				<div class="border_bx">
+					<ul class="qna_info_lst">
+						<li>숙소에 대한 문의사항은 아래 입력란에 남겨주시면 24시간 내에 답변을 드립니다.  문의하신 답변은 고객님의 회원정보에 등록된 이메일로 보내드립니다.</li>
+						<li>질문을 작성하기 전에 아래의 링크를 클릭하여 안내사항을 반드시 읽어주세요!!!  <a href="" class="color_org">[숙소별 Q&amp;A 이용안내]</a></li>
+						<li>예약일정/변경, 연락처 기재, 숙소에 대한 리뷰,  욕설/광고 등이 포함된 글은 통보 없이 삭제됩니다.</li>
+					</ul>
+					<div class="cmt_edit">
+						<textarea rows="5" class="form-control" title="댓글입력"></textarea>
+						<button type="button">수정</button>
+					</div>
+				</div>
+				<!-- QnA리스트 -->
+				<ul class="qna_lst lst_style_cmt">
+					<li>
+						<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+						<div class="txtwrp">
+							<span class="label bg_grey">답변대기</span>
+							<div class="meta">
+								<span class="user">rkgud0119</span>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">안녕하세요 6월 4일부터 3박 14명 예약했습니다. 남자 5인실 도미토리 2개를 예약하고 싶었는데 인터넷상으로 남자 도미토리 1이
+						4명밖에 선택이 되지 않아서 6인실로 일단 예약을 했습니다. 가능하면 5인실 2개로 배정해주셨으면 합니다. 수고하세요</p>
+					</li>
+					<li>
+						<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+						<div class="txtwrp">
+							<span class="label bg_org">답변완료</span>
+							<div class="meta">
+								<span class="user">rkgud0119</span>
+								<span class="date">2016.04.06</span>
+								<div class="side_edit">
+									<a href="">수정</a>
+									<a href="" class="split">삭제</a>
+								</div>
+							</div>
+						</div>
+						<p class="txt">안녕하세요 6월 4일부터 3박 14명 예약했습니다. 남자 5인실 도미토리 2개를 예약하고 싶었는데 인터넷상으로 남자 도미토리 1이
+						4명밖에 선택이 되지 않아서 6인실로 일단 예약을 했습니다. 가능하면 5인실 2개로 배정해주셨으면 합니다. 수고하세요</p>
+						<div class="qna_answer_wrp">
+							<div class="qna_answer">
+								<div class="meta">
+									<span class="user">로마 자고가 하우스(Jagoga House)</span>
+									<span class="date">2016.04.06</span>
+								</div>
+								<p class="txt">안녕하세요. rkgud0119님 반갑습니다. <br>말씀하신대로 4인실로 예약 진행해드리도록 하겠습니다. 6월 4일날 뵙겠습니다.^^</p>
+							</div>
+							<div class="tmbwrp"><img src="/cust/img/default.png" alt=""><span class="badge badge_star">즐겨찾기</span></div>
+						</div>
+					</li>
+					<li>
+						<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+						<div class="txtwrp">
+							<span class="label bg_org">답변완료</span>
+							<div class="meta">
+								<span class="user">rkgud0119</span>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">안녕하세요 6월 4일부터 3박 14명 예약했습니다. 남자 5인실 도미토리 2개를 예약하고 싶었는데 인터넷상으로 남자 도미토리 1이
+						4명밖에 선택이 되지 않아서 6인실로 일단 예약을 했습니다. 가능하면 5인실 2개로 배정해주셨으면 합니다. 수고하세요</p>
+						<div class="qna_answer_wrp">
+							<div class="qna_answer">
+								<div class="meta">
+									<span class="user">로마 자고가 하우스(Jagoga House)</span>
+									<span class="date">2016.04.06</span>
+								</div>
+								<p class="txt">안녕하세요. rkgud0119님 반갑습니다. <br>말씀하신대로 4인실로 예약 진행해드리도록 하겠습니다. 6월 4일날 뵙겠습니다.^^</p>
+							</div>
+							<div class="tmbwrp"><img src="/cust/img/default.png" alt=""><span class="badge badge_star">즐겨찾기</span></div>
+						</div>
+					</li>
+				</ul>
+				<!-- 페이징 -->
+				<nav class="text-center">
+					<ul class="pagination">
+						<li class="prev"><a href="">이전페이지목록보기</a></li>
+						<li><a href="" class="active">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li class="next"><a href="">다음페이지목록보기</a></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+	</div>
+	<!-- 숙소에서 추천하는 다른 스팟 보기 -->
+	<section id="spotOther" class="spot_other">
+		<h3 class="sub_title">숙소에서 추천하는 다른 스팟 보기</h3>
+		<div class="slider_bx discount_room_lst spot_lst">
+			<!-- 슬라이드 -->
+			<ul class="basic_arr_slider">
+				<li>
+					<a href="">
+						<div class="tmb pr">
+							<img src="_temp/tmb4.jpg" alt="">
+							<div class="label_bx">
+								<span class="circle_label sm bg_org_opa">신규</span>
+								<span class="circle_label sm bg_ylw_opa">인기</span>
+							</div>
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18">프랑스 파리 세느강 투어 입니다. 프랑스 파리 세느강</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_walking"></i> 5분</span>
+							<strong class="price pull-right color_org">&#8361; 71,820</strong>
+						</div>
+					</a>
+					<!-- 저장되면 class="active" -->
+					<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장됨</button>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li>
+					<a href="">
+						<div class="tmb pr">
+							<img src="_temp/tmb4.jpg" alt="">
+							<div class="label_bx">
+								<span class="circle_label sm bg_org_opa">신규</span>
+								<span class="circle_label sm bg_ylw_opa">인기</span>
+							</div>
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18">프랑스 파리 세느강 투어 입니다. 프랑스 파리 세느강</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_walking"></i> 5분</span>
+							<strong class="price pull-right color_org">&#8361; 71,820</strong>
+						</div>
+					</a>
+					<!-- 저장되면 class="active" -->
+					<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장됨</button>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li>
+					<a href="">
+						<div class="tmb pr">
+							<img src="_temp/tmb4.jpg" alt="">
+							<div class="label_bx">
+								<span class="circle_label sm bg_org_opa">신규</span>
+								<span class="circle_label sm bg_ylw_opa">인기</span>
+							</div>
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18">프랑스 파리 세느강 투어 입니다. 프랑스 파리 세느강</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_walking"></i> 5분</span>
+							<strong class="price pull-right color_org">&#8361; 71,820</strong>
+						</div>
+					</a>
+					<!-- 저장되면 class="active" -->
+					<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장됨</button>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+<script>
+$(function  () {
+	//검색결과 스크롤바
+	$(".nano").nanoScroller();
+
+	var w=$(window),
+	$body=$('body'),
+	viewBody=$("#detailContent"),
+	viewSide=$("#viewSide"),
+	spotOther=$("#spotOther");
+
+	w.scroll(function(){
+		var sT=w.scrollTop(),
+		startPos=viewBody.offset().top,
+		endPos=spotOther.offset().top,
+		vH=viewSide.height()+135;
+
+		if(sT>startPos){
+			$body.addClass('view_scroll');
+		} else {
+			$body.removeClass('view_scroll');
+		}
+
+		if(sT>endPos-vH){
+			var vS = endPos-vH-sT;
+			viewSide.css({
+				'-ms-transform':'translate(0,'+vS+'px)',
+				'-webkit-transform':'translate(0,'+vS+'px)',
+				'transform':'translate(0,'+vS+'px)'
+			});
+		} else {
+			viewSide.removeAttr('style');
+		}
+	});
+
+
+	// scrollspy : http://getbootstrap.com/javascript/#scrollspy
+	$body.scrollspy({target:'#tabNav', offset:170});
+
+	// lnb
+	$('#tabNav a').click(function(){
+		$(this).parent().addClass('on').siblings().removeClass('on');
+		scrollMove($(this).attr('href'),100);
+		return false;
+	});
+
+	//슬라이드
+	courseViewSlider();
+	function courseViewSlider () {
+		var slider_array = [];
+		$('.gallery_big_slider').each(function(i){
+			slider_array[i] = $(this).bxSlider({
+				sliderWidth: 630,
+				pager: false,
+				controls:false,
+				infiniteLoop:true,
+				onSliderLoad: function(currentIndex){
+					$('.gallery_big_slider').closest('.slider_bx').addClass('bx_open');
+					$('.current').text(currentIndex + 1);
+				},
+				onSlideBefore: function ($slideElement, oldIndex, newIndex){
+					$slideElement.closest('.slider_bx').find('.current').text(newIndex + 1);
+				}
+			});
+		});
+
+
+		$('.gallery_Controls a').bind('click', function(e) {
+			e.preventDefault();
+			if($(this).hasClass('bxprev')) {
+				var obj = $(this).closest('.slider_bx').find('.gallery_big_slider');
+				var index = $('.gallery_big_slider').index(obj);
+				slider_array[index].goToPrevSlide();
+			} else if($(this).hasClass('bxnext')) {
+				var obj = $(this).closest('.slider_bx').find('.gallery_big_slider');
+				var index = $('.gallery_big_slider').index(obj);
+				slider_array[index].goToNextSlide();
+			}
+		});
+
+		$(".gallery_num .total").each(function  (idx) {
+			var total = slider_array[idx].getSlideCount();
+			$(this).text(total)
+		})
+	}
+
+
+
+	//최하단 다른방더보기 슬라이드
+	$('.basic_arr_slider').bxSlider({
+		minSlides:3,
+		maxSlides:3,
+		slideWidth:290,
+		slideMargin:20,
+		infiniteLoop: true,
+		onSliderLoad: function(){
+			$('.basic_arr_slider').closest('.slider_bx').addClass('bx_open');
+		}
+	});
+
+})
+</script>
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/manager/common/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

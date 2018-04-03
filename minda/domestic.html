@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.dev.css">
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+	header {position:fixed;top:0;background:#fff}
+	#wrap {position:relative;padding:120px 0 0 0;}
+	h1 {padding:10px;font-size:25px;}
+	.tb-filelist th, .tb-filelist td {padding:5px;border:1px solid #edeceb;}
+	.tb-filelist tbody td {font-size:13px;}
+	td.ing {color:red;}
+	.link,.link:hover,.link:active,.link:focus{text-decoration:underline;}
+	.tab-content>.tab-pane {display:none;}
+	.tab-content>.tab-pane.active {display:block;}
+	.tab-content {padding-bottom:50px}
+	.state {color:#004fd3;}
+	.state.ing {color:red;}
+	.room_detail_hd [class*=basic_step] {line-height:50px;}
+	.room_detail_hd .basic_step2 li a {font-size:15px;}
+</style>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+			<header>
+				<h1>Minda html 파일리스트</h1>
+				<div class="room_detail_hd">
+					<ul class="basic_step2 tb_fixed mt0">
+						<li><a href="index.html">[웹]여행자</a></li>
+						<li><a href="partner.html">[웹]파트너</a></li>
+						<li><a href="mobile.html">모바일</a></li>
+						<li><a href="manager.html">[웹]관리자</a></li>
+						<li><a href="tourticket.html">[신규]투어/체험</a></li>
+						<li class="active"><a href="domestic.html">국내서비스(MO)</a></li>
+						<li><a href="g_web.html">가이드</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="tab-content">
+				<!-- 관리자 filelist -->
+				<a href="g_domestic.html">인생숙소 스타일 가이드 바로가기</a>
+				<div class="tbl-wrap mt20" id="admin">
+					<table class="tb_fixed tb-filelist text-center">
+						<col style="width:3%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:7%">
+						<col style="width:5%">
+						<col style="width:17%">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>1depth</th>
+								<th>2depth</th>
+								<th>3depth</th>
+								<th>4depth</th>
+								<th>5depth</th>
+								<th>파일명</th>
+								<th>최종수정일</th>
+								<th>작업자</th>
+								<th>상태</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>메인</td>
+								<td>여행</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/main_swipe.html">main_swipe.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+<!-- 							<tr>
+								<td>메인</td>
+								<td>숙소</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/main_room.html">main_room.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>리뷰</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/main_review.html">main_review.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr> -->
+							<tr>
+								<td>메인</td>
+								<td>리뷰</td>
+								<td>[팝업]상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_review.html">pop_review.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>검색</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_search.html">pop_search.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>검색</td>
+								<td>[팝업]도시검색</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_city.html">pop_city.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>검색</td>
+								<td>[팝업]날짜검색</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_date.html">pop_date.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>더보기</td>
+								<td>로그인전</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/more.html">more.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>더보기</td>
+								<td>로그인후</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/more2.html">more2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/search_list.html">search_list.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>목록</td>
+								<td>[팝업]지도</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_map.html">pop_map.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>목록</td>
+								<td>[팝업]필터</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_filter.html">pop_filter.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>목록</td>
+								<td>[팝업]도시정보</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_list_thema.html">pop_list_thema.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_detail.html">room_detail.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>예약가능여부확인</td>
+								<td>입력전</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/rev_check.html">rev_check.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>예약가능여부확인</td>
+								<td>입력후</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/rev_check2.html">rev_check2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>객실정보</td>
+								<td>예약가능확인전</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_type_detail.html">room_type_detail.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>객실정보</td>
+								<td>예약가능확인후</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_type_rev.html">room_type_rev.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>후기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_review.html">room_review.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>숙소이용규칙</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect2.html">room_ect2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>부가시설 및 서비스</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect7.html">room_ect7.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>식사 및 간식</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect1.html">room_ect1.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>부가유료서비스</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect4.html">room_ect4.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>기타특이사항</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect5.html">room_ect5.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>숙소근처장소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect3.html">room_ect3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>취소환불규정</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_cancel_rule.html">room_cancel_rule.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>숙소위치 지도로 보기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_map.html">room_map.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>찾아가는법</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_ect6.html">room_ect6.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>상세</td>
+								<td>문의하기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_qna.html">room_qna.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>결제</td>
+								<td>예약자 정보 입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/rev_form.html">rev_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>결제</td>
+								<td>결제 정보입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_pay_form.html">room_pay_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>결제</td>
+								<td>결제 정보입력</td>
+								<td>무통장입금</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_pay_form2.html">room_pay_form2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>결제</td>
+								<td>결제신청완료</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_pay_finish.html">room_pay_finish.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>결제</td>
+								<td>결제완료</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_pay_finish2.html">room_pay_finish2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>결제</td>
+								<td>결제실패</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/room_pay_finish3.html">room_pay_finish3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>메인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mypage.html">mypage.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>정보수정</td>
+								<td>비밀번호 확인</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myinfo_pw.html">myinfo_pw.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>정보수정</td>
+								<td>정보수정하기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myinfo_edit.html">myinfo_edit.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>탈퇴하기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/withdrawal.html">withdrawal.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약내역</td>
+								<td>준비중인여행</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myrev_before.html">myrev_before.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약내역</td>
+								<td>지난여행</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myrev_after.html">myrev_after.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약내역</td>
+								<td>환불진행상황</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myrev_cancel.html">myrev_cancel</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>예약완료</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail4.html">myroom_detail4.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>예약대기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail8.html">myroom_detail8.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>예약가능</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail5.html">myroom_detail5.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>예약불가</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail3.html">myroom_detail3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>예약취소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail6.html">myroom_detail6.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>결제취소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail7.html">myroom_detail7.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>확정 후 불가</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail9.html">myroom_detail9.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>타예약선확정</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail10.html">myroom_detail10.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>노쇼</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_detail.html">myroom_detail.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>취소완료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_finish.html">myroom_finish.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>결제/환불정보</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_pay.html">myroom_pay.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>숙소연락처</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_num.html">myroom_num.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>예약자정보</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_man.html">myroom_man.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>숙소이용규칙</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_rule.html">myroom_rule.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>요금정보상세</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_fare.html">myroom_fare.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>지도보기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_map.html">myroom_map.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>결제정보</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_pay2.html">myroom_pay2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>취소환불규정</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_cancelrule.html">myroom_cancelrule.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>예약취소</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_pay3.html">myroom_pay3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>예약상세</td>
+								<td>공통 팝업</td>
+								<td>민다취소환불규정</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myroom_cancelrule2.html">myroom_cancelrule2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>후기</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myreview_list.html">myreview_list.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>후기</td>
+								<td>작성</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myreview_form.html">myreview_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>포인트</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mypoint.html">mypoint.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>포인트</td>
+								<td>이용정보</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mypoint_info.html">mypoint_info.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash.html">mycash.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td>충전정보</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash_info.html">mycash_info.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td>이용정보</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash_info2.html">mycash_info2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td>충전하기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash_charge.html">mycash_charge.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td>충전하기</td>
+								<td>가상계좌 발급 완료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash_charge2.html">mycash_charge2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td>충전하기</td>
+								<td>가상계좌 오류/취소</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash_charge3.html">mycash_charge3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>캐시</td>
+								<td>출금하기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycash_withdraw.html">mycash_withdraw.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>쿠폰</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycoupon.html">mycoupon.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>쿠폰</td>
+								<td>쿠폰없을 때</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mycoupon2.html">mycoupon2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>숙소Q&amp;A</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myqna.html">myqna.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>숙소Q&amp;A</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myqna_view.html">myqna_view.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>1:1문의</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/myqustion.html">myqustion.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>1:1문의</td>
+								<td>수정하기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/question_form.html">question_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>저장목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mysave.html">mysave.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>마이페이지</td>
+								<td>저장목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/mysave_none.html">mysave_none.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>테마존</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/thema_zone.html">thema_zone.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>로그인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/login.html">login.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>로그인</td>
+								<td>아이디 비밀번호 찾기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/login_find.html">login_find.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>서비스이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_term.html">join_term.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>개인정보 취급방침</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_term2.html">join_term2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>아이디입력</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_id.html">join_id.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>비밀번호입력</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_pw.html">join_pw.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>비밀번호입력</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_nickname.html">join_nickname.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>정보입력</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_info.html">join_info.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>연락처입력</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_contact.html">join_contact.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>동의 및 가입경로</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_last.html">join_last.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입</td>
+								<td>가입완료</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/join_finish.html">join_finish.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>할인숙소</td>
+								<td>땡처리</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/discount.html">discount.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>할인숙소</td>
+								<td>비수기할인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/discount2.html">discount2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>할인숙소</td>
+								<td>[팝업]필터</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/pop_discount_filter.html">pop_discount_filter.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>이벤트/쿠폰</td>
+								<td>이벤트</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/event.html">event.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>이벤트/쿠폰</td>
+								<td>이벤트</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/event_detail.html">event_detail.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>이벤트/쿠폰</td>
+								<td>이벤트</td>
+								<td>상세</td>
+								<td>댓글쓰기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/event_form.html">event_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>이벤트/쿠폰</td>
+								<td>민다쿠폰</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/coupon.html">coupon.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>이벤트/쿠폰</td>
+								<td>숙소쿠폰</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/coupon2.html">coupon2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/cs.html">cs.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>공지사항</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/notice.html">notice.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>공지사항</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/notice_detail.html">notice_detail.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>문의하기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/question.html">question.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>문의하기</td>
+								<td>1:1문의 작성</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/question_form.html">question_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>자주하는 질문</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/faq.html">faq.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>자주하는 질문</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/faq_detail.html">faq_detail.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/term.html">term.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>개인정보취급방침</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/term_privacy.html">term_privacy.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>고객센터</td>
+								<td>취소환불규정</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/cancel_rule.html">cancel_rule.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>설정</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/setting.html">setting.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>이색숙소</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/sp_room.html">sp_room.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>제보하기</td>
+								<td>인트로</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/report_intro.html">report_intro.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>제보하기</td>
+								<td>제보하기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/report_form.html">report_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>제보하기</td>
+								<td>제보완료</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/report_finish.html">report_finish.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>PC랜딩페이지</td>
+								<td>제보완료</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="domestic/landing.html">landing.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--// 관리자 filelist -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.tb-filelist').rowspan (0);
+			$('.tb-filelist').rowspan (1);
+			$('.tb-filelist').rowspan (2);
+			$('.tb-filelist').rowspan (3);
+		})
+		$('.tb-filelist tbody tr').each(function(index){
+			$(this).prepend('<td>'+index+'</td>');
+		});
+		$.fn.rowspan = function(colIdx, isStats) {
+		return this.each(function(){
+		var that;
+		$('tr', this).each(function(row) {
+			$('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {
+				if ($(this).html() != '' && $(this).html() == $(that).html()
+					&& (!isStats
+							|| isStats && $(this).prev().html() == $(that).prev().html()
+							)
+					) {
+					rowspan = $(that).attr("rowspan") || 1;
+					rowspan = Number(rowspan)+1;
+
+					$(that).attr("rowspan",rowspan);
+
+					// do your action for the colspan cell here
+					$(this).hide();
+
+					//$(this).remove();
+					// do your action for the old cell here
+
+				} else {
+					that = this;
+				}
+
+				// set the that if not already set
+				that = (that == null) ? this : that;
+			});
+		});
+	});
+};
+	</script>
+	<!-- lib -->
+	<script src="http://v2.theminda.com/cust/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/cust/js/common.js"></script>
+</body>
+</html>

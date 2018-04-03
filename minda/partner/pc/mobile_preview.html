@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="mobile-preview">
+				<ul class="mobile-preview__list">
+					<li class="mobile-preview__item active"><a href="../../mobile/tour_detail_preview.html" class="btn mobile-preview__link">상품 상세 미리보기</a></li>
+					<li class="mobile-preview__item"><a href="../../mobile/tour_option_preview.html" class="btn mobile-preview__link">요금 선택 미리보기</a></li>
+					<li class="mobile-preview__item"><a href="../../mobile/tour_certi_preview.html" class="btn mobile-preview__link">인증 정보 미리보기</a></li>
+					<li class="mobile-preview__item"><a href="../../mobile/tour_cancel_term_preview.html" class="btn mobile-preview__link">취소환불규정 미리보기</a></li>
+				</ul>
+				<div class="mobile-preview__phone">
+					<iframe src="../../mobile/tour_detail_preview.html" class="mobile-preview__iframe">
+
+					</iframe>
+				</div>
+				<div class="btm-fixed-area bg_wh">
+					<div class="text-right btn-area clearfix">
+						<p class="d_iblock txt pull-left">미리보기 페이지입니다. 저장한 정보만 노출됩니다. (기종에 따라 화면이 다르게 보일 수 있습니다)</p>
+						<div class="pull-right">
+							<button type="button" class="btn bg_dark_grey btn-lg">PC 버전 미리보기</button>
+							<button type="button" class="btn bg_dark_grey btn-lg">닫기</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+	<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.mobile-preview__link').click(function(e){
+				e.preventDefault();
+				$('.mobile-preview__item').removeClass('active');
+				var href = $(this).attr('href');
+				$(this).closest('.mobile-preview__item').addClass('active');
+				$('.mobile-preview__iframe').attr('src', href);
+
+			})
+		})
+	</script>
+</body>
+
+</html>

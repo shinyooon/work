@@ -1,0 +1,1151 @@
+<!--head -->
+<? include "inc/head.html" ?>
+<script type="text/javascript">
+    $(function(){
+        navCtrl(2);
+    })
+</script>
+<!--head -->
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+			<!-- nav -->
+			<? include "inc/nav.html" ?>
+			<!--// nav -->
+			<div class="tab-content">
+				<!-- 파트너 filelist -->
+				<div class="tbl-wrap mt20" id="partner">
+					<table class="tb_fixed tb-filelist text-center">
+						<col style="width:3%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:7%">
+						<col style="width:5%">
+						<col style="width:17%">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>1depth</th>
+								<th>2depth</th>
+								<th>3depth</th>
+								<th>4depth</th>
+								<th>5depth</th>
+								<th>파일명</th>
+								<th>최종수정일</th>
+								<th>작업자</th>
+								<th>상태</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>공통</td>
+								<td>서비스선택</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/service_select.html">service_select.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>공통</td>
+								<td>서비스이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/service_term.html">service_term.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>파트너 가입</td>
+								<td>서비스 선택 및 동의</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_join.html">partner_join.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>파트너 가입</td>
+								<td>정보입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_join_form.html">partner_join_form.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>서비스 제공 동의</td>
+								<td>숙소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_room_agree.html">partner_room_agree.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>서비스 제공 동의</td>
+								<td>정보</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_info_agree.html">partner_info_agree.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>서비스 제공 동의</td>
+								<td>투어</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_tour_agree.html">partner_tour_agree.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>투어등록</td>
+								<td>투어만 등록한 파트너</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_join_tour.html">partner_join_tour.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>투어등록</td>
+								<td>숙소, 투어 파트너</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_join_tour2.html">partner_join_tour2.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>숙소 오픈 요청중</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_join_req.html">partner_join_req.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>회원가입 개선</td>
+								<td>가입 완료</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_join_finish.html">partner_join_finish.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>파트너 메인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/partner_main.html">partner_main.html</a></td>
+								<td>2017-03-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>통합</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/main_total.html">main_total.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>숙소주</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/main_room_161116.html">main_room_161116.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td>gnb수정</td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>여행자</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/main_total.html">main_travel.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>숙소등록</td>
+								<td>step7. 예약시스템 설정</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/good_step7.html">good_step7.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>정보관리</td>
+								<td>예약규정</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/rule_setting.html">rule_setting.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숙소</td>
+								<td>취소환불규정 전환 안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/main_room_cancel.html">main_room_cancel.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_list.html">spot_list.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>목록</td>
+								<td>툴팁</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_tooltip.html">spot_tooltip.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>목록</td>
+								<td>데이터없을때</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_list_no.html">spot_list_no.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>목록</td>
+								<td>[팝업]도움말</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_list_info.html">spot_list_info.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>등록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_form.html">spot_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>미리보기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_view.html">spot_view.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>[팝업]스팟생성확인</td>
+								<td>스팟명검색</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_name_srch1.html">spot_name_srch1.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>[팝업]스팟생성확인</td>
+								<td>스팟명검색</td>
+								<td>검색결과</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_name_srch2.html">spot_name_srch2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>[팝업]스팟생성확인</td>
+								<td>도시검색</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_city_srch1.html">spot_city_srch1.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>스팟</td>
+								<td>[팝업]스팟생성확인</td>
+								<td>도시검색</td>
+								<td>검색결과</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/spot_city_srch2.html">spot_city_srch2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+<tr>
+								<td>일정</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_list.html">plan_list.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>목록</td>
+								<td>데이터없을때</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_list_no.html">plan_list_no.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_form.html">plan_form.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>생성하거나 사용한스팟</td>
+								<td>데이터없을때</td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_add_spot1.html">plan_add_spot1.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>생성하거나 사용한스팟</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_add_spot2.html">plan_add_spot2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>도시선택</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_add_spot3.html">plan_add_spot3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>도시선택결과</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_add_spot4.html">plan_add_spot4.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>스팟명검색</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_srch1.html">plan_srch1.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>스팟명검색</td>
+								<td>검색결과 데이터X</td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_srch2.html">plan_srch2.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>일정</td>
+								<td>등록</td>
+								<td>스팟선택</td>
+								<td>스팟명검색</td>
+								<td>검색결과 데이터O</td>
+								<td><a class="link" target="_blank" href="partner/pc/plan_srch3.html">plan_srch3.html</a></td>
+								<td></td>
+								<td></td>
+								<td class="state"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>가입하기</td>
+								<td>[팝업]정보입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_join1.html">oneid_join1.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>메인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/main_tour.html">main_tour.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>승인된상품</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_list.html">tour_prod_list.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>미승인 상품</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_list2.html">tour_prod_list2.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품리스트</td>
+								<td>데이터X</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_list3_new.html">tour_prod_list3.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>기본정보</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form_new.html">tour_prod_form_new.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>기본정보</td>
+								<td>[팝업]투어타입 가이드</td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form_pop.html">tour_prod_form_pop.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>사진/코스</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form2_new.html">tour_prod_form2_new.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>요금</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form3_new.html">tour_prod_form3_new.html</a></td>
+								<td>2016-12-08</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<!-- <tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>예약규정</td>
+								<td>등록요청 전</td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form4_1.html">tour_prod_form4_1.html</a></td>
+								<td>2016-12-13</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr> -->
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>예약규정</td>
+								<td>등록요청 후</td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form4_new.html">tour_prod_form4_new.html</a></td>
+								<td>2016-12-13</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>등록완료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_form5_new.html">tour_prod_form5_new.html</a></td>
+								<td>2016-12-13</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<!-- <tr>
+								<td>트립</td>
+								<td>상품관리</td>
+								<td>상품등록</td>
+								<td>기본정보</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_complete.html">tour_prod_complete.html</a></td>
+								<td>2016-11-25</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr> -->
+
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약리스트</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_rev_list.html">tour_rev_list.html</a></td>
+								<td>2016-12-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약정보</td>
+								<td>예약확정, 노쇼, 여행종료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_rev_detail.html">tour_rev_detail.html</a></td>
+								<td>2016-12-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약정보</td>
+								<td>예약취소, 취소완료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_rev_detail2.html">tour_rev_detail2.html</a></td>
+								<td>2016-12-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약정보</td>
+								<td>확정 후 불가, 최소인원미달, 오버부킹</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_rev_detail3.html">tour_rev_detail3.html</a></td>
+								<td>2016-12-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약정보</td>
+								<td>[팝업]예약변경</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_rev_pop.html">tour_rev_pop.html</a></td>
+								<td>2016-12-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약정보</td>
+								<td>[팝업]예약취소</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_rev_pop2.html">tour_rev_pop2.html</a></td>
+								<td>2016-12-07</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약캘린더</td>
+								<td>행사관리</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_prod_cal.html">tour_prod_cal.html</a></td>
+								<td>2016-11-30</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>예약관리</td>
+								<td>예약캘린더</td>
+								<td>[팝업]예약리스트</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_cal_pop.html">tour_cal_pop.html</a></td>
+								<td>2016-11-30</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>가입</td>
+								<td>서비스 선택</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/service_select_161219.html">service_select_161219.html</a></td>
+								<td>2016-12-21</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>가입</td>
+								<td>승인 요청 중</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/tour_req_ing.html">tour_req_ing.html</a></td>
+								<td>2016-12-21</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>공지사항</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/notice_list.html">notice_list.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>공지사항</td>
+								<td>상세</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/notice_view.html">notice_view.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>1:1문의</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/question_list.html">question_list.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>1:1문의</td>
+								<td>상세</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/question_view.html">question_view.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>1:1문의</td>
+								<td>입력</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/question_form.html">question_form.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>자주 묻는 질문</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/faq_list.html">faq_list.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>파트너지원</td>
+								<td>자주 묻는 질문</td>
+								<td>상세</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/faq_view.html">faq_view.html</a></td>
+								<td>2016-12-23</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>게시물관리</td>
+								<td>여행자 문의</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/qna_manager.html">qna_manager.html</a></td>
+								<td>2016-12-28</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>게시물관리</td>
+								<td>리뷰 관리</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/review_manager.html">review_manager.html</a></td>
+								<td>2016-12-28</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>정산내역</td>
+								<td>정산예정</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/calculate_list.html">calculate_list.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>정산내역</td>
+								<td>정산내역</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/calculate_list2.html">calculate_list2.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>정산내역</td>
+								<td>정산규정</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/calculate_list3.html">calculate_list3.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>수익통계</td>
+								<td>일별통계</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/profit_stats.html">profit_stats.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>수익통계</td>
+								<td>주별통계</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/profit_stats2.html">profit_stats2.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>수익통계</td>
+								<td>월별통계</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/profit_stats3.html">profit_stats3.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>순위별 통계</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/ranking_stats.html">ranking_stats.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>통계/정산</td>
+								<td>리뷰 통계</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/review_stats.html">review_stats.html</a></td>
+								<td>2017-01-05</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>가입하기</td>
+								<td>[팝업]가입완료</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_join2.html">oneid_join2.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>숙소목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_index.html">oneid_index.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>숙소목록</td>
+								<td>데이터 없을때</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_index_no.html">oneid_index_no.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>숙소추가/조회</td>
+								<td>숙소추가</td>
+								<td>입력</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_add1.html">oneid_add1.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>숙소추가/조회</td>
+								<td>숙소추가</td>
+								<td>확인</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_add2.html">oneid_add2.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>숙소추가/조회</td>
+								<td>추가신청조회</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_list.html">oneid_list.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>숙소추가/조회</td>
+								<td>추가신청조회</td>
+								<td>[팝업]상세</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_view.html">oneid_view.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>통합아이디</td>
+								<td>통합ID 수정</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/oneid_edit.html">oneid_edit.html</a></td>
+								<td>2016-09-06</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약캘린더</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/rev_cal.html">rev_cal.html</a></td>
+								<td>2016-11-02</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약캘린더</td>
+								<td>예약두건이상일때</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/rev_cal_room.html">rev_cal_room.html</a></td>
+								<td>2016-11-02</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약캘린더</td>
+								<td>예약상세정보</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/rev_cal_detail.html">rev_cal_detail.html</a></td>
+								<td>2016-11-02</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약캘린더</td>
+								<td>예약제한</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/rev_cal_limit.html">rev_cal_limit.html</a></td>
+								<td>2016-11-02</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약캘린더</td>
+								<td>타사이트예약</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="partner/pc/rev_cal_other.html">rev_cal_other.html</a></td>
+								<td>2016-11-02</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //파트너 filelist -->
+			</div>
+		</div>
+	</div>
+	<!-- script -->
+	<? include "inc/script.html" ?>
+	<!--// script -->
+</body>
+</html>

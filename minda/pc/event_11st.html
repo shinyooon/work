@@ -1,0 +1,80 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header.html" ?>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- <span class="sub_bg"></span> -->
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <? include "inc/event_top.html" ?>
+
+            <div style="margin: 0px auto; position: relative; max-width: 1080px;"><img
+                style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201711/event_11st.jpg">
+                <h1 class="sr-only">11주년을 축하해 주세요!</h1>
+                <p class="sr-only">민다 11주년 기념 100% 당첨 이벤트. 11일 동안 회원가입 후 숙소 또는 트립 예약하면 100% 선물 증정!</p>
+                <dl class="sr-only">
+                    <dt>이벤트 기간</dt>
+                    <dd>2017년 12월 4일 (월) ~ 12월 14일(목), 11일간</dd>
+                    <dt>당첨자 발표</dt>
+                    <dd>2017년 12월 20일 (수)</dd>
+                    <dt>경품 발송일</dt>
+                    <dd>2017년 12월 22일 (금)</dd>
+                    <dt>참여방법</dt>
+                    <dd>신규 회원가입 후 숙소 또는 트립 예약하면 참여 완료
+                        <ol class="sr-only">
+                            <li>1. 회원가입</li>
+                            <li>2. 예약하기</li>
+                            <li>3. 참여완료!</li>
+                        </ol>
+                    </dd>
+                </dl>
+                <h2 class="sr-only">EVENT경품</h2>
+                <ul class="sr-only">
+                    <li>록시땅 트래블 키트(10명)</li>
+                    <li>CGV 영화 관람권 2매(20명)</li>
+                    <li>문화 상품권 2만원(30명)</li>
+                    <li>스타벅스 아메리카노 Tall(50명)</li>
+                    <li>민다 쿠폰 3,000원(그 외 전원)</li>
+                </ul>
+                <ul style="position:absolute;top:76.3%;width:100%;padding:0 13%;height:6.7%">
+                    <li><a href="javascript:AppInvokeOpenNewPage('/main/index.php', 'y','y');"
+                           onclick="ga('send','event','event_page_button','click','button_event_11thevent_lodging');"
+                           style="position:absolute;top:0;left:13%;display:block;height:45%;width:74.1%"><span
+                        class="sr-only">민다 숙소 예약하기</span></a></li>
+                    <li><a href="javascript:AppInvokeOpenNewPage('/tg/index.php', 'y','y');"
+                           onclick="ga('send','event','event_page_button','click','button_event_11thevent_trip');"
+                           style="position:absolute;bottom:0;left:13%;display:block;height:45%;width:74.1%"><span
+                        class="sr-only">민다 트립 예약하기</span></a></li>
+                </ul>
+                <p class="sr-only">COUPON. 2000원 3장. 숙소와 트립 상품 구매시 사용가능</p><!-- 한꺼번에 쿠폰받기 버튼-->
+                <button type="button" class="no_style" onclick="javascript:getEventCoupon();"
+                        style="display:block;position:absolute;left:32%;top:73.7%;width:36.2%;height:2.4%"><span
+                    class="sr-only">한꺼번에 쿠폰 받기</span></button><!--// 한꺼번에 쿠폰받기 -->
+                <dl class="sr-only">
+                    <dt>이벤트 참여 전 꼭 알아두세요!</dt>
+                    <dd>숙소 및 트립 예약 횟수에 상관없이 1인 1경품이 증정됩니다.</dd>
+                    <dd>트래블 키트는 재고에 따라 브랜드가 달라질 수 있습니다.</dd>
+                    <dd>12월 18일(월)까지 예약 미확정 및 예약 취소하신 분은 경품 증정에서 제외됩니다.)</dd>
+                    <dd>당첨자 안내는 당첨자 발표일에 회원가입 시 기입하신 연락처로 안내됩니다.</dd>
+                    <dd>경품 발송은 가입하신 회원 주소 및 연락처로 발송됩니다.</dd>
+                    <dd>회원가입 시 주소 및 연락처가 상이할 경우, 당첨이 취소됩니다.</dd>
+                    <dd>경품은 현금 및 다른 경품으로 교환되거나 환불되지 않으며, 유효 기간 연장 불가 및 타인에게 양도할 수 없습니다.</dd>
+                </dl>
+            </div>
+            <!-- 이벤트 내용 끝 -->
+
+
+            <? include "inc/event_bottom.html" ?>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<? include "inc/bottom.html" ?>

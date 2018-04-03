@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/main.css">
+	<!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="header">
+			<div class="header-wrap">
+				<a class="icon_hd_back hd-l" href=""></a>
+				<h1>정보</h1>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="main-contents">
+				<section class="sub-top-area mt0 pb0">
+					<ul class="rev-form">
+						<li>
+							<span class="input-wrap input-city">
+							<input id="sword" type="text" onkeydown="if(event.keyCode==13){searchInfo();}" title="도시명" class="no_style d-block autocomplete" placeholder="도시명 또는 장소명을 입력하세요." autocomplete="off">
+							<input id="category" type="hidden" value="">
+							<div id="webProxy" class="web_automatic srch_wrp"></div>
+							<script>
+								//자동완성
+							   $(".autocomplete").on({
+								   "keyup" : function(e){
+									 $('#category').val('');
+									 if(!$(this).val()){$(".web_automatic").html('');  $(".web_automatic").hide(); return false;}
+									 $.ajax({
+									   type: "POST",
+									   url: "/cust/ajax/ajax.common.keyword.php",
+									   data: "part=main_keyword&keyword="+ $(this).val(),
+									   dataType: "TEXT",
+									   timeout: 10000,
+									   success: function(msg){
+										  $(".web_automatic").show();
+										  $(".web_automatic").html(msg);
+										  $(".web_automatic > ul").addClass('list-auto');
+										  $(".list-auto").show();
+										  $(".city").on({
+										   "click" : function(e){
+												$("#sword").val($(this).attr("data-city-name"));
+												$("#category").val($(this).attr("data-city"));
+												$(".web_automatic").hide();
+												setToday($(this).data("today"));
+											  }
+										   });
+									   }
+									   ,error: function(msg) {
+										 alert('서버와의 통신이 실패했습니다.');
+									   }
+									 });
+
+								   }
+								});
+							</script>            				<button class="icon_clse_input">입력취소</button>
+						</span>
+						</li>
+					</ul>
+					<div class="btn-area">
+						<a onclick="searchInfo();" class="btn-gradient">정보검색</a>
+					</div>
+				</section>
+				<section class="main-city-area">
+					<ul id="ul_city" class="list-best-city">
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=001002001" class="btn">파리</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=001001001" class="btn">런던</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=001004001" class="btn">바르셀로나</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=005001001" class="btn">뉴욕</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=003002002" class="btn">오사카</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=003002001" class="btn">도쿄</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=001003001" class="btn">로마</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/spot/list.html?spot_list_type=city&amp;category=001004002" class="btn">마드리드</a>
+						</li>
+						<li>
+							<a href="http://v2.theminda.com/m/1.0/grp_main/search.html?type=info" class="btn" style="background:blanchedalmond">전체도시보기</a>
+						</li>
+					</ul>
+					<div class="btn-area">
+						<a href="/m/1.0/grp_main/search.html?type=info" class="d-block">전체도시보기<span class="icon-main-spr icon-arr-r"></span></a>
+					</div>
+				</section>
+				<section class="info-contents">
+					<article class="pt10">
+						<div class="tit-wrap clearfix">
+							<h3 class="tit">파리</h3>
+							<a href="" class="link-more">더보기<span class="icon-main-spr icon-plus"></span></a>
+						</div>
+						<ul class="list-item v2 list-info">
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/travel/image/middle/201609/1473072079_0.jpg" alt="" class="pos-center" />
+									</div>
+									<div class="info">
+										<h4 class="name twoline">걷다보니 파리 마스터 파리 도보여행 일정</h4>
+										<p class="host color-grey"><span class="ellipsis">로마 자고가 하우스로마 자고가 하우스로마 자고가 하우스</span>의 추천일정</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/travel/image/middle/201609/1472721406_1.jpg" alt="" class="pos-center" />
+									</div>
+									<div class="info">
+										<h4 class="name twoline">파리 1박 2일 정복하기</h4>
+										<p class="host color-grey"><span class="ellipsis">로마 자고가 하우스</span>의 추천일정</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</article>
+					<article>
+						<div class="tit-wrap clearfix">
+							<h3 class="tit">로마</h3>
+							<a href="" class="link-more">더보기<span class="icon-main-spr icon-plus"></span></a>
+						</div>
+						<ul class="list-item v2 list-info">
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/travel/image/middle/201609/1474398848_2.jpg" alt="" class="pos-center" />
+									</div>
+									<div class="info">
+										<h4 class="name twoline">로마 2박 3일 완전 마스터</h4>
+										<p class="host color-grey"><span class="ellipsis">로마 자고가 하우스</span>의 추천일정</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/travel/image/middle/201609/1474399801_1.jpg" alt="" class="pos-center" />
+									</div>
+									<div class="info">
+										<h4 class="name twoline">로마 3박 4일 남부 여행하기</h4>
+										<p class="host color-grey"><span class="ellipsis">로마 자고가 하우스</span>의 추천일정</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</article>
+					<article>
+						<div class="tit-wrap clearfix">
+							<h3 class="tit">오사카</h3>
+							<a href="" class="link-more">더보기<span class="icon-main-spr icon-plus"></span></a>
+						</div>
+						<ul class="list-item v2 list-info">
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/travel/image/middle/201609/1472729196_1.jpg" alt="" class="pos-center" />
+									</div>
+									<div class="info">
+										<h4 class="name twoline">오사카 1박 2일 맛집투어</h4>
+										<p class="host color-grey"><span class="ellipsis">로마 자고가 하우스로마 자고가 하우스로마 자고가 하우스</span>의 추천일정</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/travel/image/middle/201609/1473645819_0.jpg" alt="" class="pos-center" />
+									</div>
+									<div class="info">
+										<h4 class="name twoline">오사카 + 교토 3박 4일 최고의 여행</h4>
+										<p class="host color-grey"><span class="ellipsis">로마 자고가 하우스</span>의 추천일정</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</article>
+					<article>
+						<ul class="list-item list-info">
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/theme/pc/th_1487814250_1.jpg" alt="" class="pos-center" />
+									</div>
+									<p class="pos-center">
+										<span class="txt1">내 생에 손꼽히는 야경장소</span>
+										<span class="txt2">34개 장소</span>
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/theme/pc/th_1487814262_1.jpg" alt="" class="pos-center" />
+									</div>
+									<p class="pos-center">
+										<span class="txt1">런더너의 쇼핑 장소</span>
+										<span class="txt2">34개 장소</span>
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap">
+										<img src="http://www.theminda.com/data/theme/pc/th_1487814273_1.jpg" alt="" class="pos-center" />
+									</div>
+									<p class="pos-center">
+										<span class="txt1">도쿄의 숨은 맛집 찾기을</span>
+										<span class="txt2">34개 장소</span>
+									</p>
+								</a>
+							</li>
+						</ul>
+					</article>
+				</section>
+			</div>
+			<!-- contents -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<footer id="footer">
+			<nav class="nav-btm">
+				<ul>
+					<li>
+						<a href="">
+							<span class="icon-home"></span>
+							<span class="txt">홈</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-srch"></span>
+							<span class="txt">검색</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-save"></span>
+							<span class="txt">저장목록</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-my"></span>
+							<span class="txt">마이민다</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-more"></span>
+							<span class="txt">더보기</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+		<!-- fixed button-->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

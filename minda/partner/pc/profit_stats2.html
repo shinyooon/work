@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<!-- <a href="/member/logout.php" class="btn">정보수정</a> -->
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="" class="active">통계/정산</a></li>
+						<li><a href="">파트너 지원</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">통계/정산</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">정산내역</a></li>
+							<li class="active"><a href="">수익통계</a></li>
+							<li><a href="">순위별 통계</a></li>
+							<li><a href="">리뷰통계</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="body_tit2 clearfix">
+						<ul class="tit-step pull-left row">
+							<li><a href="">일별통계</a></li>
+							<li class="active"><a href="">주별통계</a></li>
+							<li><a href="">월별통계</a></li>
+						</ul>
+					</div>
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<div class="tbl-wrap3 bx_more_obj">
+							<table class="tb tb-default tb_input text-left">
+								<caption class="sr-only"> 주별 수익 통계 검색 항목</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>기간</th>
+										<td colspan="2">
+											<span class="form-control-static">최근</span>
+											<select class="form-control-basic wid_sm ml10" title="검색 기간 선택">
+												<option value="" selected="selected">선택</option>
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+												<option value="">4</option>
+												<option value="">5</option>
+												<option value="">52까지</option>
+											</select>
+											<span class="form-control-static">주</span>
+										</td>
+									</tr>
+									<tr>
+										<th rowspan="6">상품별보기</th>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5 on" for="pord_chk1">
+												<input type="checkbox" id="pord_chk1" checked="checked">총수익
+											</label>
+										</td>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk2">
+												<input type="checkbox" id="pord_chk2">걸어서 세계속으로 투어
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk3">
+												<input type="checkbox" id="pord_chk3">가가가가가가가가 투어
+											</label>
+										</td>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk4">
+												<input type="checkbox" id="pord_chk4">나나나나나나나나 투어
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk5">
+												<input type="checkbox" id="pord_chk5">다다다다다다다다다 투어
+											</label>
+										</td>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk6">
+												<input type="checkbox" id="pord_chk6">라라라라라라라라라라 투어
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk7">
+												<input type="checkbox" id="pord_chk7">마마마마마마마마마 투어
+											</label>
+										</td>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk8">
+												<input type="checkbox" id="pord_chk8">바바바바바바바바바 투어
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk9">
+												<input type="checkbox" id="pord_chk9">사사사사사사사사사사 투어
+											</label>
+										</td>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk10">
+												<input type="checkbox" id="pord_chk10">아아아아아아아아아아아 투어
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk11">
+												<input type="checkbox" id="pord_chk11">자자자자자자자자자자자자 투어
+											</label>
+										</td>
+										<td>
+											<label class="inline-checkbox basic chk_label mt5" for="pord_chk12">
+												<input type="checkbox" id="pord_chk12">차차차차차차차차차차 투어
+											</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="text-center bx_more btn_bx_more" style="display:block;">
+							<a href="#" class="btn"><span class="icon_page_next"></span></a>
+						</div>
+						<div class="text-right">
+							<button type="button" class="btn bg_dark_grey btn-md w165">검색</button>
+						</div>
+						<!-- chart-area -->
+						<div class="chart-area">
+							<div id="chart_div"></div>
+						</div>
+						<!--// chart-area-->
+						<div class="tbl-wrap3 mt50 mb50">
+							<table class="tb tb-default text-center">
+								<caption class="sr-only"> 주별 수익 통계 검색 결과 항목</caption>
+								<colgroup>
+									<col style="width:120px">
+									<col>
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:140px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2" class="bb0">날짜</th>
+										<th scope="col" rowspan="2" class="bb0">상품명</th>
+										<th scope="colgroup" colspan="2">수익</th>
+										<th scope="colgroup" colspan="2">취소보상</th>
+										<th scope="col" rowspan="2" class="bb0">금액합계</th>
+									</tr>
+									<tr>
+										<th scope="col">확정건수</th>
+										<th scope="col">금액</th>
+										<th scope="col">취소건수</th>
+										<th scope="col">금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="4">2016-11-03<br />첫째 주</td>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td rowspan="4">2016-11-03<br />넷째 주</td>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+									<tr>
+										<td class="text-left">파리 3대 박물관 오전출발 워킹투어(특별할인가)</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>32</td>
+										<td>35,000 원</td>
+										<td>2,000 원</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th colspan="6" class="text-center">총 수익/보상액</th>
+										<td><span class="fw500 color_red">2,000원</span></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+		var startDate, endDate
+		$('.fare_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			parentEl: '.tour-contents',
+			opens: 'left',
+			locale: {
+				"format": "DD/MM/YYYY",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+
+		}, function(startDate, endDate) {
+			$('.fare_start_date').val(startDate.format('DD/MM/YYYY'));
+			$('.fare_end_date').val(endDate.format('DD/MM/YYYY'));
+
+		});
+
+		$('.bx_more>a').click(function() {
+			$(this).parent().prev().toggleClass('open');
+
+			var more_text_tag = $(this).find("font");
+			var more_text = more_text_tag.text();
+			if (more_text.trim() == "더보기")
+				more_text_tag.text("접기")
+			else
+				more_text_tag.text("더보기")
+			return false;
+		});
+
+
+		google.charts.load("current", {packages:["corechart"]});
+		  google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+			var data = new google.visualization.DataTable();
+			data.addColumn('date', 'X');
+			data.addColumn('number', '파리 3대 박물관 오전출발 워킹투어(특별할인가)');
+			data.addColumn('number', '총수익');
+			//data.addColumn({type: 'string', role: 'tooltip'});
+
+
+			data.addRows([
+				[new Date(2017, 1, 10), 0, 0],
+				[new Date(2017, 1, 20), 10, 10],
+				[new Date(2017, 1, 30), 40, 50],
+				[new Date(2017, 2, 10), 20, 70],
+				[new Date(2017, 2, 20), 10, 80],
+				[new Date(2017, 2, 30), 50, 130],
+				[new Date(2017, 3, 10), 30, 160],
+				[new Date(2017, 3, 20), 50, 210],
+				[new Date(2017, 3, 30), 20, 230]
+			]);
+
+			var options = {
+				width: 1120,
+				height: 400,
+				//tooltip: { isHtml: true },
+				legend: {
+					position: 'bottom'
+				},
+				tooltip: {isHtml: true},
+				vAxis: {
+					format:'#만 원 ',
+					gridlines: 0
+				},
+				chartArea: {
+					width: '85%'
+				},
+				hAxis: {
+					format: 'M월d일',
+					gridlines: {color: 'none'}
+				},
+				pointSize: 10,
+				pointShape: 'square'
+			};
+
+			var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+			var formatter = new google.visualization.DateFormat({ pattern: 'yyyy년m월d일' });
+		}
+
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

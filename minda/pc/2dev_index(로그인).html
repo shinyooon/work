@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="/cust/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="index">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+	<div class="w1100">
+		<!-- 메인슬라이드 0516 -->
+		<div id="indexSlider">
+			<ul>
+				<li>
+					<h2>혼자라 겁나는 여행? 한인숙소로 민다.</h2>
+					<p>낯설고 겁나는 해외여행 첫걸음 한인숙소에서 마음부터 편하게 시작하세요.</p>
+				</li>
+				<li>
+					<h2>내딸 여행 엄마걱정에 한인숙소로 민다.</h2>
+					<p>이억만리 해외여행가는 딸 걱정에 잠 못 이루는 우리엄마 한국인을 위한 한인숙소로 안심 여행하세요.</p>
+				</li>
+				<li>
+					<h2>빠다치즈로 지쳤을 때 한인숙소로 민다.</h2>
+					<p>한국인은 역시 밥 심! 해외여행에 한국 음식이 그리울 때 맛있는 한식이 있는 한인숙소로 결정하세요.</p>
+				</li>
+				<li>
+					<h2>영어마비 걱정될 때? 한인숙소로 민다!</h2>
+					<p>10년을 공부해도 해외에서는 한 없이 걱정되는 외국어 한인숙소에서 한국어로 마음 편하게 물어보세요.</p>
+				</li>
+			</ul>
+		</div>
+<script>
+$(function(){
+	$('#indexSlider>ul').bxSlider({
+		controls:false,
+		auto:5000,
+		mode:'fade'
+	});
+});
+</script>
+
+		<!-- 검색바 -->
+		<form action=".">
+			<div class="search_wrp">
+				<ul class="tab clearfix">
+					<li class="active"><a href="#roomSrch" data-toggle="tab">숙소검색</a></li>
+					<li><a href="#unifiedSrch" data-toggle="tab">통합검색</a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- 숙소검색 -->
+					<div id="roomSrch" class="wrap_cnt tab-pane active">
+						<div class="form-inline">
+							<input type="text" class="form-control input-lg" placeholder="도시명을 입력하세요" title="도시명입력">
+							<!-- 자동검색 -->
+							<div class="web_automatic">
+								<ul class="city">
+									<li>이탈리아, 로마</li>
+									<li>이탈리아, 베네치아</li>
+									<li>이탈리아, 밀라노</li>
+									<li>이탈리아, 나폴리</li>
+								</ul>
+							</div>
+							<div id="calendarWrp" class="daterange d_iblock pr">
+								<!-- 0719 수정 -->
+								<div class="datewrp">
+									<input type="text" id="chkin" class="form-control input-lg" placeholder="체크인">
+									<label for="chkin" class="label_chkin">체크인</label>
+								</div>
+								<i class="icon_arrow"></i>
+								<div class="datewrp">
+									<input type="text" id="chkout" class="form-control input-lg">
+									<label for="chkout" class="label_chkout">체크아웃</label>
+								</div>
+								<button type="button" class="icon_date_close">달력초기화</button>
+								<script type="text/javascript">
+									$(function() {
+										var dateToday = new Date();
+										$('.daterange .form-control').on({
+											focus : function  () {
+												$(this).parent().addClass('active');
+											},
+											blur : function  () {
+												!$('.daterangepicker').is(':visible') && $(this).parent().removeClass('active');
+											}
+										});
+										$('.daterange .form-control').daterangepicker({
+											autoApply: true,
+											minDate: dateToday,
+											parentEl: '#calendarWrp',
+											opens: 'center',
+											locale: {
+											format: 'YYYY/MM/DD'
+											}
+										});
+										$('.daterange .form-control').on({
+											'apply.daterangepicker' : function  (ev, picker) {
+												$(".daterange label").addClass("hidden").parent().removeClass('active');
+											},
+											'hide.daterangepicker' : function  (ev, picker) {
+												$("#chkin").val(picker.startDate.format('YYYY-MM-DD'));
+												$("#chkout").val(picker.endDate.format('YYYY-MM-DD'));
+												$(".daterange .datewrp").removeClass('active');
+											}
+										});
+									});
+								</script>
+								<!-- //0719 수정 -->
+							</div>
+							<span class="srchbtn"><button type="button" class="btn bg_org btn-block"><i class="icon_srch"></i>검색</button></span>
+						</div>
+					</div>
+					<!-- 통함검색 -->
+					<div id="unifiedSrch" class="wrap_cnt tab-pane">
+						<div class="input-group">
+							<input type="text" class="form-control input-lg" placeholder="숙소명/교통지/키워드(ex. 파리,한식/런던,오이스터/로마,공항 등)를 입력하세요." title="도시명입력">
+							<!-- 자동검색 -->
+							<div class="web_automatic">
+								<ul class="city">
+									<li>이탈리아, 로마</li>
+									<li>이탈리아, 베네치아</li>
+									<li>이탈리아, 밀라노</li>
+									<li>이탈리아, 나폴리</li>
+								</ul>
+							</div>
+							<span class="input-group-btn"><button type="button" class="btn bg_mint"><i class="icon_srch"></i>검색</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- //검색바 -->
+
+		<!-- 상단메뉴 -->
+		<!-- [D] 0518 수정사항 -->
+		<nav class="main_top_mn text-center">
+			<ul class="top_menu clearfix d_iblock">
+				<li class="i1"><a href="#lodgingList" data-toggle="modal"><span>한인숙소</span></a></li>
+				<li class="i2"><a href="">티켓패스</a></li>
+				<li class="i3"><a href="">커뮤니티</a></li>
+				<li class="i4"><a href="">투어팟</a></li>
+				<li class="i5"><a href="">현지인</a></li>
+				<li class="bar i6"><a href="">이벤트</a></li>
+				<li class="i7"><a href="">민가특가</a></li>
+				<li class="i8"><a href="">쿠폰족</a></li>
+			</ul>
+		</nav>
+		<!-- // [D] 0518 수정사항 -->
+		<!-- //상단메뉴 -->
+	</div>
+
+<!-- 페이지 시작-->
+<div class="content w1100">
+	<section class="main_info">
+		<h2 class="sr-only">어디로 여행하세요?</h2>
+	<!-- [D] 0427 수정사항 -->
+		<div class="bx_wrp clearfix">
+			<!-- 인기도시리스트슬라이드 -->
+			<div class="destination main_slide_wrp slider_bx">
+				<ul class="main_cnt_slider">
+					<li class="bg_org">
+						<h3 class="txt">
+							<img class="center-block" src="/cust/img/icon_popular.png" alt="" />
+							<small>인기도시/우수민박</small>오사카
+						</h3>
+						<button type="button" class="detail_btn" onClick="$(this).parent().toggleClass('detail').parents('.destination').toggleClass('on')">상세보기</button>
+						<div class="hover_wrp">
+							<h4 class="tit">가장 많이<br>예약된 곳은?</h4>
+							<p>인기여행지를 찾아보세요</p>
+							<ul class="popular_lst">
+								<li><a href="">오사카</a></li>
+								<li><a href="">파리</a></li>
+								<li><a href="">런던</a></li>
+								<li><a href="">도쿄</a></li>
+								<li><a href="">로마</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bg_org">
+						<h3 class="txt">
+							<img class="center-block" src="/cust/img/icon_popular.png" alt="" />
+							<small>인기도시/우수민박</small>오사카
+						</h3>
+						<button type="button" class="detail_btn" onClick="$(this).parent().toggleClass('detail').parents('.destination').toggleClass('on')">상세보기</button>
+						<div class="hover_wrp">
+							<h4 class="tit">가장 많이<br>예약된 곳은?</h4>
+							<p>인기여행지를 찾아보세요</p>
+							<ul class="popular_lst">
+								<li><a href="">오사카</a></li>
+								<li><a href="">파리</a></li>
+								<li><a href="">런던</a></li>
+								<li><a href="">도쿄</a></li>
+								<li><a href="">로마</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bg_org">
+						<h3 class="txt">
+							<img class="center-block" src="/cust/img/icon_popular.png" alt="" />
+							<small>인기도시/우수민박</small>오사카
+						</h3>
+						<button type="button" class="detail_btn" onClick="$(this).parent().toggleClass('detail').parents('.destination').toggleClass('on')">상세보기</button>
+						<div class="hover_wrp">
+							<h4 class="tit">가장 많이<br>예약된 곳은?</h4>
+							<p>인기여행지를 찾아보세요</p>
+							<ul class="popular_lst">
+								<li><a href="">오사카</a></li>
+								<li><a href="">파리</a></li>
+								<li><a href="">런던</a></li>
+								<li><a href="">도쿄</a></li>
+								<li><a href="">로마</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bg_org">
+						<h3 class="txt">
+							<img class="center-block" src="/cust/img/icon_popular.png" alt="" />
+							<small>인기도시/우수민박</small>오사카
+						</h3>
+						<button type="button" class="detail_btn" onClick="$(this).parent().toggleClass('detail').parents('.destination').toggleClass('on')">상세보기</button>
+						<div class="hover_wrp">
+							<h4 class="tit">가장 많이<br>예약된 곳은?</h4>
+							<p>인기여행지를 찾아보세요</p>
+							<ul class="popular_lst">
+								<li><a href="">오사카</a></li>
+								<li><a href="">파리</a></li>
+								<li><a href="">런던</a></li>
+								<li><a href="">도쿄</a></li>
+								<li><a href="">로마</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bg_org ">
+						<h3 class="txt">
+							<img class="center-block" src="/cust/img/icon_popular.png" alt="" />
+							<small>인기도시/우수민박</small>오사카
+						</h3>
+						<button type="button" class="detail_btn" onClick="$(this).parent().toggleClass('detail').parents('.destination').toggleClass('on')">상세보기/닫기</button>
+						<div class="hover_wrp">
+							<h4 class="tit">가장 많이<br>예약된 곳은?</h4>
+							<p>인기여행지를 찾아보세요</p>
+							<ul class="popular_lst">
+								<li><a href="">오사카</a></li>
+								<li><a href="">파리</a></li>
+								<li><a href="">런던</a></li>
+								<li><a href="">도쿄</a></li>
+								<li><a href="">로마</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 숙소리스트슬라이드 -->
+			<div class="city_popular_room slider_bx">
+				<ul class="city_room_slider">
+					<li>
+						<h3 class="sr-only">오사카 숙소 목록</h3>
+						<!-- 숙소리스트 -->
+						<ul class="item_lst row">
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<!-- 0719 수정 -->
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<!-- // 0719 수정 -->
+						</ul>
+						<!-- //숙소리스트 -->
+					</li>
+					<li>
+						<h3 class="sr-only">오사카 숙소 목록</h3>
+						<!-- 숙소리스트 -->
+						<ul class="item_lst row">
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="big_item col-xs-8">
+								<a href="" class="item">
+									<img src="_temp/tmb.jpg" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal w220">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+						</ul>
+						<!-- //숙소리스트 -->
+					</li>
+					<li>
+						<h3 class="sr-only">오사카 숙소 목록</h3>
+						<!-- 숙소리스트 -->
+						<ul class="item_lst row">
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="big_item col-xs-8">
+								<a href="" class="item">
+									<img src="_temp/tmb.jpg" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal w220">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+						</ul>
+						<!-- //숙소리스트 -->
+					</li>
+					<li>
+						<h3 class="sr-only">오사카 숙소 목록</h3>
+						<!-- 숙소리스트 -->
+						<ul class="item_lst row">
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="big_item col-xs-8">
+								<a href="" class="item">
+									<img src="_temp/tmb.jpg" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal w220">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+						</ul>
+						<!-- //숙소리스트 -->
+					</li>
+					<li>
+						<h3 class="sr-only">오사카 숙소 목록</h3>
+						<!-- 숙소리스트 -->
+						<ul class="item_lst row">
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<a href="" class="item">
+									<img class="img-circle" src="_temp/item.png" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<img class="mb8" src="/cust/img/icon_time.png" alt="" />
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+							<li class="big_item col-xs-8">
+								<a href="" class="item">
+									<img src="_temp/tmb.jpg" alt="">
+									<div class="tit">
+										<span>오사카</span>
+										<span class="v2">엔젤하우스</span>
+									</div>
+									<span class="price"><i>\</i> 130,550</span>
+									<!-- on화면 -->
+									<div class="hover_wrp">
+										<div class="tit">
+											<span>오사카</span>
+											<strong>민박 리에또</strong>
+										</div>
+										<dl class="dl-horizontal w220">
+											<dt>도미토리</dt>
+											<dd class="price"><i>\</i>4,000~</dd>
+											<dt>2인실</dt>
+											<dd class="price"><i>\</i>7,000~</dd>
+											<dt>3인실</dt>
+											<dd class="price"><i>\</i>10,000~</dd>
+										</dl>
+									</div>
+									<!-- //on화면 -->
+								</a>
+							</li>
+						</ul>
+						<!-- //숙소리스트 -->
+					</li>
+				</ul>
+			</div>
+<script>
+	$(function  () {
+		$('.main_cnt_slider').bxSlider({
+			controls:false,
+			onSliderLoad: function(){
+				$('.main_cnt_slider').closest(".slider_bx").addClass('bx_open');
+			}
+		});
+		$('.city_room_slider').bxSlider({
+			controls:false,
+			pagerCustom:'.destination .bx-pager',
+			onSliderLoad: function(){
+				$('.city_room_slider').closest(".slider_bx").addClass('bx_open');
+			}
+		});
+	})
+</script>
+		</div>
+	</section>
+	<!-- 메인배너 --><!-- 0721 추가 -->
+	<section class="main_banner">
+		<h2 class="sr-only">주요여행지</h2>
+		<div class="row">
+			<div class="col-xs-3">
+				<a href="">
+					<img src="/cust/img/city1.jpg" alt="">
+					<dl class="ban_city">
+						<dt class="city_tit">서울</dt>
+						<dd class="city_dsc">도심속의 꿀휴가</dd>
+					</dl>
+				</a>
+			</div>
+			<div class="col-xs-3">
+				<a href="">
+					<img src="/cust/img/city2.jpg" alt="">
+					<dl class="ban_city">
+						<dt class="city_tit">부산</dt>
+						<dd class="city_dsc">뜨거운 청춘들의 도시</dd>
+					</dl>
+				</a>
+			</div>
+			<div class="col-xs-3">
+				<a href="">
+					<img src="/cust/img/city3.jpg" alt="">
+					<dl class="ban_city">
+						<dt class="city_tit">제주</dt>
+						<dd class="city_dsc">탐라도를 탐내보자!</dd>
+					</dl>
+				</a>
+			</div>
+			<div class="col-xs-3">
+				<a href="">
+					<img src="/cust/img/city4.jpg" alt="">
+					<div class="ban_city">
+						<strong class="city_tit">국내도시</strong>
+						<span class="btn btn_border btn_xs">전체보기</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- 메인이벤트 -->
+	<section class="main_event">
+		<h2 class="sr-only">이벤트 할인</h2>
+		<div class="bx_wrp clearfix">
+			<div class="pull-left">
+				<div class="special_price_wrp">
+					<h3>민다특가</h3>
+					<ul class="row">
+						<li class="col-xs-6 v1">
+							<a href="">
+								<span>땡처리할인</span>
+								<strong class="color_ylw">32</strong>
+							</a>
+						</li>
+						<li class="col-xs-6 v2">
+							<a href="">
+								<span>비수기할인</span>
+								<strong class="color_ylw">23</strong>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="event_wrp tb_bx">
+					<a href="" >
+						<span>숙소쿠폰</span>
+						<p class="fs14 mb15">민다가 쏜다!</p><!-- 0719 수정 -->
+						<img src="/cust/img/evtcoupon.png" alt=""><!-- 0719 수정 -->
+					</a>
+					<div>
+						<span>숙소이벤트</span>
+						<a href="" class="btn btn_border_wh">GO</a>
+					</div>
+				</div>
+			</div>
+			<!-- 쿠폰 -->
+			<div class="pull-left">
+				<!-- 이벤트배너 0719수정 -->
+				<div class="ban_event">
+					<a href=""><img src="_temp/evt2.jpg" alt=""></a>
+					<!-- <button type="button" class="icon_evt_close" onClick="$(this).parent().addClass('hidden');">이벤트배너닫기</button> -->
+				</div>
+				<!-- //이벤트배너 -->
+			</div>
+		</div>
+	</section>
+</div>
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top clearfix">
+				<div class="pull-left">
+					<h2>About</h2>
+					<p class="text-nowrap">(주)사막은 '여행'이라는 단어 하나에 가슴이 설레는 모든 자유여행자들에게<br>
+					자신만의 아름다운 여행을 스스로 계획하고 만들어 낼수 있도록<br>
+					그와 연관된 필수 여행서비스를 보다 쉽고 편리하게 제공함을 목적으로<br>
+					2006년 12월에 설립되었습니다.</p>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+						<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+						<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<h3 class="font_lato">information</h3>
+					<div class="info_txt">
+						<span>주)사막</span>대표 : 김윤회<br>
+						사업자등록번호 : 010-86-28116<br>
+						관광사업등록증 : 제2014-000025호<br>
+						통신판매업신고 : 제 01-5470호
+					</div>
+					<h3 class="font_lato">address</h3>
+					<div class="info_txt">
+						<address>서울시 종로구 율곡동 174 창경빌딩 5층</address>
+						TEL : 1661-2892<br>
+						FAX : 02-722-3478<br>
+					</div>
+					<!-- 0719 삭제 <h3 class="font_lato">help desk</h3>
+					<strong class="font_lato">1661-2892</strong>
+					<p class="info_txt">
+						10:00~18:00 (점심 12:00~13:00)<br>
+						월~금, 공휴일 휴무
+					</p> -->
+				</div>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">취소환불규정</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">사업제휴</a></li>
+				</ul>
+				<p class="font_lato pull-right">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+<!-- [D] 0427 수정사항 -->
+<div id="todayRoom" class="today_room"><!-- [D] 오늘본숙소 목록 있을 시 uselist 클래스 추가해주세요 -->
+	<button type="button" class="icon_today_close" onclick="$('#todayRoom').removeClass('active')">오늘본숙소목록 내리기</button>
+	<div class="room_lst_slider w1100">
+		<div class="today_hd clearfix">
+			<h2 class="color_org pull-left">오늘본 숙소 <span>8</span></h2>
+			<div id="galleryNum" class="gallery_num">
+				<span class="current color_org"></span>/<span class="total"></span>
+			</div>
+		</div>
+		<div class="tb_bx"><span>오늘 본 숙소가 없습니다.</span></div>
+		<div class="slider_bx">
+			<ul class="basic_arr_slider">
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span><i class="icon_rightoff">즉시예약가능</i>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="tmb"><img src="_temp/room.png" alt=""></span>
+						<span>[피렌체] <br>피렌체 마피아 하우스</span>
+						<span class="color_mint">&euro;30</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	$(function  () {
+		if ($("#todayRoom").hasClass('uselist')) {
+			var todayRoom = $('.room_lst_slider .basic_arr_slider').bxSlider({
+				minSlides:5,
+				maxSlides:5,
+				pager:false,
+				slideWidth:180,
+				slideMargin:24,
+				infiniteLoop: false,
+				onSliderLoad: function(currentIndex){
+					$('#galleryNum .current').text(currentIndex + 1);
+					$('.room_lst_slider .basic_arr_slider').closest(".slider_bx").addClass('bx_open');
+				},
+				onSlideBefore: function ($slideElement, oldIndex, newIndex){
+					$('#galleryNum .current').text(newIndex + 1);
+				}
+			});
+			var total = todayRoom.getSlideCount()/5;
+			$("#galleryNum .total").text(total);
+		}
+	})
+</script>
+<!-- //[D] 0427 수정사항 -->
+
+<!--  팝업 -->
+<!-- 한인숙소팝업 -->
+<div id="lodgingList" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog lodging-list">
+		<button type="button" class="icon_pop_close2" data-dismiss="modal" aria-label="Close">닫기</button>
+		<nav class="top_tab">
+			<ul class="clearfix">
+				<li class="active"><a href="#europe">유럽/지중해</a></li>
+				<li><a href="#asia">아시아</a></li>
+				<li><a href="#americas">미주/기타</a></li>
+				<li><a href="#domestic">국내</a></li>
+			</ul>
+		</nav>
+<script>
+	$(function  () {
+		//임시
+		$(".top_tab a, .sub_tab a").on('click',function  () {
+			var t=$(this),
+			target=t.attr('href');
+			t.parent().addClass('active').siblings().removeClass('active');
+			$(target).show().siblings('.tab_cnt').hide();
+			return false;
+		});
+	})
+</script>
+
+		<!-- 내용 -->
+		<!-- 유럽 -->
+		<div id="europe" class="tab_cnt">
+			<ul class="sub_tab clearfix">
+				<li><a href="#europe1">서유럽</a></li>
+				<li class="active"><a href="#europe2">동북유럽/지중해</a></li>
+			</ul>
+			<div id="europe1" class="tab_cnt" style="display:none">
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">영국</strong>
+						<ul>
+							<li><a href="">런던<span>(107)</span></a></li>
+							<li><a href="">에딘버러<span>(4)</span></a></li>
+							<li><a href="">맨체스터<span>(2)</span></a></li>
+							<li><a href="">펜잔스<span>(1)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">프랑스</strong>
+						<ul>
+							<li><a href="">프랑스<span>(186)</span></a></li>
+							<li><a href="">니스<span>(1)</span></a></li>
+							<li><a href="">아비뇽<span>(1)</span></a></li>
+							<li><a href="">보르도<span>(1)</span></a></li>
+							<li><a href="">콜마르<span>(1)</span></a></li>
+							<li><a href="">클레르몽 페랑<span>(1)</span></a></li>
+							<li><a href="">샤모니<span>(1)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+						<strong class="tit">이탈리아</strong>
+						<ul>
+							<li><a href="">로마<span>(186)</span></a></li>
+							<li><a href="">베네치아<span>(1)</span></a></li>
+							<li><a href="">피렌체<span>(1)</span></a></li>
+							<li><a href="">밀라노<span>(1)</span></a></li>
+							<li><a href="">나폴리<span>(1)</span></a></li>
+							<li><a href="">볼로냐<span>(1)</span></a></li>
+							<li><a href="">베로나<span>(1)</span></a></li>
+							<li><a href="">시라쿠사<span>(1)</span></a></li>
+							<li><a href="">토리노<span>(1)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">몰타</strong>
+						<ul>
+							<li><a href="">그라자<span>(107)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+						<strong class="tit">스위스</strong>
+						<ul>
+							<li><a href="">인터라켄<span>(107)</span></a></li>
+							<li><a href="">루체른<span>(4)</span></a></li>
+							<li><a href="">프리부르<span>(2)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">포르투칼</strong>
+						<ul>
+							<li><a href="">리스본<span>(186)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+						<strong class="tit">스페인</strong>
+						<ul>
+							<li><a href="">바르셀로나<span>(186)</span></a></li>
+							<li><a href="">마드리드<span>(1)</span></a></li>
+							<li><a href="">세비아<span>(1)</span></a></li>
+							<li><a href="">그라나다<span>(1)</span></a></li>
+							<li><a href="">발렌시아<span>(1)</span></a></li>
+							<li><a href="">빌바오<span>(1)</span></a></li>
+							<li><a href="">산탄데르<span>(1)</span></a></li>
+							<li><a href="">산티아고 데 콤포스텔라<span>(1)</span></a></li>
+							<li><a href="">무르시아<span>(1)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+						<strong class="tit">독일</strong>
+						<ul>
+							<li><a href="">베를린<span>(186)</span></a></li>
+							<li><a href="">뮌헨<span>(1)</span></a></li>
+							<li><a href="">퀼른<span>(1)</span></a></li>
+							<li><a href="">프랑크푸르트<span>(1)</span></a></li>
+							<li><a href="">뒤셀도르프<span>(1)</span></a></li>
+							<li><a href="">뉘른베르크<span>(1)</span></a></li>
+							<li><a href="">함부르크<span>(1)</span></a></li>
+							<li><a href="">슈투트가르트<span>(1)</span></a></li>
+							<li><a href="">브레멘<span>(1)</span></a></li>
+							<li><a href="">프라이부르크<span>(1)</span></a></li>
+							<li><a href="">트리베르크<span>(1)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division6">
+					<div class="v1 state_lst">
+						<strong class="tit">오스트리아</strong>
+						<ul>
+							<li><a href="">비엔나<span>(186)</span></a></li>
+							<li><a href="">찰츠부르크<span>(1)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">벨기에</strong>
+						<ul>
+							<li><a href="">브뤼셀<span>(186)</span></a></li>
+							<li><a href="">겐트<span>(1)</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">벨기에</strong>
+						<ul>
+							<li><a href="">암스테르담<span>(186)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="europe2" class="tab_cnt">
+				<div class="division_wrap">
+					<strong class="bg_tit">동북유럽</strong>
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">체코</strong>
+							<ul>
+								<li><a href="">프라하<span>(107)</span></a></li>
+								<li><a href="">체스키크롬로프<span>(4)</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">헝가리</strong>
+							<ul>
+								<li><a href="">부디페스트<span>(186)</span></a></li>
+							</ul>
+						</div>
+						<div class="v3 state_lst">
+							<strong class="tit">크로아티아</strong>
+							<ul>
+								<li><a href="">자그레브<span>(186)</span></a></li>
+								<li><a href="">두브로브니크<span>(186)</span></a></li>
+								<li><a href="">스플리트<span>(186)</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+							<strong class="tit">폴란드</strong>
+							<ul>
+								<li><a href="">브로츠와프<span>(186)</span></a></li>
+								<li><a href="">크라쿠프<span>(1)</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">리투아니아</strong>
+							<ul>
+								<li><a href="">빌리우스<span>(107)</span></a></li>
+							</ul>
+						</div>
+						<div class="v3 state_lst">
+							<strong class="tit">우크라이나</strong>
+							<ul>
+								<li><a href="">키예프<span>(107)</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division3">
+						<div class="v1 state_lst">
+							<strong class="tit">리투아니아</strong>
+							<ul>
+								<li><a href="">빌니우스<span>(107)</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">우크라이나</strong>
+							<ul>
+								<li><a href="">키예프<span>(107)</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division4">
+						<div class="v1 state_lst">
+							<strong class="tit">러시아</strong>
+							<ul>
+								<li><a href="">모스크바<span>(186)</span></a></li>
+								<li><a href="">상트페테부르크<span>(1)</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="division_wrap">
+					<strong class="bg_tit">지중해</strong>
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">그리스</strong>
+							<ul>
+								<li><a href="">아테네<span>(186)</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">터키</strong>
+							<ul>
+								<li><a href="">이스탄불<span>(186)</span></a></li>
+								<li><a href="">셀축<span>(186)</span></a></li>
+								<li><a href="">앙카라<span>(186)</span></a></li>
+								<li><a href="">카파도키아<span>(186)</span></a></li>
+								<li><a href="">마르마리스<span>(186)</span></a></li>
+							</ul>
+						</div>
+						<div class="v3 state_lst">
+							<strong class="tit">이집트</strong>
+							<ul>
+								<li><a href="">카이로<span>(186)</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //유럽 -->
+
+		<!-- 아시아 -->
+		<div id="asia" class="tab_cnt" style="display:none">
+			<div class="division1">
+				<div class="v1 state_lst">
+					<strong class="tit">일본</strong>
+					<ul>
+						<li><a href="">도쿄<span>(107)</span></a></li>
+						<li><a href="">오사카<span>(4)</span></a></li>
+						<li><a href="">교토<span>(2)</span></a></li>
+						<li><a href="">고베<span>(1)</span></a></li>
+						<li><a href="">후쿠오카<span>(1)</span></a></li>
+						<li><a href="">삿포로<span>(1)</span></a></li>
+						<li><a href="">대마도<span>(1)</span></a></li>
+						<li><a href="">요코하마<span>(1)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division2">
+				<div class="v1 state_lst">
+					<strong class="tit">중국</strong>
+					<ul>
+						<li><a href="">북경<span>(186)</span></a></li>
+						<li><a href="">상해<span>(1)</span></a></li>
+						<li><a href="">청도<span>(1)</span></a></li>
+						<li><a href="">위해<span>(1)</span></a></li>
+						<li><a href="">성도<span>(1)</span></a></li>
+						<li><a href="">광주<span>(1)</span></a></li>
+						<li><a href="">연길<span>(1)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division3">
+				<div class="v1 state_lst">
+					<strong class="tit">홍콩</strong>
+					<ul>
+						<li><a href="">홍콩<span>(107)</span></a></li>
+						<li><a href="">마카오<span>(4)</span></a></li>
+						<li><a href="">마카오<span>(2)</span></a></li>
+						<li><a href="">대만<span>(2)</span></a></li>
+						<li><a href="">타이페이<span>(2)</span></a></li>
+					</ul>
+				</div>
+				<div class="v2 state_lst">
+					<strong class="tit">마카오</strong>
+					<ul>
+						<li><a href="">마카오<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v3 state_lst">
+					<strong class="tit">대만</strong>
+					<ul>
+						<li><a href="">타이페이<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division4">
+				<div class="v1 state_lst">
+					<strong class="tit">싱가폴</strong>
+					<ul>
+						<li><a href="">싱가폴<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v1 state_lst">
+					<strong class="tit">괌</strong>
+					<ul>
+						<li><a href="">괌<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v1 state_lst">
+					<strong class="tit">사이판</strong>
+					<ul>
+						<li><a href="">파이판<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v1 state_lst">
+					<strong class="tit">태국</strong>
+					<ul>
+						<li><a href="">방콕<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division5">
+				<div class="v1 state_lst">
+					<strong class="tit">캄보니아</strong>
+					<ul>
+						<li><a href="">씨엠립<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v2 state_lst">
+					<strong class="tit">라오스</strong>
+					<ul>
+						<li><a href="">비엔티안<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v3 state_lst">
+					<strong class="tit">필리핀</strong>
+					<ul>
+						<li><a href="">마닐라<span>(186)</span></a></li>
+						<li><a href="">세부<span>(186)</span></a></li>
+						<li><a href="">타가이타이<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division6">
+				<div class="v1 state_lst">
+					<strong class="tit">말레이시아</strong>
+					<ul>
+						<li><a href="">쿠알라룸푸르<span>(186)</span></a></li>
+						<li><a href="">코타키나발로<span>(1)</span></a></li>
+					</ul>
+				</div>
+				<div class="v2 state_lst">
+					<strong class="tit">이란</strong>
+					<ul>
+						<li><a href="">테헤란<span>(186)</span></a></li>
+					</ul>
+				</div>
+				<div class="v3 state_lst">
+					<strong class="tit">사우디아라비아</strong>
+					<ul>
+						<li><a href="">리야드<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division7">
+				<div class="v1 state_lst">
+					<strong class="tit">아랍에미리트</strong>
+					<ul>
+						<li><a href="">아부디<span>(186)</span></a></li>
+						<li><a href="">두바이<span>(1)</span></a></li>
+					</ul>
+				</div>
+				<div class="v2 state_lst">
+					<strong class="tit">카르</strong>
+					<ul>
+						<li><a href="">도하<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //아시아 -->
+
+		<!-- 미주/기타 -->
+		<div id="americas" class="tab_cnt" style="display:none">
+			<div class="division_wrap">
+				<strong class="bg_tit color_org">북미</strong>
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">미국</strong>
+						<ul>
+							<li><a href="">뉴욕<span>(107)</span></a></li>
+							<li><a href="">la<span>(4)</span></a></li>
+							<li><a href="">보스턴<span>(4)</span></a></li>
+							<li><a href="">샌프란시스코<span>(4)</span></a></li>
+							<li><a href="">워싱턴<span>(4)</span></a></li>
+							<li><a href="">라스베가스<span>(4)</span></a></li>
+							<li><a href="">필라델피아<span>(4)</span></a></li>
+							<li><a href="">시카고<span>(4)</span></a></li>
+							<li><a href="">하와이(호놀롤루)<span>(4)</span></a></li>
+							<li><a href="">하와이(마우이)<span>(4)</span></a></li>
+							<li><a href="">올랜드<span>(4)</span></a></li>
+							<li><a href="">미네아폴리스<span>(4)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+						<strong class="tit">캐나다</strong>
+						<ul>
+							<li><a href="">토론토<span>(186)</span></a></li>
+							<li><a href="">벤쿠버<span>(1)</span></a></li>
+							<li><a href="">몬트리올<span>(1)</span></a></li>
+							<li><a href="">엘로나이프<span>(1)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="division_wrap clearfix">
+				<strong class="bg_tit color_org">중남미</strong>
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">브라질</strong>
+						<ul>
+							<li><a href="">상파울로<span>(186)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">아르헨티나</strong>
+						<ul>
+							<li><a href="">부에노스아이레스<span>(186)</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">칠레</strong>
+						<ul>
+							<li><a href="">산티아고<span>(186)</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+						<strong class="tit">페루</strong>
+						<ul>
+							<li><a href="">리마<span>(186)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">온두리스</strong>
+						<ul>
+							<li><a href="">테구시갈파<span>(186)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="division_wrap clearfix">
+				<strong class="bg_tit color_org">오세아니아</strong>
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">호주</strong>
+						<ul>
+							<li><a href="">시드니<span>(186)</span></a></li>
+							<li><a href="">골드코스트<span>(186)</span></a></li>
+							<li><a href="">앨버른<span>(186)</span></a></li>
+							<li><a href="">호바트<span>(186)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">뉴질랜드</strong>
+						<ul>
+							<li><a href="">오클랜드<span>(186)</span></a></li>
+							<li><a href="">크라이스트처치<span>(186)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="division_wrap clearfix">
+				<strong class="bg_tit color_org">아프리카</strong>
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">케냐</strong>
+						<ul>
+							<li><a href="">나이로브<span>(186)</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">남아공</strong>
+						<ul>
+							<li><a href="">케이프타운<span>(186)</span></a></li>
+							<li><a href="">요하네스버그<span>(186)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //미주/기타 -->
+
+		<!-- 국내 -->
+		<div id="domestic" class="tab_cnt" style="display:none">
+			<div class="division1">
+				<ul class="tit state_lst">
+					<li><a href="">서울<span>(186)</span></a></li>
+					<li><a href="">제주<span>(186)</span></a></li>
+					<li><a href="">부산<span>(186)</span></a></li>
+					<li><a href="">광주<span>(186)</span></a></li>
+					<li><a href="">인천<span>(186)</span></a></li>
+				</ul>
+			</div>
+			<div class="division2">
+				<div class="v1 state_lst">
+					<strong class="tit">경기도</strong>
+					<ul>
+						<li><a href="">가평<span>(186)</span></a></li>
+						<li><a href="">이천<span>(1)</span></a></li>
+						<li><a href="">수원<span>(1)</span></a></li>
+						<li><a href="">용인<span>(1)</span></a></li>
+						<li><a href="">파주<span>(1)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division3">
+				<div class="v1 state_lst">
+					<strong class="tit">강원도</strong>
+					<ul>
+						<li><a href="">추천<span>(107)</span></a></li>
+						<li><a href="">양양<span>(4)</span></a></li>
+						<li><a href="">화천<span>(2)</span></a></li>
+						<li><a href="">강릉<span>(2)</span></a></li>
+						<li><a href="">속초<span>(2)</span></a></li>
+						<li><a href="">고성<span>(2)</span></a></li>
+						<li><a href="">동해<span>(2)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division4">
+				<div class="v1 state_lst">
+					<strong class="tit">경상도</strong>
+					<ul>
+						<li><a href="">안동<span>(186)</span></a></li>
+						<li><a href="">대구<span>(186)</span></a></li>
+						<li><a href="">포항<span>(186)</span></a></li>
+						<li><a href="">함양<span>(186)</span></a></li>
+						<li><a href="">거제<span>(186)</span></a></li>
+						<li><a href="">경주<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division5">
+				<div class="v1 state_lst">
+					<strong class="tit">전라도</strong>
+					<ul>
+						<li><a href="">전주<span>(186)</span></a></li>
+						<li><a href="">남원<span>(186)</span></a></li>
+						<li><a href="">여수<span>(186)</span></a></li>
+						<li><a href="">함평<span>(186)</span></a></li>
+						<li><a href="">김제<span>(186)</span></a></li>
+						<li><a href="">완도<span>(186)</span></a></li>
+						<li><a href="">순천<span>(186)</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="division6">
+				<div class="v1 state_lst">
+					<strong class="tit">충청도</strong>
+					<ul>
+						<li><a href="">덩잔<span>(186)</span></a></li>
+						<li><a href="">단양<span>(1)</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //국내 -->
+	</div>
+</div>
+
+<!-- 팝업 -->
+
+<!-- couponPop -->
+<div id="couponDown" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog coupon-down alert-pop">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<img src="/cust/img/coupon.png" alt="" />
+		<p>쿠폰이 발급 되었습니다.</p>
+		<p><span class="color_org">마이페이지 &gt; 나의 포인트 &gt; 쿠폰</span> 에서 <br>확인하실 수 있습니다.</p>
+	</div>
+</div>
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.dev.css">
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+	header {position:fixed;top:0;background:#fff;z-index:50}
+	#wrap {position:relative;padding:120px 0 0 0;}
+	h1 {padding:10px;font-size:25px;}
+	.tb-filelist th, .tb-filelist td {padding:5px;}
+	.tb-filelist tbody td {font-size:13px;}
+	td.ing {color:red;}
+	.link,.link:hover,.link:active,.link:focus{text-decoration:underline;}
+	.tab-content>.tab-pane {display:none;}
+	.tab-content>.tab-pane.active {display:block;}
+	.tab-content {padding-bottom:50px;vertical-align:top}
+	.state {color:#004fd3;}
+	.state.ing {color:red;}
+	.room_detail_hd [class*=basic_step] {line-height:50px;}
+	.room_detail_hd .basic_step2 li a {font-size:15px;}
+	.lnb-guide li {margin:0 10px 5px;}
+	.lnb-guide li.active a {background-color:#f58850 !important;}
+	h4{margin:30px 0 15px;}
+	xmp{margin:0;display:inline-block;}
+	.list-default li {margin-bottom:10px;}
+	.lnb-guide {position:fixed;top:205px;width:200px;left:10px;}
+	.if_scroll .lnb-guide {top:135px;}
+</style>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+			<header>
+				<h1>Minda html 파일리스트</h1>
+				<div class="room_detail_hd">
+					<ul class="basic_step2 tb_fixed mt0">
+						<li><a href="index.html">[웹]여행자</a></li>
+						<li><a href="partner.html">[웹]파트너</a></li>
+						<li><a href="mobile.html">모바일</a></li>
+						<li><a href="manager.html">[웹]관리자</a></li>
+						<li><a href="tourticket.html">[신규]투어/체험</a></li>
+						<li><a href="domestic.html">국내서비스(MO)</a></li>
+						<li  class="active"><a href="g_web.html">가이드</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="ml20 mr20">
+				<ul class="basic_step2 tb_fixed">
+					<li class="active"><a href="g_web.html">웹</a></li>
+					<li><a href="g_mobile.html">모바일 </a></li>
+				</ul>
+			</div>
+			<div class="tab-content tb_bx tb_fixed">
+				<!-- 가이드 contents-->
+				<div style="width:200px; vertical-align:top">
+					<h2 class="sr-only">가이드</h2>
+					<ul class="lnb-guide">
+						<li class="active"><a href="#list" data-toggle="tab" class="btn d_block bg_grey">리스트</a></li>
+						<li><a href="#tap" data-toggle="tab" class="btn d_block bg_grey">탭</a></li>
+						<li><a href="#button" data-toggle="tab" class="btn d_block bg_grey">버튼</a></li>
+						<li><a href="#icon" data-toggle="tab" class="btn d_block bg_grey">아이콘</a></li>
+						<li><a href="#input" data-toggle="tab" class="btn d_block bg_grey">입력폼</a></li>
+						<li><a href="#table" data-toggle="tab" class="btn d_block bg_grey">테이블</a></li>
+						<li><a href="#color" data-toggle="tab" class="btn d_block bg_grey">컬러/텍스트</a></li>
+						<li><a href="#pop" data-toggle="tab" class="btn d_block bg_grey">팝업/box</a></li>
+						<li><a href="#slide" data-toggle="tab" class="btn d_block bg_grey">슬라이드</a></li>
+					</ul>
+				</div>
+				<div class="tab-content pl30 pr30 pt30">
+					<div class="tab-pane active" id="list">
+						<h3>리스트 가이드</h3>
+						<div class="w1100 ma0">
+							<h4>- 스팟/일정 (큰 리스트)</h4>
+							<ul class="row discount_room_lst spot_lst">
+								<li class="col-xs-4">
+									<a href="" target="_blank">
+										<div class="tmb pr">
+											<img src="http://v2.theminda.com/data/travel/image_server/thumb/201609/1472724844_2.jpg" alt="">
+											<div class="label_bx">
+												<span class="circle_label sm bg_org_opa">신규</span>
+												<span class="circle_label sm bg_ylw_opa">인기</span>
+											</div>
+										</div>
+										<div class="room_info">
+											<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(9)</span></div>
+											<span class="d_block mb3">
+												영국 런던
+											</span>
+											<strong class="fw500 color_blk fs18"><span class="color_org">명소</span><span class="color_dark_blue">맛집</span><span class="color_red">쇼핑</span><span class="color_blue">편의</span>그린파크</strong>
+										</div>
+										<div class="meta clearfix color_grey">
+											<span><i class="icon_location"></i> 숙소근처</span>
+											<span><i class="icon_walking"></i> 5분</span>
+											<span><i class="icon_cycle"></i> 5분</span>
+											<span><i class="icon_car_sm"></i> 5분</span>
+											<span><i class="icon_train"></i> 5분</span>
+										</div>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn " data-toggle="button">저장안됨</button>
+										<div class="clearfix btm_info">
+											<div class="meta pull-left">
+												현지인 리얼팁 <span class="color_mint">(1)</span>
+												<i class="split"></i>
+												여행자 리뷰 <span class="color_mint">(12)</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="col-xs-4">
+									<a href="" target="_blank">
+										<div class="tmb pr">
+											<img src="http://v2.theminda.com/data/travel/image_server/thumb/201609/1472724844_2.jpg" alt="">
+											<div class="label_bx">
+												<span class="circle_label sm bg_org_opa">신규</span>
+												<span class="circle_label sm bg_ylw_opa">인기</span>
+											</div>
+										</div>
+										<div class="room_info">
+											<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(9)</span></div>
+											<span class="d_block mb3">
+												영국 런던
+											</span>
+											<strong class="fw500 color_blk fs18">그린파크</strong>
+										</div>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn " data-toggle="button">저장안됨</button>
+										<div class="clearfix btm_info">
+											<div class="meta pull-left">
+												<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+												<i class="split"></i>
+												여행자 리뷰 <span class="color_mint">(12)</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="col-xs-4">
+									<a href="" target="_blank">
+										<div class="tmb pr">
+											<img src="http://v2.theminda.com/data/travel/image_server/thumb/201609/1472724844_2.jpg" alt="">
+											<div class="label_bx">
+												<span class="circle_label sm bg_org_opa">신규</span>
+												<span class="circle_label sm bg_ylw_opa">인기</span>
+											</div>
+										</div>
+										<div class="room_info">
+											<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(9)</span></div>
+											<span class="d_block mb3">
+												영국 런던
+											</span>
+											<strong class="fw500 color_blk fs18"><span class="color_org">명소</span>그린파크</strong>
+										</div>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn " data-toggle="button">저장안됨</button>
+										<div class="clearfix btm_info">
+											<div class="meta pull-left">
+												리뷰를 작성해보세요.
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<h4>- 스팟/일정 (작은 리스트)</h4>
+							<div class="spot_other mt0 mb30">
+								<ul class="discount_room_lst spot_lst row">
+									<li class="col-xs-3">
+										<a href="">
+											<div class="tmb pr">
+												<img src="http://v2.theminda.com/cust/_temp/tmb4.jpg" alt="">
+												<div class="label_bx">
+													<span class="circle_label sm bg_org_opa">신규</span>
+													<span class="circle_label sm bg_ylw_opa">인기</span>
+												</div>
+											</div>
+											<div class="room_info">
+												<span class="d_block mb3">이탈리아 밀라노</span>
+												<strong class="fw500 color_blk fs18"><span class="color_org">쇼핑</span> 이탈리아 밀라노</strong>
+											</div>
+										</a>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장됨</button>
+									</li>
+									<li class="col-xs-3">
+										<a href="">
+											<div class="tmb pr">
+												<img src="http://v2.theminda.com/cust/_temp/tmb4.jpg" alt="">
+												<div class="label_bx">
+													<span class="circle_label sm bg_org_opa">신규</span>
+													<span class="circle_label sm bg_ylw_opa">인기</span>
+												</div>
+											</div>
+											<div class="room_info">
+												<span class="d_block mb3">이탈리아 밀라노</span>
+												<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+											</div>
+										</a>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장됨</button>
+									</li>
+									<li class="col-xs-3">
+										<a href="">
+											<div class="tmb pr">
+												<img src="http://v2.theminda.com/cust/_temp/tmb4.jpg" alt="">
+												<div class="label_bx">
+													<span class="circle_label sm bg_org_opa">신규</span>
+													<span class="circle_label sm bg_ylw_opa">인기</span>
+												</div>
+											</div>
+											<div class="room_info">
+												<span class="d_block mb3">이탈리아 밀라노</span>
+												<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+											</div>
+										</a>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장됨</button>
+									</li>
+									<li class="col-xs-3">
+										<a href="">
+											<div class="tmb pr">
+												<img src="http://v2.theminda.com/cust/_temp/tmb4.jpg" alt="">
+												<div class="label_bx">
+													<span class="circle_label sm bg_org_opa">신규</span>
+													<span class="circle_label sm bg_ylw_opa">인기</span>
+												</div>
+											</div>
+											<div class="room_info">
+												<span class="d_block mb3">이탈리아 밀라노</span>
+												<strong class="fw500 color_blk fs18"><span class="color_org">쇼핑</span> 이탈리아 밀라노</strong>
+											</div>
+										</a>
+										<!-- 저장되면 class="active" -->
+										<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장됨</button>
+									</li>
+								</ul>
+							</div>
+							<h4>- 숙소리트스</h4>
+							<h5>가로</h5>
+							<ul id="ul_goodsnm" class="room_detail_lst auto row">
+								<li goodsno="5469" class="goods_list pr col-xs-6">
+									<div class="item clearfix rightoff">
+										<a href="" target="blank">
+											<div class="pull-left thumb">
+												<img src="../skin/sample/img/empty_photo1.gif" alt="">
+												<div class="meta_lst">
+													<span class="icon_meta_new">신규</span>
+													<span class="icon_meta_coupon">쿠폰</span>
+													<span class="icon_meta_discount">할인</span>
+												</div>
+											</div>
+										</a>
+										<a href="/main/view.php?goodsno=5469" target="blank">
+											<div class="room_des">
+												<h3 class="tit ellipsis"><i class="icon_rightoff tip" title="" data-placement="top" data-toggle="tooltip" data-original-title="이 숙소는 대기시간 없이 즉시 예약 확정됩니다."></i>언제나 하하하 웃는 민박집</h3>
+												<div class="price">
+													<span class="roomtype">도미토리</span>
+													<span class="before_price"></span>
+													<span class="current_price">￦12,000~</span>
+													<div class="detail_wrp dropup">
+														<button type="button" class="icon_detailview dropdown-toggle" data-toggle="dropdown">상세가격더보기</button>
+														<ul class="room_detail price_lst dropdown-menu">
+															<li>
+																<span class="roomtype">도미토리</span>
+																<span>￦12,000</span>
+															</li>
+														</ul>
+													</div>
+
+												</div>
+												<!-- 별점 -->
+												<div>
+													<span class="starrating">
+														<span style="width:0%">0%</span>
+													</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<ul class="item_mng_lst split_lst clearfix">
+										<li><a>리뷰(<span>0</span>)</a></li>
+										<li><a href="" class="item_wish ">찜하기(<span class="wish_num">1</span>)</a></li>
+									</ul>
+								</li>
+								<li class="goods_list pr col-xs-6">
+									<div class="item clearfix rightoff">
+										<a href="" target="blank">
+											<div class="pull-left thumb">
+												<img src="../skin/sample/img/empty_photo1.gif" alt="">
+												<div class="meta_lst">
+													<span class="icon_meta_new">신규</span>
+													<span class="icon_meta_coupon">쿠폰</span>
+													<span class="icon_meta_discount">할인</span>
+												</div>
+											</div>
+										</a>
+										<a href="" target="blank">
+											<div class="room_des">
+												<h3 class="tit ellipsis"><i class="icon_rightoff tip" title="" data-placement="top" data-toggle="tooltip" data-original-title="이 숙소는 대기시간 없이 즉시 예약 확정됩니다."></i>언제나 하하하 웃는 민박집</h3>
+												<div class="price">
+													<span class="roomtype">도미토리</span>
+													<span class="before_price"></span>
+													<span class="current_price">￦12,000~</span>
+													<div class="detail_wrp dropup">
+														<button type="button" class="icon_detailview dropdown-toggle" data-toggle="dropdown">상세가격더보기</button>
+														<ul class="room_detail price_lst dropdown-menu">
+															<li>
+																<span class="roomtype">도미토리</span>
+																<span>￦12,000</span>
+															</li>
+														</ul>
+													</div>
+
+												</div>
+												<!-- 별점 -->
+												<div>
+													<span class="starrating">
+														<span style="width:60%">60%</span>
+													</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<ul class="item_mng_lst split_lst clearfix">
+										<li><a>리뷰(<span>0</span>)</a></li>
+										<li><a href="" class="item_wish ">찜하기(<span class="wish_num">1</span>)</a></li>
+									</ul>
+								</li>
+							</ul>
+							<h5>세로</h5>
+							<ul id="ul_goodsnm" class="room_detail_lst">
+								<liclass="goods_list">
+									<div class="item clearfix rightoff">
+										<a href="" target="blank">
+											<div class="pull-left thumb">
+												<img src="../skin/sample/img/empty_photo1.gif" alt="">
+												<div class="meta_lst">
+													<span class="icon_meta_new">신규</span>
+													<span class="icon_meta_coupon">쿠폰</span>
+													<span class="icon_meta_discount">할인</span>
+												</div>
+											</div>
+										</a>
+										<a href="" target="blank">
+											<div class="room_des">
+												<h3 class="tit ellipsis"><i class="icon_rightoff tip" title="" data-placement="top" data-toggle="tooltip" data-original-title="이 숙소는 대기시간 없이 즉시 예약 확정됩니다."></i>언제나 하하하 웃는 민박집</h3>
+												<div class="price">
+													<span class="roomtype">도미토리</span>
+													<span class="before_price"></span>
+													<span class="current_price">￦12,000~</span>
+													<div class="detail_wrp dropup">
+														<button type="button" class="icon_detailview dropdown-toggle" data-toggle="dropdown">상세가격더보기</button>
+														<ul class="room_detail price_lst dropdown-menu">
+															<li>
+																<span class="roomtype">도미토리</span>
+																<span>￦12,000</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- 별점 -->
+												<div>
+													<span class="starrating">
+														<span style="width:0%">0%</span>
+													</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<ul class="item_mng_lst split_lst clearfix">
+										<li><a>리뷰(<span>0</span>)</a></li>
+										<li><a href="" class="item_wish ">찜하기(<span class="wish_num">1</span>)</a></li>
+									</ul>
+								</li>
+								<li class="goods_list">
+									<div class="item clearfix rightoff">
+										<a href="" target="blank">
+											<div class="pull-left thumb">
+												<img src="../skin/sample/img/empty_photo1.gif" alt="">
+												<div class="meta_lst">
+													<span class="icon_meta_new">신규</span>
+													<span class="icon_meta_coupon">쿠폰</span>
+													<span class="icon_meta_discount">할인</span>
+												</div>
+											</div>
+										</a>
+										<a href="/main/view.php?goodsno=5469" target="blank">
+											<div class="room_des">
+												<h3 class="tit ellipsis"><i class="icon_rightoff tip" title="" data-placement="top" data-toggle="tooltip" data-original-title="이 숙소는 대기시간 없이 즉시 예약 확정됩니다."></i>언제나 하하하 웃는 민박집</h3>
+												<div class="price">
+													<span class="roomtype">도미토리</span>
+													<span class="before_price"></span>
+													<span class="current_price">￦12,000~</span>
+													<div class="detail_wrp dropup">
+														<button type="button" class="icon_detailview dropdown-toggle" data-toggle="dropdown">상세가격더보기</button>
+														<ul class="room_detail price_lst dropdown-menu">
+															<li>
+																<span class="roomtype">도미토리</span>
+																<span>￦12,000</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- 별점 -->
+												<div>
+													<span class="starrating">
+														<span style="width:0%">0%</span>
+													</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<ul class="item_mng_lst split_lst clearfix">
+										<li><a>리뷰(<span>0</span>)</a></li>
+										<li><a href="javascript:toggleWish();" class="item_wish ">찜하기(<span class="wish_num">1</span>)</a></li>
+									</ul>
+								</li>
+							</ul>
+							<h4>테마리스트</h4>
+							<section class="main_banner mt0">
+								<div class="row">
+									<div class="col-xs-4">
+										<a href="">
+											<img src="http://v2.theminda.com/cust/img/thema1.jpg" alt="">
+											<dl class="ban_city">
+												<dt class="thema_tit">낭만여행</dt>
+												<dd class="thema_dsc">함계하면 더 좋은 여행지</dd>
+											</dl>
+										</a>
+									</div>
+									<div class="col-xs-4">
+										<a href="">
+											<img src="http://v2.theminda.com/cust/img/thema2.jpg" alt="">
+											<dl class="ban_city">
+												<dt class="thema_tit">현지인 추천</dt>
+												<dd class="thema_dsc">알토란 같은 여행정보만 쏙~</dd>
+											</dl>
+										</a>
+									</div>
+									<div class="col-xs-4">
+										<a href="">
+											<img src="http://v2.theminda.com/cust/img/thema3.jpg" alt="">
+											<dl class="ban_city">
+												<dt class="thema_tit">인기예감</dt>
+												<dd class="thema_dsc">여행지에서 꼭 가봐야할 곳</dd>
+											</dl>
+										</a>
+									</div>
+								</div>
+							</section>
+						</div>
+						<h4>- 텍스트리스트</h4>
+						<ul class="lst_type_dot">
+							<li><xmp><ul class="lst_type_dot"> 점</xmp></li>
+						</ul>
+						<ul class="lst_type_rect">
+							<li><xmp><ul class="lst_type_rect"> 사각형</xmp></li>
+						</ul>
+						<ul class="lst_type_star">
+							<li><xmp><ul class="lst_type_star"> 별 type1</xmp></li>
+						</ul>
+						<ul class="lst_type_star2">
+							<li><xmp><ul class="lst_type_star2"> 별 type2</xmp></li>
+						</ul>
+						<ul class="lst_type_bar">
+							<li><xmp><ul class="lst_type_bar"> 바</xmp> </li>
+						</ul>
+						<dl class="lst_type_bar">
+							<dt><xmp><dl class="lst_type_bar"> 바 dt</xmp> </dt>
+							<dd><xmp><dl class="lst_type_bar"> 바 dd</xmp> </dd>
+						</dl>
+						<ul class="lst_style_media">
+							<li><xmp><ul class="lst_style_media"> 선</xmp> </li>
+							<li><xmp><ul class="lst_style_media"></xmp></li>
+						</ul>
+						<ul class="lst_num_style">
+							<li><xmp><ul class="lst_num_style"> 숫자</xmp></li>
+						</ul>
+						<xmp><dl class="dl_inline"> dt</dl> :  dl inline style </xmp>
+						<dl class="dl_inline">
+							<dt>dtdtdtdtdtdtdtdt</dt>
+							<dd>dddddddddddddd</dd>
+						</dd>
+					</div>
+					<!--//리스트가이드 -->
+					<div class="tab-pane" id="tap">
+						<h3>탭가이드</h3>
+						<h4>-tap type 1</h4>
+						<div class="room_detail_hd ">
+							<ul class="basic_step2 mt0">
+								<li class="active"><a href="" data-toggle="tab">숙소</a></li>
+								<li><a href="" data-toggle="tab">스팟</a></li>
+								<li><a href="" data-toggle="tab">일정</a></li>
+							</ul>
+						</div>
+						<h4>-tap type 2</h4>
+						<ul class="basic_step2 tb_fixed">
+							<li class="active"><a href="#view1" data-toggle="tab">숙소 소개</a></li>
+							<li><a href="#view2" data-toggle="tab">객실 예약</a></li>
+							<li><a href="#view6" data-toggle="tab">추가정보 </a></li>
+							<li><a href="#view3" data-toggle="tab">위치/오시는 방법</a></li>
+							<li><a href="#view4" data-toggle="tab">취소환불규정</a></li>
+							<li><a href="#view5" data-toggle="tab">리뷰/Q&amp;A</a></li>
+						</ul>
+						<h4>- 왼쪽 정렬 탭</h4>
+						<ul class="left_tab clearfix mt0">
+							<li class="active"><a href="#realTime" data-toggle="tab">실시간 예약이란</a></li>
+							<li><a href="#standBy" data-toggle="tab">대기 예약이란</a></li>
+						</ul>
+						<h4>- 선택탭</h4>
+						<ul class="nav-tabs clearfix mt0">
+							<li class="active"><a href="#realTime" data-toggle="tab">실시간 예약이란</a></li>
+							<li><a href="#standBy" data-toggle="tab">대기 예약이란</a></li>
+						</ul>
+					</div>
+					<!--// 탭 가이드 -->
+					<div class="tab-pane" id="button">
+						<div class="col-xs-12">
+							<h3>버튼가이드</h3>
+							<h4>-기본버튼</h4>
+							<ul class="list-default">
+								<li><button class="btn">버튼</button><xmp><button class="btn"></button></xmp></li>
+								<li><button class="btn btn-default">버튼</button><xmp><button class="btn btn-default"></button></xmp></li>
+								<li><button class="btn btn_itx">버튼</button><xmp><button class="btn btn_itx"></button></xmp></li>
+							</ul>
+							<h4>- 사이즈</h4>
+							<ul class="list-default">
+								<li><button class="btn btn-lg">버튼</button><xmp><button class="btn btn-lg"></button></xmp></li>
+								<li><button class="btn btn-xl">버튼</button><xmp><button class="btn btn-xl"></xmp></li>
+								<li><button class="btn btn-xs">버튼</button><xmp><button class="btn btn-xs"></xmp></li>
+							</ul>
+							<h4>- 테두리</h4>
+							<ul class="list-default">
+								<li><button class="btn btn_border_grey">버튼</button><xmp><button class="btn btn_border_grey"></button></xmp></li>
+								<li><button class="btn btn_border_org">버튼</button><xmp><button class="btn btn_border_org"></xmp></li>
+								<li><button class="btn btn_border_mint">버튼</button><xmp><button class="btn btn_border_mint"></xmp></li>
+								<li><button class="btn btn_border_ylw">버튼</button><xmp><button class="btn btn_border_ylw"></xmp></li>
+								<li><button class="btn btn_border_red">버튼</button><xmp><button class="btn btn_border_red"></xmp></li>
+							</ul>
+							<h4>- 배경색/ with 아이콘</h4>
+							<ul class="list-default">
+								<li><button type="button" class="btn bg_org"><i class="icon_circle_ok"></i>확인</button><xmp><button type="button" class="btn bg_org"><i class="icon_circle_ok"></i>확인</button></xmp></li>
+								<li><button type="button" class="btn bg_dark_grey"><i class="icon_circle_cancle"></i>취소</button><xmp><button type="button" class="btn bg_dark_grey "><i class="icon_circle_cancle"></i>취소</button></xmp></li>
+								<li><button type="button" class="btn bg_red"><i class="icon_circle_cancle"></i>삭제</button><xmp><button type="button" class="btn bg_red"><i class="icon_circle_cancle"></i>삭제</button></xmp></li>
+							</ul>
+						</div>
+					</div>
+					<!--// 버튼 가이드 -->
+					<div class="tab-pane" id="icon">
+						<div class="col-xs-12 pr50">
+							<h3>아이콘 가이드</h3>
+							<table class="tb mt20 text-center tb_frm tb_fixed" style="width:60%">
+								<tr>
+									<td><span class="icon_alert"></span></td>
+									<td>icon_alert</td>
+									<td><span class="icon_alert sm"></span></td>
+									<td>icon_alert sm</td>
+									<td class="bg_light_grey"><span class="icon_arr"></span></td>
+									<td>icon_arr</td>
+								</tr>
+								<tr>
+									<td><span class="icon_arr_grey"></span></td>
+									<td>icon_arr_grey</td>
+									<td><span class="icon_bx_arr"></span></td>
+									<td>icon_bx_arr</td>
+									<td class="bg_light_grey"><span class="icon_srch"></span></td>
+									<td>icon_srch</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_face"></span></td>
+									<td>icon_face</td>
+									<td class="bg_light_grey"><span class="icon_blog"></span></td>
+									<td>icon_blog</td>
+									<td><span class="icon_srch_grey"></span></td>
+									<td>icon_srch_grey</td>
+								</tr>
+								<tr>
+									<td><span class="icon_plus"></span></td>
+									<td>icon_plus</td>
+									<td><span class="icon_minus"></span></td>
+									<td>icon_minus</td>
+									<td><span class="icon_meta_discount"></span></td>
+									<td>icon_meta_discount</td>
+								</tr>
+								<tr>
+									<td><span class="icon_meta_coupon"></span></td>
+									<td>icon_meta_coupon</td>
+									<td class="pr"><span class="icon_drop_up"></span></td>
+									<td>icon_drop_up</td>
+									<td><span class="icon_rightoff"></span></td>
+									<td>icon_rightoff</td>
+								</tr>
+								<tr>
+									<td><span class="icon_use_social"></span></td>
+									<td>icon_use_social</td>
+									<td><span class="icon_use_social active"></span></td>
+									<td>icon_use_social active</td>
+									<td><span class="icon_use_url"></span></td>
+									<td>icon_use_url</td>
+								</tr>
+								<tr>
+									<td class="page_use"><span class="icon_use_print"></span></td>
+									<td>page_use > icon_use_print</td>
+									<td><span class="icon_link_face"></span></td>
+									<td>icon_link_face</td>
+									<td><span class="icon_link_twi"></span></td>
+									<td>icon_link_twi</td>
+								</tr>
+								<tr>
+									<td><span class="icon_link_kakao"></span></td>
+									<td>icon_link_kakao</td>
+									<td><span class="icon_link_url"></span></td>
+									<td>icon_link_url</td>
+									<td><span class="icon_like"></span></td>
+									<td>icon_like</td>
+								</tr>
+								<tr>
+									<td><span class="icon_dislike"></span></td>
+									<td>icon_dislike</td>
+									<td><span class="icon_cmt"></span></td>
+									<td>icon_cmt</td>
+									<td class="bg_light_grey"><span class="icon_home"></span></td>
+									<td>icon_home</td>
+								</tr>
+								<tr>
+									<td class="pr bg_light_grey"><span class="icon_pop_close"></span></td>
+									<td>icon_pop_close</td>
+									<td class="pr bg_light_grey"><span class="icon_popclose" style="top:0"></span></td>
+									<td>icon_popclose</td>
+									<td class="pr"><span class="icon_popclose black"></span></td>
+									<td>icon_popclose black</td>
+								</tr>
+								<tr>
+									<td class="pr"><span class="icon_pop_close grey"></span></td>
+									<td>icon_pop_close grey</td>
+									<td class="bg_light_grey"><span class="icon_clse"></span></td>
+									<td>icon_clse</td>
+									<td class="bg_light_grey"><span class="icon_search"></span></td>
+									<td>icon_search</td>
+								</tr>
+								<tr>
+									<td class="pr"><span class="icon_key_close"></span></td>
+									<td>icon_key_close</td>
+									<td><span class="icon_info"></span></td>
+									<td>icon_info</td>
+									<td class="bg_light_grey"><span class="icon_card"></span></td>
+									<td>icon_card</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_print"></span></td>
+									<td>icon_print</td>
+									<td><span class="icon_urail"></span></td>
+									<td>icon_urail</td>
+									<td><span class="icon_car"></span></td>
+									<td>icon_car</td>
+								</tr>
+								<tr>
+									<td><span class="icon_rail"></span></td>
+									<td>icon_rail</td>
+									<td><span class="icon_wifi"></span></td>
+									<td>icon_wifi</td>
+									<td><span class="icon_item_remove"></span></td>
+									<td>icon_item_remove</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_voucher_wh"></span></td>
+									<td>icon_voucher_wh</td>
+									<td class="bg_light_grey"><span class="icon_mail_wh"></span></td>
+									<td>icon_mail_wh</td>
+									<td><span class="icon_house"></span></td>
+									<td>icon_house</td>
+								</tr>
+								<tr>
+									<td><span class="icon_building"></span></td>
+									<td>icon_building</td>
+									<td><span class="icon_home_grey"></span></td>
+									<td>icon_home_grey</td>
+									<td><span class="icon_mail"></span></td>
+									<td>icon_mail</td>
+								</tr>
+								<tr>
+									<td><span class="icon_time"></span></td>
+									<td>icon_time</td>
+									<td class="bg_light_grey"><span class="icon_map"></span></td>
+									<td>icon_map</td>
+									<td><span class="icon_map_grey"></span></td>
+									<td>icon_map_grey</td>
+								</tr>
+								<tr>
+									<td><span class="icon_user"></span></td>
+									<td>icon_user</td>
+									<td class="bg_light_grey"><span class="icon_user wh"></span></td>
+									<td>icon_user wh</td>
+									<td class="bg_light_grey"><span class="icon_leave"></span></td>
+									<td>icon_leave</td>
+								</tr>
+								<tr>
+									<td><span class="icon_mail_mint"></span></td>
+									<td>icon_mail_mint</td>
+									<td><span class="icon_cancel"></span></td>
+									<td>icon_cancel</td>
+									<td><span class="icon_doc"></span></td>
+									<td>icon_doc</td>
+								</tr>
+								<tr>
+									<td><span class="icon_print_mint"></span></td>
+									<td>icon_print_mint</td>
+									<td><span class="icon_house_org"></span></td>
+									<td>icon_house_org</td>
+									<td class="bg_light_grey"><span class="icon_list"></span></td>
+									<td>icon_list</td>
+								</tr>
+								<tr>
+									<td><span class="icon_card_org"></span></td>
+									<td>icon_card_org</td>
+									<td class="bg_light_grey"><span class="icon_cancel_wh"></span></td>
+									<td>icon_cancel_wh</td>
+									<td class="bg_light_grey"><span class="icon_printer"></span></td>
+									<td>icon_printer</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_srch_sm"></span></td>
+									<td>icon_srch_sm</td>
+									<td><span class="icon_srch_grey_sm"></span></td>
+									<td>icon_srch_grey_sm</td>
+									<td><span class="icon_calendar"></span></td>
+									<td>icon_calendar</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_note"></span></td>
+									<td>icon_note</td>
+									<td><span class="icon_srch_acc"></span></td>
+									<td>icon_srch_acc</td>
+									<td><span class="icon_user_join"></span></td>
+									<td>icon_user_join</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_circle_cancle"></span></td>
+									<td>icon_circle_cancle</td>
+									<td class="bg_light_grey"><span class="icon_circle_next"></span></td>
+									<td>icon_circle_next</td>
+									<td class="bg_light_grey"><span class="icon_circle_prev"></span></td>
+									<td>icon_circle_prev</td>
+								</tr>
+								<tr>
+									<td><span class="icon_chk_grey"></span></td>
+									<td>icon_chk_grey</td>
+									<td class="bg_light_grey"><span class="icon_house_wh"></span></td>
+									<td>icon_house_wh</td>
+									<td class="bg_light_grey"><span class="icon_cal_wh"></span></td>
+									<td>icon_cal_wh</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_srch_md"></span></td>
+									<td>icon_srch_md</td>
+									<td><span class="icon_user_grey"></span></td>
+									<td>icon_user_grey</td>
+									<td><span class="icon_date"></span></td>
+									<td>icon_date, icon_date_blk</td>
+								</tr>
+								<tr>
+									<td><span class="icon_hits"></span></td>
+									<td>icon_hits</td>
+									<td><span class="icon_like_grey"></span></td>
+									<td>icon_like_grey</td>
+									<td><span class="icon_cmt_grey"></span></td>
+									<td>icon_cmt_grey</td>
+								</tr>
+								<tr>
+									<td><span class="icon_link_twi"></span></td>
+									<td>icon_link_twi</td>
+									<td><span class="icon_link_kakao"></span></td>
+									<td>icon_link_kakao</td>
+									<td><span class="icon_link_url"></span></td>
+									<td>icon_link_url</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_trash"></span></td>
+									<td>icon_trash</td>
+									<td class="bg_light_grey"><span class="icon_chk_edit"></span></td>
+									<td>icon_chk_edit</td>
+									<td><span class="icon_date_blk"></span></td>
+									<td>icon_date_blk</td>
+								</tr>
+								<tr>
+									<td><span class="icon_wish"></span></td>
+									<td>icon_wish</td>
+									<td><span class="item_wish on"></span></td>
+									<td>item_wish on</td>
+									<td class="bg_light_grey"><span class="icon_btn_plus"></span></td>
+									<td>icon_btn_plus</td>
+								</tr>
+								<tr>
+									<td class="pr"><span class="icon_close_org" style="top:0;margin:0"></span></td>
+									<td>icon_close_org</td>
+									<td class="pr"><span class="icon_ban_open" style="left:0;margin:0"></span></td>
+									<td>icon_ban_open</td>
+									<td class="pr"><span class="icon_ban_close" style="left:0;margin:0"></span></td>
+									<td>icon_ban_close</td>
+								</tr>
+								<tr>
+									<td><span class="icon_download"></span></td>
+									<td>icon_download</td>
+									<td><span class="icon_info2"></span></td>
+									<td>icon_info2</td>
+									<td><span class="icon_sns_face"></span></td>
+									<td>icon_sns_face</td>
+								</tr>
+								<tr>
+									<td><span class="icon_sns_blog"></span></td>
+									<td>icon_sns_blog</td>
+									<td><span class="icon_shower"></span></td>
+									<td>icon_shower</td>
+									<td class="on bg_light_grey"><span class="icon_shower"></span></td>
+									<td>on > icon_shower</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_pick"></span></td>
+									<td>icon_pick</td>
+									<td class="active bg_light_grey"><span class="icon_pick"></span></td>
+									<td>icon_pick</td>
+									<td><span class="icon_detailview"></span></td>
+									<td>icon_detailview</td>
+								</tr>
+								<tr>
+									<td class="open"><span class="icon_detailview"></span></td>
+									<td>open > icon_detailview</td>
+									<td><span class="icon_rightoff_wh"></span></td>
+									<td>icon_rightoff_wh</td>
+									<td class="bg_light_grey"><span class="icon_datepic"></span></td>
+									<td>icon_datepic</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_datepic_wh"></span></td>
+									<td>icon_datepic_wh</td>
+									<td><span class="icon_datepic_mint"></span></td>
+									<td>icon_datepic_mint</td>
+									<td class="bg_light_grey"><span class="icon_info_wh"></span></td>
+									<td>icon_info_wh</td>
+								</tr>
+								<tr>
+									<td><span class="icon_thumb"></span></td>
+									<td>icon_thumb</td>
+									<td><span class="icon_location"></span></td>
+									<td>icon_location</td>
+									<td><span class="icon_walking"></span></td>
+									<td>icon_walking</td>
+								</tr>
+								<tr>
+									<td><span class="icon_car_sm"></span></td>
+									<td>icon_car_sm</td>
+									<td><span class="icon_cycle"></span></td>
+									<td>icon_cycle</td>
+									<td><span class="icon_train"></span></td>
+									<td>icon_train</td>
+								</tr>
+								<tr>
+									<td><span class="icon_heart"></span></td>
+									<td>icon_heart</td>
+									<td><span class="icon_heart active"></span></td>
+									<td>icon_heart active</td>
+									<td><span class="icon_heart sm"></span></td>
+									<td>icon_heart sm</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_map_sm"></span></td>
+									<td>icon_map_sm</td>
+									<td><span class="icon_like_mint"></span></td>
+									<td>icon_like_mint</td>
+									<td><span class="icon_like_mint sm"></span></td>
+									<td>icon_like_mint sm</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_cal"></span></td>
+									<td>icon_cal</td>
+									<td class="bg_light_grey"><span class="icon_ticket_wh"></span></td>
+									<td>icon_ticket_wh</td>
+									<td><span class="icon_link"></span></td>
+									<td>icon_link</td>
+								</tr>
+								<tr>
+									<td><span class="icon_link_mint"></span></td>
+									<td>icon_link_mint</td>
+									<td class="open"><span class="icon_link"></span></td>
+									<td>open >  icon_link</td>
+									<td><span class="icon_map_org"></span></td>
+									<td>icon_map_org</td>
+								</tr>
+								<tr>
+									<td><span class="icon_spot"></span></td>
+									<td>icon_spot/td>
+									<td><span class="icon_flag"></span></td>
+									<td>icon_flag</td>
+									<td><span class="icon_ticket"></span></td>
+									<td>icon_ticket</td>
+								</tr>
+								<tr>
+									<td><span class="icon_srch_blk"></span></td>
+									<td>icon_srch_blk</td>
+									<td class="bg_light_grey"><span class="icon_car_wh"></span></td>
+									<td>icon_car_wh</td>
+									<td class="pr"><span class="icon_new"></span></td>
+									<td>icon_new</td>
+								</tr>
+								<tr>
+									<td class="pr"><span class="icon_up"></span></td>
+									<td>icon_up</td>
+									<td><span class="icon_q_ylw"></span></td>
+									<td>icon_q_ylw</td>
+									<td class="bg_light_grey"><span class="icon_rentcar"></span></td>
+									<td>icon_rentcar</td>
+								</tr>
+								<tr>
+									<td><span class="icon_comm"></span></td>
+									<td>icon_comm</td>
+									<td><span class="icon_discount"></span></td>
+									<td>icon_discount</td>
+									<td><span class="icon_srch_gnb"></span></td>
+									<td>icon_srch_gnb</td>
+								</tr>
+								<tr>
+									<td><span class="icon_date_close"></span></td>
+									<td>icon_date_close</td>
+									<td><span class="chk_label circle_org"></span></td>
+									<td>chk_label circle_org</td>
+									<td><span class="chk_label circle_org on"></span></td>
+									<td>circle_org on</td>
+								</tr>
+								<tr>
+									<td><span class="icon_more_mint"></span></td>
+									<td>icon_more_mint</td>
+									<td class="open"><span class="icon_more_mint"></span></td>
+									<td>oepn > icon_more_mint</td>
+									<td><span class="icon_help_grey"></span></td>
+									<td>icon_help_grey</td>
+								</tr>
+								<tr>
+									<td><span class="icon_quantity_up"></span></td>
+									<td>icon_quantity_up</td>
+									<td class="open"><span class="icon_quantity_down"></span></td>
+									<td>icon_quantity_down</td>
+									<td><span class="icon_back_arr"></span></td>
+									<td>icon_back_arr</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<!--// 아이콘 가이드 -->
+					<div class="tab-pane" id="input">
+						<h3>입력폼가이드</h3>
+						<h4>- default</h4>
+						<ul class="list-default">
+							<li><input type="text" class="no_style" placeholder="minda" title=""><xmp><input type="text" class="no_style" placeholder="minda" title=""> default(no_style)</xmp></li>
+							<li><input type="text" class="form-control" placeholder="minda" title=""><xmp><input type="text" class="form-control" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic" placeholder="minda" title=""></xmp></li>
+						<ul>
+						<h4>- size</h4>
+						<ul class="list-default">
+
+							<li><input type="text" class="form-control-basic wid_sm" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_sm" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_md" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_lg" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_lg" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_smd itx" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_sm itx" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_smd itx datepicker" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_smd itx datepicker" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_md input-lg" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md input-lg" placeholder="minda" title=""></xmp></li>
+							<li><input type="text" class="form-control-basic wid_md input-xl" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md input-xl" placeholder="minda" title=""></xmp></li>
+						</ul>
+						<h4>- placeholder</h4>
+						<ul class="list-default">
+							<li><input type="text" class="form-control-basic wid_md plh_mint" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md plh_mint" placeholder="minda" title=""></xmp></li>
+						</ul>
+						<h4>- example </h4>
+						<ul class="list-default">
+							<li>
+								<div class="tel_form">
+									<input type="text" class="form-control-basic wid_sm" title="핸드폰 첫번째 자리"><i></i>
+									<input type="text" class="form-control-basic wid_sm" title="핸드폰 두번째 자리"><i></i>
+									<input type="text" class="form-control-basic wid_sm" title="핸드폰 세번째 자리">
+								</div>
+							</li>
+							<li>
+								<div>
+									<input type="text" class="form-control-basic wid_md" placeholder="minda" title="이메일 주소 아이디부분">
+									<span class="form-control-static">@</span>
+									<input type="text" class="form-control-basic wid_md" placeholder="naver.com" title="이메일 주소 도메인부분">
+									<select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+										<option value="">직접입력</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+						<h4>- input type="checkbox"</h4>
+						<ul class="list-default">
+							<li>
+								<label class="basic chk_label">
+									<input type="checkbox">유럽
+								</label>
+								<xmp><label class="inline-checkbox basic chk_label"><input type="checkbox">유럽</label></xmp>
+							</li>
+							<li>
+								<label class="orange chk_label">
+									<input type="checkbox">유럽
+								</label>
+								<xmp><label class="inline-checkbox orange chk_label"><input type="checkbox">유럽</label></xmp>
+							</li>
+							<li>
+								<label class="basic orange chk_label">
+									<input type="checkbox">유럽
+								</label>
+								<xmp><label class="inline-checkbox basic orange chk_label"><input type="checkbox">유럽</label></xmp>
+							</li>
+							<li>
+								<label class="chk_label right">
+									<input type="checkbox">유럽
+								</label>
+								<xmp><label class="chk_label right"><input type="checkbox">유럽</label></xmp>
+							</li>
+
+						</ul>
+						<h4>- input type="radio"</h4>
+						<ul class="list-default">
+							<li>
+								<label class="radio_label">
+									<input type="radio" name="radio">유럽
+								</label>
+								<xmp><label class="radio_label"><input type="checkbox">유럽</label></xmp>
+							</li>
+							<li>
+								<label class="radio_label radio_label_mint">
+									<input type="radio"  name="radio">유럽
+								</label>
+								<xmp><label class="radio_label radio_label_mint"><input type="checkbox">유럽</label></xmp>
+							</li>
+							<li>
+								<label class="radio_label orange">
+									<input type="radio"  name="radio">유럽
+								</label>
+								<xmp><label class="radio_label orange"><input type="checkbox">유럽</label></xmp>
+							</li>
+						</ul>
+						<h4>- textarea</h4>
+						<ul class="list-default">
+							<li>
+								<textarea class="form-control-basic" rows="6"></textarea>
+								<xmp><textarea class="form-control-basic" rows="6"></textarea></xmp>
+							</li>
+						</ul>
+						<h4>- type="file"</h4>
+						<ul class="list-default">
+							<li>
+								<label class="mt10">
+									<input type="file" class="sr-only">
+									<span class="btn btn-xs bg_mint w75 mb3 mr5">파일선택</span>
+								</label>
+								<input type="text" class="form-control-basic wid_md" title="업로드된이미지명" readonly="">
+								<xmp><label class="mt10"><input type="file" class="sr-only"><span class="btn btn-xs bg_mint w75 mb3 mr5">파일선택</span></label><input type="text" class="form-control-basic wid_md" title="업로드된이미지명" readonly=""></xmp>
+							</li>
+						</ul>
+						<h4>- input with text </h4>
+						<ul class="list-default">
+							<li><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""><p class="form-control-static error">이미 사용중인 아이디 입니다.</p></li>
+							<li><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""><p class="form-control-static valid">사용 가능한 닉네임 입니다.</p></li>
+							<li><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""><p class="form-control-static color_org">아이디는 4~12자리의 영문과 숫자의 조합만 가능합니다.</p></li>
+
+						</ul>
+					</div>
+					<div class="tab-pane" id="table">
+						<h3>테이블가이드</h3>
+						<ul class="list-default mt30">
+							<li>
+								<xmp><table class="table"></xmp>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>제목</th>
+											<th>제목</th>
+											<th>제목</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb tb_fixed"></xmp>
+								<table class="tb tb_fixed">
+									<thead>
+										<tr>
+											<th>제목</th>
+											<th>제목</th>
+											<th>제목</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb tb_frm"></xmp>
+								<table class="tb tb_frm">
+									<tbody>
+									<tr>
+										<th>내용</th>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<th>내용</th>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb tb_frm v1"></xmp>
+								<table class="tb tb_frm v1">
+									<tbody>
+									<tr>
+										<th>내용</th>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<th>내용</th>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb v2"></xmp>
+								<table class="tb v2">
+									<thead>
+										<tr>
+											<th>제목</th>
+											<th>제목</th>
+											<th>제목</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb v3"></xmp>
+								<table class="tb v3">
+									<tbody>
+									<tr>
+										<th>내용</th>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<th>내용</th>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb nobor"></xmp>
+								<table class="tb nobor">
+									<thead>
+										<tr>
+											<th>제목</th>
+											<th>제목</th>
+											<th>제목</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb2"></xmp>
+								<table class="tb2">
+									<thead>
+										<tr>
+											<th>제목</th>
+											<th>제목</th>
+											<th>제목</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									<tr>
+										<td>내용</td>
+										<td>내용내용내용내용내용내용내용내용내용</td>
+										<td>내용</td>
+									</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<xmp><table class="tb2 tb_pay_total tb_fixed"></xmp>
+								<table class="tb2 tb_pay_total tb_fixed">
+									<caption class="sr-only">결제정보</caption>
+									<colgroup>
+										<col span="3">
+										<col style="width:375px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">주문</th>
+											<th scope="col">수수료</th>
+											<th scope="col">할인금액</th>
+											<th scope="col" class="tb2_border">결제금액</th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<td colspan="3">
+												<dl class="dl-horizontal total_price_account">
+													<dt class="color_blk fw500">실시간 계좌이체</dt>
+													<dd>
+														우리은행 1005-521-2525525(예금주 : 홍길동)
+														<span class="d_block color_light_grey mt3">결제일 : 2016-00-00 11:48:56</span>
+													</dd>
+												</dl>
+											</td>
+											<td>
+												<dl class="dl-horizontal total_count">
+													<dt class="color_wh">총 결제금액</dt>
+													<dd class="text-right"><b class="color_org">1,423,800</b>원</dd>
+												</dl>
+											</td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<!-- 주문 -->
+											<td>
+												<dl class="dl_pay">
+													<dt>합계</dt>
+													<dd class="text-right">1,409,400<small>원</small></dd>
+													<dt>배송비</dt>
+													<dd class="text-right">5,400<small>원</small></dd>
+												</dl>
+											</td>
+											<!-- 수수료 -->
+											<td>
+												<dl class="dl_pay">
+													<dt>예약 수수료</dt>
+													<dd class="text-right">9,400<small>원</small></dd>
+													<dt>발권 및 처리 수수료</dt>
+													<dd class="text-right">9,400<small>원</small></dd>
+												</dl>
+											</td>
+											<!-- 할인금액 -->
+											<td>
+												<dl class="dl_pay">
+													<dt>포인트할인</dt>
+													<dd class="text-right">-3,000<small>P</small></dd>
+													<dt>쿠폰할인</dt>
+													<dd class="text-right">-3,000<small>원</small></dd>
+
+												</dl>
+											</td>
+											<!-- 결제금액 -->
+											<td class="tb2_border pr">
+												<dl class="dl_pay">
+													<dt class="color_blk">예약금 (10%)쿠폰</dt>
+													<dd class="text-right"><span class="color_red">66,300</span> <small class="color_org">원</small></dd>
+													<dt>포인트할인</dt>
+													<dd class="text-right"><span class="color_blk">-3,000</span> <small>P</small></dd>
+												</dl>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="color">
+						<h3>색상가이드</h3>
+						<h4>- text color</h4>
+						<table class="tb mt20 text-center tb_frm tb_fixed" style="width: 70%">
+							<tbody>
+								<tr>
+									<td rowspan="2" class="color_ylw">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_ylw"</xmp></td>
+									<td rowspan="2" class="color_mint">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_mint"</xmp></td>
+									<td rowspan="2" class="color_light_mint">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_light_mint"</xmp></td>
+								</tr>
+								<tr>
+									<td>#fffc0a</td>
+									<td>#42c3bf</td>
+									<td>#befffd</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="color_org">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_org"</xmp></td>
+									<td rowspan="2" class="color_wh bg_grey">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_wh bg_grey"</xmp></td>
+									<td rowspan="2" class="color_blk">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_blk"</xmp></td>
+								</tr>
+								<tr>
+									<td>#f58850</td>
+									<td>#fff</td>
+									<td>#333239</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="color_default">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_default"</xmp></td>
+									<td rowspan="2" class="color_grey">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_grey"</xmp></td>
+									<td rowspan="2" class="color_dark_grey">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_dark_grey"</xmp></td>
+								</tr>
+								<tr>
+									<td>#858585</td>
+									<td>#b5b5b5</td>
+									<td>#444</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="color_red">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_red"</xmp></td>
+									<td rowspan="2" class="color_sky">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_sky"</xmp></td>
+									<td rowspan="2" class="color_blue">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_blue"</xmp></td>
+								</tr>
+								<tr>
+									<td>#e93d3d</td>
+									<td>#2ea4db</td>
+									<td>#4db4f6</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="color_dark_blue">텍스트텍스트텍스트</td>
+									<td><xmp>class="color_dark_blue"</xmp></td>
+									<td rowspan="2" class="color-purple">텍스트텍스트텍스트</td>
+									<td><xmp>class="color-purple"</xmp></td>
+									<td rowspan="2" class=""></td>
+									<td><xmp></xmp></td>
+								</tr>
+								<tr>
+									<td>#465691</td>
+									<td>#ab37fe</td>
+									<td></td>
+								</tr>
+
+							</tbody>
+						</table>
+						<h4>- background color</h4>
+						<table class="tb mt20 text-center tb_frm tb_fixed" style="width: 70%">
+							<tbody>
+								<tr>
+									<td rowspan="2" class="bg_org">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_org"</xmp></td>
+									<td rowspan="2" class="bg_org2">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_org2"</xmp></td>
+									<td rowspan="2" class="bg_mint">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_mint"</xmp></td>
+								</tr>
+								<tr>
+									<td>#f58850</td>
+									<td>#f58850</td>
+									<td>#42c3bf</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="bg_mint2">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_mint2"</xmp></td>
+									<td rowspan="2" class="bg_red">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_red"</xmp></td>
+									<td rowspan="2" class="bg_wh">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_wh"</xmp></td>
+								</tr>
+								<tr>
+									<td>#57c1be</td>
+									<td>#e93d3d</td>
+									<td>#fff</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="bg_dark_grn">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_dark_grn"</xmp></td>
+									<td rowspan="2" class="bg_dark_grey">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_dark_grey"</xmp></td>
+									<td rowspan="2" class="bg_light_grey">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_light_grey"</xmp></td>
+								</tr>
+								<tr>
+									<td>#197e7b</td>
+									<td>#5a5a5a</td>
+									<td>#e8e8e8 </td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="bg_light_grey2">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_light_grey2"</xmp></td>
+									<td rowspan="2" class="bg_light_org">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_light_org"</xmp></td>
+									<td rowspan="2" class="bg_light_mint">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_light_mint"</xmp></td>
+								</tr>
+								<tr>
+									<td>#e0e0e0</td>
+									<td>#fefaf9</td>
+									<td>#f7ffff !</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="bg_grey">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_grey"</xmp></td>
+									<td rowspan="2" class="bg_silver">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_silver"</xmp></td>
+									<td rowspan="2" class="bg_blk">텍스트텍스트텍스트</td>
+									<td><xmp>class="bg_blk"</xmp></td>
+								</tr>
+								<tr>
+									<td>#8d8d8d</td>
+									<td>#f7f7f7</td>
+									<td>#333239</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>- text style</h4>
+						<h4>- title style</h4>
+					</div>
+					<div class="tab-pane" id="pop">
+						<h3>팝업/BOX가이드</h3>
+					</div>
+					<div class="tab-pane" id="slide">
+						<h3>슬라이드 가이드</h3>
+					</div>
+					<div class="tab-pane" id="calender">
+						<h3>달력가이드</h3>
+					</div>
+				</div>
+				<!--// 관리자 -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.tb-filelist').rowspan (0);
+			$('.tb-filelist').rowspan (1);
+			$('.tb-filelist').rowspan (2);
+			$('.tb-filelist').rowspan (3);
+
+			$('.tip').tooltip();
+			$(".icon_detailview").mouseover(
+				function  () {
+					if (!$(this).parent().hasClass("open")) {
+						$(this).parent().addClass('open');
+					}
+				}
+			);
+
+			$(".detail_wrp").mouseleave(
+				function  () {
+					if ($(this).hasClass("open")) {
+						$(this).removeClass('open');
+					}
+				}
+			);
+
+		})
+		$('.tb-filelist tbody tr').each(function(index){
+			$(this).prepend('<td>'+index+'</td>');
+		});
+		$.fn.rowspan = function(colIdx, isStats) {
+		return this.each(function(){
+		var that;
+		$('tr', this).each(function(row) {
+			$('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {
+				if ($(this).html() != '' && $(this).html() == $(that).html()
+					&& (!isStats
+							|| isStats && $(this).prev().html() == $(that).prev().html()
+							)
+					) {
+					rowspan = $(that).attr("rowspan") || 1;
+					rowspan = Number(rowspan)+1;
+
+					$(that).attr("rowspan",rowspan);
+
+					// do your action for the colspan cell here
+					$(this).hide();
+
+					//$(this).remove();
+					// do your action for the old cell here
+
+				} else {
+					that = this;
+				}
+
+				// set the that if not already set
+				that = (that == null) ? this : that;
+			});
+		});
+	});
+};
+	</script>
+	<!-- lib -->
+	<script src="http://v2.theminda.com/cust/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/cust/js/common.js"></script>
+</body>
+</html>

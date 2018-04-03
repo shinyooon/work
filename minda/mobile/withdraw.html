@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<!-- [D]
+	1. 뒤로가기가 있는 메뉴 class="page_back"
+-->
+
+<body class="page_back">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<h1>회원탈퇴</h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<!-- 페이지 시작-->
+			<div class="withdraw_wrp">
+				<!-- 유의사항 -->
+				<section class="accordion v2">
+					<h2 class="bx_hd bg_grey2"><a href="" class="acc_btn fs16 color_blk">유의사항</a></h2>
+					<div class="bx_cnt acc_cnt" style="display:none">
+						<ul class="lst_type_dot fs13">
+							<li>회원 탈퇴를 신청하시면 해당 아이디는 즉시 탈퇴처리가 되며 이후 동일 아이디로는 재가입이 불가능합니다.</li>
+							<li>회원 탈퇴 시 개인 정보는 즉시 삭제됩니다.</li>
+							<li>회원 탈퇴 후 민다 서비스에 남기신 게시물 및 리뷰, 댓글은 삭제되지 않습니다.</li>
+							<li>게시글 및 리뷰, 댓글의 삭제를 원하시는 경우에는 반드시 먼저 삭제 하신 후 탈퇴를 신청 하시기 바랍니다.</li>
+						</ul>
+					</div>
+				</section>
+				<!-- 예약내용리스트 -->
+				<section class="select_q_area">
+					<ul class="lst_type_num pa17 list-q">
+						<li>
+							<dl>
+								<dt class="color_blk fs16"> 탈퇴를 하시려는 주된 이유는 무엇인가요?</dt>
+								<dd><label for="w_reason1" class="radio_label dot"><input type="radio" name="w_reason" id="w_reason1">원하는 정보가 없거나 충분치 않아서</label></dd>
+								<dd><label for="w_reason2" class="radio_label dot"><input type="radio" name="w_reason" id="w_reason2">사이트 이용의 필요성을 느끼지 못해서</label></dd>
+								<dd><label for="w_reason3" class="radio_label dot"><input type="radio" name="w_reason" id="w_reason3">시스템 오류 및 장애가 잦아서</label></dd>
+								<dd><label for="w_reason4" class="radio_label dot"><input type="radio" name="w_reason" id="w_reason4">개인정보 유출이 우려되어서</label></dd>
+								<dd>
+									<label for="w_reason5" class="radio_label dot"><input type="radio" name="w_reason" id="w_reason5">기타</label>
+									<div class="tb_bx mt5">
+										<div class="tb_cell">
+											<textarea name="w_reason" class="form-control-basic wfull" title="기타 탈퇴 사유 입력"></textarea>
+										</div>
+									</div>
+								</dd>
+
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="color_blk fs16">‘민다’에 바라는 점이나 개선되어야 할 점을 남겨주시면, 회원님의 말씀을 깊이 새기어 더 나은 서비스를 제공할 수 있도록 노력하겠습니다.</dt>
+								<dd>
+									<div class="tb_bx mt10">
+										<div class="tb_cell">
+											<textarea name="c_reason" class="form-control-basic wfull" title="추가 의견 작성"></textarea>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</section>
+				<div class="btn-area mt5 text-center">
+					<a href="" class="btn bg_mint fs13 w130 btn-sm">회원탈퇴</a>
+				</div>
+			</div>
+			<script>
+			jQuery(function($) {
+				$(".acc_btn").on('click', function() {
+					$(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+					return false;
+				});
+			});
+			</script>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

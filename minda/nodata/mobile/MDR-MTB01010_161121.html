@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<!-- [D] 뒤로가기가 있는 메뉴 class="page_back" -->
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd" class="transparent">
+			<a class="icon_hd_back" href="javascript:history.back();"></a>
+			<h1><a href="javascript:;">런던</a></h1>
+			<a onclick="WebInvokeMapSearch();" class="icon_hd_map btn btn_like hd-r2"></a>
+			<!-- 타이틀 우측 2번ㅤㅉㅒㅤ 버튼 -->
+			<a class="icon_mn hd-r" onclick="menuOpen('snb')">메뉴</a>
+			<!-- 타이틀 우측 버튼 -->
+			<!-- 검색 바 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix no-hd">
+			<!-- 페이지 시작-->
+			<!-- 가이드상단 -->
+			<div class="guide_hd" style="background-image:url(/img/city/PC/city_info_pc_001001001)">
+				<div class="txt-wrap">
+					<h2 class="title"><img class="img-circle" src="_temp/flag.png" alt=""> 런던 </h2>
+					<div class="btn-wrap"><a href="" class="btn btn-more-city">전체도시보기</a></div>
+				</div>
+			</div>
+			<!-- 상단탭 -->
+			<nav>
+				<ul class="tab6">
+					<li class="active"><a href="">숙소</a></li><!-- 활성화시 active클래스 추가 -->
+					<li><a href="">스팟</a></li>
+					<li><a href="">일정</a></li>
+				</ul>
+			</nav>
+			<!-- 숭소목록 수정 : yuna -->
+			<div class="mtb_srch room_lst_top">
+				<form class="frm_index v2">
+					<div class="tb_bx itx_datepicker_wrp">
+						<div class="tb_cell text-left cell_checkin">
+							<input id="checkin" value="" type="text" class="no_style itx_datepicker itx_cal pr0 pl_grey" placeholder="체크인" readonly="">
+						</div>
+						<div class="tb_cell ">
+							<input id="checkout" value="" type="text" class="no_style itx_datepicker itx_cal pl7 pl_grey" placeholder="체크아웃" readonly="">
+						</div>
+						<div class="tb_cell mtb_srch_filter">
+							<div class="text-center">
+								<button id="filter_btn" type="button" onclick="WebInvokeDetailSearch();" class="btn no_style ma0"><i class="icon_srchfilter">검색필터 추가</i></button>
+								<!-- 2016-10-04 edit :yuna -->
+								<!-- <button type="button" onclick="initSearchCond();" class="btn no_style"><i class="icon_srchfilter_reset">검색필터 초기화</i></button> -->
+							</div>
+							<!-- <div class="pull-right">
+								<select id="slt_sort" class="icon_sort_mint">
+									<option value="reserve">예약가능우선</option>
+									<option value="price">낮은가격</option>
+									<option value="average">평점</option>
+									<option value="goodsnm">가나다순</option>
+									<option value="wish">저장순</option>
+								</select>
+							</div> -->
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- 검색 0515 -->
+			<!-- 트립 유도 배너 -->
+			<div class="list-banner-area">
+				<div class="banner-lead-tour">
+					<a href="http://www.theminda.com/m/1.0/tg/list.html?&amp;category=001001001" onclick="ga('send','event','mo_lodging_list','click','트립유도_런던');">
+						<img src="/img/tg/banner/mo/001001001_sm.jpg" alt="" class="img-lead-tour">
+					</a>
+				</div>
+			</div>
+			<!-- 파워숙소 -->
+			<!-- [D] 2017-02-13 수정 -->
+			<h2 class="room_lst_tit">
+				<span class="icon_room_type"></span>파워숙소
+				<div class="ad-info">
+					<span class="ad-info__txt">광고</span>
+					<button type="button" class="no_style ad-info__btn"><i class="ad-info__icon"></i></button>
+					<div class="ad-info__desc">
+						<p class="ad-info__desc-txt">파워숙소 광고를 구입한 <br />숙소들이 보여지는 영역입니다.</p>
+					</div>
+				</div>
+			</h2>
+			<ul class="room_lst">
+				<!-- [D] 2017-02-13 수정 -->
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>도미토리</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">￦120,000~</s>
+									<span class="current_price">￦120,000~ </span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 플러스숙소 -->
+			<!-- [D] 2017-02-13 수정 -->
+			<h2 class="room_lst_tit"><span class="icon_room_type"></span>플러스숙소</h2>
+			<ul class="room_lst">
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 일반숙소 -->
+			<!-- [D] 2017-02-13 수정 -->
+			<h2 class="room_lst_tit">일반숙소</h2>
+			<ul class="room_lst">
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="media" href="">
+							<div class="media-left">
+								<div class="tmb_wrp">
+									<img src="_temp/room.png" alt="" class="pos-center">
+									<div class="ribbon_wrp">
+										<button class="icon_ribbon on">저장</button>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h3 class="ellipsis">
+									<i class="icon_new_item">신규</i>
+									<i class="icon_discount_item">할인 및 쿠폰</i>
+									로마 자고가 하우스 (Jagoga House)
+								</h3>
+								<div class="price">
+									<span>콘도형 8인</span>
+									<s class="before_price color_grey">€42</s>
+									<span class="current_price">€30</span>
+								</div>
+								<div class="meta clearfix">
+									<div class="pull-left">
+										<span class="label bg_mint">
+											즉시예약
+											<i class="dot"></i>
+											전액결제
+										</span>
+									</div>
+									<div class="pull-right">
+										<!-- 여행정보 개선 수정 -->
+										<p class="nodata__txt">첫 리뷰를 작성해주세요!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft" class="bg_blk">
+			<div>
+				<a href="javascript:AppInvokeOpenNewPage('http://blog.naver.com/minbakdanawa', 'y');" target="_blank" class="icon_blog">민다블로그보기</a>
+				<a href="javascript:AppInvokeOpenNewPage('https://www.facebook.com/minbakdanawa','y');" target="_blank" class="icon_face">민다페이스북보기</a>
+				<a href="javascript:AppInvokeMoveToNextTitleFrame('/m/1.0/grp_mypage/my_writings.html?init_tab=tab_m2m','__back__white__','1:1 문의','__none__','','y', 'bg_black_font_white');" class="btn btn_border_grey color_blk ml20">1:1 문의하기</a>
+				<a href="javascript:AppInvokeOpenNewPage('http://bitly.com/mindaapp', 'y');" class="btn ml2">앱 다운로드</a>
+			</div>
+			<p>
+				(주)사막 사업자등록번호 : 101-86-28116 FAX : 02-722-3478
+			</p>
+			<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+			<ul class="list-inline">
+				<li><a href="javascript:about();">회사소개</a></li>
+				<li><a href="javascript:faq();">고객센터</a></li>
+				<li><a href="javascript:Tos();">이용약관</a></li>
+				<li><a href="javascript:Privacy();" class="color_org">개인정보취급방침</a></li>
+				<li><a href="javascript:ComInfo();">PC버전</a></li>
+			</ul>
+			<h1><img class="img-responsive center-block" src="/m/1.0/cust/img/logo_ft.png" alt="minda"></h1>
+		</div>
+		<!-- fixed button-->
+		<div id="quick">
+			<a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+			<a class="icon_mn2" href="#">Menu</a>
+		</div>
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	$(function() {
+
+		initCalendar(); //check_staydt.php
+		hdControl();
+		var w = $(window);
+		w.on({
+		    'scroll':function(e){
+		    	e.preventDefault();
+		    	var sT = w.scrollTop();
+				hdControl();
+		    }
+		});
+		$('.ad-info__btn').click(function(){
+			$(this).closest('.ad-info').toggleClass('is-open');
+		})
+	});
+	var is_auto_search = false;
+	var auto_obj;
+
+
+	$(window).load(function() {
+		var checkin_date = "";
+		var checkout_date = "";
+
+		if (checkin_date != "") {
+			$('#checkin').data('daterangepicker').setStartDate(checkin_date);
+			$('#checkin').data('daterangepicker').setEndDate(checkin_date);
+		}
+
+		if (checkout_date != "") {
+			$('#checkout').data('daterangepicker').setStartDate(checkin_date);
+			$('#checkout').data('daterangepicker').setEndDate(checkout_date);
+		}
+
+		$("#checkin").val(checkin_date);
+		$("#checkout").val(checkout_date);
+
+		$("#checkin").change(function(event) {
+			if (chk_staydt(this.value)) {}
+		});
+
+		$("#checkout").change(function(event) {
+			//checkin보다 작은지와 15일 이상인지만 검사
+			var checkin_date = new Date($("#checkin").val());
+			var checkout_date = new Date($("#checkout").val());
+			var diff_day = Math.floor((checkout_date - checkin_date) / (1000 * 60 * 60 * 24));
+
+
+			if (is_auto_search && diff_day < 0) { // checkin 설정시 checkout 달력 월을 설정해야하기 때문에 equal은 현재 예외처리에서 생략하고 검색 버튼 클릭시 검사한다.
+				AppInvokeAlert("체크인, 체크아웃 날짜를 확인하세요.");
+				$("#checkin").val("");
+				$("#checkout").val("");
+				return false;
+			}
+
+
+			if (diff_day >= 16) {
+				AppInvokeAlert("16일 이상은 예약이 불가능 합니다.");
+				$("#checkin").val("");
+				$("#checkout").val("");
+				return false;
+			}
+		});
+
+	});
+
+	//2016.07.11 홍이 calendar 초기화
+	//체크인, 체크아웃 input text ID는 아래와 같이 한다.
+	//체크인 ID = checkin
+	//체크아웃 ID = checkout
+	function initCalendar(today) {
+
+		var dateToday = new Date();
+		var dateMax = new Date();
+
+		if (today != undefined && today != '') dateToday = new Date(today);
+
+		dateMax.setDate(dateToday.getDate() + 180);
+		$('#checkin').daterangepicker({
+			autoApply: true,
+			singleDatePicker: true,
+			singleDatePickerStartDate: true,
+			doApplied: false,
+			minDate: dateToday,
+			maxDate: dateMax,
+			locale: {
+				format: 'YYYY-MM-DD',
+				daysOfWeek: [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				monthNames: [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			}
+		});
+		//2016-11-21 추가
+		$('#checkin').on({
+			'apply.daterangepicker' : function  (ev, picker) {
+				$('#checkin').val(picker.startDate.format('YYYY-MM-DD'));
+				$('.cell_checkin').addClass('in');
+			}
+		});
+
+		$('#checkout').daterangepicker({
+			autoApply: true,
+			singleDatePicker: true,
+			doApplied: true,
+			minDate: dateToday,
+			maxDate: dateMax,
+			locale: {
+				format: 'YYYY-MM-DD',
+				daysOfWeek: [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				monthNames: [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			}
+		});
+	}
+
+	function setToday(today) {
+		var dateToday = new Date(today);
+		var dateMax = new Date();
+		dateMax.setDate(dateToday.getDate() + 180);
+		$('#checkin').data('daterangepicker').setMinDate(dateToday);
+		$('#checkin').data('daterangepicker').setMaxDate(dateMax);
+		$('#checkout').data('daterangepicker').setMinDate(dateToday);
+		$('#checkout').data('daterangepicker').setMaxDate(dateMax);
+	}
+
+	function unbindCalendar() {
+		$('#checkin').data('daterangepicker').remove();
+		$('#checkout').data('daterangepicker').remove();
+
+	}
+
+
+	//2016.05.27 checkout 설정
+	function set_checkout() {
+		$("#checkin").data('daterangepicker').hideForce();
+		//체크아웃 설정
+		if ($('#checkout').data('daterangepicker') != undefined) {
+			var start_date = $("#checkin").data('daterangepicker').startDate.format('YYYY-MM-DD');//2016-11-21 수정
+			var default_checkout = new Date(start_date);
+			//default_checkout.setDate(default_checkout.getDate() + 1); //체크아웃날짜를 N일 이후로 하려면 + N 숫자만 변경하면 가능
+			default_checkout.setDate(default_checkout.getDate());
+			var checkout_str = default_checkout.toISOString().slice(0, 10).replace(/-/g, "");
+			if (start_date != undefined && start_date != '') {
+				$('#checkout').data('daterangepicker').setStartDate(checkout_str);
+				$('#checkout').data('daterangepicker').setEndDate(checkout_str);
+				$("#checkout").val("");
+			}
+		}
+
+		$("#checkout").trigger('click');
+		$("#checkout").focus();
+
+	}
+
+	// 20151214 Honge 당일&전일예약시스템 체크인 날짜 확인
+	function chk_staydt(d) {
+		var selected_city = $("#category").val();
+
+		if (selected_city == "") {
+			AppInvokeAlert("도시명을 입력해주세요.");
+			$("#checkin").data('daterangepicker').hideForce();
+			$("#checkin").val("");
+			$("#checkout").val("");
+			$('.cell_checkin').removeClass('in');
+			return false;
+		}
+
+		if (d.trim() == "") {
+			return false;
+		}
+
+		//query 조회를 위해 형식 변경 [0000년 00월 00일] -> [0000-00-00]
+		/*
+			var year = String(d.substr(0, 4));
+		  var month = String(d.substr(6, 2));
+		  var day = String(d.substr(10, 2));
+		  var checkin_date = year+"-"+month+"-"+day;
+		*/
+		var checkin_date = d;
+		if (!isValidDate(checkin_date)) {
+			AppInvokeAlert("유효하지 않은 날짜 입니다.\n다시 입력해주세요.");
+			$("#checkin").val("");
+			$("#checkout").val("");
+			$('.cell_checkin').removeClass('in');
+			return false;
+		}
+		// 실시간으로 카테고리의 전일당일예약 정보 조회 후 결과 반영처리
+		ajaxGetDateInfo(checkin_date);
+
+		return true;
+	}
+
+	function isValidDate(param) {
+		try {
+			param = param.trim();
+
+			// 비여있을경우 유효성 검사 안함
+			if (param == null || param == "") {
+				return true;
+
+				// 길이가 11이 안될경우 에러처리
+			} else if (param.length != 10) {
+				return false;
+			}
+
+			var year = Number(param.substr(0, 4));
+			var month = Number(param.substr(5, 2));
+			var day = Number(param.substr(8, 2));
+
+
+			if (month < 1 || month > 12) {
+				return false;
+			}
+
+			var maxDaysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+			var maxDay = maxDaysInMonth[month - 1];
+
+			// 윤년 체크
+			if (month == 2 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
+				maxDay = 29;
+			}
+
+			if (day <= 0 || day > maxDay) {
+				return false;
+			}
+			return true;
+
+		} catch (err) {
+			return false;
+		}
+	}
+
+	function ajaxGetDateInfo(d) {
+		var selected_city = $("#category").val();
+		if (selected_city != "") {
+			set_checkout(); //체크아웃설정
+			return true;
+		}
+	}
+	function hdControl(){
+		var w = $(window),
+			$container=$('#container'),
+			$hd = $('#hd'),
+			$top = $('.guide_hd'),
+			topH = $top.innerHeight(),
+			sT = $(window).scrollTop();
+		if(sT > topH){
+			$container.addClass('fixed');
+			$hd.css({
+				background: 'rgba(255,255,255,1)',
+				transition: 'background .4s ease-in-out'
+			});
+			$hd.removeClass('transparent');
+		}else{
+			$container.removeClass('fixed');
+			$hd.addClass('transparent');
+			$hd.css({
+				background: 'rgba(255,255,255,0)',
+				transition: 'background 0s ease-in-out'
+			});
+		}
+	}
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="/m/1.0/cust/js/moment.min.js"></script>
+	<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

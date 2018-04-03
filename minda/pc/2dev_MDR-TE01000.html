@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util active">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="dep2">
+						<strong class="sr-only">마이페이지</strong>
+						<ul class="clearfix">
+							<li><a href="/mypage/mypage_home.php" class="active">MY홈</a></li>
+							<li><a href="/mypage/my_reservation.php">숙소 예약 내역</a></li>
+							<!-- <li><a href="/mypage/booking_tour.php" >트립 예약내역</a></li> -->
+							<li><a href="/mypage/guidebook.php">나의 가이드북</a></li>
+							<li><a href="/mypage/my_modify.php">나의정보</a></li>
+							<li><a href="/mypage/my_rate.php">나의 활동</a></li>
+							<li><a href="/mypage/my_save.php">포인트/캐쉬/쿠폰</a></li>
+							<li><a href="/mypage/my_eurail_list.php">유레일패스 예약</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction -->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="">홈</a></li>
+			<li><a href="">마이페이지</a></li>
+			<li>MY 홈</li>
+		</ul>
+	</div>
+	<section class="mypage">
+		<h2 class="center_title">MY홈</h2>
+		<!-- 회원정보 -->
+		<div class="my_info_bx row">
+			<div class="account col-xs-6">
+				<span class="media-left tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+				<div class="media-body">
+					<span class="color_ylw">여행새내기<a href="" class="icon_q_ylw"></a></span>
+					<strong class="user">민다엔젤<span>(김천사)</span></strong>
+					<a href="" class="btn btn-xs btn_border_wh">나의 정보</a>
+				</div>
+			</div>
+			<ul class="my_info_lst col-xs-6 clearfix">
+				<li class="i1">
+					<a href="">
+						<dl>
+							<dt class="color_wh">나의 캐쉬</dt>
+							<dd class="color_ylw">542,222<small>원</small></dd>
+						</dl>
+					</a>
+				</li>
+				<li class="i2">
+					<a href="">
+						<dl>
+							<dt class="color_wh">나의 포인트</dt>
+							<dd class="color_ylw">1,242,000<small>P</small></dd>
+						</dl>
+					</a>
+				</li>
+				<li class="i3">
+					<a href="">
+						<dl>
+							<dt class="color_wh">나의 쿠폰</dt>
+							<dd class="color_ylw">15<small>장</small></dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 나의가이드북 -->
+		<section class="guidebook main_banner slider_bx">
+			<h3 class="sub_title">나의 가이드북<span class="color_org">(12)</span></h3>
+			<ul class="guide_slider">
+				<li>
+					<a href="">
+						<img src="/cust/img/guide1.jpg" alt="">
+						<div class="ban_city">
+							<strong class="thema_tit">피렌체</strong>
+							<dl class="thema_dsc dl-horizontal">
+								<dt>숙소</dt>
+								<dd>10</dd>
+								<dt>여행정보</dt>
+								<dd>23</dd>
+								<dt>여행상품</dt>
+								<dd>23</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="/cust/img/guide2.jpg" alt="">
+						<div class="ban_city">
+							<strong class="thema_tit">산티아고<br>데 콤포스텔라</strong>
+							<dl class="thema_dsc dl-horizontal">
+								<dt>숙소</dt>
+								<dd>10</dd>
+								<dt>여행정보</dt>
+								<dd>23</dd>
+								<dt>여행상품</dt>
+								<dd>23</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="/cust/img/guide3.jpg" alt="">
+						<div class="ban_city">
+							<strong class="thema_tit">맨체스터</strong>
+							<dl class="thema_dsc dl-horizontal">
+								<dt>숙소</dt>
+								<dd>10</dd>
+								<dt>여행정보</dt>
+								<dd>23</dd>
+								<dt>여행상품</dt>
+								<dd>23</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="/cust/img/guide4.jpg" alt="">
+						<div class="ban_city">
+							<strong class="thema_tit">베를린</strong>
+							<dl class="thema_dsc dl-horizontal">
+								<dt>숙소</dt>
+								<dd>10</dd>
+								<dt>여행정보</dt>
+								<dd>23</dd>
+								<dt>여행상품</dt>
+								<dd>23</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- 숙소예약 -->
+		<section>
+			<h3 class="sub_title">숙소 예약</h3>
+			<ul class="my_status_lst tb_bx mb30">
+				<li>
+					<a href="">
+						<span>예약대기</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>예약확정</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>예약불가</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>예약금환불</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>지난예약조회</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>렌터카 예약조회</span>
+						<span class="icon_rentcar"></span>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- 투어예약 -->
+		<section>
+			<h3 class="sub_title">투어 예약</h3>
+			<ul class="my_status_lst tb_bx mb30">
+				<li>
+					<a href="">
+						<span>입금대기</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>예약완료</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>예약취소</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>환불완료</span>
+						<span>1</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- 티켓/패스주문 -->
+		<section>
+			<h3 class="sub_title">티켓/패스 주문</h3>
+			<ul class="my_status_lst tb_bx">
+				<li>
+					<a href="">
+						<span>주문완료</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>주문완료</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>배송중</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>배송완료</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>주문취소</span>
+						<span>1</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>환불완료</span>
+						<span>1</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- 고객센터 -->
+		<div class="tb_bx customer_center">
+			<div class="ct1">
+				<h3>나의 고객센터 문의 <small>민다에 물어보세요</small></h3>
+				<a href="" class="btn btn-xs btn_border_grey">고객센터 문의</a>
+				<ul class="qna_lst"><!-- [D] 데이타 없을시 <li class="nodata">등록된 고객센터 문의가 없습니다.</li> -->
+					<li><a href=""><span class="label bg_grey">질문</span> 예약취소해서 환불받고 싶어요!</a></li>
+					<li><a href=""><span class="label bg_grey">질문</span> 예약취소해서 환불받고 싶어요!</a></li>
+					<li><a href=""><span class="label bg_org">답변</span> 예약취소해서 환불받고 싶어요!</a></li>
+					<li><a href=""><span class="label bg_org">답변</span> 예약취소해서 환불받고 싶어요!</a></li>
+					<li><a href=""><span class="label bg_org">답변</span> 예약취소해서 환불받고 싶어요!</a></li>
+				</ul>
+			</div>
+			<div class="ct2">
+				<h3>나의 Q&amp;A <small>숙소가 궁금해요</small></h3>
+				<ul class="qna_lst">
+					<!-- <li class="nodata">등록된 Q&A가 없습니다.</li> -->
+					<li><a href=""><span class="label bg_grey">질문</span> 공항픽업 관련해서 문의 드려요 </a></li>
+					<li><a href=""><span class="label bg_grey">질문</span> 공항픽업 관련해서 문의 드려요 </a></li>
+					<li><a href=""><span class="label bg_org">답변</span> 공항픽업 관련해서 문의 드려요 </a></li>
+					<li><a href=""><span class="label bg_org">답변</span> 공항픽업 관련해서 문의 드려요 </a></li>
+					<li><a href=""><span class="label bg_org">답변</span> 공항픽업 관련해서 문의 드려요 </a></li>
+				</ul>
+			</div>
+			<div class="ct3">
+				<h3>다녀온 숙소 리뷰 <span class="color_org fs14">(4)</span> <small>리뷰를 남기면 포인트가 쌓여요</small></h3>
+				<div class="slider_bx">
+					<ul class="review_slider">
+						<li>
+							<span>이탈리아 &gt; 베네치아</span>
+							<p>‘베네치아 민박 리에또’에<br>다녀오신 숙소 리뷰를 남겨주세요</p>
+							<a href="" class="btn btn_border_org">리뷰쓰기</a>
+						</li>
+						<li>
+							<span>이탈리아 &gt; 베네치아</span>
+							<p>‘베네치아 민박 리에또’에<br>다녀오신 숙소 리뷰를 남겨주세요</p>
+							<a href="" class="btn btn_border_org">리뷰쓰기</a>
+						</li>
+						<li>
+							<span>이탈리아 &gt; 베네치아</span>
+							<p>‘베네치아 민박 리에또’에<br>다녀오신 숙소 리뷰를 남겨주세요</p>
+							<a href="" class="btn btn_border_org">리뷰쓰기</a>
+						</li>
+						<li>
+							<span>이탈리아 &gt; 베네치아</span>
+							<p>‘베네치아 민박 리에또’에<br>다녀오신 숙소 리뷰를 남겨주세요</p>
+							<a href="" class="btn btn_border_org">리뷰쓰기</a>
+						</li>
+					</ul>
+				</div>
+<script>
+	$(function  () {
+		//가이드 슬라이드
+		$('.guide_slider').bxSlider({
+			minSlides:4,
+			maxSlides:4,
+			pager:false,
+			slideWidth:250,
+			slideMargin:10,
+			infiniteLoop: true,
+			onSliderLoad: function(){
+				$('.guide_slider').closest('.slider_bx').addClass('bx_open');
+			}
+		});
+
+		//하단공지
+		$('.review_slider').bxSlider({
+			controls:false,
+			moveSlides:2,
+			minSlides:2,
+			maxSlides:2,
+			mode:'vertical',
+			infiniteLoop: false,
+			onSliderLoad: function(){
+				$('.review_slider').closest('.slider_bx').addClass('bx_open');
+			}
+		});
+	})
+</script>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

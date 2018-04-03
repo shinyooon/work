@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D]
+닫기만 있는 메뉴 class="page_clse"
+흰배경 class="bg_wh" -->
+<body class="page_clse bg_wh">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1><a href="">리뷰 작성하기</a></h1>
+		<a class="icon_hd_clse" href="">닫기</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+<!-- 페이지 시작-->
+<div class="frm_wrp">
+	<!-- 리뷰작성안내 -->
+	<section class="bx accordion">
+		<h2 class="bx_hd"><a href="" class="acc_btn color_mint"><i class="icon_alert_circle"></i>리뷰 작성 안내</a></h2>
+		<div class="bx_cnt acc_cnt" style="display:none">
+			<ul class="lst_type_dot fs12">
+				<li>예약진행상태가 '예약가능-입금대기'인 예약은 지금 바로 예약금을 결제해주셔야 예약이 취소되지 않습니다. </li>
+				<li>예약취소를 원하실 경우는 해당 예약의 '예약번호'를 클릭하시면, 상세페이지에서 '예약취소'를 하실 수 있습니다.</li>
+				<li>예약진행상태가 '예약확정-입금완료'인 예약은 [상세보기] 페이지에서 숙소연락처를 확인해 보실 수 있습니다.</li>
+			</ul>
+		</div>
+	</section>
+
+	<form action=".">
+		<div class="bx_cnt border_grey">
+			<div class="room_lst v3 media">
+				<div class="media-left">
+					<div class="tmb_wrp">
+						<a href=""><img src="_temp/room.png" alt=""></a>
+					</div>
+				</div>
+				<div class="media-body media-middle">
+					<h3 class="ellipsis">남성전용도미토리룸</h3>
+					<div class="meta color_grey">이탈리아 &gt; 로마</div>
+					<span class="meta">주소 :  10f 70-6 No~</span>
+				</div>
+			</div>
+		</div>
+		<div class="form-group mt15">
+			<select class="btn btn-default btn-block btn-lg w2" title="연령대선택">
+				<option>20~24세</option>
+			</select>
+		</div>
+		<input type="text" class="form-control mb5" placeholder="남자" title="성별입력">
+		<input type="text" class="form-control" placeholder="2016년 03월 11일 부터 2박" title="기간입력">
+		<!-- 위치 -->
+		<div class="rating_wrp v2">
+			<span class="color_blk fs15 fw500">위치</span>
+			<div class="border_grey clearfix">
+				<div class="choicerating pull-left">
+					<label class="on"><input type="radio" name="rating" class="sr-only">1.0</label>
+					<label class="on"><input type="radio" name="rating" class="sr-only">2.0</label>
+					<label class="on"><input type="radio" name="rating" class="sr-only">3.0</label>
+					<label class="on"><input type="radio" name="rating" class="sr-only">4.0</label>
+					<label><input type="radio" name="rating" class="sr-only">5.0</label>
+				</div>
+				<span class="txt color_org pull-right">4.0</span>
+			</div>
+		</div>
+		<!-- 시설 -->
+		<div class="rating_wrp v2">
+			<span class="color_blk fs15 fw500">시설</span>
+			<div class="border_grey clearfix">
+				<div class="choicerating pull-left">
+					<label class="on"><input type="radio" name="rating2" class="sr-only">1.0</label>
+					<label class="on"><input type="radio" name="rating2" class="sr-only">2.0</label>
+					<label class="on"><input type="radio" name="rating2" class="sr-only">3.0</label>
+					<label class="on"><input type="radio" name="rating2" class="sr-only">4.0</label>
+					<label><input type="radio" name="rating2" class="sr-only">5.0</label>
+				</div>
+				<span class="txt color_org pull-right">4.0</span>
+			</div>
+		</div>
+		<!-- 스텝 -->
+		<div class="rating_wrp v2">
+			<span class="color_blk fs15 fw500">스텝</span>
+			<div class="border_grey clearfix">
+				<div class="choicerating pull-left">
+					<label class="on"><input type="radio" name="rating3" class="sr-only">1.0</label>
+					<label class="on"><input type="radio" name="rating3" class="sr-only">2.0</label>
+					<label class="on"><input type="radio" name="rating3" class="sr-only">3.0</label>
+					<label class="on"><input type="radio" name="rating3" class="sr-only">4.0</label>
+					<label><input type="radio" name="rating3" class="sr-only">5.0</label>
+				</div>
+				<span class="txt color_org pull-right">4.0</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="reviewCmt" class="color_blk fs15 fw500">코멘트</label>
+			<textarea id="reviewCmt" class="form-control" rows="10"></textarea>
+		</div>
+
+		<div class="btm_fixed mt10 pa10 bg_wh">
+			<div class="row">
+				<span class="col-xs-6 pr4"><button type="button" class="btn btn-xl btn-block bg_org">등록</button></span>
+				<span class="col-xs-6 pl4"><button type="button" class="btn btn-xl btn-block bg_dark_grey">취소</button></span>
+			</div>
+		</div>
+	</form>
+
+
+<script>
+	$('.choicerating label').click(function(){
+		var txt=$(this).text();
+		$(this).parent().next('.txt').text(txt);
+		$(this).addClass('on').prevAll().addClass('on').end().nextAll().removeClass('on')
+		return false;
+	});
+</script>
+
+
+</div>
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<script>
+jQuery(function($){
+	$(".acc_btn").on('click',function  () {
+		$(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+		return false;
+	});
+});
+</script>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

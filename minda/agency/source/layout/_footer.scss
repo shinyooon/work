@@ -1,0 +1,25 @@
+.footer{
+	&__wrap {
+		padding:20px 0 20px 297px;
+		border-top:1px solid #e1e8ec;;
+	}
+	&__copy{
+		@include text($color__grey,12px);
+		display:inline-block;
+		margin-top:8px;
+	}
+	&__btn{
+		@include btn(#e6eaf1, xs);
+		vertical-align:top;
+		margin:0 0 0 20px;
+	}
+
+}
+
+.body--full{
+	.footer__wrap{
+		padding-left:0;
+		width:1243px;
+		margin:0 auto;
+	}
+}

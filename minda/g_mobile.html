@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/nanoscroller.css">
+	<!-- <link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+	header {position:fixed;top:0;background:#fff;z-index:50;width:100%;height:80px;}
+	#wrap {position:relative;padding:60px 0 0 0;}
+	h1 {padding:10px;font-size:25px;}
+	.tb-filelist th, .tb-filelist td {padding:5px;}
+	.tb-filelist tbody td {font-size:13px;}
+	td.ing {color:red;}
+	.link,.link:hover,.link:active,.link:focus{text-decoration:underline;}
+	.tab-content>.tab-pane {display:none;}
+	.tab-content>.tab-pane.active {display:block;}
+	.tab-content {padding-bottom:50px;vertical-align:top}
+	.state {color:#004fd3;}
+	.state.ing {color:red;}
+	.room_detail_hd [class*=basic_step] {line-height:50px;}
+	.room_detail_hd .basic_step2 li a {font-size:15px;}
+	.lnb-guide li {margin:0 10px 5px;}
+	.lnb-guide li.active a {background-color:#f58850 !important;}
+	h4{margin:30px 0 15px;font-weight:bold;color:#333;}
+	h5 {margin:20px 0 5px;color:#333;font-weight:bold;}
+	xmp{margin:0;display:inline-block;}
+	.list-default li {margin-bottom:10px;}
+	.lnb-guide {position:fixed;top:95px;width:200px;left:10px;}
+	pre {padding:10px 10px 0;margin:10px 0;}
+	pre code {display:block;margin-bottom:-25px;color:#7a1c3d;}
+</style>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+			<header class="clearfix">
+				<h1 class="pull-left">Minda html 파일리스트</h1>
+				<!-- <div class="room_detail_hd">
+					<ul class="basic_step2 tb_fixed mt0">
+						<li><a href="index.html">[웹]여행자</a></li>
+						<li><a href="partner.html">[웹]파트너</a></li>
+						<li><a href="mobile.html">모바일</a></li>
+						<li><a href="manager.html">[웹]관리자</a></li>
+						<li><a href="tourticket.html">[신규]투어</a></li>
+						<li  class="active"><a href="g_web.html">가이드</a></li>
+					</ul>
+				</div> -->
+				<ul class="pull-right text-right">
+					<li class="pa10"><a href="g_web.html" class="color_red" style="font-size:18px;font-weight:bold;border-bottom:1px solid red">&lt; 웹가이드 바로가기</a></li>
+					<!-- <li class="active"><a href="g_mobile.html">모바일 </a></li> -->
+				</ul>
+			</header>
+			<div class="tab-content tb_bx tb_fixed">
+				<!-- 가이드 contents-->
+				<div class="tb_cell" style="width:200px; vertical-align:top;">
+					<h2 class="sr-only">가이드</h2>
+					<ul class="lnb-guide">
+						<li class="active"><a href="#pd_list" data-toggle="tab" class="btn d_block bg_grey btn-lg">상품 목록</a></li>
+						<li><a href="#list" data-toggle="tab" class="btn d_block bg_grey btn-lg">리스트</a></li>
+						<li><a href="#tap" data-toggle="tab" class="btn d_block bg_grey btn-lg">탭</a></li>
+						<li><a href="#button" data-toggle="tab" class="btn d_block bg_grey btn-lg">버튼</a></li>
+						<li><a href="#icon" data-toggle="tab" class="btn d_block bg_grey  btn-lg">아이콘</a></li>
+						<li><a href="#input" data-toggle="tab" class="btn d_block bg_grey btn-lg">입력폼</a></li>
+						<li><a href="#table" data-toggle="tab" class="btn d_block bg_grey btn-lg">테이블</a></li>
+						<li><a href="#color" data-toggle="tab" class="btn d_block bg_grey btn-lg">컬러/텍스트</a></li>
+						<li><a href="#pop" data-toggle="tab" class="btn d_block bg_grey btn-lg">팝업/box</a></li>
+						<!-- <li><a href="#slide" data-toggle="tab" class="btn d_block bg_grey btn-lg">슬라이드</a></li> -->
+					</ul>
+				</div>
+				<div class="tab-content pl30 pr30 pt30 tb_cell" style="text-align:left;">
+					<div class="tab-pane active" id="pd_list">
+						<h3>상품 목록 가이드</h3>
+						<div class="w1100 ma0">
+							<h4>- 스팟, 투어, 파트너 숙소 목록</h4>
+							<!-- 목록 -->
+							<ul class="item_card_lst v2">
+								<li>
+									<a href="">
+										<div class="tmb pr">
+											<img class="img-responsive" src="mobile/_temp/tmb4.jpg" alt="">
+											<!-- 2017-03-22 저장 버튼 추가 -->
+											<div class="ribbon_wrp">
+												<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+											</div>
+										</div>
+										<div class="btm_info">
+											<div class="itemwrp media">
+												<div class="media-body">
+													<h2 class="tit ellipsis"><span class="color_org">명소</span><span class="color_dark_blue">맛집</span><span class="color_red">쇼핑</span><span class="color_blue">기타</span>내셔널 갤러리</h2>
+													<div class="info-detail">
+														<div class="left">
+															<div class="d_iblock">현지인 리얼팁 <span>12</span></div>
+														</div>
+														<div class="right cnt w140">
+															<div class="d_iblock">리뷰 <span>458</span></div>
+															<!-- 2017-03-22 저장 텍스트 삭제 -->
+															<!-- <i class="split"></i>
+															<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<!-- [D] 2017-03-22 파트너 사진 및 이름이 위로 올라옴 partner-info -->
+										<div class="partner-info media">
+											<div class="media-left">
+												<div class="tmb_wrp">
+													<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+													<span class="badge badge_gold">금뱃지</span>
+												</div>
+											</div>
+											<div class="media-body">
+												<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+											</div>
+										</div>
+										<!--// partner-ionfo -->
+										<div class="tmb pr">
+											<img class="img-responsive" src="mobile/_temp/tmb4.jpg" alt="">
+											<!-- 2017-03-22 저장 버튼 추가 -->
+											<div class="ribbon_wrp">
+												<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+											</div>
+											<!-- <div class="price_wrp"> 1인 <span class="price">€50</span> </div> -->
+										</div>
+										<div class="btm_info">
+											<div class="itemwrp media">
+												<!-- <div class="media-left">
+													<div class="tmb_wrp">
+														<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+														<span class="badge badge_gold">금뱃지</span>
+													</div>
+												</div> -->
+												<div class="media-body">
+													<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+													<!-- 2017-03-22 info-detail 내용 바뀜-->
+													<div class="info-detail">
+														<div class="left split_lst">
+															<div class="city">파리</div><!-- 파트너 목옥에 보여주는 투어 일 때 도시 노출 -->
+															<div class="dot_lst">
+																<span>현지투어</span>
+																<span>3시간</span>
+															</div>
+														</div>
+														<div class="right">
+															<div class="price_wrp"> 1인 <span class="price color_red font_lato">€50</span> </div>
+														</div>
+													</div>
+													<!-- 2017-03-22 btmwrp [D] btmwrap 영역 추가됨 -->
+													<div class="btmwrp clearfix">
+														<div class="span pull-left">
+															<span>리뷰</span>
+															<span>223</span>
+														</div>
+														<div class="pull-right tag-area">
+															<span>#시내투어</span>
+															<span>#박물관/미술관</span>
+															<span>#먹방투어</span>
+														</div>
+													</div>
+													<!--// btmwrp -->
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="tmb pr">
+											<img class="img-responsive" src="http://www.theminda.com/data/tum/goods_room/0_575ae7c1b3588.JPG" alt="">
+											<div class="ribbon_wrp">
+												<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+											</div>
+											<div class="price_wrp"> 개인실 <span class="price">AU$98~ </span> </div>
+										</div>
+										<div class="btm_info">
+											<div class="itemwrp media">
+												<div class="media-body">
+													<h2 class="tit ellipsis"><span class="icon_now_lg mr5">즉시예약</span>멜버른 랄랄라칼튼 비앤비</h2>
+													<div class="info-detail">
+														<div class="left">
+															<!-- <div class="d_iblock">여행정보 <span>200</span></div>
+															여행정보가 0개일때는 미노출 -->
+														</div>
+														<div class="right cnt">
+															<div class="d_iblock">리뷰 <span>458</span></div>
+															<!-- <i class="split"></i>
+															<div class="d_iblock">저장 <span class="sel_save_cnt">9</span></div> -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<pre>
+<code><?php print htmlentities ('<ul class="item_card_lst v2">
+	<li>
+		<a href="">
+			<!-- [D] 투어 에만 들어가는 영역 -->
+			<div class="partner-info media">
+				<div class="media-left">
+					<div class="tmb_wrp">
+						<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+						<span class="badge badge_gold">금뱃지</span>
+					</div>
+				</div>
+				<div class="media-body">
+					<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+				</div>
+			</div>
+			<!--// partner-ionfo -->
+			<div class="tmb pr">
+				<img class="img-responsive" src="mobile/_temp/tmb4.jpg" alt="">
+				<div class="ribbon_wrp">
+					<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+				</div>
+			</div>
+			<div class="btm_info">
+				<!-- btm_info 내용은 따로 정리 -->
+			</div>
+		</a>
+	</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+							</pre>
+							<h4>- 일정(세로)</h4>
+							<ul class="item_card_lst v2"><!-- v2클래스 추가 -->
+								<li>
+									<a href="">
+										<div class="tmb pr">
+											<div class="plan-tmb-wrap">
+												<!-- 2017-03-22 텍스트 영석 삭제되고 저장버튼 추가됨 -->
+												<ul class="lst-plan-tmb">
+													<li>
+														<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_1.jpg" alt=""></div>
+														<!-- <div class="tit"><span><span class="twoline">셜록홈스 펍</span></span></div> -->
+													</li>
+													<li>
+														<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_2.jpg" alt=""></div>
+														<!-- <div class="tit"><span><span class="twoline">스피디 샌드위치 바 &amp; 카페</span></span></div> -->
+													</li>
+													<li>
+														<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_3.jpg" alt=""></div>
+														<!-- <div class="tit"><span><span class="twoline">셜록홈즈 박물관셜록홈즈 박물관셜록홈즈 박물관셜록홈즈 박물관셜록홈즈 박물관셜록홈즈 박물관셜록홈즈 박물관</span></span></div> -->
+													</li>
+												</ul>
+												<!-- <div class="more-area">
+													<p class="txt">총 <span class="color_ylw">8개</span>의 스팟이 있습니다</p>
+												</div> -->
+											</div>
+											<div class="ribbon_wrp">
+												<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+											</div>
+										</div>
+										<div class="btm_info">
+											<div class="itemwrp media">
+												<div class="media-body">
+													<h2 class="tit ellipsis">셜록홈즈 테마여행</h2>
+													<div class="info-detail">
+														<div class="left meta">
+															<span class="name"><span class="ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+														</div>
+														<div class="right cnt w140">
+															<div class="d_iblock">리뷰 <span>458</span></div>
+															<!-- <i class="split"></i>
+															<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<pre>
+<code><?php print htmlentities ('<ul class="item_card_lst v2">
+	<li>
+		<a href="">
+			<div class="tmb pr">
+				<div class="plan-tmb-wrap">
+					<ul class="lst-plan-tmb">
+						<li>
+							<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_1.jpg" alt=""></div>
+						</li>
+						<li>
+							<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_2.jpg" alt=""></div>
+						</li>
+						<li>
+							<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_3.jpg" alt=""></div>
+						</li>
+					</ul>
+				</div>
+				<div class="ribbon_wrp">
+					<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+				</div>
+			</div>
+			<div class="btm_info">
+				<!-- btm_info 내용은 따로 정리 -->
+			</div>
+		</a>
+	</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+							</pre>
+							<h4>- 가로리스트 투어 + 일정 + 장소</h4>
+							<section class="nearspot2">
+								<!-- 목록 -->
+								<ul class="item_card_lst card_slide v2">
+									<li>
+										<a href="">
+											<!-- [D] 투어 에만 들어가는 영역 -->
+											<div class="partner-info media">
+												<div class="media-left">
+													<div class="tmb_wrp">
+														<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+														<span class="badge badge_gold">금뱃지</span>
+													</div>
+												</div>
+												<div class="media-body">
+													<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+												</div>
+											</div>
+											<!--// partner-ionfo -->
+											<div class="tmb pr">
+												<img class="img-responsive" src="mobile/_temp/tmb4.jpg" alt="">
+												<div class="ribbon_wrp">
+													<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+												</div>
+												<!-- <div class="price_wrp"> 1인 <span class="price">€50</span> </div> -->
+											</div>
+											<div class="btm_info">
+												<div class="itemwrp media">
+													<!-- <div class="media-left">
+														<div class="tmb_wrp">
+															<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+															<span class="badge badge_gold">금뱃지</span>
+														</div>
+													</div> -->
+													<div class="media-body">
+														<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+														<div class="info-detail">
+															<div class="left split_lst">
+																<div class="city">파리</div><!-- 파트너 목옥에 보여주는 투어 일 때 도시 노출 -->
+																<div class="dot_lst">
+																	<span>현지투어</span>
+																	<span>3시간</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="price_wrp"> 1인 <span class="price color_red font_lato">€50</span> </div>
+															</div>
+														</div>
+														<!-- 2017-03-22 btmwrp [D] btmwrap 영역 추가됨 -->
+														<div class="btmwrp clearfix">
+															<div class="span pull-left">
+																<span>리뷰</span>
+																<span>223</span>
+															</div>
+															<div class="pull-right tag-area">
+																<span>#시내투어</span>
+																<span>#박물관/미술관</span>
+																<span>#먹방투어</span>
+															</div>
+														</div>
+														<!--// btmwrp -->
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="tmb pr">
+												<div class="plan-tmb-wrap">
+													<ul class="lst-plan-tmb">
+														<li>
+															<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_1.jpg" alt=""></div>
+														</li>
+														<li>
+															<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_2.jpg" alt=""></div>
+														</li>
+														<li>
+															<div class="img-wrap"><img class="pos-center" src="http://www.theminda.com/data/travel/image/thumb/201610/1475968477_3.jpg" alt=""></div>
+														</li>
+													</ul>
+												</div>
+												<div class="ribbon_wrp">
+													<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+												</div>
+											</div>
+											<div class="btm_info">
+												<div class="itemwrp media">
+													<div class="media-body">
+														<h2 class="tit ellipsis">셜록홈즈 테마여행</h2>
+														<div class="info-detail">
+															<div class="left meta">
+																<span class="name"><span class="ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+															</div>
+															<div class="right cnt w140">
+																<div class="d_iblock">리뷰 <span>458</span></div>
+																<!-- <i class="split"></i>
+																<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="tmb pr">
+												<img class="img-responsive" src="mobile/_temp/tmb4.jpg" alt="">
+												<div class="ribbon_wrp">
+													<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장됨</button>
+												</div>
+											</div>
+											<div class="btm_info">
+												<div class="itemwrp media">
+													<div class="media-body">
+														<h2 class="tit ellipsis"><span class="color_org">명소</span><span class="color_dark_blue">맛집</span><span class="color_red">쇼핑</span><span class="color_blue">기타</span>내셔널 갤러리</h2>
+														<div class="info-detail">
+															<div class="left">
+																<div class="d_iblock">현지인 리얼팁 <span>12</span></div>
+															</div>
+															<div class="right cnt w140">
+																<div class="d_iblock">리뷰 <span>458</span></div>
+																<!-- 2017-03-22 저장 텍스트 삭제 -->
+																<!-- <i class="split"></i>
+																<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</section>
+							<pre>
+<code><?php print htmlentities ('<section class="nearspot2">
+	<ul class="item_card_lst card_slide v2">
+		<li>
+			<a href="">
+				<div class="tmb pr">
+					<img class="img-responsive" src="mobile/_temp/tmb4.jpg" alt="">
+					<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+				</div>
+				<div class="btm_info">
+					<!-- btm_info 내용은 따로 정리 -->
+				</div>
+			</a>
+		</li>
+	</ul>
+</section>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+							</pre>
+							<h4>- btm_info 만 따로 정리</h4>
+							<h5>1) 투어 목록 기본</h5>
+							<div class="item_card_lst v2">
+								<div class="btm_info">
+									<div class="itemwrp media">
+										<!-- <div class="media-left">
+											<div class="tmb_wrp">
+												<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+												<span class="badge badge_gold">금뱃지</span>
+											</div>
+										</div> -->
+										<div class="media-body">
+											<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+											<!-- 2017-03-22 info-detail 내용 바뀜-->
+											<div class="info-detail">
+												<div class="left split_lst">
+													<div class="city">파리</div><!-- 파트너 목옥에 보여주는 투어 일 때 도시 노출 -->
+													<div class="dot_lst">
+														<span>현지투어</span>
+														<span>3시간</span>
+													</div>
+												</div>
+												<div class="right">
+													<div class="price_wrp"> 1인 <span class="price color_red font_lato">€50</span> </div>
+												</div>
+											</div>
+											<!-- 2017-03-22 btmwrp [D] btmwrap 영역 추가됨 -->
+											<div class="btmwrp clearfix">
+												<div class="span pull-left">
+													<span>리뷰</span>
+													<span>223</span>
+												</div>
+												<div class="pull-right tag-area">
+													<span>#시내투어</span>
+													<span>#박물관/미술관</span>
+													<span>#먹방투어</span>
+												</div>
+											</div>
+											<!--// btmwrp -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<h5>2) 투어 목록 (가로 슬라이드 내)</h5>
+							<div class="item_card_lst v2">
+								<div class="btm_info">
+									<div class="itemwrp media">
+										<!-- <div class="media-left">
+											<div class="tmb_wrp">
+												<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+												<span class="badge badge_gold">금뱃지</span>
+											</div>
+										</div> -->
+										<div class="media-body">
+											<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+											<!-- 2017-03-22 info-detail 내용 바뀜-->
+											<div class="info-detail">
+												<div class="left split_lst">
+													<div class="city">파리</div><!-- 파트너 목옥에 보여주는 투어 일 때 도시 노출 -->
+													<div class="dot_lst">
+														<span>현지투어</span>
+														<span>3시간</span>
+													</div>
+												</div>
+												<div class="right">
+													<div class="price_wrp"> 1인 <span class="price color_red font_lato">€50</span> </div>
+												</div>
+											</div>
+											<!-- 2017-03-22 btmwrp [D] btmwrap 영역 추가됨 -->
+											<div class="btmwrp clearfix">
+												<div class="span pull-left">
+													<span>리뷰</span>
+													<span>223</span>
+												</div>
+												<div class="pull-right tag-area">
+													<span>#시내투어</span>
+													<span>#박물관/미술관</span>
+													<span>#먹방투어</span>
+												</div>
+											</div>
+											<!--// btmwrp -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<h5>3) 스팟 목록 기본</h5>
+							<div class="item_card_lst v2">
+								<div class="btm_info">
+									<div class="itemwrp media">
+										<div class="media-body">
+											<h2 class="tit ellipsis"><span class="color_org">명소</span>내셔널 갤러리</h2>
+											<div class="info-detail">
+												<div class="left">
+													<div class="d_iblock">현지인 리얼팁 <span>12</span></div>
+												</div>
+												<div class="right cnt w140">
+													<div class="d_iblock">리뷰 <span>458</span></div>
+													<!-- <i class="split"></i>
+													<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h5>4) 스팟 목록 - 파트너 목록에서 볼 때</h5>
+							<div class="item_card_lst v2">
+								<div class="btm_info">
+									<div class="itemwrp media">
+										<div class="media-body">
+											<h2 class="tit ellipsis"><span class="color_org">명소</span>내셔널 갤러리</h2>
+											<div class="info-detail">
+												<div class="left">
+													<div class="d_iblock">추천스팟</div>
+													<i class="split"></i>
+													<div class="d_iblock">숙소에서 <span>3</span>분 거리</div>
+												</div>
+												<div class="right cnt w140">
+													<div class="d_iblock">리뷰 <span>458</span></div>
+													<!-- <i class="split"></i>
+													<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h5>5) 일정 목록</h5>
+							<div class="item_card_lst v2">
+								<div class="btm_info">
+									<div class="itemwrp media">
+										<div class="media-body">
+											<h2 class="tit ellipsis">셜록홈즈 테마여행</h2>
+											<div class="info-detail">
+												<div class="left meta">
+													<span class="name"><span class="ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+												</div>
+												<div class="right cnt w140">
+													<div class="d_iblock">리뷰 <span>458</span></div>
+													<!-- <i class="split"></i>
+													<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">999</span></div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h5>6) 파트너 목록 내 숙소 목록</h5>
+							<div class="item_card_lst v2">
+								<div class="btm_info">
+									<div class="itemwrp media">
+										<div class="media-body">
+											<h2 class="tit ellipsis"><span class="icon_now_lg mr5">즉시예약</span>멜버른 랄랄라칼튼 비앤비</h2>
+											<div class="info-detail">
+												<div class="left">
+													<div class="d_iblock">여행정보 <span>200</span></div>
+												</div>
+												<div class="right cnt">
+													<div class="d_iblock">리뷰 <span>458</span></div>
+													<!-- <i class="split"></i>
+													<div class="d_iblock">저장 <span class="sel_save_cnt">9</span></div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<pre>
+<code><?php print htmlentities ('<div class="item_card_lst v2">
+	<div class="btm_info">
+		<div class="itemwrp media">
+			<div class="media-body">
+				<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+				<div class="info-detail">
+					<div class="left">
+						<!-- 투어 -->
+						<div class="dot_lst">
+							<span>현지투어</span>
+							<span>3시간</span>
+						</div>
+						<!-- <div class="d_iblock">현지인 리얼팁 <span>12</span></div>--> <!-- 스팟 목록-->
+						<!-- <div class="d_iblock">숙소에서 <span>3</span>분 거리</div>--> <!--  스팟 목록 type2 -->
+						<!-- <span class="name"><span class="ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>--> <!-- 일정 목록 -->
+						<!-- <div class="d_iblock">여행정보 <span>200</span></div>--> <!-- 파트너 숙소 목록-->
+					</div>
+
+					<!-- 투어, 파트너 숙소 목록 -->
+					<div class="right cnt">
+						<div class="price_wrp"> 1인 <span class="price color_red font_lato">€50</span> </div>
+					</div>
+					<!-- 스팟, 일정 목록 -->
+					<!-- <div class="right cnt w140">
+						<div class="d_iblock">리뷰 <span>458</span></div>
+					</div>-->
+				</div>
+				<!-- 투어에만 들어가는 부분 -->
+				<div class="btmwrp clearfix">
+					<div class="span pull-left">
+						<span>리뷰</span>
+						<span>223</span>
+					</div>
+					<div class="pull-right tag-area">
+						<span>#시내투어</span>
+						<span>#박물관/미술관</span>
+						<span>#먹방투어</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+							</pre>
+							<h4>- 숙소리트스</h4>
+							<h5>1) 검색 결과 숙소 리스트</h5>
+							<ul class="room_lst">
+								<li>
+									<div class="media" href="">
+										<div class="media-left">
+											<div class="tmb_wrp">
+												<a href=""><img src="mobile/_temp/room.png" alt=""></a>
+												<div class="ribbon_wrp">
+													<i class="icon_ribbon_wish">위시리스트</i>
+												</div>
+											</div>
+										</div>
+										<div class="media-body">
+											<div class="star_wrp">
+												<h3 class="twoline ">
+													<!-- 즉시 -->
+													<i class="icon_now"></i>
+													로마 자고가 하우스 (Jagoga House)
+													<!-- 신규 -->
+													<span class="label bg_org">신규</span>
+													<span class="label bg_mint">할인</span>
+													<span class="label bg_ylw">쿠폰</span>
+												</h3>
+											</div>
+											<div class="price">
+												<span>도미토리</span>
+												<s class="before_price color_grey">€42</s>
+												<span class="current_price">€30</span>
+											</div>
+											<div class="meta">
+												<!-- 여행정보 개선 수정 -->
+												<div class="star_wrp d_iblock ">
+													<!-- 별점 -->
+													<span class="starrating" title="4.38 ">
+														<span style="width:87.6% ">4.38</span>
+													</span>
+													<!--리뷰 수 -->
+													<span class="color_org">(<span>100</span>)</span>
+												</div>
+												<!-- <i class="split "></i>
+												<a href="javascript:; " class="item_reviw ">리뷰<span class="color_mint">(<span>404</span>)</span></a> -->
+												<i class="split "></i> 저장
+												<span class="color_org"> <span>433</span></span>
+												<i class="split "></i> 여행정보
+												<span class="color_org"> <span>100</span></span>
+												<!--// 여행정보 개선 수정 -->
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media" href="">
+										<div class="media-left">
+											<div class="tmb_wrp">
+												<a href=""><img src="mobile/_temp/room.png" alt=""></a>
+												<div class="ribbon_wrp">
+													<!-- [D] 한 경우 -->
+													<i class="icon_ribbon on">위시리스트</i>
+												</div>
+											</div>
+										</div>
+										<div class="media-body">
+											<div class="star_wrp">
+												<h3 class="twoline">
+													<!-- 즉시 -->
+													<i class="icon_now"></i>
+													로마 자고가 하우스 (Jagoga House)
+													<span class="label bg_org">신규</span>
+													<span class="label bg_mint">할인</span>
+													<span class="label bg_ylw">쿠폰</span>
+												</h3>
+											</div>
+											<div class="price">
+												<s class="before_price color_grey">€42</s>
+												<span class="current_price">€30</span>
+											</div>
+											<div class="meta">
+												<!-- 여행정보 개선 수정 -->
+												<div class="star_wrp d_iblock ">
+													<!-- 별점 -->
+													<span class="starrating " title="4.38 ">
+														<span style="width:87.6% ">4.38</span>
+													</span>
+													<!--리뷰 수 -->
+													<span class="color_org">(<span>100</span>)</span>
+												</div>
+												<!-- <i class="split "></i>
+												<a href="javascript:; " class="item_reviw ">리뷰<span class="color_mint">(<span>404</span>)</span></a> -->
+												<i class="split "></i> 저장
+												<span class="color_org"> <span>433</span></span>
+												<i class="split "></i> 여행정보
+												<span class="color_org"> <span>100</span></span>
+												<!--// 여행정보 개선 수정 -->
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h5>2) 숙소 상세 페이지 내 숙소리스트</h5>
+							<ul class="room_lst v2">
+								<li>
+									<div class="media">
+										<div class="media-left">
+											<div class="tmb_wrp">
+												<a href=""><img src="mobile/_temp/room.png" alt=""></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<div class="cate">
+												<span class="color_org">도미토리</span>
+											</div>
+											<h3 class="ellipsis">남성전용도미토리룸</h3>
+											<div class="meta">
+												객실정원 : 1~5명 <i class="split"></i> 최소예약 : 2박이상
+											</div>
+											<div class="price">
+												<span>1인 1박<span class="color_org">US$50</span></span>
+												<button type="button" class="btn btn-sm bg_mint"><span class="icon_rightnow"></span>즉시예약</button>
+												<div class="room_data_class" data-idx="0" data-able="1" data-roomno="41975" data-roomnm="세렌디피티(4인 여성쉐어룸)" data-grpno="0" data-minperiod="5">
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h5>3) 숙소 이벤트 내 숙소 리스트</h5>
+							<ul class="room_lst">
+								<li>
+									<div class="media">
+										<div class="media-left">
+											<div class="tmb_wrp">
+												<a href=""><img src="mobile/_temp/room.png" alt=""></a>
+												<div class="ribbon_wrp">
+													<!-- [D] 한 경우 -->
+													<i class="icon_ribbon on">위시리스트</i>
+												</div>
+											</div>
+										</div>
+										<div class="media-body">
+											<h2 class="ellipsis tit mt2">피렌체 마피아 하우스</h2>
+											<div class="fs11 ellipsis mb3">도미토리 [객실소개 확인필!/1인예약 불가]</div>
+											<div class="meta">
+												<i class="icon_calendar2"></i> 2016.03.01~2016.03.30
+											</div>
+											<div class="price clearfix fs13 mt5 mb0">
+												<div class="pull-left">
+													<span class="before_price color_mint mt5">45.5%</span>
+												</div>
+												<div class="pull-right">
+													<s class="before_price mr5 color_grey mt5">US$198</s>
+													<strong class="color_mint fs16 mr10">US$108</strong>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<pre>
+<code><?php print htmlentities ('<ul class="room_lst">
+	<li>
+		<a href="">
+			<div class="media" href="">
+				<div class="media-left">
+					<div class="tmb_wrp">
+						<a href=""><img src="mobile/_temp/room.png" alt=""></a>
+						<div class="ribbon_wrp">
+							<!-- [D] 한 경우 -->
+							<i class="icon_ribbon on">위시리스트</i>
+						</div>
+					</div>
+				</div>
+				<div class="media-body">
+					<div class="star_wrp">
+						<h3 class="twoline">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+							<span class="label bg_org">신규</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</h3>
+					</div>
+					<div class="price">
+						<span>도미토리</span>
+						<s class="before_price color_grey">€42</s>
+						<span class="current_price">€30</span>
+					</div>
+					<div class="meta">
+						<div class="star_wrp d_iblock ">
+							<!-- 별점 -->
+							<span class="starrating " title="4.38 ">
+								<span style="width:87.6% ">4.38</span>
+							</span>
+							<!--리뷰 수 -->
+							<span class="color_org">(<span>100</span>)</span>
+						</div>
+						<i class="split "></i> 저장
+						<span class="color_org"> <span>433</span></span>
+						<i class="split "></i> 여행정보
+						<span class="color_org"> <span>100</span></span>
+						<!--// 여행정보 개선 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+	</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+							</pre>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-pane" id="list">
+						<h3>리스트(텍스트) 가이드</h3>
+						<h4>- 텍스트리스트</h4>
+						<h5>1) bar 리스트</h5>
+						<ul class="lst_type_basic">
+							<li>티켓이 훼손된 경우 등 상품가치를 상실한 경우에는 환불이 불가능합니다.</li>
+							<li>취소 접수 후 5일이내 상품을 다시 반품해 주셔야 합니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="lst_type_basic">
+	<li>티켓이 훼손된 경우 등 상품가치를 상실한 경우에는 환불이 불가능합니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>2) 점 리스트</h5>
+						<ul class="lst_type_dot">
+							<li>아래 다녀오신 숙소에 대해 '리뷰' 글을 올려주시면, 포인트를 적립해 드립니다</li>
+							<li>리뷰글 작성은 체크인 날짜 기준으로 6개월까지 작성이 가능하며, 6개월 이후 작성이 불가합니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="lst_type_dot">
+	<li>아래 다녀오신 숙소에 대해 "리뷰"" 글을 올려주시면, 포인트를 적립해 드립니다</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>3) 별 리스트</h5>
+						<ul class="lst_type_star">
+							<li>로마 떼르미니역에서 도보로 2분거리 </li>
+						</ul>
+						<ul class="lst_type_star v_org">
+							<li>산타마리아 성당까지 도보로 3분거리</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="lst_type_star">
+	<li>로마 떼르미니역에서 도보로 2분거리 </li>
+</ul>
+
+<ul class="lst_type_star v_org">
+	<li>로마 떼르미니역에서 도보로 2분거리 </li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>4) alert 리스트</h5>
+						<ul class="lst_type_alert">
+							<li>나머지 숙박요금은 <span class="color_red">CH56.0</span>은 체크인시 해당숙소에 직접 결제하여야 하며, 숙소측 결제금액에 대해서는 민다에서 책임지지 안습니다.</li>
+							<li class="color_red mt3">예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="lst_type_alert ">
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>5) 숫자 리스트</h5>
+						<ul class="lst_type_num">
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="lst_type_num">
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>6) dl 리스트</h5>
+						<dl class="dl_lst">
+							<dt>예약 번호</dt>
+							<dd><a href="" class="color_mint txt_line">1459259686476</a></dd>
+							<dt>체크인/아웃</dt>
+							<dd>2016.02.05 - 2016.02.09 (3박 4일)</dd>
+						</dl>
+						<div class="item_info">
+							<dl class="dl_lst">
+								<dt>예약 번호</dt>
+								<dd><a href="" class="color_mint txt_line">1459259686476</a></dd>
+								<dt>체크인/아웃</dt>
+								<dd>2016.02.05 - 2016.02.09 (3박 4일)</dd>
+							</dl>
+						</div>
+						<pre>
+<code><?php print htmlentities ('<dl class="dl_lst">
+	<dt>예약 번호</dt>
+	<dd><a href="" class="color_mint txt_line">1459259686476</a></dd>
+	<dt>체크인/아웃</dt>
+	<dd>2016.02.05 - 2016.02.09 (3박 4일)</dd>
+</dl>
+
+<div class="item_info">
+	<dl class="dl_lst">
+		<dt>예약 번호</dt>
+		<dd><a href="" class="color_mint txt_line">1459259686476</a></dd>
+		<dt>체크인/아웃</dt>
+		<dd>2016.02.05 - 2016.02.09 (3박 4일)</dd>
+	</dl>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>6) dl 리스트 + line</h5>
+						<dl class="dl_line v2 clearfix">
+							<dt>주문번호</dt>
+							<dd>1458531395965 <span class="color_red">[예약완료]</span></dd>
+							<dt>도시</dt>
+							<dd>이탈리아 피렌체</dd>
+							<dt>예약일시</dt>
+							<dd>2016-03-19 24:00</dd>
+						</dl>
+						<pre>
+<code><?php print htmlentities ('<dl class="dl_line v2 clearfix">
+	<dt>예약일시</dt>
+	<dd>2016-03-19 24:00</dd>
+</dl>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>7) dl 리스트 + dot</h5>
+						<dl class="dl_dot clearfix">
+							<dt>도시</dt>
+							<dd>이탈리아 피렌체</dd>
+						</dl>
+						<pre>
+<code><?php print htmlentities ('<dl class="dl_dot clearfix">
+	<dt>예약일시</dt>
+	<dd>2016-03-19 24:00</dd>
+</dl>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+						</pre>
+						<h5>8) line 리스트 - type1</h5>
+						<ul class="basic_line_lst">
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="basic_line_lst">
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h5>8) line 리스트 - type2</h5>
+						<ul class="lst_style_media">
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="lst_style_media">
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h5>8) 체크 리스트</h5>
+						<ul class="chk_lst">
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+							<li class="disabled">예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="chk_lst">
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+	<li class="disabled">예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h5>8) 체크 리스트</h5>
+						<ul class="qna_info_lst">
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+							<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="qna_info_lst">
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+	<li>예상포인트는 체크인 날짜 이후 숙소 평가글을 올려주시면 적립됩니다.</li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+					</div>
+					<!--//리스트가이드 -->
+					<div class="tab-pane" id="tap">
+						<h3>탭가이드</h3>
+						<h4>- tab6 (type1) : basic</h4>
+						<ul class="tab6">
+							<li><a href="">숙소</a></li>
+							<li class="active"><a href="">투어</a></li><!-- 활성화시 active클래스 추가 -->
+							<li><a href="">스팟</a></li>
+							<li><a href="">일정</a></li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="tab6">
+	<li><a href=""></a></li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h4>- tab6 (type2) : 작은 간격</h4>
+						<ul class="tab6 pd_sm">
+							<li class="active"><a href="">전체</a></li><!-- 활성화시 active클래스 추가 -->
+							<li><a href="">준비중인 여행</a></li>
+							<li><a href="">지난 여행</a></li>
+							<li><a href="">취소·환불</a></li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="tab6 pd_sm">
+	<li><a href=""></a></li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h4>- tab6 (type3) : 균등한 width</h4>
+						<ul class="tab6 tb_bx">
+							<li class="tb_cell"><a href="" class="d_block">숙소</a></li>
+							<li class="tb_cell active"><a href="" class="d_block">투어</a></li><!-- 활성화시 active클래스 추가 -->
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="tab6 tb_bx">
+	<li class="tb_cell"><a href=""></a></li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h4>- tab6 (type4) : step</h4>
+						<ul class="tab6 step">
+							<li>예약/결제</li><!-- 활성화시 active클래스 추가 -->
+							<li>예약/결제</li><!-- 활성화시 active클래스 추가 -->
+							<li class="active">결제완료</li>
+						</ul>
+						<pre>
+<code><?php print htmlentities ('<ul class="tab6 step">
+	<li>step1</li>
+	<li>step2</li>
+</ul>',ENT_QUOTES | ENT_IGNORE,"utf-8") ?></code>
+						</pre>
+						<h4>- tap</h4>
+						<ul class="tab">
+							<li class="active"><a href="" data-toggle="tab">숙소</a></li>
+							<li><a href="" data-toggle="tab">스팟</a></li>
+							<li><a href="" data-toggle="tab">일정</a></li>
+						</ul>
+						<h4>- tab3</h4>
+						<ul class="tab3">
+							<li><a class="on" href=""><span>민다특가</span></a></li>
+							<li><a href=""><span>숙소 이벤트</span></a></li>
+						</ul>
+						<h4>- tab3 v2 bg_w</h4>
+						<ul class="tab3 v2 bg_wh">
+							<li><a class="on" href=""><span>진행중인 예약</span></a></li><!-- 0809수정 -->
+							<li><a href=""><span>지난 예약</span></a></li>
+							<li><a href=""><span>환불 진행 상황</span></a></li>
+						</ul>
+
+						<h4>- tab4</h4>
+						<ul class="tab4">
+							<li class="active"><a href="#view1" data-toggle="tab">숙소 소개</a></li>
+							<li><a href="#view2" data-toggle="tab">객실 예약</a></li>
+							<li><a href="#view6" data-toggle="tab">추가정보 </a></li>
+							<li><a href="#view3" data-toggle="tab">위치/오시는 방법</a></li>
+							<li><a href="#view4" data-toggle="tab">취소환불규정</a></li>
+							<li><a href="#view5" data-toggle="tab">리뷰/Q&amp;A</a></li>
+						</ul>
+						<h4>- tab4 nav bg_m</h4>
+						<ul class="tab4 nav bg_m">
+							<li class="active"><a href="">도미토리</a></li>
+							<li><a href="">개인실</a></li>
+							<li><a href="">콘도룸</a></li>
+						</ul>
+						<h4>- tab tab5</h4>
+						<ul class="tab tab5">
+							<li>
+								<a class="on" href="">
+									<img src="http://v2.theminda.com/m/1.0/cust/img/icon_my_info2.png" width="42" alt="">
+									<span class="d_block color_blk mt3">포인트</span>
+									<strong class="fs15 color_mint">245,000</strong><small class="fs12 color_mint">P</small>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="http://v2.theminda.com/m/1.0/cust/img/icon_my_info1.png" width="42" alt="">
+									<span class="d_block color_blk mt3">캐쉬</span>
+									<strong class="fs15 color_mint">245,000</strong><small class="fs12 color_mint">원</small>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="http://v2.theminda.com/m/1.0/cust/img/icon_my_info3.png" width="42" alt="">
+									<span class="d_block color_blk mt3">쿠폰</span>
+									<strong class="fs15 color_mint">3</strong><small class="fs12 color_mint">장</small>
+								</a>
+							</li>
+						</ul>
+						<h4>- 선택탭</h4>
+						<ul class="tab basic mt10">
+							<li class="active"><a href="#mdCoupon" data-toggle="tab"><span>민다쿠폰</span></a></li>
+							<li><a href="#roomCoupon" data-toggle="tab"><span>숙소쿠폰</span></a></li>
+						</ul>
+					</div>
+					<!--// 탭 가이드 -->
+					<div class="tab-pane" id="button">
+						<div class="col-xs-12">
+							<h3>버튼가이드</h3>
+							<h4>-기본버튼</h4>
+							<ul class="list-default">
+								<li><button class="btn">버튼</button><xmp><button class="btn"></button></xmp></li>
+								<li><button class="btn btn-default">버튼</button><xmp><button class="btn btn-default"></button></xmp></li>
+								<li><button class="btn btn_itx">버튼</button><xmp><button class="btn btn_itx"></button></xmp></li>
+							</ul>
+							<h4>- 사이즈</h4>
+							<ul class="list-default">
+								<li><button class="btn btn-xl">버튼</button><xmp><button class="btn btn-xl"></xmp></li>
+								<li><button class="btn btn-lg">버튼</button><xmp><button class="btn btn-lg"></button></xmp></li>
+								<li><button class="btn btn-sm">버튼</button><xmp><button class="btn btn-sm"></xmp></li>
+								<li><button class="btn btn-xs">버튼</button><xmp><button class="btn btn-xs"></xmp></li>
+							</ul>
+							<h4>- 테두리</h4>
+							<ul class="list-default">
+								<li><button class="btn btn_border_grey">버튼</button><xmp><button class="btn btn_border_grey"></button></xmp></li>
+								<li><button class="btn btn_border_org">버튼</button><xmp><button class="btn btn_border_org"></xmp></li>
+								<li><button class="btn btn_border_mint">버튼</button><xmp><button class="btn btn_border_mint"></xmp></li>
+							</ul>
+							<h4>- 배경색/ with 아이콘</h4>
+							<ul class="list-default">
+								<li><button type="button" class="btn btn-lg bg_org"><i class="icon_circle_ok"></i>확인</button><xmp><button type="button" class="btn btn-lg bg_org"><i class="icon_circle_ok"></i>확인</button></xmp></li>
+								<li><button type="button" class="btn btn-lg bg_dark_grey"><i class="icon_circle_cancle"></i>취소</button><xmp><button type="button" class="btn btn-lg bg_dark_grey "><i class="icon_circle_cancle"></i>취소</button></xmp></li>
+								<li><button type="button" class="btn btn-lg bg_red"><i class="icon_circle_cancle"></i>삭제</button><xmp><button type="button" class="btn btn-lg bg_red"><i class="icon_circle_cancle"></i>삭제</button></xmp></li>
+							</ul>
+							<h4>기타버튼</h4>
+							<ul class="basic_line_lst">
+								<!-- 앱인 경우에만 노출 -->
+								<li>
+									<span class="pr">
+										앱 푸시 알림
+										<button type="button" data-toggle="button" class="btn no_style switchtab btn-switch">
+											<span class="fs11 pull-left on">ON</span>
+											<span class="fs11 pull-right off">OFF</span>
+										</button>
+									</span>
+								</li>
+								<li>
+									<a href="" class="link_arr_blk">
+										민다 소개
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--// 버튼 가이드 -->
+					<div class="tab-pane" id="icon">
+						<div class="col-xs-12 pr50">
+							<h3>아이콘 가이드</h3>
+							<table class="tb mt20 text-center tb_frm tb_fixed" style="width:60%">
+								<tr>
+									<td><span class="icon_alert"></span></td>
+									<td>icon_alert</td>
+									<td><span class="icon_alert sm"></span></td>
+									<td>icon_alert sm</td>
+									<td><span class="icon_arr"></span></td>
+									<td>icon_arr</td>
+								</tr>
+								<tr>
+									<td><span class="icon_arr_grey"></span></td>
+									<td>icon_arr_grey</td>
+									<td><span class="icon_alert_circle"></span></td>
+									<td>icon_alert_circler</td>
+									<td><span class="icon_plus"></span></td>
+									<td>icon_plus</td>
+								</tr>
+								<tr>
+									<td><span class="icon_face"></span></td>
+									<td>icon_face</td>
+									<td><span class="icon_blog"></span></td>
+									<td>icon_blog</td>
+									<td><span class="icon_srch_grey"></span></td>
+									<td>icon_srch_grey</td>
+								</tr>
+								<tr>
+									<td class="pr"><span class="icon_drop_up"></span></td>
+									<td>icon_drop_up</td>
+									<td><span class="icon_rightoff"></span></td>
+									<td>icon_rightoff</td>
+									<td><span class="icon_like"></span></td>
+									<td>icon_like</td>
+								</tr>
+								<tr>
+									<td><span class="icon_dislike"></span></td>
+									<td>icon_dislike</td>
+									<td><span class="btn" disabled><span class="icon_rightnow"></span></span></td>
+									<td>btn[disabled] &gt; icon_rightnow</td>
+									<td class="bg_light_grey pr"><span class="coupon-down"><span class="icon_pop_close"></span></span></td>
+									<td>coupon-down &gt; icon_pop_close</td>
+								</tr>
+								<tr>
+									<td><span class="icon_cmt"></span></td>
+									<td>icon_cmt</td>
+									<td><span class="icon_rcmd"></span></td>
+									<td>icon_rcmd</td>
+									<td class="bg_light_grey"><span class="icon_home"></span></td>
+									<td>icon_home</td>
+								</tr>
+								<tr>
+									<td class="pr bg_light_grey"><span class="icon_pop_close"></span></td>
+									<td>icon_pop_close</td>
+									<td class="bg_light_grey"><span class="icon_clse"></span></td>
+									<td>icon_clse</td>
+									<td class="bg_light_grey"><span class="icon_search"></span></td>
+									<td>icon_search</td>
+								</tr>
+								<tr>
+									<td class="pr"><span class="icon_key_close"></span></td>
+									<td>icon_key_close</td>
+									<td><span class="icon_info"></span></td>
+									<td>icon_info</td>
+									<td class="bg_light_grey"><span class="icon_card"></span></td>
+									<td>icon_card</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_print"></span></td>
+									<td>icon_print</td>
+									<td><span class="icon_urail"></span></td>
+									<td>icon_urail</td>
+									<td><span class="icon_car"></span></td>
+									<td>icon_car</td>
+								</tr>
+								<tr>
+									<td><span class="icon_rail"></span></td>
+									<td>icon_rail</td>
+									<td><span class="icon_wifi"></span></td>
+									<td>icon_wifi</td>
+									<td><span class="icon_item_remove"></span></td>
+									<td>icon_item_remove</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_voucher_wh"></span></td>
+									<td>icon_voucher_wh</td>
+									<td class="bg_light_grey"><span class="icon_mail_wh"></span></td>
+									<td>icon_mail_wh</td>
+									<td><span class="icon_building"></span></td>
+									<td>icon_building</td>
+								</tr>
+								<tr>
+									<td><span class="icon_home_grey"></span></td>
+									<td>icon_home_grey</td>
+									<td><span class="icon_mail"></span></td>
+									<td>icon_mail</td>
+									<td><span class="icon_time"></span></td>
+									<td>icon_time</td>
+								</tr>
+								<tr>
+									<td><span class="icon_map_grey"></span></td>
+									<td>icon_map_grey</td>
+									<td><span class="icon_user"></span></td>
+									<td>icon_user</td>
+									<td class="bg_light_grey"><span class="icon_user wh"></span></td>
+									<td>icon_user wh</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_leave"></span></td>
+									<td>icon_leave</td>
+									<td><span class="icon_mail_mint"></span></td>
+									<td>icon_mail_mint</td>
+									<td><span class="icon_cancel"></span></td>
+									<td>icon_cancel</td>
+								</tr>
+								<tr>
+									<td><span class="icon_doc"></span></td>
+									<td>icon_doc</td>
+									<td><span class="icon_print_mint"></span></td>
+									<td>icon_print_mint</td>
+									<td><span class="icon_house_org"></span></td>
+									<td>icon_house_org</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_list"></span></td>
+									<td>icon_list</td>
+									<td><span class="icon_card_org"></span></td>
+									<td>icon_card_org</td>
+									<td><span class="icon_cancel_wh"></span></td>
+									<td>icon_cancel_wh</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_printer"></span></td>
+									<td>icon_printer</td>
+									<td class="bg_light_grey"><span class="icon_srch_sm"></span></td>
+									<td>icon_srch_sm</td>
+									<td><span class="icon_srch_grey_sm"></span></td>
+									<td>icon_srch_grey_sm</td>
+								</tr>
+								<tr>
+									<td><span class="icon_calendar"></span></td>
+									<td>icon_calendar</td>
+									<td><span class="icon_calendar2"></span></td>
+									<td>icon_calendar2</td>
+									<td class="bg_light_grey"><span class="icon_note"></span></td>
+									<td>icon_note</td>
+								</tr>
+								<tr>
+									<td><span class="icon_srch_acc"></span></td>
+									<td>icon_srch_acc</td>
+									<td><span class="icon_user_join"></span></td>
+									<td>icon_user_join</td>
+									<td class="bg_light_grey"><span class="icon_circle_cancle"></span></td>
+									<td>icon_circle_cancle</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_circle_next"></span></td>
+									<td>icon_circle_next</td>
+									<td class="bg_light_grey"><span class="icon_circle_prev"></span></td>
+									<td>icon_circle_prev</td>
+									<td><span class="icon_chk_grey"></span></td>
+									<td>icon_chk_grey</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_house_wh"></span></td>
+									<td>icon_house_wh</td>
+									<td><span class="icon_cal_org"></span></td>
+									<td>icon_cal_org</td>
+									<td  class="bg_light_grey"><span class="icon_srch_md"></span></td>
+									<td>icon_srch_md</td>
+								</tr>
+								<tr>
+									<td><span class="icon_sns_tw"></span></td>
+									<td>icon_sns_tw</td>
+									<td><span class="icon_sns_kakao"></span></td>
+									<td>icon_sns_kakao</td>
+									<td><span class="icon_sns_url"></span></td>
+									<td>icon_sns_url</td>
+								</tr>
+								<tr>
+									<td><span class="icon_hits"></span></td>
+									<td>icon_hits</td>
+									<td class="bg_light_grey"><span class="icon_wish"></span></td>
+									<td>icon_wish</td>
+									<td class="bg_light_grey"><span class="active"><span class="icon_wish"></span></span></td>
+									<td>active &gt; icon_wish</td>
+								</tr>
+								<tr>
+									<td><span class="icon_link"></span></td>
+									<td>icon_link</td>
+									<td><span class="icon_link_dark"></span></td>
+									<td>icon_link_dark</td>
+									<td><span class="icon_cmt_grey"></span></td>
+									<td>icon_cmt_grey</td>
+								</tr>
+								<tr>
+									<td><span class="icon_new"></span></td>
+									<td>icon_new</td>
+									<td class="bg_light_grey"><span class="icon_instant"></span></td>
+									<td>icon_instant</td>
+									<td><span class="icon_shower"></span></td>
+									<td>icon_shower</td>
+								</tr>
+								<tr>
+									<td><span class="icon_now_lg"></span></td>
+									<td>icon_now_lg</td>
+									<td><span class="icon_chkorg_lg"></span></td>
+									<td>icon_chkorg_lg</td>
+									<td><span class="icon_link_face"></span></td>
+									<td>icon_link_face</td>
+								</tr>
+								<tr>
+									<td><span class="icon_link_twi"></span></td>
+									<td>icon_link_twi</td>
+									<td><span>icon_link_talk</span></td>
+									<td>icon_link_talk</td>
+									<td><span>icon_link_url</span></td>
+									<td>icon_link_url</td>
+								</tr>
+								<tr>
+									<td><span class="icon_wish_mint"></span></td>
+									<td>icon_wish_mint</td>
+									<td><span class="icon_rightnow_xs"></span></td>
+									<td>icon_rightnow_xs</td>
+									<td><span class="icon_rightnow"></span></td>
+									<td>icon_rightnow</td>
+								</tr>
+								<tr>
+									<td><span class="icon_hd_clse"  style="width:50px;height:50px"></span></td>
+									<td>icon_hd_clse</td>
+									<td><span class="icon_mn" style="width:50px;height:50px"></span></td>
+									<td>icon_mn</td>
+									<td class="bg_light_grey"><span class="icon_loc_hd" style="width:50px;height:50px"></span></td>
+									<td>icon_loc_hd</td>
+								</tr>
+								<tr>
+									<td><span class="icon_hd_back" style="width:50px;height:50px"</span></td>
+									<td>icon_hd_back</td>
+									<td class="bg_light_grey"><span class="icon_hd_search" style="width:50px;height:50px"></span></td>
+									<td>icon_hd_search</td>
+									<td><span class="icon_hd_map" style="width:50px;height:50px"></span></td>
+									<td>icon_hd_map</td>
+								</tr>
+								<tr>
+									<td><span class="icon_hd_share" style="width:50px;height:50px"></span></td>
+									<td>icon_hd_share</td>
+									<td><span class="icon_hd_wish" style="width:50px;height:50px"></span></td>
+									<td>icon_hd_wish</td>
+									<td><span class="icon_hd_wish active" style="width:50px;height:50px"></span></td>
+									<td>.icon_hd_wish.active</td>
+								</tr>
+								<tr>
+									<td><span class="icon_login"></span></td>
+									<td>icon_login</td>
+									<td class="pr"><span class="icon_snb_close"></span></td>
+									<td>icon_snb_close</td>
+									<td class="pr"><span id="gnb"><span class="icon_beta"></span></span></td>
+									<td>icon_beta</td>
+								</tr>
+								<tr>
+									<td><span class="icon_top"></span></td>
+									<td>icon_top</td>
+									<td><span class="icon_mn2"></span></td>
+									<td>icon_mn2</td>
+									<td class="bg_light_grey"><span class="icon_srch2"></span></td>
+									<td>icon_srch2</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_loc_wh"></span></td>
+									<td>icon_loc_wh</td>
+									<td class="bg_light_grey"><span class="icon_res_wh"></span></td>
+									<td>icon_res_wh</td>
+									<td class="bg_light_grey"><span class="icon_event_wh"></span></td>
+									<td>icon_event_wh</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_wish_wh"></span></td>
+									<td>icon_wish_wh</td>
+									<td class="bg_light_grey"><span class="icon_house_wh"></span></td>
+									<td>icon_house_wh</td>
+									<td class="bg_light_grey"><span class="icon_time2"></span></td>
+									<td>icon_time2</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_cal2"></span></td>
+									<td>icon_cal2</td>
+									<td class="bg_light_grey"><span class="icon_close_circle"></span></td>
+									<td>icon_close_circle</td>
+									<td class="active"><span class="icon_srchfilter"></span></td>
+									<td>active &gt; icon_srchfilter</td>
+								</tr>
+								<tr>
+									<td><span class="icon_ribbon"></span></td>
+									<td>icon_ribbon</td>
+									<td><span class="icon_ribbon on"></span></td>
+									<td>icon_ribbon on</td>
+									<td><span class="icon_now"></span></td>
+									<td>icon_now</td>
+								</tr>
+								<tr>
+									<td><span class="icon_sort_mint"></span></td>
+									<td>icon_sort_mint</td>
+									<td><span class="mtb_srch_filter"><span class="icon_sort_mint"></span></span></td>
+									<td>mtb_srch_filte &gt; icon_sort_mint</td>
+									<td><span class="icon_srchfilter"></span></td>
+									<td>icon_srchfilter</td>
+								</tr>
+								<tr>
+									<td><span class="icon_map2"></span></td>
+									<td>icon_map2</td>
+									<td class="filter2"><span class="icon_more"></span></td>
+									<td>filter2 &gt; icon_more</td>
+									<td class="filter2"><span class="over"><span class="icon_more"></span></span></td>
+									<td>filter2 &gt; over &gt; icon_more</td>
+								</tr>
+								<tr>
+									<td><span class="square_label red"></span></td>
+									<td>square_label red</td>
+									<td><span class="square_label blue"></span></td>
+									<td>square_label blue</td>
+									<td><span class="square_label green"></span></td>
+									<td>square_label green</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="swiper-button-prev"></span></td>
+									<td>swiper-button-prev</td>
+									<td class="bg_light_grey"><span class="swiper-button-next"></span></td>
+									<td>swiper-button-next</td>
+									<td><span class="icon_del"></span></td>
+									<td>icon_del</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey pr"><span class="icon-equals"></span></td>
+									<td>icon-equals</td>
+									<td><span class="icon_resv_error"></span></td>
+									<td>icon_resv_error</td>
+									<td><span class="icon_chk_label"></span></td>
+									<td>icon_chk_label</td>
+								</tr>
+								<tr>
+									<td class="active"><span class="icon_chk_label"></span></td>
+									<td>active &gt; icon_chk_label</td>
+									<td><span class="icon_done"></span></td>
+									<td>icon_done</td>
+									<td><span class="icon_cal_grey"></span></td>
+									<td>icon_cal_grey</td>
+								</tr>
+								<tr>
+									<td class="bg_light_grey"><span class="icon_chk_circle"></span></td>
+									<td>icon_chk_circle</td>
+									<td><span class="accordion"><span class="acc_btn"></span></span></td>
+									<td>accordion &gt; acc_btn</td>
+									<td><span class="accordion open"><span class="acc_btn"></span></span></td>
+									<td>.accordion.open &gt; acc_btn</td>
+								</tr>
+								<tr>
+									<td><span class="icon_hd_link"></span></td>
+									<td>icon_hd_link</td>
+									<td><span class="icon_hd_srch"></span></td>
+									<td>icon_hd_srch</td>
+									<td><span class="icon_srch_blk"></span></td>
+									<td>icon_srch_blk</td>
+								</tr>
+								<tr>
+									<td><span class="icon_like_mint"></span></td>
+									<td>icon_like_mint</td>
+									<td><span class="icon_thumb"></span></td>
+									<td>icon_thumb</td>
+									<td><span class="icon_location"></span></td>
+									<td>icon_location</td>
+								</tr>
+								<tr>
+									<td><span class="icon_walking"></span></td>
+									<td>icon_walking</td>
+									<td><span class="icon_car_gray"></span></td>
+									<td>icon_car_gray</td>
+									<td><span class="icon_cycle"></span></td>
+									<td>icon_cycle</td>
+								</tr>
+								<tr>
+									<td><span class="icon_train"></span></td>
+									<td>icon_train</td>
+									<td><span class="icon_camera_ylw"></span></td>
+									<td>icon_camera_ylw</td>
+									<td><span class="icon_map_org"></span></td>
+									<td>icon_map_org</td>
+								</tr>
+								<tr>
+									<td><span class="icon_spot"></span></td>
+									<td>icon_spot</td>
+									<td><span class="icon_srch_darkgrey"></span></td>
+									<td>icon_srch_darkgrey</td>
+									<td><span class="icon_flag_wh"></span></td>
+									<td>icon_flag_wh</td>
+								</tr>
+								<tr>
+									<td><span class="icon_ticket_wh"></span></td>
+									<td>icon_ticket_wh</td>
+									<td><span class="icon_car_wh"></span></td>
+									<td>icon_car_wh</td>
+									<td><span class="icon_more_circle"></span></td>
+									<td>icon_more_circle</td>
+								</tr>
+								<tr>
+									<td><span class="icon_more"></span></td>
+									<td>icon_more</td>
+									<td><span class="icon_voucher"></span></td>
+									<td>icon_voucher</td>
+									<td><span class="icon_convenience"></span></td>
+									<td>icon_convenience</td>
+								</tr>
+								<tr>
+									<td><span class="icon_restaurant"></span></td>
+									<td>icon_restaurant</td>
+									<td><span class="icon_shopping"></span></td>
+									<td>icon_shopping</td>
+									<td><span class="icon_traffic"></span></td>
+									<td>icon_traffic</td>
+								</tr>
+								<tr>
+									<td><span class="icon_room"></span></td>
+									<td>icon_room</td>
+									<td><span class="icon_setting"></span></td>
+									<td>icon_setting</td>
+									<td><span class="icon_letsgo"></span></td>
+									<td>icon_letsgo</td>
+								</tr>
+								<tr>
+									<td><span class="icon_sorry"></span></td>
+									<td>icon_sorry</td>
+									<td><span class="icon_ok"></span></td>
+									<td>icon_ok</td>
+									<td><span></span></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><span class="icon_my_point"></span></td>
+									<td>icon_my_point</td>
+									<td><span class="icon_my_cash"></span></td>
+									<td>icon_my_cash</td>
+									<td><span class="icon_my_coupon"></span></td>
+									<td>icon_my_coupon</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+						<!--// 아이콘 가이드 -->
+						<div class="tab-pane" id="input">
+							<h3>입력폼가이드</h3>
+							<h4>- default</h4>
+							<ul class="list-default">
+								<li><input type="text" class="no_style" placeholder="minda" title=""><xmp><input type="text" class="no_style" placeholder="minda" title=""> default(no_style)</xmp></li>
+								<li><input type="text" class="form-control" placeholder="minda" title=""><xmp><input type="text" class="form-control" placeholder="minda" title=""></xmp></li>
+								<li><input type="text" class="form-control-basic" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic" placeholder="minda" title=""></xmp></li>
+								<ul>
+									<h4>- size</h4>
+									<ul class="list-default">
+										<li><input type="text" class="form-control-basic wid_sm" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_sm" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_smd" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_md" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_lg" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_lg" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_smd itx" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_sm itx" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_smd itx datepicker" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_smd itx datepicker" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_md input-lg" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md input-lg" placeholder="minda" title=""></xmp></li>
+										<li><input type="text" class="form-control-basic wid_md input-xl" placeholder="minda" title=""><xmp><input type="text" class="form-control-basic wid_md input-xl" placeholder="minda" title=""></xmp></li>
+									</ul>
+									<h4>- placeholder</h4>
+									<h5>1) 민트색 placeholder</h5>
+									<input type="text" class="form-control-basic wid_md plh_mint" placeholder="minda" title="">
+									<pre>
+<code><?php print htmlentities ('<input type="text" class="form-control-basic wid_md plh_mint" placeholder="minda" title="">',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+									<h5>2) 회색 placeholder</h5>
+									<input type="text" class="form-control-basic wid_md pl_grey" placeholder="minda" title="">
+									<pre>
+<code><?php print htmlentities ('<input type="text" class="form-control-basic wid_md pl_grey" placeholder="minda" title="">',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+									<h4>- example </h4>
+									<ul class="list-default">
+										<li>
+											<div class="tel_form">
+												<input type="text" class="form-control-basic wid_sm" title="핸드폰 첫번째 자리"><i></i>
+												<input type="text" class="form-control-basic wid_sm" title="핸드폰 두번째 자리"><i></i>
+												<input type="text" class="form-control-basic wid_sm" title="핸드폰 세번째 자리">
+											</div>
+										</li>
+										<li>
+											<div>
+												<input type="text" class="form-control-basic wid_md" placeholder="minda" title="이메일 주소 아이디부분">
+												<span class="form-control-static">@</span>
+												<input type="text" class="form-control-basic wid_md" placeholder="naver.com" title="이메일 주소 도메인부분">
+												<select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+													<option value="">직접입력</option>
+												</select>
+											</div>
+										</li>
+									</ul>
+									<h4>- input type="checkbox"</h4>
+
+									<ul class="list-default">
+										<li>
+											<h5> 1) 일반 체크박스</h5>
+											1) <label class="basic chk_label"> <input type="checkbox">유럽 </label>
+											2) <label class="orange chk_label"> <input type="checkbox">유럽 </label>
+											3) <label class="mint chk_label"> <input type="checkbox">유럽 </label>
+											4) <label class="basic orange chk_label"> <input type="checkbox">유럽 </label>
+											5) <label class="chk_label right"> <input type="checkbox">유럽 </label>
+											6) <label class="chk_label chk-gray"> <input type="checkbox">유럽 </label>
+											7) <label class="chk_label circle_org"> <input type="checkbox">유럽 </label>
+											8) <label class="chk_label grey mt0"><input type="checkbox">아이디 저장</label>
+										</li>
+										<pre>
+<code><?php print htmlentities ('1) <label class="basic chk_label"> <input type="checkbox">유럽  </label>
+2) <label class="orange chk_label"> <input type="checkbox">유럽 </label>
+3) <label class="mint chk_label"> <input type="checkbox">유럽 </label>
+4) <label class="basic orange chk_label"> <input type="checkbox">유럽 </label>
+5) <label class="chk_label right"> <input type="checkbox">유럽 </label>
+6) <label class="chk_label chk-gray"> <input type="checkbox">유럽 </label>
+7) <label class="chk_label circle_org"> <input type="checkbox">유럽 </label>
+8) <label class="chk_label grey mt0"><input type="checkbox">아이디 저장</label>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+										</pre>
+									</ul>
+									<ul class="list-default">
+										<li>
+											<h5> 2) 버튼  체크박스</h5>
+											<div class="btn-group fix_type_mint" data-toggle="buttons">
+												<label class="btn btn-default"> <input type="checkbox">즉시예약 </label>
+												<label class="btn btn-default"> <input type="checkbox">전용욕실 </label>
+												<label class="btn btn-default"> <input type="checkbox">여행투어 </label>
+											</div>
+										</li>
+									</ul>
+									<pre>
+<code><?php print htmlentities ('<div class="btn-group fix_type_mint" data-toggle="buttons">
+	<label class="btn btn-default"> <input type="checkbox">즉시예약 </label>
+	<label class="btn btn-default"> <input type="checkbox">전용욕실 </label>
+	<label class="btn btn-default"> <input type="checkbox">여행투어 </label>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+										</pre>
+									<h4>- input type="radio"</h4>
+									<ul class="list-default">
+										<li>
+											<h5>1) 일반 라디오</h5>
+											1) <label class="radio_label"> <input type="radio" name="radio">유럽 </label>
+											2) <label class="radio_label radio_label_mint"> <input type="radio"  name="radio">유럽 </label>
+											3) <label class="radio_label orange"> <input type="radio"  name="radio">유럽 </label>
+											4) <label class="radio_label grey"> <input type="radio"  name="radio">유럽 </label>
+										</li>
+									</ul>
+									<pre>
+<code><?php print htmlentities ('1) <label class="radio_label"> <input type="radio" name="radio">유럽 </label>
+2) <label class="radio_label radio_label_mint"> <input type="radio"  name="radio">유럽 </label>
+3) <label class="radio_label orange"> <input type="radio"  name="radio">유럽 </label>
+4) <label class="radio_label grey"> <input type="radio"  name="radio">유럽 </label>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+									<ul class="list-default">
+										<li>
+											<h5>2) 버튼 형식 라디오</h5>
+											<div class="info-pay-select">
+												<ul class="tb_bx fix_type_org" data-toggle="buttons">
+													<li class="tb_cell btn-group"><label for="pay_card" class="btn no_style"><input type="radio" name="sel_pay" id="pay_card">신용카드</label></li>
+													<li class="tb_cell btn-group"><label for="pay_small" class="btn no_style"><input type="radio" name="sel_pay" id="pay_small">핸드폰 소액결제</label></li>
+													<li class="tb_cell btn-group"><label for="pay_account" class="btn no_style active"><input type="radio" name="sel_pay" id="pay_account">실시간 계좌이체</label></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<pre>
+<code><?php print htmlentities ('<div class="info-pay-select">
+	<ul class="tb_bx fix_type_org" data-toggle="buttons">
+		<li class="tb_cell btn-group"><label for="pay_card" class="btn no_style"><input type="radio" name="sel_pay" id="pay_card">신용카드</label></li>
+		<li class="tb_cell btn-group"><label for="pay_small" class="btn no_style"><input type="radio" name="sel_pay" id="pay_small">핸드폰 소액결제</label></li>
+		<li class="tb_cell btn-group"><label for="pay_account" class="btn no_style active"><input type="radio" name="sel_pay" id="pay_account">실시간 계좌이체</label></li>
+	</ul>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+									<h4>- textarea</h4>
+									<ul class="list-default">
+										<li>
+											<textarea class="form-control-basic" rows="6"></textarea>
+											<xmp><textarea class="form-control-basic" rows="6"></textarea></xmp>
+										</li>
+									</ul>
+									<h4>- type="file"</h4>
+									<ul class="list-default">
+										<li>
+											<label class="mt10">
+												<input type="file" class="sr-only">
+												<span class="btn btn-xs bg_mint w75 mb3 mr5">파일선택</span>
+											</label>
+											<input type="text" class="form-control-basic wid_md" title="업로드된이미지명" readonly="">
+											<xmp><label class="mt10"><input type="file" class="sr-only"><span class="btn btn-xs bg_mint w75 mb3 mr5">파일선택</span></label><input type="text" class="form-control-basic wid_md" title="업로드된이미지명" readonly=""></xmp>
+										</li>
+									</ul>
+									<h4>- input with text </h4>
+									<div class="form-group valid_chk error">
+										<input type="text" class="form-control input-lg" placeholder="아이디(영문+숫자로 4~12자)" title="아이디입력">
+										<p class="form-control-static">이미 사용중인 아이디입니다.</p>
+									</div>
+									<pre>
+<code><?php print htmlentities ('<div class="form-group valid_chk error">
+	<input type="text" class="form-control input-lg" placeholder="아이디(영문+숫자로 4~12자)" title="아이디입력">
+	<p class="form-control-static">이미 사용중인 아이디입니다.</p>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+									<div class="form-group valid_chk valid">
+										<input type="password" class="form-control input-lg" placeholder="비밀번호(영/숫자 조합 8~12자)" title="비밀번호입력">
+										<p class="form-control-static">민트색 글씨는 이렇게 나옵니다 하하호호하하하</p>
+									</div>
+									<pre>
+<code><?php print htmlentities ('<div class="form-group valid_chk valid">
+	<input type="password" class="form-control input-lg" placeholder="비밀번호(영/숫자 조합 8~12자)" title="비밀번호입력">
+	<p class="form-control-static">민트색 글씨는 이렇게 나옵니다 하하호호하하하</p>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+								</div>
+								<div class="tab-pane" id="table">
+									<h3>테이블가이드</h3>
+									<ul class="list-default mt30">
+										<li>
+											<xmp><table class="table"></xmp>
+											<table class="table">
+												<thead>
+													<tr>
+														<th>제목</th>
+														<th>제목</th>
+														<th>제목</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb tb_fixed"></xmp>
+											<table class="tb tb_fixed">
+												<thead>
+													<tr>
+														<th>제목</th>
+														<th>제목</th>
+														<th>제목</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb tb_frm"></xmp>
+											<table class="tb tb_frm">
+												<tbody>
+													<tr>
+														<th>내용</th>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<th>내용</th>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb tb_frm v1"></xmp>
+											<table class="tb tb_frm v1">
+												<tbody>
+													<tr>
+														<th>내용</th>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<th>내용</th>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb v2"></xmp>
+											<table class="tb v2">
+												<thead>
+													<tr>
+														<th>제목</th>
+														<th>제목</th>
+														<th>제목</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb v3"></xmp>
+											<table class="tb v3">
+												<tbody>
+													<tr>
+														<th>내용</th>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<th>내용</th>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb nobor"></xmp>
+											<table class="tb nobor">
+												<thead>
+													<tr>
+														<th>제목</th>
+														<th>제목</th>
+														<th>제목</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb2"></xmp>
+											<table class="tb2">
+												<thead>
+													<tr>
+														<th>제목</th>
+														<th>제목</th>
+														<th>제목</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+													<tr>
+														<td>내용</td>
+														<td>내용내용내용내용내용내용내용내용내용</td>
+														<td>내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<xmp><table class="tb2 tb_pay_total tb_fixed"></xmp>
+											<table class="tb2 tb_pay_total tb_fixed">
+												<caption class="sr-only">결제정보</caption>
+												<colgroup>
+												<col span="3">
+												<col style="width:375px">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">주문</th>
+													<th scope="col">수수료</th>
+													<th scope="col">할인금액</th>
+													<th scope="col" class="tb2_border">결제금액</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<td colspan="3">
+														<dl class="dl-horizontal total_price_account">
+															<dt class="color_blk fw500">실시간 계좌이체</dt>
+															<dd>
+																우리은행 1005-521-2525525(예금주 : 홍길동)
+																<span class="d_block color_light_grey mt3">결제일 : 2016-00-00 11:48:56</span>
+															</dd>
+														</dl>
+													</td>
+													<td>
+														<dl class="dl-horizontal total_count">
+															<dt class="color_wh">총 결제금액</dt>
+															<dd class="text-right"><b class="color_org">1,423,800</b>원</dd>
+														</dl>
+													</td>
+												</tr>
+											</tfoot>
+											<tbody>
+												<tr>
+													<!-- 주문 -->
+													<td>
+														<dl class="dl_pay">
+															<dt>합계</dt>
+															<dd class="text-right">1,409,400<small>원</small></dd>
+															<dt>배송비</dt>
+															<dd class="text-right">5,400<small>원</small></dd>
+														</dl>
+													</td>
+													<!-- 수수료 -->
+													<td>
+														<dl class="dl_pay">
+															<dt>예약 수수료</dt>
+															<dd class="text-right">9,400<small>원</small></dd>
+															<dt>발권 및 처리 수수료</dt>
+															<dd class="text-right">9,400<small>원</small></dd>
+														</dl>
+													</td>
+													<!-- 할인금액 -->
+													<td>
+														<dl class="dl_pay">
+															<dt>포인트할인</dt>
+															<dd class="text-right">-3,000<small>P</small></dd>
+															<dt>쿠폰할인</dt>
+															<dd class="text-right">-3,000<small>원</small></dd>
+
+														</dl>
+													</td>
+													<!-- 결제금액 -->
+													<td class="tb2_border pr">
+														<dl class="dl_pay">
+															<dt class="color_blk">예약금 (10%)쿠폰</dt>
+															<dd class="text-right"><span class="color_red">66,300</span> <small class="color_org">원</small></dd>
+															<dt>포인트할인</dt>
+															<dd class="text-right"><span class="color_blk">-3,000</span> <small>P</small></dd>
+														</dl>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="tab-pane" id="color">
+								<h3>색상가이드</h3>
+								<h4>- text color</h4>
+								<table class="tb mt20 text-center tb_frm tb_fixed" style="width: 70%">
+									<tbody>
+										<tr>
+											<td rowspan="2" class="color_ylw">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_ylw"</xmp></td>
+											<td rowspan="2" class="color_mint">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_mint"</xmp></td>
+											<td rowspan="2" class="color_org">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_org"</xmp></td>
+										</tr>
+										<tr>
+											<td>#fffc0a</td>
+											<td>#42c3bf</td>
+											<td>#f58850</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="color_wh bg_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_wh bg_grey"</xmp></td>
+											<td rowspan="2" class="color_blk">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_blk"</xmp></td>
+											<td rowspan="2" class="color_default">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_default"</xmp></td>
+										</tr>
+										<tr>
+											<td>#fff</td>
+											<td>#333239</td>
+											<td>#858585</td>
+										</tr>
+										<tr>
+
+											<td rowspan="2" class="color_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_grey"</xmp></td>
+											<td rowspan="2" class="color_grey2">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_grey2"</xmp></td>
+											<td rowspan="2" class="color_dark_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_dark_grey"</xmp></td>
+										</tr>
+										<tr>
+											<td>#b5b5b5</td>
+											<td>#888</td>
+											<td>#5b5b5b</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="color_red">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_red"</xmp></td>
+											<td rowspan="2" class="color_light_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_light_grey"</xmp></td>
+											<td rowspan="2" class="color_blue">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_blue"</xmp></td>
+										</tr>
+										<tr>
+											<td>#e93d3d</td>
+											<td>#aaa</td>
+											<td>#4db4f6</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="color_dark_blue">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_dark_blue"</xmp></td>
+											<td rowspan="2" class="color_sky">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_sky"</xmp></td>
+											<td rowspan="2" class="color_ylw2">텍스트텍스트텍스트</td>
+											<td><xmp>class="color_ylw2"</xmp></td>
+										</tr>
+										<tr>
+											<td>#475592</td>
+											<td>#f5a212</td>
+											<td>#f5a212</td>
+										</tr>
+									</tbody>
+								</table>
+								<h4>- background color</h4>
+								<table class="tb mt20 text-center tb_frm tb_fixed" style="width: 70%">
+									<tbody>
+										<tr>
+											<td rowspan="2" class="bg_org">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_org"</xmp></td>
+											<td rowspan="2" class="bg_org2">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_org2"</xmp></td>
+											<td rowspan="2" class="bg_mint">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_mint"</xmp></td>
+										</tr>
+										<tr>
+											<td>#f58850</td>
+											<td>#f58850</td>
+											<td>#42c3bf</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="bg_mint2">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_mint2"</xmp></td>
+											<td rowspan="2" class="bg_red">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_red"</xmp></td>
+											<td rowspan="2" class="bg_wh">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_wh"</xmp></td>
+										</tr>
+										<tr>
+											<td>#57c1be</td>
+											<td>#e93d3d</td>
+											<td>#fff</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="bg_dark_grn">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_dark_grn"</xmp></td>
+											<td rowspan="2" class="bg_dark_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_dark_grey"</xmp></td>
+											<td rowspan="2" class="bg_light_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_light_grey"</xmp></td>
+										</tr>
+										<tr>
+											<td>#197e7b</td>
+											<td>#5a5a5a</td>
+											<td>#e8e8e8 </td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="bg_light_grey2">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_light_grey2"</xmp></td>
+											<td rowspan="2" class="bg_light_org">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_light_org"</xmp></td>
+											<td rowspan="2" class="bg_light_mint">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_light_mint"</xmp></td>
+										</tr>
+										<tr>
+											<td>#e0e0e0</td>
+											<td>#fefaf9</td>
+											<td>#f7ffff !</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class="bg_grey">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_grey"</xmp></td>
+											<td rowspan="2" class="bg_silver">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_silver"</xmp></td>
+											<td rowspan="2" class="bg_blk">텍스트텍스트텍스트</td>
+											<td><xmp>class="bg_blk"</xmp></td>
+										</tr>
+										<tr>
+											<td>#8d8d8d</td>
+											<td>#f7f7f7</td>
+											<td>#333239</td>
+										</tr>
+									</tbody>
+								</table>
+								<h4>- text style</h4>
+								<h4>- title style</h4>
+							</div>
+							<div class="tab-pane" id="pop">
+								<h3>팝업/BOX가이드</h3>
+								<h4>full popup (전체팝업)</h4>
+								<h5>modal을 이용한 팝업</h5>
+								<button class="btn bg_dark_grey" onclick="$('.modal-fullscreen').modal();">팝업 오픈</button>
+								<div>
+
+									<pre>
+<code><?php print htmlentities ('<div class="modal fade modal-fullscreen">
+	<div class="modal-dialog">
+		<header class="pop-hd"><!-- 상단에 딱 붙게 하려면 pt0추가 -->
+			<button class="icon_hd_clse pos-r" data-dismiss="modal">팝업닫기</button>
+		</header>
+		<div class="modal-content">
+			팝업내용
+		</div>
+	</div>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+									</pre>
+									<div class="modal fade modal-fullscreen">
+										<div class="modal-dialog">
+											<header class="pop-hd">
+												<button class="icon_hd_clse pos-r" data-dismiss="modal">팝업닫기</button>
+											</header>
+											<div class="modal-content">
+												<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<h5>jquery를 이용한 팝업</h5>
+								<button class="btn bg_dark_grey" onclick="fullPopOpen()">팝업 오픈</button>
+								<script type="text/javascript">
+									function fullPopOpen(){
+										$('body').addClass('full-ly');
+										$('.ly-pop-full').fadeIn(100);
+									}
+
+									$(document).ready(function(){
+										$('.ly-pop-area .icon_hd_clse').click(function(){
+											$(this).closest('.ly-pop-area').fadeOut(100);
+											$('body').removeClass('full-ly');
+										})
+									})
+								</script>
+								<div class="ly-pop-area ly-pop-full">
+									<div class="ly-pop-inner">
+										<header class="pop-hd">
+											<h1><a href="">전체 도시</a></h1>
+											<a class="icon_hd_clse hd-r" href=""></a>
+										</header>
+										<div class="pop-content">
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+											<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+										</div>
+									</div>
+								</div>
+								<pre>
+<code><?php print htmlentities ('<div class="ly-pop-area ly-pop-full">
+	<div class="ly-pop-inner">
+		<header class="pop-hd">
+			<button class="icon_hd_clse pos-r">팝업닫기</button>
+		</header>
+		<div class="pop-content">
+			팝업내용
+		</div>
+	</div>
+</div>',ENT_QUOTES | ENT_IGNORE, "utf-8") ?></code>
+								</pre>
+								<h4>alert 또는 안내 팝업</h4>
+								<h5>기본</h5>
+								<button class="btn bg_dark_grey" onclick="$('#mdAlert').modal();">팝업 오픈</button>
+								<div id="mdAlert" class="modal fade md_alert" tabindex="-1" role="dialog">
+									<div class="modal-dialog wid_md">
+										<button type="button" class="close" data-dismiss="modal">×</button>
+										<p>회원님의 이메일로<br>아이디와 <span class="color_org">새로운 비밀번호</span>를<br>보내드렸습니다.</p>
+									</div>
+								</div>
+								<h4>BOX</h4>
+								<h5>1) 흰색 정보 박스</h5>
+								<div class="bg_grey pa10">
+									<section class="info-bx-wrap">
+										<div class="bx-wh">
+											<dl class="tb_bx">
+												<dt class="tb_cell">옵션</dt>
+												<dd class="tb_cell">성인(\10,000) * 1명<br>아동(\5,000) * 2명</dd>
+											</dl>
+										</div>
+										<div class="bx-wh">
+											<div class="tb_bx">
+												<span class="input-wrap">
+													<input type="text" class="no_style pl_grey" placeholder="이메일" title="이메일 입력">
+												</span>
+											</div>
+										</div>
+										<div class="bx-wh">
+											<dl class="tb_bx">
+												<dt class="tb_cell">포인트</dt>
+												<dd class="tb_cell">
+													<!-- [D] 2017-01-11 -->
+													<input type="text" class="no_style pl_grey" placeholder="잔액 0" title="포인트 잔액" value="잔액 150P" readonly="readonly">
+												</dd>
+												<dd class="tb_cell btn_cell">
+													<button class="btn color_blk">사용</button>
+												</dd>
+											</dl>
+										</div>
+										<div class="bx-wh">
+											<a href="">
+												<div class="tb_bx">
+													<div class="tb_cell pr20"><span class="fs16 twoline">로마 바티칸 반일투어</span></div>
+													<div class="tb_cell btn_cell2"><span class="state color_org"><span>예약확정</span></span></div>
+												</div>
+											</a>
+										</div>
+									</section>
+								</div>
+								<h5>더보기 박스</h5>
+								<script type="text/javascript">
+									$(document).ready(function(){
+										$('.bx_more>a').click(function(){
+											$(this).parent().prev().toggleClass('open');
+											return false;
+										});
+									})
+								</script>
+								<div class="bx_more_obj">
+									<p>런던 1존에 위치한 모던하고 깔끔한 신생 런던 신세계숙소입 니다. 건물 자체가 새 건물이라 내부도 깨끗하고 소규모의 인원 을 수용하기 때문에 공간도 넓어요~ 소규모의 숙소이라 붐비는 일 없고요, 여자 도미토리에는 내부에 전용 샤워/화장실까지 있어 남자들 눈치 볼 걱정 NO!! </p>
+									<p>런던 1존에 위치한 모던하고 깔끔한 신생 런던 신세계숙소입 니다. 건물 자체가 새 건물이라 내부도 깨끗하고 소규모의 인원 을 수용하기 때문에 공간도 넓어요~ 소규모의 숙소이라 붐비는 일 없고요, 여자 도미토리에는 내부에 전용 샤워/화장실까지 있어 남자들 눈치 볼 걱정 NO!! </p>
+								</div>
+								<div class="text-right bx_more">
+									<a href="#">더보기 <i class="icon_more"></i></a>
+								</div>
+							</div>
+							<!-- <div class="tab-pane" id="slide">
+								<h3>슬라이드 가이드</h3>
+							</div> -->
+							<div class="tab-pane" id="calender">
+								<h3>달력가이드</h3>
+							</div>
+						</div>
+						<!--// 관리자 -->
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('.tb-filelist').rowspan (0);
+					$('.tb-filelist').rowspan (1);
+					$('.tb-filelist').rowspan (2);
+					$('.tb-filelist').rowspan (3);
+
+					$('.tip').tooltip();
+					$(".icon_detailview").mouseover(
+						function  () {
+							if (!$(this).parent().hasClass("open")) {
+								$(this).parent().addClass('open');
+							}
+						}
+						);
+
+					$(".detail_wrp").mouseleave(
+						function  () {
+							if ($(this).hasClass("open")) {
+								$(this).removeClass('open');
+							}
+						}
+						);
+
+				})
+				$('.tb-filelist tbody tr').each(function(index){
+					$(this).prepend('<td>'+index+'</td>');
+				});
+				$.fn.rowspan = function(colIdx, isStats) {
+					return this.each(function(){
+						var that;
+						$('tr', this).each(function(row) {
+							$('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {
+								if ($(this).html() != '' && $(this).html() == $(that).html()
+									&& (!isStats
+										|| isStats && $(this).prev().html() == $(that).prev().html()
+										)
+									) {
+									rowspan = $(that).attr("rowspan") || 1;
+								rowspan = Number(rowspan)+1;
+
+								$(that).attr("rowspan",rowspan);
+
+					// do your action for the colspan cell here
+					$(this).hide();
+
+					//$(this).remove();
+					// do your action for the old cell here
+
+				} else {
+					that = this;
+				}
+
+				// set the that if not already set
+				that = (that == null) ? this : that;
+			});
+						});
+					});
+				};
+			</script>
+			<!-- lib -->
+			<script src="http://v2.theminda.com/cust/js/bootstrap-slider.js"></script>
+			<script src="http://v2.theminda.com/cust/js/jquery.nanoscroller.js"></script>
+			<script src="http://v2.theminda.com/cust/js/moment.min.js"></script>
+			<script src="http://v2.theminda.com/cust/js/daterangepicker.js"></script>
+			<script src="http://v2.theminda.com/cust/js/jquery.bxslider.min.js"></script>
+			<!-- common -->
+			<script src="http://v2.theminda.com/cust/js/common.js"></script>
+		</body>
+		</html>

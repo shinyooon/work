@@ -1,0 +1,443 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header_login.html" ?>
+    <!-- //header -->
+
+    <!-- #container -->
+    <div id="container">
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <!-- 서브 헤더 -->
+            <header class="sub_hd">
+                <h2>비수기할인</h2>
+                <p class="sm_txt text-center">일반 시즌 외 비수기에는 더 싸다! '비수기 할인가'로 저렴하게 예약하세요</p>
+            </header>
+
+            <ul class="chk_lst clearfix v2">
+                <li><a href="">런던[23]</a></li>
+                <li><a href="">파리[4]</a></li>
+                <li><a href="">로마[6]</a></li>
+                <li class="disabled"><a href="">피렌체[24]</a></li>
+                <li class="disabled"><a href="">바르셀로나[35]</a></li>
+                <li><a href="">도쿄[1]</a></li>
+                <li><a href="">오사카[54]</a></li>
+                <li><a href="">홍콩[54]</a></li>
+                <li><a href="">싱가폴[1]</a></li>
+                <li><a href="">서울[7]</a></li>
+                <li><a href="">부산[5]</a></li>
+                <li><a href="">뉴욕[3]</a></li>
+                <li class="disabled"><a href="">워싱턴[6]</a></li>
+            </ul>
+
+            <!-- 날짜검색 -->
+            <div class="hd_srch_wrp discount_room_srch clearfix">
+                <div class="search_wrp ver_inline">
+                    <div id="calendarWrp" class="daterange d_iblock">
+                        <div class="datewrp">
+                            <input type="text" readonly="" id="daterange" class="form-control input-lg"
+                                   onfocus="this.blur();$('#chkin_label').click();" placeholder="체크인">
+                            <label for="daterange" class="datelabel" id="chkin_label"><span
+                                class="display-text chkin_txt" style="padding:8px">체크인</span></label>
+                        </div>
+                        <i class="icon_arrow"></i>
+                        <div class="datewrp">
+                            <input type="text" readonly="" id="chkout" class="form-control input-lg"
+                                   onfocus="this.blur();$('#chkout_label').click();" placeholder="체크아웃">
+                            <label for="chkout" class="datelabel" id="chkout_label"><span
+                                class="display-text chkout_txt" style="padding:8px">체크아웃</span></label>
+                        </div>
+                        <button type="button" style="display: none;" class="icon_date_close"
+                                onclick="javascript:resetDate();">달력초기화
+                        </button>
+                    </div>
+                    <div class="dropdown d_iblock">
+                        <a href="#roomType" data-toggle="dropdown"><span class="span_roomtype">객실유형선택</span><i
+                            class="icon_arr_grey"></i></a>
+                        <div class="dropdown-menu personnel">
+                            <ul>
+                                <li><a data-roomtype="">객실유형선택</a></li>
+                                <li><a href="javascript:;" data-roomtype="0">도미토리(쉐어룸)</a></li>
+                                <li><a href="javascript:;" data-roomtype="1">1인실</a></li>
+                                <li><a href="javascript:;" data-roomtype="2">2인실</a></li>
+                                <li><a href="javascript:;" data-roomtype="3">3인실</a></li>
+                                <li><a href="javascript:;" data-roomtype="4">4인실</a></li>
+                                <li><a href="javascript:;" data-roomtype="5">5인실</a></li>
+                                <li><a href="javascript:;" data-roomtype="6">6인실</a></li>
+                                <li><a href="javascript:;" data-roomtype="7">콘도형</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input name="sword" type="text" class="form-control input-lg d_iblock" title="검색어 입력" value=""
+                           placeholder="도시명 또는 숙소명을 입력하세요.">
+                    <button type="button" class="btn bg_org btn-lg" onclick="javascript:onSearch();">검색</button>
+                    <button type="button" class="btn btn-lg sortby" onclick="location.href='sale_tab1.php';">전체보기
+                    </button><!-- [D] 선택시 active -->
+                </div>
+            </div>
+            <!-- //쿠폰검색 -->
+
+            <div class="filterwrp clearfix">
+                <p class="pull-left nowrap">총 <span class="color_red">124</span>개의 땡처리 할인객실이 검색되었습니다</p>
+                <span class="pull-right">
+			<button type="button" class="no_style sort_btn">최고할인률 <i class="icon_sort_arr">낮은순</i></button>
+			<button type="button" class="no_style sort_btn ml15 up">할인기간 <i class="icon_sort_arr">높은순</i></button>
+                    <!-- [D] 화살표 위로 표시 up 클래스추가 -->
+		</span>
+            </div>
+
+            <ul class="row discount_room_lst room-list__detail-list">
+                <li class="col-xs-4">
+                    <a href="">
+                        <div class="tmb pr">
+                            <img src="_temp/tmb4.jpg" alt="">
+                            <div class="label_bx">
+                                <span class="room-list__discount"><span>최고 24%할인</span></span>
+                            </div>
+                        </div>
+                        <strong class="tit">[피렌체] 피렌체 마피아 하우스</strong>
+                        <div class="room_info">
+                            <span class="discount_room__date">2016.04.06~2016.04.30</span>
+                        </div>
+                        <div class="price">
+                            <span class="before_price">￦1,233,585</span>
+                            <span class="current_price">￦1,009,800</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-xs-4">
+                    <a href="">
+                        <div class="tmb pr">
+                            <img src="_temp/tmb4.jpg" alt="">
+                            <div class="label_bx">
+                                <span class="room-list__discount"><span>최고 5%할인</span></span>
+                            </div>
+                        </div>
+                        <strong class="tit">[피렌체] 피렌체 마피아 하우스</strong>
+                        <div class="room_info">
+                            <span class="discount_room__date">2016.04.06~2016.04.30</span>
+                        </div>
+                        <div class="price">
+                            <span class="before_price">￦1,233,585</span>
+                            <span class="current_price">￦1,009,800</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-xs-4">
+                    <a href="">
+                        <div class="tmb pr">
+                            <img src="_temp/tmb4.jpg" alt="">
+                            <div class="label_bx">
+                                <span class="room-list__discount"><span>최고 24%할인</span></span>
+                            </div>
+                        </div>
+                        <strong class="tit">[피렌체] 피렌체 마피아 하우스</strong>
+                        <div class="room_info">
+                            <span class="discount_room__date">2016.04.06~2016.04.30</span>
+                        </div>
+                        <div class="price">
+                            <span class="before_price">￦1,233,585</span>
+                            <span class="current_price">￦1,009,800</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-xs-4">
+                    <a href="">
+                        <div class="tmb pr">
+                            <img src="_temp/tmb4.jpg" alt="">
+                            <div class="label_bx">
+                                <span class="room-list__discount"><span>최고 24%할인</span></span>
+                            </div>
+                        </div>
+                        <strong class="tit">[피렌체] 피렌체 마피아 하우스</strong>
+                        <div class="room_info">
+                            <span class="discount_room__date">2016.04.06~2016.04.30</span>
+                        </div>
+                        <div class="price">
+                            <span class="before_price">￦1,233,585</span>
+                            <span class="current_price">￦1,009,800</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-xs-4">
+                    <a href="">
+                        <div class="tmb pr">
+                            <img src="_temp/tmb4.jpg" alt="">
+                            <div class="label_bx">
+                                <span class="room-list__discount"><span>최고 24%할인</span></span>
+                            </div>
+                        </div>
+                        <strong class="tit">[피렌체] 피렌체 마피아 하우스</strong>
+                        <div class="room_info">
+                            <span class="discount_room__date">2016.04.06~2016.04.30</span>
+                        </div>
+                        <div class="price">
+                            <span class="before_price">￦1,233,585</span>
+                            <span class="current_price">￦1,009,800</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-xs-4">
+                    <a href="">
+                        <div class="tmb pr">
+                            <img src="_temp/tmb4.jpg" alt="">
+                            <div class="label_bx">
+                                <span class="room-list__discount"><span>최고 24%할인</span></span>
+                            </div>
+                        </div>
+                        <strong class="tit">[피렌체] 피렌체 마피아 하우스</strong>
+                        <div class="room_info">
+                            <span class="discount_room__date">2016.04.06~2016.04.30</span>
+                        </div>
+                        <div class="price">
+                            <span class="before_price">￦1,233,585</span>
+                            <span class="current_price">￦1,009,800</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <nav class="text-center pagination-wrap pagination-wrap--bd-t">
+                <ul class="pagination clearfix">
+                    <li class="prev"><a href="">이전페이지목록보기</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="" class="active">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li class="next"><a href="">다음페이지목록보기</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<script type="text/javascript">
+
+    var checkin_org = '';
+    var checkout_org = '';
+
+    function setDatePicker(today) {
+
+        var year = today.substring(0, 4);
+        var month = parseInt(today.substring(5, 7)) - 1;
+        var day = today.substring(8, 10);
+
+        //검색달력
+        var dateToday = new Date(year, month, day);
+        var dateMax = new Date(year, month, day);
+        dateMax.setDate(dateToday.getDate() + 180);
+
+        $('#daterange').daterangepicker({
+            autoApply: true,
+            'dateLimit': {
+                'days': 15 //15일 제한(체크아웃날짜 미포함) 설정
+            },
+            minDate: dateToday,
+            maxDate: dateMax,
+            parentEl: '#calendarWrp',
+            opens: 'center',
+            locale: {
+                'format': 'YYYY-MM-DD',
+                'daysOfWeek': [
+                    '일',
+                    '월',
+                    '화',
+                    '수',
+                    '목',
+                    '금',
+                    '토',
+                ],
+                'monthNames': [
+                    '1월',
+                    '2월',
+                    '3월',
+                    '4월',
+                    '5월',
+                    '6월',
+                    '7월',
+                    '8월',
+                    '9월',
+                    '10월',
+                    '11월',
+                    '12월',
+                ],
+            },
+            startDate: checkin_org,
+            endDate: checkout_org,
+        });
+
+        // 체크인 또는 체크아웃 클릭시
+        $('.datelabel').on('click', function() {
+
+            // 전체 액티브 삭제
+            $('.datewrp').removeClass('active');
+
+            // 해당 액티브 선택
+            $(this).parent().addClass('active');
+        });
+
+        // 체크아웃 클릭시
+        $('#chkout_label').on('click', function() {
+            if ($('.chkin_txt').get(0).innerHTML == '체크인') {
+
+                $('#chkin_label').click();
+
+            } else {
+                $('#daterange').click();
+            }
+        });
+
+        $('#daterange').on({
+            'show.daterangepicker': function(ev, picker) {
+
+                var start = $('input[name=\'daterangepicker_start\']').val();
+                var end = $('input[name=\'daterangepicker_end\']').val();
+
+                if ($('.chkout_txt').parent().parent().hasClass('active')) {
+
+                    picker.setStartDate(start);
+                    picker.endDate = null;
+                    picker.visible_endDate = end;
+                    picker.updateView();
+
+                } else { // 기존에 체크아웃 변경으로 설정되어 있을 경우 초기화 시켜줌
+
+                    picker.visible_endDate = null;
+                    picker.updateView();
+                }
+            },
+            'start.daterangepicker': function(ev, picker) {
+
+                var checkin = picker.startDate.format('YYYY-MM-DD');
+                $('.chkin_txt').get(0).innerHTML = checkin;
+                $('.chkout_txt').get(0).innerHTML = '체크아웃';
+
+                // 전체 액티브 삭제
+                $('.datewrp').removeClass('active');
+                $('.chkout_txt').parent().parent().addClass('active');
+
+                $('.icon_date_close').show();
+            },
+            'end.daterangepicker': function(ev, picker) {
+
+                var checkout = picker.endDate.format('YYYY-MM-DD');
+                $('.chkout_txt').get(0).innerHTML = checkout;
+
+            },
+            'hide.daterangepicker': function(ev, picker) {
+
+                var start = $('.chkin_txt').get(0).innerHTML;
+                var end = $('.chkout_txt').get(0).innerHTML;
+
+                // 선택한 체크인 체크아웃 날짜가 유효한지 확인
+                if (start > end || start == '체크인' || end == '체크아웃') {
+
+                    // 유효하지 않을 경우 기존 선택값으로 되돌림
+                    start = checkin_org;
+                    end = checkout_org;
+
+                    // 기존값도 유효하지 않다면 리셋값으로 설정
+                    if (start == '' || end == '' || start == 'Invalid date' || end == 'Invalid date') {
+
+                        checkin_org = start = '';
+                        checkout_org = end = '';
+                        $('.icon_date_close').hide();
+                    }
+
+                    picker.setStartDate(start);
+                    picker.setEndDate(end);
+                    $('input[name=\'daterangepicker_start\']').val(start);
+                    $('input[name=\'daterangepicker_end\']').val(end);
+                }
+
+                $('.chkin_txt').get(0).innerHTML = start == '' ? '체크인' : start;
+                $('.chkout_txt').get(0).innerHTML = end == '' ? '체크아웃' : end;
+                $('.datewrp').removeClass('active');
+
+            },
+            'apply.daterangepicker': function(ev, picker) {
+
+                // 전체 액티브 삭제
+                $('.datewrp').removeClass('active');
+
+                var start = picker.startDate.format('YYYY-MM-DD');
+                var end = picker.endDate.format('YYYY-MM-DD');
+
+                if (start == end) {
+
+                    alert('체크인 체크아웃 날짜가 동일할 수 없습니다.');
+                    resetDate();
+
+                } else {
+
+                    // 체크인/체크아웃 날짜 저장
+                    checkin_org = start;
+                    checkout_org = end;
+                }
+            },
+        });
+
+        var start = checkin_org;
+        var end = checkout_org;
+        if (start != end && start != 'Invalid date' && end != 'Invalid date') {
+
+            var dateStart = new Date(start);
+            var dateEnd = new Date(end);
+
+            if (dateToday > dateStart || dateMax < dateEnd) {
+
+                alert('체크인/체크아웃 날짜를 확인해주시기 바랍니다.');
+                resetDate();
+
+            } else {
+                if (start != '' && end != '') {
+
+                    // 체크인/체크아웃 날짜 업데이트
+                    $('input[name=\'daterangepicker_start\']').val(start);
+                    $('input[name=\'daterangepicker_end\']').val(end);
+                    $('.chkin_txt').get(0).innerHTML = start;
+                    $('.chkout_txt').get(0).innerHTML = end;
+
+                    $('.icon_date_close').show();
+                }
+            }
+        }
+
+    }
+
+    function resetDate() {
+
+        checkin_org = '';
+        checkout_org = '';
+        $('#daterange').val('');
+        $('#daterange').data('daterangepicker').setStartDate('');
+        $('#daterange').data('daterangepicker').setEndDate('');
+        $('input[name=\'daterangepicker_start\']').val('');
+        $('input[name=\'daterangepicker_end\']').val('');
+        $('.chkin_txt').get(0).innerHTML = '체크인';
+        $('.chkout_txt').get(0).innerHTML = '체크아웃';
+
+        $('.icon_date_close').hide();
+
+    }
+
+    $(function() {
+
+        setDatePicker('2018-02-14');
+
+    });
+
+    $('.dropdown-menu.personnel>ul>li>a').click(function() {
+        $('.span_roomtype').text($(this).text());
+        $('form[name=\'searchFm\'] input[name=\'roomtype\']').val($(this).data('roomtype'));
+    });
+
+</script>
+<? include "inc/bottom.html" ?>

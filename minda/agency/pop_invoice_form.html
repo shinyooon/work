@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="rev-manage">
+					<div class="rev-manage__view">
+						<div class="tit-wrap">
+							<h3 class="tit">예약목록</h3>
+							<h4 class="tit-split">예약진행</h4>
+							<div class="tit__right">
+								<button type="button" class="rev-manage__view__btn-rev-cancel">예약 취소</button>
+							</div>
+						</div>
+						<!-- 기본정보 -->
+						<div class="rev-manage__view__rev-info">
+							<div class="tit-wrap">
+								<h5 class="sub-tit">기본 정보</h5>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">예약목록번호</span>
+										<span class="table__col table__col--2">담당자</span>
+										<span class="table__col table__col--3">신청일</span>
+										<span class="table__col table__col--4">요청 객실형태</span>
+										<span class="table__col table__col--5">성별/인원</span>
+										<span class="table__col table__col--6">예약신청일</span>
+										<span class="table__col table__col--7">입금마감일</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">7259</span>
+										<span class="table__col table__col--2">김민다</span>
+										<span class="table__col table__col--3">17-07-05</span>
+										<span class="table__col table__col--4">도미토리 쉐어룸</span>
+										<span class="table__col table__col--5">남성 1명 &amp; 여성 1명</span>
+										<span class="table__col table__col--6">17-07-05</span>
+										<span class="table__col table__col--7">17-07-05</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 기본정보 -->
+						<!-- 고객정보 -->
+						<div class="rev-manage__view__customer-info">
+							<div class="tit-wrap">
+								<h5 class="sub-tit">고객 정보</h5>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">대표자</span>
+										<span class="table__col table__col--2">성별</span>
+										<span class="table__col table__col--3">휴대폰</span>
+										<span class="table__col table__col--4">이메일</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">김슬기</span>
+										<span class="table__col table__col--2">여성</span>
+										<span class="table__col table__col--3">010-4619-9587</span>
+										<span class="table__col table__col--4">bangjin@theminda.com</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 고객정보 -->
+						<!-- 요청사항 -->
+						<div class="rev-manage__view__req">
+							<div class="tit-wrap">
+								<h5 class="sub-tit">요청사항</h5>
+							</div>
+							<div class="table">
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">조용하고 조식제공이 가능한 숙소로 추천해주세요. </span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 요청사항 -->
+						<!-- 직접예약 -->
+						<div class="rev-manage__view__roomlist rev-manage__view__rev-direct">
+							<div class="tit-wrap">
+								<h5 class="sub-tit">직접 예약 목록</h5>
+								<div class="tit__right">
+									<span class="input-wrap input-wrap__select input-wrap__select-rev">
+										<select title="예약목록정렬">
+											<option>취소/불가 예약건 제외</option>
+											<option>전체 예약건</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">예약번호</span>
+										<span class="table__col table__col--2">도시</span>
+										<span class="table__col table__col--3">숙소명/객실명</span>
+										<span class="table__col table__col--4">체크인</span>
+										<span class="table__col table__col--5">숙박수</span>
+										<span class="table__col table__col--6">인원</span>
+										<span class="table__col table__col--7">1박 요금</span>
+										<span class="table__col table__col--8">총액</span>
+										<!-- <span class="table__col table__col--9">여행사<br />할인액</span>
+										<span class="table__col table__col--10">입금액</span> -->
+										<span class="table__col table__col--11">상태</span>
+										<span class="table__col table__col--12">선택/취소</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1"><a href="" class="rev-manage__revnum-link">1500623401604</a></span>
+										<span class="table__col table__col--2">상트페테르부르크</span>
+										<span class="table__col table__col--3">
+											상트페테르부르크 나무민박
+											<div class="rev-manage__view__roomtype">여성 도미토리<br />남성 도미토리</div>
+										</span>
+										<span class="table__col table__col--4">17-11-30</span>
+										<span class="table__col table__col--5">3박</span>
+										<span class="table__col table__col--6">1명</span>
+										<span class="table__col table__col--7">￡25</span>
+										<span class="table__col table__col--8">￡150</span>
+										<!-- <span class="table__col table__col--9">-</span>
+										<span class="table__col table__col--10">-</span> -->
+										<span class="table__col table__col--11">예약가능</span>
+										<span class="table__col table__col--12">
+											<button type="button" class="rev-manage__view__btn-select">선택</button>
+											<button type="button" class="rev-manage__view__btn-cancel">취소</button>
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1"><a href="" class="rev-manage__revnum-link">1500623401604</a></span>
+										<span class="table__col table__col--2">런던</span>
+										<span class="table__col table__col--3">
+											런던 알러뷰하우스
+											<div class="rev-manage__view__roomtype">일반실</div>
+										</span>
+										<span class="table__col table__col--4">17-11-30</span>
+										<span class="table__col table__col--5">3박</span>
+										<span class="table__col table__col--6">1명</span>
+										<span class="table__col table__col--7">￡25</span>
+										<span class="table__col table__col--8">￡150</span>
+										<!-- <span class="table__col table__col--9">-</span>
+										<span class="table__col table__col--10">-</span> -->
+										<span class="table__col table__col--11">예약대기</span>
+										<span class="table__col table__col--12">
+											<button type="button" class="rev-manage__view__btn-cancel">취소</button>
+										</span>
+									</div>
+								</div>
+								<div class="table__ft">
+									<div class="table__row">
+										<span class="table__col table__col--1">
+											<button type="button" class="rev-manage__view__btn-direct">직접 선택하기 추가</button>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 직접예약 -->
+						<!-- 추천 예약 목록 -->
+						<div class="rev-manage__view__roomlist rev-manage__view__rev-recom">
+							<div class="tit-wrap">
+								<h5 class="sub-tit">추천 예약 목록</h5>
+								<div class="tit__right">
+									<span class="input-wrap input-wrap__select input-wrap__select-rev">
+										<select title="예약목록정렬">
+											<option>취소/불가 예약건 제외</option>
+											<option>전체 예약건</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">예약번호</span>
+										<span class="table__col table__col--2">도시</span>
+										<span class="table__col table__col--3">숙소명/객실명</span>
+										<span class="table__col table__col--4">체크인</span>
+										<span class="table__col table__col--5">숙박수</span>
+										<span class="table__col table__col--6">1박 요금</span>
+										<span class="table__col table__col--7">총액</span>
+										<span class="table__col table__col--8">상태</span>
+										<span class="table__col table__col--9">요청사항</span>
+										<span class="table__col table__col--10">취소</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1"><a href="" class="rev-manage__revnum-link">1500623401604</a></span>
+										<span class="table__col table__col--2">런던</span>
+										<span class="table__col table__col--3">
+											파리 방진게스트하우스
+											<div class="rev-manage__view__roomtype">도미토리 쉐어룸</div>
+										</span>
+										<span class="table__col table__col--4">17-11-30</span>
+										<span class="table__col table__col--5">3박</span>
+										<span class="table__col table__col--6">US$25</span>
+										<span class="table__col table__col--7">US$25</span>
+										<span class="table__col table__col--8">예약확정</span>
+										<span class="table__col table__col--9">-</span>
+										<span class="table__col table__col--10">-</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1"><a href="" class="rev-manage__revnum-link">1500623401604</a></span>
+										<span class="table__col table__col--2">런던</span>
+										<span class="table__col table__col--3">
+											파리 방진게스트하우스
+											<div class="rev-manage__view__roomtype">도미토리 쉐어룸</div>
+										</span>
+										<span class="table__col table__col--4">17-11-30</span>
+										<span class="table__col table__col--5">3박</span>
+										<span class="table__col table__col--6">US$25</span>
+										<span class="table__col table__col--7">US$25</span>
+										<span class="table__col table__col--8">추천중</span>
+										<span class="table__col table__col--9"><button type="button" class="rev-from__roomlist__btn-see">보기</button></span>
+										<span class="table__col table__col--10">
+											<button type="button" class="rev-manage__view__btn-cancel">취소</button>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 추천 예약 목록 -->
+						<!-- 민다 추천 목록 -->
+						<div class="rev-manage__view__minda-recom">
+							<div class="tit-wrap">
+								<h5 class="sub-tit">민다 추천 목록</h5>
+								<div class="tit__right">
+									<p class="rev-manage__view__txt-recom">아래 예약건의 선택 혹은 취소가 완료되어야만 인보이스 요청을 하실 수 있습니다.</p>
+									<button type="button" class="rev-manage__view__btn-room">숙소정보보기</button>
+								</div>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">도시</span>
+										<span class="table__col table__col--2">숙소명/객실명</span>
+										<span class="table__col table__col--3">체크인</span>
+										<span class="table__col table__col--4">숙박수</span>
+										<span class="table__col table__col--5">1박 요금</span>
+										<span class="table__col table__col--6">총액</span>
+										<span class="table__col table__col--7">선택/취소</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">런던</span>
+										<span class="table__col table__col--2">
+											파리 방진게스트하우스
+											<div class="rev-manage__view__roomtype">도미토리 쉐어룸</div>
+										</span>
+										<span class="table__col table__col--3">17-11-30</span>
+										<span class="table__col table__col--4">3박</span>
+										<span class="table__col table__col--5">US$25</span>
+										<span class="table__col table__col--6">US$25</span>
+										<span class="table__col table__col--7">선택완료</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">런던</span>
+										<span class="table__col table__col--2">
+											파리 방진게스트하우스
+											<div class="rev-manage__view__roomtype">도미토리 쉐어룸</div>
+										</span>
+										<span class="table__col table__col--3">17-11-30</span>
+										<span class="table__col table__col--4">3박</span>
+										<span class="table__col table__col--5">US$25</span>
+										<span class="table__col table__col--6">US$25</span>
+										<span class="table__col table__col--7">선택완료</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 민다 추천 목록 -->
+						<!-- rev-agree -->
+						<section class="rev-form__section rev-agree__privacy">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">개인 정보 제3자 정보제공 동의하기</h3>
+							</div>
+							<div class="rev-form__bx">
+								<span class="input-wrap__chk">
+									<input type="checkbox" name="" id="agree_rule2" title="취소환불규정 동의하기" />
+									<label for="agree_rule2">개인 정보 제3자 정보제공 동의하기</label>
+								</span>
+								<button type="button" id="btn_privacy" class="rev-agree__btn">내용보기</button>
+							</div>
+						</section>
+						<!--// rev-agree -->
+						<div class="btm-btn">
+							<button type="button" class="btm-btn__btn--green rev-manage__btn-invoice-apply">인보이스 요청</button>
+						</div>
+					</div>
+					<!--// rev-manage__view -->
+				</div>
+				<!--// rev-manage -->
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- 인보이스 요청 -->
+	<div class="modal fade modal__invoice-form">
+		<div class="modal-dialog">
+			<!-- modal__contents -->
+			<div class="modal__contents">
+				<!-- modal__hd -->
+				<div class="modal__hd">
+					<h1 class="modal__tit">인보이스 요청</h1>
+				</div>
+				<!--// modal__hd -->
+				<!-- modal__body -->
+				<div class="modal__body modal__invoice-form__body">
+					<div class="invoice__form">
+						<dl class="invoice__form__list">
+							<dt class="invoice__form__tit">비즈머니</dt>
+							<dd class="invoice__form__input">
+								<span class="input-wrap">
+									<input type="text" class="rev-detail__text" value="12,000" title="비즈머니 금액" placeholder="">
+								</span>
+								<span class="input-wrap__right-txt">잔액 12,000</span>
+							</dd>
+							<dt class="invoice__form__tit">할인쿠폰</dt>
+							<dd class="invoice__form__input">
+								<span class="input-wrap input-wrap__select rev-detail__sex">
+									<select class="rev-detail__select-sex" title="할인 쿠폰 선택">
+										<option>쿠폰 선택</option>
+										<option>쿠폰111</option>
+										<option>쿠폰222</option>
+									</select>
+								</span>
+							</dd>
+							<dt class="invoice__form__tit">입금마감일</dt>
+							<dd class="invoice__form__input">
+								<span class="input-wrap input-wrap__cal">
+									<input type="text" class="rev-detail__text input-cal input-cal__deadline" title="입금마감일" placeholder="" disabled="disabled">
+								</span>
+								<span class="input-wrap__right-txt">
+									<span class="input-wrap__chk chk_deadline_change">
+										<input type="checkbox" name="" id="chk_deadline_change" title="입금마감일 조정">
+										<label for="chk_deadline_change">입금마감일 조정</label>
+									</span>
+								</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="btm-btn">
+						<button type="button" class="btm-btn__btn--l-blue modal__btn-clse">취소</button>
+						<button type="button" class="btm-btn__btn--green modal__btn-clse">인보이스 요청</button>
+					</div>
+				</div>
+				<!--// modal__body -->
+			</div>
+			<!--// modal__contents -->
+		</div>
+	</div>
+	<!--// 인보이스 요청 -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="js/Layer.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			lnbCtrl.active(1);
+			var p_invoice_form = new Layer($('.modal__invoice-form'));
+			p_invoice_form.open();
+
+			var dateToday = new Date();
+			var dateMax = new Date('11/30/2017'); // 첫 체크인 날짜
+			var dateDefault = new Date();
+			dateMax.setDate(dateMax.getDate() -7);
+			dateDefault.setDate(dateToday.getDate()+2);
+
+			$('.input-cal__deadline').val(dateDefault.getFullYear()+'-'+("0" + (dateDefault.getMonth() + 1)).slice(-2)+'-'+dateDefault.getDate());
+			$('.chk_deadline_change').click(function(){
+				if(!$('#chk_deadline_change').prop("checked")){
+					$('.input-cal__deadline').attr("disabled", true);
+					$('.input-cal__deadline').daterangepicker({
+						minDate : dateToday,
+						maxDate : dateMax, // 첫체크인 날짜의 -7일
+						locale: {
+							format: 'YYYY-MM-DD',
+							cancelLabel: '닫기',
+							"daysOfWeek": [
+							"<span class='th-sun'>S</span>",
+							"M",
+							"T",
+							"W",
+							"T",
+							"F",
+							"<span class='th-sat'>S</span>"
+							],
+							"monthNames": [
+								"1월",
+								"2월",
+								"3월",
+								"4월",
+								"5월",
+								"6월",
+								"7월",
+								"8월",
+								"9월",
+								"10월",
+								"11월",
+								"12월"
+							]
+						},
+						singleDatePicker: true,
+						showDropdowns: true,
+						parentEl: ".input-wrap__cal",
+						autoUpdateInput: false,
+						autoApply:false
+					});
+				}else{
+					$('.input-cal__deadline').attr("disabled", false);
+				}
+			})
+
+		})
+	</script>
+</body>
+</html>

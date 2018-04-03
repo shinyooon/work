@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.filter,.question__form  {
+	.input-wrap {
+		display: block;
+	}
+}
+
+.pagination {
+	text-align: center;
+	padding: 20px 0;
+	border-top: 1px solid #eee;
+}
+
+.pagination__prev,.pagination__next {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	@include border-radius(20px);
+	background-color: $color__ccc;
+	.pagination__icon-prev {
+		@include icon-spr(10px, 18px, 0, -40px);
+	}
+	.pagination__icon-next {
+		@include icon-spr(10px, 18px, -10px, -40px);
+	}
+}
+
+.pagination__cnt {
+	display: inline-block;
+	font-size: em(20px);
+	margin: 12px 29px;
+}
+
+.pagination__now {
+	font-weight: $fw__800;
+	color: $color__blk;
+}
+
+.starrating{
+	@include starrating();
+	.starrating__num{
+		display:inline-block;
+		vertical-align:top;
+	}
+	&--lg{
+		@include starrating(lg);
+		.starrating__num{
+			@include text($color__primary,em(20px),$fw__800);
+			margin-top:4px;
+		}
+	}
+}
+
+.find__input-list,.filter-list,.question-list {
+	&__tit {
+		margin-bottom: 10px;
+		@include text($color__blk, em(17px), $fw__800);
+	}
+	&__desc {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+/*filter*/
+.filter-list__room-list,.filter-list__cancel-list {
+	margin-top: 22px;
+	li {
+		margin-bottom: 14px;
+	}
+}
+.filter-list__btn-more{
+	@include border-btm($color__aaa);
+}
+.filter-list__cancel-list{
+	&:after{
+		@include clearboth();
+	}
+	li{
+		float:left;
+		width:50%;
+	}
+}
+.ly__filter{
+    .filter__btn-wrap-reset{
+        width:91px;
+        @include css3-prefix('flex', initial);
+    }
+}
+.rev__result,.qna__result,.alram__result{
+    padding:10px 20px;
+    @include d-flex();
+    @include css3-prefix('align-items','center');
+    @include flex();
+    @include border-btm($color__eee,10px);
+    &-msg{
+        @include flex();
+        @include d-flex();
+        @include css3-prefix('align-items','center');
+    }
+    &-txt{
+        span{
+            display:inline-block;
+        }
+    }
+    &-num{
+        font-weight:bold;
+    }
+}
+/* The snackbar/ toast  */
+#toast {
+	visibility:hidden;
+	min-width:250px;
+	background-color:#333;
+	color:#fff;text-align:center;
+	border-radius:2px;
+	padding:14px 16px;
+	position:fixed;left:50%; bottom:10%;transform:translate(-50%, 0);z-index:9999;
+	&.show{
+		visibility:visible;
+		-webkit-animation:fadein 0.5s, fadeout 0.5s 2.5s;
+		animation:fadein 0.5s, fadeout 0.5s 2.5s
+	}
+}
+@-webkit-keyframes fadein {
+	from {bottom:0; opacity:0;}
+	to {bottom:10%; opacity:1;}
+}
+@keyframes fadein {
+	from {bottom:0; opacity:0;}
+	to {bottom:10%; opacity:1;}
+}
+@-webkit-keyframes fadeout {
+	from {bottom:10%; opacity:1;}
+	to {bottom:0; opacity:0;}
+}
+@keyframes fadeout {
+	from {bottom:10%; opacity:1;}
+	to {bottom:0; opacity:0;}
+}

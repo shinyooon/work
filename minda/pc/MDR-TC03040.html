@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<span class="sub_bg"></span>
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction -->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="" class="icon_house">홈</a></li>
+			<li><a href="">마이페이지</a></li>
+			<li><a href="">나의예약</a></li>
+			<li><a href="">지난 예약</a></li>
+		</ul>
+	</div>
+	<!-- 서브 헤더 -->
+	<header class="sub_hd">
+		<h2>렌터카</h2>
+		<p class="sm_txt text-center">렌터카에 대한 간단한 설명글</p>
+		<div class="sub_arr_wrp">
+			<a href="" class="arr_prev">이전페이지</a>
+			<a href="" class="arr_next">다음페이지</a>
+		</div>
+	</header>
+
+	<ul class="basic_step2 tb_fixed">
+		<li><a href="">렌터카 예약</a></li>
+		<li><a href="">이용규정 및 유의사항</a></li>
+		<li class="active"><a href="">손해 면책금 환불 프로그램</a></li>
+		<li><a href="">자주하는 질문</a></li>
+	</ul>
+
+	<section>
+		<h3 class="sub_title v2">손해 면책금 환불 프로그램</h3>
+		<img class="mt15 mb60" src="/cust/img/banner2.jpg" alt="">
+		<div class="sr-only">
+			<strong>손해 면책금 환불</strong>
+			<p>
+			대부분의 모든 렌터카 회사는 차량대여에 따른 보안보증금을 요구합니다. 렌터카 고객센터는 손해 면책금 환불 프로그램을 운영하는데<br>
+			이 상품을 구매하시면, (차량손해가 발생할 경우)  고객이 보증금 전부 또는 일 부분을 공급업체에게 지불하게 되면 저희 이용약관에 따라<br>
+			고객은 이 금액을 렌터카 고객센터에게 다시 청구할 수 있습니다.
+			</p>
+		</div>
+		<div class="well border_grey mb0 pl40">
+			<h4 class="h4 pt15">청구를 하려면 다음 사항을 고객서비스 센터에 보내셔야 합니다.</h4>
+			<ul class="lst_type_rect pt10 pb10">
+				<li>현지 렌터카 업체로부터 작성된 <span class="color_mint">사고경위서 사본</span> (차량 대여를 종료하기 이전에 반드시 작성되어야 합니다.)</li>
+				<li>새로운 손해가 얼마만큼 일어났는지 명확히 설명되는 <span class="color_mint">대여 전후 차량확인서 1부.</span></li>
+				<li>신용카드로 지불된 <span class="color_mint">결제증거.</span></li>
+				<li>제 3자와 연루되어 차량에 손상이 발생한 경우, 반드시 <span class="color_mint">경찰 사고보고서</span>를 받으시기 바랍니다.</li>
+			</ul>
+		</div>
+		<div class="rent_txt_bx bg_wh border_grey">
+			<p>
+				또한 현지 렌터카 업체는 고객님께 면책금을 곧바로 부과를 합니다.<br>
+				그리고나서 고객님께서 제공한 정보에 입각하여 제 3자의 보험사와 사고에 따른 조사를 이행합니다. 현지 렌터카 업체는 제 3자의 보험사로부터 환불을 받고자 노력을 합니다.<br>
+				일반적으로 현지 렌터카 업체는 제 3자 보험사로부터 돈을 환불 받은 후에 고객님께 부과했던 면책금을 환불해 드립니다.
+			</p>
+			<p class="pt35">
+				가끔 6개월이 걸릴 수도 있습니다. 이 정도의 기간이 지났음에도 현지 렌터카 업체로부터 환불을 받는다는 통보가 없을 경우, 렌터가 고객센터를 통해 구매하셨던 손해 면책금<br>
+				환불 상품을 통해 면책금액을 환불 신청하실 수도 있습니다.
+			</p>
+		</div>
+		<p class="info_txt pr pb15">
+			차량대여 종료 후 28일 안에 이 서류를 고객서비스 센터로 반드시 보내셔야만 합니다.<br>
+			렌터카 고객센터가 이를 승낙하게 되면 고객의 손해배상의무는 손해 면책금환불 상품을 구매한 비용으로 한정될 것 입니다
+		</p>
+		<p class="info_txt pr">
+			렌터카 회사의 방침과 같이 차량임대차 계약서에 제외된 항목에 대해서는 환불할 수 없음을 알려드립니다.<br>
+			적용 제외사항에 대한 더 자세한 정보는 차량을 인수받을 때 공급업체로부터 알 수 있고 고객의 대여서류에도 명시되어 있을 것입니다. 이 제외항목은 국가마다 공급업체마다 다르지만 보통 흔한<br>
+			예외사항은 다음과 같습니다. (이에 한정되지 않음)
+		</p>
+		<ul class="well border_grey lst_type_rect pl40">
+			<li>차량의 창문, 앞 유리,모든 유리, 인테리어, 개인 소지품, 바퀴 및/또는 타이어, 지붕 또는 밑면 손상</li>
+			<li>운전자가 약물 및/또는 음주상태에서 운전한 경우</li>
+			<li>차량임대차 계약서에 이름이 적혀있지 않은 운전자가 운전할 경우</li>
+			<li>승인 받지 않은 제 3자에 의해 견인된 렌트카에 발생한 손해 또는 견인비</li>
+			<li>손해결과로 차량 휴차 기간</li>
+			<li>도로 밖 및 비포장도로 주행을 포함한 차량을 부주의 /무관심 또는 무모하게 운전한 경우</li>
+		</ul>
+		<p class="info_txt pr mt20 pb15">
+			손해 면책금 환불 프로그램은 차량 안에 있는 물품속해 및 인명피해를 커버하지 않음을 유년하시기 바랍니다. 이 프로그램은 총 대여 기간 동안 일어난 오직 사고 한 건의 손해만 커버하기에,<br>
+			차량 (또는 차량 및 교체차량)이 두 건의 사고/충동에 연루되어 비용이 두 번 발생할 경우 손해 면책금 환불 프로그램은 일어난 오직 첫 번째 손해만 커버합니다.
+		</p>
+		<p class="info_txt pr">차량도난 발생시 이 프로그램은 적용되지 않습니다. 더 자세한 정보는 저희 팀으로 연락 주시기 바랍니다.</p>
+	</section>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

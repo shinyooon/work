@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<!-- [D] 닫기만 있는 메뉴 class="page_clse" -->
+
+<body class="page_clse">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<a class="icon_hd_back" href="javascript:history.back();"></a>
+			<h1><a href="javascript:;">검색조건</a></h1>
+			<!-- 타이틀 우측 2번ㅤㅉㅒㅤ 버튼 -->
+			<a class="icon_mn hd-r" onclick="menuOpen('snb')">메뉴</a>
+			<!-- 타이틀 우측 버튼 -->
+			<!-- 검색 바 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<!-- 페이지 시작-->
+			<!-- 검색 -->
+			<form class="form-horizontal">
+				<!-- 달력 -->
+				<div class="bg_mint frm_index">
+					<div class="row itx_datepicker_wrp">
+						<div class="col-xs-12"></div>
+						<div class="col-xs-6 if_scroll_hide">
+							<input type="text" class="no_style itx_datepicker itx_cal" placeholder="체크인">
+						</div>
+						<div class="col-xs-6 if_scroll_hide">
+							<input type="text" class="no_style itx_datepicker itx_cal" placeholder="체크아웃">
+						</div>
+					</div>
+				</div>
+				<div class="filter2">
+					<!-- 정렬 옵션 추가 2016-11-21  -->
+					<div class="form-group over mb35">
+						<span class="control-label">정렬</span>
+						<div class="filter_wrp" data-toggle="buttons">
+							<div class="btn-group fix_type_mint">
+								<label class="btn btn-default" for="sort_type1">
+									<input type="radio" name="sort_type" id="sort_type1">예약가능우선
+								</label>
+								<label class="btn btn-default" for="sort_type2">
+									<input type="radio" name="sort_type" id="sort_type2">낮은가격
+								</label>
+								<label class="btn btn-default" for="sort_type3">
+									<input type="radio" name="sort_type" id="sort_type3">평점
+								</label>
+								<label class="btn btn-default" for="sort_type4">
+									<input type="radio" name="sort_type" id="sort_type4">가나다순
+								</label>
+								<label class="btn btn-default" for="sort_type5">
+									<input type="radio" name="sort_type" id="sort_type5">저장순
+								</label>
+							</div>
+						</div>
+					</div>
+					<!--// 정렬 옵션 추가 2016-11-21  -->
+					<!-- 객실유형 -->
+					<div class="form-group">
+						<span class="control-label">객실유형</span>
+						<div class="filter_wrp" data-toggle="buttons">
+							<div class="btn-group fix_type_mint">
+								<label class="btn btn-default active">
+									<input type="checkbox" checked>도미토리
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">개인실
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">콘도룸
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">도미토리
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">개인실
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">콘도룸
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">도미토리
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">개인실
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">콘도룸
+								</label>
+							</div>
+						</div>
+						<!-- [D] 상단 filter_wrp 에 over 클래스 toggle-->
+						<div class="text-right filter_more">
+							<a href="#" onClick="$(this).parents('.form-group').toggleClass('over');return false;">추가옵션 더보기 <i class="icon_more"></i></a>
+						</div>
+					</div>
+					<!-- 가격범위 2017-02-21 순서변경 -->
+					<div class="form-group">
+						<span class="control-label">가격범위</span>
+						<div class="range_slider mb10">
+							<input id="priceRange" type="text" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[20,500]" data-slider-tooltip="hide">
+							<div class="price_txt clearfix">
+								<span class="min pull-left">&euro;10</span>
+								<span class="max pull-right"><span class="color_mint">&euro;500</span> / &euro;1000</span>
+							</div>
+						</div>
+						<script>
+						//http://seiyria.com/bootstrap-slider/
+						$(function() {
+							$("#priceRange").slider({});
+							$("#priceRange").on("slide", function(slideEvt) {
+								$(".price_txt .min").text('€' + slideEvt.value[0]);
+								$(".price_txt .max span").text('€' + slideEvt.value[1]);
+							});
+						})
+						</script>
+					</div>
+					<!-- 예약/결제방법 2017-02-21 add -->
+					<div class="form-group mb35">
+						<span class="control-label">예약/결제방법</span>
+						<div class="filter_wrp col2" data-toggle="buttons">
+							<div class="btn-group fix_type_mint">
+								<label class="btn btn-default">
+									<input type="checkbox">즉시예약
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">100% 결제
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- 객실시설 2017-02-21 순서변경 -->
+					<div class="form-group">
+						<span class="control-label">객실시설</span>
+						<div class="filter_wrp col2">
+							<div class="btn-group fix_type_mint" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="checkbox">전용욕실
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">wifi
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">게스트부엌
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">에어컨
+								</label>
+							</div>
+						</div>
+						<!-- [D] 상단 filter_wrp 에 over 클래스 toggle-->
+						<div class="text-right filter_more">
+							<a href="#" onClick="$(this).parents('.form-group').toggleClass('over');return false;">추가옵션 더보기 <i class="icon_more"></i></a>
+						</div>
+					</div>
+					<!-- 숙소유형 -->
+					<div class="form-group">
+						<span class="control-label">숙소유형</span>
+						<div class="filter_wrp col2">
+							<div class="btn-group fix_type_mint" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="checkbox">게스트하우스
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">펜션/콘도
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">호스텔
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">게스트하우스
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">펜션/콘도
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">호스텔
+								</label>
+							</div>
+						</div>
+						<!-- [D] 상단 filter_wrp 에 over 클래스 toggle-->
+						<div class="text-right filter_more">
+							<a href="#" onClick="$(this).parents('.form-group').toggleClass('over');return false;">추가옵션 더보기 <i class="icon_more"></i></a>
+						</div>
+					</div>
+					<!-- 옵션 -->
+					<div class="form-group mb35">
+						<span class="control-label">옵션</span>
+						<div class="filter_wrp">
+							<div class="btn-group fix_type_mint" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="checkbox">즉시예약
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">전용욕실
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">여행투어
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- 위치 -->
+					<div class="form-group">
+						<span class="control-label">위치</span>
+						<div class="filter_wrp">
+							<div class="btn-group fix_type_mint" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="checkbox">1존
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">2존
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">3존
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">4존
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">5존 이상
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">호스텔
+								</label>
+							</div>
+						</div>
+						<!-- [D] 상단 filter_wrp 에 over 클래스 toggle-->
+						<div class="text-right filter_more">
+							<a href="#" onClick="$(this).parents('.form-group').toggleClass('over');return false;">추가옵션 더보기 <i class="icon_more"></i></a>
+						</div>
+					</div>
+					<!-- 부가서비스 -->
+					<div class="form-group">
+						<span class="control-label">부가서비스</span>
+						<div class="filter_wrp col2">
+							<div class="btn-group fix_type_mint" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="checkbox">식사
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">공항픽업
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">공항픽업
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">공항픽업
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">공항픽업
+								</label>
+								<label class="btn btn-default">
+									<input type="checkbox">공항픽업
+								</label>
+							</div>
+						</div>
+						<!-- [D] 상단 filter_wrp 에 over 클래스 toggle-->
+						<div class="text-right filter_more">
+							<a href="#" onClick="$(this).parents('.form-group').toggleClass('over');return false;">추가옵션 더보기 <i class="icon_more"></i></a>
+						</div>
+					</div>
+
+				</div>
+				<div class="btm_fixed pa10 btm_filter_btn">
+					<button onclick="javascript:WebInvokeSubmit(); return false;" class="btn btn-lg btn-block bg_dark_grey ">필터검색</button>
+					<span class="filter_reset active"><a href="javascript:;" class="btn btn-lg bg_dark_grey"><span class="icon_srchfilter_reset">필터초기화</span></a></span>
+				</div>
+			</form>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.filter_reset .btn').click(function(){
+			if($(this).closest('.filter_reset').hasClass('active')){
+				$('.filter_wrp > .btn-group > label').each(function(){
+					if($(this).hasClass('active')) $(this).removeClass('active');
+				});
+				resetPriceSlider();
+				priceSliderAddEvent();
+				$(this).closest('.filter_reset').removeClass('active');
+			}
+		});
+
+		$('label').click(function(){
+			$('.filter_reset').addClass('active');
+		});
+	});
+	function resetPriceSlider(){
+		$("#priceRange").slider('destroy');
+		$("#priceRange").slider({min  : 15, max  : 350, value: [15, 350], labelledby: ['min_price_txt', 'max_price_txt']});
+		$(".price_txt .min").text('￡'+'15');
+		$(".price_txt .max span").text('￡'+'350');
+		$('form[name=pForm] input[name=price_min]').val(15);
+		$('form[name=pForm] input[name=price_max]').val(350);
+	}
+	function priceSliderAddEvent(){
+		$("#priceRange").on("change", function(slideEvt) {
+			var sliderPrice = $(this).val().split(',');
+			minprice = sliderPrice[0];
+			maxprice = sliderPrice[1];
+			$(".price_txt .min").text('￡'+minprice);
+			$(".price_txt .max span").text('￡'+maxprice);
+
+			$('form[name=pForm] input[name=price_min]').val(minprice);
+			$('form[name=pForm] input[name=price_max]').val(maxprice);
+
+			$('.filter_reset').addClass('active');
+		});
+	}
+
+
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

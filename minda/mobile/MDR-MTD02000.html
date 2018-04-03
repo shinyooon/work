@@ -1,0 +1,169 @@
+<? include "inc/top.html" ?>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a>    </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">땡처리 할인 숙소</a></h1>
+    <div class="header__right">
+        <!-- 타이틀 우측 3번쨰 버튼 -->
+        <!-- 타이틀 우측 2번쨰 버튼 -->
+        <!-- 타이틀 우측 버튼 -->
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix has-filter has-fnb">
+    <!-- 페이지 시작-->
+    <!-- 탭 -->
+    <!-- [D] 2017-01-03 탭 추가-->
+    <nav>
+        <ul class="tab6">
+            <li class="active"><a href="http://www.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=blowout_sale_minbak" class="d_block">땡처리 할인 숙소</a></li>
+            <li class=""><a href="http://www.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=noseason_sale_minbak" class="d_block">비수기 할인 숙소</a></li>
+        </ul>
+    </nav>
+    <div class="sort__hd sort_hd">
+        <div class="input__wrap input__wrap--select">
+            <select id="slt_country" class="btn btn-default btn-block btn-lg">
+                <option value="">전체보기</option>
+                <option value="005001002">LA</option>
+                <option value="005001001">뉴욕</option>
+                <option value="003002001">도쿄</option>
+                <option value="005001007">라스베가스</option>
+                <option value="001001001">런던</option>
+                <option value="001003001">로마</option>
+                <option value="001004002">마드리드</option>
+                <option value="001004001">바르셀로나</option>
+                <option value="001003002">베네치아</option>
+                <option value="001005001">베를린</option>
+                <option value="007003001">사이판</option>
+                <option value="001004004">세비야</option>
+                <option value="007001001">시드니</option>
+                <option value="003002002">오사카</option>
+                <option value="001006002">잘츠부르크</option>
+                <option value="001002001">파리</option>
+                <option value="001011001">프라하</option>
+                <option value="001003003">피렌체</option>
+            </select>
+        </div>
+        <div class="mtb_srch_filter">
+            <div class="srch__btm">
+                <button id="filter_btn" type="button" onclick="WebInvokeSaleFilter();" class="srch__btn-filter"><i class="srch__icon-filter"></i>필터</button>
+            </div>
+        </div>
+    </div>
+    <ul class="content-minbak discount_room_lst room_lst room-lst--v2 ">
+        <li>
+            <a href="javascript:;" data-goodsno="5247" data-pageview_type="">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="tmb_wrp">
+                            <img src="http://www.theminda.com/data/tum/goods_room/0_593f6b710d6a5.jpg" class="pos-center" alt="">
+                            <div href="javascript:;" class="tmb_heart_touch_area_right">
+                                <div class="ribbon_wrp">
+                                    <i class="icon_ribbon" data-goodsno="5247" minbak-code="5247">찜하기</i>
+                                </div>
+                            </div>
+                            <span class="room-list__discount">90%</span>
+                        </div>
+                    </div>
+                    <div class="media-body" onclick="javascript:;">
+                        <h3 class="ellipsis room-item__tit">사이판 마린 다이브&amp;하우스</h3>
+                        <div class="room_info">
+                            <span class="discount_room__type">도미토리</span>
+                            <span class="discount_room__date">02/17~03/15</span>
+                        </div>
+                        <div class="meta room-list__btm">
+                            <div class="price">
+                                <s class="before_price color_grey">￦125,800~</s>
+                                <span class="current_price">￦225,800~</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </li>
+        <li>
+            <div class="media">
+                <div class="media-left">
+                    <div class="tmb_wrp">
+                        <img src="http://www.theminda.com/data/tum/goods_room/0_593f6b710d6a5.jpg" class="pos-center" alt="">
+                        <div class="ribbon_wrp">
+                            <!-- [D] 한 경우 -->
+                            <i class="icon_ribbon on">위시리스트</i>
+                        </div>
+                        <span class="room-list__discount">90%</span>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h3 class="ellipsis room-item__tit">피렌체 마피아 하우스</h3>
+                    <div class="room_info">
+                        <span class="discount_room__type">도미토리 [객실소개 확인필!/1인예약 불가]</span>
+                        <span class="discount_room__date">02/17~03/15</span>
+                    </div>
+                    <div class="room-list__btm">
+                        <div class="price">
+                            <s class="before_price color_grey">￦125,800~</s>
+                            <span class="current_price">￦225,800~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="media">
+                <div class="media-left">
+                    <div class="tmb_wrp">
+                        <a href=""><img src="_temp/room.png" alt=""></a>
+                        <div class="ribbon_wrp">
+                            <i class="icon_ribbon_wish">위시리스트</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h2 class="ellipsis tit mt2">피렌체 마피아 하우스</h2>
+                    <div class="fs11 ellipsis mb3">도미토리 [객실소개 확인필!/1인예약 불가]</div>
+                    <div class="meta">
+                        <i class="icon_calendar2"></i> 2016.03.01~2016.03.30
+                    </div>
+                    <div class="price clearfix fs13 mt5 mb0">
+                        <div class="pull-left">
+                            <span class="before_price color_mint mt5">45.5%</span>
+                        </div>
+                        <div class="pull-right">
+                            <s class="before_price mr5 color_grey mt5">US$198</s>
+                            <strong class="color_mint fs16 mr10">US$108</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!-- 페이징 -->
+    <nav class="text-center pt20 pb20">
+        <ul class="pagination">
+            <li class="prev"><a href="">이전페이지목록보기</a></li>
+            <li>2/7</li>
+            <li class="next"><a href="">다음페이지목록보기</a></li>
+        </ul>
+    </nav>
+    <!-- //페이지 끝-->
+</div>
+<!-- //container -->
+<? include "inc/fnb.html" ?>
+<!-- fixed button-->
+<div id="quick">
+    <a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+</div>
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

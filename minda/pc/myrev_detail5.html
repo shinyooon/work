@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap" class="page_tb">
+		<header id="hd">
+			<div class="header">
+				<h1 class="logo"><a href="/"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+				<!-- 메뉴별 Activate 시키는 방식은 정해야 함 -->
+				<nav class="hd-nav">
+					<ul class="gnb">
+						<li class="i1"><a href="">한인숙소</a></li>
+						<li class="i4"><a href="">투어</a></li>
+						<li class="i2"><a href="">정보<span class="icon_new">beta</span></a></li>
+						<li class="i3"><a href="">부가상품</a></li>
+					</ul>
+				</nav>
+				<div class="hd-r">
+					<ul class="gnb right-gnb clear">
+						<li class="i6">
+							<a href="/community/index.php"><span class="icon_comm">커뮤니티</span></a>
+							<!-- [D] class="active" 추가시 dep2 보여짐 -->
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="/community/index.php">커뮤니티홈</a></li>
+									<li><a href="/community/list.php?id=comment">톡톡 릴레이</a></li>
+									<li><a href="/community/list.php?id=jobs">구인·구직</a></li>
+									<li><a href="/community/list.php?id=sale">사고·팔고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="i7">
+							<a href="/main/sale_tab1.php"><span class="icon_discount">할인&amp;이벤트</span></a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="/main/sale_tab1.php">땡처리 할인</a></li>
+									<li><a href="/main/sale_tab3.php">비수기 할인</a></li>
+									<li><a href="/main/coupon_tab2.php">숙소 쿠폰</a></li>
+									<li><a href="/event/minda_event_list.php">민다 이벤트</a></li>
+									<li><a href="/event/minbak_event_list.php">숙소 이벤트</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- 상단 검색창은 아이콘 클릭으로만 검색이 작동해야 합니다.페이지 하단에 생길수 있는 다른 페이지의 폼입력과 구분이 되지 않을수 있기 때문에 -->
+					<form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/keyword_list.php" onsubmit="return false;" class="srch_wrp">
+						<input type="hidden" name="part" value="keyword_search">
+						<!-- 전달되는 키워드는 구분자('__SP__')로 구분 하여 전달 -->
+						<input type="hidden" name="keywords" id="keywords" value="">
+						<input type="hidden" name="country">
+						<input type="hidden" name="city">
+						<input type="hidden" name="unit">
+						<button type="button" class="icon_srch_gnb">검색</button>
+						<div class="silde-wrap">
+							<div class="input-group">
+								<span class="btn-wrap">
+								<button type="button" id="city_search_btn" class="icon_srch_gnb">검색</button>
+							</span>
+								<span class="input-wrap">
+								<input type="text" name="sword" id="sword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="검색어를 입력하세요." title="검색어 입력" autocomplete="off" style="ime-mode:active;">
+							</span>
+								<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+								<!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+							</div>
+						</div>
+					</form>
+					<div class="util active">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+							<ul class="dropdown-menu">
+								<li><a href="">나의 가이드북</a></li>
+								<li><a href="">나의 숙소예약</a></li>
+								<li><a href="">정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+						<div class="dep2">
+							<strong class="sr-only">마이페이지</strong>
+							<ul class="clearfix">
+								<li><a href="/mypage/mypage_home.php">마이민다</a></li>
+								<li><a href="/mypage/my_reservation.php">숙소 예약 내역</a></li>
+								<li><a href="/mypage/booking_tour.php" class="active">트립 예약내역</a></li>
+								<li><a href="/mypage/my_modify.php">나의정보</a></li>
+								<li><a href="/mypage/my_rate.php">나의 활동</a></li>
+								<li><a href="/mypage/guidebook.php">나의 가이드북</a></li>
+								<li><a href="/mypage/my_save.php">포인트/캐쉬/쿠폰</a></li>
+								<li><a href="/mypage/my_eurail_list.php">유레일패스 예약</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<!-- 예약상세정보 -->
+				<section>
+					<h3 class="sub_title d_iblock">
+						예약상세 정보
+					</h3>
+					<div class="side_wrp">
+						<button type="button" class="btn btn_border_grey color_blk">고객센터로 문의하기</button>
+						<button type="button" class="btn btn_border_grey color_blk">취소환불규정</button>
+					</div>
+					<table class="tb v3">
+						<caption class="sr-only">예약상세 정보</caption>
+						<colgroup>
+							<col style="width:150px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">예약번호</th>
+								<td>1458531395965 - <span class="color_red">노쇼</span></td>
+							</tr>
+							<tr>
+								<th scope="row">트립명</th>
+								<td>로마 반일투어 오전출발 </td>
+							</tr>
+							<tr>
+								<th scope="row">요금기준</th>
+								<td>성인(&#8361;5,000) * 2명 / 	<span class="txt-before">성인(&#8361;5,000) * 3명</span></td>
+							</tr>
+							<tr>
+								<th scope="row">일정</th>
+								<td class="color_blk">2017년 5월 13일(월)</td>
+							</tr>
+							<tr>
+								<th scope="row">결제금액</th>
+								<td>&#8361; 5,000 / <span class="txt-before">&#8361; 18,000</span></td>
+							</tr>
+							<tr>
+								<th scope="row">결제수단</th>
+								<td>신용카드</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<!-- 예약 상세내용 -->
+				<div class="clearfix row basic-section">
+					<section class="col-xs-6">
+						<h3 class="sub_title">
+							업체정보
+						</h3>
+						<div class="tbl-wrap">
+							<table class="tb nobor">
+								<caption class="sr-only">업체 상세 정보</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">연락처</th>
+										<td>010-1234-5678</td>
+									</tr>
+									<tr>
+										<th scope="row">이메일</th>
+										<td>andom@minbakdanawa.com</td>
+									</tr>
+									<tr>
+										<th scope="row">카카오톡</th>
+										<td>minda8282</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+					<section class="col-xs-6">
+						<h3 class="sub_title d_iblock">
+							트립정보
+						</h3>
+						<div class="side_wrp">
+							<a href="" class="btn bg_mint">트립 정보 보기</a>
+						</div>
+						<div class="clearfix tbl-wrap">
+							<table class="tb nobor">
+								<caption class="sr-only">업체 상세 정보</caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">만나는 시간</th>
+										<td>$시간$</td>
+									</tr>
+									<tr>
+										<th scope="row">만나는 장소</th>
+										<td>$장소$</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+				<!-- 결제 정보 -->
+				<section>
+					<h3 class="sub_title">
+						결제 정보
+					</h3>
+					<div class="tbl-wrap4">
+						<table class="tb_fixed">
+							<caption class="sr-only">결제 상세 정보</caption>
+							<tbody>
+								<tr>
+									<th scope="col">상품금액</th>
+									<th scope="col">할인금액</th>
+									<th scope="col">캐쉬사용</th>
+									<th scope="col">결제금액</th>
+								</tr>
+								<tr>
+									<td class="fs18 text-right">&#8361;150,000</td>
+									<td class="fs18 text-right">
+										<dl class="dl_inline2">
+											<dt>포인트</dt>
+											<dd>-2,000P</dd>
+										</dl>
+										<dl class="dl_inline2">
+											<dt>쿠폰</dt>
+											<dd>&#8361;-1,000</dd>
+										</dl>
+									</td>
+									<td class="fs18 text-right">
+										&#8361;- 2,000
+									</td>
+									<td class="fs18 text-right">
+										<strong class="color_red price-final fw500">&#8361;145,000</strong>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<!-- 환불 정보 -->
+				<section>
+					<h3 class="sub_title">
+						환불정보
+					</h3>
+					<div class="tbl-wrap4">
+						<table class="tb_fixed">
+							<caption class="sr-only">결제 상세 정보</caption>
+							<tbody>
+								<tr>
+									<th scope="col">환불일</th>
+									<th scope="col">환불방법</th>
+									<th scope="col">캐쉬사용</th>
+									<th scope="col">결제금액</th>
+									<th scope="col">환불금액</th>
+								</tr>
+								<tr>
+									<td class="fs18 text-right">
+										2017-05-15
+										<p class="fs12">카드사 또는 은행에 따라 환불일로부터<br />5~7일 후에 환불 될 예정입니다.</p>
+									</td>
+									<td class="fs18 text-right">
+										<dl class="dl_inline2">
+											<dt>포인트</dt>
+											<dd>-2,000P</dd>
+										</dl>
+										<dl class="dl_inline2">
+											<dt>쿠폰</dt>
+											<dd>&#8361;-1,000</dd>
+										</dl>
+									</td>
+									<td class="fs18 text-right">
+										&#8361;- 2,000
+									</td>
+									<td class="fs18 text-right">
+										&#8361;145,000
+									</td>
+									<td class="fs18 text-right">
+										<strong class="color_red price-final fw500">&#8361;5,000</strong>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<div class="text-center pa40">
+					<button type="button" class="btn btn-lg bg_blk"><span class="icon_home"></span> 홈으로</button>
+					<button type="button" class="btn btn-lg bg_org ml10"><i class="icon_list"></i> 목록으로</button>
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh mb3">information</strong>
+					<div class="ft_info_txt fs13">
+						<span>(주)사막</span>
+						<span>대표 : 김윤회</span>
+						<span>사업자등록번호 : 010-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt fs13">
+						<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+						<span>TEL : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+						<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+					</div>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+						<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+						<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+					</ul>
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="">회사소개</a></li>
+						<li><a href="">민박등록신청</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="" class="color_org">개인정보취급방침</a></li>
+						<li><a href="">민박다나와 취소환불규정</a></li>
+						<li><a href="">사이트맵</a></li>
+						<li><a href="">고객센터</a></li>
+						<li><a href="">공지사항</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<div class="fix_btm">
+		<!-- quick  -->
+		<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+	</div>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="/cust/js/bootstrap-slider.js"></script>
+	<script src="/cust/js/jquery.nanoscroller.js"></script>
+	<script src="/cust/js/moment.min.js"></script>
+	<script src="/cust/js/daterangepicker.js"></script>
+	<script src="/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="/cust/js/common.js"></script>
+</body>
+
+</html>

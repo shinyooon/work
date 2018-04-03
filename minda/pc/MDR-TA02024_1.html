@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+	<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<? include "inc/header.html" ?>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<!-- 페이지시작 -->
+		<div class="content"> <!-- 2017-12-18 w1100을 삭제 -->
+            <!-- 2017-12-18 w1100으로 감쌈 -->
+            <div class="w1100">
+                <!-- 서브 헤더 -->
+                <header class="sub_hd">
+                    <h2>숙소 예약</h2>
+                </header>
+                <!-- 단계 -->
+                <ol class="row acc_step v3">
+                    <li class="col-xs-4">01. 숙박자 정보입력</li>
+                    <li class="col-xs-4">02. 예약금 결제</li>
+                    <li class="col-xs-4 active">03. 예약완료</li>
+                </ol>
+
+                <!-- 예약완료 -->
+                <div class="row res_finish mt60">
+                    <div class="col-sm-6 bg_mint">
+                        <div class="media">
+                            <div class="media-left pr40 pb10 media-middle">
+                                <img src="/cust/img/icon_done.png" alt="">
+                            </div>
+                            <div class="media-body media-middle">
+                                <h4 class="mb10 fs20">예약이 성공적으로 처리되었습니다.</h4>
+                                <p class="mb15" style="opacity:.8">성공적으로 예약이 완료되었습니다.<br>자세한 내용은 하단에서 확인하실 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 class="fs20 color_mint text-center">예약완료</h3>
+                        <hr class="hr2 mt15 mb15">
+                        <dl class="dl_pay v2">
+                            <dt>예약번호</dt>
+                            <dd>1513320188597</dd>
+                        </dl>
+                    </div>
+                </div>
+                <p class="alert_info mt5">체크인 예정시각이 변경된 경우, <span class="color_grey">바우처의</span> 숙소 연락처로 변경된 시간을 꼭 연락 <span class="color_grey">주시기 바랍니다.</span></p>
+            </div>
+            <!-- 2017-12-18 w1100으로 감쌈 -->
+			<!--2017-12-18 payend-banner-aera 트립운영하는 숙소일 경우 트립 1개 노출, 아닐경우 해당 도시 인기상품 노출-->
+            <div class="payend-banner-area">
+                <div class="w1100 payend-trip__item">
+                    <div class="tit-wrap pr">
+						<h3 class="sub_title">예약하신 숙소에서 직접 운영하는 트립</h3>
+						<div class="result_hd_side"><a href="" class="btn fs12 more">더보기<span class="icon_result plus"></span></a></div>
+					</div>
+                    <div class="payend__trip-area">
+                        <div class="tour_lst v2">
+                            <div class="d-tb">
+                                <div class="tmb pr">
+                                    <div class="img-area"><img src="http://www.theminda.com/data/tg/image/item/thumb/201707/1499218632_0.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="room_info">
+                                    <div class="partner_info tb_bx"><span class="partner_img"><img
+                                        src="http://www.theminda.com/data/member/profile_img/201712/1513087074_nanazzim.jpg" alt=""></span> <span
+                                        class="pl7"><span class="ellipsis">SKY LONDON LTD</span></span></div>
+                                    <strong class="name ellipsis">영국 런던가이드투어 옥스포드 코츠월드 버스투어 대특가</strong>
+                                    <div class="meta clearfix">
+                                        <div class="pull-left split_lst">
+                                            <div class="dot_lst"><span>버스</span><span>10 시간</span></div>
+                                        </div>
+                                        <div class="pull-left tag-area">
+                                            <span>#에이전시 트립</span> <span>#근교투어</span> <span>#자연&amp;풍경</span>
+                                            <span>#예술&amp;역사</span>
+                                        </div>
+                                    </div>
+                                    <div class="btm_info clearfix">
+                                        <span class="price"><strong class="color_red ml7 font_lato">&#8361; 59,000</strong></span>
+                                    </div>
+                                    <a href="" class="tour-list__btn-rev">예약하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// payend-banner-aera -->
+			<!-- 예약정보 -->
+            <section class="w1100"><!-- 2017-12-18 w1100 클래스 추가 -->
+				<h3 class="sub_title">예약정보<span class="rt_area pull-right text-nowrap"><span>취소환불 규정 예약금 20%  <a class="color_org" href="javascript:showCancelRule();"><u>규정보기</u></a></span></span></h3>
+				<table class="tb nobor text-center">
+					<caption class="sr-only">예약정보</caption>
+					<thead>
+					<tr>
+						<th scope="col">숙소</th>
+						<th scope="col">객실</th>
+						<th scope="col">체크인/체크아웃</th>
+						<th class="tb2_border">숙박요금</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="td_itm_confirm">
+							<div class="media itm_wrp">
+								<div class="media-left">
+									<img src="/skin/sample/img/empty_photo1.gif" width="199">
+								</div>
+								<div class="media-body media-middle">
+									<h4>런해뜨(런던 해뜨는민박)</h4>
+									<div class="loc">영국 런던</div>
+								</div>
+							</div>
+						</td>
+						<td>
+							6 bed                        	[1호점] 여성 도미토리                    					</td>
+						<td>2018-01-01<br>~<br>2018-01-03</td>
+						<td class="tb2_border">
+							<dl class="dl_pay v2">
+								<dt>총 합계금액</dt>
+								<dd class="text-right"><span class="color_red">￡56(85,200원)</span></dd>
+								<dt>예약금 (20%)</dt>
+								<dd class="text-right"><span class="color_red">￡11.2(17,000원)</span></dd>
+								<dt>현지결제금액</dt>
+								<dd class="text-right"><span class="color_red">￡44.8(68,100원)</span></dd>
+							</dl>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</section>
+			<!-- 트립 유도 배너 -->
+			<div class="payend-banner-area">
+				<!--<div class="banner__lead-usim">
+					<a href="/event/view.php?id=gevent&amp;no=227" onclick="ga('send','event','pc_lodging_pay_complete_banner','click','banner_event_usimevent');" target="_blank">
+						<img src="/img/event/201712usim/pc/banner_page.jpg" alt="" class="banner__lead-usimimg">
+					</a>
+				</div>-->
+			</div>
+			<section class="w1100"><!-- 2017-12-18 w1100 클래스 추가 -->
+				<h3 class="sub_title">
+					숙박자 정보
+				</h3>
+				<table class="tb tb_frm">
+					<caption class="sr-only">숙박자 정보</caption>
+					<tbody>
+					<tr>
+						<th scope="row">이름</th>
+						<td>권구성</td>
+						<th scope="row">성별</th>
+						<td>남성</td>
+					</tr>
+					<tr>
+						<th scope="row">핸드폰</th>
+						<td>010-9207-7382</td>
+						<th scope="row">체크인 예정시각</th>
+						<td>오전 1시</td>
+					</tr>
+					<tr>
+						<th scope="row">현지 연락처</th>
+						<td>d</td>
+						<th scope="row">도착예정지/시각</th>
+						<td>d, 오전 0시</td>
+					</tr>
+					<tr>
+						<th scope="row">카카오톡 ID</th>
+						<td>d</td>
+						<th scope="row">이메일</th>
+						<td>if14@theminda.comd</td>
+					</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<!-- 예약 상세내용 -->
+			<section class="w1100"><!-- 2017-12-18 w1100 클래스 추가 -->
+				<h3 class="sub_title">
+					예약 상세내용
+				</h3>
+				<table class="tb tb_fixed reserve_list">
+					<caption class="sr-only">예약 상세내용	</caption>
+					<colgroup>
+						<col style="width:10%">
+						<col style="width:40%">
+						<col style="width:25%">
+						<col style="width:10%">
+						<col style="width:15%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col">날짜</th>
+						<th scope="col">객실유형</th>
+						<th scope="col">1박 단가</th>
+						<th scope="col">인원</th>
+						<th scope="col">요금</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="1">2018-01-01</td>
+						<td>
+                        <span class="color_blk">6 bed[1호점] 여성 도미토리</span></td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+                                <span class="pull-left">1인 가격</span><span class="pull-right">￡28</span></li>
+							</ul>
+						</td>
+						<td class="text-center">1명</td>
+						<td class="text-right"><span class="color_red">￡28</span></td>
+					</tr>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="1">2018-01-02</td>
+						<td>
+                        <span class="color_blk">6 bed[1호점] 여성 도미토리</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+                                <span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡28</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">1명</td>
+						<td class="text-right"><span class="color_red">￡28</span></td>
+					</tr>
+					</tbody>
+				</table>
+				<table class="tb_total tb_fixed">
+					<caption class="sr-only">예약 총 합계 금액</caption>
+					<tbody>
+					<tr>
+						<td>
+							<p class="alert_info">나머지 숙박요금 <span class="color_org">￡44.8</span>은 체크인시 해당 숙소에 직접 결제하시면 됩니다.
+							</p></td>
+						<td class="td_total">
+							<dl>
+								<dt>예약금(20%)</dt>
+								<dd><span class="color_org">￡11.2</span>(17,000원)</dd>
+								<dt>숙소 직접결제액(체크인시)</dt>
+								<dd><span class="color_org">(+)￡44.8</span></dd>
+								<dt class="total color_org">총 합계 금액</dt>
+								<dd class="total color_org">￡56</dd>
+							</dl>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<!-- 결제 정보 -->
+			<section class="w1100"><!-- 2017-12-18 w1100 클래스 추가 -->
+				<h3 class="sub_title">
+					결제 정보
+				</h3>
+				<table class="tb2">
+					<caption class="sr-only">결제 정보</caption>
+					<colgroup>
+						<col style="width:66%">
+						<col>
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col">캐쉬 및 할인 혜택 사용</th>
+						<th class="tb2_border">결제금액</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+							<dl class="dl_pay">
+								<dt>캐쉬</dt>
+								<dd>
+									<span class="color_red">17,000원</span> 사용
+								</dd>
+								<dt>예상적립포인트</dt>
+								<dd class="pt3">
+									<strong class="color_red">850P</strong>
+									<span class="ml10 color_grey">(체크인 날짜이후 리뷰작성시 적립)</span>
+								</dd>
+							</dl>
+						</td>
+						<!-- 결제금액 -->
+						<td class="tb2_border pr">
+							<dl class="dl_pay" style="margin-bottom:130px">
+								<dt class="color_blk">예약금 (20%)</dt>
+								<dd class="text-right"><span class="color_red">17,000</span> <small class="color_org">원</small></dd>
+								<dt>캐시사용</dt>
+								<dd class="text-right"><span class="color_blk">-17,000</span> <small>원</small></dd>
+							</dl>
+							<div class="total_count fixed_btm">
+								<div class="clearfix">
+									<h4 class="pull-left">총 결제금액</h4>
+									<div class="price pull-right">
+										<strong class="color_org">0</strong> 원
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</section>
+			<div class="text-center pa40">
+				<button type="button" class="btn btn-lg bg_blk" onclick="location.href='../main/index.php';"><span class="btn_icon"></span>확인</button>
+				<button type="button" class="btn btn-lg bg_org ml10" onclick="_print();"><i class="icon_print"></i> 바우처프린트</button>	</div>
+		</div>
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+	<!-- Footer -->
+	<? include "inc/footer.html" ?>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

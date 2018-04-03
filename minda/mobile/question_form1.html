@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style type="text/css">
+		html,body {background-color: #f3f3f3 }
+	</style>
+</head>
+<!-- [D]
+닫기만 있는 메뉴 class="page_clse"
+흰배경 class="bg_wh" -->
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<h1><a href="">1:1문의</a></h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<!-- 페이지 시작-->
+			<div class="frm_wrp">
+				<form action=".">
+					<div class="form-group">
+						<label class="inline-radio radio_label grey"><input type="radio" name="raido_q">숙소</label>
+						<label class="inline-radio radio_label grey ml20"><input type="radio" name="raido_q">투어/체험</label>
+					</div>
+					<div class="form-group">
+						<select class="btn btn-default btn-block btn-lg border_dark_grey color_blk" title="분류선택">
+							<option>분류선택</option>
+						</select>
+					</div>
+					<input type="text" class="form-control mb5 pl_grey" placeholder="제목을 입력하세요" title="제목입력">
+					<div class="form-group">
+						<textarea id="inquiryCmt" class="form-control pl_grey" rows="15" placeholder="문의내용을 입력하세요" title="문의내용입력"></textarea>
+					</div>
+					<ul class="dot_lst v2 fs12 mt15">
+						<li>문의하신 답변은 고객님의 회원정보에 등록된 이메일로 보내드립니다.</li>
+						<li><a href="/m/1.0/mypage/qna.html" class="color_navy">마이민다>문의내역>숙소/트립 문의</a>에서도 확인하실 수 있습니다.</li>
+						<li>문의하기 전에 안내사항을 반드시 읽어주세요. <a href="/m/1.0/grp_bbs/notice_view.html?notice_uid=437&id=notice&no=437" class="color_navy txt_line">숙소별 문의하기 이용안내</a></li>
+						<li>결제 및 시스템 문의는 고객센터에 문의해주세요. <a href="/m/1.0/cs/m2m_write.html" class="color_navy txt_line">결제 및 시스템 문의</a></li>
+					</ul>
+					<div class="btm_fixed mt10 pa10">
+						<div class="row">
+							<span class="col-xs-6 pr4"><button type="button" class="btn btn-xl btn-block bg_org">등록</button></span>
+							<span class="col-xs-6 pl4"><button type="button" class="btn btn-xl btn-block bg_dark_grey">취소</button></span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<script>
+	jQuery(function($) {
+		$(".acc_btn").on('click', function() {
+			$(this).parents('.accordion').toggleClass('open').children('.acc_cnt').slideToggle(150);
+			return false;
+		});
+	});
+	</script>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

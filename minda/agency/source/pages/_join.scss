@@ -1,0 +1,219 @@
+/* login, join */
+.join{
+	padding:60px 0 50px;
+	min-height: 748px;
+}
+.login{
+	width:540px;
+	margin:157px auto 164px;
+	@include box-style(70px,70px,70px,70px);
+
+	.input-wrap{
+		height:50px;
+		width:100%;
+		font-size:15px;
+		input{
+			height:48px;
+			line-height:47px;
+		}
+	}
+	.login__help-item{
+		&:not(:last-child):before{
+			background-color:#ccc;
+			top:1px;
+			bottom:1px;
+		}
+	}
+}
+.login__btm-btn{
+	.login__btn-login{
+		width:100%;
+		height:55px;
+		line-height:54px;
+		font-size:20px;
+		font-weight:$fw__700;
+		margin:0;
+		padding:0;
+	}
+}
+
+.login__tit{
+	margin-bottom:32px;
+	@include text($color__blk,19px,$fw__700);
+}
+
+.login__list-item{
+	&:not(:last-child){
+		margin-bottom:10px;
+	}
+}
+
+.loign__help{
+	margin-top:15px;
+	&:after{
+		@include clearboth();
+	}
+}
+.login__help-list{
+	float:right;
+}
+.login__help-item{
+	@include list-split();
+	&:last-child{
+		padding-right:0;
+		margin-right:0;
+	}
+}
+.login__help-link{
+	font-size:15px;
+}
+.join-term__bx{
+	@include box-style(30px,20px,30px,20px);
+	height:250px;
+	font-size:15px;
+	line-height:25px;
+	&--all{
+		height:auto;
+		padding:30px;
+	}
+	h3{
+		color:$color__blk;
+		font-weight:$fw__700;
+	}
+	section{
+		&:not(:last-child){
+			margin-bottom:25px;
+		}
+	}
+}
+.join-term__agree{
+	margin:19px 10px 0;
+}
+
+.table__join__privacy{
+	.table__hd{
+		text-align:center;
+	}
+	.table__col--1,.table__col--3{
+		width:310px;
+	}
+	.table__body{
+		.table__col--1,.table__col--3{
+			padding-left:30px;
+			padding-right:30px;
+		}
+		.table__col{
+			text-align:center;
+			line-height:22px;
+			height:90px;
+		}
+	}
+}
+.join-term__agree-bx{
+	margin-top:38px;
+	@include box-style(20px,15px,20px,15px);
+	height:70px;
+	.input-wrap__chk{
+		margin:7px 0 0 0;
+	}
+}
+.join-term__btn-privacy{
+	min-width:81px;
+	position:relative;
+	top:8px;
+}
+.info-manage__btn-id{
+	width:92px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.input-group__id{
+	@include input-group(5px);
+	.input-wrap{
+		width:360px;
+	}
+}
+
+.join{
+	.input-group__id{
+		@include input-group(5px);
+		.input-wrap{
+			width:360px;
+		}
+	}
+}
+
+.info-manage__txt-required{
+	@include text($color__grey,13px);
+}
+
+.join__form-txt--alert{
+	@include text($color__red,13px);
+	margin-top:3px;
+	line-height:1em;
+}
+.join{
+	.info-manage__account,.info-manage__person{
+		.table__body{
+			.table__col{
+				padding-left:20px;
+				padding-right:20px;
+				background-image:none;
+				text-align:left;
+			}
+			.table__col__tit{
+				padding-right:10px;
+			}
+		}
+	}
+}
+
+.join__finish{
+	text-align:center;
+	padding:104px 0 0 0;
+}
+.join__finish-tit{
+	line-height:50px;
+	letter-spacing:-2.4px;
+	padding-bottom:18px;
+	@include text($color__blk,40px,$fw__300);
+}
+.join__finish-txt{
+	line-height:25px;
+	&--point{
+		font-weight:$fw__500;
+	}
+	padding-bottom:24px;
+}
+
+.join-term-all{
+	.tit-wrap{
+		margin-bottom:40px;
+	}
+	.lst_num_style{
+		counter-reset:numList;
+		&>li{
+            position: relative;
+            padding-left:15px;
+		  	&:before{
+				position:absolute;top:0;left:0;counter-increment:numList;content:counter(numList)'.';
+			}
+		}
+	}
+}
+.find-id__form{
+    text-align:center;
+}
+.find-id__form__list{
+	width:315px;
+	margin:0 auto;
+    text-align:left;
+	@include list-dl(100px,10px);
+	.input-wrap{
+		width:100%;
+	}
+}
+.find-id__form__txt{
+    margin-top:5px;
+    @include text($color__default,15px);
+}

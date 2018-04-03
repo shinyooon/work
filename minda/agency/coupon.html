@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<!-- biz -->
+				<div class="biz">
+					<div class="tit-wrap">
+						<h3 class="tit">비즈머니/할인쿠폰 조회</h3>
+					</div>
+					<div class="biz__tab">
+						<ul class="biz__tab-list">
+							<li class="biz__tab-item biz__tab-item"><a href="#biz" class="biz__tab-btn">비즈머니<a></li>
+							<li class="biz__tab-item biz__tab-item--active"><button href="#coupon" class="biz__tab-btn">할인쿠폰</a></li>
+						</ul>
+					</div>
+					<!-- 비즈머니 -->
+					<div id="biz" class="biz-wrap  fade">
+						<!-- biz-total-->
+						<div class="biz-total">
+							<div class="table">
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">
+											<dl class="biz__result">
+												<dt class="biz__result-tit">총 비즈머니</dt>
+												<dd class="biz__result-num">4400원</dd>
+											</dl>
+										</span>
+										<span class="table__col table__col--2">
+											<p class="biz__result-txt">비즈머니는 숙소예약시 예약금으로 사용하실 수 있습니다.</p>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--// table -->
+						</div>
+						<!--// biz-total-->
+						<!-- biz-history-->
+						<div class="biz-history">
+							<div class="tit-wrap">
+								<p class="result-txt">총 3 건의 적립/차감 내역이 있습니다.</p>
+								<div class="tit__right">
+									<span class="input-wrap input-wrap__select--2">
+										<select title="검색결과 정렬">
+											<option>전체내역</option>
+											<option>적립내역</option>
+											<option>차감내역</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">날짜</span>
+										<span class="table__col table__col--2">내용</span>
+										<span class="table__col table__col--3">구분</span>
+										<span class="table__col table__col--4">적립/차감 내용</span>
+										<span class="table__col table__col--5">잔여적립금</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											황보혜지님 비즈머니 사용
+										</span>
+										<span class="table__col table__col--3">
+											차감
+										</span>
+										<span class="table__col table__col--4">
+											-100
+										</span>
+										<span class="table__col table__col--5">
+											4,400
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="pagination notice__pagination">
+								<a href="" class="pagination__prev"><span class="pagination__icon--prev">이전목록</span></a>
+								<a href="" class="pagination__num pagination__num--active">1</a>
+								<a href="" class="pagination__num">2</a>
+								<a href="" class="pagination__num">3</a>
+								<a href="" class="pagination__num">4</a>
+								<a href="" class="pagination__num">5</a>
+								<a href="" class="pagination__next"><span class="pagination__icon--next">다음목록</span></a>
+							</div>
+							<!--// table -->
+						</div>
+						<!--// biz-history-->
+						<!-- info-coupon-->
+						<div class="info-coupon">
+							<div class="tit-wrap">
+								<h4 class="sub-tit">할인쿠폰</h4>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">발급일</span>
+										<span class="table__col table__col--2">쿠폰명</span>
+										<span class="table__col table__col--3">쿠폰유효기간</span>
+										<span class="table__col table__col--4">쿠폰유효기간</span>
+										<span class="table__col table__col--5">수랑</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">
+											5000원 할인쿠폰
+										</span>
+										<span class="table__col table__col--3">
+											2017-08-25 ~ 2017-08-31
+										</span>
+										<span class="table__col table__col--4">
+											5,000
+										</span>
+										<span class="table__col table__col--5">
+											5
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--// table -->
+						</div>
+						<!--// info-coupon-->
+					</div>
+					<!--// 비즈머니 -->
+					<!-- 쿠폰 -->
+					<div id="coupon" class="biz-wrap biz-wrap--active fade in">
+						<!-- coupon-total-->
+						<div class="coupon-total">
+							<div class="table">
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">
+											<dl class="coupon__result">
+												<dt class="coupon__result-tit">총 할인쿠폰</dt>
+												<dd class="coupon__result-num">22개</dd>
+											</dl>
+										</span>
+										<span class="table__col table__col--2">
+											<p class="biz__result-txt">할인쿠폰은 숙소예약시 사용하실 수 있습니다.</p>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--// table -->
+						</div>
+						<!--// coupon-total-->
+						<!-- coupon-list-->
+						<div class="coupon-list">
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">쿠폰명</span>
+										<span class="table__col table__col--2">유효기간</span>
+										<span class="table__col table__col--3">수량</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--2">
+											<span class="input-wrap input-wrap__select">
+												<select title="체크인 예정 시각">
+													<option>전체기간</option>
+													<option>2017-09-04 ~ 2017-09-30</option>
+													<option>2017-08-04 ~ 2017-08-30</option>
+													<option>2017-07-04 ~ 2017-07-30</option>
+													<option>2017-06-04 ~ 2017-06-30</option>
+												</select>
+											</span>
+										</span>
+										<span class="table__col table__col--3">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">3,000원 할인쿠폰</span>
+										<span class="table__col table__col--2">
+											<span class="input-wrap input-wrap__select">
+												<select title="체크인 예정 시각">
+													<option>전체기간</option>
+													<option>2017-09-04 ~ 2017-09-30</option>
+													<option>2017-08-04 ~ 2017-08-30</option>
+													<option>2017-07-04 ~ 2017-07-30</option>
+													<option>2017-06-04 ~ 2017-06-30</option>
+												</select>
+											</span>
+										</span>
+										<span class="table__col table__col--3">3</span>
+									</div>
+								</div>
+							</div>
+							<!--// table -->
+						</div>
+						<!--// coupon-list-->
+						<!-- coupon-history-->
+						<div class="coupon-history">
+							<div class="tit-wrap">
+								<p class="result-txt">총 3 건의 적립/차감 내역이 있습니다.</p>
+								<div class="tit__right">
+									<span class="input-wrap input-wrap__select--2">
+										<select title="검색결과 정렬">
+											<option>전체내역</option>
+											<option>발급내역</option>
+											<option>사용내역</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							<div class="table">
+								<div class="table__hd">
+									<div class="table__row">
+										<span class="table__col table__col--1">날짜</span>
+										<span class="table__col table__col--2">쿠폰명</span>
+										<span class="table__col table__col--3">유효기간</span>
+										<span class="table__col table__col--4">구분</span>
+										<span class="table__col table__col--5">금액</span>
+										<span class="table__col table__col--6">수량</span>
+									</div>
+								</div>
+								<div class="table__body">
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+									<div class="table__row">
+										<span class="table__col table__col--1">2017-07-18</span>
+										<span class="table__col table__col--2">5,000원 할인쿠폰</span>
+										<span class="table__col table__col--3">2017-07-24 ~ 2017-07-24</span>
+										<span class="table__col table__col--4">발급</span>
+										<span class="table__col table__col--5">30,000</span>
+										<span class="table__col table__col--6">3</span>
+									</div>
+								</div>
+							</div>
+							<div class="pagination notice__pagination">
+								<a href="" class="pagination__prev"><span class="pagination__icon--prev">이전목록</span></a>
+								<a href="" class="pagination__num pagination__num--active">1</a>
+								<a href="" class="pagination__num">2</a>
+								<a href="" class="pagination__num">3</a>
+								<a href="" class="pagination__num">4</a>
+								<a href="" class="pagination__num">5</a>
+								<a href="" class="pagination__next"><span class="pagination__icon--next">다음목록</span></a>
+							</div>
+							<!--// table -->
+						</div>
+						<!--// coupon-history-->
+					</div>
+					<!--// 쿠폰 -->
+				</div>
+				<!--// biz -->
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			lnbCtrl.active(2,1);
+			var bizTab = new Tab('biz__tab','biz-wrap');
+		});
+	</script>
+</body>
+</html>

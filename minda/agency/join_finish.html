@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>여행사 예약관리 홈 | 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/nanoscroll.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body--full">
+	<!-- lnb가 없는 경우에는 body--full 클래스 추가 -->
+	<div class="skip--hidden">
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="header__wrap">
+				<div class="header__logo">
+					<h1 class="h1">
+						<img src="img/logo.png" alt="민다" class="header__logoimg"/>
+						<span class="header__logotxt">여행사 예약관리 홈</span>
+					</h1>
+				</div>
+				<div class="header__right">
+					<ul class="list-dot header__info">
+						<li class="header__txt"><a href="">로그인</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="join">
+					<div class="join__finish">
+						<p class="join__finish-tit">여행사 회원가입 신청이<br />완료되었습니다.</p>
+						<p class="join__finish-txt">
+							작성해주신 정보에 대해 민다의 검수 후 등록이 확정되면<br /> <strong class="join__finish-txt--point">{compnm}</strong> 여행사의 전용 예약관리 홈페이지 개설 및 아이디를 승인해 드립니다.<br />등록하신 <strong class="join__finish-txt--point">{email}</strong>로 '여행사 예약관리 홈'의 주소를 안내해 드리오니, 메일함을 꼭 체크해주세요!</p>
+						<div class="btm-btn">
+							<a href="" class="btm-btn__btn--green">민다 바로가기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footer__wrap">
+				<p class="footer__copy">Copyright ⓒ Minda Co., Ltd. All rights reserved.</p>
+				<a href="" class="footer__btn">여행사회원 이용약관</a>
+			</div>
+		</footer>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="js/Layer.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$(".nano").nanoScroller();
+
+		$('#chk_term_all').click(function() {
+			$('input[name="chk_join_term"]').not(this).prop('checked', this.checked);
+		});
+
+		var total_cnt = 0;
+		var chk_cnt = 0;
+
+		$('.join-term__agree .input-wrap__chk input').click(function() {
+			total_cnt = $('.join-term__agree .input-wrap__chk input').length;
+			chk_cnt = $('.join-term__agree .input-wrap__chk input:checked').length;
+			if (total_cnt != chk_cnt) {
+				$('#chk_term_all').prop("checked", false);
+			} else {
+				$('#chk_term_all').prop("checked", true);
+			}
+		})
+	});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> 민다(민박다나와) 파트너홈 </title>
+	<link rel="shortcut icon" href="/img/i_mlogo.ico">
+	<!-- 기존 css -->
+	<!-- <link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/style.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/layout.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/ui.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/css/font.css"> -->
+	<!-- //기존 css -->
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/admin.css">
+	<!-- <link rel="stylesheet" href="css/admin.css"> -->
+
+	<!-- jquery 중복 선언으로 인해 modal 동작이 안됨 기존 js는 위로 보내고 신규 js를 아래에 둔다 -->
+	<script src="http://v2.minbakdanawa.com/manager/jquery.js"></script>
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- 기존 js -->
+<script src="http://v2.minbakdanawa.com/manager/common.js"></script>
+<script src="http://v2.minbakdanawa.com/lib/js/common.js"></script>
+<script src="http://v2.minbakdanawa.com/lib/js/chkForm.js" defer=defer></script>
+<script src="http://v2.minbakdanawa.com/lib/js/selectCategory.js"></script>
+<!--<script src="/lib/js/prototype.js"></script>-->
+<!-- script src="http://v2.minbakdanawa.com/manager/jquery.js"></script -->
+<script>var $j = jQuery.noConflict();</script>
+<!-- //기존 js -->
+</head>
+
+<script src="http://v2.minbakdanawa.com/lib/js/popupWindow.js"></script>
+<!-- 수정된 부분 2016-08-31 추가 -->
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="w1260 clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="" class="active">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account">[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn link-go"><span class="icon_house_org mr5"></span> 숙소 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="/manager/main/index.php" class="active">홈</a></li>
+						<li><a href="/manager/booking/index.php">예약관리</a></li>
+						<li><a href="/manager/room/index.php">객실관리</a></li>
+						<li><a href="/manager/mypage/index.php">정보관리</a></li>
+						<li><a href="/manager/board/qna.php">게시물관리</a></li>
+						<li><a href="/manager/stats/index.php">통계/정산</a></li>
+						<li><a href="/manager/ad/index.php">광고관리</a></li>
+						<li><a href="/manager/cs/qna.php">고객센터</a></li>
+					</ul>
+				</nav>
+				<div class="hd_myinfo pull-right">
+					<div>
+						<span class="res_rule">예약규정 :국내A (100% 예약과 동시에 확정)</span>
+						<div class="bizmoney-area"><a href="/manager/mypage/bizmoney.php"><i class="icon_money"></i>비즈머니 <span class="color_red">65,000원</span></a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="wfull">
+				<div class="full-cal-wrap">
+					<!-- cal-top-area -->
+					<div class="cal-top-area clearfix">
+						<div class="pull-left">
+							<!-- [D] 2017-01-19 add -->
+							<button class="btn bg_wh color_default border_grey mr30">메뉴얼 보기<span class="icon_arr_greyr ml7"></span></button>
+							<ul class="list-txt-rev d_iblock"><!-- [D] 2017-01-19 eidt -->
+								<li class="d_iblock">신규예약<span class="color_org"> 2건</span></li>
+								<li class="d_iblock">미확인 확정예약<span class="color_org"> 2건</span></li>
+								<li class="d_iblock">취소된 예약 <span class="color_org"> 2건</span></li>
+							</ul>
+						</div>
+						<div class="pull-right">
+							<a href="" class="btn bg_grey btn-sm"><span class="icon_arr_l2"></span>30일 전</a>
+							<a href="" class="btn bg_grey btn-sm"><span class="icon_arr_l"></span>7일 전</a>
+							<span class="set_date_area singleCalWrp daterange">
+								<span class="tit">조회기준일</span>
+								<span class="input-wrap input-cal">
+									<input type="text" class="no_style standard_date" readonly="readonly">
+								</span>
+							</span>
+							<a href="" class="btn bg_grey btn-sm">7일 후<span class="icon_arr_r"></span></a>
+							<a href="" class="btn bg_grey btn-sm">30일 후<span class="icon_arr_r2"></span></a>
+						</div>
+					</div>
+					<!--// cal-top-area -->
+					<!-- tbl-cal-wrap -->
+					<div class="tbl-cal-wrap">
+						<table class="tbl-cal">
+							<col span="1" class="wid">
+							<thead>
+								<tr>
+									<th></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col" class="today"><div class="date-wrap"><span class="ref">기준일</span>2/29 <br /> 화</div></th><!-- 오늘날짜 th에 today 삽입 -->
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 화</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 화</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 화</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row" rowspan="2" class="tit_room"><span class="twoline">8bed도미토리도미토리도미토리도미토리도미토리</span></th>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="start state state_other"><!-- state_other : 타사이트 예약 , state_chk 예약확정 , state_unchk 예약확정 미확인, state_limit 예약제한-->
+										<div class="td-inner">
+											<a href="" class="link-cm link-cal">가나다라마바사아 / 2명</a>
+										</div>
+									</td>
+									<td class="state state_other"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="state state_other"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="state state_other"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="end state state_other"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+								</tr>
+								<tr>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="start state state_other">
+										<div class="td-inner">
+											<a href="" class="link-cm link-price">￥2.5만</a>
+										</div>
+									</td>
+									<td class="state state_other"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="state state_other"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="state state_other"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="end state state_other"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="2" class="tit_room">8bed도미토리</th>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="start state state_unchk end" colspan="4">
+										<div class="td-inner">
+											<a href="" class="link-cm link-cal">정우성 / 2명</a>
+										</div>
+									</td>
+									<!-- <td class="state state_unchk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="state state_unchk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="end state state_unchk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td> -->
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="start state state_chk">
+										<div class="td-inner">
+											<a href="" class="link-cm link-cal">가나다라마바사아 / 2명</a>
+										</div>
+									</td>
+									<td class="state state_chk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="state state_chk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="state state_chk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="end state state_chk"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+									<td class="start state state_unchk end"><div class="td-inner"><a href="" class="link-cm link-cal"></a></div></td>
+								</tr>
+								<tr>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="start state state_unchk">
+										<div class="td-inner">
+											<a href="" class="link-cm link-price">￥2.5만</a>
+										</div>
+									</td>
+									<td class="state state_unchk"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="state state_unchk"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="end state state_unchk"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="start state state_limit">
+										<div class="td-inner">
+											<a href="" class="link-cm link-price">￥2.5만</a>
+										</div>
+									</td>
+									<td class="state state_limit"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="state state_limit"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="state state_limit"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="end state state_limit"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+									<td class="start state state_unchk end"><div class="td-inner"><a href="" class="link-cm link-price">￥2.5만</a></div></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col" class="today"><div class="date-wrap">2/29 <br /> 화<span class="ref">기준일</span></div></th><!-- 오늘날짜 th에 today 삽입 -->
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 화</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 화</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+									<th scope="col"><div class="date-wrap color_red">2/29 <br /> 일</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 월</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 화</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 수</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 목</div></th>
+									<th scope="col"><div class="date-wrap">2/29 <br /> 금</div></th>
+									<th scope="col"><div class="date-wrap color_blue">2/29 <br /> 토</div></th>
+
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<!--// tbl-cal-wrap -->
+					<div class="text-right mt30">
+						<dl class="dl-color-info">
+							<dt class="d_iblock">예약상태 별 색상</dt>
+							<dd class="d_iblock state_other">타사이트 예약</dd>
+							<dd class="d_iblock state_chk">예약확정</dd>
+							<dd class="d_iblock state_unchk">예약확정 미확인</dd>
+							<dd class="d_iblock state_limit">예약제한</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- ly-rev-control -->
+
+				<!--// ly-rev-control -->
+
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="http://www.theminda.com" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="../cs/ruleminbak.php" class="split">숙소주 이용약관</a>
+			<a href="../ad/adrule.php" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<script type="text/javascript">
+		jQuery(function($){
+			"use strict";
+			var w = $(window);
+			var $body = $('body');
+			// scroll
+			w.scroll(function(){
+				if(w.scrollTop()>85){
+					$body.addClass('if_scroll');
+				} else {
+					$body.removeClass('if_scroll');
+				}
+			});
+
+			// input 선택 on off
+			$body
+			.on('click','label.radio_label>input',function(){
+				var t = $(this);
+				$('input[type=radio][name='+t.attr('name')+']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click','label.chk_label>input',function(){
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			});
+
+			// 싱글달력
+			$('.standard_date').daterangepicker({
+				autoApply: true,
+				opens: 'center',
+				locale: {
+					"format": "YYYY-MM-DD",
+					"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+					],
+					"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+					]
+				},
+				singleDatePicker: true,
+				showDropdowns: true,
+				parentEl: '.singleCalWrp'
+			});
+
+			//달력 선택 이벤트
+			$('.link-cm').on('click', function(e){
+				e.preventDefault();
+				var startDate, endDate
+				var _win_w = $(window).innerWidth();
+				var $this = $(this);
+				var _left = $this.offset().left;
+				var _width = $this.innerWidth();
+
+				// $('.ly-area').hide();
+				// var final_left
+				// var final_right
+				// if(_win_w>_left+_width+150){
+				// 	final_left = _left+_width;
+				// 	final_right = 'auto';
+				// }else{
+				// 	final_left ='auto'
+				// 	final_right = _right;
+				// }
+				$('.ly-area').remove();
+				$('.td-inner').css('z-index',1);
+				$this.closest('.td-inner').css('z-index',10);
+				var html = "";
+				if($this.hasClass('link-cal')){
+					html +='<div class="ly-area ly-rev-control ly-right">'
+					html +='	<ul class="list-rev-menu">'
+					html +='		<li><a href="">예약조회</a></li>'
+					html +='		<li class="disable"><a href="">타사이트예약등록</a></li>'
+					html +='		<li><a href="">예약제한등록</a></li>'
+					html +='		<li><a href="" class="color_red">삭제</a></li>'
+					html +='		<li><a href="" class="close_ly">닫기</a></li>'
+					html +='	</ul>'
+					html +='</div>'
+
+				}else if($this.hasClass('link-price')){
+					html +='<div class="ly-area ly-top ly-edit-fare">'
+					html +='	<div class="bx-rev-setting">'
+					html +='		<h1 class="tit">기간별 요금 수정<button class="icon_info" data-toggle="popover" data-placement="top"   data-trigger="hover" data-content="기간별 요금을 수정하실 경우 다른 요금(시즌/할인/기본)보다 우선하여 홈페이지에 노출됩니다."></button></h1>'
+					html +='		<dl class="clearfix">'
+					html +='			<dt>기간</dt>'
+					html +='			<dd class="range_cal_wrap ">'
+					html +='				<span class="input-wrap input-cal"><input type="text" class="no_style set_date start_date"></span>'
+					html +='				<span class="input-wrap input-cal ml4"> <input type="text" class="no_style set_date end_date"></span>'
+					html +='			</dd>'
+					html +='			<dt>매주</dt>'
+					html +='			<dd>'
+					html +='				<label class="inline-checkbox chk_label" for="week_8"> <input type="checkbox" id="week_8" class="all-check">전체</label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_1"> <input type="checkbox" id="week_1">월 </label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_2"> <input type="checkbox" id="week_2">화 </label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_3"> <input type="checkbox" id="week_3">수 </label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_4"> <input type="checkbox" id="week_4">목 </label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_5"> <input type="checkbox" id="week_5">금 </label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_6"> <input type="checkbox" id="week_6">토 </label>'
+					html +='				<label class="inline-checkbox chk_label" for="week_7"> <input type="checkbox" id="week_7">일 </label>'
+					html +='			</dd>'
+					html +='			<dt>요금</dt>'
+					html +='			<dd><span class="input-wrap input-fare ml5"><input type="text" class="no_style" value="2500" /></span></dd>'
+					html +='		</dl>'
+					html +='		<div class="btn-area text-center">'
+					html +='			<a href="" class="btn bg_org grey btn-sm">확인</a> <a href="" class="btn bg_dark_grey btn-sm close_ly">취소</a>'
+					html +='		</div>'
+					html +='	</div>'
+					html +='</div>'
+				 }
+				 $this.after(html);
+				 $('[data-toggle="popover"]').popover();
+
+				//달력 오른쪽 팝업은 오른쪽에 배치
+				var _width_ly = $this.closest('.td-inner').find('.ly-area').width();
+				if(_win_w<_left+_width+_width_ly){
+					$this.closest('.td-inner').find('.ly-area').addClass('ly-left');
+				}else{
+
+				}
+
+
+				 $(document).find(".set_date").removeClass('hasDatepicker').daterangepicker({
+					autoUpdateInput: false,
+					startDate:startDate,
+					endDate: endDate,
+					minDate: false,
+					maxDate: false,
+					autoApply: true,
+					parentEl: '.range_cal_wrap ',
+					opens: 'center',
+					locale: {
+						"format": "YYYY-MM-DD",
+						"daysOfWeek": [
+						"일",
+						"월",
+						"화",
+						"수",
+						"목",
+						"금",
+						"토"
+						],
+						"monthNames": [
+						"1월",
+						"2월",
+						"3월",
+						"4월",
+						"5월",
+						"6월",
+						"7월",
+						"8월",
+						"9월",
+						"10월",
+						"11월",
+						"12월"
+						]
+					},
+				},function(startDate, endDate){
+					$('.start_date').val(startDate.format('YYYY-MM-DD'));
+					$('.end_date').val(endDate.format('YYYY-MM-DD'));
+				});
+			});
+			//레이어 팝업 닫기
+			$body.on('click','.close_ly',function(e){
+				e.preventDefault();
+				$(this).closest('.ly-area').remove();
+			});
+
+			//배경클릭시 레이어 닫기
+			$(document).mouseup(function (e) {
+				e.preventDefault();
+				var popup = $(".ly-area");
+				 if (!$('.close_ly').is(e.target) && !popup.is(e.target) && popup.has(e.target).length == 0) {
+					popup.remove();
+				}
+			});
+
+			$body.on({
+				'show.daterangepicker' : function  (ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker' : function  (ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			},'.input-cal input');
+
+			$body.on('click', '.all-check',function(){
+				var chk = $(this).attr('checked');
+				var $label = $('.bx-rev-setting dd').find('.chk_label');
+				var $input_chk = $label.find('input[type=checkbox]');
+
+				if(chk){
+					$input_chk.removeAttr("checked");
+					$label.siblings().removeClass('on')
+				}else{
+					$input_chk.attr("checked",true);
+					$label.siblings().addClass('on')
+				}
+			});
+		});
+
+	</script>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/html5.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+<!-- lib -->
+<script src="http://v2.minbakdanawa.com/manager/common/js/bootstrap-slider.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/moment.min.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/daterangepicker.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.bxslider.min.js"></script>
+</body>
+
+</html>

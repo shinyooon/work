@@ -1,0 +1,222 @@
+
+
+.rev-form__toptxt{
+	@include text($color__grey,15px);
+}
+.rev-form__btn-wrap{
+	margin:40px 0 0 0;
+	text-align:center;
+	& > a{
+		margin:0 4px 0 3px;
+	}
+}
+.rev-form__btn-cancel{
+	@include btn($color__l-blue,lg);
+}
+.rev-form__btn-apply{
+	@include btn($color__green,lg);
+}
+.tit-wrap .tit{
+	margin-bottom:10px;
+}
+
+.rev-form__bx{
+	@include  box-style(15px,20px,15px,20px);
+}
+
+.rev-select{
+	.input-wrap__select{
+		width:211px;
+	}
+	.input-group{
+		@include input-group(10px);
+	}
+}
+
+.rev-form__info{
+	margin:0 -5px;
+	&:after{
+		@include clearboth();
+	}
+	.rev-form__section{
+		width:50%;
+		float:left;
+		padding: 0 5px;
+	}
+}
+.rev-basic{
+	.rev-form__bx {
+		padding:0;
+	}
+	.table__col{
+		padding-right:0;
+		vertical-align:middle;
+	}
+	.rev-basic__sex{
+		width:146px;
+		&-type{
+			font-size:15px;
+			vertical-align:middle;
+			margin-right:6px;
+		}
+	}
+	.input-wrap__select{
+		width:90px;
+	}
+	.rev-basic__icon{
+		width:30px;
+		&--plus, &--equal{
+			margin-top:3px;
+		}
+		&--plus{
+			@include icon-cm-spr(9px,9px,-122px,-41px);
+		}
+		&--equal{
+			@include icon-cm-spr(9px,9px,-131px,-41px);
+		}
+	}
+	.input-wrap__select-room{
+		width:100%;
+	}
+	.rev-basic__total{
+		width:170px;
+	}
+	.rev-basic__type{
+		padding-right:20px;
+	}
+}
+
+.rev-detail{
+	.input-group{
+		@include input-group(10px);
+	}
+	.rev-detail__name{
+		width:150px;
+	}
+	.rev-detail__sex{
+		width:150px;
+	}
+	.rev-detail__phone{
+		width:300px;
+	}
+}
+
+.rev-from__roomlist{
+	.rev-form__bx{
+		padding:0;
+	}
+	.rev-from__roomlist__txt{
+		float:left;
+		font-size:15px;
+	}
+	.rev-from__roomlist__btn{
+		float:right;
+	}
+	.rev-from__roomlist__txt-req{
+		//@include textEllpisis();
+	}
+	.table__body,.table__hd{
+		text-align:center;
+		.table__col{
+			padding:15px 0;
+			line-height:18px;
+		}
+		.table__col--1{
+			width:118px;
+		}
+		.table__col--2,.table__col--4{
+			 width:69px;
+		}
+		.table__col--5{
+			width:131px;
+		}
+		.table__col--6{
+			width:114px;
+		}
+		.table__col--7{
+			width:183px;
+		}
+		.table__col--8{
+			width:82px;
+		}
+		.table__col--9,.table__col--10{
+			width:100px;
+		}
+	}
+	.table__ft{
+		.table__col--2{
+			width:170px;
+		}
+	}
+	.table__body:empty{
+		& + .table__ft{
+			background-color:#fff;
+		}
+	}
+	@include col-align-left (3);
+	.rev-list__clse{
+		position:static;
+	}
+}
+
+.rev-request{
+	.input-wrap{
+		width:100%;
+	}
+	.rev-request__textarea{
+		height:115px;
+		font-size:15px;
+		line-height:24px;
+	}
+}
+
+.rev-agree__cancel-rule, .rev-agree__privacy{
+	.rev-form__bx{
+		&:after{
+			@include clearboth();
+		}
+	}
+	.input-wrap__chk{
+		float:left;
+		margin-top:11px;
+	}
+	.rev-agree__btn{
+		float:right;
+		color:#fff;
+	}
+}
+
+.table__privacy{
+	margin-top:37px;
+	.table__col--2{
+		width:280px;
+	}
+}
+.table__trust{
+	.table__col--2{
+		width:500px;
+	}
+	.table__body{
+		.table__col{
+			height:93px;
+		}
+	}
+}
+
+.charge__form__list{
+	@include list-dl(100px,10px);
+}
+.charge__form__list{
+	padding:0 20px;
+	.input-wrap{
+		width:100%;
+	}
+}
+.charge__form__tit{
+	margin-top:8px;
+	font-size:15px;
+	font-weight:500;
+}
+.harge__form__input{
+	padding-right:20px;
+}

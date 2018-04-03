@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css?v2">
+	<!-- <link rel="stylesheet" href="css/tour.css"> -->
+
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		html, body {background-color:#eeeff4;}
+	</style>
+</head>
+
+<body class="master">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content tour-wrap tour-form-wrap">
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="tour-form-step clearfix"><!-- 2017-02-24 클래스 추가 -->
+						<div class="top-btn"><a href=""><span class="spr_arr_l"></span>저장 후 목록으로</a></div>
+						<ul class="tit-step row">
+							<li class="li1"><a href="">기본정보</a></li>
+							<li class="li2"><a href="">사진/코스</a></li>
+							<li class="li3 active"><a href="">요금</a></li>
+							<!-- <li><a href="">행사관리</a></li> -->
+							<li class="li4"><a href="">예약규정</a></li>
+						</ul>
+						<div><!-- 2017-02-24 클래스 삭제 -->
+							<div class="input-area">
+								<label for="sel-state" class="label-tit">운영상태</label>
+								<select id="sel-state" class="form-control-basic wid-sm d_iblock" title="운영상태 선택">
+									<option value="">판매중</option>
+									<option value="">판매중지</option>
+								</select>
+								<button class="btn btn-sm btn-check">확인</button><!-- 2017-02-24 클래스 삭제 -->
+							</div>
+						</div>
+						<!-- 2017-03-30 add -->
+						<div class="btm-btn"><a href=""><span class="spr_arr_l blk"></span>저장하지 않고<br />목록으로</a></div>
+						<!--2017-03-30 삭제 <div class="copyright">
+							<p>Copyright &copy; theminda.com <br/ >All rights reserved. 1661-2892</p>
+						</div> -->
+					</div>
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<div>
+							<h3 class="sub_title mt0">이 투어의 요금을 설정해주세요</h3><!-- 2016-12-13 수정 -->
+							<div class="bx-bubble right">
+								<span class="icon_info3 mb5">안내</span>
+								<p class="txt">설정한 기간에 적용되는 <br /> 요금인<span class="color_sky">‘시즌요금’</span>을 <br /> 설정하지 않으면<br /> 기본 요금으로 설정<br /> 됩니다.</p>
+							</div>
+							<!-- fare-area -->
+							<div class="clearfix fare-area">
+								<div class="pull-left">
+									<div class="r-menu-wrap"><!-- 2017-02-24 크클래스 삭제 -->
+										<!-- <div class="tit-list-area clearfix">
+											<h4 class="tit-list">요금목록</h4>
+
+											<div class="dropdown-hover d_iblock pull-right">
+												<button class="no_style"><span class="icon_help_grey bg_wh">도움말</span></button>
+												<div class="dropdown-content">
+													<div class="inner">
+														<p class="txt">시즌요금이 기본요금보다 우선 되어 적용됩니다.</p>
+													</div>
+												</div>
+											</div>
+										</div> -->
+										<!-- <div class="text-center btn-area">
+											<button type="button" class="btn bg_org">등록</button>
+											<button type="button" class="btn bg_grey">복사</button>
+											<button type="button" class="btn bg_dark_grey">삭제</button>
+										</div> -->
+										<ul class="list-r-menu">
+											<li class="active">
+												<a href="">기본요금</a>
+											</li>
+											<li>
+												<span>시즌요금</span>
+												<ul class="list-r-menu">
+													<li><a href="">2016 여름 성수기</a></li>
+													<li><a href="">2016 여름 성수기</a></li>
+													<li><a href="">비수기 할인시즌</a></li>
+													<li><a href="">카니발 시즌</a></li>
+													<li><span class="pl0 pr0 text-center">등록된 시즌요금이 없습니다</span></li>
+													<!-- 시즌요금이 없을때-->
+												</ul>
+											</li>
+										</ul>
+										<div class="btn-season-area"><button type="button" class="btn btn-block bg_light_blue">시즌요금 등록</button></div>
+									</div>
+								</div>
+								<div class="pa40">
+									<table class="tb_input tb_fixed mb40">
+										<caption class="sr-only">요금 입력 양식</caption>
+										<colgroup>
+											<col style="width:110px">
+											<col>
+											<col style="width:110px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>요금명</th>
+												<td class="pr10" colspan="3">
+													<input type="text" class="form-control-basic wid_lg" title="요금명" placeholder="2016 여름성수기" />
+													<button class="btn bg_light_blue wid_xs ml5">복사</button>
+												</td>
+											</tr>
+											<tr>
+												<th>기간</th>
+												<td colspan="3">
+													<span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm fare_date fare_start_date" readonly="readonly" title="요금 적용 시작 일자"></span>
+													<span class="form-control-static">~</span>
+													<span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm fare_date fare_end_date" readonly="readonly" title="요금 적용 종료 일자"></span>
+												</td>
+											</tr>
+											<!-- <tr>
+												<th>최소출발인원</th>
+												<td>
+													<input type="text" class="form-control-basic wid_sm" title="최소출발인원"><span class="form-control-static">명</span></td>
+												<th>최대예약인원</th>
+												<td>
+													<input type="text" class="form-control-basic wid_sm" title="최대예약인원"><span class="form-control-static">명</td>
+											</tr> -->
+										</tbody>
+									</table>
+									<!--2017-04-13  수정영역 -->
+									<!-- <div class="list-top-area mb5"><p class="fs12">요금단위 : 원</p></div> -->
+									<ul class="list-board list-board2">
+										<li class="list-hd">
+											<span>요금기준</span>
+											<span class="tour-fare">요금(원)</span>
+											<!-- <span class="tour-del">삭제</span> -->
+										</li>
+										<li>
+											<span><input type="text" class="form-control-basic" title="옵션명" placeholder="ex)1인,성인,아동,4인 기준,팀당"></span>
+											<!--2017-04-13 w130 w120 삭제 -->
+											<span class="pl5 pr5"><input type="text" class="form-control-basic" title="요금"></span>
+											<!--2017-04-13 won 추가  -->
+											<span class="won">원</span>
+											<span class="tour-del"><button class="btn bg_light_blue btn-del icon-del">삭제 </button></span>
+										</li>
+									</ul>
+									<div class="bt-course">
+										<a href="" class="text-center d_block">요금기준 추가<span class="icon_plus_sm ml3"></span></a>
+									</div>
+									<div class="text-center mt30">
+										<button type="button" class="btn wid_xs bg_org mr4">저장</button>
+										<button type="button" class="btn wid_xs bg_dark_grey">삭제</button>
+									</div>
+								</div>
+							</div>
+							<!--// fare-area -->
+						</div>
+						<div class="mb50 mt50 btn-justify clearfix">
+							<button type="button" class="btn bg_dark_grey btn-lg ml5 pull-left">이전</button>
+							<button type="button" class="btn bg_org btn-lg pull-right">다음</button>
+						</div>
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+		$('.list-r-menu li > a').click(function(e) {
+			e.preventDefault();
+			$('.list-r-menu > li').removeClass('active');
+			$(this).closest('li').addClass('active');
+		})
+
+		var startDate, endDate
+		$('.fare_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			//parentEl: '.range_cal_wrap',
+			opens: 'center',
+			locale: {
+				"format": "DD/MM/YYYY",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+		}, function(startDate, endDate) {
+			$('.fare_start_date').val(startDate.format('DD/MM/YYYY'));
+			$('.fare_end_date').val(endDate.format('DD/MM/YYYY'));
+		});
+
+		$('.policy-wrap .policy-con').eq(0).show();
+		$('.policy-wrap .basic_step2 .radio_label').click(function(){
+			var idx = $(this).closest('li').index();
+			$('.policy-wrap .policy-con').hide();
+			$('.policy-wrap .policy-con').eq(idx).show();
+		})
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

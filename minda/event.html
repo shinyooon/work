@@ -1,0 +1,299 @@
+<!--head -->
+<? include "inc/head.html" ?>
+<script type="text/javascript">
+    $(function(){
+        navCtrl(7);
+    })
+</script>
+<!--head -->
+<body>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<div>
+		<!-- nav -->
+		<? include "inc/nav.html" ?>
+		<!--// nav -->
+		<div class="tab-content">
+			<!-- 이벤트 filelist -->
+			<!--<h2 class="mt20">숙소 자동발송메일</h2>-->
+			<div class="tbl-wrap mt20" id="admin">
+				<table class="tb_fixed tb-filelist text-center">
+					<col style="width:3%">
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col style="width:7%">
+					<col style="width:5%">
+					<col style="width:17%">
+					<thead>
+					<tr>
+						<th>No.</th>
+						<th>1depth</th>
+						<th>2depth</th>
+						<th>3depth</th>
+						<th>4depth</th>
+						<th>5depth</th>
+						<th>파일명</th>
+						<th>최종수정일</th>
+						<th>작업자</th>
+						<th>상태</th>
+						<th>메모</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>반값할인</td>
+						<td>PC</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_discount.html">event_discount.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>반값할인</td>
+						<td>MO</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="mobile/event_discount_new.html">event_discount_new.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>오사카 반값할인</td>
+						<td>PC</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_osaka.html">event_osaka.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>오사카 반값할인</td>
+						<td>MO</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="mobile/event_osaka.html">event_osaka.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>황금연휴 무료숙박</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_free.html">event_free.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>6월 여름 성수기 이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_trip.html">event_trip.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>쿠폰이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_coupon.html">event_coupon.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>11주년 이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_11st.html">event_11st.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>민다어워즈</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_awards.html">event_awards.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>민다어워즈</td>
+						<td>PC</td>
+						<td>숙소목록</td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/awards.html">awards.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>민다어워즈</td>
+						<td>MO</td>
+						<td>숙소목록</td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="mobile/awards.html">awards.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2017연말연시이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_newyear.html">event_newyear.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>유심이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_usim.html">event_usim.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>소비자평가 1위 이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_1st.html">event_1st.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>앱리뷰이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_review.html">event_review.html</a></td>
+						<td></td>
+						<td></td>
+						<td class="state"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>kkday제휴이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_kkday.html">event_kkday.html</a></td>
+						<td>2018-01-03</td>
+						<td>유나</td>
+						<td class="state">완료</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>숙소+트립 together이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_together.html">event_together.html</a></td>
+						<td>2018-01-17</td>
+						<td>유나</td>
+						<td class="state">완료</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>나의 리얼 여행기</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_travelog.html">event_travelog.html</a></td>
+						<td>2018-03-09</td>
+						<td>유나</td>
+						<td class="state">완료</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>더블할인이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_double_discount.html">event_double_discount.html</a></td>
+						<td>2018-03-09</td>
+						<td>유나</td>
+						<td class="state">완료</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>유니버셜특가이벤트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a class="link" target="_blank" href="pc/event_universal.html">pc/event_universal.html</a></td>
+						<td>2018-03-28</td>
+						<td>유나</td>
+						<td class="state">완료</td>
+						<td></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--// 관리자 filelist -->
+		</div>
+	</div>
+</div>
+<!-- script -->
+<? include "inc/script.html" ?>
+<!--// script -->
+</body>
+</html>

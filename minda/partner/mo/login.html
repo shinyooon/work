@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 민다 국내 모바일 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body--hidden">
+	<div class="skip--hidden">
+		<a class="skip__link" href="#container">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="header" class="header--wh">
+			<div class="header__wrap header__wrap--hidden">
+				<h1 class="header__tit">민다</h1>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- login -->
+				<div class="login">
+					<div class="login__wrap">
+						<h1 class="login__tit">
+							<img src="img/logo.jpg" alt="minda" class="login__logo" />
+							<span class="login__tit-txt">파트너 홈</span>
+						</h1>
+						<ul class="login__input-list">
+							<li>
+								<span class="input-wrap login__input-wrap">
+									<input type="text" title="아이디" placeholder="아이디를 입력해주세요."></span>
+							</li>
+							<li>
+								<span class="input-wrap login__input-wrap"><input type="password" title="비밀번호" placeholder="비밀번호를 입력해주세요."></span>
+							</li>
+							<li><a href="" class="login__btn-login">로그인</a></li>
+						</ul>
+						<div class="login__help">
+							<div class="login__save">
+								<span class="input-wrap__chk">
+									<input type="checkbox" id="save_id">
+									<label for="save_id">아이디 저장</label>
+								</span>
+							</div>
+							<div class="login__find">
+								<button type="button" class="login__find-link">아이디/비밀번호찾기</button>
+							</div>
+						</div>
+						<div class="login__btm">
+							<p class="login__btm-txt">파트너 가입은 <a href="" class="login__btm-link">파트너 홈 PC버전</a>에서만 가능합니다.</p>
+						</div>
+					</div>
+				</div>
+				<!--// login -->
+			</div>
+			<!--// contents -->
+		</div>
+		<!-- //container -->
+		<!-- <nav class="fnb">
+			<ul class="fnb__nav">
+				<li class="fnb__item"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--1"></span><span class="fnb__txt">홈</span></a></li>
+				<li class="fnb__item"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--2"></span><span class="fnb__txt">예약관리</span></a></li>
+				<li class="fnb__item"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--3"></span><span class="fnb__txt">게시물관리</span></a></li>
+				<li class="fnb__item"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--4"></span><span class="fnb__txt">알림</span></a></li>
+				<li class="fnb__item"><a href="" class="fnb__link"><span class="fnb__icon fnb__icon--5"></span><span class="fnb__txt">더보기</span></a></li>
+			</ul>
+		</nav> -->
+		<!-- Footer -->
+		<footer id="footer">
+		</footer>
+		<!--// Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- ly -->
+	<div class="ly ly--full is-fade ly__find">
+		<div class="ly__wrap">
+			<!-- ly__hd -->
+			<header class="ly__hd">
+				<div class="ly__hd-wrap">
+					<h1 class="ly__hd-tit">아이디/비밀번호 찾기</h1>
+					<div class="ly__hd-left">
+						<button type="button" class="ly__btn-clse">
+							<img src="img/icon/icon_clse_wh.svg" alt="팝업 닫기" class="ly__icon-clse" />
+						</button>
+					</div>
+				</div>
+			</header>
+			<!--// ly__hd -->
+			<!-- ly__con -->
+			<div class="ly__con">
+				<!--ly__body -->
+				<div class="ly__body ly__body--fixed">
+					<div class="find">
+						<dl class="find__input-list">
+							<dt class="find__input-list__tit">이름</dt>
+							<dd class="find__input-list__desc"><span class="input-wrap"><input type="text" title="이름" placeholder="이름을 입력해주세요." /></span></dd>
+							<dt class="find__input-list__tit">메일주소</dt>
+							<dd class="find__input-list__desc"><span class="input-wrap"><input type="text" title="메일주소" placeholder="가입시 등록한 이메일을 입력해주세요." /></span></dd>
+						</dl>
+					</div>
+				</div>
+				<!--// ly__body -->
+				<!-- ly__btm -->
+				<div class="ly__btm">
+					<div class="find__btn-wrap">
+						<button type="button" class="login__btn-find">확인</button>
+					</div>
+				</div>
+				<!--// ly__btm -->
+			</div>
+			<!--// ly__con -->
+		</div>
+	</div>
+	<!--// ly -->
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/jquery.comiseo.daterangepicker.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript" src="js/Layer.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var ly_find = new Layer($('.ly__find'));
+			$('.login__find-link').click(function(){
+				ly_find.open();
+			})
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<? include "inc/top.html" ?>
+<!-- header -->
+<header id="hd" class="header ">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a></div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">필터 검색</a></h1>
+    <div class="header__right">
+        <!-- 타이틀 우측 3번쨰 버튼 -->
+        <!-- 타이틀 우측 2번쨰 버튼 -->
+        <!-- 타이틀 우측 버튼 -->
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix">
+    <!-- 페이지 시작-->
+    <!-- 검색 -->
+    <form class="form-horizontal">
+        <!-- 달력 -->
+        <!-- <div class="bg_mint frm_index">
+            <div class="row itx_datepicker_wrp">
+                <div class="col-xs-12"></div>
+                <div class="col-xs-6 if_scroll_hide">
+                    <input type="text" class="no_style itx_datepicker itx_cal" placeholder="체크인">
+                </div>
+                <div class="col-xs-6 if_scroll_hide">
+                    <input type="text" class="no_style itx_datepicker itx_cal" placeholder="체크아웃">
+                </div>
+            </div>
+        </div> -->
+        <div class="filter2 filter__wrap">
+            <div class="form-group">
+                <span class="control-label">트립검색</span>
+                <span class="input-wrap input-ctrl">
+						<input type="text" name="txtKeyword" id="txtKeyword" class="form-control input_with_clear_btn" value="" placeholder="검색어를 입력해주세요.">
+                        <button type="button" class="input-wrap__btn-cnl icon_clse_input" style="display: none;"><img src="/m/1.0/common/img/icon/icon_clse_input.svg" alt="입력취소"></button>
+					</span>
+            </div>
+            <!-- 정렬 -->
+            <div class="form-group over">
+                <span class="control-label">정렬</span>
+                <div class="filter_wrp" data-toggle="buttons">
+                    <div class="btn-group fix_type_mint">
+                        <label class="btn btn-default" for="sort_type1">
+                            <input type="radio" name="sort_type" id="sort_type1">최신순
+                        </label>
+                        <label class="btn btn-default" for="sort_type2">
+                            <input type="radio" name="sort_type" id="sort_type2">저장순
+                        </label>
+                        <label class="btn btn-default" for="sort_type3">
+                            <input type="radio" name="sort_type" id="sort_type3">인기순
+                        </label>
+                        <label class="btn btn-default" for="sort_type4">
+                            <input type="radio" name="sort_type" id="sort_type4">후기순
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- 투어가격 -->
+            <div class="form-group">
+                <span class="control-label">가격범위</span>
+                <div class="range_slider">
+                    <input id="priceRange" type="text" data-slider-min="10" data-slider-max="150000"
+                           data-slider-step="1000" data-slider-value="[10,50000]" data-slider-tooltip="hide"
+                           title="투어 가격">
+                    <div class="price_txt clearfix">
+                        <span class="min pull-left">&#8361; 10</span>
+                        <span class="max pull-right"><span>&#8361; 150000</span></span>
+                    </div>
+                </div>
+                <script>
+                    //http://seiyria.com/bootstrap-slider/
+                    $(function() {
+                        $('#priceRange').slider({});
+                        $('#priceRange').on('slide', function(slideEvt) {
+                            $('.price_txt .min').text('€' + slideEvt.value[0]);
+                            $('.price_txt .max span').text('€' + slideEvt.value[1]);
+                        });
+                    });
+                </script>
+            </div>
+            <div class="form-group over">
+                <span class="control-label">트립 태그</span>
+                <ul class="list-inline list-tag">
+                    <li><input type="checkbox" id="tour_tag1"/><label for="tour_tag1">#시내투어</label></li>
+                    <li><input type="checkbox" id="tour_tag2"/><label for="tour_tag2"># 박물관/미술관</label></li>
+                    <li><input type="checkbox" id="tour_tag3"/><label for="tour_tag3"># 스냅투어</label></li>
+                    <li><input type="checkbox" id="tour_tag4"/><label for="tour_tag4"># 야경투어</label></li>
+                    <li><input type="checkbox" id="tour_tag5"/><label for="tour_tag5"># 먹방투어</label></li>
+                    <li><input type="checkbox" id="tour_tag6"/><label for="tour_tag6"># 레저/액티비티</label></li>
+                    <li><input type="checkbox" id="tour_tag7"/><label for="tour_tag7"># 쇼핑투어</label></li>
+                    <li><input type="checkbox" id="tour_tag8"/><label for="tour_tag8"># 클래스</label></li>
+                    <li><input type="checkbox" id="tour_tag9"/><label for="tour_tag9"># 근교투어</label></li>
+                    <li><input type="checkbox" id="tour_tag10"/><label for="tour_tag10"># 티켓</label></li>
+                    <li><input type="checkbox" id="tour_tag11"/><label for="tour_tag11"># 농촌체험</label></li>
+                    <li><input type="checkbox" id="tour_tag12"/><label for="tour_tag12"># 차량투어</label></li>
+                </ul>
+            </div>
+            <!-- 2018-03-19 add -->
+            <div class="form-group over">
+                <span class="control-label">맞춤투어</span>
+                <p class="trip-contact__txt">민다트립에서는 나만의 맞춤투어도<br />진행하실 수 있습니다.</p>
+                <a href="https://goo.gl/forms/ad3fJxOS24xoE1jI3" target="_blank" class="trip-contact__link">문의하러 가기</a>
+            </div>
+            <!--// 2018-03-19 add -->
+        </div>
+        <div class="btm_fixed filter-btm">
+            <div class="btn__group">
+                <div class="btn-wrap"><a href="" class="modal-footer__btn-sub">초기화</a></div>
+                <div class="btn-wrap"><a href="" class="modal-footer__btn-primary">필터검색</a></div>
+            </div>
+        </div>
+        <!--<div class="btm_fixed pa10 btm_filter_btn">
+            <button onclick="javascript:WebInvokeSubmit(); return false;" class="btn btn-lg btn-block bg_dark_grey ">
+                필터검색
+            </button>
+            <span class="filter_reset active"><a href="javascript:;" class="btn btn-lg bg_dark_grey"><span
+                class="icon_srchfilter_reset">필터초기화</span></a></span>
+        </div>-->
+    </form>
+    <!-- //페이지 끝-->
+</div>
+<!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.filter_reset .btn').click(function() {
+            if ($(this).closest('.filter_reset').hasClass('active')) {
+                $('.filter_wrp > .btn-group > label').each(function() {
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                    }
+                });
+                resetPriceSlider();
+                priceSliderAddEvent();
+                $(this).closest('.filter_reset').removeClass('active');
+            }
+        });
+
+        $('label').click(function() {
+            $('.filter_reset').addClass('active');
+        });
+    });
+
+    function resetPriceSlider() {
+        $('#priceRange').slider('destroy');
+        $('#priceRange').slider({min: 15, max: 350, value: [15, 350], labelledby: ['min_price_txt', 'max_price_txt']});
+        $('.price_txt .min').text('￡' + '15');
+        $('.price_txt .max span').text('￡' + '350');
+        $('form[name=pForm] input[name=price_min]').val(15);
+        $('form[name=pForm] input[name=price_max]').val(350);
+    }
+
+    function priceSliderAddEvent() {
+        $('#priceRange').on('change', function(slideEvt) {
+            var sliderPrice = $(this).val().split(',');
+            minprice = sliderPrice[0];
+            maxprice = sliderPrice[1];
+            $('.price_txt .min').text('￡' + minprice);
+            $('.price_txt .max span').text('￡' + maxprice);
+
+            $('form[name=pForm] input[name=price_min]').val(minprice);
+            $('form[name=pForm] input[name=price_max]').val(maxprice);
+
+            $('.filter_reset').addClass('active');
+        });
+    }
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

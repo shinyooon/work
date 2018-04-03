@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- <link rel="stylesheet" href="css/tour.css"> -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="w1260 clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<a href="/member/logout.php" class="btn">통합ID</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="" class="active">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="">통계/정산</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap"><!-- tour-wrap 클래스 추가 -->
+				<aside class="content_aside">
+					<h2 class="aside_tit">예약관리</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li class="active"><a href="">예약목록</a></li>
+							<li><a href="">예약캘린더</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- 컨텐츠 영역 -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="body_tit2 clearfix bb0">
+						<ul class="row list-top-form pa15">
+							<li class="col-xs-6">
+								<dl class="tb_bx">
+									<dt>예약번호</dt>
+									<dd><input type="text" class="form-control-basic wid_md" title="예약번호"></dd>
+								</dl>
+							</li>
+							<li class="col-xs-6">
+								<dl class="tb_bx">
+									<dt>여행자명</dt>
+									<dd><input type="text" class="form-control-basic wid_md" title="여행자명"></dd>
+								</dl>
+							</li>
+							<li class="col-xs-6">
+								<dl class="tb_bx">
+									<dt>상품명</dt>
+									<dd>
+										<select id="sel-state" class="form-control-basic wid_md" title="운영상태 선택">
+											<option value="" selected="selected">전체선택</option>
+											<option value="">투어1</option>
+											<option value="">투어2</option>
+										</select>
+									</dd>
+								</dl>
+							</li>
+							<li class="col-xs-6">
+								<dl class="tb_bx">
+									<dt class="vta-t">예약상태</dt>
+									<dd>
+										<label class="inline-checkbox basic chk_label on" for="rev_state1">
+											<input type="checkbox" id="rev_state1" checked="checked">예약확정
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state2">
+											<input type="checkbox" id="rev_state2" checked="checked">예약불가
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state3">
+											<input type="checkbox" id="rev_state3" checked="checked">여행종료
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state4">
+											<input type="checkbox" id="rev_state4" checked="checked">예약취소
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state5">
+											<input type="checkbox" id="rev_state5" checked="checked">취소완료
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state6">
+											<input type="checkbox" id="rev_state6" checked="checked">노쇼
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state7">
+											<input type="checkbox" id="rev_state7" checked="checked">최소인원미달
+										</label>
+										<br />
+										<label class="inline-checkbox basic chk_label on" for="rev_state8">
+											<input type="checkbox" id="rev_state8" checked="checked">확정 후 불가
+										</label>
+										<label class="inline-checkbox basic chk_label on" for="rev_state9">
+											<input type="checkbox" id="rev_state9" checked="checked">오버부킹
+										</label>
+									</dd>
+								</dl>
+							</li>
+							<li class="col-xs-6">
+								<dl class="tb_bx">
+									<dt>일정</dt>
+									<dd>
+										<span class="input-wrap input-cal pr0"><input type="text" class="form-control-basic wid_sm fare_date fare_start_date" readonly="readonly" title="요금 적용 시작 일자"></span>
+										<span class="form-control-static">~</span>
+										<span class="input-wrap input-cal"><input type="text" class="form-control-basic wid_sm fare_date fare_end_date" readonly="readonly" title="요금 적용 종료 일자"></span>
+									</dd>
+								</dl>
+							</li>
+							<li class="col-xs-6">
+								<dl class="tb_bx">
+									<dt class="vta-t">기타</dt>
+									<dd>
+										<label class="inline-checkbox basic chk_label" for="chk_etc1">
+											<input type="checkbox" id="chk_etc1">예약변경건
+										</label>
+										<label class="inline-checkbox basic chk_label" for="chk_etc2">
+											<input type="checkbox" id="chk_etc2">출발인원미달 취소 임박
+										</label>
+										<label class="inline-checkbox basic chk_label" for="chk_etc3">
+											<input type="checkbox" id="chk_etc3">투어출발일 임박
+										</label>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+						<div class="btn-area text-center pb30">
+							<button class="btn bg_dark_grey w90">검색</button>
+						</div>
+					</div>
+					<!--/ body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<div class="tbl-wrap bt0">
+							<ul class="list-board2 v2">
+								<li class="list-hd">
+									<span class="w130">예약번호</span>
+									<span>상품명</span>
+									<span class="w140">일정</span>
+									<span class="w100">여행자</span>
+									<span class="w50">인원</span>
+									<span class="w220">옵션명</span>
+									<span class="w110">예약상태</span>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<!-- 미확인 예약일 경우 -->
+								<li >
+									<a href="" class="fw500 color_red">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<a href="">
+										<span class="w130">1764882820</span>
+										<span class="w300"><span class="ellipsis">파리 오후출발 3대박물관 워킹투어 반나절 워킹투어 하하호호히하하하하</span></span>
+										<span class="w140">2016-08-14(금)</span>
+										<span class="w100">홍길동</span>
+										<span class="w50">6명</span>
+										<span class="w220">성인/아동(36개월 ~ 12세 미만)</span>
+										<span class="w110">예약확정</span>
+									</a>
+								</li>
+								<li >
+									<span>확정된 예약이 없습니다.</span>
+								</li>
+
+							</ul>
+						</div>
+						<div class="text-left mb30">
+							<ul class="pagination d_iblock text-center">
+								<li class="prev"><a href="">이전페이지목록보기</a></li>
+								<li><a href="">1</a></li>
+								<li><a href="" class="active">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li class="next"><a href="">다음페이지목록보기</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--// tour-contents -->
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+		var startDate, endDate
+		$('.fare_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			//parentEl: '.range_cal_wrap',
+			opens: 'center',
+			locale: {
+				"format": "DD/MM/YYYY",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+		}, function(startDate, endDate) {
+			$('.fare_start_date').val(startDate.format('DD/MM/YYYY'));
+			$('.fare_end_date').val(endDate.format('DD/MM/YYYY'));
+		});
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

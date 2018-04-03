@@ -1,0 +1,32 @@
+.skip--hidden {
+	position:relative;
+}
+.skip__link {
+	position:absolute;
+	padding:5px;
+	width:100%;
+	top:-30px;
+	background:$color__wh;
+	height:auto;
+	text-decoration:none;
+	&:focus, &:active {
+		top:0px;
+	}
+}
+html,body{
+	height:100%;
+}
+.wrap{
+
+}
+.container{
+
+}
+
+.contents {
+
+}
+
+.find,.filter{
+	padding:30px 20px;
+}

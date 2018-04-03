@@ -1,0 +1,575 @@
+<!--head -->
+<? include "../../inc/head.html" ?>
+<script type="text/javascript">
+    $(function(){
+        navCtrl(3);
+    })
+</script>
+<!--head -->
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<div>
+            <!-- nav -->
+            <? include "../../inc/nav.html" ?>
+            <!--// nav -->
+            <h1>파트너앱</h1>
+			<div class="tab-content">
+				<!-- 자동발송메일 filelist -->
+				<div class="tbl-wrap mt20" id="admin">
+					<table class="tb_fixed tb-filelist text-center">
+						<col style="width:3%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:7%">
+						<col style="width:5%">
+						<col style="width:17%">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>1depth</th>
+								<th>2depth</th>
+								<th>3depth</th>
+								<th>4depth</th>
+								<th>5depth</th>
+								<th>파일명</th>
+								<th>최종수정일</th>
+								<th>작업자</th>
+								<th>상태</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>로그인</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="login.html">login.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>로그인</td>
+								<td>아이디 비밀번호 찾기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="find_pw.html">find_pw.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>즉시예약</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="main.html">main.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>메인</td>
+								<td>대기예약</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="main2.html">main2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="rev_manage.html">rev_manage.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>[팝업]코치마크</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_coach.html">pop_coach.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>[팝업]필터</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_filter.html">pop_filter.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>[팝업]필터</td>
+								<td>[팝업]날짜선택</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_filter_date.html">pop_filter_date.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>대기예약</td>
+								<td>신규예약</td>
+								<td>숙소응답대기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="rev_detail1.html">rev_detail1.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>대기예약</td>
+								<td>신규예약</td>
+								<td>숙소응답대기</td>
+								<td>[팝업]불가사유</td>
+								<td><a class="link" target="_blank" href="pop_rev_impossible.html">pop_rev_impossible.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>대기예약</td>
+								<td>신규예약</td>
+								<td>입금대기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="rev_detail3.html">rev_detail2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>확정예약,체크인예정</td>
+								<td>확정예약(부분취소)</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="rev_detail3.html">rev_detail3.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>취소예약</td>
+								<td>미입금 자동취소,	숙소측 무응답,숙소측 예약불가,확정 전 고객취소,확정 후 고객취소 (취소마감일에 따라서),확정 후 불가,	더블부킹 예약불가,오버부킹</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="rev_detail4.html">rev_detail4.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>예약관리</td>
+								<td>취소예약</td>
+								<td>확정 후 고객취소</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="rev_detail5.html">rev_detail5.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>Q&A</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="qna_list.html">qna_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>Q&A</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="qna_view.html">qna_view.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>Q&A</td>
+								<td>답변입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="qna_form.html">qna_form.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>리뷰</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="review_list.html">review_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>리뷰</td>
+								<td>리뷰노출설정</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_review_setting.html">pop_review_setting.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>리뷰</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="review_view.html">review_view.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>게시물관리</td>
+								<td>리뷰</td>
+								<td>답변입력</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="review_form.html">review_form.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>알람내역</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="alarm_list.html">alarm_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="more.html">more.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>공지사항</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="notice_list.html">notice_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>공지사항</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="notice_view.html">notice_view.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>1:1 문의</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="question_list.html">question_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>1:1 문의</td>
+								<td>[팝업]문의하기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_question_form.html">pop_question_form.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>1:1 문의</td>
+								<td>[팝업]문의하기-수정</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_question_form2.html">pop_question_form2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>1:1 문의</td>
+								<td>상세-답변대기</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="question_view.html">question_view.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>1:1 문의</td>
+								<td>상세-답변완료</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="question_view2.html">question_view2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>faq</td>
+								<td>목록</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="faq_list.html">faq_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>faq</td>
+								<td>2depth</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="faq_list_dep2.html">faq_list_dep2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>faq</td>
+								<td>상세</td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="faq_view.html">faq_view.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>숙소 서비스 이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="term1.html">term1.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>더보기</td>
+								<td>숙소 서비스 이용약관</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="term2.html">term2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>공지</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_trip_notice.html">pop_trip_notice.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>알림내역</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="trip_alarm_list.html">trip_alarm_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>더보기</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="trip_more.html">trip_more.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>더보기</td>
+								<td>1:1문의</td>
+								<td>목록</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="trip_question_list.html">trip_question_list.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>더보기</td>
+								<td>1:1문의</td>
+								<td>[팝업]문의하기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_trip_q_form.html">pop_trip_q_form.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>더보기</td>
+								<td>1:1문의</td>
+								<td>상세-답변대기</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="trip_question_view.html">trip_question_view.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>트립</td>
+								<td>더보기</td>
+								<td>1:1문의</td>
+								<td>상세-답변완료</td>
+								<td></td>
+								<td><a class="link" target="_blank" href="trip_question_view2.html">trip_question_view2.html</a></td>
+								<td>2017-10-12</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>[팝업] 앱 업데이트 알림</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a class="link" target="_blank" href="pop_update.html">pop_update.html</a></td>
+								<td>2017-12-11</td>
+								<td>유나</td>
+								<td class="state">완료</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--// 관리자 filelist -->
+			</div>
+		</div>
+	</div>
+    <!-- script -->
+    <? include "../../inc/script.html" ?>
+    <!--// script -->
+</body>
+</html>

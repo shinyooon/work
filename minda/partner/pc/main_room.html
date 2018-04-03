@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> MINDA :: 민박다나와 </title>
+	<link rel="shortcut icon" href="/img/i_mlogo.ico">
+	<!-- 기존 css -->
+	<!-- //기존 css -->
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="manager/common/css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/admin.css">
+	<!-- <link rel="stylesheet" href="manager/common/css/admin.css"> -->
+		<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- 기존 js -->
+	<script src="/manager/common.js"></script>
+	<script src="/lib/js/common.js"></script>
+	<script src="/lib/js/chkForm.js" defer=defer></script>
+	<script src="/lib/js/selectCategory.js"></script>
+	<!--<script src="/lib/js/prototype.js"></script>-->
+	<script src="/manager/jquery.js"></script>
+	<script>
+	var $j = jQuery.noConflict();
+	</script>
+	<!-- //기존 js -->
+</head>
+<script src="/lib/js/popupWindow.js"></script>
+<!-- 수정된 부분 2016-08-31 추가 -->
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="w1260 clearfix">
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_big.png" alt="MINDA 파트너홈"></a></h1>
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="" class="active">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+						<a href="" class="btn link-go"><span class="icon_house_org mr5"></span> 숙소 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="/manager/main/index.php" class="active">홈</a></li>
+						<li><a href="/manager/booking/index.php">예약관리</a></li>
+						<li><a href="/manager/room/index.php">객실관리</a></li>
+						<li><a href="/manager/mypage/index.php">정보관리</a></li>
+						<li><a href="/manager/board/qna.php">게시물관리</a></li>
+						<li><a href="/manager/stats/index.php">통계/정산</a></li>
+						<li><a href="/manager/ad/index.php">광고관리</a></li>
+						<li><a href="/manager/cs/qna.php">고객센터</a></li>
+					</ul>
+				</nav>
+				<div class="hd_myinfo pull-right">
+					<div>
+						<span class="res_rule">예약규정 :국내A (100% 예약과 동시에 확정</span></span>
+						<div class="bizmoney-area"><a href="/manager/mypage/bizmoney.php"><i class="icon_money"></i>비즈머니 <span class="color_red">65,000원</span></a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="w1260 master_ct">
+				<div class="row">
+					<div class="col-xs-8 ct_top_left">
+						<section class="ct_notice">
+							<h2 class="body_tit"><a href="">공지사항</a></h2>
+							<a href="/manager/cs/notice.php?rcate=003019001" class="icon_lst_more">더보기</a>
+							<ul class="lst_notice">
+								<li>
+									<a href="/manager/cs/notice_view.php?no=20387&rcate=003019001" class="ellipsis">잠시 중단되었던 [예약확정 메일발신]이 정상 서비스되고 있습니다.</a>
+									<span class="date">2016-01-14</span>
+								</li>
+							</ul>
+							<ul class="lst_notice">
+								<li>
+									<a href="/manager/cs/notice_view.php?no=20343&rcate=003019001" class="ellipsis">★<긴급> 메일서버 점검으로 잠시 중단되었던 메일 발신이 정상 서비스되고 있습니다. </a>
+									<span class="date">2016-01-12</span>
+								</li>
+							</ul>
+						</section>
+						<!-- 테이블 -->
+						<table class="tb tb_fixed">
+							<caption>
+								<span class="pull-left">예약시스템 사용 <span class="color_org">(2016-06-16)</span> 이후,</span>
+								<span class="pull-right mt1">지난 로그인 시각 </span>
+							</caption>
+							<thead>
+								<tr>
+									<th scope="col">예약유형</th>
+									<th scope="col">예약접수</th>
+									<th scope="col">예약확정</th>
+									<th scope="col">총수익금</th>
+								</tr>
+							</thead>
+							<tbody>
+								<td>일반고객예약</td>
+								<td>55건</td>
+								<td>11건</td>
+								<td>￦ 348,300</td>
+								</tr>
+								<tr>
+									<td>여행사고객예약</td>
+									<td>3건</td>
+									<td>1건</td>
+									<td>￦ 42,500</td>
+								</tr>
+								<tr>
+									<td>총합</td>
+									<td>58건</td>
+									<td>12건</td>
+									<td>￦ 390,800</td>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-xs-4 ct_top_right">
+						<div class="border_bx text-center">
+							<div class="rating_wrp mb0">
+								<span class="starrating lg" title="2.66">
+						<span style="width:53.2%"><div class='vstar'><div class='vstar_over' style='width:53.2%'></div></div></span>
+								</span>
+								<strong class="color_org">2.66</strong>
+							</div>
+							<span>( 리뷰 참여 : 2 명 )</span>
+							<dl class="grade_des">
+								<dt>위치</dt>
+								<dd>1.5</dd>
+								<dt>시설</dt>
+								<dd>4</dd>
+								<dt>스텝</dt>
+								<dd>2.5</dd>
+							</dl>
+						</div>
+						<div class="ad-info">
+							<div class="txt-wrp">
+								<strong class="fw400 d_block">파워/플러스<br>숙소등록</strong>
+								<a href="/manager/ad/index.php" class="btn btn-xs btn_border">광고안내</a>
+								<a href="/manager/ad/application.php" class="btn btn-xs btn_border_ylw">신청하기</a>
+							</div>
+							<img class="wfull" src="http://v2.theminda.com/manager/common/img/addbg.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="row mt25 mb25">
+					<a href="#" onClick="javascrtip:manual_pop();" class="col-xs-6">
+						<img class="wfull" src="http://v2.theminda.com/manager/common/img/ban1.jpg" alt="">
+						<dl class="sr-only">
+							<dt>숙소주 메뉴얼</dt>
+							<dd>민박주 관리자 홈의 상화별로 맞춤 안내해 드립니다.</dd>
+						</dl>
+					</a>
+					<a href="#" onClick="javascrtip:knowhow_pop();" class="col-xs-6">
+						<img class="wfull" src="http://v2.theminda.com/manager/common/img/ban2.jpg" alt="">
+						<dl class="sr-only">
+							<dt>숙소주 노하우</dt>
+							<dd>다섯 가지 꿀팁 이렇게만 하면 여행자들의 인기 민박</dd>
+						</dl>
+					</a>
+				</div>
+				<!-- 2016-08-31 class수정 -->
+				<div class="row notice_wrp mb25">
+				<!--// 2016-08-31 class수정 -->
+					<div class="col-xs-4">
+						<section class="border_bx">
+							<h2 class="body_tit">예약</h2>
+							<dl class="dl-horizontal">
+								<dt>확인 안한 확정 예약</dt>
+								<dd><a href="/manager/booking/list.php?astep=9" class="color_org">
+						0</a>건 (전체 58건)
+								</dd>
+								<dt>확인 안한 예약 취소</dt>
+								<dd><a href="/manager/booking/list.php?astep=-19" class="color_org">
+						43</a>건 (전체 46건)
+								</dd>
+								<dt>1주일 내 체크인 예정</dt>
+								<dd><a href="/manager/booking/list.php?p=1" class="color_org">0</a>건</dd>
+							</dl>
+						</section>
+					</div>
+					<div class="col-xs-4">
+						<section class="border_bx">
+							<h2 class="body_tit">게시물</h2>
+							<dl class="dl-horizontal">
+								<dt>답변안한 Q&A 질문</dt>
+								<dd><a href="" class="color_org">0</a>건 (전체 0건)</dd>
+								<dt>이달의 리뷰</dt>
+								<dd><a href="" class="color_org">0</a>건 (전체2건)</dd>
+							</dl>
+						</section>
+					</div>
+					<div class="col-xs-4">
+						<section class="border_bx">
+							<h2 class="body_tit">고객센터</h2>
+							<dl class="dl-horizontal">
+							</dl>
+						</section>
+					</div>
+				</div>
+				<!-- 2016-08-31 banner 영역 추가  -->
+				<div class="w1260 banner_wrp pb40">
+					<a href="" class="banner-full banner-combine clearfix">
+						<h2 class="tit">통합 ID가입하기</h2>
+						<p class="txt">여러 개의 숙소를 ID 하나로 로그인하여 관리해보세요!</p>
+						<div class="btn-r"><span class="btn btn_ylw">신청하기</span></div>
+					</a>
+				</div>
+				<!--// 2016-08-31 banner 영역 추가  -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="http://www.theminda.com" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="../cs/ruleminbak.php" class="split">숙소주 이용약관</a>
+			<a href="../ad/adrule.php" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/manager/common/js/jquery.placeholder.js"></script>
+<script src="/manager/common/js/html5.js"></script>
+<script src="/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.minbakdanawa.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+</body>
+
+</html>
+<!-- 툴팁기능 -->

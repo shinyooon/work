@@ -1,0 +1,287 @@
+    <!-- header -->
+    <header id="hd">
+        <div class="header">
+            <h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+            <nav class="hd-nav">
+                <ul class="gnb">
+                    <li class="i1">
+                        <a href="javascript:showNationList('#category_001');">?? </a>
+                    </li>
+                    <li class="i4"><a href="">?몃┰</a></li>
+                    <li class="i2"><a href="">?蹂?</a></li>
+                    <li class="i5"><!-- ?곗??⑥?媛?몄猷 ? 留??蹂寃?ticketpass/ticketpass_list.php -->
+                        <a href="">?곗?/??<!--2016-12-14?? --></a>
+                        <div class="dep2">
+                            <ul class="clearfix">
+                                <!-- <li><a href="/ticketpass/ticketpass_list.php" >?곗?/?⑥?/a></li> -->
+                                <li><a href="">?듯?쇱???멸?</a></li>
+                                <li><a href="">???쇳⑥?/a></li>
+                                <li><a href="" class="active">?ы? 蹂댄</a></li>
+                                <li><a href="">?ъ? ??댄??/a></li>
+                                <li><a href="">怨듭??곗?</a></li>
+                                <li><a href="">??쎄린李?/a></li>
+                                <li><a href="">??곗뭅</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hd-r">
+                <div class="util">
+
+                    <div id="div_login_btn" class="util">
+                        <a href=""> 濡洹몄?/a>
+                        <a href="">??媛?</a>
+                    </div>
+                    <div id="div_top_user_menu" style="display:none">
+                        <div class="userbx">
+                            <a href="" class="user"><span class="color_org" id="top_user_name"></span>? <img id="top_user_profile_img" src="/cust/img/admin_profile_none.png" alt="" onerror="this.src='/cust/img/admin_profile_none.png'"></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">留?대쇰?/a></li>
+                                <li><a href="">?? ????댁</a></li>
+                                <li><a href="">?몃┰ ??쎈댁</a></li>
+                                <li><a href="">???紐⑸?</a></li>
+                                <li><a href="">?蹂???</a></li>
+                                <li><a href="">濡洹몄?</a></li>
+                            </ul>
+                        </div>
+                        <div class="dep2">
+                            <strong class="sr-only">留?대쇰?/strong>
+                            <ul class="clearfix">
+                                <li><a href="">留?대쇰?/a></li>
+                                <li><a href="">?? ????댁</a></li>
+                                <li><a href="">?몃┰ ??쎈댁</a></li>
+                                <!-- <li><a href="/mypage/booking_tour.php" >?몃┰ ??쎈댁</a></li> -->
+                                <li><a href="">???紐⑸?</a></li>
+                                <li><a href="">?蹂???</a></li>
+                                <li><a href="">?? ??</a></li>
+                                <li><a href="">?ъ명?罹??荑??/a></li>
+                                <li><a href="">???쇳⑥????/a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="gnb right-gnb clear">
+                    <li class="i6">
+                        <a href="">而ㅻㅻ??/a><!-- [D] class="active" 異媛? dep2 蹂댁ъ? -->
+                        <div class="dep2">
+                            <ul class="clearfix">
+                                <li><a href="">而ㅻㅻ??/a></li>
+                                <li><a href="">援ъ맞룰뎄吏</a></li>
+                                <li><a href="">?ш?쨌?怨</a></li>
+                                <li><a href="">?≫?由대??/a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="i7">
+                        <a href="">???amp;?대깽??/a>
+                        <div class="dep2">
+                            <ul class="clearfix">
+                                <li><a href="">?≪?由????/a></li>
+                                <li><a href="">鍮?湲????/a></li>
+                                <li><a href="">?? 荑??/a></li>
+                                <li><a href="">誘쇰??대깽??/a></li>
+                                <li><a href="">?? ?대깽??/a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- ???寃?李쎌 ??댁? ?대┃?쇰?留 寃??????댁??⑸????댁? ??⑥ ?湲몄 ?? ?ㅻⅨ ??댁?? ?쇱?κ낵 援щ????吏 ??? ?湲??臾몄 -->
+                <form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+                    <input type="hidden" name="part" value="keyword_search">
+                    <!-- ??щ? ?ㅼ?? 援щ??('__SP__')濡 援щ? ??????-->
+                    <input type="hidden" name="keywords" id="keywords" value="">
+                    <input type="hidden" name="country">
+                    <input type="hidden" name="city">
+                    <input type="hidden" name="unit">
+                    <!-- <button type="button" class="icon_srch_gnb">寃?</button> -->
+                    <!-- <div class="silde-wrap"> -->
+                    <div class="input-group">
+                            <span class="btn-wrap">
+                                <button type="button" id="city_search_btn" class="icon_srch_grey">寃?</button>
+                            </span>
+                        <span class="input-wrap">
+                                <input type="text" name="keyword" id="keyword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="寃??대? ??ν?몄." title="寃?????? autocomplete="off" style="ime-mode:active;">
+                            </span>
+                        <span class="close-btn-wrap">
+                                <button type="button" class="icon_date_close" style="display: none;">寃? 痍⑥</button>
+                            </span>
+                        <!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+                    </div>
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 濡洹몄명 , 留?댄?댁? on -->
+    <!-- header -->
+    <header id="hd">
+        <div class="header">
+            <h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+            <nav class="hd-nav">
+                <ul class="gnb">
+                    <li class="i1">
+                        <a href="javascript:showNationList('#category_001');">?? </a>
+                    </li>
+                    <li class="i4"><a href="">?몃┰</a></li>
+                    <li class="i2"><a href="">?蹂?</a></li>
+                    <li class="i5"><!-- ?곗??⑥?媛?몄猷 ? 留??蹂寃?ticketpass/ticketpass_list.php -->
+                        <a href="">?곗?/??<!--2016-12-14?? --></a>
+                        <div class="dep2">
+                            <ul class="clearfix">
+                                <!-- <li><a href="/ticketpass/ticketpass_list.php" >?곗?/?⑥?/a></li> -->
+                                <li><a href="">?듯?쇱???멸?</a></li>
+                                <li><a href="">???쇳⑥?/a></li>
+                                <li><a href="" class="active">?ы? 蹂댄</a></li>
+                                <li><a href="">?ъ? ??댄??/a></li>
+                                <li><a href="">怨듭??곗?</a></li>
+                                <li><a href="">??쎄린李?/a></li>
+                                <li><a href="">??곗뭅</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hd-r">
+                <div class="util active">
+                    <div id="div_login_btn" class="util" style="display:none">
+                        <a href=""> 濡洹몄?/a>
+                        <a href="">??媛?</a>
+                    </div>
+                    <div id="div_top_user_menu">
+                        <div class="userbx">
+                            <a href="" class="user"><span class="color_org" id="top_user_name">??</span>? <img id="top_user_profile_img" src="/cust/img/admin_profile_none.png" alt="" onerror="this.src='/cust/img/admin_profile_none.png'"></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">留?대쇰?/a></li>
+                                <li><a href="">?? ????댁</a></li>
+                                <li><a href="">?몃┰ ??쎈댁</a></li>
+                                <li><a href="">???紐⑸?</a></li>
+                                <li><a href="">?蹂???</a></li>
+                                <li><a href="">濡洹몄?</a></li>
+                            </ul>
+                        </div>
+                        <div class="dep2">
+                            <strong class="sr-only">留?대쇰?/strong>
+                            <ul class="clearfix">
+                                <li><a href="">留?대쇰?/a></li>
+                                <li><a href="">?? ????댁</a></li>
+                                <li><a href="">?몃┰ ??쎈댁</a></li>
+                                <!-- <li><a href="/mypage/booking_tour.php" >?몃┰ ??쎈댁</a></li> -->
+                                <li><a href="">???紐⑸?</a></li>
+                                <li><a href="">?蹂???</a></li>
+                                <li><a href="" class="active">?? ??</a></li>
+                                <li><a href="">?ъ명?罹??荑??/a></li>
+                                <li><a href="">???쇳⑥????/a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="gnb right-gnb clear">
+                    <li class="i6">
+                        <a href="">而ㅻㅻ??/a><!-- [D] class="active" 異媛? dep2 蹂댁ъ? -->
+                        <div class="dep2">
+                            <ul class="clearfix">
+                                <li><a href="">而ㅻㅻ??/a></li>
+                                <li><a href="">援ъ맞룰뎄吏</a></li>
+                                <li><a href="">?ш?쨌?怨</a></li>
+                                <li><a href="">?≫?由대??/a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="i7">
+                        <a href="">???amp;?대깽??/a>
+                        <div class="dep2">
+                            <ul class="clearfix">
+                                <li><a href="">?≪?由????/a></li>
+                                <li><a href="">鍮?湲????/a></li>
+                                <li><a href="">?? 荑??/a></li>
+                                <li><a href="">誘쇰??대깽??/a></li>
+                                <li><a href="">?? ?대깽??/a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- ???寃?李쎌 ??댁? ?대┃?쇰?留 寃??????댁??⑸????댁? ??⑥ ?湲몄 ?? ?ㅻⅨ ??댁?? ?쇱?κ낵 援щ????吏 ??? ?湲??臾몄 -->
+                <form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+                    <input type="hidden" name="part" value="keyword_search">
+                    <!-- ??щ? ?ㅼ?? 援щ??('__SP__')濡 援щ? ??????-->
+                    <input type="hidden" name="keywords" id="keywords" value="">
+                    <input type="hidden" name="country">
+                    <input type="hidden" name="city">
+                    <input type="hidden" name="unit">
+                    <!-- <button type="button" class="icon_srch_gnb">寃?</button> -->
+                    <!-- <div class="silde-wrap"> -->
+                    <div class="input-group">
+                            <span class="btn-wrap">
+                                <button type="button" id="city_search_btn" class="icon_srch_grey">寃?</button>
+                            </span>
+                        <span class="input-wrap">
+                                <input type="text" name="keyword" id="keyword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="寃??대? ??ν?몄." title="寃?????? autocomplete="off" style="ime-mode:active;">
+                            </span>
+                        <span class="close-btn-wrap">
+                                <button type="button" class="icon_date_close" style="display: none;">寃? 痍⑥</button>
+                            </span>
+                        <!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+                    </div>
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- Footer -->
+    <div id="ft">
+        <div class="w1100 footer">
+            <div class="ft_top">
+                <strong class="font_lato color_wh">information</strong>
+                <div class="ft_info_txt">
+                    <span>?誘쇰?/span>
+                    <span>?? : 源?ㅽ?/span>
+                    <span>?ъ??깅?踰??: 101-86-28116</span>
+                    <span>愿愿?ъ?깅?利 : ?2014-000025??/span>
+                    <span>?듭?留ㅼ?怨 : ? 01-5470??/span>
+                </div>
+                <div class="ft_info_txt">
+                    <span>?대???: help@theminda.com</span>
+                    <span>怨媛?쇳?: 1661-2892</span>
+                    <span>FAX : 02-722-3478</span>
+                    <span>?댁?媛 : ???10?~12?/13?~18?(二쇰?, 怨듯댁??대Т)</span>
+                </div>
+                <div class="ft_info_txt">
+                    <address>??명밸?? 以援???몃?15湲?27 醫?鍮??A? 5痢?/address>
+                </div>
+                <div class="footer__right__top">
+                    <ul class="footer__partner-list">
+                        <li class="footer__partner-item bar"><a href="" class="footer__partner-link">??/?몃┰ ??몃 ?</a></li>
+                        <li class="footer__partner-item"><a href="" class="footer__partner-link">?ы????쎄?由??</a></li>
+                    </ul>
+                    <ul class="about_lst clearfix">
+                        <li><a href="" target="_blank" class="sns"><span class="icon_face">誘쇰ㅽ?댁ㅻ?蹂닿린</span></a></li>
+                        <li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">誘쇰ㅻ?濡洹몃낫湲?/span></a></li>
+                        <li><a href="" class="btn">怨媛?쇳?臾몄</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="ft_btm clearfix">
+                <ul class="fnb pull-left clearfix">
+                    <li><a href="" target="_blank">??ъ媛</a></li>
+                    <li><a href="" target="_blank">??몃 媛?</a></li>
+                    <li><a href="">痍⑥?遺洹?</a></li>
+                    <li><a href="">怨媛?쇳?/a></li>
+                    <li class="bar"><a href="">怨듭??ы</a></li>
+                    <li><a href="">?댁⑹쎄?</a></li>
+                    <li><a href="">媛?몄蹂댁?由щ갑移?/a></li>
+                    <li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">?ъ??蹂댄??/a></li>
+                </ul>
+                <p class="pull-right fs12">Copyright짤 Minda Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- //Footer -->
+

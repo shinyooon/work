@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css?v2">
+	<!-- <link rel="stylesheet" href="css/tour.css"> -->
+
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		html, body {background-color:#eeeff4;}
+	</style>
+</head>
+
+<body class="master">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content tour-wrap tour-form-wrap">
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="tour-form-step clearfix"><!-- 2017-02-24 클래스 추가 -->
+						<div class="top-btn"><a href=""><span class="spr_arr_l"></span>저장 후 목록으로</a></div>
+						<ul class="tit-step row">
+							<li class="li1"><a href="">기본정보</a></li>
+							<li class="li2"><a href="">사진/코스</a></li>
+							<li class="li3"><a href="">요금</a></li>
+							<!-- <li><a href="">행사관리</a></li> -->
+							<li class="li4 active"><a href="">예약규정</a></li>
+						</ul>
+						<div><!-- 2017-02-24 클래스 삭제 -->
+							<div class="input-area">
+								<label for="sel-state" class="label-tit">운영상태</label>
+								<select id="sel-state" class="form-control-basic wid-sm d_iblock" title="운영상태 선택">
+									<option value="">판매중</option>
+									<option value="">판매중지</option>
+								</select>
+								<button class="btn btn-sm btn-check">확인</button><!-- 2017-02-24 클래스 삭제 -->
+							</div>
+						</div>
+						<!-- 2017-03-30 add -->
+						<div class="btm-btn"><a href=""><span class="spr_arr_l blk"></span>저장하지 않고<br />목록으로</a></div>
+						<!--2017-03-30 삭제 <div class="copyright">
+							<p>Copyright &copy; theminda.com <br/ >All rights reserved. 1661-2892</p>
+						</div> -->
+					</div>
+					<!--// body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<div class="pa40 bg_wh">
+							<h3 class="sub_title mt0">
+								이 투어의 예약규정을 선택해주세요<!-- 2016-12-13 수정 -->
+							</h3>
+							<div class="bx-bubble right">
+								<span class="icon_info3 mb5">안내</span>
+								<p class="txt">여행자의 예약취소에 <br />대한 환불 정책을 <br />선택해주세요. </p>
+							</div>
+							<div class="policy-wrap tb_bx tb_fixed">
+								<ul class="basic_step">
+									<li>
+										<label class="radio_label radio_dot on" for="term_radio1">
+											<input type="radio" name="radio_term" id="term_radio1" checked="checked"> 규정명규정명규정명규정명규정
+										</label>
+									</li>
+									<li>
+										<label class="radio_label radio_dot" for="term_radio2">
+											<input type="radio" name="radio_term" id="term_radio2"> 규정명2
+										</label>
+									</li>
+									<li>
+										<label class="radio_label radio_dot"  for="term_radio3">
+											<input type="radio" name="radio_term" id="term_radio3"> 규정명3
+										</label>
+									</li>
+									<li>
+										<label class="radio_label radio_dot" for="term_radio4">
+											<input type="radio" name="radio_term" id="term_radio4"> 협의규정
+										</label>
+									</li>
+								</ul>
+								<div class="policy-con" style="display:block;">
+									<dl class="tb_bx">
+										<dt>규정명</dt>
+										<dd>규정명</dd>
+									</dl>
+									<dl class="tb_bx bd-b">
+										<dt>민다수수료1</dt>
+										<dd>4%</dd>
+									</dl>
+									<ul class="list-board2 v2 mt60">
+										<li class="list-hd">
+											<span>기준일</span>
+											<span>파트너 환불 수수료</span>
+										</li>
+										<li>
+											<span>20일 ~</span>
+											<span>15%</span>
+										</li>
+										<li>
+											<span>4일 ~ 19일</span>
+											<span>30%</span>
+										</li>
+										<li>
+											<span>0일 ~ 3일</span>
+											<span>45%</span>
+										</li>
+									</ul>
+								</div>
+								<div class="policy-con">
+									<dl class="tb_bx">
+										<dt>규정명</dt>
+										<dd>규정명</dd>
+									</dl>
+									<dl class="tb_bx bd-b">
+										<dt>민다수수료2</dt>
+										<dd>4%</dd>
+									</dl>
+									<ul class="list-board2 v2 mt60">
+										<li class="list-hd">
+											<span>기준일</span>
+											<span>파트너 환불 수수료</span>
+										</li>
+										<li>
+											<span>20일 ~</span>
+											<span>15%</span>
+										</li>
+										<li>
+											<span>4일 ~ 19일</span>
+											<span>30%</span>
+										</li>
+										<li>
+											<span>0일 ~ 3일</span>
+											<span>45%</span>
+										</li>
+									</ul>
+								</div>
+								<div class="policy-con">
+									<dl class="tb_bx">
+										<dt>규정명</dt>
+										<dd>규정명</dd>
+									</dl>
+									<dl class="tb_bx bd-b">
+										<dt>민다수수료3</dt>
+										<dd>4%</dd>
+									</dl>
+									<ul class="list-board2 v2 mt60">
+										<li class="list-hd">
+											<span>기준일</span>
+											<span>파트너 환불 수수료</span>
+										</li>
+										<li>
+											<span>20일 ~</span>
+											<span>15%</span>
+										</li>
+										<li>
+											<span>4일 ~ 19일</span>
+											<span>30%</span>
+										</li>
+										<li>
+											<span>0일 ~ 3일</span>
+											<span>45%</span>
+										</li>
+									</ul>
+								</div>
+								<div class="policy-con nego-rule">
+									<textarea class="form-control-basic" rows="8" title="첫번째 코스 설명" placeholder="민다와 협의한 규정이 있는 경우 또는
+협의한 규정은 없지만 민다규정 외 별도로 협의를 원하시는 경우
+이 입력란에 적어주세요."></textarea>
+								</div>
+								<!-- <div class="msg-before">
+									<p class="pos-center txt">등록요청 후 상품 등록승인 시<br />선택 가능합니다</p>
+								</div> -->
+							</div>
+						</div>
+						<!-- 2017-03-30 add -->
+						<div class="pa20 bg_wh txt-etc">
+							<strong class="color_red d_block">등록요청 전 한번 더 확인!</strong>
+							<p class="mt5 color_blk">가이드투어는 현지에서 정식 허가를 받은 투어 회사가 진행할 수 있습니다.<br />정식 허가를 받지 않아 여행자에게 피해가 발생하는 경우 투어 회사에 책임이 있습니다.</p>
+						</div>
+						<div class="mb50 mt50 btn-justify clearfix">
+							<button type="button" class="btn bg_dark_grey btn-lg ml5 pull-left">이전</button>
+							<button type="button" class="btn bg_org btn-lg pull-right">등록요청</button>
+						</div>
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+		$('.list-r-menu li > a').click(function(e) {
+			e.preventDefault();
+			$('.list-r-menu > li').removeClass('active');
+			$(this).closest('li').addClass('active');
+		})
+
+		var startDate, endDate
+		$('.fare_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			//parentEl: '.range_cal_wrap',
+			opens: 'center',
+			locale: {
+				"format": "DD/MM/YYYY",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+		}, function(startDate, endDate) {
+			$('.fare_start_date').val(startDate.format('DD/MM/YYYY'));
+			$('.fare_end_date').val(endDate.format('DD/MM/YYYY'));
+		});
+
+		$('.policy-wrap .basic_step .radio_label').click(function(){
+			var idx = $(this).closest('li').index();
+			$('.policy-wrap .policy-con').hide();
+			$('.policy-wrap .policy-con').eq(idx).css('display','table-cell');
+		})
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

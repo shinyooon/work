@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<!-- <a href="/member/logout.php" class="btn">정보수정</a> -->
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="" class="active">통계/정산</a></li>
+						<li><a href="">파트너 지원</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">통계/정산</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">정산내역</a></li>
+							<li><a href="">수익통계</a></li>
+							<li><a href="">순위별 통계</a></li>
+							<li class="active"><a href="">리뷰통계</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<div class="inner mb70">
+						<table class="tb tb-default tb_input text-left">
+							<caption class="sr-only"> 리뷰 검색 항목</caption>
+							<colgroup>
+								<col style="width:150px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>상품명</th>
+									<td colspan="3">
+										<select class="form-control-basic" title="리뷰 관리할 상품 선택">
+											<option selected="selected">투어1</option>
+											<option>투어2</option>
+											<option>투어3</option>
+										</select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="text-right mt25">
+							<button type="button" class="btn bg_dark_grey btn-md w165">검색</button>
+						</div>
+						<div class="tit-area clearfix">
+							<h3 class="sub_title pull-left">전체 평점 통계</h3>
+						</div>
+						<div class="tbl-wrap3 total-stats-area">
+							<table class="tb tb-default text-center">
+								<caption class="sr-only"> 전체 평점 통계 항목</caption>
+								<colgroup>
+									<col style="width:270px">
+									<col style="width:125px">
+									<col style="width:125px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th rowspan="6" scope="rowgroup" class="bg_wh">
+											<div class="rating_wrp">
+												<span class="color_red">4.5</span>
+												<span class="starrating xl" title="4.5">
+													<span style="width:90%">4.5</span>
+												</span>
+											</div>
+										</th>
+										<th>전체</th>
+										<td>48 명</td>
+										<td rowspan="6" class="pa0">
+											<div class="pie-chart-wrap"><div id="pie-chart1"></div></div>
+										</td>
+									</tr>
+									<tr>
+										<th>5점</th>
+										<td>30 명</td>
+									</tr>
+									<tr>
+										<th>4점</th>
+										<td>3 명</td>
+									</tr>
+									<tr>
+										<th>3점</th>
+										<td>5 명</td>
+									</tr>
+									<tr>
+										<th>2점</th>
+										<td>5 명</td>
+									</tr>
+									<tr>
+										<th>1점</th>
+										<td>1 명</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tit-area clearfix">
+							<h3 class="sub_title pull-left">옵션별 평점 통계</h3>
+						</div>
+						<div class="tbl-wrap3 total-stats-area">
+							<table class="tb tb-default text-center">
+								<caption class="sr-only"> 옵션별 평점 통계 항목</caption>
+								<colgroup>
+									<col style="width:270px">
+									<col style="width:125px">
+									<col style="width:125px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="col" colspan="4" class="text-left">성인</th>
+									</tr>
+									<tr>
+										<th rowspan="6" scope="rowgroup" class="bg_wh">
+											<div class="rating_wrp">
+												<span class="color_red">4.0</span>
+												<span class="starrating xl" title="4">
+													<span style="width:80%">4</span>
+												</span>
+											</div>
+										</th>
+										<th>전체</th>
+										<td>48 명</td>
+										<td rowspan="6" class="pa0">
+											<div class="pie-chart-wrap"><div id="pie-chart2"></div></div>
+										</td>
+									</tr>
+									<tr>
+										<th>5점</th>
+										<td>30 명</td>
+									</tr>
+									<tr>
+										<th>4점</th>
+										<td>3 명</td>
+									</tr>
+									<tr>
+										<th>3점</th>
+										<td>5 명</td>
+									</tr>
+									<tr>
+										<th>2점</th>
+										<td>5 명</td>
+									</tr>
+									<tr>
+										<th>1점</th>
+										<td>1 명</td>
+									</tr>
+									<tr>
+										<th scope="col" colspan="4" class="text-left">아동</th>
+									</tr>
+									<tr>
+										<th rowspan="6" scope="rowgroup" class="bg_wh">
+											<div class="rating_wrp">
+												<span class="color_red">3.0</span>
+												<span class="starrating xl" title="4">
+													<span style="width:60%">3</span>
+												</span>
+											</div>
+										</th>
+										<th>전체</th>
+										<td>48 명</td>
+										<td rowspan="6" class="pa0">
+											<div class="pie-chart-wrap"><div id="pie-chart3"></div></div>
+										</td>
+									</tr>
+									<tr>
+										<th>5점</th>
+										<td>30 명</td>
+									</tr>
+									<tr>
+										<th>4점</th>
+										<td>3 명</td>
+									</tr>
+									<tr>
+										<th>3점</th>
+										<td>5 명</td>
+									</tr>
+									<tr>
+										<th>2점</th>
+										<td>5 명</td>
+									</tr>
+									<tr>
+										<th>1점</th>
+										<td>1 명</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tit-area clearfix">
+							<h3 class="sub_title pull-left">리뷰 작성 통계</h3>
+						</div>
+						<div class="tbl-wrap3 total-stats-area">
+							<table class="tb tb-default text-center">
+								<caption class="sr-only"> 리뷰 작성 통계 항목</caption>
+								<colgroup>
+									<col style="width:270px">
+									<col style="width:125px">
+									<col style="width:125px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th rowspan="6" scope="rowgroup" class="bg_wh">
+											<div class="rating_wrp v2">
+												<span class="fs18">작성비율</span>
+												<span class="color_red">34.5%</span>
+											</div>
+										</th>
+										<th>총 예약</th>
+										<td>1,000 건</td>
+										<td rowspan="6" class="pa0">
+											<div class="pie-chart-wrap"><div id="pie-chart4"></div></div>
+										</td>
+									</tr>
+									<tr>
+										<th>작성</th>
+										<td>345 건</td>
+									</tr>
+									<tr>
+										<th>미작성</th>
+										<td>655 건</td>
+									</tr>
+									<tr>
+										<th rowspan="3"></th>
+										<td rowspan="3"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+
+	jQuery(function($) {
+		// Load the Visualization API and the piechart package.
+		google.charts.load('current', {'packages':['corechart']});
+
+		// Set a callback to run when the Google Visualization API is loaded.
+		google.charts.setOnLoadCallback(drawChart);
+
+		// Callback that creates and populates a data table,
+		// instantiates the pie chart, passes in the data and
+		// draws it.
+		function drawChart() {
+
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', '점수');
+			data.addColumn('number', '');
+			data.addRows([
+				['5점', 3],
+				['4점', 1],
+				['3점', 1],
+				['2점', 1],
+				['1점', 2]
+			]);
+			// Create the data table.
+			var data2 = new google.visualization.DataTable();
+			data2.addColumn('string', 'Topping');
+			data2.addColumn('number', 'Slices');
+			data2.addRows([
+				['5점', 3],
+				['4점', 1],
+				['3점', 15],
+				['2점', 1],
+				['1점', 2]
+			]);
+
+			var data3 = new google.visualization.DataTable();
+			data3.addColumn('string', 'Topping');
+			data3.addColumn('number', 'Slices');
+			data3.addRows([
+				['5점', 20],
+				['4점', 5],
+				['3점', 30],
+				['2점', 4],
+				['1점', 5]
+			]);
+			var data4 = new google.visualization.DataTable();
+			data4.addColumn('string', 'Topping');
+			data4.addColumn('number', 'Slices');
+			data4.addRows([
+				['작성', 345],
+				['미작성', 655]
+			]);
+
+			// Set chart options
+			var options = {
+				width: 400,
+				height: 300,
+				legend: {position: 'none'},
+				chartArea: {
+					width: '85%',
+					height:'85%'
+				},
+				slices: {
+					0: { color: '#4374e0' },
+					1: { color: '#4285f4' },
+					2: { color: '#76a7fa' },
+					3: { color: '#a0c3ff' },
+					4: { color: '#c0d6fb' }
+				}
+			};
+			// Set chart options
+			var options2 = {
+				width: 400,
+				height: 300,
+				legend: {position: 'none'},
+				chartArea: {
+					width: '85%',
+					height:'85%'
+				},
+				slices: {
+					0: { color: '#4374e0' },
+					1: { color: '#4285f4' },
+					2: { color: '#76a7fa' },
+					3: { color: '#a0c3ff' },
+					4: { color: '#c0d6fb' }
+				}
+			};
+			// Set chart options
+			var options3 = {
+				width: 400,
+				height: 300,
+				legend: {position: 'none'},
+				chartArea: {
+					width: '85%',
+					height:'85%'
+				},
+				slices: {
+					0: { color: '#4374e0' },
+					1: { color: '#4285f4' },
+					2: { color: '#76a7fa' },
+					3: { color: '#a0c3ff' },
+					4: { color: '#c0d6fb' }
+				}
+			};
+			// Set chart options
+			var options4 = {
+				width: 400,
+				height: 300,
+				legend: {position: 'none'},
+				chartArea: {
+					width: '85%',
+					height:'85%'
+				},
+				slices: {
+					0: { color: '#4374e0' },
+					1: { color: '#a0c3ff' }
+				}
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.PieChart(document.getElementById('pie-chart1'));
+			chart.draw(data, options);
+			var chart2 = new google.visualization.PieChart(document.getElementById('pie-chart2'));
+			chart2.draw(data2, options2);
+			var chart3 = new google.visualization.PieChart(document.getElementById('pie-chart3'));
+			chart3.draw(data3, options3);
+			var chart4 = new google.visualization.PieChart(document.getElementById('pie-chart4'));
+			chart4.draw(data4, options4);
+		}
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

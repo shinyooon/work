@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/slider.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+	<link rel="stylesheet" href="/m/1.0/common/css/common.css">
+	<link rel="stylesheet" href="/m/1.0/common/css/restyle.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<header id="hd" class="header " style="position: absolute;">
+			<div class="header__left">
+				<a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a>    </div>
+			<h1 class="header__tit"><a href="javascript:;" class="header__tit-link">로마</a></h1>
+			<div class="header__right">
+				<!-- 타이틀 우측 3번쨰 버튼 -->
+				<!-- 타이틀 우측 2번쨰 버튼 -->
+				<a href="/m/1.0/grp_main/search.html?type=tour&amp;area=001" class="header__btn-total-city">전체도시</a>	<!-- 타이틀 우측 버튼 -->
+			</div>
+			<!-- 검색 바 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix has-fnb has-filter"><!-- yuna : no-hd 클래스 추가 -->
+			<!-- 상단탭 -->
+			<nav>
+				<ul class="tab6">
+					<li class=""><a href="/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=001003001">숙소</a></li>
+					<li class="active"><a href="/m/1.0/tg/list.html?category=001003001">트립</a></li>
+					<li class=""><a href="/m/1.0/spot/list.html?spot_list_type=city&amp;category=001003001">정보</a></li>
+				</ul>
+			</nav>
+			<!-- filter -->
+			<div class="dep3">
+				<form class="frm_index">
+					<div class="srch__date--before">
+						<button type="button" class="srch__date-btn--before">
+							<span class="srch__date-icon-cal"></span>트립일 선택
+						</button>
+					</div>
+					<div class="itx_datepicker_wrp">
+			<span class="input-wrap input__wrap-tour-cal">
+				<input id="resv_date" value="" type="text" class="no_style input-tour-cal" title="트립 일자" placeholder="" readonly="readonly">
+			</span>
+					</div>
+				</form>
+				<div class="mtb_srch_filter">
+					<div class="srch__btm">
+						<button id="filter_btn" type="button" class="srch__btn-filter"><i class="srch__icon-filter"></i>필터</button>
+					</div>
+				</div>
+			</div>
+			<!--<div class="trip-top-msg">
+				<p class="txt">민다 트립은 대기시간 없이 <storng class="txt&#45;&#45;point">즉시예약</storng>됩니다.</p>
+			</div>-->
+            <!-- 2018-02-13 -->
+            <div class="trip-list__banner-area">
+                <a href="">
+                    <div class="banner__usj">
+                        <p class="banner__usj-txt">유니버셜 스튜디오 재팬 입장권? <span class="banner__usj-txt--point">바로 여기!</span></p>
+                    </div>
+                </a>
+            </div>
+            <!--// 2018-02-13 -->
+			<div class="item_card_lst_wrp">
+				<!-- 목록 -->
+				<ul class="item_card_lst v2"><!-- v2클래스 추가 -->
+					<li>
+						<a href="">
+							<!-- [D] 파트너 사진 및 이름이 위로 올라옴 partner-info -->
+							<div class="partner-info media">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="/m/1.0/cust/img/default.png" alt="">
+										<span class="badge badge_gold">금뱃지</span>
+									</div>
+								</div>
+								<div class="media-body">
+									<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+								</div>
+							</div>
+							<!--// partner-ionfo -->
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="ribbon_wrp">
+									<button type="button" class="tmb_heart btn active" onclick="return false" data-toggle="button">저장안됨</button>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 트립 런던 스트리트 현지인 트립런던 스트리트 현지인 트립</h2>
+										<div class="info-detail has-coupon"><!-- 2018-02-13 쿠폰있을땐 has-coupon클래스 추가 -->
+											<div class="left split_lst">
+												<div class="city">파리</div><!-- 파트너 목옥에 보여주는 트립 일 때 도시 노출 -->
+												<div class="dot_lst">
+													<span>현지트립</span>
+													<span>3시간</span>
+												</div>
+											</div>
+											<div class="right">
+												<div class="price_wrp">
+                                                    <!-- 2018-02-13 add -->
+                                                    <span class="label__coupon">전용쿠폰상품</span>
+                                                    <!--// 2018-02-13 add -->
+                                                    1인 <span class="price color_red font_lato">€50</span>
+                                                </div>
+											</div>
+										</div>
+										<!-- btmwrp [D] btmwrap 영역 추가됨 -->
+										<div class="btmwrp clearfix">
+											<div class="span pull-left">
+												<span>리뷰</span>
+												<span>223</span>
+											</div>
+											<div class="pull-right tag-area">
+												<span>#시내트립</span>
+												<span>#박물관/미술관</span>
+												<span>#먹방트립</span>
+											</div>
+										</div>
+										<!--// btmwrp -->
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<!-- [D] 파트너 사진 및 이름이 위로 올라옴 partner-info -->
+							<div class="partner-info media">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="/m/1.0/cust/img/default.png" alt="">
+										<span class="badge badge_gold">금뱃지</span>
+									</div>
+								</div>
+								<div class="media-body">
+									<p class="ellipsis">노란자전거노란자전거노란자전거노란자전거</p>
+								</div>
+							</div>
+							<!--// partner-ionfo -->
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="ribbon_wrp">
+									<button type="button" class="tmb_heart btn" onclick="return false" data-toggle="button">저장안됨</button>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 트립 런던 스트리트 현지인 트립런던 스트리트 현지인 트립</h2>
+										<div class="info-detail">
+											<div class="left split_lst">
+												<div class="city">파리</div><!-- 파트너 목옥에 보여주는 트립 일 때 도시 노출 -->
+												<div class="dot_lst">
+													<span>현지트립</span>
+													<span>3시간</span>
+												</div>
+											</div>
+											<div class="right">
+												<div class="price_wrp"> 1인 <span class="price color_red font_lato">€50</span> </div>
+											</div>
+										</div>
+										<!-- btmwrp [D] btmwrap 영역 추가됨 -->
+										<div class="btmwrp clearfix">
+											<div class="span pull-left">
+												<span>리뷰</span>
+												<span>223</span>
+											</div>
+											<div class="pull-right tag-area">
+												<span>#시내트립</span>
+												<span>#박물관/미술관</span>
+												<span>#먹방트립</span>
+											</div>
+										</div>
+										<!--// btmwrp -->
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- 페이징 -->
+				<nav class="text-center">
+					<ul class="pagination clearfix">
+						<li class="prev"><a href="">이전페이지목록보기</a></li>
+						<li>2/7</li>
+						<li class="next"><a href="">다음페이지목록보기</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+	<div class="fnb">
+		<nav class="nav-btm">
+			<ul>
+				<li class="">
+					<a href="/m/1.0/grp_main/main.html">
+						<span class="icon-home"></span>
+						<span class="txt">홈</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="/m/1.0/grp_main/search.html?type=tour&amp;area=001">
+						<span class="icon-srch"></span>
+						<span class="txt">검색</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="/m/1.0/guidebook/main.html">
+						<span class="icon-save"></span>
+						<span class="txt">저장목록</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="/m/1.0/mypage/index.html">
+						<span class="icon-my"></span>
+						<span class="txt">마이민다</span>
+					</a>
+				</li>
+				<li class="">
+					<a href="/m/1.0/grp_main/more.html">
+						<span class="icon-more"></span>
+						<span class="txt">더보기</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- js -->
+	<script type="text/javascript">
+	$(function() {
+        var $beforeBtn = $('.srch__date-btn--before');
+		var $cal_input = $('.input-tour-cal');
+        var $btn_cal_reset = $('.itx_datepicker_wrp .icon_clse_input');
+		var dateToday = new Date();
+        if($beforeBtn !== null){
+            $beforeBtn.click(function(){
+                $cal_input.click();
+            });
+        }
+        $btn_cal_reset.click(function(){
+            $beforeBtn.show();
+        });
+        if($cal_input.val()){
+            $beforeBtn.hide();
+        }
+
+		$cal_input.daterangepicker({
+			autoApply: true,
+			minDate: dateToday,
+			parentEl: '.sort_hd ',
+			singleDatePicker: true,
+			showCustomRangeLabel:true,
+			cancelClass: "icon_close_blk2", //2017-04-06 add
+			locale: {
+				format: 'YYYY-MM-DD',
+				"daysOfWeek": [
+				"일",
+				"월",
+				"화",
+				"수",
+				"목",
+				"금",
+				"토"
+				],
+				"monthNames": [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월"
+				]
+			}
+		});
+		/*2017-04-06 add*/
+		$cal_input.on({
+			'hide.daterangepicker' : function  (ev, picker) {
+				if($cal_input.val()){
+					$cal_input.siblings('.icon_clse_input').show();
+				}else{
+					$cal_input.siblings('.icon_clse_input').hide()
+				}
+			},
+			'apply.daterangepicker' : function (ev,picker){
+                $beforeBtn.hide();
+			}
+		})
+		$('.icon_clse_input').click(function(){
+			$(this).siblings('input:text').val('');
+			$(this).hide();
+		})
+	});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="/m/1.0/cust/js/moment.min.js"></script>
+	<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="/m/1.0/cust/js/bootstrap-slider.js"></script>
+	<script src="/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

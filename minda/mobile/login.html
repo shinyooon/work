@@ -1,0 +1,38 @@
+<? include "inc/top.html" ?>
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a class="icon_hd_clse" href="javascript:history.back();"><span class="header__icon-clse">닫기</span></a></div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">로그인</a></h1>
+    <div class="header__right">
+    </div>
+    <!-- 검색 바 -->
+</header>
+<div class="login-area">
+    <ul class="lst-login">
+        <li><span class="input__wrap"><input id="id" type="text" placeholder="아이디를 입력해주세요" title="아이디입력"></span></li>
+        <li><span class="input__wrap"><input id="password" type="password" placeholder="비밀번호를 입력해주세요" title="비밀번호입력"></span></li>
+        <li><button onclick="Login();" type="button" class="login-area__btn-login">로그인</button></li>
+        <li class="clearfix login-link-area">
+            <div class="pull-left">
+                <span class="input__wrap--chk"><input id="save-id" type="checkbox" /><label class="input__wrap--label" for="save-id">아이디저장</label></span>
+            </div>
+            <div class="pull-right"><a href="http://localhost/m/1.0/grp_account/find_id_and_password.html" class="login-area__link-find">아이디/비밀번호찾기</a></div>
+        </li>
+    </ul>
+    <div class="login-area__join">
+        <p class="login-area__join-txt">지금 회원가입하면 할인쿠폰 즉시 지급!</p>
+        <a href="" class="login-area__btn-minda"><span class="icon_internal minda"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5774 -6455 20 12.098"><g transform="translate(-5806 -6917)"><g transform="translate(44.358 467.594)"><path class="login__svg-minda" d="M39.854,20.907,38,19.054,39.821,17.2l1.854,1.854Z" transform="translate(-38 -17.2)"/></g><path class="login__svg-minda" d="M20,12.1H17.171V6.244l-2.862-2.6-2.894,2.6V12.1H8.585V6.244l-2.894-2.6-2.862,2.6V12.1H0V4.943L5.691,0l4.325,3.707L14.309,0,20,4.943Z" transform="translate(32 462)"/></g></svg></span>민다 회원가입</a>
+    </div>
+    <ul class="btn-external">
+        <li><a href="javascript:AppInvokeNVLogin('1.0.0');" class="btn_external_naver"><span class="icon_external naver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5774 -6367 20 17.686"><g transform="translate(-5607.151 -6156.41)"><g transform="translate(-291 -350)"><path class="login__svg-naver" d="M124.151,139.41h6.958s6.32,9.547,6.507,9.8.213,0,.213,0a16.65,16.65,0,0,1-.608-4.5v-5.3h6.929V157.1h-6.929s-6.191-9.037-6.377-9.287-.212,0-.212,0a11.829,11.829,0,0,1,.449,3.541V157.1h-6.93V139.41Z"/></g></g></svg></span>네이버 아이디로 로그인</a></li>
+        <li><a href="javascript:AppInvokeFBLogin('1.0.0');" class="btn_external_fb"><span class="icon_external fb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5774 -6298 20 20"><g transform="translate(-5774 -6298)"><path class="login__svg-fb-bg" d="M20,18.75A1.25,1.25,0,0,1,18.75,20H1.25A1.25,1.25,0,0,1,0,18.75V1.25A1.25,1.25,0,0,1,1.25,0h17.5A1.25,1.25,0,0,1,20,1.25Z"/><path class="login__svg-fb-f" d="M18.625,21.875v-7.5h2.5l.625-3.125H18.625V10A1.658,1.658,0,0,1,20.5,8.125h1.25V5h-2.5c-2.3,0-3.75,1.8-3.75,4.375V11.25H13v3.125h2.5v7.5Z" transform="translate(-4.875 -1.875)"/></g></svg></span>페이스북 계정으로 로그인</a></li>
+    </ul>
+</div>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

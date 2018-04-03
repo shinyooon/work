@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> MINDA :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="header">
+			<h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1">
+						<a href="javascript:showNationList('#category_001');">숙소 </a>
+					</li>
+					<li class="i4"><a href="">트립</a></li>
+					<li class="i2"><a href="">정보 </a></li>
+					<li class="i5"><!-- 티켓패스 개편완료 후 링크 변경/ticketpass/ticketpass_list.php -->
+						<a href="">티켓/상품<!--2016-12-14수정 --></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<!-- <li><a href="/ticketpass/ticketpass_list.php" >티켓/패스</a></li> -->
+								<li><a href="">융프라우 할인권</a></li>
+								<li><a href="">유레일패스</a></li>
+								<li><a href="" class="active">여행자 보험</a></li>
+								<li><a href="">포켓 와이파이</a></li>
+								<li><a href="">공연/티켓</a></li>
+								<li><a href="">유럽기차</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="hd-r">
+				<div class="util">
+
+					<div id="div_login_btn" class="util">
+						<a href=""> 로그인</a>
+						<a href="">회원가입</a>
+					</div>
+					<div id="div_top_user_menu" style="display:none">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org" id="top_user_name"></span>님 <img id="top_user_profile_img" src="/cust/img/admin_profile_none.png" alt="" onerror="this.src='/cust/img/admin_profile_none.png'"></a>
+							<ul class="dropdown-menu">
+								<li><a href="">마이민다</a></li>
+								<li><a href="">숙소 예약 내역</a></li>
+								<li><a href="">트립 예약내역</a></li>
+								<li><a href="">저장 목록</a></li>
+								<li><a href="">정보 수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+						<div class="dep2">
+							<strong class="sr-only">마이민다</strong>
+							<ul class="clearfix">
+								<li><a href="">마이민다</a></li>
+								<li><a href="">숙소 예약 내역</a></li>
+								<li><a href="">트립 예약내역</a></li>
+								<!-- <li><a href="/mypage/booking_tour.php" >트립 예약내역</a></li> -->
+								<li><a href="">저장 목록</a></li>
+								<li><a href="">정보 수정</a></li>
+								<li><a href="">나의 활동</a></li>
+								<li><a href="">포인트/캐쉬/쿠폰</a></li>
+								<li><a href="">유레일패스 예약</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href="">커뮤니티</a><!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티</a></li>
+								<li><a href="">구인·구직</a></li>
+								<li><a href="">사고·팔고</a></li>
+								<li><a href="">톡톡 릴레이</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href="">할인&amp;이벤트</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">땡처리 할인</a></li>
+								<li><a href="">비수기 할인</a></li>
+								<li><a href="">숙소 쿠폰</a></li>
+								<li><a href="">민다 이벤트</a></li>
+								<li><a href="">숙소 이벤트</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 상단 검색창은 아이콘 클릭으로만 검색이 작동해야 합니다.페이지 하단에 생길수 있는 다른 페이지의 폼입력과 구분이 되지 않을수 있기 때문에 -->
+				<form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+					<input type="hidden" name="part" value="keyword_search">
+					<!-- 전달되는 키워드는 구분자('__SP__')로 구분 하여 전달 -->
+					<input type="hidden" name="keywords" id="keywords" value="">
+					<input type="hidden" name="country">
+					<input type="hidden" name="city">
+					<input type="hidden" name="unit">
+					<!-- <button type="button" class="icon_srch_gnb">검색</button> -->
+					<!-- <div class="silde-wrap"> -->
+					<div class="input-group">
+                            <span class="btn-wrap">
+                                <button type="button" id="city_search_btn" class="icon_srch_grey">검색</button>
+                            </span>
+						<span class="input-wrap">
+                                <input type="text" name="keyword" id="keyword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="검색어를 입력하세요." title="검색어 입력" autocomplete="off" style="ime-mode:active;">
+                            </span>
+						<span class="close-btn-wrap">
+                                <button type="button" class="icon_date_close" style="display: none;">검색 취소</button>
+                            </span>
+						<!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+					</div>
+					<!-- </div> -->
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->>
+
+	<!-- #container -->
+	<div id="container">
+
+		<!-- 페이지시작 -->
+		<div class="content w1100">
+			<!-- 방 상단정보 -->
+			<div class="room_detail_hd">
+				<div class="room_detail_top clearfix">
+					<div class="tmbwrp"><img src="/cust/img/admin_profile_none.png" alt=""><span class="badge badge_star">즐겨찾기</span></div>
+					<div class="room_txt">
+						<h2><i class="icon_rightoff">즉시예약가능</i>로마 자고가 하우스(Jagoga House)</h2>
+						<div class="roominfo row">
+							<p class="col-xs-6 pr15"><span class="roominfo_text">저희 숙소는 에펠탑이 보이는 멋진 숙소입니다.</span></p>
+							<div class="col-xs-6 text-right label_lst_wrp">
+								<strong class="fw400">제공중인 서비스</strong>
+								<div class="label_lst clearfix d_iblock">
+									<a href="" class="label_room">숙소</a>
+									<a href="" class="label_spot">스팟</a>
+									<a href="" class="label_cal">일정</a>
+									<a href="" class="label_tour">투어</a>
+									<a href="" class="label_ticket">티켓/패스</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 탭 -->
+				<!-- 여행정보 개선 수정 -->
+				<ul class="basic_step2 tb_fixed">
+					<li><a href="">스팟</a></li>
+					<li class="active"><a href="">일정</a></li>
+				</ul>
+				<!--// 여행정보 개선 수정 -->
+			</div>
+			<!-- 사장님이 추천하는 여행정보 -->
+			<div class="master_recommend">
+				<!-- 여행정보 개선 수정 -->
+				<!-- 탭 -->
+				<!-- <ul class="basic_step2 tb_fixed">
+                    <li><a href="">스팟</a></li>
+                    <li class="active"><a href="">일정</a></li>
+                    <li><a href="">투어</a></li>
+                    <li><a href="">티켓/패스</a></li>
+                </ul> -->
+				<!--// 여행정보 개선 수정 -->
+				<!-- 스팟 -->
+				<section class="recommend_bx">
+					<div class="result_hd clearfix">
+						<h3 class="sub_title d_iblock">일정</h3>
+					</div>
+					<!-- 검색, 필터 -->
+					<div class="filterwrp row">
+						<div class="col-sm-8 form-inline">
+							<select class="form-control w140">
+								<option>저장순</option>
+							</select>
+						</div>
+						<div class="col-sm-4">
+							<form class="input-group">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+							<button class="btn bg_light_grey" type="submit"><i class="icon_srch_grey_sm">검색</i></button>
+						</span>
+							</form>
+						</div>
+					</div>
+					<ul class="row discount_room_lst spot_lst">
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										리뷰를 작성해보세요.
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										리뷰를 작성해보세요.
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(100)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-4">
+							<a href="">
+								<div class="tmb pr">
+									<img src="_temp/tmb4.jpg" alt="">
+									<div class="label_bx">
+										<span class="circle_label sm bg_org_opa">신규</span>
+										<span class="circle_label sm bg_ylw_opa">인기</span>
+									</div>
+								</div>
+								<div class="room_info">
+									<div class="meta"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(2)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk fs18">이탈리아 밀라노</strong>
+								</div>
+								<!-- 저장되면 class="active" -->
+								<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+								<div class="clearfix btm_info">
+									<!-- 여행정보 개선 수정 -->
+									<div class="meta pull-left">
+										<span class="name"><span class="color_mint ellipsis">로마 자고가 하우스(Jagoga House)</span>의 추천 일정</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(2)</span>
+									</div>
+									<!--// 여행정보 개선 수정 -->
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!-- 페이징 -->
+					<nav class="mb60 text-center">
+						<ul class="pagination clearfix">
+							<li class="prev"><a href="">이전페이지목록보기</a></li>
+							<li><a href="">1</a></li>
+							<li><a href="" class="active">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li class="next"><a href="">다음페이지목록보기</a></li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+		</div>
+
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh">information</strong>
+				<div class="ft_info_txt">
+					<span>㈜민다</span>
+					<span>대표 : 김윤희</span>
+					<span>사업자등록번호 : 101-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt">
+					<span>이메일 : help@theminda.com</span>
+					<span>고객센터 : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span>운영시간 : 평일 10시~12시/13시~18시(주말, 공휴일 휴무)</span>
+				</div>
+				<div class="ft_info_txt">
+					<address>서울특별시 중구 동호로15길 27 종하빌딩 A동 5층</address>
+				</div>
+				<div class="footer__right__top">
+					<ul class="footer__partner-list">
+						<li class="footer__partner-item bar"><a href="" class="footer__partner-link">숙소/트립 파트너 홈</a></li>
+						<li class="footer__partner-item"><a href="" class="footer__partner-link">여행사 예약관리 홈</a></li>
+					</ul>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+						<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+						<li><a href="" class="btn">고객센터 문의</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="" target="_blank">회사소개</a></li>
+					<li><a href="" target="_blank">파트너 가입</a></li>
+					<li><a href="">취소환불규정</a></li>
+					<li><a href="">고객센터</a></li>
+					<li class="bar"><a href="">공지사항</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">사업자정보확인</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright? Minda Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+<!-- 팝업 -->
+
+<!-- 달력팝업 -->
+<div id="popCalender" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog calender-pop">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<header class="cal_pophd">
+			<span class="mr10">도미토리</span><b>남성 전용 도미토리룸</b>
+			<select class="form-control" title="인원선택">
+				<option value="2">2인</option>
+				<option value="3">3인</option>
+				<option value="4">4인</option>
+				<option value="5">5인</option>
+			</select>
+			<span>총 숙박요금 : <b>25,000원</b></span>
+		</header>
+		<!-- 달력 -->
+		<div class="room_calendar daterangepicker">
+			<div class="calendar-table">
+				<table>
+					<thead>
+					<tr>
+						<th colspan="7" class="month">
+							<span class="prev"><i class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></i></span>
+							<span class="select_month">
+									<span class="yy">2016</span>년 <span class="mm">02</span>월
+								</span>
+							<span class="next"><i class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></i></span>
+						</th>
+					</tr>
+					<tr class="day">
+						<th scope="col">SUN</th>
+						<th scope="col">MON</th>
+						<th scope="col">TUE</th>
+						<th scope="col">WED</th>
+						<th scope="col">THU</th>
+						<th scope="col">FRI</th>
+						<th scope="col">SAT</th>
+					</tr>
+					</thead>
+					<!-- [D] 0503 수정사항 -->
+					<tbody>
+					<tr>
+						<td class="disabled"></td>
+						<td class="disabled"></td>
+						<td class="disabled"></td>
+						<td class="disabled"></td>
+						<td class="disabled"></td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">1</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">2</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">3</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">4</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">5</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">6</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<!-- today -->
+						<td class="today">
+							<div class="td_wrp">
+								<span class="date">7</span>
+								<!-- 할인이 있는 경우 -->
+								<div class="origin_price">€ 300</div>
+								<div class="price color_org">€ 275</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">8</span>
+								<!-- 예약가능한침대수라벨 -->
+								<div class="room" title="예약가능침대 수량"><span class="current color_mint">3</span> / <span class="total">5</span></div>
+								<!-- 할인이 있는 경우 -->
+								<div class="origin_price">€ 300</div>
+								<div class="price color_org">€ 275</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">2</span>
+								<!-- 할인이 있는 경우 -->
+								<div class="origin_price">€ 300</div>
+								<div class="price color_org">€ 275</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="td_wrp">
+								<span class="date">10</span>
+								<!-- 할인이 있는 경우 -->
+								<div class="origin_price">€ 300</div>
+								<div class="price color_org">€ 275</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">11</span>
+								<!-- 할인이 있는 경우 -->
+								<div class="origin_price">€ 300</div>
+								<div class="price color_org">€ 275</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">12</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">13</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">14</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">15</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">16</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<!-- 예약불가 -->
+						<td class="impossible" title="예약불가">
+							<div class="td_wrp">
+								<span class="date">17</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<!-- 예약불가 -->
+						<td class="impossible" title="예약불가">
+							<div class="td_wrp">
+								<span class="date">18</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<!-- 선택 : 처음 --><!-- 예약불가 -->
+						<td class="impossible select select_first" title="숙박 시작일">
+							<div class="td_wrp">
+								<span class="date">19</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<!-- 예약불가 -->
+						<td class="impossible select">
+							<div class="td_wrp">
+								<span class="date">20</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<!-- 예약불가 -->
+						<td class="impossible select">
+							<div class="td_wrp">
+								<span class="date">21</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<!-- 선택 : 마지막 -->
+						<td class="select select_last" title="숙박 종료일">
+							<div class="td_wrp">
+								<span class="date">22</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">23</span>
+								<div class="price">€3,000,000</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="td_wrp">
+								<span class="date">24</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">25</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">26</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">27</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td>
+							<div class="td_wrp">
+								<span class="date">28</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">29</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+						<td class="disabled">
+							<div class="td_wrp">
+								<span class="date">30</span>
+								<div class="price">€ 300</div>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+					<!-- // 0503 수정사항 -->
+				</table>
+			</div>
+			<img src="img/info.jpg" alt="" />
+		</div>
+		<!-- //달력 -->
+	</div>
+</div>
+
+<!-- couponPop -->
+<div id="couponPop" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog coupon-pop alert-pop">
+		<div class="coupon_bx">
+			<strong class="hd_tit">로마 자고가하우스 </strong>
+			<div class="coupon_info_txt">
+				<strong>바토무슈 티켓 25%(5박 미만시)</strong>
+				<dl>
+					<dt class="sr-only">사용가능기간</dt>
+					<dd>2016.02.11 ~ 2017. 02.28</dd>
+				</dl>
+			</div>
+		</div>
+		<p>쿠폰이 발급 되었습니다.</p>
+		<p><span class="color_org">마이페이지 &gt; 나의 포인트 &gt; 쿠폰</span> 에서 확인하실 수 있습니다.</p>
+	</div>
+</div>
+
+
+
+<!-- 객실상세보기 -->
+<div id="roomDetail" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog room-detail">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<h1>객실상세보기</h1>
+		<div class="content">
+			<div class="media">
+				<span class="media-left"><img src="_temp/room.png" alt=""></span>
+				<div class="media-body media-middle room_detail_check">
+					<span class="color_org">도미토리</span>
+					<strong>남성전용도미토리룸</strong>
+					<dl class="split">
+						<dt>객실정원 : </dt>
+						<dd>1~5명</dd>
+						<dt>최소예약 : </dt>
+						<dd>2박이상</dd>
+					</dl>
+					<dl class="ellipsis">
+						<dt>시설 : </dt>
+						<dd>컴퓨터, TV, 에어컨, 냉장고, 테이블</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="detail_pic_wrp slider_bx">
+				<ul class="room_detail_slider">
+					<li><img class="img-responsive" src="img/slide.jpg" alt=""></li>
+					<li><img class="img-responsive" src="img/slide.jpg" alt=""></li>
+					<li><img class="img-responsive" src="img/slide.jpg" alt=""></li>
+				</ul>
+			</div>
+			<ul class="lst_type_dot mt20">
+				<li>2층침대 4개</li>
+				<li>싱글침대 2개</li>
+				<li>WIFI가능</li>
+			</ul>
+			<p>(성수기/비수기에 따라 침대 구성은 유동적이며 사진은 곧 업데이트 될 예정입니다.)</p>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

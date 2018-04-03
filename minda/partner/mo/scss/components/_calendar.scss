@@ -1,0 +1,178 @@
+@charset "UTF-8";
+.sr-only{
+	display:block;
+	@include sr-only();
+}
+
+/* daterange picker */
+.comiseo-daterangepicker {
+	position: static!important;
+	display: block!important
+}
+.ui-datepicker-calendar {
+	color: #fff
+}
+
+.ui-datepicker-calendar>thead {
+	display: none
+}
+
+.ui-datepicker-calendar a {
+	color: #333
+}
+
+.ui-datepicker-multi .ui-datepicker-group {
+	float: none
+}
+
+.ui-datepicker.ui-datepicker-multi {
+	width: 100% !important
+}
+
+.comiseo-daterangepicker-calendar {
+	display: block;
+	color: $color__blk;
+}
+
+.ui-datepicker td {
+	padding: 5px 0;
+}
+
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+	border-collapse: collapse
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-calendar {
+	border: 0;
+	padding: 0
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+	padding: 8px 0;
+	text-align: center;
+	display: block
+}
+
+.comiseo-daterangepicker-calendar .ui-state-highlight a.ui-state-default {
+	background-color: $color__primary;
+	color: $color__wh
+}
+
+.comiseo-daterangepicker-calendar .start-date a {
+	border-radius: 20px 0 0 20px
+}
+
+.comiseo-daterangepicker-calendar .end-date a {
+	border-radius: 0 20px 20px 0
+}
+
+.comiseo-daterangepicker-calendar .end-date.start-date a {
+	border-radius: 20px
+}
+
+.comiseo-daterangepicker-calendar .ui-state-disabled * {
+	color: $color__blk;
+	@include opacity(0.5);
+}
+
+;
+.comiseo-daterangepicker-presets {
+	display: none
+}
+
+.ui-datepicker-prev {
+	display: none
+}
+
+.ui-datepicker-next {
+	display: none
+}
+
+.ui-datepicker-title {
+	text-align: right;
+	padding: 0 20px;
+	font-weight: 300;
+	color:$color__ccc;
+	padding:22px 20px 12px 0;
+}
+
+.ui-datepicker-month {
+	float: right;
+	margin-left: 4px
+}
+
+.date-srch-wrap {}
+
+.date-srch-wrap .calendar-head {
+	background-color: $color__f9f9f9;
+	font-weight: 300;
+	padding: 13px 0;
+	border-top:1px solid #f3f3f3;
+}
+.calendar-haed__list{
+	@include d-flex();
+	li{
+		@include flex();
+		text-align:center;
+		color:$color__blk;
+		font-weight:fw__500;
+	}
+}
+
+.panel-cal__input-area{
+	height:80px;
+	padding:0 20px;
+	background-color:$color__f9f9f9;
+	.input-wrap{
+		border-width:0;
+		input{
+			@include text($color__blk,em(20px));
+			padding:0;
+		}
+		.panel-cal__input-txt2 {
+			text-align: right;
+			padding-right:30px;
+			&+.input-wrap__btn-del{
+				display:block !important;
+				right:0;
+			}
+		}
+	}
+}
+.ui-datepicker-week-end{
+	&:first-child{
+		color:$color__red;
+		a{
+			color:$color__red;
+		}
+	}
+	&:last-child{
+		color:#4db4f6;
+		a{
+			color:#4db4f6;
+		}
+	}
+}
+.ui-datepicker-calendar{
+	tr:last-child{
+		.ui-datepicker-other-month{
+			display:none;
+		}
+	}
+}
+.panel-cal__input-area{
+	.input-group__mid{
+		&:before{
+			content: '';
+			display:inline-block;
+			width:10px;
+			height:2px;
+			@include border-radius(1px);
+			background-color:$color__blk;
+		}
+	}
+}

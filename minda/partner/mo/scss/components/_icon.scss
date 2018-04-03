@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* spr_icon_cm.png */
+.fnb__icon,.input-wrap__btn-del,.rev__icon-filter,.pagination__icon-prev,.pagination__icon-next,.more__icon-switch,.more__icon-logout,.notice__icon-star{
+	@include sr-only(true);
+	display:inline-block;
+	background-image:url(#{$path}/img/icon/spr_icon_cm.png?v=#{$img_version});
+	background-size:110px auto;
+}
+
+/* spr_icon_main.png */
+.main__icon{
+	background-image:url(#{$path}/img/icon/spr_icon_main.png?v=#{$img_version});
+	background-size:432px auto;
+}
+
+.input-wrap__chk input:checked + label:before,.input-wrap__select:after, .rev__detail__acc:after{
+	background-image:url(#{$path}/img/icon/spr_icon_bullet.png?v=#{$img_version});
+	background-size:13px auto;
+}
+
+.fnb__icon{
+	@include icon-spr(22px,20px,0,0);
+	display:block;
+	margin:0 auto;
+	$i : 0;
+	@while $i<6{
+		&.fnb__icon--#{$i+1}{
+			background-position: -22*$i+px 0
+		}
+		$i : $i+1;
+	}
+}
+.is-active{
+	.fnb__icon{
+		background-position-y : -20px;
+	}
+}
+.main__icon{
+	@include icon-spr(72px,61px,0,0);
+	display:block;
+	margin:0 auto;
+	$i : 0;
+	@while $i<6{
+		&.main__icon--#{$i+1}{
+			background-position: -72*$i+px 0
+		}
+		$i : $i+1;
+	}
+}

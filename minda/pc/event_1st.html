@@ -1,0 +1,69 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header.html" ?>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- <span class="sub_bg"></span> -->
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <? include "inc/event_top.html" ?>
+            <!-- 이벤트 내용 시작 -->
+            <div style="margin: 0px auto; position: relative; max-width: 1080px;">
+                <img src="/event/img/201712/1st/img.jpg" alt="">
+                <h1 class="sr-only">KCAI 한국소비자평가1위 축하 퀴즈 이벤트</h1>
+                <p class="sr-only">2017 KCAI 한국소비자평가에서 민다가 1위로 선정된 부문은 무엇일까요?</p>
+                <p class="sr-only">정답을 페이지 하단에 댓글로 남겨주시면, 추첨을 통해 선물을 드립니다</p>
+                <p class="sr-only">ㅎ ㅇ ㅇ ㅎ 부문</p>
+                <dl class="sr-only">
+                    <dt>이벤트기간</dt>
+                    <dd>2017년 12월 20일(수) ~ 12월 29일(금)</dd>
+                    <dt>당첨자 발표</dt>
+                    <dd>2018년 01월 04일(목)</dd>
+                    <dt>경품 발송일</dt>
+                    <dd>2018년 01월 08일(월)</dd>
+                    <dt>이벤트 경품</dt>
+                    <dd>민다 벽걸이 시계 (5명)</dd>
+                    <dd>민다 벽걸이 시계 (5명)</dd>
+                </dl>
+                <a href="http://www.theminda.com/community/view.php?id=notice&no=477"
+                   onclick="ga('send','event','event_page_button','click','button_event_kcai_1st')"
+                   style="display: block; width: 54%; height: 2.3%; position: absolute; top: 73.2%; left: 24.5%;"><span
+                    class="sr-only">정답 힌트 보러 가기</span></a>
+                <p class="sr-only">페이지 상단의 공유하기를 통해 민다의 1위 선정 소식을 널리널리 소문내주세요!</p>
+                <dl class="sr-only">
+                    <dt>이벤트 참여 전 꼭 확인해주세요!</dt>
+                    <dd>이벤트 페이지에 댓글을 남겨주셔야 이벤트 참여가 완료됩니다.</dd>
+                    <dd>당첨자 안내는 당첨자 발표일에 회원가입 시 기입하신 연락처로 안내됩니다.</dd>
+                    <dd>경품발송은 가입하신 회원 주소 및 연락처로 발송됩니다.</dd>
+                    <dd>회원가입 시 주소 및 연락처가 상이할 경우, 당첨이 취소됩니다.</dd>
+                    <dd>경품은 현금 및 다른 경품으로 교환되거나 환불되지 않으며, 유효 기간 연장 불가 및 타인에게 양도할 수 없습니다.</dd>
+                </dl>
+            </div>
+            <script type="text/javascript"> $(function() {
+                var href = '';
+                var filter = 'win16|win32|win64|mac';
+                $('.event__usim-link').click(function(e) {
+                    href = $(this).attr('href');
+                    if (navigator.platform) {
+                        if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {/*Mobile*/} else {/*PC*/
+                            e.preventDefault();
+                            AppInvokeOpenNewPage(href, 'y', 'y');
+                        }
+                    }
+                });
+            });</script>
+            <!-- 이벤트 내용 끝 -->
+            <? include "inc/event_bottom.html" ?>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<? include "inc/bottom.html" ?>

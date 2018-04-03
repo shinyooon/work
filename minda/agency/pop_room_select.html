@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<? include "inc/rev_form.html" ?>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- ly -->
+	<div class="ly full fade ly-rev">
+		<!-- ly__wrap -->
+		<div class="ly__wrap">
+			<!-- ly__header -->
+			<div class="ly__header">
+				<div class="tit-wrap">
+					<h1>숙소선택</h1>
+				</div>
+				<button type="button" class="ly__header__btn modal__btn-clse">
+					<span class="ly__header__icon">닫기</span>
+				</button>
+			</div>
+			<!-- ly__con -->
+			<div class="ly__con">
+				<div class="ly__half ly__half__left">
+					<button type="button" class="half-btn half-btn">
+						<span class="half-btn__chk"></span>
+						<span class="half-btn__icon half-btn__icon--1"></span>
+						<span class="half-btn__name">직접 예약하기</span>
+						<span class="half-btn__txt">원하시는 숙소에 직접 예약신청을 하실 수 있습니다. </span>
+					</button>
+				</div>
+				<div class="ly__half ly__half__right">
+					<button type="button" class="half-btn">
+						<span class="half-btn__chk"></span>
+						<span class="half-btn__icon half-btn__icon--2"></span>
+						<span class="half-btn__name">민다 추천받기</span>
+						<span class="half-btn__txt">원하시는 일정을 입력하시면 민다에서 해당 일정에 맞는 숙소를 추천해드립니다.</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>]
+<!--[if lt IE 9]>
+<script  src="js/jquery.placeholder.js"></script>
+<script  src="js/html5.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('input, textarea').placeholder();
+	})
+</script>
+<![endif]-->
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/Layer.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		lnbCtrl.active(0);
+		var ly_rev = new Layer($('.ly-rev'));
+		ly_rev.open();
+	})
+</script>
+</body>
+</html>

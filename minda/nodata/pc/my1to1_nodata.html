@@ -1,0 +1,2061 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<link rel="shortcut icon" href="/img/i_minda_logo.ico">
+	<title>나의 리뷰 - 민다</title>
+	<link rel="image_src" href="http://v2.theminda.com/cust/img/minda_logo.png">
+	<link rel="canonical" href="http://v2.theminda.com/mypage/my_rate.php">
+	<!-- 페이스북 메타테그  -->
+	<meta property="og:title" content="나의 리뷰 - 민다">
+	<meta property="og:site_name" content="theminda">
+	<meta property="og:image" content="http://v2.theminda.com/cust/img/minda_logo.png">
+	<meta property="og:description" content="내가 작성한 숙소리뷰를 확인할 수 있어요.">
+	<meta property="og:url" content="http://v2.theminda.com/mypage/my_rate.php">
+	<meta property="og:image:width" content="467">
+	<meta property="og:image:height" content="267">
+
+	<!-- 트위터 메타태그 개별설정 -->
+	<meta name="twitter:card" content="photo">
+	<meta name="twitter:title" content="나의 리뷰 - 민다">
+	<meta name="twitter:image" content="http://v2.theminda.com/cust/img/minda_logo.png">
+	<meta name="twitter:description" content="내가 작성한 숙소리뷰를 확인할 수 있어요.">
+	<meta name="twitter:url" content="http://v2.theminda.com/mypage/my_rate.php">
+
+	<!-- 공통 메타태그 설정 -->
+	<meta property="og:type" content="website">
+	<meta name="description" content="내가 작성한 숙소리뷰를 확인할 수 있어요.">
+
+	<!-- 트위터 공통 메타태그 설정 -->
+	<meta name="twitter:site" content="@Minda">
+	<meta name="twitter:app:name:iphone" content="Minda">
+	<meta name="twitter:app:name:ipad" content="Minda">
+	<meta name="twitter:app:name:googleplay" content="Minda">
+	<meta name="twitter:app:id:iphone" content="965630569">
+	<meta name="twitter:app:id:ipad" content="965630569">
+	<meta name="twitter:app:id:googleplay" content="com.anymobi.samak.minbakdanawa">
+	<meta name="twitter:app:url:iphone" content="minbakdanawa">
+	<meta name="twitter:app:url:ipad" content="minbakdanawa">
+	<meta name="twitter:app:url:googleplay" content="minbakdanawa">
+
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/slider.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/common.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/animate.css?v=201711063">
+	<link rel="stylesheet" href="/cust/css/common.dev.css?v=201711063">
+
+
+
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+        //한인숙소 선택 레이어창보이기
+        function showNationList(target) {
+            $(target).click();
+            $('#lodgingList').modal();
+        }
+
+        //네비게이션 표시 관련
+        $(function () {
+            $lnb = $('.util.active'),
+                $util = $('.userbx');
+            $util.on('focusin',function  () {
+                $(this).addClass('open');
+            });
+            srchControl ();
+        })
+
+
+        function srchControl() {
+            var $serchInput = $('.srch_wrp .form-control');
+            var $this
+            $('.srch_wrp > .icon_srch_gnb').click(function(){
+                $(this).next('.silde-wrap').show();
+                $(this).next('.silde-wrap').stop().animate({width: "320px"},300,function(){
+                    $serchInput.focus();
+                });
+            })
+            $('.srch_wrp .icon_date_close').click(function(){
+                $serchInput.val('');
+                // $(this).closest('.silde-wrap').stop().animate({width: 0},300,function(){
+                // 	$(this).closest('.silde-wrap').hide();
+
+                // });
+            })
+            $serchInput.keyup(function(){
+                $this = $(this);
+                if($this.val().length>0){
+                    $this.next('.web_automatic').show();
+                }else{
+                    $this.next('.web_automatic').hide();
+                }
+            })
+        }
+	</script>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                                                                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1809516562603244');
+        fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+				   src="https://www.facebook.com/tr?id=1809516562603244&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+<!-- wrap.screenID -->
+<div id="wrap" class='page_tb'>
+	<!-- header -->
+	<header id="hd">
+		<div style="position:absolute;top:0;left:0"><span style="background-color:#f00;color:#fff">관리자모드</span></div>
+		<div class="header">
+			<h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<!-- <h1 class="logo"><a href="/"><img src="/cust/img/logo_big_2017.png" alt="" style="margin-top:-2px"><span class="sr-only">MINDA</span></a></h1> -->
+			<!-- 2016-12-28 eidt-->
+			<!-- 메뉴별 Activate 시키는 방식은 정해야 함 -->
+
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1">
+						<a href="javascript:showNationList('#category_001');" >숙소 </a>
+					</li>
+					<li class="i4"><a href="/tg/index.php">트립</a></li>
+					<li class="i2"><a href="/main/info.php" >정보 </a></li>
+					<li class="i5"><!-- 티켓패스 개편완료 후 링크 변경/ticketpass/ticketpass_list.php -->
+						<a href="/ticketpass/index.php" >티켓/상품<!--2016-12-14수정 --></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<!-- <li><a href="/ticketpass/ticketpass_list.php" >티켓/패스</a></li> -->
+								<li><a href="/ticketpass/jungfrau.php" >융프라우 할인권</a></li>
+								<li><a href="/ticketpass/eurail_event.php" >유레일패스</a></li>
+								<li><a href="/ticketpass/eurail_reservation.php" >유럽기차</a></li>
+								<li><a href="/ticketpass/insurance_calc.php" >여행자 보험</a></li>
+								<li><a href="/ticketpass/pocketwifi.php" >포켓 와이파이</a></li>
+								<li><a href="/ticketpass/ticket.php" >공연/티켓</a></li>
+								<li><a href="/ticketpass/rentcar.php" class="active">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="hd-r">
+				<div class="util active">
+
+					<div id="div_top_user_menu"  >
+						<div class="userbx">
+							<a href="/mypage/mypage_home.php" class="user"><span class="color_org" id="top_user_name">testaaaa</span>님 <img id="top_user_profile_img" src="" alt="" onerror="this.src='/cust/img/admin_profile_none.png'" ></a>
+							<ul class="dropdown-menu">
+								<li><a href="/mypage/mypage_home.php">마이민다</a></li>
+								<li><a href="/mypage/my_reservation.php">숙소 예약 내역</a></li>
+								<li><a href="/mypage/my_tg_reserve.php">트립 예약 내역</a></li>
+								<li><a href="/mypage/guidebook.php">저장 목록</a></li>
+								<li><a href="/mypage/my_modify.php">정보 수정</a></li>
+								<li><a href="/member/logout.php">로그아웃</a></li>
+							</ul>
+						</div>
+						<div class="dep2">
+							<strong class="sr-only">마이민다</strong>
+							<ul class="clearfix">
+								<li><a href="/mypage/mypage_home.php" >마이민다</a></li>
+								<li><a href="/mypage/my_reservation.php" >숙소 예약 내역</a></li>
+								<li><a href="/mypage/my_tg_reserve.php" >트립 예약 내역</a></li>
+								<!-- <li><a href="/mypage/booking_tour.php" >트립 예약 내역</a></li> -->
+								<li><a href="/mypage/guidebook.php" >저장 목록</a></li>
+								<li><a href="/mypage/my_modify.php" >정보 수정</a></li>
+								<li><a href="/mypage/my_rate.php" class="active">나의 활동</a></li>
+								<li><a href="/mypage/my_save.php" >포인트/캐쉬/쿠폰</a></li>
+								<li><a href="/mypage/my_eurail_list.php">유레일패스 예약</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href="/community/index.php" >커뮤니티</a><!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="/community/index.php" >커뮤니티</a></li>
+								<li><a href="/community/list.php?id=jobs" >구인·구직</a></li>
+								<li><a href="/community/list.php?id=sale" >사고·팔고</a></li>
+								<li><a href="/community/list.php?id=comment" >톡톡 릴레이</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href="/main/sale_tab1.php" >할인&amp;이벤트</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="/main/sale_tab1.php" >땡처리 할인</a></li>
+								<li><a href="/main/sale_tab3.php" >비수기 할인</a></li>
+								<li><a href="/main/coupon_tab2.php"  >숙소 쿠폰</a></li>
+								<li><a href="/event/minda_event_list.php" >민다 이벤트</a></li>
+								<li><a href="/event/minbak_event_list.php" >숙소 이벤트</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 상단 검색창은 아이콘 클릭으로만 검색이 작동해야 합니다.페이지 하단에 생길수 있는 다른 페이지의 폼입력과 구분이 되지 않을수 있기 때문에 -->
+				<form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+					<input type="hidden" name="part" value="keyword_search">
+					<!-- 전달되는 키워드는 구분자('__SP__')로 구분 하여 전달 -->
+					<input type="hidden" name="keywords" id="keywords" value="">
+					<input type="hidden" name="country">
+					<input type="hidden" name="city">
+					<input type="hidden" name="unit">
+					<!-- <button type="button" class="icon_srch_gnb">검색</button> -->
+					<!-- <div class="silde-wrap"> -->
+					<div class="input-group">
+						<span class="btn-wrap">
+							<button type="button" id="city_search_btn" class="icon_srch_grey">검색</button>
+						</span>
+						<span class="input-wrap">
+							<input type="text" name="keyword" id="keyword" class="form-control"  value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="검색어를 입력하세요." title="검색어 입력"  autocomplete="off" style="ime-mode:active;" >
+						</span>
+						<span class="close-btn-wrap">
+							<button type="button" class="icon_date_close">검색 취소</button>
+						</span>
+						<!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+					</div>
+					<!-- </div> -->
+				</form>
+
+			</div>
+		</div>
+		<script>
+            // 검색창  입력 후 엔터키 입력 시 바로 적용가능하도록 처리
+            $("#keyword").keydown(function(e){
+                var code = e.which; // recommended to use e.which, it's normalized across browsers
+                if(code==13)e.preventDefault();
+                if(code==13){//엔터키를 입력했을때
+                    $("#city_search_btn").click();
+                } // missing closing if brace
+            });
+
+            $("#city_search_btn").click(function(){
+                if(!$("#keyword").val()){
+                    alert("검색어를 입력하여주세요.");
+                    $("#keyword").focus();
+                    return false;
+                }
+                fmSearchKeyMinbak();
+                /* 2016-09-19 검색대상은 통합 대상으로 변경됨. 따라서 도시 이름 유효성 검사는 하지 않음
+                $.ajax({
+                    type: "POST",
+                    url: "/cust/ajax/ajax.common.keyword.php",
+                    data: "part=main_valid&keyword="+ $("#keyword").val(),
+                    dataType: "TEXT",
+                    timeout: 1000,
+                    success: function(msg){
+                        if(msg=="fail"){
+                            alert("해당도시명이 존재 하지않습니다.");
+                            return false;
+                        }
+                        fmSearchKeyMinbak();
+                    }
+                    ,error: function(msg) {
+                        alert('서버와의 통신이 실패했습니다.');
+                    }
+                });
+                */
+            });
+
+            //서브밋 관련 추가  megacat[2016-05-31]
+            function fmSearchKeyMinbak(){
+                var f= document.fmSearchKeyMinbak;
+                var keyword = $("input[name=keyword]").val();
+                keyword = keyword.replace(/(^\s*)|(\s*$)/g, "");//2016-07-20 검색어 앞뒤의 공백을 제거한다
+
+                var keywords = new Array();
+                var keywords = keyword.split(' ');
+
+                var keywords_implode = "";
+                for(var i = 0 ; i < keywords.length ; i++){
+                    if(keywords[i].length>0){ //문자열길이가 1이상일때만 배열추가 2016-07-20
+                        if( i != 0 ) keywords_implode += "__SP__";
+                        keywords_implode +=  keywords[i];
+                    }
+
+                }
+                //$("#keywords").val(keywords_implode);
+                f.keywords.value=keywords_implode;
+                f.submit();
+            }
+            function showTopUserMenu(username,profile_img_url){
+                $("#top_user_name").text(username);
+                $("#top_user_profile_img").attr('src',profile_img_url);
+                $("#div_login_btn").hide();
+                $("#div_top_user_menu").show();
+            }
+
+		</script>
+	</header>
+	<!-- //header 끝 -->
+	<!-- pop_nation -->
+	<div id="lodgingList" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog lodging-list">
+			<button type="button" class="icon_pop_close2" data-dismiss="modal" aria-label="Close">닫기</button>
+			<nav class="top_tab">
+				<ul class="clearfix">
+					<li class="active"><a href="#europe1" id="category_001">서유럽</a></li>
+					<li><a href="#europe2" id="category_002">동북유럽</a></li>
+					<li><a href="#asia" id="category_003">아시아</a></li>
+					<li><a href="#americas" id="category_005">미주</a></li>
+					<li><a href="#pacific" id="category_007">남태평양</a></li>
+					<li><a href="#africa" id="category_008">아프리카</a></li>
+					<li><a href="#domestic" id="category_003019">국내</a></li>
+				</ul>
+			</nav>
+			<!-- 내용 -->
+			<!-- 유럽 -->
+			<div id="europe1" class="tab_cnt europe1">
+				<div class="division1">
+					<div class="v1 state_lst">
+
+						<strong class="tit">영국</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001001001">런던<span class="cnt">116</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001001002">에딘버러<span class="cnt">6</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001001005">맨체스터<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001001006">펜잔스<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001001004">옥스포드<span class="cnt">0</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">프랑스</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001002001">파리<span class="cnt">194</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002002">니스<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002016">칸<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002005">아비뇽<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002007">보르도<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002015">콜마르<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002013">클레르몽 페랑<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001002011">샤모니<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+
+						<strong class="tit">이탈리아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001003001">로마<span class="cnt">55</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003002">베네치아<span class="cnt">23</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003003">피렌체<span class="cnt">34</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003004">밀라노<span class="cnt">13</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003005">나폴리<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003006">볼로냐<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003017">크레모나<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003011">베로나<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003012">시라쿠사<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001003015">토리노<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">몰타</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001030001">그지라<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+
+						<strong class="tit">스위스</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001007002">인터라켄<span class="cnt">4</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001007001">루체른<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001007007">프리부르<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">오스트리아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001006001">비엔나<span class="cnt">7</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001006002">잘츠부르크<span class="cnt">3</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">벨기에</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001009001">브뤼셀<span class="cnt">6</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001009002">겐트<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v4 state_lst">
+
+						<strong class="tit">네덜란드</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001008001">암스테르담<span class="cnt">8</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+
+						<strong class="tit">스페인</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001004001">바르셀로나<span class="cnt">57</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004002">마드리드<span class="cnt">17</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004004">세비야<span class="cnt">4</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004003">그라나다<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004009">발렌시아<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004007">빌바오<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004012">산티아고 데 콤포스텔라<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004008">산탄데르<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001004014">무르시아<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">포르투갈</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001022001">리스본<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+
+						<strong class="tit">독일</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001005001">베를린<span class="cnt">11</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005003">뮌헨<span class="cnt">9</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005004">쾰른<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005002">프랑크푸르트<span class="cnt">7</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005005">뒤셀도르프<span class="cnt">8</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005008">뉘른베르크<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005009">함부르크<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005014">슈투트가르트<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005011">브레멘<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005013">프라이부르크<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005012">트리베르크<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001005017">미텐발트<span class="cnt">0</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<div id="europe2" class="tab_cnt europe2" style="display: none">
+				<div class="division1">
+					<div class="v1 state_lst">
+
+						<strong class="tit">체코</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001011001">프라하<span class="cnt">42</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001011002">체스키크룸로프<span class="cnt">1</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">헝가리</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001012001">부다페스트<span class="cnt">7</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">크로아티아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001018001">자그레브<span class="cnt">4</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001018002">두브로브니크<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001018003">스플리트<span class="cnt">1</span></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+
+						<strong class="tit">폴란드</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001013003">브로츠와프<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001013001">크라쿠프<span class="cnt">1</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">리투아니아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001017001">빌니우스<span class="cnt">1</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">우크라이나</strong>
+
+						<ul>
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+
+						<strong class="tit">스웨덴</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001019001">스톡홀름<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<!--
+                    <div class="v2 state_lst">
+
+                              <strong class="tit">덴마크</strong>
+
+                            <ul>
+
+                            </ul>
+
+                    </div>
+                    -->
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+
+						<strong class="tit">러시아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001021001">모스크바<span class="cnt">7</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001021002">상트페테르부르크<span class="cnt">7</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+
+						<strong class="tit">그리스</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001032001">아테네<span class="cnt">4</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">터키</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=001031001">이스탄불<span class="cnt">7</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001031002">카파도키아<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=001031008">마르마리스<span class="cnt">0</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- //유럽 -->
+
+			<!-- 아시아 -->
+			<div id="asia" class="tab_cnt asia" style="display: none">
+				<div class="division1">
+					<div class="v1 state_lst">
+
+						<strong class="tit">일본</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003002001">도쿄<span class="cnt">50</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002002">오사카<span class="cnt">83</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002006">교토<span class="cnt">4</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002004">고베<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002005">후쿠오카<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002003">삿포로<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002008">대마도<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002010">나라<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003002011">오키나와<span class="cnt">0</span></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+
+						<strong class="tit">중국</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003007002">북경<span class="cnt">7</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003007001">상해<span class="cnt">7</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003007004">청도<span class="cnt">4</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003007007">위해<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003007008">성도<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003007005">광저우<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003007009">연길<span class="cnt">1</span></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+
+						<strong class="tit">대만</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003015001">타이페이<span class="cnt">2</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">홍콩</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003004001">홍콩<span class="cnt">8</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">마카오</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003005001">마카오<span class="cnt">5</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">싱가폴</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003006001">싱가폴<span class="cnt">11</span></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+
+						<strong class="tit">태국</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003013001">방콕<span class="cnt">6</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">베트남</strong>
+
+						<ul>
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">라오스</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003021001">비엔티안<span class="cnt">2</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">캄보디아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003018001">씨엠립<span class="cnt">2</span></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+
+						<strong class="tit">인도</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003022001">뉴델리<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003022002">첸나이<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003022003">콜카타<span class="cnt">0</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">방글라데시</strong>
+
+						<ul>
+
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">필리핀</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003008001">마닐라<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003008003">세부<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003008004">타가이타이<span class="cnt">1</span></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="division6">
+					<div class="v1 state_lst">
+
+						<strong class="tit">말레이시아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003011001">쿠알라룸푸르<span class="cnt">5</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003011002">코타키나발루<span class="cnt">2</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v1 state_lst">
+
+						<strong class="tit">인도네시아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003014001">자카르타<span class="cnt">2</span></a></li>
+
+
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">이란</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003023001">테헤란<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v3 state_lst">
+
+						<strong class="tit">사우디아라비아</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003010001">리야드<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division7">
+					<div class="v1 state_lst">
+
+						<strong class="tit">아랍에미리트</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003016002">아부다비<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003016001">두바이<span class="cnt">6</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v2 state_lst">
+
+						<strong class="tit">카타르</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003009001">도하<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- //아시아 -->
+
+			<!-- 미주 -->
+			<div id="americas" class="tab_cnt americas" style="display: none">
+				<div class="division_wrap">
+					<strong class="bg_tit color_org">북미</strong>
+					<div class="division1">
+						<div class="v1 state_lst">
+
+							<strong class="tit">미국</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=005001001">뉴욕<span class="cnt">57</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001002">LA<span class="cnt">20</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001004">보스턴<span class="cnt">8</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001014">샌프란시스코<span class="cnt">7</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001008">워싱턴<span class="cnt">3</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001007">라스베가스<span class="cnt">4</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001015">필라델피아<span class="cnt">1</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001005">시카고<span class="cnt">2</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001013">하와이(호놀룰루)<span class="cnt">5</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001006">올랜도<span class="cnt">3</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001009">미네아폴리스<span class="cnt">1</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001019">하와이(마우이)<span class="cnt">0</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001023">애틀랜타<span class="cnt">0</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001022">포틀랜드<span class="cnt">0</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005001020">앵커리지<span class="cnt">0</span></a></li>
+
+
+							</ul>
+
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+
+							<strong class="tit">캐나다</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=005002002">토론토<span class="cnt">6</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005002001">밴쿠버<span class="cnt">4</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005002005">몬트리올<span class="cnt">4</span></a></li>
+
+
+								<li><a href="/main/list.php?category=005002008">옐로나이프<span class="cnt">1</span></a></li>
+
+
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<div class="division_wrap clearfix">
+					<strong class="bg_tit color_org">중남미</strong>
+					<div class="division1">
+						<div class="v1 state_lst">
+
+							<strong class="tit">브라질</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=006002001">상파울루<span class="cnt">2</span></a></li>
+
+
+							</ul>
+
+						</div>
+						<div class="v2 state_lst">
+
+							<strong class="tit">아르헨티나</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=006001001">부에노스 아이레스<span class="cnt">1</span></a></li>
+
+
+							</ul>
+
+						</div>
+						<div class="v3 state_lst">
+
+							<strong class="tit">칠레</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=006003001">산티아고<span class="cnt">3</span></a></li>
+
+
+							</ul>
+
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v2 state_lst">
+
+							<strong class="tit">온두라스</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=006005001">테구시갈파<span class="cnt">0</span></a></li>
+
+
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //미주 -->
+
+			<!-- 남태평양 -->
+			<div id="pacific" class="tab_cnt pacific" style="display: none">
+				<div class="division_wrap">
+					<div class="division1">
+						<div class="v1 state_lst">
+
+							<strong class="tit">괌</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=007004001">괌<span class="cnt">13</span></a></li>
+
+
+							</ul>
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+
+							<strong class="tit">사이판</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=007003001">사이판<span class="cnt">8</span></a></li>
+
+
+							</ul>
+						</div>
+					</div>
+					<div class="division3">
+						<div class="v1 state_lst">
+
+							<strong class="tit">호주</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=007001001">시드니<span class="cnt">16</span></a></li>
+
+
+								<li><a href="/main/list.php?category=007001002">골드코스트<span class="cnt">1</span></a></li>
+
+
+								<li><a href="/main/list.php?category=007001003">멜버른<span class="cnt">8</span></a></li>
+
+
+								<li><a href="/main/list.php?category=007001004">호바트<span class="cnt">1</span></a></li>
+
+
+							</ul>
+						</div>
+					</div>
+					<div class="division4">
+						<div class="v1 state_lst">
+
+							<strong class="tit">뉴질랜드</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=007002001">오클랜드<span class="cnt">4</span></a></li>
+
+
+								<li><a href="/main/list.php?category=007002002">크라이스트처치<span class="cnt">1</span></a></li>
+
+
+								<li><a href="/main/list.php?category=007002003">퀸스타운<span class="cnt">0</span></a></li>
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //남태평양 -->
+
+			<!-- 아프리카 -->
+			<div id="africa" class="tab_cnt africa" style="display: none">
+				<div class="division_wrap clearfix">
+					<div class="division1">
+						<div class="v1 state_lst">
+
+							<strong class="tit">남아공</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=008001001">케이프타운<span class="cnt">5</span></a></li>
+
+
+								<li><a href="/main/list.php?category=008001002">요하네스버그<span class="cnt">2</span></a></li>
+
+
+							</ul>
+
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+
+							<strong class="tit">케냐</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=008005001">나이로비<span class="cnt">1</span></a></li>
+
+
+							</ul>
+
+						</div>
+					</div>
+					<div class="division3">
+						<div class="v1 state_lst">
+
+							<strong class="tit">이집트</strong>
+
+							<ul>
+
+								<li><a href="/main/list.php?category=008006001">카이로<span class="cnt">3</span></a></li>
+
+
+							</ul>
+
+						</div>
+						<div class="v2 state_lst">
+
+							<strong class="tit">모로코</strong>
+
+							<ul>
+
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //아프리카 -->
+
+			<!-- 국내 -->
+			<!--
+    <div id="domestic" class="tab_cnt" style="display:none">
+        <div class="division1">
+            <ul class="tit state_lst">
+
+                        <li><a href="/main/list.php?category=003019001">서울<span class="cnt">110</span></a></li>
+
+
+
+                        <li><a href="/main/list.php?category=003019005">제주<span class="cnt">125</span></a></li>
+
+
+
+                        <li><a href="/main/list.php?category=003019003">부산<span class="cnt">45</span></a></li>
+
+
+
+                        <li><a href="/main/list.php?category=003019008">광주<span class="cnt">3</span></a></li>
+
+
+
+                        <li><a href="/main/list.php?category=003019011">인천<span class="cnt">3</span></a></li>
+
+
+            </ul>
+        </div>
+        <div class="division2">
+            <div class="v1 state_lst">
+
+                      <strong class="tit">서울&수도권</strong>
+
+                    <ul>
+
+                        <li><a href="/main/list.php?category=003019001">서울<span class="cnt">110</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019011">인천<span class="cnt">3</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019017">파주<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019023">용인<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019039">이천<span class="cnt">0</span></a></li>
+
+
+                    </ul>
+
+            </div>
+        </div>
+        <div class="division3">
+            <div class="v1 state_lst">
+
+                      <strong class="tit">강원도</strong>
+
+                    <ul>
+
+                        <li><a href="/main/list.php?category=003019009">양양<span class="cnt">5</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019029">고성<span class="cnt">2</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019016">속초<span class="cnt">3</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019043">삼척<span class="cnt">0</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019015">춘천<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019030">화천<span class="cnt">1</span></a></li>
+
+
+                    </ul>
+
+            </div>
+        </div>
+        <div class="division4">
+            <div class="v1 state_lst">
+
+                      <strong class="tit">경상도</strong>
+
+                    <ul>
+
+                        <li><a href="/main/list.php?category=003019003">부산<span class="cnt">45</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019002">경주<span class="cnt">25</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019014">거제<span class="cnt">3</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019010">함양<span class="cnt">2</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019012">포항<span class="cnt">2</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019035">대구<span class="cnt">3</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019049">청도<span class="cnt">0</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019018">통영<span class="cnt">0</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019021">안동<span class="cnt">1</span></a></li>
+
+
+                    </ul>
+
+            </div>
+        </div>
+        <div class="division5">
+            <div class="v1 state_lst">
+
+                      <strong class="tit">전라도</strong>
+
+                    <ul>
+
+                        <li><a href="/main/list.php?category=003019007">전주<span class="cnt">34</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019006">순천<span class="cnt">12</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019008">광주<span class="cnt">3</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019022">함평<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019037">남원<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019025">김제<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019033">완도<span class="cnt">1</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019042">완주<span class="cnt">0</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019044">고흥<span class="cnt">0</span></a></li>
+
+
+                    </ul>
+
+            </div>
+        </div>
+        <div class="division6">
+            <div class="v1 state_lst">
+
+                      <strong class="tit">충청도</strong>
+
+                    <ul>
+
+                        <li><a href="/main/list.php?category=003019045">보은<span class="cnt">0</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019028">단양<span class="cnt">2</span></a></li>
+
+
+                        <li><a href="/main/list.php?category=003019004">당진<span class="cnt">1</span></a></li>
+
+
+                    </ul>
+
+            </div>
+        </div>
+    </div>
+    -->
+			<div id="domestic" class="tab_cnt domestic" style="display: none">
+				<div class="division1">
+					<strong class="bg_tit tit" color="red">인기도시</strong>
+					<ul class="tit state_lst">
+
+						<li><a href="/main/list.php?category=003019001">서울<span class="cnt">110</span></a></li>
+
+
+
+						<li><a href="/main/list.php?category=003019005">제주<span class="cnt">125</span></a></li>
+
+
+
+						<li><a href="/main/list.php?category=003019003">부산<span class="cnt">45</span></a></li>
+
+
+
+						<li><a href="/main/list.php?category=003019007">전주<span class="cnt">34</span></a></li>
+
+
+
+						<li><a href="/main/list.php?category=003019002">경주<span class="cnt">25</span></a></li>
+
+
+					</ul>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+
+						<strong class="tit">서울&수도권</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003019001">서울<span class="cnt">110</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019011">인천<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019017">파주<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019023">용인<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019039">이천<span class="cnt">0</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+
+						<strong class="tit">강원도</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003019009">양양<span class="cnt">5</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019029">고성<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019016">속초<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019043">삼척<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019015">춘천<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019030">화천<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+
+						<strong class="tit">경상도</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003019003">부산<span class="cnt">45</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019002">경주<span class="cnt">25</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019014">거제<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019010">함양<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019012">포항<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019035">대구<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019049">청도<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019018">통영<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019021">안동<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+
+						<strong class="tit">전라도</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003019007">전주<span class="cnt">34</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019006">순천<span class="cnt">12</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019008">광주<span class="cnt">3</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019022">함평<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019037">남원<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019025">김제<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019033">완도<span class="cnt">1</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019042">완주<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019044">고흥<span class="cnt">0</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="division6">
+					<div class="v1 state_lst">
+
+						<strong class="tit">충청도</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003019045">보은<span class="cnt">0</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019028">단양<span class="cnt">2</span></a></li>
+
+
+							<li><a href="/main/list.php?category=003019004">당진<span class="cnt">1</span></a></li>
+
+
+						</ul>
+
+					</div>
+					<div class="v1 state_lst">
+
+						<strong class="tit">제주도</strong>
+
+						<ul>
+
+							<li><a href="/main/list.php?category=003019005">제주<span class="cnt">125</span></a></li>
+
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- //국내 -->
+		</div>
+	</div><!--// pop_nation -->
+
+	<!-- #container -->
+	<div id="container">
+		<style type="text/css">
+			.w400{width:400px !important}
+		</style>
+		<link rel="stylesheet" href="/cust/css/calendar/jquery-ui.css" />
+		<script src="/cust/css/calendar/jquery-ui.js"></script>
+		<script type="text/javascript">
+            $(function(){
+                $( ".datepicker" ).datepicker({
+                    dateFormat: 'yy-mm-dd',
+                    prevText: '이전 달',
+                    nextText: '다음 달',
+                    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    dayNames: ['일','월','화','수','목','금','토'],
+                    dayNamesShort: ['일','월','화','수','목','금','토'],
+                    dayNamesMin: ['일','월','화','수','목','금','토'],
+                    showMonthAfterYear: true,
+                    yearSuffix: '년',
+                });
+
+                var  max_length = 400;
+                $(".cmt_total_length").html(max_length);
+                $(document).on(
+                    "keyup",".cmt_textarea", function(){
+                        var text = $(this).val();
+                        $(this).next().next().find('.cmt_length').text(text.length);
+
+                        if(text.length > max_length){
+                            alert(max_length +"자를 초과하였습니다.");
+                            $(this).val(text.substr(0, max_length));
+                            $(this).next().next().find('.cmt_length').text(max_length);
+                        }
+                    });
+
+
+                $(".cmt_btn").click(function(){
+                    var getId =  $(".cmt_btn").index(this);
+                    $(".cmt_write").each(function(idx){
+                        if(getId == idx)  $(".cmt_write:eq("+idx+")").toggleClass('on');
+                    });
+                });
+
+                $(".cmt_btn_reg").click(function(){
+
+                    var getId	=  $(".cmt_btn_reg").index(this);
+                    var mode	=  $(".cmt_textarea:eq("+getId+")").data('mode');
+                    var no		=  $(".cmt_textarea:eq("+getId+")").data('no');
+                    var refno	=  $(".cmt_textarea:eq("+getId+")").data('refno');
+                    var comment	=  $(".cmt_textarea:eq("+getId+")").val();
+
+                    $.ajax({
+                        type: "POST",
+                        url:'/cust/ajax/ajax.mypage.myrate.php',
+                        data: "mode="+mode+"&refno="+refno+"&no="+no +"&comment="+ encodeURIComponent(comment),
+                        dataType: "TEXT",
+                        success: function(msg){
+                            if(msg =="success"){
+                                location.reload();
+                            }
+                        }
+                        ,error: function(msg){
+                        }
+                    });
+                });
+
+                $(".cmt_textarea").trigger("keyup");
+
+            });
+
+            function searching(){
+                var f = document.schFrm;
+                f.submit();
+            }
+
+
+            function goPage(page){
+                var f = document.lstFrm;
+                f.page.value = page;
+                f.submit();
+            }
+
+            function comment_del(mode,no){
+                if(confirm('해당글을 삭제 하시겠습니까?')){
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/cust/ajax/ajax.mypage.myrate.php",
+                        data: "mode="+mode+"&no="+no,
+                        dataType: "TEXT",
+                        timeout: 10000,
+                        success: function(msg){
+                            if($.trim(msg)=="success"){
+                                location.reload();
+                            }
+                        }
+                        ,error: function(msg) {
+                            alert('서버와의 통신이 실패했습니다.');
+                        }
+                    });
+                }
+            }
+
+            function parity_del(mode,no){
+                if(confirm('리뷰를 삭제하시면 다시 리뷰글을 등록하실수 없습니다. 잘못 기재된 부분이 있으면 수정 버튼을 눌러 수정해주세요. 정말 삭제 하시겠습니까?')){
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/cust/ajax/ajax.mypage.myrate.php",
+                        data: "mode="+mode+"&no="+no,
+                        dataType: "TEXT",
+                        timeout: 10000,
+                        success: function(msg){
+                            if($.trim(msg)=="success"){
+                                location.reload();
+                            }
+                        }
+                        ,error: function(msg) {
+                            alert('서버와의 통신이 실패했습니다.');
+                        }
+                    });
+                }
+            }
+
+
+            function parity_view(mode, refno, bookno, no) {
+                $.ajax({
+                    type: "POST",
+                    url: "/cust/ajax/ajax.modal.popup.php",
+                    data: "mode="+mode+"&no="+no+"&refno=" + refno + "&bookno=" + bookno + "&page="+"0",
+                    dataType: "TEXT",
+                    timeout: 1000,
+                    success: function(msg){
+
+                        if(msg.substr(0,4) == "<div") {
+
+                            $(".review_add_modal").html(msg);
+
+                            $(".review_add_modal").modal();
+
+                            $('.choicerating label').click(function(){
+                                var txt=$(this).text();
+                                $(this).parent().next('.txt').text(txt);
+                                $(this).addClass('on').prevAll().addClass('on').end().nextAll().removeClass('on')
+                                $(this).parent().next().next().val(parseInt(txt));
+                                return false;
+                            });
+                        } else {
+                            switch(msg) {
+                                case "login":
+                                    alert("로그인 후 이용하세요.");
+                                    popup("../member/popup.login.php?r=/mypage/my_rate.php");
+                                    break;
+                                case "already":
+                                    alert("이미 리뷰를 작성하셨습니다.");
+                                    location.reload();
+                                    break;
+                                case "not_allow":
+                                    alert("리뷰는 민다를 통해 예약하신 후, 체크인(트립)일자가 지나면 작성하실 수 있습니다.");
+                                    break;
+                                case "6month":
+                                    alert("리뷰는 체크인(트립)일자 기준 6개월이 지나면 작성이 불가능합니다.");
+                                    break;
+                            }
+                        }
+                    }
+
+                    ,error: function(msg) {
+                        alert('서버와의 통신이 실패했습니다.');
+                    }
+                });
+            }
+
+
+		</script>
+
+		<!-- 페이지시작 -->
+		<div class="content w1100">
+			<!-- loaction -->
+			<div class="bread_crumb text-right">
+				<ul class="d_iblock clearfix">
+					<li><a class="icon_house">홈</a></li>
+					<li><a>마이페이지</a></li>
+					<li><a>나의활동</a></li>
+					<li>나의 1:1 문의</li>
+				</ul>
+			</div>
+			<!-- 서브 헤더 -->
+			<header class="sub_hd">
+				<h2>나의 활동</h2>
+			</header>
+			<!-- 탭메뉴 -->
+			<ul class="basic_step2 tb_fixed">
+				<li><a href="/mypage/my_rate.php">리뷰</a></li>
+				<li><a href="/mypage/my_qna.php">숙소/트립 문의</a></li>
+				<li class="active"><a href="/mypage/my_m2m.php">고객센터 문의</a></li>
+				<!--li><a href="">내가 쓴 글</a></li-->
+			</ul>
+
+			<div class="well alert_big mt60">
+				<ul class="lst_type_rect pt20 pb20">
+					<li>[답변완료] 상태의 글을 클릭하시면 해당 문의에 대한 민다의 답변을 보실 수 있습니다.</li>
+					<li>분류 등록에 맞지 않는 문의는 사전 통보 없이 해당 분류로 이동 될 수 있습니다.</li>
+				</ul>
+			</div>
+			<!-- 지난 예약정보 -->
+			<section>
+				<header class="clearfix mb10">
+					<h4 class="sr-only">나의 1:1 문의</h4>
+					<div class="side_wrp">
+						<select class="itx w100" name="upper_cate" title="서비스" onchange="location.href='/mypage/my_m2m.php?upper_cate='+this.value;">
+							<option value="">전체</option>
+							<option value="3">숙소</option>
+							<option value="4">트립</option>
+							<option value="6">기타</option>
+						</select>
+						<!-- [D] nodata추가와 함께 수정-->
+						<button type="button" class="btn bg_grey" onclick="location.href='/mypage/my_m2m.php?mode=write';"><i class="icon_user wh"></i>문의하기</button>
+					</div>
+				</header>
+				<form method="post" name="lstFrm">
+					<input type="hidden" name="page">
+					<table class="tb tb_fixed">
+						<caption class="sr-only">문의 목록</caption>
+						<colgroup>
+							<col style="width:70px">
+							<col style="width:70px">
+							<col style="width:170px">
+							<col>
+							<col style="width:90px">
+							<col style="width:100px">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">서비스</th>
+							<th scope="col">분류</th>
+							<th scope="col">제목</th>
+							<th scope="col">질문일</th>
+							<th scope="col">편집</th>
+						</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+                    <!-- [D] nodata추가 -->
+                    <div class="item__nodata item__nodata--lg item__nodata--bx">
+                        <div class="nodata__wrap">
+                            <p class="nodata__title">고객센터 문의 내역이 없습니다.</p>
+                            <p class="nodata__txt">민다에 대해 궁금하신 사항이 있으시면 <br />언제든지 문의해주세요</p>
+                            <a href="" class="nodata__btn">문의하기</a>
+                        </div>
+                    </div>
+                    <!--// [D] nodata추가 -->
+				</form>
+				<!-- 페이징 -->
+				<nav class="text-center mt5">
+					<ul class="pagination clearfix">
+					</ul>
+				</nav>
+			</section>
+		</div>
+
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<!-- 이프 [2016.05.10] - 필수 객체이므로 삭제하지 말것!! -->
+	<iframe style="display: none; width: 100%; height: 800px" name="hiddenIfrm" title="필수 객체 전송 hidden iframe"></iframe>
+	<!-- 이프 [2016.05.10] - 필수 객체이므로 삭제하지 말것!! -->
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh">information</strong>
+				<div class="ft_info_txt">
+					<span>㈜민다</span>
+					<span>대표 : 김윤희</span>
+					<span>사업자등록번호 : 101-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt">
+					<span>이메일 : help@theminda.com</span>
+					<span>고객센터 : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span>운영시간 : 평일 10시~12시/13시~18시(주말, 공휴일 휴무)</span>
+				</div>
+				<div class="ft_info_txt">
+					<address>서울특별시 중구 동호로15길 27 종하빌딩 A동 5층</address>
+				</div>
+				<div class="footer__right__top">
+					<ul class="footer__partner-list">
+						<li class="footer__partner-item bar"><a href="http://partner.v2.theminda.com" class="footer__partner-link">숙소/트립 파트너 홈</a></li>
+						<li class="footer__partner-item"><a href="http://agency.v2.theminda.com" class="footer__partner-link">여행사 예약관리 홈</a></li>
+					</ul>
+					<ul class="about_lst clearfix">
+						<li><a href="https://www.facebook.com/pages/%EB%AF%BC%EB%B0%95%EB%8B%A4%EB%82%98%EC%99%80-minbakdanawa/1472332716317239" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+						<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+						<li><a href="/mypage/my_m2m.php?mode=write" class="btn">고객센터 문의</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="/about/about.php" target="_blank">회사소개</a></li>
+					<li><a href="/manager/partner/partner_edit.php" target="_blank">파트너 가입</a></li>
+					<li><a href="/helpcenter/rule.php">취소환불규정</a></li>
+					<li><a href="/community/list.php?id=notice">고객센터</a></li>
+					<li class="bar"><a href="/community/list.php?id=notice">공지사항</a></li>
+					<li><a href="/document/document.php">이용약관</a></li>
+					<li><a href="/document/privacy.php">개인정보처리방침</a></li>
+					<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">사업자정보확인</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; Minda Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- todayroom -->
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock" style="display:none">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#hd');return false;">상단으로이동</a>
+</div>
+<!--// todayroom -->
+
+
+<!-- pop_nation -->
+<!--// pop_nation -->
+
+<!-- pop_map -->
+<!--// pop_map-->
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script  src="/cust/js/jquery.placeholder.js"></script>
+<script  src="/cust/js/html5.js"></script>
+<script  src="/cust/js/ie9.js"></script>
+<![endif]-->
+<!-- lib -->
+<script  src="/cust/js/bootstrap-slider.js"></script>
+<script  src="/cust/js/jquery.nanoscroller.js"></script>
+<script  src="/cust/js/moment.min.js"></script>
+<script  src="/cust/js/daterangepicker.js"></script>
+<script  src="/cust/js/jquery.bxslider.min.js"></script>
+<script  src="/cust/js/jquery.number.js"></script>
+<!-- common -->
+<script  src="/cust/js/common.js?v=1"></script>
+<script  src="/cust/js/common2.js"></script>
+<script  src="/lib/js/chkForm.js"></script>
+
+</body>
+</html>

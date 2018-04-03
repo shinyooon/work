@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> MINDA :: 민박다나와 </title>
+	<link rel="shortcut icon" href="/img/i_mlogo.ico">
+	<!-- 기존 css -->
+	<!-- //기존 css -->
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="manager/common/css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/manager/common/css/admin.css">
+	<!-- <link rel="stylesheet" href="manager/common/css/admin.css"> -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<script src="/lib/js/popupWindow.js"></script>
+<!-- 수정된 부분 2016-08-31 추가 -->
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="w1260 clearfix">
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_org.png" alt="MINDA"><span>통합 ID 관리</span></h1>
+					<div class="hd_side">
+						<!-- <nav class="d_iblock">
+							<ul class="util clearfix">
+								<li><a href="">통합ID 관리</a></li>
+								<li><a href="" class="active">숙소</a></li>
+								<li><a href="/manager/travel/index.php">여행정보</a></li>
+							</ul>
+						</nav>
+						<a href="/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					</div>
+				</div>
+			</div>
+			<div class="bg_org hd_myinfo">
+				<div class="w1260">
+					<span class="res_rule">예약규정 : <span class="color_org">국내A (100%)</span><span class="split">예약과 동시에 확정</span></span>
+					<a href="/manager/mypage/bizmoney.php"><i class="icon_money"></i>비즈머니 65,000원</a>
+					<a href="/main/view.php?goodsno=5395" target="_blank" class="split"><i class="icon_house_wh"></i> '[테스트] 희아게스트하우스' 페이지 바로가기</a>
+				</div>
+			</div>
+			<div class="hd_gnb">
+				<nav class="w1260">
+					<ul class="gnb clearfix gnb-inline">
+						<li><a href="/manager/main/index.php" class="active">숙소목록</a></li>
+						<li><a href="/manager/booking/index.php">숙소추가/조회</a></li>
+						<li><a href="/manager/room/index.php">통합ID수정</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<!-- inner-combineid -->
+			<div class="master_ct inner-combineid">
+				<div class="term_hd"><h2 class="">숙소목록</h2></div>
+				<!-- list-room-master-->
+				<div class="list-room-master">
+					<ul class="row">
+						<li class="col-xs-4">
+							<div class="bx-grey clearfix">
+								<div class="thum"><img src="_temp/tmb.jpg" alt="룸 이미지"/><!-- img size 170 x 179 --></div>
+								<div class="con-r">
+									<div class="state">
+										<span class="color_org">운영중</span>
+										<!-- 상태 3type 운영중 , 예약서비스 준비 중, 미승인-->
+										<!-- <span class="color_grey">예약서비스 준비 중</span>
+										<span class="color_mint">미승인</span> -->
+									</div>
+									<div class="tit-area">
+										<span class="loc">유럽 &gt; 영국 &gt; 런던</span>
+										<a href="" class="tit"><strong class="twoline">런던런던 잘나가 드루와 드루와 1호점 잘나가 드루와 드루와 1호점</strong></a>
+									</div>
+									<div class="recommend-area">
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>예약대기</dt>
+												<dd><span class="color_org num">3</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>신규 확정예약</dt>
+												<dd><span class="color_org num">1</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>취소된 예약</dt>
+												<dd><span class="color_org num">0</span>건</dd>
+											</dl>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="col-xs-4 ready"><!--예약서비스 준비중 일 때 ready클래스 추가 -->
+							<div class="bx-grey clearfix">
+								<div class="thum"><img src="_temp/tmb.jpg" alt="룸 이미지"/><!-- img size 170 x 179 --></div>
+								<div class="con-r">
+									<div class="state"><span class="color_grey">예약서비스 준비 중</span></div>
+									<div class="tit-area">
+										<span class="loc">유럽 &gt; 영국 &gt; 런던</span>
+										<a href="" class="tit"><strong class="twoline">런던 잘나가 드루와 드루와 1호점</strong></a>
+									</div>
+									<div class="recommend-area">
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>예약대기</dt>
+												<dd><span class="color_org num">3</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>신규 확정예약</dt>
+												<dd><span class="color_org num">1</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>취소된 예약</dt>
+												<dd><span class="color_org num">0</span>건</dd>
+											</dl>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="col-xs-4 ready"><!--예약서비스 준비중 일 때 ready클래스 추가 -->
+							<div class="bx-grey clearfix">
+								<div class="thum"><img src="_temp/tmb.jpg" alt="룸 이미지"/></div>
+								<div class="con-r">
+									<div class="state"><span class="color_grey">예약서비스 준비 중</span></div>
+									<div class="tit-area">
+										<span class="loc">유럽 &gt; 영국 &gt; 런던</span>
+										<a href="" class="tit"><strong class="twoline">런던 잘나가 드루와 드루와 1호점</strong></a>
+									</div>
+									<div class="recommend-area">
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>예약대기</dt>
+												<dd><span class="color_org num">3</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>신규 확정예약</dt>
+												<dd><span class="color_org num">1</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>취소된 예약</dt>
+												<dd><span class="color_org num">0</span>건</dd>
+											</dl>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="col-xs-4">
+							<div class="bx-grey clearfix">
+								<div class="thum"><img src="_temp/tmb.jpg" alt="룸 이미지"/><!-- img size 170 x 179 --></div>
+								<div class="con-r">
+									<div class="state"><span class="color_mint">미승인</span></div>
+									<div class="tit-area">
+										<span class="loc">유럽 &gt; 영국 &gt; 런던</span>
+										<a href="" class="tit"><stron class="twoline">런던 잘나가 드루와 드루와 1호점</strong></a>
+									</div>
+									<div class="recommend-area">
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>예약대기</dt>
+												<dd><span class="color_org num">3</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>신규 확정예약</dt>
+												<dd><span class="color_org num">1</span>건</dd>
+											</dl>
+										</a>
+										<a class="link d_block" href="">
+											<dl class="clearfix">
+												<dt>취소된 예약</dt>
+												<dd><span class="color_org num">0</span>건</dd>
+											</dl>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--// list-room-master-->
+			</div>
+			<!--// inner-combineid -->
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="http://www.theminda.com" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="../cs/ruleminbak.php" class="split">숙소주 이용약관</a>
+			<a href="../ad/adrule.php" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/html5.js"></script>
+<script src="http://v2.minbakdanawa.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.minbakdanawa.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.minbakdanawa.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title> MINDA :: 민박다나와 </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+    <link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+</head>
+
+<body class="page_back bg_wh">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+    <!-- 타이틀 바-->
+
+    <!-- header -->
+    <header id="hd" class="">
+        <a id="btn_top_back" class="icon_hd_back"></a>
+        <h1><a href="javascript:;">포인트/쿠폰/캐쉬</a></h1>
+        <!-- 타이틀 우측 3번? 버튼 -->
+        <!-- 타이틀 우측 2번? 버튼 -->
+        <!-- 타이틀 우측 버튼 -->
+        <!-- 검색 바 -->
+    </header>
+    <!-- //header -->
+
+    <script>
+        var btn_top_back = document.getElementById('btn_top_back');
+        if (btn_top_back != undefined) {
+            btn_top_back.addEventListener('click', function() {
+                var left_btn_url = '';
+                if (left_btn_url != '') {
+                    location.href = left_btn_url;
+                } else {
+                    var str_referrer = document.referrer;
+                    if (str_referrer.indexOf('theminda') > 0 || str_referrer.indexOf('minbakdanawa') > 0 ||
+                        str_referrer.indexOf('localhost') > 0 || str_referrer.indexOf('127.0.0.1') > 0) {
+                        history.back();
+                    } else {
+                        location.href = 'http://localhost/m/1.0/grp_main/main.html?';
+                    }
+                }
+            });
+        }
+        /*
+        $(document).ready(function(){
+
+            $('#hd > .icon_hd_back').bind('click',function(){
+
+                    var left_btn_url = '';
+                    if(left_btn_url !=''){
+                        MoveGet(left_btn_url);
+                    }else{
+                        var str_referrer =  document.referrer;
+                        if(str_referrer.indexOf('theminda') > 0 || str_referrer.indexOf('minbakdanawa') > 0) history.back();
+                        else MoveGet('http://localhost/m/1.0/grp_main/main.html?');
+                    }
+            });
+        });
+    */
+    </script>
+
+    <!-- #container -->
+    <div id="container" class="clearfix">
+        <!-- 페이지 시작-->
+        <!-- tab -->
+        <div class="mypage pa0 pt10 pb10">
+            <ul class="tab tab5 my_info_cnt">
+                <li>
+                    <a id="tab_point" class="" href="javascript:;">
+                        <span class="icon-wrap"><span class="icon_my_point"></span></span>
+                        <span class="d_block color_blk mt3">포인트</span>
+                        <strong class="fs15 color_mint">0</strong>
+                        <small class="fs12 color_mint">P</small>
+                    </a>
+                </li>
+                <li>
+                    <a id="tab_cash" href="javascript:;" class="">
+                        <span class="icon-wrap"><span class="icon_my_cash"></span></span>
+                        <span class="d_block color_blk mt3">캐쉬</span>
+                        <strong class="fs15 color_mint">0</strong>
+                        <small class="fs12 color_mint">원</small>
+                    </a>
+                </li>
+                <li>
+                    <a id="tab_coupon" href="javascript:;" class="on">
+                        <span class="icon-wrap"><span class="icon_my_coupon"></span></span>
+                        <span class="d_block color_blk mt3">쿠폰</span>
+                        <strong class="fs15 color_mint">0</strong>
+                        <small class="fs12 color_mint">장</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="list_box" class="cnt_wrp">
+            <div class="border_grey pr"><h2 class="pa10 text-center fs15">이용안내</h2>
+                <ul class="lst_type_dot pa5 pt0 pb40 fs13" style="display:none">
+                    <li>쿠폰은 상품구매나 이벤트 참여 등을 통해 발급됩니다.</li>
+                    <li>포인트 및 캐쉬와 함께 중복하여 사용하실 수 있으며, 사용 후 남은 차액금은 자동 소멸됩니다.</li>
+                    <li>숙소예약금 결제시 사용할 수 있는 쿠폰 사용액의 한도는 각 예약당 총 숙박요금의 10%까지 입니다.</li>
+                    <li>쿠폰은 현금 전환 또는 출금이 불가합니다.</li>
+                    <li>쿠폰은 타인에게 양도가 불가합니다.</li>
+                </ul>
+                <div class="btn_open_wrp pull-right" style="position:absolute;bottom:3px;right:5px;"><a
+                    class="icon_open" href="#" style="border:0">열기</a></div>
+            </div>
+            <div>
+                <ul id="coupon_tab" class="tab basic mt10">
+                    <li class="active"><a id="tab_coupon_minda" href="#mdCoupon" data-toggle="tab"><span>민다쿠폰</span></a>
+                    </li>
+                    <li><a id="tab_coupon_minbak" href="#roomCoupon" data-toggle="tab"><span>숙소쿠폰</span></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="mdCoupon" class="tab-pane active">
+                        <!-- [D] nodata추가 -->
+                        <div class="item__nodata">
+                            <div class="nodata__wrap">
+                                <p class="nodata__title">민다쿠폰이 없습니다.</p>
+                                <p class="nodata__txt">민다에서 드리는 할인쿠폰부터<br />다양한 혜택이 담긴 숙소쿠폰들을 만나보세요!
+                                </p>
+                                <a href="" class="nodata__btn">민다쿠폰 받기</a>
+                            </div>
+                        </div>
+                        <!--// [D] nodata추가 -->
+                    </div>
+                    <div id="roomCoupon" class="tab-pane">
+                        <!-- [D] nodata추가 -->
+                        <div class="item__nodata">
+                            <div class="nodata__wrap">
+                                <p class="nodata__title">숙소쿠폰이 없습니다.</p>
+                                <p class="nodata__txt">민다에서 드리는 할인쿠폰부터<br />다양한 혜택이 담긴 숙소쿠폰들을 만나보세요!
+                                </p>
+                                <a href="" class="nodata__btn">숙소쿠폰 받기</a>
+                            </div>
+                        </div>
+                        <!--// [D] nodata추가 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //페이지 끝-->
+
+    </div>
+    <!-- //container -->
+
+
+</div>
+<!-- //wrap -->
+
+<!-- modal : coupon -->
+<div id="mdAlert" class="modal fade md_alert" tabindex="-1" role="dialog">
+    <div class="modal-dialog wid_md">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <p class="fs14 color_blk fw500">댓글을 삭제하시겠습니까?</p>
+        <div class="text-center mt15">
+            <button type="button" class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>확인</button>
+            <button type="button" class="btn bg_dark_grey btn-lg ml5" data-dismiss="modal"><i
+                class="icon_circle_cancle"></i>취소
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

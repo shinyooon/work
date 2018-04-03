@@ -1,0 +1,58 @@
+@charset "UTF-8";
+.btn-group{
+	@include d-flex();
+	margin:0 -3px;
+	.btn-wrap{
+		position:static;
+		@include flex();
+		padding:0 3px;
+	}
+}
+.login__btn-login,.login__btn-find,.panel-cal__btn-save,.ly__rev__btn-impossible,.ly__rev__btn-possible,.ly__rev__btn-check,.ly__rev__btn-send,.qna__view__btn-save,.qna__view__btn-delete,.review__view__btn-save,.review__view__btn-delete,.ly-coach__btn,.alram__btn-check,.question__btn-form,.question__form-btn-save,.question__btn-delete,.question__btn-eidt,.qna__view__btn-eidt,.ly__review__btn-save,.ly-notice__btn,.filter__btn-reset{
+	width:100%;
+	height:44px;
+	line-height:43px;
+	font-size:em(20px);
+	font-weight:bold;
+	display:block;
+	@include border-radius(22px);
+	text-align:center;
+}
+
+/*orange btn*/
+.login__btn-login,.login__btn-find,.panel-cal__btn-save,.ly__rev__btn-possible,.ly__rev__btn-check,.ly__rev__btn-send,.qna__view__btn-save,.review__view__btn-save,.alram__btn-check,.question__btn-form,.question__form-btn-save,.ly__review__btn-save{
+	background-color:$color__primary;
+	color:#fff;
+}
+/*grey btn*/
+.ly__rev__btn-impossible,.qna__view__btn-delete,.review__view__btn-delete,.question__btn-delete,.question__btn-eidt,.qna__view__btn-eidt,.question__upload-btn-del,.filter__btn-reset{
+	background-color:$color__aaa;
+	color:#fff;
+}
+
+.rev__btn-filter, .review__btn-filter{
+	display:block;
+	width:100%;
+	height:42px;
+	@include border-radius();
+	background-color:$color__blk;
+}
+
+.ly-coach__btn{
+	@include text($color__wh,em(17px),$fw__500);
+	@include border($color__wh);
+}
+
+.ly-notice__btn{
+	@include text($color__blk,em(17px),$fw__500);
+	@include border($color__aaa);
+}
+
+.question__upload-btn-del{
+	display:inline-block;
+	padding:8px 20px 7px;
+	font-weight:bold;
+	@include border-radius(5px);
+	line-height:1em;
+}
+

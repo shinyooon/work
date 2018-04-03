@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<!-- <a href="/member/logout.php" class="btn">정보수정</a> -->
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="" class="active">게시물관리</a></li>
+						<li><a href="">통계/정산</a></li>
+						<li><a href="">파트너 지원</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">게시물 관리</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">여행자문의</a></li>
+							<li class="active"><a href="">리뷰관리</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<div class="tit-area clearfix">
+						<h3 class="sub_title mt10 pull-left">리뷰관리</h3>
+					</div>
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<div class="tbl-wrap3">
+							<table class="tb tb-default tb_input text-left">
+								<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+									<col style="width:150px">
+									<col>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>상품명</th>
+										<td colspan="3">
+											<select class="form-control-basic" title="리뷰 관리할 상품 선택">
+												<option selected="selected">투어1</option>
+												<option>투어2</option>
+												<option>투어3</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>상품 평점</th>
+										<td>
+											<div class="rating_wrp ma0">
+												<span class="starrating lg" title="4.5">
+													<span style="width:90%">4.5</span>
+												</span>
+												<span class="color_red fs20">4.50</span>
+												<span class="text-nowrap fs12 ml12">리뷰참여 : 330명</span>
+											</div>
+										</td>
+										<th>
+											리뷰노출기간
+											<div class="dropdown-hover d_iblock ml5">
+												<button class="no_style"><span class="icon_help_grey bg_wh border_grey2">도움말</span></button>
+												<div class="dropdown-content">
+													<div class="inner pa10">
+														<p class="txt fs13">여행자 리뷰는 파트너가 설정한 노출기간에 따라 <br />민다홈페이지에 노출됩니다. 리뷰 노출기간을 <br />6개월로 설정한 경우 작성일로부터 6개월이 지난 <br />리뷰는 파트너와 글쓴이에게만 노출됩니다.</p>
+													</div>
+												</div>
+											</div>
+										</th>
+										<td>
+											<label class="radio_label radio_dot sm on" for="answer_state1">
+												<input type="radio" id="answer_state1" name="answer_state" checked="checked">전체
+											</label>
+											<label class="radio_label radio_dot sm ml15" for="answer_state2">
+												<input type="radio" id="answer_state2" name="answer_state">6개월
+											</label>
+											<button class="btn bg_dark_grey fs15 w85 ml20">저장</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="mb10 mt50 text-right">
+							<label class="inline-checkbox basic chk_label on" for="grade5">
+								<input type="checkbox" id="grade5" checked="checked">5점
+							</label>
+							<label class="inline-checkbox basic chk_label on" for="grade4">
+								<input type="checkbox" id="grade4" checked="checked">4점
+							</label>
+							<label class="inline-checkbox basic chk_label on" for="grade3">
+								<input type="checkbox" id="grade3" checked="checked">3점
+							</label>
+							<label class="inline-checkbox basic chk_label on" for="grade2">
+								<input type="checkbox" id="grade2" checked="checked">2점
+							</label>
+							<label class="inline-checkbox basic chk_label on" for="grade1">
+								<input type="checkbox" id="grade1" checked="checked">1점
+							</label>
+						</div>
+						<ul class="board_cmt lst_style_cmt mt0">
+							<li>
+								<div class="user_review_wrp ">
+									<div class="list-hd tb_bx">
+										<span class="user">rkgud0119</span>
+										<span><span class="ellipsis">파리 3대박물관(루브르,오르세,퐁피두센터) 오후 출발 워킹투어</span></span>
+										<span class="meta text-right">
+											<span class="date">2016-09-12 18:59:59</span>
+										</span>
+									</div>
+									<div class="txt txt_review">
+
+										유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+										친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+										관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+										알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+										<div class="rating_wrp ma0 cmt_btn_wrp">
+											<span class="starrating lg" title="4.5">
+												<span style="width:90%">4.5</span>
+											</span>
+											<span class="color_red fs13">4.50</span>
+										</div>
+									</div>
+								</div>
+								<ul class="comment_bx mt0">
+									<li class="cmt">
+										<div class="user">
+											<span>로마 자고가 하우스(Jagoga House)</span>
+										</div>
+										<p class="user_write_txt">저도 무척 즐거웠어요...</p>
+										<div class="cmt_btn_wrp meta">
+											<span class="date mr10">2016-09-12 18:59:59</span>
+											<button type="button" class="icon_date_close2">삭제</button>
+										</div>
+									</li>
+									<li class="cmt">
+										<div class="user">
+											<span>로마 자고가 하우스(Jagoga House)</span>
+										</div>
+										<div class="cmt_btn_wrp meta">
+											<span class="date mr10">2016-09-12 18:59:59</span>
+											<button type="button" class="icon_date_close2">삭제</button>
+										</div>
+										<p class="user_write_txt">내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</p>
+									</li>
+								</ul>
+								<div class="cmt_edit row ma30 mt0">
+									<div class="col-xs-11 pr10"><textarea rows="1" class="form-control-basic" title="리뷰 댓글입력" placeholder="답변 글에는 직거래 유도(전화번호,홈페이지 주소,이메일,계좌번호,홈페이지 정보 노출 및 문의 유도)글은 관리자에 의해 제재되오니 주의해주세요. "></textarea></div>
+									<div class="col-xs-1"><button type="button" class="btn btn-block">확인</button></div>
+								</div>
+							</li>
+							<li>
+								<div class="user_review_wrp ">
+									<div class="list-hd tb_bx">
+										<span class="user">rkgud0119</span>
+										<span><span class="ellipsis">파리 3대박물관(루브르,오르세,퐁피두센터) 오후 출발 워킹투어</span></span>
+										<span class="meta text-right">
+											<span class="date">2016-09-12 18:59:59</span>
+										</span>
+									</div>
+									<div class="txt txt_review">
+										유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+										친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+										관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+										알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+										<div class="rating_wrp ma0 cmt_btn_wrp">
+											<span class="starrating lg" title="4.5">
+												<span style="width:90%">4.5</span>
+											</span>
+											<span class="color_red fs13">4.50</span>
+										</div>
+									</div>
+								</div>
+								<div class="cmt_edit row ma30 mt0">
+									<div class="col-xs-11 pr10"><textarea rows="1" class="form-control-basic" title="리뷰 댓글입력" placeholder="답변 글에는 직거래 유도(전화번호,홈페이지 주소,이메일,계좌번호,홈페이지 정보 노출 및 문의 유도)글은 관리자에 의해 제재되오니 주의해주세요. "></textarea></div>
+									<div class="col-xs-1"><button type="button" class="btn btn-block">확인</button></div>
+								</div>
+							</li>
+							<li>
+								<div class="user_review_wrp ">
+									<div class="list-hd tb_bx">
+										<span class="user">rkgud0119</span>
+										<span><span class="ellipsis">파리 3대박물관(루브르,오르세,퐁피두센터) 오후 출발 워킹투어</span></span>
+										<span class="meta text-right">
+											<span class="date">2016-09-12 18:59:59</span>
+										</span>
+									</div>
+									<div class="txt txt_review">
+										유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+										친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+										관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+										알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+										<div class="rating_wrp ma0 cmt_btn_wrp">
+											<span class="starrating lg" title="4.5">
+												<span style="width:90%">4.5</span>
+											</span>
+											<span class="color_red fs13">4.50</span>
+										</div>
+									</div>
+								</div>
+								<div class="cmt_edit row ma30 mt0">
+									<div class="col-xs-11 pr10"><textarea rows="1" class="form-control-basic" title="리뷰 댓글입력" placeholder="답변 글에는 직거래 유도(전화번호,홈페이지 주소,이메일,계좌번호,홈페이지 정보 노출 및 문의 유도)글은 관리자에 의해 제재되오니 주의해주세요. "></textarea></div>
+									<div class="col-xs-1"><button type="button" class="btn btn-block">확인</button></div>
+								</div>
+							</li>
+							<li>
+								<div class="user_review_wrp ">
+									<div class="list-hd tb_bx">
+										<span class="user">rkgud0119</span>
+										<span><span class="ellipsis">파리 3대박물관(루브르,오르세,퐁피두센터) 오후 출발 워킹투어</span></span>
+										<span class="meta text-right">
+											<span class="date">2016-09-12 18:59:59</span>
+										</span>
+									</div>
+									<div class="txt txt_review">
+										유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+										친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+										관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+										알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+										<div class="rating_wrp ma0 cmt_btn_wrp">
+											<span class="starrating lg" title="4.5">
+												<span style="width:90%">4.5</span>
+											</span>
+											<span class="color_red fs13">4.50</span>
+										</div>
+									</div>
+								</div>
+								<div class="cmt_edit row ma30 mt0">
+									<div class="col-xs-11 pr10"><textarea rows="1" class="form-control-basic" title="리뷰 댓글입력" placeholder="답변 글에는 직거래 유도(전화번호,홈페이지 주소,이메일,계좌번호,홈페이지 정보 노출 및 문의 유도)글은 관리자에 의해 제재되오니 주의해주세요. "></textarea></div>
+									<div class="col-xs-1"><button type="button" class="btn btn-block">확인</button></div>
+								</div>
+							</li>
+							<li>
+								<div class="user_review_wrp ">
+									<div class="list-hd tb_bx">
+										<span class="user">rkgud0119</span>
+										<span><span class="ellipsis">파리 3대박물관(루브르,오르세,퐁피두센터) 오후 출발 워킹투어</span></span>
+										<span class="meta text-right">
+											<span class="date">2016-09-12 18:59:59</span>
+										</span>
+									</div>
+									<div class="txt txt_review">
+										유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+										친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+										관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+										알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+										<div class="rating_wrp ma0 cmt_btn_wrp">
+											<span class="starrating lg" title="4.5">
+												<span style="width:90%">4.5</span>
+											</span>
+											<span class="color_red fs13">4.50</span>
+										</div>
+									</div>
+								</div>
+								<div class="cmt_edit row ma30 mt0">
+									<div class="col-xs-11 pr10"><textarea rows="1" class="form-control-basic" title="리뷰 댓글입력" placeholder="답변 글에는 직거래 유도(전화번호,홈페이지 주소,이메일,계좌번호,홈페이지 정보 노출 및 문의 유도)글은 관리자에 의해 제재되오니 주의해주세요. "></textarea></div>
+									<div class="col-xs-1"><button type="button" class="btn btn-block">확인</button></div>
+								</div>
+							</li>
+							<li class="text-center pa20">
+								작성 된 리뷰가 없습니다.
+							</li>
+						</ul>
+						<div class="text-left mb30 ">
+							<ul class="pagination d_iblock text-center ">
+								<li class="prev "><a href=" ">이전페이지목록보기</a></li>
+								<li><a href="">1</a></li>
+								<li><a href="" class="active ">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li class="next "><a href=" ">다음페이지목록보기</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--// tour-contents -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			})
+			.on({
+				'show.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+					$(this).closest('.input-cal').addClass('active');
+				},
+				'hide.daterangepicker': function(ev, picker) {
+					$('.input-cal').removeClass('active');
+				}
+			}, '.input-cal input');
+
+		var startDate, endDate
+		$('.fare_date').daterangepicker({
+			autoUpdateInput: false,
+			startDate: startDate,
+			endDate: endDate,
+			minDate: false,
+			maxDate: false,
+			autoApply: true,
+			//parentEl: '.range_cal_wrap',
+			opens: 'center',
+			locale: {
+				"format": "DD/MM/YYYY",
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			},
+		}, function(startDate, endDate) {
+			$('.fare_start_date').val(startDate.format('DD/MM/YYYY'));
+			$('.fare_end_date').val(endDate.format('DD/MM/YYYY'));
+		});
+	});
+	</script>
+
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<? include "../../pc/inc/top.html" ?>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+        <? include "../../pc/inc/header.html" ?>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<div class="sub_bg" style="background-image:url(/cust/img/italy.jpg)">
+				<h2 class="hd_title"><i class="icon_italy"></i>이탈리아 베네치아</h2>
+				<p>현지를 알차게 경험할 수 있는 트립</p>
+				<div class="text-center">
+					<a href="" class="btn btn_border">일정</a>
+					<a href="" class="btn btn_border dot-em on">트립</a>
+					<a href="" class="btn btn_border">정보</a>
+					<!-- <a href="" class="btn btn_border">일정</a> -->
+				</div>
+				<a href="" class="btn btn-xs sidebtn">다른 도시보기</a>
+			</div>
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<section class="recommend_bx tour_lst_left">
+					<!--[D] tour_righ 추가 -->
+					<div class="result_hd clearfix v2">
+						<!-- [D] v2추가 -->
+						<div class="tit-wrap dot_lst lst_inline">
+							<div class="active"><h3 class="sub_title d_iblock">트립</h3></div>
+						</div>
+						<div class="trip-top-msg">
+							<p class="txt">민다 트립은 대기시간 없이 <storng class="txt--point">즉시예약</storng>됩니다.</p>
+						</div>
+					</div>
+					<!-- 검색필터 -->
+					<!--  필터 -->
+					<div class="filterwrp clearfix tour-list__filter">
+						<!-- bg_wh 클래스 추가 -->
+						<!-- 2018-02-09 add -->
+						<div class="tour-list__cnt">
+							<p class="tour-list__cnt-txt"><storng class="txt--point">대기시간없이 즉시예약</storng> 가능한 트립 <span id="totalCnt">00</span>개</p>
+						</div>
+						<!--// 2018-02-09 add -->
+						<div class="form-inline pull-right">
+							<select name="orderby" class="form-control-basic color_blk" title="트립목록 정렬 선택" onchange="fnItemSearch();">
+								<option value="popul_cnt">인기순</option>
+								<option value="price">낮은가격순</option>
+								<option value="review_cnt">후기순</option>
+								<option value="reccom">등록순</option>
+
+							</select>
+						</div>
+					</div>
+					<!-- 리스트 -->
+					<!-- 2018-03-19 add -->
+					<div class="item__nodata item__nodata--lg">
+						<div class="nodata__wrap">
+							<p class="nodata__title">등록된 상품이 없습니다.</p>
+							<p class="nodata__txt">찾으시는 트립 상품이 없을 땐<br />나만의 맞춤투어를 진행해보시면 어떨까요?
+							</p>
+							<a href="https://goo.gl/forms/ad3fJxOS24xoE1jI3" target="_blank" class="nodata__btn">맞춤투어 문의하러 가기</a>
+						</div>
+					</div>
+					<!--// 2018-03-19 add -->
+					<div class="btm-srch-area">
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn" type="submit"><i class="icon_srch_wh icon-lst">검색</i></button>
+							</span>
+						</div>
+					</div>
+				</section>
+				<section class="tour_lst_right">
+					<div class="con tour-list__right-search">
+						<h4 class="sub-tit">트립검색</h4>
+						<div class="input-group">
+                            <span class="input-ctrl">
+                                <input type="text" id="filterKeyword" value="" class="form-control-basic plh_grey input_with_clear_btn" placeholder="검색어를 입력해주세요." title="트립검색 키워드 입력">
+                                <button type="button" class="input-wrap__btn-cnl" style="display: none;"><img src="/cust/img/icon/icon_clse_input.svg" alt="입력취소"></button>
+                            </span>
+							<span class="input-group-btn">
+								<button class="btn" type="submit"><i class="icon_srch_wh icon-lst">검색</i></button>
+							</span>
+						</div>
+					</div>
+					<div class="con">
+						<h4 class="sub-tit">트립일정</h4>
+						<div class="input-wrap input-cal cal-l">
+							<input type="text" class="form-control-basic input-tour-cal color_blk" title="트립 일자"  readonly="readonly" />
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+					<div class="con">
+						<h4 class="sub-tit">트립가격</h4>
+						<div class="range_slider">
+							<input id="priceRange" type="text" data-slider-min="10" data-slider-max="150000" data-slider-step="1000" data-slider-value="[10,50000]" data-slider-tooltip="hide" title="트립 가격">
+							<div class="price_txt clearfix">
+								<span class="min pull-left">&#8361; 10</span>
+								<span class="max pull-right"><span>&#8361; 150000</span></span>
+							</div>
+						</div>
+						<script>
+						//http://seiyria.com/bootstrap-slider/
+						$(function() {
+							$("#priceRange").slider({});
+							$("#priceRange").on("slide", function(slideEvt) {
+								$(".price_txt .min").text('￦' + slideEvt.value[0]);
+								$(".price_txt .max span").text('￦' + slideEvt.value[1]);
+							});
+						})
+						</script>
+					</div>
+					<div class="con pb20">
+						<h4 class="sub-tit">트립태그</h4>
+						<ul class="lst_inline list-tag">
+							<li><input type="checkbox" id="tour_tag1" checked="checked" /><label for="tour_tag1">#시내트립</label></li>
+							<li><input type="checkbox" id="tour_tag2" /><label for="tour_tag2"># 박물관/미술관</label></li>
+							<li><input type="checkbox" id="tour_tag3" /><label for="tour_tag3"># 스냅트립</label></li>
+							<li><input type="checkbox" id="tour_tag4" /><label for="tour_tag4"># 야경트립</label></li>
+							<li><input type="checkbox" id="tour_tag5" /><label for="tour_tag5"># 먹방트립</label></li>
+							<li><input type="checkbox" id="tour_tag6" /><label for="tour_tag6"># 레저/액티비티</label></li>
+							<li><input type="checkbox" id="tour_tag7" /><label for="tour_tag7"># 쇼핑트립</label></li>
+							<li><input type="checkbox" id="tour_tag8" /><label for="tour_tag8"># 클래스</label></li>
+							<li><input type="checkbox" id="tour_tag9" /><label for="tour_tag9"># 근교트립</label></li>
+							<li><input type="checkbox" id="tour_tag10" /><label for="tour_tag10"># 티켓</label></li>
+							<li><input type="checkbox" id="tour_tag11" /><label for="tour_tag11"># 농촌체험</label></li>
+							<li><input type="checkbox" id="tour_tag12" /><label for="tour_tag12"># 차량트립</label></li>
+						</ul>
+					</div>
+					<div class="con">
+						<!-- 2018-03-19 add -->
+						<h4 class="sub-tit">맞춤투어</h4>
+						<p class="trip-contact__txt">민다트립에서는 나만의 맞춤투어도<br />
+							진행하실 수 있습니다.</p>
+						<a href="" class="trip-contact__link">문의하러 가기</a>
+						<div class="trip--contact__icon-custom"></div>
+						<!--// 2018-03-19 add -->
+					</div>
+				</section>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- Footer -->
+        <? include "../../pc/inc/footer.html" ?>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+<!-- js -->
+<script type="text/javascript">
+$(function() {
+
+    var $cal_input = $('.input-tour-cal');
+    var dateToday = new Date();
+
+    $('.input-tour-cal').daterangepicker({
+        autoApply: true,
+        minDate: dateToday,
+        parentEl: '#calendarWrp',
+        singleDatePicker: true,
+        opens: 'center',
+        alwaysShowCalendars: true,
+        locale: {
+            format: 'YYYY-MM-DD',
+            "daysOfWeek": [
+            "일",
+            "월",
+            "화",
+            "수",
+            "목",
+            "금",
+            "토"
+            ],
+            "monthNames": [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월"
+            ]
+        }
+    });
+});
+</script>
+<? include "../../pc/inc/bottom.html" ?>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.minbakdanawa.com/m/1.0/cust/css/common.dev.css">
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<header id="hd">
+			<!-- <h1>스팟</h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+			<div class="btnwrp">
+				<button type="button" class="icon_hd_srch btn btn_like">검색</button>
+			</div> -->
+			<div class="hd-search">
+				<div class="srch-input">
+					<h1><button type="button" class="icon_hd_srch">검색</button></h1>
+					<span class="input-wrap">
+						<input type="text" class="input-srch" title="통합검색" value="파리" placeholder="검색어를 입력하세요">
+						<button class="icon_close_circle no_style">검색어삭제</button>
+					</span>
+				</div>
+
+				<div class="srch-cancel">
+					<a href="">
+						<span class="txt-cancel">취소</span>
+					</a>
+				</div>
+			</div>
+
+		</header>
+		<!-- //header -->
+
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<div class="srch-result-wrap">
+				<div class="srch-top">
+					<ul class="list-srch-tap">
+						<li><h2><a href="">숙소</a></h2></li>
+						<li class="active"><h2><a href="">스팟</a></h2></li>
+						<li><h2><a href="">일정</a></h2></li>
+					</ul>
+				</div>
+				<!-- 목록 -->
+				<ul class="item_card_lst">
+					<li>
+						<!-- 저장되면 class="active" -->
+						<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장안됨</button>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<a href="">
+								<div class="iteminfo">
+									<div class="meta"><i class="icon_like_mint"></i> 저장 <span class="color_mint">(24)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk twoline"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<div class="btmwrp">
+									<div class="meta">
+										현지인 리얼팁 <span class="color_mint">(4)</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(4)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<!-- 저장되면 class="active" -->
+						<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장안됨</button>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<a href="">
+								<div class="iteminfo">
+									<div class="meta"><i class="icon_like_mint"></i> 저장 <span class="color_mint">(24)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk twoline"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<div class="btmwrp">
+									<div class="meta">
+										현지인 리얼팁 <span class="color_mint">(4)</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(4)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<!-- 저장되면 class="active" -->
+						<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장안됨</button>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<a href="">
+								<div class="iteminfo">
+									<div class="meta"><i class="icon_like_mint"></i> 저장 <span class="color_mint">(24)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk twoline"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<div class="btmwrp">
+									<div class="meta">
+										현지인 리얼팁 <span class="color_mint">(4)</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(4)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<!-- 저장되면 class="active" -->
+						<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장안됨</button>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<a href="">
+								<div class="iteminfo">
+									<div class="meta"><i class="icon_like_mint"></i> 저장 <span class="color_mint">(24)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk twoline"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<div class="btmwrp">
+									<div class="meta">
+										현지인 리얼팁 <span class="color_mint">(4)</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(4)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<!-- 저장되면 class="active" -->
+						<button type="button" class="icon_heart tmb_heart btn active" data-toggle="button">저장안됨</button>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<a href="">
+								<div class="iteminfo">
+									<div class="meta"><i class="icon_like_mint"></i> 저장 <span class="color_mint">(24)</span></div>
+									<span class="d_block mb3">이탈리아 밀라노</span>
+									<strong class="fw500 color_blk twoline"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+								</div>
+								<div class="btmwrp">
+									<div class="meta">
+										현지인 리얼팁 <span class="color_mint">(4)</span>
+										<i class="split"></i>
+										여행자 리뷰 <span class="color_mint">(4)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--// srch-result-wrap -->
+		</div>
+		<!-- //container -->
+
+		<!-- Footer -->
+		<div id="ft" class="bg_blk">
+			<div>
+				<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+				<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+				<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+			</div>
+			<p>
+				(주)사막 사업자등록번호 : 010-86-28116   FAX : 02-722-3478
+			</p>
+			<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+			<ul class="list-inline">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">고객센터</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="color_org">개인정보취급방침</a></li>
+				<li><a href="">PC버전</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+	<!-- //wrap -->
+
+<script>
+jQuery(function($){
+	var w = $(window);
+	var wW = w.width();
+
+	// 상단탭
+	var $body=$('body'),
+	viewBody=$("#tabNav");
+	w.scroll(function(){
+		var startPos=viewBody.offset().top;
+		if(w.scrollTop()>startPos){
+			$body.addClass('view_scroll');
+		} else {
+			$body.removeClass('view_scroll');
+		}
+	});
+	checkSrch();
+	$('.input-srch').keyup(function(){
+		checkSrch();
+	});
+	$('.icon_close_circle').click(function(){
+		$(this).siblings('.input-srch').val('');
+		$(this).hide();
+	})
+});
+
+function checkSrch(){
+	if($('.input-srch').val().length>0){
+		$('.input-srch').siblings('.icon_close_circle').show();
+	}else{
+		$('.input-srch').siblings('.icon_close_circle').hide()
+	}
+}
+
+</script>
+
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="http://v2.minbakdanawa.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

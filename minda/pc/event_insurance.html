@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap" class="page_tb">
+		<!-- header -->
+		<header id="hd">
+			<div class="header clearfix">
+				<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+				<nav class="hd-nav">
+					<ul class="gnb">
+						<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+						<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+						<li class="i3"><a href="">일정</a></li>
+						<li class="i4"><a href="">투어</a></li>
+						<li class="i5">
+							<a href="">티켓/패스</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">티켓/패스</a></li>
+									<li><a href="">유레일패스/기차표</a></li>
+									<li><a href="">렌터카</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<script>
+					$(function() {
+						$util = $('.userbx');
+						$util.on('focusin', function() {
+							$(this).addClass('open');
+						});
+
+					})
+					</script>
+				</nav>
+				<div class="hd-r">
+					<ul class="gnb right-gnb clear">
+						<li class="i6">
+							<a href=""><span class="icon_comm">커뮤니티</span></a>
+							<!-- [D] class="active" 추가시 dep2 보여짐 -->
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="">커뮤니티홈</a></li>
+									<li><a href="">톡톡릴레이</a></li>
+									<li><a href="" class="active">구인ㆍ구직</a></li>
+									<li><a href="">사고ㆍ팔고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="i7">
+							<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">이벤트</a></li>
+									<li><a href="">민다특가</a></li>
+									<li><a href="">쿠폰존</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<form action="." class="srch_wrp">
+						<button type="button" class="icon_srch_gnb">검색</button>
+						<div class="silde-wrap">
+							<div class="input-group">
+								<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+								<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+								<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+							</div>
+						</div>
+					</form>
+					<div class="util">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+							<ul class="dropdown-menu">
+								<li><a href="">나의 가이드북</a></li>
+								<li><a href="">나의 숙소예약</a></li>
+								<li><a href="">정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dep2_bg"></div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- <span class="sub_bg"></span> -->
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<!-- loaction -->
+				<div class="bread_crumb text-right">
+					<ul class="d_iblock clearfix">
+						<li><a href="" class="icon_house">홈</a></li>
+						<li><a href="">이벤트</a></li>
+						<li>민다이벤트</li>
+					</ul>
+				</div>
+				<!-- 서브 헤더 -->
+				<header class="sub_hd">
+					<h2>민다이벤트</h2>
+<!-- 					<div class="sub_arr_wrp">
+						<a href="" class="arr_prev">이전페이지</a>
+						<a href="" class="arr_next">다음페이지</a>
+					</div> -->
+				</header>
+				<!-- 게시글 뷰 -->
+				<section class="view">
+					<header class="clearfix">
+						<h3 class="sub_title mt10 mb5">[진행중인 이벤트] 2016년 유럽철도 프로모션</h3>
+						<p class="color_dark_grey fs16 mb5"><i class="icon_date_blk"></i>2016.04.06~2016.04.30</p>
+						<dl class="view_info des_icon_wrp">
+							<dt class="icon_user_grey">글쓴이</dt>
+							<dd>홍길동</dd>
+							<dt class="icon_date">등록날짜</dt>
+							<dd>2016.04.16</dd>
+							<dt class="icon_hits">조회수</dt>
+							<dd>23</dd>
+							<dt class="icon_like_grey">좋아요 개수</dt>
+							<dd>3</dd>
+						</dl>
+						<ul class="link_lst clearfix">
+							<li class="pull-left"><a href="" class="icon_link_face">페이스북으로 공유하기</a></li>
+							<li class="pull-left"><a href="" class="icon_link_twi">트위터로 공유하기</a></li>
+							<li class="pull-left"><a href="" class="icon_link_kakao">카카오톡으로 공유하기</a></li>
+							<li class="pull-left"><a href="" class="icon_link_url">URL 공유하기</a></li>
+						</ul>
+					</header>
+					<!-- 뷰 텍스트 -->
+					<div class="viewbody">
+						<!-- event-pickup-wrap -->
+						<div style="max-width:1040px;margin:0 auto;padding-bottom:30px">
+							<div class="pr">
+								<img src="http://www.theminda.com/event/img/201704/insurance/img1.jpg" alt="" />
+								<div class="sr-only">
+									<h2>여행자보험 오픈 기념 이벤트</h2>
+									<strong>여행자보험 가입하면 엄청난 선물이</strong>
+								</div>
+							</div>
+							<div class="pr">
+								<img src="http://www.theminda.com/event/img/201704/insurance/img2_1.jpg" alt="" />
+								<div class="sr-only">
+									<p>자유여행 준비의 완성 여행자보험 지금 민다에서 여행자 보험 가입하면 여행자를 위한 엄.청.난 혜택이 쏟아져요!</p>
+									<p>지금 여행자 보험가입으로 여행준비 마무리하시고 이벤트 혜택도 꼭 받아가세요~! </p>
+									<h3>이벤트 기간</h3>
+									<dl>
+										<dt>기간</dt>
+										<dd>2017. 4. 11~5. 8</dd>
+										<dt>발표</dt>
+										<dd>2017. 5. 10</dd>
+										<dt>경품발송</dt>
+										<dd>2017. 5. 17</dd>
+									</dl>
+									<h3>응모방법</h3>
+									<ol>
+										<li>여행자보험 가입하기 클릭</li>
+										<li>여행자보험 메뉴 클릭</li>
+										<li>여행자 보험 가입 </li>
+										<li>이벤트 댓글 응모</li>
+									</ol>
+								</div>
+							</div>
+							<div>
+								<img src="http://www.theminda.com/event/img/201704/insurance/img3.jpg" alt="" />
+								<div class="sr-only">
+									<h3>경품안내</h3>
+									<ul>
+										<li>캐논미러리스 M3 1명</li>
+										<li>내셔널지오그래픽 매킨리 백팩  2명</li>
+										<li>내셔널지오그래픽 슬링백 3명</li>
+										<li>샤오미 보조배터리 20,000 4명</li>
+										<li>스타벅스 아메리카노 Tall 50명</li>
+									</ul>
+								</div>
+							</div>
+							<div style="background-color:#4db4f6;text-align:center;padding-bottom:8%">
+								<a href="https://www.trippartners.co.kr/?cafe=MDWA" target="_blank"><img src="http://www.theminda.com/event/img/201704/insurance/btn1.png" alt="" /></a>
+							</div>
+							<div>
+								<img src="http://www.theminda.com/event/img/201704/insurance/img4.jpg" alt="" />
+								<div class="sr-only">
+									<h3>응모 전 필독사항</h3>
+									<ul>
+										<li>아메리카노 경품 경우 시즈널한 상황에 따라 브랜드가 변경될 수 있습니다.</li>
+										<li>이벤트 당첨 후 경품 발송은 가입하신 회원 주소 및 연락처로 발송 됩니다. </li>
+										<li>회원가입 시 주소 및 연락처가 상이할 경우 경품 발송 시 경품 혜택을 받지 못하며 추후 경품 혜택은 받을 수 없습니다.</li>
+										<li>이벤트 경품은 대리자가 수령할 수 없으며 반드시 이벤트 참여자 본인만 받을 수 있습니다.</li>
+										<li>시가 50,000원 이상 경품은 제세공과금  4.4%를 지급하셔야 합니다.</li>
+										<li>선발 당시 지원서의 개인정보 기입 오류로 인해 연락이 되지 않을 경우 선발이 취소됩니다.</li>
+										<li>보험을 가입하지 않는 분들은 이벤트 추첨에서 제외 됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 뷰 텍스트 -->
+					<div class="view_cmt_wrp">
+						<dl class="view_info des_icon_wrp">
+							<dt>댓글</dt>
+							<dd><span class="color_mint ml7">0</span>개</dd>
+							<dt class="icon_like_grey">좋아요 개수</dt>
+							<dd>3</dd>
+						</dl>
+						<form action=".">
+							<div class="pr mt12">
+								<textarea class="form-control" placeholder="내용을 입력해주세요"></textarea>
+								<button type="button" class="bg_dark_grey">등록</button>
+							</div>
+						</form>
+					</div>
+					<!-- 답변리스트 -->
+					<ul class="review_lst lst_style_cmt">
+						<li class="user_review_wrp">
+							<span class="label bg_org fw400">베스트</span>
+							<div class="meta">
+								<span class="user">rkgud0119</span>
+								<span class="date">2016.04.06</span>
+							</div>
+							<p class="txt">
+								유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+							</p>
+							<div class="component">
+								<button type="button" class="btn like_btn active"><span class="icon_like">좋아요 선택됨</span>45</button>
+								<!-- [D] 추천 active 추가 -->
+								<button type="button" class="btn"><span class="icon_cmt">리뷰에 달린 댓글보기</span>23</button>
+							</div>
+						</li>
+						<li class="user_review_wrp">
+							<div class="meta">
+								<span class="user">rkgud0119</span>
+								<span class="date">2016.04.06</span>
+							</div>
+							<p class="txt">
+								유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+							</p>
+							<div class="component">
+								<button type="button" class="btn like_btn active"><span class="icon_like">좋아요 선택됨</span>45</button>
+								<!-- [D] 추천 active 추가 -->
+								<button type="button" class="btn"><span class="icon_cmt">리뷰에 달린 댓글보기</span>23</button>
+							</div>
+						</li>
+						<li class="user_review_wrp">
+							<div class="meta">
+								<span class="user">rkgud0119</span>
+								<span class="date">2016.04.06</span>
+							</div>
+							<p class="txt">
+								유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+							</p>
+							<div class="component">
+								<button type="button" class="btn like_btn active"><span class="icon_like">좋아요 선택됨</span>45</button>
+								<!-- [D] 추천 active 추가 -->
+								<button type="button" class="btn"><span class="icon_cmt">리뷰에 달린 댓글보기</span>23</button>
+							</div>
+						</li>
+					</ul>
+					<!-- // 답변리스트 -->
+					<!-- 페이징 -->
+					<nav class="text-center pb30 pr">
+						<ul class="pagination clearfix">
+							<li class="prev"><a href="">이전페이지목록보기</a></li>
+							<li><a href="">1</a></li>
+							<li><a href="" class="active">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li class="next"><a href="">다음페이지목록보기</a></li>
+						</ul>
+						<a href="" class="btn btn-lg bg_org evt_back_btn"><i class="icon_list"></i>목록</a>
+					</nav>
+				</section>
+				<ul class="page_control border_grey mt60">
+					<li class="tb_bx tb_fixed">
+						<span><i class="icon_page_prev"></i>이전글</span>
+						<a href="">이전글 제목입니다.</a>
+						<span class="date">2016.03.31</span>
+					</li>
+					<li class="tb_bx tb_fixed">
+						<span><i class="icon_page_next"></i>다음글</span>
+						<a href="">다음글 제목입니다.</a>
+						<span class="date">2016.03.31</span>
+					</li>
+				</ul>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh mb3">information</strong>
+					<div class="ft_info_txt fs13">
+						<span>(주)사막</span>
+						<span>대표 : 김윤회</span>
+						<span>사업자등록번호 : 010-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt fs13">
+						<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+						<span>TEL : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+						<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+					</div>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+						<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+						<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+					</ul>
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="">회사소개</a></li>
+						<li><a href="">민박등록신청</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="" class="color_org">개인정보취급방침</a></li>
+						<li><a href="">민박다나와 취소환불규정</a></li>
+						<li><a href="">사이트맵</a></li>
+						<li><a href="">고객센터</a></li>
+						<li><a href="">공지사항</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<div class="fix_btm">
+		<!-- quick  -->
+		<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+	</div>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="/cust/js/bootstrap-slider.js"></script>
+	<script src="/cust/js/jquery.nanoscroller.js"></script>
+	<script src="/cust/js/moment.min.js"></script>
+	<script src="/cust/js/daterangepicker.js"></script>
+	<script src="/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="/cust/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+.main-rev-info{
+	.main-rev-info__list{
+		&:after{
+			@include clearboth();
+		}
+		margin-right:-5px;
+	}
+	.main-rev-info__box{
+		float:left;
+		width:20%;
+		padding-right:5px;
+		text-align:center;
+
+	}
+	.main-rev-info__link{
+		display:block;
+		@include text(#333);
+		@include box-style(50px, 30px, 28px, 30px);
+	}
+	.main-rev-info__icon{
+		@include icon-cm-spr(41px,41px,0,0);
+	}
+	$i : 0;
+	@while $i<6{
+		.main-rev-info__icon--#{$i+1}{
+			background-position: -41*$i+px 0
+		}
+		$i : $i+1;
+	}
+	.main-rev-info__txt{
+		margin-top:30px;
+		&:after{
+			@include clearboth();
+		}
+	}
+	.main-rev-info__tit{
+		float:left;
+		margin-top:3px
+	}
+	.main-rev-info__cnt{
+		float:right;
+		width:40%;
+		text-align:right;
+		font-size:22px;
+	}
+	.main-rev-info__num{
+		font-weight:$fw__700;
+	}
+}
+.main-info{
+	&:after{
+		@include clearboth();
+	}
+	.main-info__left{
+		float:left;
+		width:842px;
+		margin-right:40px;
+	}
+	.main-info__right{
+		width:361px;
+		float:left;
+	}
+}
+
+.main-grade {
+	.main-grade__box{
+		display: table;
+		table-layout:fixed;
+		width:100%;
+		@include box-style(29px,0,26px,0);
+	}
+	.main-grade__before, .main-grade__after, .main-grade__arr{
+		display: table-cell;
+	}
+	.main-grade__before{
+		padding:0 0 0 50px;
+		&:after{
+			@include clearboth();
+		}
+	}
+	.main-grade__after{
+		padding:0 0 0 30px;
+		&:after{
+			@include clearboth();
+		}
+	}
+	.main-grade__arr{
+		width:148px;
+		vertical-align:middle;
+	}
+	.main-grade__arr-icon{
+		@include icon-cm-spr(148px,40px,0,-131px);
+		font-size:12px;
+		padding:12px 0 0 10px;
+	}
+	.main-grade__icon{
+		@include grade-icon(49px,56px);
+		float:left;
+		margin:28px 30px 0 0;
+	}
+	.main-grade__spec{
+		margin-left:79px
+	}
+	.main-grade__name{
+		@include text($color__blk,16px,$fw__700);
+		margin-bottom:14px;
+	}
+	.main-grade__desc{
+		@include list-dot();
+		line-height: 22px;
+		margin-left:-3px;
+	}
+}
+.main-notice{
+	clear:both;
+	width:50%;
+	float:left;
+	.main-notice__box{
+		height:188px;
+		@include box-style(12px,20px,13px,20px);
+	}
+	padding-right:5px;
+}
+
+
+.main-qna{
+	width:50%;
+	float:left;
+	.main-qna__box{
+		height:188px;
+		@include box-style(12px,20px,13px,20px);
+	}
+	padding-left:5px;
+}
+
+.main-contact {
+	.main-contact__box{
+		@include box-style(20px,35px,15px,35px);
+		position:relative;
+		&:not(:last-child){
+			margin-bottom:5px;
+		}
+	}
+	.main-contact__icon{
+		@include icon-cm-spr(46px,46px,-30px,-41px);
+		position: absolute;
+		left:35px;
+		top:50%;
+		margin-top:-23px;
+	}
+	.main-contact__desc{
+		margin:0 0 0 77px;
+	}
+	.main-contact__name{
+		@include text($color__blk, 16px, 500);
+		display:block;
+		margin-bottom:8px
+	}
+	.main-contact__txt{
+		line-height:22px;
+	}
+}
+.main-account {
+	.main-account__box{
+		@include box-style(20px,35px,20px,35px);
+		position:relative;
+	}
+	.main-account__icon{
+		@include icon-cm-spr(46px,46px,-76px,-41px);
+		position: absolute;
+		left:35px;
+		top:50%;
+		margin-top:-23px;
+	}
+	.main-account__desc{
+		margin:0 0 0 77px;
+	}
+	.main-account__tit{
+		@include text($color__blk, 16px, 500);
+		display:block;
+		margin-bottom:8px
+	}
+	.main-account__txt{
+		line-height:22px;
+	}
+}

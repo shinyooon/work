@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/manager/common/css/slider.css">
+	<link rel="stylesheet" href="/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="/manager/common/css/admin.css">
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!--h1 class="logo"><a href="/manager/"><img src="/manager/common/img/logo_big.png" alt="민다(민박다나와) 파트너홈"></a></h1-->
+					<h1 class="logo"><a href="/manager/index.php"><img src="/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--2016-11-29 yuna nav 위치 수정, 클래스 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="/manager/index.php">숙소</a></li>
+							<li><a href="/manager/travel/index.php" class="none">여행정보</a></li>
+							<li><a href="/manager/tg/index.php" class="none">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!--2016-08-31 yuna 공지사항 주석 -->
+						<!-- <a href="/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+						<a href="/manager/manager_edit.php?actionFlag=M" class="account">파리 로즈민박님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+						<a href="javascript:showOneIdModal();" class="btn btn-xs btn_border_grey">통합ID</a>
+						<a href="/main/view.php?goodsno=1600" class="btn link-go"><span class="icon_house_org mr5"></span>숙소 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1260">
+				<header class="sub_hd">
+					<h2>파트너 정보 수정</h2>
+				</header>
+				<!-- 컨텐츠 영역 -->
+				<div class="content_body admin_room_wrp clearfix">
+					<div class="body_tit clearfix">
+						<p class="pull-left fs14"><b class="color_red">*</b> 표시는 필수 입력항목입니다.</p>
+					</div>
+					<div class="term_bx mt0">
+						<div class="tbl-wrap3">
+							<table class="tb tb-default tb_input">
+								<caption class="sr-only">파트너 입력양식</caption>
+								<colgroup>
+									<col style="width:155px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">아이디 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" name="mid" id="txtMid" maxlength="12" value="rose51" class="form-control-basic wid_lg bd0" title="아이디" READONLY />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">비밀번호</th>
+										<td>
+											<input type="password" name="password1" value="" maxlength="12" class="form-control-basic wid_lg" placeholder="띄어쓰기 없이 영숫자 조합 8~12자로 입력해주세요." title="비밀번호" />
+											<p class="form-control-static color_mint">※ 변경을 원하실 경우만 입력해 주세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">비밀번호 확인</th>
+										<td>
+											<input type="password" name="password2" value="" maxlength="12" class="form-control-basic wid_lg" title="비밀번호 확인" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="term_bx">
+						<div class="tbl-wrap3">
+							<table class="tb tb-default tb_input">
+								<caption class="sr-only">파트너 입력양식</caption>
+								<colgroup>
+									<col style="width:155px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">이름(실명) <b class="color_red">*</b></th>
+										<td>
+											<input type="text" name="state" value="허경희" maxlength="12" class="form-control-basic wid_lg bd0" title="이름(실명)" READONLY />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">이메일 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" class="form-control-basic wid_smd" title="이메일 주소 아이디부분">
+											<span class="form-control-static">@</span>
+											<input type="text" class="form-control-basic wid_smd" title="이메일 주소 도메인부분">
+											<select class="form-control-basic wid_sm ml5" style="padding-left:1px;" name="sltEmail" onChange="$('#txtEmail2').val(this.value);">
+												<option value="">직접입력</option>
+												<option value="naver.com">네이버</option>
+												<option value="hanmail.net">한메일</option>
+												<option value="hotmail.com">핫메일</option>
+												<option value="nate.com">네이트</option>
+												<option value="paran.com">파란</option>
+												<option value="empal.com">엠파스</option>
+												<option value="dreamwiz.com">드림위즈</option>
+												<option value="freechal.com">프리첼</option>
+												<option value="lycos.co.kr">라이코스</option>
+												<option value="korea.com">코리아닷컴</option>
+												<option value="gmail.com">지메일</option>
+												<option value="hanmir.com">한미르</option>
+											</select>
+											<ul class="color_mint">
+												<li>
+													※ 승인 절차에 필요한 메일이 발송되오니 정확하게 입력해 주시기 바랍니다.
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">사업자명 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" name="minbaknm" value="파리 로즈민박" maxlength="20" class="form-control-basic wid_lg bd0" placeholder="회사명, 숙소명등 대표되는 이름을 작성해 주세요." title="사업자명" READONLY />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">전화번호 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" name="phone_ctr" id="txtPhone_ctr" value="" maxlength="3" class="form-control-basic" style="width:80px;display:inline-block;" title="국제번호" placeholder="국제번호" />
+											<input type="text" name="phone" id="txtPhone" value="02-0000-0000" maxlength="40" class="form-control-basic" style="width:150px;display:inline-block;" title="전화번호" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">핸드폰번호 <b class="color_red">*</b></th>
+										<td>
+											<input type="text" name="mobile_ctr" id="txtMobile_ctr" value="" maxlength="3" class="form-control-basic" style="width:80px;display:inline-block;" title="국제번호" placeholder="국제번호" />
+											<input type="text" name="mobile" id="txtMobile" value="010-0000-0000" maxlength="40" class="form-control-basic" style="width:150px;display:inline-block;" title="핸드폰번호" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">인터넷전화번호 </th>
+										<td>
+											<input type="text" name="internetphone" id="txtInternetphone" value="-" maxlength="40" class="form-control-basic" style="width:232px;display:inline-block;" title="인터넷전화번호" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">카카오톡ID</th>
+										<td>
+											<input type="text" name="kakao" value="" maxlength="30" class="form-control-basic wid_lg" title="카카오톡ID" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">프로필 사진</th>
+										<td>
+											<ul class="color_mint">
+												<li>
+													* 자신의 이미지를 잘 살릴 수 있는 사진을 등록해주세요. (예:본인 사진, 직접 찍은 풍경 등)
+												</li>
+											</ul>
+											<ul class="upload_img_lst row">
+												<li class="col-xs-3" style="width:100px;">
+													<img class="img-circle" id="imgPreview1" src="/cust/img/admin_profile_none.png" alt="프로필 사진" style="width:88px;height:88px;" onClick="jQuery('#divImagePreview').modal(); $('#imgPreview').attr('src','/cust/img/admin_profile_none.png');">
+												</li>
+												<li class="col-xs-3" style="margin-top:30px;">
+													<input type="file" name="images[]" id="input_file1" style="width:210px;display:inline;">
+													<input type="button" id="btnDel1" class="icon_image_close" onClick="fnImgReset(1);$('#btnDel1').hide();" title="이미지 삭제">
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">한마디 소개</th>
+										<td>
+											<ul class="color_mint">
+												<li>
+													* 나를 알릴 수 있는 한마디로 여행자들에게 적극 어필해보세요.
+												</li>
+											</ul>
+											<input type="text" name="comment" value="" maxlength="120" class="form-control-basic" title="한마디 소개" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">홈페이지</th>
+										<td>
+											<input type="text" name="homepage" value="http://" maxlength="120" class="form-control-basic" placeholder="회사 홈페이지, 카페 또는 블로그URL" title="한마디 소개" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="term_bx">
+						<h3 class="tit">숙소 추가 수정 </h3>
+						<div class="tbl-wrap3">
+							<table class="tb tb-default tb_input">
+								<caption class="sr-only">파트너 입력양식</caption>
+								<colgroup>
+									<col style="width:155px">
+									<col>
+								</colgroup>
+								<tbody>
+									<!-- Form Start -->
+									<form name="frmEdit" method="post" action="manager_save.php" enctype="multipart/form-data">
+										<!-- 기존데이타 체크 -->
+										<input type="hidden" name="o[state]" value="허경희">
+										<input type="hidden" name="o[profile_img]" value="">
+										<input type="hidden" name="o[comment]" value="">
+										<input type="hidden" name="o[email]" value="testminbak@minbakdanawa.com">
+										<input type="hidden" name="o[phone_ctr]" value="">
+										<input type="hidden" name="o[phone]" value="02-0000-0000">
+										<input type="hidden" name="o[mobile_ctr]" value="">
+										<input type="hidden" name="o[mobile]" value="010-0000-0000">
+										<input type="hidden" name="o[internetphone]" value="-">
+										<input type="hidden" name="o[homepage]" value="http://">
+										<input type="hidden" name="o[kakao]" value="">
+										<!--// 기존데이타 체크 -->
+										<input type="hidden" name="mode" value="admin_edit">
+										<input type="hidden" id="actionFlag" name="actionFlag" value="M">
+										<input type="hidden" id="oldEmail" value="testminbak@minbakdanawa.com">
+										<input type="hidden" name="profile_img" value="">
+										<input type="hidden" id="chkEmail" value="T">
+										<input type="hidden" id="check_yn" value="N">
+										<input type="hidden" id="saveIng" value="N">
+										<tr>
+											<th scope="row">계좌정보</th>
+											<td>
+												<p class="form-control-static color_mint ma0">* 계좌정보는 '고객센터 &gt; 고객센터 문의'로 접수해 주세요.</p>
+												우리은행: 1002-5456-69707 (예금주: CUI ZHE SONG)
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">무료숙박권 후원</th>
+											<td>
+												<p class="form-control-static color_mint ma0">* 무료숙박권은 앞으로 진행될 이벤트 등을 통해 민다 회원들에게 제공되며, 후원 숙소는 그로 인한 홍보효과를 얻으실 수 있습니다..</p>
+												<label class="inline-checkbox basic chk_label" for="sponsor">
+													<input type="checkbox" name="sponsor" value="1" id="sponsor">후원
+												</label>
+											</td>
+										</tr>
+									</form>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix pt20 pb60">
+					<div class="pr">
+						<div class="text-right">
+							<button type="button" class="btn bg_dark_grey btn-md w165 mr2">취소</button>
+							<button type="button" class="btn bg_org btn-md w165">수정</button>
+						</div>
+					</div>
+				</div>
+				<!-- //원본 이미지 보기 -->
+				<div id="divImagePreview" class="modal fade" tabindex="-1" role="dialog">
+					<div class="modal-dialog modal-img" style="text-align:center;">
+						<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+						<img src="" id="imgPreview">
+					</div>
+				</div>
+				<!-- //원본 이미지 보기 -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer 2016-10-28 수정 -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1661-2892)</p>
+			<!-- <a href="/manager/minbak_rule_01.php" class="split">숙소주 이용약관</a>
+		<a href="/manager/minbak_rule_02.php" class="split">숙소주 광고이용약관</a> -->
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/manager/common/js/jquery.placeholder.js"></script>
+<script src="/manager/common/js/html5.js"></script>
+<script src="/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="/cust/js/bootstrap-slider.js"></script>
+	<script src="/cust/js/jquery.nanoscroller.js"></script>
+	<script src="/cust/js/moment.min.js"></script>
+	<script src="/cust/js/daterangepicker.js"></script>
+	<script src="/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="/cust/js/common.js"></script>
+</body>
+
+</html>

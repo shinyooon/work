@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+$grade : (level1:bronze, level2:silver, level3:gold, level4:platinum, level5:master);
+
+@mixin grade-icon ($width, $height, $background-size-w:250px){
+	display:inline-block;
+	width : $width;
+	height : $height;
+	background-image:url(#{$path}/img/spr_icon_grade.png?v=#{$img_version});
+	background-size: $background-size-w auto;
+}
+
+@mixin grade-bg-pos($grade,$width:50){
+	@if $grade == 'bronze'{background-position:-$width *4 + px 0}
+	@if $grade == 'silver'{background-position:-$width *3 + px 0}
+	@if $grade == 'gold'{background-position:-$width *2 + px 0}
+	@if $grade == 'platinum'{background-position:-$width *1 + px 0}
+	@if $grade == 'master'{background-position:0 0}
+}
+
+@each $key, $level in $grade {
+	.grade__icon--#{$level}{
+		@include grade-bg-pos(#{$level}, 50);
+	}
+	.header__grade-icon.grade__icon--#{$level}, .membership__grade-icon.grade__icon--#{$level}{
+		@include grade-bg-pos(#{$level}, 23);
+	}
+}
+
+.header__grade-icon, .membership__grade-icon{
+	vertical-align:top;
+	@include sr-only(true);
+	@include grade-icon(23px,25px,115px);
+	margin:-4px 6px 0  0;
+}
+
+@mixin star($size : 'sm', $color:''){
+	display:inline-block;
+	vertical-align:top;
+	.star-wrap__item{
+		display:block;
+	}
+	& + .star-wrap__cnt{
+		display:inline-block;
+		vertical-align:top;
+		line-height:1em;
+	}
+	@if $size == sm{
+		width: 17px * 5 - 2px;
+		&, .star-wrap__item{
+			height:15px;
+			background-image:url(#{$path}/img/spr_star.png?v=#{$img_version});
+		}
+		.star-wrap__item{
+			background-position: 0 -25px;
+		}
+		& + .star-wrap__cnt{
+			margin-left:5px
+		}
+	}
+	@else if $size == lg{
+		width: 21px * 5 - 3px;
+		&, .star-wrap__item{
+			height:16px;
+			background-image:url(#{$path}/img/spr_star_lg.png?v=#{$img_version});
+		}
+		.star-wrap__item{
+			background-position: 0 -25px;
+		}
+		& + .star-wrap__cnt{
+			margin-left:10px;
+			font-size:25px;
+			margin-top:-3px
+		}
+	}
+	@if($color==green){
+		.star-wrap__item{
+			height:16px;
+			background-position: 0 -50px;
+		}
+		& + .star-wrap__cnt{
+			color:$color__green;
+		}
+	}
+}
+.starrating {
+	&:after {
+		@include clearboth();
+	}
+}
+.star-wrap{
+	@include star();
+}
+.star-wrap--lg{
+	@include star(lg);
+}
+.star-wrap--lg--green{
+	@include star(lg,green);
+}
+
+// .pagination__icon--prev, .pagination__icon--next,.tit__more-arr,.see-more__icon,.info-cs__icon,.ly__header__icon,.main-contact__icon,.main-account__icon,.main-rev-info__icon, .main-grade__arr-icon,.main-contact__icon,.rev-manage__srch-icon, .rev-manage__icon-voucher,.rev-basic__icon--plus, .rev-basic__icon--equal,.ly__icon-back, .rev-list__icon-clse,.srch-room__icon-like, .view-rev__icon-arr {
+// 	display:inline-block;
+// 	background-image:url(#{$path}/img/spr_icon_cm.png?v=#{$img_version});
+// 	background-repeat:no-repeat;
+// 	vertical-align:top;
+// }
+.dot--red{
+	display:inline-block;
+	width:4px;
+	height:4px;
+	@include sr-only(true);
+	background-color:$color__red;
+	vertical-align:middle;
+	margin:0 4px;
+	@include border-radius(4px);
+}

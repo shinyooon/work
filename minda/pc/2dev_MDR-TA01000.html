@@ -1,0 +1,855 @@
+<? include "inc/top.html" ?>
+<style type="text/css">
+    .fix_btm {display:none;}
+</style>
+<!-- wrap.screenID -->
+<div id="wrap" class="full-wrap">
+	<!-- header -->
+	<? include "inc/header_login.html" ?>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<!-- 페이지 시작-->
+		<div class="map">
+			<!-- 지도영역 -->
+			<img class="" src="_temp/map.jpg" alt="" style="height:100%;width:100%">
+
+			<!-- 마크 -->
+			<span class="marker--sight" style="position:absolute;top:300px;right:900px"><img src="/cust/img/icon/mark_sight.svg" alt="" /></span>
+			<span class="marker--sight is-active" style="position:absolute;top:300px;right:880px"><img src="/cust/img/icon/mark_sight_on.svg" alt="" /></span>
+			<span class="marker--traffic" style="position:absolute;top:450px;right:920px"><img src="/cust/img/icon/mark_traffic.svg" alt="" /></span>
+			<span class="marker--traffic is-active" style="position:absolute;top:450px;right:900px"><img src="/cust/img/icon/mark_traffic_on.svg" alt="" /></span>
+			<span class="marker--shop is-active" style="position:absolute;top:450px;right:630px"><img src="/cust/img/icon/mark_shop_on.svg" alt="" /></span>
+			<span class="marker--shop" style="position:absolute;top:470px;right:680px"><img src="/cust/img/icon/mark_shop.svg" alt="" /></span>
+			<span class="marker--shop" style="position:absolute;top:450px;right:400px"><img src="/cust/img/icon/mark_shop.svg" alt="" /></span>
+			<span class="marker--restaurant is-active" style="position:absolute;top:150px;right:900px"><img src="/cust/img/icon/mark_restaurant_on.svg" alt="" /></span>
+			<span class="marker--restaurant" style="position:absolute;top:120px;right:870px"><img src="/cust/img/icon/mark_restaurant.svg" alt="" /></span>
+			<span class="marker--restaurant" style="position:absolute;top:180px;right:860px"><img src="/cust/img/icon/mark_restaurant.svg" alt="" /></span>
+			<span class="marker--basic" style="position:absolute;top:300px;right:1000px">22,000</span>
+			<span class="marker--basic" style="position:absolute;top:400px;right:900px">32,000</span>
+			<span class="marker--basic" style="position:absolute;top:330px;right:940px">52,000</span>
+			<span class="marker--basic" style="position:absolute;top:500px;right:1000px">1,110,000</span>
+			<!-- 사이드컨트롤 -->
+			<!-- 2016-08-29 edit -->
+			<div class="control_wrp--v2">
+				<div class="map_control--v2">
+					<button type="button" class="basic on">숙소</button>
+					<button type="button" class="sights">명소</button>
+					<button type="button" class="restaurant">맛집</button>
+					<button type="button" class="shopping">쇼핑</button>
+					<button type="button" class="traffic">교통</button>
+				</div>
+				<script>
+					$(function  () {
+						$('.map_control--v2 button').click(function(){
+							$(this).toggleClass("on");
+						});
+					})
+				</script>
+				<!--<div class="zoom_control">
+					<button type="button" class="zoomin">지도확대</button>
+					<button type="button" class="zoomout">지도축소</button>
+				</div>-->
+			</div>
+			<!--// 2016-08-29 edit -->
+			<div class="lyr_mark_detail lyr_mark_detail--v2">
+				<a href="">
+					<div class="thmb">
+						<img src="_temp/tmb4.jpg" alt="">
+						<span class="room-list__discount">90%할인</span>
+					</div>
+					<div class="des">
+						<h2 class="tit ellipsis">
+							스팟제목 제목제목제목제목 제목이 길어질 경우 두줄로 노출
+						</h2>
+						<div class="price">
+							<!--<span class="roomtype">콘도형 4인</span>
+							<span class="before_price">￦1,233,585</span>-->
+							<span class="current_price">￦1,009,800~</span>
+						</div>
+						<!-- room-list__btm-->
+						<div class="meta room-list__btm">
+							<!-- room-list__btm-info -->
+							<div class="room-list__btm-info">
+								<ul class="lst_inline dot_lst">
+									<li class="is-on">즉시예약</li>
+									<li>전액결제</li>
+									<li class="is-on">SALE</li>
+									<li>NEW</li>
+								</ul>
+							</div>
+							<!--// room-list__btm-info -->
+							<!-- room-list__btm-cnt -->
+							<div class="room-list__btm-cnt">
+								<ul class="split_lst lst_inline">
+									<li>
+										첫 리뷰를 작성해주세요!
+									</li>
+									<li>저장<span class="room-list__btm-cnt-num">305</span></li>
+								</ul>
+							</div>
+							<!--// room-list__btm-cnt -->
+						</div>
+						<!--// room-list__btm-->
+					</div>
+
+					<!-- beststay -->
+					<div class="beststay">
+						<ul class="beststay__list">
+							<li class="beststay__item dropdown-hover dropdown-hover--top">
+								<span class="beststay__icon"><img src="/cust/img/icon_beststay_rev.png" alt=""  /></span>2017 BEST STAY 예약
+								<div class="dropdown-content">
+									<div class="inner">
+										<p class="beststay__sub-tit">2017 BEST STAY 예약</p>
+										<p class="beststay__desc">확정예약이 가장 많은 숙소입니다.</p>
+										<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+									</div>
+								</div>
+							</li>
+							<li class="beststay__item dropdown-hover dropdown-hover--top">
+								<span class="beststay__icon"><img src="/cust/img/icon_beststay_facility.png" alt="" /></span>2017 BEST STAY 시설
+								<div class="dropdown-content">
+									<div class="inner">
+										<p class="beststay__sub-tit">2017 BEST STAY 시설</p>
+										<p class="beststay__desc">실제 숙박자 분들이 남겨주신 시설 평점이
+											가장 높은 숙소입니다.</p>
+										<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+									</div>
+								</div>
+							</li>
+							<li class="beststay__item dropdown-hover dropdown-hover--top">
+								<span class="beststay__icon"><img src="/cust/img/icon_beststay_staff.png" alt="" /></span>2017 BEST STAY 스탭
+								<div class="dropdown-content">
+									<div class="inner">
+										<p class="beststay__sub-tit">2017 BEST STAY 스탭</p>
+										<p class="beststay__desc">실제 숙박자 분들이 남겨주신 스탭 평점이
+											가장 높은 숙소입니다.</p>
+										<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--// beststay -->
+				</a>
+				<button type="button" class="icon_close_grey">상세레이어닫기</button>
+			</div>
+			<div class="lyr_mark_detail lyr_mark_detail--v2" style="margin-left:319px">
+				<a href="">
+					<h2 class="tit ellipsis">
+						교통명교통명교통명교통명교통명
+					</h2>
+				</a>
+				<button type="button" class="icon_close_grey">상세레이어닫기</button>
+			</div>
+			<div class="lyr_mark_detail lyr_mark_detail--v2" style="margin-left:-890px;">
+				<a href="">
+					<div class="thmb"><img src="http://www.theminda.com/data/travel/image/thumb/201609/1473276911_3.png" alt=""/>
+					</div>
+				</a>
+				<div class="des">
+					<a href="/spot/view.php?spotno=637" target="spotwin637">
+						<h2 class="tit twoline"><span class="color--sight">명소</span>배터시파크</h2>
+						<div class="info-list__btm">
+                            <div class="info-list__btm-cnt">
+                                <ul class="split_lst lst_inline">
+                                    <li>저장<span class="info-list__btm-cnt-num">3</span></li>
+                                    <li>현지인 리얼팁<span class="info-list__btm-cnt-num">1</span></li>
+                                    <li>리뷰<span class="info-list__btm-cnt-num">1</span></li>
+                                </ul>
+                            </div>
+                        </div>
+					</a>
+				</div>
+				<button type="button" class="icon_close_grey" id="closeinfowin" onclick="javascript:infoWin_clear();">상세레이어닫기</button>
+			</div>
+		</div>
+		<!-- //map -->
+		<!-- 숙소목록 -->
+		<div class="content side_room_type nano">
+			<div class="nano-content side-room-con"><!-- 2016-08-26 수정 side-room-con 클래스 추가 -->
+				<header class="hd_filter">
+					<!--2016-08-29 수정 yuna-->
+					<div class="srch_room_top">
+						<div class="form-group clearfix">
+							<span class="control-label col-xs-2">도시</span>
+							<div class="col-xs-10">
+								<div class="input-wrap">
+									<input type="text" id="" class="form-control"  placeholder="도시명을 입력하세요." title="도시명">
+									<button type="button" class="icon_search">검색</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--// 2016-08-29 수정-->
+					<!-- 날짜/인원수 -->
+					<div class="filter1"></div>
+					<!-- 객실유형/가격범위 -->
+					<div class="filter2">
+						<div class="form-horizontal">
+							<!--2016-08-29 수정 yuna-->
+							<div id="calendarWrp" class="daterange form-group">
+								<span class="control-label col-xs-2">날짜</span>
+								<div class="col-xs-10">
+									<div class="bx-input-wrap">
+										<div class="datewrp">
+											<input type="text" readonly="" id="daterange" class="form-control" onfocus="this.blur();$('#chkin_label').click();" placeholder="체크인">
+											<label for="daterange" class="datelabel" id="chkin_label"><span class="display-text chkin_txt">체크인</span></label>
+										</div>
+										<i class="icon_arrow"></i>
+										<div class="datewrp">
+											<input type="text" readonly="" id="chkout" class="form-control" onfocus="this.blur();$('#chkout_label').click();" placeholder="체크아웃">
+											<label for="chkout" class="datelabel" id="chkout_label"><span class="display-text chkout_txt">체크아웃</span></label>
+										</div>
+										<button type="button" style="display: block;" class="icon_date_close" onclick="javascript:resetDate();">달력초기화</button>
+										<script type="text/javascript">
+											$(function() {
+												var dateToday = new Date();
+												$('#daterange').daterangepicker({
+													autoApply: true,
+													minDate: dateToday,
+													parentEl: '#calendarWrp',
+													opens: "right",
+													locale: {
+														format: 'YYYY/MM/DD'
+													}
+												});
+												$('#daterange').on('apply.daterangepicker', function(ev, picker) {
+													$(".daterange label").addClass("hidden");
+												});
+											});
+										</script>
+										<!-- // [D] 0427 수정사항 -->
+									</div>
+
+								</div>
+							</div>
+							<!--// 2016-08-29 수정-->
+							<!-- 객실유형 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">객실유형</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn active">
+											<input type="checkbox" checked>도미토리
+										</label>
+										<label class="btn">
+											<input type="checkbox">개인실
+										</label>
+										<label class="btn">
+											<input type="checkbox">콘도룸
+										</label>
+										<label class="btn">
+											<input type="checkbox">도미토리
+										</label>
+										<label class="btn">
+											<input type="checkbox">개인실
+										</label>
+										<label class="btn">
+											<input type="checkbox">콘도룸
+										</label>
+										<label class="btn">
+											<input type="checkbox">도미토리
+										</label>
+										<label class="btn">
+											<input type="checkbox">개인실
+										</label>
+										<label class="btn">
+											<input type="checkbox">콘도룸
+										</label>
+									</div><!-- [D] 상단 filter_wrp 에 over 클래스 toggle-->
+									<a href="" class="icon_more" onClick="$(this).parent('.filter_wrp').toggleClass('over');return false;">객실유형더보기</a>
+								</div>
+							</div>
+							<!-- 가격범위  2017-02-21 순서변경 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">가격범위</span>
+								<div class="col-xs-10">
+									<div class="range_slider">
+										<input id="priceRange" type="text" data-slider-min="10" data-slider-max="150000" data-slider-step="1000" data-slider-value="[0,25000]" data-slider-tooltip="hide">
+										<div class="price_txt clearfix">
+											<span class="min pull-left">￦ 0</span>
+											<span class="max pull-right"><span class="color_mint">￦30,000</span> / ￦150,000</span>
+										</div>
+									</div>
+									<script>
+										//http://seiyria.com/bootstrap-slider/
+										$(function  () {
+											$("#priceRange").slider({});
+											$("#priceRange").on("slide", function(slideEvt) {
+												$(".price_txt .min").text('￦'+slideEvt.value[0]);
+												$(".price_txt .max span").text('￦'+slideEvt.value[1]);
+											});
+										})
+									</script>
+								</div>
+							</div>
+							<!-- 예약/결제방법 2017-02-21 add -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">예약/결제방법</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn">
+											<input type="checkbox">즉시예약
+										</label>
+										<label class="btn">
+											<input type="checkbox">전액결제
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- 객실시설 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">객실시설</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn active">
+											<input type="checkbox" checked>게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+										<label class="btn">
+											<input type="checkbox">게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+									</div>
+									<a href="" class="icon_more" onClick="$(this).parent('.filter_wrp').toggleClass('over');return false;">객실유형더보기</a>
+								</div>
+							</div>
+						</div>
+						<div id="plusFiliter" class="plus-filiter form-horizontal hide">
+
+							<!-- 숙소유형 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">숙소유형</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn active">
+											<input type="checkbox" checked>게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+										<label class="btn">
+											<input type="checkbox">게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+									</div>
+									<a href="" class="icon_more" onClick="$(this).parent('.filter_wrp').toggleClass('over');return false;">객실유형더보기</a>
+								</div>
+							</div>
+							<!-- 옵션 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">옵션</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn active">
+											<input type="checkbox" checked>게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+										<label class="btn">
+											<input type="checkbox">게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+									</div>
+									<a href="" class="icon_more" onClick="$(this).parent('.filter_wrp').toggleClass('over');return false;">객실유형더보기</a>
+								</div>
+							</div>
+							<!-- 위치 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">위치</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn active">
+											<input type="checkbox" checked>게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+										<label class="btn">
+											<input type="checkbox">게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+									</div>
+									<a href="" class="icon_more" onClick="$(this).parent('.filter_wrp').toggleClass('over');return false;">객실유형더보기</a>
+								</div>
+							</div>
+							<!-- 부가서비스 -->
+							<div class="form-group">
+								<span class="control-label col-xs-2">부가서비스</span>
+								<div class="col-xs-10 filter_wrp">
+									<div class="btn-group fix_type_mint" data-toggle="buttons">
+										<label class="btn active">
+											<input type="checkbox" checked>게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+										<label class="btn">
+											<input type="checkbox">게스트하우스
+										</label>
+										<label class="btn">
+											<input type="checkbox">펜션/콘도
+										</label>
+										<label class="btn">
+											<input type="checkbox">호스텔
+										</label>
+									</div>
+									<a href="" class="icon_more" onClick="$(this).parent('.filter_wrp').toggleClass('over');return false;">객실유형더보기</a>
+								</div>
+							</div>
+
+							<!-- 2016-08-29 수정 -->
+							<div class="filter_btn text-right">
+								<button type="button" class="btn btn-default filter_off">검색 초기화</button>
+								<button type="button" class="btn btn-default filter_close" onclick="$(this).parents('#plusFiliter').addClass('hide').next('.filter_btn').removeClass('hide')"><i class="icon_minus"></i>닫기</button>
+							</div>
+							<!--// 2016-08-29 수정 -->
+
+						</div>
+						<!-- 2016-08-29 수정 -->
+						<div class="filter_btn text-right">
+							<button type="button" class="btn btn-default filter_off">검색 초기화</button>
+							<button type="button" class="btn btn-default filter_on" onClick="$(this).parent().addClass('hide').prev('#plusFiliter').removeClass('hide')"><i class="icon_plus"></i>검색조건</button>
+						</div>
+						<!--// 2016-08-29 수정 -->
+					</div>
+
+				</header>
+				<div class="room_search_result room-srch-result--v2"><!-- 2017-11-20 [D] room-srch-result--v2 클래스 추가 -->
+					<div class="srch_hd clearfix">
+						<p class="txt pull-left"><span id="query_city">런던</span>에서 검색된 <span>숙소 <span id="query_cnt">105</span></span>개</p>
+						<p class="pull-right">
+							<span class="room-srch__select-tit">정렬기준</span>
+							<select class="itx" name="sort" id="goodsSort">
+								<option value="reserve">예약가능우선</option>
+								<option value="price">낮은가격</option>
+								<option value="average">평점</option>
+								<option value="goodsnm">가나다순</option>
+								<option value="wish">찜하기순</option>
+							</select>
+						</p>
+					</div>
+					<ul class="room_lst room-list--v2"><!-- 2017-11-20 [D] room-list--v2 클래스 추가 -->
+						<!-- 파워숙소 -->
+						<li class="power_room">
+							<h2 class="room-list__tit"><!-- 2017-11-20 [D] room-list__tit 클래스 추가 -->
+								<span class="room-list__tit-icon"></span>
+								파워숙소
+								<div class="ad-info">
+									<span class="ad-info__txt">광고</span>
+									<button type="button" class="no_style ad-info__btn"><i class="ad-info__icon"></i></button>
+									<div class="ad-info__desc">
+										<p class="ad-info__desc-txt">파워숙소 광고를 구입한 <br />숙소들이 보여지는 영역입니다.</p>
+									</div>
+								</div>
+							</h2>
+							<ul class="room_detail_lst room-list__detail-list"><!-- 2017-11-20 room_list__detail-list 클래스 명 추가 -->
+								<li class="pr">
+									<!-- item -->
+									<div class="item clearfix">
+										<a href="">
+											<div class="pull-left thumb"> <img src="_temp/room.png" alt="">
+												<!-- meta_lst 삭제하고 tmb_heart추가 -->
+												<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+												<!-- 2018-02-20 ad -->
+                                                <span class="room-list__discount">90%할인</span>
+                                                <!--// 2018-02-20 ad -->
+											</div>
+										</a>
+										<a href="">
+											<div class="room_des">
+												<h3 class="tit ellipsis">로마 자고가 하우스로마 자고가 하우스</h3>
+												<div class="price">
+													<span class="roomtype">콘도형 4인</span>
+													<span class="before_price">￦1,233,585</span>
+													<span class="current_price">￦1,009,800</span>
+												</div>
+												<!-- room-list__btm-->
+												<div class="meta room-list__btm">
+													<div class="room-list__btm-info">
+														<ul class="lst_inline dot_lst">
+															<li class="is-on">즉시예약</li>
+															<li>전액결제</li>
+															<li class="is-on">SALE</li>
+															<li>NEW</li>
+														</ul>
+													</div>
+													<!--// room-list__btm-info -->
+													<div class="room-list__btm-cnt">
+														<ul class="split_lst lst_inline">
+															<li>
+																첫 리뷰를 작성해주세요!
+															</li>
+															<li>저장<span class="room-list__btm-cnt-num">305</span></li>
+														</ul>
+													</div>
+													<!--// room-list__btm-cnt -->
+												</div>
+												<!--// room-list__btm-->
+											</div>
+											<!-- beststay -->
+											<div class="beststay">
+												<ul class="beststay__list">
+													<li class="beststay__item dropdown-hover dropdown-hover--top">
+														<span class="beststay__icon"><img src="/cust/img/icon_beststay_rev.png" alt=""  /></span>2017 BEST STAY 예약
+														<div class="dropdown-content">
+															<div class="inner">
+																<p class="beststay__sub-tit">2017 BEST STAY 예약</p>
+																<p class="beststay__desc">확정예약이 가장 많은 숙소입니다.</p>
+																<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+															</div>
+														</div>
+													</li>
+													<li class="beststay__item dropdown-hover dropdown-hover--top">
+														<span class="beststay__icon"><img src="/cust/img/icon_beststay_facility.png" alt="" /></span>2017 BEST STAY 시설
+														<div class="dropdown-content">
+															<div class="inner">
+																<p class="beststay__sub-tit">2017 BEST STAY 시설</p>
+																<p class="beststay__desc">실제 숙박자 분들이 남겨주신 시설 평점이
+																	가장 높은 숙소입니다.</p>
+																<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+															</div>
+														</div>
+													</li>
+													<li class="beststay__item dropdown-hover dropdown-hover--top">
+														<span class="beststay__icon"><img src="/cust/img/icon_beststay_staff.png" alt="" /></span>2017 BEST STAY 스탭
+														<div class="dropdown-content">
+															<div class="inner">
+																<p class="beststay__sub-tit">2017 BEST STAY 스탭</p>
+																<p class="beststay__desc">실제 숙박자 분들이 남겨주신 스탭 평점이
+																	가장 높은 숙소입니다.</p>
+																<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--// beststay -->
+										</a>
+									</div>
+									<!--// item -->
+								</li>
+								<li class="pr">
+									<div class="item clearfix">
+										<a href="">
+											<div class="pull-left thumb"> <img src="_temp/room.png" alt="">
+												<!-- meta_lst 삭제하고 tmb_heart추가 -->
+												<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+											</div>
+										</a>
+										<a href="">
+											<div class="room_des">
+												<h3 class="tit ellipsis">로마 자고가 하우스로마 자고가 하우스</h3>
+												<div class="price">
+													<span class="roomtype">콘도형 4인</span>
+													<span class="before_price">￡42~</span>
+													<span class="current_price">￡20~</span>
+												</div>
+												<!-- room-list__btm-->
+												<div class="meta room-list__btm">
+													<!-- room-list__btm-info -->
+													<div class="room-list__btm-info">
+														<ul class="lst_inline dot_lst">
+															<li>즉시예약</li>
+															<li>전액결제</li>
+															<li is-class="on">SALE</li>
+															<li>NEW</li>
+														</ul>
+													</div>
+													<!--// room-list__btm-info -->
+													<!-- room-list__btm-cnt -->
+													<div class="room-list__btm-cnt">
+														<ul class="split_lst lst_inline">
+															<li>
+																<span class="starrating"><span style="width:83.2%">83.2%</span> </span>
+																<span>리뷰<span class="room-list__btm-cnt-num">344</span></span>
+															</li>
+															<li>저장<span class="room-list__btm-cnt-num">305</span></li>
+														</ul>
+													</div>
+													<!--// room-list__btm-cnt -->
+												</div>
+												<!--// room-list__btm-->
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<!-- 플러스 숙소 -->
+						<li class="plus_room">
+							<h2 class="room-list__tit">
+								<span class="room-list__tit-icon"></span>
+								플러스숙소
+								<div class="ad-info">
+									<span class="ad-info__txt">광고</span>
+									<button type="button" class="no_style ad-info__btn"><i class="ad-info__icon"></i></button>
+									<div class="ad-info__desc">
+										<p class="ad-info__desc-txt">파워숙소 광고를 구입한 <br />숙소들이 보여지는 영역입니다.</p>
+									</div>
+								</div>
+							</h2>
+							<ul class="room_detail_lst room-list__detail-list"><!-- 2017-11-20 room_list__detail-list 클래스 명 추가 -->
+								<li class="pr">
+									<!-- item -->
+									<div class="item clearfix">
+										<a href="">
+											<div class="pull-left thumb"> <img src="_temp/room.png" alt="">
+												<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+											</div>
+										</a>
+										<a href="">
+											<div class="room_des">
+												<h3 class="tit ellipsis">로마 자고가 하우스로마 자고가 하우스</h3>
+												<div class="price">
+													<span class="roomtype">콘도형 4인</span>
+													<span class="before_price">￡42~</span>
+													<span class="current_price">￡20~</span>
+												</div>
+												<!-- room-list__btm-->
+												<div class="meta room-list__btm">
+													<!-- room-list__btm-info -->
+													<div class="room-list__btm-info">
+														<ul class="lst_inline dot_lst">
+															<li class="is-on">즉시예약</li>
+															<li class="is-on">전액결제</li>
+															<li >SALE</li>
+															<li>NEW</li>
+														</ul>
+													</div>
+													<!--// room-list__btm-info -->
+													<!-- room-list__btm-cnt -->
+													<div class="room-list__btm-cnt">
+														<ul class="split_lst lst_inline">
+															<li>
+																<span class="starrating"><span style="width:83.2%">83.2%</span> </span>
+																<span>리뷰<span class="room-list__btm-cnt-num">344</span></span>
+															</li>
+															<li>저장<span class="room-list__btm-cnt-num">305</span></li>
+														</ul>
+													</div>
+													<!--// room-list__btm-cnt -->
+												</div>
+												<!--// room-list__btm-->
+											</div>
+											<!-- beststay -->
+											<div class="beststay">
+												<ul class="beststay__list">
+													<li class="beststay__item dropdown-hover dropdown-hover--top">
+														<span class="beststay__icon"><img src="/cust/img/icon_beststay_staff.png" alt="" /></span>2017 BEST STAY 스탭
+														<div class="dropdown-content">
+															<div class="inner">
+																<p class="beststay__sub-tit">2017 BEST STAY 스탭</p>
+																<p class="beststay__desc">실제 숙박자 분들이 남겨주신 스탭 평점이
+																	가장 높은 숙소입니다.</p>
+																<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--// beststay -->
+										</a>
+									</div>
+									<!--// item -->
+								</li>
+							</ul>
+						</li>
+						<!-- 일반숙소 -->
+						<li class="basic_room">
+							<h2 class="room-list__tit">일반숙소</h2>
+							<ul class="room_detail_lst room-list__detail-list"><!-- 2017-11-20 room_list__detail-list 클래스 명 추가 -->
+								<!-- item -->
+								<div class="item clearfix">
+									<a href="">
+										<div class="pull-left thumb"> <img src="_temp/room.png" alt="">
+											<!-- meta_lst 삭제하고 tmb_heart추가 -->
+											<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+										</div>
+									</a>
+									<a href="">
+										<div class="room_des">
+											<h3 class="tit ellipsis">로마 자고가 하우스로마 자고가 하우스</h3>
+											<div class="price">
+												<span class="roomtype">콘도형 4인</span>
+												<span class="before_price">￡42~</span>
+												<span class="current_price">￡20~</span>
+											</div>
+											<!-- room-list__btm-->
+											<div class="meta room-list__btm">
+												<div class="room-list__btm-info">
+													<ul class="lst_inline dot_lst">
+														<li class="is-on">즉시예약</li>
+														<li>전액결제</li>
+														<li class="is-on">SALE</li>
+														<li>NEW</li>
+													</ul>
+												</div>
+												<!--// room-list__btm-info -->
+												<div class="room-list__btm-cnt">
+													<ul class="dot_lst lst_inline">
+														<li>
+															첫 리뷰를 작성해주세요!
+														</li>
+														<li>저장<span class="room-list__btm-cnt-num">305</span></li>
+													</ul>
+												</div>
+												<!--// room-list__btm-cnt -->
+											</div>
+											<!--// room-list__btm-->
+										</div>
+
+										<!-- beststay -->
+										<div class="beststay">
+											<ul class="beststay__list">
+												<li class="beststay__item dropdown-hover dropdown-hover--top">
+													<span class="beststay__icon"><img src="/cust/img/icon_beststay_rev.png" alt=""  /></span>2017 BEST STAY 예약
+													<div class="dropdown-content">
+														<div class="inner">
+															<p class="beststay__sub-tit">2017 BEST STAY 예약</p>
+															<p class="beststay__desc">확정예약이 가장 많은 숙소입니다.</p>
+															<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+														</div>
+													</div>
+												</li>
+												<li class="beststay__item dropdown-hover dropdown-hover--top">
+													<span class="beststay__icon"><img src="/cust/img/icon_beststay_facility.png" alt="" /></span>2017 BEST STAY 시설
+													<div class="dropdown-content">
+														<div class="inner">
+															<p class="beststay__sub-tit">2017 BEST STAY 시설</p>
+															<p class="beststay__desc">실제 숙박자 분들이 남겨주신 시설 평점이
+																가장 높은 숙소입니다.</p>
+															<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+														</div>
+													</div>
+												</li>
+												<li class="beststay__item dropdown-hover dropdown-hover--top">
+													<span class="beststay__icon"><img src="/cust/img/icon_beststay_staff.png" alt="" /></span>2017 BEST STAY 스탭
+													<div class="dropdown-content">
+														<div class="inner">
+															<p class="beststay__sub-tit">2017 BEST STAY 스탭</p>
+															<p class="beststay__desc">실제 숙박자 분들이 남겨주신 스탭 평점이
+																가장 높은 숙소입니다.</p>
+															<p class="beststay__date">2017년 1월 ~ 10월 기준</p>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--// beststay -->
+									</a>
+								</div>
+								<!--// item -->
+							</ul>
+						</li>
+					</ul>
+					<!-- 페이징 -->
+					<nav class="text-center">
+						<ul class="pagination clearfix">
+							<li class="prev"><a href="">이전페이지목록보기</a></li>
+							<li><a href="">1</a></li>
+							<li><a href="" class="active">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li class="next"><a href="">다음페이지목록보기</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- //페이지 끝-->
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+<script>
+	$(function  () {
+		$('.ad-info__btn').hover(function(){
+			$(this).closest('.ad-info').toggleClass('is-open');
+		})
+		$(".nano").nanoScroller();
+		$(".icon_detailview").mouseover(
+				function  () {
+					if (!$(this).parent().hasClass("open")) {
+						$(this).parent().addClass('open');
+					}
+				}
+			);
+
+			$(".detail_wrp").mouseleave(
+				function  () {
+					if ($(this).hasClass("open")) {
+						$(this).removeClass('open');
+					}
+				}
+			);
+			$('.datelabel').on('click', function  () {
+				// 체크인 또는 체크아웃 클릭시
+				$('.datelabel').on('click', function  () {
+					// 전체 액티브 삭제
+					$('.datewrp').removeClass('active');
+					// 해당 액티브 선택
+					$(this).parent().addClass('active');
+			});
+			// 체크아웃 클릭시
+			$('#chkout_label').on('click', function() {
+				if($('.chkin_txt').get(0).innerHTML == "체크인") {
+					$('#chkin_label').click();
+				} else {
+					$('#daterange').click();
+				}
+			});
+		})
+		$('.tip').tooltip();
+})
+</script>
+<!-- 팝업 -->
+<!-- 위시리스트팝업 -->
+<div id="wishPop" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog wish-pop alert-pop">
+		<img src="/cust/img/wish.png" alt="" />
+		<p>위시리스트에 추가하였습니다.</p>
+		<p>찜한 민박은 <span class="color_mint">마이페이지 &gt; 위시리스트</span> 에서 확인하실 수 있습니다.</p>
+	</div>
+</div>
+<? include "inc/bottom.html" ?>

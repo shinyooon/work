@@ -1,0 +1,113 @@
+<header id="hd">
+    <div class="header">
+        <h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+        <nav class="hd-nav">
+            <ul class="gnb">
+                <li class="i1">
+                    <a href="javascript:showNationList('#category_001');">숙소 </a>
+                </li>
+                <li class="i4"><a href="">트립</a></li>
+                <li class="i2"><a href="">정보 </a></li>
+                <li class="i5"><!-- 티켓패스 개편완료 후 링크 변경/ticketpass/ticketpass_list.php -->
+                    <a href="">티켓/상품<!--2016-12-14수정 --></a>
+                    <div class="dep2">
+                        <ul class="clearfix">
+                            <!-- <li><a href="/ticketpass/ticketpass_list.php" >티켓/패스</a></li> -->
+                            <li><a href="">융프라우 할인권</a></li>
+                            <li><a href="">유레일패스</a></li>
+                            <li><a href="" class="active">여행자 보험</a></li>
+                            <li><a href="">포켓 와이파이</a></li>
+                            <li><a href="">공연/티켓</a></li>
+                            <li><a href="">유럽기차</a></li>
+                            <li><a href="">렌터카</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="hd-r">
+            <div class="util">
+
+                <div id="div_login_btn" class="util">
+                    <a href=""> 로그인</a>
+                    <a href="">회원가입</a>
+                </div>
+                <div id="div_top_user_menu" style="display:none">
+                    <div class="userbx">
+                        <a href="" class="user"><span class="color_org" id="top_user_name"></span>님 <img id="top_user_profile_img" src="/cust/img/admin_profile_none.png" alt="" onerror="this.src='/cust/img/admin_profile_none.png'"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">마이민다</a></li>
+                            <li><a href="">숙소 예약 내역</a></li>
+                            <li><a href="">트립 예약내역</a></li>
+                            <li><a href="">저장 목록</a></li>
+                            <li><a href="">정보 수정</a></li>
+                            <li><a href="">로그아웃</a></li>
+                        </ul>
+                    </div>
+                    <div class="dep2">
+                        <strong class="sr-only">마이민다</strong>
+                        <ul class="clearfix">
+                            <li><a href="">마이민다</a></li>
+                            <li><a href="">숙소 예약 내역</a></li>
+                            <li><a href="">트립 예약내역</a></li>
+                            <!-- <li><a href="/mypage/booking_tour.php" >트립 예약내역</a></li> -->
+                            <li><a href="">저장 목록</a></li>
+                            <li><a href="">정보 수정</a></li>
+                            <li><a href="">나의 활동</a></li>
+                            <li><a href="">포인트/캐쉬/쿠폰</a></li>
+                            <li><a href="">유레일패스 예약</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="gnb right-gnb clear">
+                <li class="i6">
+                    <a href="">커뮤니티</a><!-- [D] class="active" 추가시 dep2 보여짐 -->
+                    <div class="dep2">
+                        <ul class="clearfix">
+                            <li><a href="">구인·구직</a></li>
+                            <li><a href="">사고·팔고</a></li>
+                            <li><a href="">톡톡 릴레이</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="i7">
+                    <a href="">할인&amp;이벤트</a>
+                    <div class="dep2">
+                        <ul class="clearfix">
+                            <li><a href="">땡처리 할인</a></li>
+                            <li><a href="">비수기 할인</a></li>
+                            <li><a href="">숙소 쿠폰</a></li>
+                            <li><a href="">민다 이벤트</a></li>
+                            <li><a href="">숙소 이벤트</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- 상단 검색창은 아이콘 클릭으로만 검색이 작동해야 합니다.페이지 하단에 생길수 있는 다른 페이지의 폼입력과 구분이 되지 않을수 있기 때문에 -->
+            <form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+                <input type="hidden" name="part" value="keyword_search">
+                <!-- 전달되는 키워드는 구분자('__SP__')로 구분 하여 전달 -->
+                <input type="hidden" name="keywords" id="keywords" value="">
+                <input type="hidden" name="country">
+                <input type="hidden" name="city">
+                <input type="hidden" name="unit">
+                <!-- <button type="button" class="icon_srch_gnb">검색</button> -->
+                <!-- <div class="silde-wrap"> -->
+                <div class="input-group">
+                            <span class="btn-wrap">
+                                <button type="button" id="city_search_btn" class="icon_srch_grey">검색</button>
+                            </span>
+                    <span class="input-wrap">
+                                <input type="text" name="keyword" id="keyword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="검색어를 입력하세요." title="검색어 입력" autocomplete="off" style="ime-mode:active;">
+                            </span>
+                    <span class="close-btn-wrap">
+                                <button type="button" class="icon_date_close" style="display: none;">검색 취소</button>
+                            </span>
+                    <!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+                </div>
+                <!-- </div> -->
+            </form>
+        </div>
+    </div>
+</header>

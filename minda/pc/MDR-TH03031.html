@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<span class="sub_bg"></span>
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction --> <!-- 2016.05.16 로케이션 추가-->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="" class="icon_house">홈</a></li>
+			<li><a href="">회원가입</a></li>
+			<li>정보입력</li>
+		</ul>
+	</div>
+
+	<!-- 서브 헤더 -->
+	<header class="sub_hd">
+		<h2>회원가입</h2>
+	</header>
+	<!-- 단계 -->
+	<ol class="join_step lst6 row">
+		<li class="col-xs-2"><i class="icon_join_step1"></i><small class="font_lato">01_</small>약관동의</li>
+		<li class="col-xs-2 active"><i class="icon_join_step2"></i><small class="font_lato">02_</small>정보입력</li>
+		<li class="col-xs-2"><i class="icon_join_step3"></i><small class="font_lato">03_</small>숙소상세정보</li>
+		<li class="col-xs-2"><i class="icon_join_step4"></i><small class="font_lato">04_</small>예약시스템 선택</li>
+		<li class="col-xs-2"><i class="icon_join_step5"></i><small class="font_lato">05_</small>민박예약금 설정</li>
+		<li class="col-xs-2"><i class="icon_join_step6"></i><small class="font_lato">06_</small>가입완료</li>
+	</ol>
+
+	<div class="whyminda clearfix">
+		<div class="pull-left">
+			<img src="/cust/img/whyminda.png" alt="">
+			<h3 class="sr-only">왜 민다 인가요?</h3>
+		</div>
+		<div class="clearfix">
+			<ul>
+				<li>
+					<strong><span class="color_org">하나!</span> <span class="color_blk">확실한 노출&amp;광고 효과</span>보장!</strong>
+					<ul class="lst_type_rect">
+						<li>자유여행사 부문 웹사이트 방문1위!<br>(웹사이트 분석평가 사이트 - 랭킹닷컴 기준)</li>
+						<li>2014 대한민국 서비스 만족대상 - 한인숙소 예약 부문 수상</li>
+					</ul>
+				</li>
+				<li>
+					<strong><span class="color_org">둘!</span> <span class="color_blk">여행자가 인정한</span>예약 사이트!</strong>
+					<ul class="lst_type_rect">
+						<li>입점만해도 타 포탈사이트 유료광고보다 더 큰 홍보효과!</li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<strong><span class="color_org">셋!</span> <span class="color_blk">여행자가 인정한</span>예약 사이트!</strong>
+					<ul class="lst_type_rect">
+						<li>실시간 대기 예약 시스템 중 선택가능</li>
+						<li>남는 객실의 기용물을 높이는 “땡처리 객실” 관리시스템</li>
+						<li>예약 및 매출액을 직접 관리하는 통계 시스템 제공</li>
+					</ul>
+				</li>
+				<li>
+					<strong><span class="color_org">네엣!</span> 매출향상을 위한 <span class="color_blk">전문가 컨설팅!</span></strong>
+					<ul class="lst_type_rect">
+						<li>등록부터 예약관리까지!<br>다양한 노하우를 바탕으로 담당자 1:1 밀착관리 제공</li>
+						<li>내 집처럼 책임감있는 친절 상담!</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="term_hd clearfix">
+		<h3 class="sub_title pull-left">기본정보</h3>
+	</div>
+
+	<form>
+		<p class="mt35 mb15"><b class="color_red">*</b> 표시는 필수 입력항목입니다. 정보 기재시 정확하지 않은 정보 혹은 허위정보로 신청하신 경우 등록신청이 거부될 수 있습니다.</p>
+		<!-- 필수양식 -->
+		<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">회원가입 필수양식</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">아이디 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="아이디입력">
+						<p class="form-control-static color_org">아이디는 4~12자리의 영문과 숫자의 조합만 가능합니다.</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">비밀번호 <b class="color_red">*</b></th>
+					<td>
+						<div>
+							<input type="password" class="form-control-basic wid_lg mb10" placeholder="비밀번호" title="비밀번호입력">
+							<p class="form-control-static color_org">*영문/숫자 조합 8자~12자 이내로 입력하세요</p>
+						</div>
+						<div>
+							<input type="password" class="form-control-basic wid_lg" placeholder="비밀번호 확인" title="비밀번호재입력">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">민박명 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" title="민박명입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">민박주 이름 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="민박주이름 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_smd" title="이메일 주소 아이디부분">
+						<span class="form-control-static">@</span>
+						<input type="text" class="form-control-basic wid_smd" title="이메일 주소 도메인부분">
+						<select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+							<option value="">직접입력</option>
+						</select>
+						<p class="form-control-static color_mint">* 예약확인 메일이 발송되오니 정확하게 입력하세요</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">나라 <b class="color_red">*</b></th>
+					<td>
+						<select class="form-control-basic wid_smd" title="나라선택">
+							<option value="">선택</option>
+						</select>
+						<!-- [D] 20160429 직접입력 선택 시
+						<input type="text" class="form-control-basic wid_smd" title="나라선택">
+						-->
+						<button type="button" class="btn btn_border_org mb5 ml5">직접입력</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">도시 <b class="color_red">*</b></th>
+					<td>
+						<select class="form-control-basic wid_smd" title="도시선택">
+							<option value="">선택</option>
+						</select>
+						<!-- [D] 20160429 직접입력 선택 시
+						<input type="text" class="form-control-basic wid_smd" title="도시선택">
+						-->
+						<button type="button" class="btn btn_border_org mb5 ml5">직접입력</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">주(state)</th>
+					<td>
+						<input type="text" class="form-control-basic" title="주(state)입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">상세주소 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" title="상세주소입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">우편번호 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" title="우편번호입력">
+						<label class="inline-checkbox basic chk_label ml10">
+							<input type="checkbox"> 여행자에게 노출
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락처 <b class="color_red">*</b></th>
+					<td>
+						<dl class="dl_form mb10">
+							<dt class="color_blk w75">숙소번호</dt>
+							<dd class="tel_form">
+								<input type="text" class="form-control-basic wid_sm" placeholder="국가번호" title="숙소 국가번호입력"><i></i>
+								<input type="text" class="form-control-basic wid_smd" placeholder="나머지번호" title="숙소 나머지번호입력">
+								<p class="form-control-static color_mint">* 둘 중에 한가지번호는 반드시 입력해 주세요.</p>
+							</dd>
+						</dl>
+						<dl class="dl_form">
+							<dt class="color_blk w75">핸드폰번호</dt>
+							<dd class="tel_form">
+								<input type="text" class="form-control-basic wid_sm" placeholder="국가번호" title="핸드폰번호 국가번호입력"><i></i>
+								<input type="text" class="form-control-basic wid_smd" placeholder="나머지번호" title="핸드폰번호 나머지번호입력">
+							</dd>
+						</dl>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">인터넷전화</th>
+					<td class="tel_form">
+						<input type="text" class="form-control-basic wid_sm" title="인터넷전화 국가번호입력"><i></i>
+						<input type="text" class="form-control-basic wid_smd" title="인터넷전화 나머지번호입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">홈페이지주소</th>
+					<td>
+						<input type="text" class="form-control-basic" placeholder="http://" title="홈페이지주소입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">민다를 알게 된<br>경로 <b class="color_red">*</b></th>
+					<td>
+						<select class="form-control-basic wid_smd" title="경로 선택">
+							<option value="">선택</option>
+							<option value="">여행자를 통해</option>
+							<option value="">지인의 소개</option>
+							<option value="">검색 사이트를 통해</option>
+							<option value="">기타</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+
+	<div class="text-center mt25">
+		<button type="button" class="btn bg_org btn-lg"><i class="icon_circle_next"></i>다음</button>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+
+
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header.html" ?>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- <span class="sub_bg"></span> -->
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <? include "inc/event_top.html" ?>
+
+
+            <!-- 이벤트 내용 시작 -->
+            <!-- 2017-06-08 성수기 대비 이벤트 -->
+            <style type="text/css">
+                .event-trip img {
+                    width: 100%;
+                }
+
+                .event-trip-list {
+                    overflow: hidden;
+                    clear: both;
+                }
+
+                .event-trip-list li {
+                    float: left;
+                    width: 50%;
+                    position: relative;
+                }
+
+                .event-trip-list li:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                .event-trip-list li:nth-child(2n) {
+                    padding-left: 3%;
+                }
+
+                .event-trip-list li:nth-child(2n+1) {
+                    padding-right: 3%
+                }
+
+                .event-trip-list li:nth-child(2n):before {
+                    background-position: right 0 !important
+                }
+
+                .event-trip-list li.end:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: url(http://theminda.com/event/img/201706/trip/bg_end.png) 0 0;
+                    background-size: 94.3% auto;
+                    z-index: 1;
+                    background-repeat: no-repeat;
+                }
+
+                .btn1 {
+                    display: none
+                }
+
+                @media screen and (max-width: 640px) {
+                    .btn1 {
+                        display: block;
+                    }
+
+                    .event-trip-list li:after {
+                        display: none
+                    }
+
+                    .event-trip-down {
+                        display: none
+                    }
+                }
+            </style>
+            <div class="event-trip">
+                <div class="event-trip-top"
+                     style="padding: 0px 4.8%; background-image: url(&quot;http://theminda.com/event/img/201706/trip/bg_top.jpg&quot;); background-repeat: no-repeat; background-size: 100% auto;">
+                    <div class="txt1"><img alt="유럽 여행가서 잠만잘꺼니? 투어가 공짠데."
+                                           src="http://theminda.com/event/img/201706/trip/txt1.png">
+                        <p class="sr-only">민다 회원이면 누구나 다! 6/12~25일 단 2주간. 민다에서 유럽 66개 도시의 한인민박을 ‘3개 도시 이상’ 예약하면 최대
+                            20만원대의 현지투어를 무료로 제공해드립니다. </p>
+                    </div>
+                    <div class="btn1" style="margin: 0px auto; width: 55.2%; padding-bottom: 7%;">
+                        <a onclick="AppInvokeOpenNewPage('http://www.theminda.com/m/1.0/grp_main/search.html','','y');"><img
+                            alt="" src="http://theminda.com/event/img/201706/trip/btn.png"></a>
+                    </div>
+                    <div class="txt2" style="padding-bottom: 17.6%;"><img
+                        alt="모집인원: 선착순 100명, 숙소예약신청기간: 6.12 월요일 ~ 6.25 일요일 (2주간)."
+                        src="http://theminda.com/event/img/201706/trip/txt2.jpg">
+                        <p class="sr-only">이벤트 응모방법</p>
+                        <ol class="sr-only">
+                            <li>유럽 한인민박 3개 도시 이상 예약</li>
+                            <li>이벤트 페이지 내 투어상품 상세정보 확인</li>
+                            <li>이벤트 페이지 댓글로 이벤트 응모(숙소 예약 도시/업체 및 투어명/참여인원/투어일자 기재)ex) 런던 파리 로마/헬로우 트래블의 로마시내
+                                집중투어/2명/7월4일
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="event-trip-con" style="padding: 0px 4.8%; background-color: rgb(249, 242, 228);">
+                    <div class="txt3 "><img alt="투어상품 소개. 투어도시 : 파리, 로마, 바르셀로나. 투어이용기간 : 2017.6.19 월요일 ~ 7.31 월요일 "
+                                            src="http://theminda.com/event/img/201706/trip/txt3.jpg "></div>
+                    <div class="tit1 "><img alt="파리 " src="http://theminda.com/event/img/201706/trip/tit1.jpg "></div>
+                    <ul class="event-trip-list mb0 ">
+                        <li class="end">
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="341 "><img
+                                alt="10명 이상. 몽마르트 시간여행 투어. 인디고 트래블 "
+                                src="http://theminda.com/event/img/201706/trip/tour1_1.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="343 "><img
+                                alt="10명 이상. 파리 야경 감성 뮤지컬 투어. 인디고 트래블 "
+                                src="http://theminda.com/event/img/201706/trip/tour1_2.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="183 "><img
+                                alt="2명. 파리 몽셸 당일투어. 파리 라메종 피아노 "
+                                src="http://theminda.com/event/img/201706/trip/tour1_3.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="227 "><img
+                                alt="2명. 프랑스 고성 투어. 파리 라메종 피아노 "
+                                src="http://theminda.com/event/img/201706/trip/tour1_4.jpg "></a>
+                        </li>
+                        <li><a class="event-trip-link" href="" target="_blank" data-itemno="325"><img
+                            alt="1명 샤르트 야간 투어. 파리 라메종 피아노" src="http://theminda.com/event/img/201706/trip/tour1_5.jpg"></a>
+                        </li>
+                        <!-- <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="329 "><img alt="1명. 아미앵 야간 차량 투어. 파리 라메종 피아노 " src="http://theminda.com/event/img/201706/trip/tour1_6.jpg "></a>
+                        </li> -->
+                    </ul>
+                    <div class="tit1 "><img alt="로마 " src="http://theminda.com/event/img/201706/trip/tit2.jpg "></div>
+                    <ul class="event-trip-list mb0 ">
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="357 "><img
+                                alt="10명 이상. 취향저격 바티칸 반일투어. 더블유트립 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_1.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="355 "><img
+                                alt="10명 이상. 이탈리아 달콤 남부투어. 더블유트립 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_2.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="363 "><img
+                                alt="10명 이상. 별빛따라 로마시내투어. 더블유트립 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_3.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href="409 " target="_blank " data-itemno="409 "><img
+                                alt="10명 이상. 바티칸 오전 반일투어. 떼아모투어 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_4.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="415 "><img
+                                alt="10명 이상. 로마 저녁 시내 투어&amp;야경. 떼아모투어 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_5.jpg "></a>
+                        </li>
+                        <li class="end">
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="131 "><img
+                                alt="5명. 로마시내 집중투어 반일투어. 헬로우 트래블 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_6.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="255 "><img
+                                alt="5명. EVENING 로마시내. 헬로우 트래블. 더블유트립 "
+                                src="http://theminda.com/event/img/201706/trip/tour2_7.jpg "></a>
+                        </li>
+                    </ul>
+                    <div class="tit1 "><img alt="바르셀로나 " src="http://theminda.com/event/img/201706/trip/tit3.jpg ">
+                    </div>
+                    <ul class="event-trip-list mb0 ">
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="417 "><img
+                                alt="10명 이상. 가우디 집중 반일투어 [오전]. 떼아모투어 "
+                                src="http://theminda.com/event/img/201706/trip/tour3_1.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="419 "><img
+                                alt="10명 이상. 가우디 반일투어 [오후]. 떼아모투어 "
+                                src="http://theminda.com/event/img/201706/trip/tour3_2.jpg "></a>
+                        </li>
+                        <li>
+                            <a class="event-trip-link " href=" " target="_blank " data-itemno="421 "><img
+                                alt="10명 이상. 바르셀로나 저녁 시내투어. 떼아모투어 "
+                                src="http://theminda.com/event/img/201706/trip/tour3_3.jpg "></a>
+                        </li>
+                    </ul>
+                    <div class="event-trip-down " style="padding-bottom: 7%; ">
+                        <div class="txt-down "><img alt="투어상품의 상세 정보는 모바일에서만 확인이 가능합니다. "
+                                                    src="http://theminda.com/event/img/201706/trip/txt_down.jpg "></div>
+                        <div class="btn-down " style="text-align: center; "><span class="btn2 "
+                                                                                  style="width: 28.8%; margin-right: 1%; display: inline-block; "><a
+                            title="구글 플레이 스토어 민다 앱 다운로드 페이지 바로가기 "
+                            href="https://play.google.com/store/apps/details?id=com.anymobi.samak.minbakdanawa "
+                            target="_blank "><img alt=" " src="http://theminda.com/event/img/201706/trip/btn2.jpg "></a></span>
+                            <span class="btn3 " style="width: 26.3%; margin-left: 1%; display: inline-block; "><a
+                                href="https://itunes.apple.com/kr/app/minda-%EB%AF%BC%EB%B0%95%EB%8B%A4%EB%82%98%EC%99%80/id965630569?mt=8 "
+                                target="_blank "><img title="애플 앱스토어 민다 앱다운로 페이지 바로가기 " alt=" "
+                                                      src="http://theminda.com/event/img/201706/trip/btn3.jpg "></a></span>
+                        </div>
+                    </div>
+                    <div class="txt4 "><img alt=" " src="http://theminda.com/event/img/201706/trip/txt4.jpg ">
+                        <p class="sr-only ">당첨자발표 : 민다 운영시간 내 응모된 건에 한해 당일 발표. 상황에 따라 연락이 지연될 수 있으며, 휴일 등의 운영시간 외 응모된 건은
+                            그 다음 운영시간에 처리됩니다</p>
+                        <p class="sr-only ">당첨 안내절차</p>
+                        <ol class="sr-only ">
+                            <li>이벤트 응모완료 SMS 발송</li>
+                            <li>담당자가 투어 가능여부 확인</li>
+                            <li>회원정보상의 연락처로 해피콜 연락 및 투어 예약 안내</li>
+                            <li>투어 예약확정 및 바우처 발송.단! 원하는 일자의 투어가 마감되어 예약이 불가능할 경우, 담당자와 협의하여 일정 조율 가능합니다.</li>
+                        </ol>
+                    </div>
+                    <div class="txt5 "><img alt=" " src="http://theminda.com/event/img/201706/trip/txt5.jpg "> <strong
+                        class="sr-only ">유의사항</strong>
+                        <ul class="sr-only ">
+                            <li>해당 이벤트는 선착순으로 당첨자를 선별하여 개별 연락드립니다.</li>
+                            <li>회원정보상의 연락처 등의 개인정보 오류로 인해 연락이 되지 않을 경우 당첨이 취소되오니 이벤트 응모 전 반드시 개인 회원정보를 확인해주세요.</li>
+                            <li>투어 참여 인원수는 숙박 인원수 만큼 신청하실 수 있습니다.</li>
+                            <li>투어 업체 및 투어 상품에 따라 모집인원이 상이하며 조기 마감될 수 있습니다.</li>
+                            <li>투어 선호 일자가 투어 업체의 예약상황에 따라 불가할 수 있습니다.</li>
+                            <li>이벤트 경품은 각 투어 상품의 상세페이지에 기재된 포함사항만 제공되며 자세한 사항은 민다 앱을 통하여 상세페이지를 확인해주세요.</li>
+                            <li>투어 예약은 투어 참여일 최소 일주일 전까지 되어야 하오니 이벤트 페이지 내 당첨 안내절차를 확인해주세요.</li>
+                            <li>투어 참여 후 일주일 이내 리뷰를 작성하셔아 합니다. 리뷰를 작성하지 않을 경우 지원받은 투어 금액을 민다에 지불하셔야 합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- script area -->
+            <script type="text/javascript ">
+                var curUrl = location.href;
+                var rDomainPath = curUrl.split('/m/1.0/', 2);
+                var domain = rDomainPath[0];
+                $('.event-trip-link').click(function() {
+                    if (rDomainPath.length >= 2) {
+                        var itemno = $(this).data('itemno');
+                        AppInvokeOpenNewPage(domain + '/m/1.0/tg/view.html?itemno=' + itemno, '', 'y');
+                    }
+                    return false;
+                });
+            </script>
+            <!--// 2017-06-08 성수기 대비 이벤트 -->
+            <!-- 이벤트 내용 끝 -->
+
+
+            <? include "inc/event_bottom.html" ?>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<? include "inc/bottom.html" ?>

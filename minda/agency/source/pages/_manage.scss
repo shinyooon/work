@@ -1,0 +1,456 @@
+.rev-manage__detail,.rev-manage__view{
+	.tit{
+		margin-bottom:0
+	}
+	.tit__right{
+		button{
+			margin-bottom:-5px;
+		}
+	}
+}
+.rev-manage__view{
+	.tit__right{
+		.rev-manage__view__btn-print{
+			margin-bottom:-8px;
+			vertical-align:middle;
+		}
+	}
+}
+.rev-manage__view{
+	.tit__right{
+		.rev-manage__view__btn-room{
+			margin-bottom:-5px;
+			vertical-align:middle;
+		}
+	}
+}
+
+
+.rev-manage__view__txt-recom{
+	@include text($color__grey,13px);
+	display:inline-block;
+	vertical-align:bottom;
+	padding:5px 15px 0 0;
+}
+.rev-manage__view__btn-select{
+	& + .rev-manage__view__btn-cancel{
+		margin-left:2px;
+	}
+}
+
+.rev-manage__list, .rev-manage__detail__customer-info,.rev-manage__view__customer-info,.rev-manage__view__rev-info,.rev-manage__view__roomlist,.rev-manage__view__rev-direct, .rev-manage__view__minda-recom,.rev-manage__view__pay,.rev-manage__view__refund{
+	.table__hd{
+		.table__col{
+			padding:0;
+			line-height:16px;
+		}
+	}
+	.table__body{
+		text-align:center;
+		.table__col{
+			padding:14px 10px;
+			color:$color__blk;
+			line-height:18px;
+		}
+	}
+}
+
+.rev-manage__list-num, .rev-manage__revnum-link{
+	text-decoration:underline;
+	color:$color__blk;
+}
+.rev-manage__view__roomtype,.rev-from__roomlist__roomtype{
+	@include text($color__default,13px);
+	margin-top:5px;
+}
+.rev-manage__srch{
+	@include box-style();
+	position:relative;
+	.rev-manage__srch-list{
+		padding-right:140px;
+	}
+	.rev-manage__srch-btn-wrap{
+		position:absolute;
+		width:140px;
+		height:100%;
+		top:0;
+		right:0;
+		padding:30px;
+	}
+	.rev-manage__srch-btn{
+		@include border-radius(5px);
+		background-color:$color__green;
+		width:80px;
+		height:81px
+	}
+	.rev-manage__srch-icon{
+		@include icon-cm-spr(25px,25px,-180px,-80px);
+		@include sr-only(true);
+	}
+	.input-wrap{
+		display:block;
+	}
+}
+.rev-manage__icon-voucher{
+	@include icon-cm-spr(12px,18px,-180px,-105px);
+	@include sr-only(true);
+}
+.rev-manage__list{
+	.rev-manage__list-toptxt{
+		font-size:13px;
+		.rev-manage__icon-voucher{
+			margin:-1px 4px 0;
+		}
+	}
+	.rev-manage__list-link{
+		color:$color__blk;
+	}
+	.table__hd{
+		.table__col{
+			padding:0;
+		}
+	}
+	.table__body{
+		text-align:center;
+		.table__col{
+			padding:0;
+			color:$color__blk;
+		}
+	}
+	.table__col--1{
+		width:54px;
+	}
+	.table__col--2{
+		width:134px;
+	}
+	.table__col--3,.table__col--6,.table__col--7,.table__col--8,.table__col--9{
+		width:150px;
+	}
+	.table__col--4,.table__col--5{
+		width:82px;
+	}
+	.rev-manage__icon-voucher{
+		margin-top:3px;
+	}
+}
+.rev-manage__detail__customer-info,.rev-manage__view__customer-info{
+	.table__col--1,.table__col--2,.table__col--3{
+		width:207px;
+	}
+}
+
+.rev-manage__detail__rev-detail{
+	text-align:center;
+	.table__col--1{
+		width:159px;
+	}
+	.table__body{
+		.table__col{
+			line-height:18px;
+		}
+		.table__col--2{
+			line-height:18px;
+			padding-left:20px;
+			text-align:left;
+		}
+	}
+
+	.table__col--3,.table__col--4{
+		width:156px;
+	}
+	.table__col--5{
+		width:215px;
+	}
+	.table__ft{
+		@include text($color__blk, 15px);
+	}
+	.rev-manage__detail__price{
+		font-size:22px;
+		font-weight:500;
+		display:inline-block;
+		vertical-align:top;
+		margin:-3px 30px 0 15px;
+	}
+}
+
+.rev-manage__detail__result{
+	.table{
+		margin-top:20px;
+		text-align:center;
+	}
+	dl{
+		@include list-inline-dl();
+		dt{
+			margin-right:17px;
+		}
+		dd{
+			font-weight:500;
+		}
+		.rev-manage__detail__result-price{
+			color:$color__green;
+			font-size:22px;
+			margin-top:-2px;
+		}
+	}
+	&--refund{
+		.table{
+			margin-top:0;
+		}
+		.rev-manage__detail__refund-txt{
+			@include text($color__aaa,13px);
+			// margin-top:-4px;
+		}
+	}
+
+
+}
+
+.rev-manage__view__roomlist{
+	.table__col--1{
+		width:174px;
+	}
+	.table__col--2{
+		width:224px;
+	}
+	.table__col--3{
+		width:224px;
+	}
+	.table__col--4{
+		width:92px;
+	}
+	.table__col--5{
+		width:61px;
+	}
+	.table__col--6{
+		width:59px;
+	}
+	.table__col--7,.table__col--8,.table__col--9,.table__col--10{
+		width:86px;
+	}
+	.table__col--11{
+		width:91px;
+	}
+	.table__col--12{
+		width:137px;
+	}
+	@include col-align-left(3);
+	.rev-manage__revnum-link{
+		display:block;
+	}
+	.rev-manage__view__btn-voucher{
+		margin-top:9px;
+	}
+}
+
+.rev-manage__view__rev-recom{
+	.table__col--6,.table__col--7 {
+		width:86px;
+	}
+	.table__col--8{
+		width:91px;
+	}
+	.table__col--9,.table__col--10 {
+		width:98px;
+	}
+	//@include col-align-left(2);
+}
+
+.rev-manage__view__minda-recom{
+	.table__col--1{
+		width:224px;
+	}
+	.table__col--3,.table__col--4,.table__col--5,.table__col--6{
+		width:126px;
+	}
+	.table__col--7{
+		width:137px;
+	}
+	.table__col--8,.table__col--9{
+		width:96px;
+	}
+	.table__col--10{
+		width:137px;
+	}
+	@include col-align-left(2);
+	.table__body{
+		.table__col--3{
+			text-align:center;
+		}
+	}
+	.table__ft{
+		.table__col{
+			font-size:13px;
+			text-align:left;
+			line-height:18px;
+		}
+	}
+}
+.rev-manage__view__rev-recom--2{
+	.table__col--1{
+		width:220px;
+	}
+	.table__col--3{
+		width:92px;
+	}
+	.table__col--4{
+		width:70px;
+	}
+	.table__col--5{
+		width:106px;
+	}
+	.table__col--6{
+		width:111px;
+	}
+	.table__col--7{
+		width:91px;
+	}
+	.table__col--8,.table__col--9{
+		width:96px;
+	}
+	@include col-align-left(2);
+}
+.rev-manage__view__rev-list{
+	.table__col--0{
+		width:54px;
+		text-align:center;
+		padding:0;
+		.input-wrap__chk{
+			margin-top:10px;
+			min-width:24px;
+			label{
+				display:block;
+				width:24px;
+				height:24px;
+				@include sr-only(true);
+			}
+		}
+	}
+	.table__col--1{
+		width:137px;
+	}
+	.table__col--2{
+		width:143px;
+	}
+}
+
+.modal__invoice,.modal__voucher{
+	.modal-dialog{
+		margin-top:70px
+	}
+}
+
+.modal__roominfo{
+	&__list{
+		margin-top:-30px;
+	}
+	&__item{
+		@include border-btm();
+		font-size:15px;
+		padding:25px 0 24px;
+	}
+	&__name{
+		font-weight:500;
+		margin-bottom:4px;
+	}
+	&__txt{
+		line-height:28px;
+	}
+	&__link{
+		display:inline-block;
+		@include text($color__aaa,13px);
+		margin-top:4px;
+	}
+	.btm-btn{
+		margin-top:0;
+		border-top-width:0;
+	}
+}
+
+.email__form{
+	padding:30px 30px 0 10px;
+}
+.invoice__form__list{
+	@include list-dl(82px,10px);
+	.invoice__form__input{
+		&>.input-wrap{
+			width:212px;
+		}
+	}
+}
+.email__form__list{
+	@include list-dl(130px,10px);
+	.input-wrap{
+		width:100%;
+	}
+}
+.invoice__form__list,.email__form__list{
+	padding-left:20px;
+	.input-wrap__chk{
+		margin-top:2px;
+		label{
+			&:before{
+				top:0;
+			}
+		}
+	}
+	.input-wrap__right-txt{
+		color:$color__default;
+	}
+}
+.invoice__form__tit,.email__form__tit,.find-id__form__tit{
+	margin-top:8px;
+	font-size:15px;
+	font-weight:500;
+}
+
+.pop__email{
+	width:565px;
+	height:368px;
+}
+.input-wrap__select-rev{
+	width:191px;
+	margin:1px 0 -5px;
+	height:40px;
+	vertical-align:top;
+	&+.rev-manage__view__btn-print{
+		margin-left:8px;
+	}
+}
+.rev-manage__view__icon-check{
+	display:inline-block;
+	width:24px;
+	height:24px;
+	@include border-radius(3px);
+	background-color:$color__green;
+	border-width:0;
+	@include icon-chk-spr(24px,24px,5px,-19px);
+	vertical-align:top;
+}
+
+.rev-manage__view__btn-print{
+	.rev-manage__view__icon-check{
+		margin:-4px 7px -4px -3px;
+	}
+}
+.nano_roominfo{
+	height:360px;
+}
+
+.table__cancel{
+	margin:8px 0 27px 0;
+	.table__hd{
+		line-height:16px;
+		.table__col{
+			font-size:14px;
+		}
+	}
+	.table__col--1{
+		width:212px;
+	}
+	.table__body{
+		.table__col{
+			padding:10px 0;
+			color:$color__default;
+		}
+	}
+}

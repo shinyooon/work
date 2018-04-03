@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_v2.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+		<div class="hd_search d_iblock clearfix">
+			<form action=".">
+				<input type="text" class="form-control" placeholder="여행지를 입력해주세요" title="여행지검색">
+				<button type="submit" class="icon_srch_grey pull-left">검색</button>
+			</form>
+		</div>
+		<div class="pull-right">
+			<nav id="gnb" class="d_iblock">
+				<ul class="gnb clearfix">
+					<li><a href="">한인숙소</a></li>
+					<li><a href="">커뮤니티</a></li>
+					<li><a href="">티켓/패스</a></li>
+					<li><a href="">투어팟</a></li>
+					<li><a href="">현지인</a></li>
+				</ul>
+				<ul class="gnb clearfix side">
+					<li><a href="" class="side_evt">이벤트</a></li>
+					<li><a href="" class="side_minda">민다특가</a></li>
+					<li><a href="" class="side_coupon">쿠폰존</a></li>
+				</ul>
+			</nav>
+			<div class="util">
+				<div class="dropdown d_iblock">
+					<a href="#" data-toggle="dropdown" class="bg_org">민다엔젤<i class="icon_arr"></i></a>
+					<ul class="dropdown-menu">
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">나의예약</a></li>
+						<li><a href="">위시리스트</a><span class="label labe_org">24</span></li>
+						<li><a href="">정보수정</a></li>
+						<li><a href="">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- <a href="" class="alarm bg_org" title="알림메시지보기"><span class="sr-only">새알람</span><span class="num">2</span></a> -->
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+		<span class="sub_bg"></span>
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction --> <!-- 2016.05.16 로케이션 추가-->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="" class="icon_house">홈</a></li>
+			<li><a href="">회원가입</a></li>
+			<li>정보입력</li>
+		</ul>
+	</div>
+
+
+	<!-- 서브 헤더 -->
+	<header class="sub_hd">
+		<h2>회원가입</h2>
+	</header>
+	<!-- 단계 -->
+	<ol class="join_step lst6 row">
+		<li class="col-xs-2"><i class="icon_join_step1"></i><small class="font_lato">01_</small>약관동의</li>
+		<li class="col-xs-2"><i class="icon_join_step2"></i><small class="font_lato">02_</small>정보입력</li>
+		<li class="col-xs-2 active"><i class="icon_join_step3"></i><small class="font_lato">03_</small>숙소상세정보</li>
+		<li class="col-xs-2"><i class="icon_join_step4"></i><small class="font_lato">04_</small>예약시스템 선택</li>
+		<li class="col-xs-2"><i class="icon_join_step5"></i><small class="font_lato">05_</small>민박예약금 설정</li>
+		<li class="col-xs-2"><i class="icon_join_step6"></i><small class="font_lato">06_</small>가입완료</li>
+	</ol>
+
+	<div class="term_hd clearfix">
+		<h3 class="sub_title">숙소 상세정보 입력</h3>
+	</div>
+
+	<form>
+	<!-- 숙소기본정보 -->
+	<div class="term_bx mt45">
+		<h4 class="tit">숙소기본정보</h4>
+		<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">숙소기본정보양식</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="col">민박명 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" placeholder="민박명" title="민박명입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">민박주 이름 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" placeholder="홍길동" title="민박주이름 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_smd" placeholder="minda" title="이메일 주소 아이디부분">
+						<span class="form-control-static">@</span>
+						<input type="text" class="form-control-basic wid_smd" placeholder="naver.com" title="이메일 주소 도메인부분">
+						<select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+							<option value="">직접입력</option>
+						</select>
+						<p class="form-control-static color_mint">* 예약확인 메일이 발송되오니 정확하게 입력하세요</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">나라 <b class="color_red">*</b></th>
+					<td>
+						<select class="form-control-basic wid_smd" title="나라선택">
+							<option value="">선택</option>
+						</select>
+						<button type="button" class="btn btn-xs btn_border_org mb5 ml5">직접입력</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">도시 <b class="color_red">*</b></th>
+					<td>
+						<select class="form-control-basic wid_smd" title="도시선택">
+							<option value="">선택</option>
+						</select>
+						<button type="button" class="btn btn-xs btn_border_org mb5 ml5">직접입력</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">주(state)</th>
+					<td>
+						<input type="text" class="form-control-basic" title="주(state)입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">상세주소 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic" placeholder="입력값" title="상세주소입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">우편번호 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_lg" placeholder="1111111" title="우편번호입력">
+						<label class="inline-checkbox basic chk_label ml10">
+							<input type="checkbox"> 여행자에게 노출
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락처 <b class="color_red">*</b></th>
+					<td>
+						<dl class="dl_form mb5">
+							<dt class="color_blk w75">숙소번호</dt>
+							<dd class="tel_form">
+								<input type="text" class="form-control-basic wid_sm" placeholder="11" title="숙소 국가번호입력"><i></i>
+								<input type="text" class="form-control-basic wid_smd" placeholder="1111111" title="숙소 나머지번호입력">
+								<p class="form-control-static color_mint">* 둘 중에 한가지번호는 반드시 입력해 주세요.</p>
+							</dd>
+						</dl>
+						<dl class="dl_form">
+							<dt class="color_blk w75">핸드폰번호</dt>
+							<dd class="tel_form">
+								<input type="text" class="form-control-basic wid_sm" placeholder="국가번호" title="핸드폰번호 국가번호입력"><i></i>
+								<input type="text" class="form-control-basic wid_smd" placeholder="나머지번호" title="핸드폰번호 나머지번호입력">
+							</dd>
+						</dl>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">인터넷전화</th>
+					<td class="tel_form">
+						<input type="text" class="form-control-basic wid_sm" title="인터넷전화 국가번호입력"><i></i>
+						<input type="text" class="form-control-basic wid_smd" title="인터넷전화 나머지번호입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="col">홈페이지주소</th>
+					<td>
+						<input type="text" class="form-control-basic" placeholder="http://" title="홈페이지주소입력">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--민박 상세정보 입력 -->
+	<div class="term_bx mt45">
+		<h4 class="tit pb0">민박 상세정보</h4>
+		<p class="color_red mt7 mb15">* 입력하시는 정보는 민박다나와에 숙소 등록 여부를 결정하는 중요 자료가 됩니다. 성의 없는 정보, 정확하지 않은 정보, 혹은 허위정보로 신청하신 경우 등록신청이 거부 될 수 있습니다.</p>
+		<table class="tb tb_frm v1 tb_fixed">
+			<caption class="sr-only">민박 상세정보 양식</caption>
+			<colgroup>
+				<col style="width:155px">
+				<col>
+			</colgroup>
+			<tbody>
+				<!-- 숙소유형 -->
+				<tr>
+					<th scope="col">숙소유형 <b class="color_red">*</b></th>
+					<td>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">민박(게스트하우스)
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">펜션/콘도
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">호스텔
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">호텔
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">아파트
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">한옥
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">캠핑장
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">글램핑장
+						</label>
+						<label class="inline-checkbox basic chk_label">
+							<input type="checkbox">카라반
+						</label>
+						<p class="color_mint">* 숙소유형을 선택해주세요(중복선택 가능)</p>
+					</td>
+				</tr>
+				<!-- 총 수용인원 -->
+				<tr>
+					<th scope="col">총 수용인원 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic wid_smd" title="총 수용인원 입력"><span class="form-control-static">명</span>
+						<p class="form-control-static d_iblock color_mint">* 숙소의 총 수용인원을 기재해주세요.</p>
+					</td>
+				</tr>
+				<!-- 기본소개 -->
+				<tr>
+					<th scope="row">기본소개 <b class="color_red">*</b></th>
+					<td>
+						<textarea class="form-control-basic plh_mint" rows="6" placeholder="* 숙소의 기본적인 소개와 특징, 장점들을 기재해 주세요." title="기본소개 입력"></textarea>
+					</td>
+				</tr>
+				<!-- 위치 -->
+				<tr>
+					<th scope="col">위치 <b class="color_red">*</b></th>
+					<td>
+						<input type="text" class="form-control-basic plh_mint" placeholder="* 가까운 지하철, 버스역 또는 주요 관광지를 기준으로 작성해주세요. (EX: **지하철 역에서 도보 *분 거리)" title="위치입력">
+					</td>
+				</tr>
+				<!-- 숙소 찾아가는 법 -->
+				<tr>
+					<th scope="row">숙소 찾아가는 법 <b class="color_red">*</b></th>
+					<td>
+						<textarea class="form-control-basic plh_mint" rows="6" placeholder="* 주요 기차역이나 버스터미널 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요." title="숙소 찾아가는 법 입력"></textarea>
+					</td>
+				</tr>
+				<!-- 숙소 근처 관광지 -->
+				<tr>
+					<th scope="row">숙소 근처 관광지<br>및 편의시설</th>
+					<td>
+						<textarea class="form-control-basic plh_mint" rows="6" title="숙소 근처 관광지 및 편의시설 입력"></textarea>
+						<p class="color_mint mt10">
+							예)<br>
+							- 에펠탑 도보 10분<br>
+							- 중앙공원 도보 5분<br>
+							- 쇼핑 아울렛 전철 2정거장
+						</p>
+					</td>
+				</tr>
+				<!-- 식사/간식 -->
+				<tr>
+					<th scope="row">식사/간식 <b class="color_red">*</b></th>
+					<td>
+						<dl class="dl_form v2 mb7">
+							<dt>
+								<span class="color_blk fw500">아침</span>
+								<select class="form-control-basic wid_sm" title="아침메뉴종류 선택">
+									<option value="">선택</option>
+								</select>
+							</dt>
+							<dd><input type="text" class="form-control-basic" placeholder="메뉴설명" title="아침메뉴설명 입력"></dd>
+						</dl>
+						<dl class="dl_form v2 mb7">
+							<dt>
+								<span class="color_blk fw500">점심</span>
+								<select class="form-control-basic wid_sm" title="점심메뉴종류 선택">
+									<option value="">선택</option>
+								</select>
+							</dt>
+							<dd><input type="text" class="form-control-basic" placeholder="메뉴설명" title="점심메뉴설명 입력"></dd>
+						</dl>
+						<dl class="dl_form v2 mb7">
+							<dt>
+								<span class="color_blk fw500">저녁</span>
+								<select class="form-control-basic wid_sm" title="저녁메뉴종류 선택">
+									<option value="">선택</option>
+								</select>
+							</dt>
+							<dd><input type="text" class="form-control-basic" placeholder="메뉴설명" title="저녁메뉴설명 입력"></dd>
+						</dl>
+						<p class="color_mint pt5 pb20">* 아침,점심,저녁에 제공되는 메뉴는 한식인지, 빵인지 구분해서 적어주시고, 일반적으로 제공되는 메뉴들을 함께 나열해주세요. 셀프인 경우에는 (셀프)라고<br>함께 기재해 주세요.</p>
+						<strong class="color_blk fw500">기타 간식 제공 서비스 및 기타 부가설명(취사여부 등)</strong>
+						<textarea class="form-control-basic plh_mint mt5" rows="6" placeholder="* 주요 기차역이나 버스터미널 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요." title="숙소 찾아가는 법 입력"></textarea>
+					</td>
+				</tr>
+				<!-- 숙소이용규칙 -->
+				<tr>
+					<th scope="row">숙소이용규칙</th>
+					<td>
+						<textarea class="form-control-basic plh_mint" rows="6" placeholder="* 체크인/체크아웃 시간이 정해져 있거나, 기타 숙소내 이용규칙이 있을시 적어주세요." title="숙소이용규칙 입력"></textarea>
+					</td>
+				</tr>
+				<!-- 부가 유료서비스 -->
+				<tr>
+					<th scope="row">부가 유료서비스</th>
+					<td>
+						<textarea class="form-control-basic plh_mint" rows="6"
+						placeholder="* 숙소에서 제공하는 여행투어, 공항 픽업 등의 숙박비와는 별도의 유료서비스가 있을 경우 가격정보와 함께 항목을 기제해주세요.\n예) - 시내투어 30유로\n- 공항픽업 50유로체크아웃 시간이 정해져 있거나, 기타 숙소내 이용규칙이 있을시 적어주세요." title="부가 유료서비스 입력"></textarea>
+					</td>
+				</tr>
+				<!-- 기타 특이사항 -->
+				<tr>
+					<th scope="row">기타 특이사항</th>
+					<td>
+						<textarea class="form-control-basic plh_mint" rows="6"
+						placeholder="예) - 2박이상 숙박시 공연 할인티켓 제공\n- 5박이상 숙박시 공항픽업 무료\n- 4박이상 숙박시 세탁 1회 무료\n- 체크인시 라면 1개 제공\n- 7일이상 숙박시 점심도시락 제공" title="기타 특이사항 입력"></textarea>
+					</td>
+				</tr>
+				<!-- 부가시설 및 서비스 -->
+				<tr>
+					<th scope="col">부가시설 및<br>서비스</th>
+					<td class="add_service_lst pa0">
+						<!-- 공용시설 -->
+						<div>
+							<strong class="fw500 d_iblock mb15"><b class="color_red">*</b> <span class="color_blk">공용시설</span></strong>
+							<div class="col3_chk_lst clearfix">
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">레스토랑
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">게스트부엌
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">개인사물함
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">휴게실
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">전자렌지
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">엘리베이터
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">카페
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">커피포트
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">공용pc
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">정원
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">토스트기
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">wifi
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">바베큐시설
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">프린터사용
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">TV
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">헤어드라이기
+								</label>
+								<label class="checkbox basic chk_label w2">
+									<input type="checkbox">다리미
+								</label>
+								<div>
+									<label class="inline-checkbox basic chk_label mb4">
+										<input type="checkbox">수영장
+									</label>
+									<div class="bracket_lst d_iblock_m">
+										<label class="inline-radio radio_label">
+											<input type="radio" name="charged">유료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="charged">무료
+										</label>
+									</div>
+								</div>
+								<div>
+									<label class="inline-checkbox basic chk_label">
+										<input type="checkbox">스파시설
+									</label>
+									<div class="bracket_lst d_iblock_m">
+										<label class="inline-radio radio_label">
+											<input type="radio" name="charged2">유료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="charged2">무료
+										</label>
+									</div>
+								</div>
+								<div>
+									<label class="inline-checkbox basic chk_label">
+										<input type="checkbox">헬스시설
+									</label>
+									<div class="bracket_lst d_iblock_m">
+										<label class="inline-radio radio_label">
+											<input type="radio" name="charged3">유료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="charged3">무료
+										</label>
+									</div>
+								</div>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox"> 주차기능
+								</label>
+								<div class="well col3_chk_lst clearfix">
+									<label class="inline-radio radio_label">
+										<input type="radio" name="parking">차고주차(무료)
+									</label>
+									<label class="inline-radio radio_label">
+										<input type="radio" name="parking">차고주차(유료)
+									</label>
+									<label class="inline-radio radio_label">
+										<input type="radio" name="parking">차고주차(조건부 무료)
+									</label>
+									<label class="inline-radio radio_label">
+										<input type="radio" name="parking">숙소 앞 거리주차(무료)
+									</label>
+									<label class="inline-radio radio_label">
+										<input type="radio" name="parking">숙소 앞 거리주차(무료)
+									</label>
+									<label class="inline-radio radio_label">
+										<input type="radio" name="parking">숙소 앞 거리주차(조건부 무료)
+									</label>
+								</div>
+							</div>
+						</div>
+						<div>
+							<strong class="fw500 d_iblock_m w90"><b class="color_red">*</b> <span class="color_blk">욕실</span></strong>
+							<span class="form-control-static ml0">화장실</span>
+							<input type="text" class="form-control-basic w130 d_iblock" title="화장실개수 입력">
+							<span class="form-control-static">개 / 샤워실</span>
+							<input type="text" class="form-control-basic w130 d_iblock" title="샤워실개수 입력">
+							<span class="form-control-static">개</span>
+						</div>
+						<div>
+							<strong class="fw500 d_iblock_m w90"><b class="color_red">*</b> <span class="color_blk">욕실용품</span></strong>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">수건
+							</label>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">비누
+							</label>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">치약
+							</label>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">샴푸
+							</label>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">린스
+							</label>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">바디샴푸
+							</label>
+							<label class="inline-checkbox basic chk_label">
+								<input type="checkbox">1회용 칫솔
+							</label>
+						</div>
+						<!-- 기타서비스 -->
+						<div>
+							<strong class="fw500 d_iblock mb15"><b class="color_red">*</b> <span class="color_blk">기타서비스</span></strong>
+							<div class="col3_chk_lst clearfix">
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">공항픽업
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">24시간 출입자유
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">한국으로 국제전화 무료
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">체크인/체크아웃 전후 짐보관 기능
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">여행투어 제공
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">키보증금
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">신용카드 결제기능
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">흡연가능
+								</label>
+								<label class="checkbox basic chk_label">
+									<input type="checkbox">외국인 숙박불가
+								</label>
+								<div>
+									<label class="checkbox basic chk_label mt0">
+										<input type="checkbox">자전거대여
+									</label>
+									<div class="bracket_lst">
+										<label class="inline-radio radio_label">
+											<input type="radio" name="bikeCharged">무료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="bikeCharged">유료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="bikeCharged">조건부 무료
+										</label>
+									</div>
+								</div>
+								<div>
+									<label class="checkbox basic chk_label mt0">
+										<input type="checkbox">세탁
+									</label>
+									<div class="bracket_lst">
+										<label class="inline-radio radio_label">
+											<input type="radio" name="washCharged">무료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="washCharged">유료
+										</label>
+										<label class="inline-radio radio_label">
+											<input type="radio" name="washCharged">조건부 무료
+										</label>
+									</div>
+								</div>
+								<div>
+									<label class="checkbox basic chk_label mt0">
+										<input type="checkbox">유아(8개월미만)숙박불가
+									</label>
+									<label class="checkbox basic chk_label mt0 mb10">
+										<input type="checkbox">어린이(만2세~만12세)숙박불가
+									</label>
+									<label class="checkbox basic chk_label mt0 mb10">
+										<input type="checkbox">애완동물 동반가능
+									</label>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<!-- 내부사진 등록 -->
+				<tr>
+					<th scope="row">내부사진 등록</th>
+					<td>
+						<ul class="color_mint lst_type_star pt10">
+							<li>사진파일은 최대 25개까지 불러올 수 있으며 형식은 JPG 파일과 GIF 파일 형식만 등록 가능합니다.</li>
+							<li>대표사진으로 등록을 원하는 이미지를 클릭하세요. 대표사진은 객실 사진으로 등록해주세요.</li>
+							<li>사진파일 1개당 1MB가 넘지 않게 파일을 줄여서 등록해 주세요.</li>
+						</ul>
+						<label class="mt10">
+							<input type="file" class="sr-only">
+							<span class="btn btn-xs bg_mint">이미지 불러오기</span>
+						</label>
+						<ul class="upload_img_lst row">
+							<li class="col-xs-3">
+								<a href="" class="tmb mainpic"><img src="/cust/img/upload.jpg" alt=""></a><!-- [D] 대표사진에 mainpic 클래스 추가 -->
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+							<li class="col-xs-3">
+								<a href="" class="tmb"><img src="/cust/img/upload.jpg" alt=""></a>
+								<button type="button" class="icon_pic_close">등록사진삭제</button>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<!-- 계좌정보 -->
+				<tr>
+					<th scope="col">계좌정보</th>
+					<td>
+						<input type="text" class="form-control-basic plh_mint" title="계좌정보입력">
+						<p class="color_mint mt10">* 예약금 정산분인 있을 시 지급받으시는 계좌입니다. 은행명, 계좌번호, 예금주명을 기입해주세요.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</form>
+<script>
+	$(function  () {
+		//testarea placeholder line break
+		var textAreas = document.getElementsByTagName('textarea');
+		Array.prototype.forEach.call(textAreas, function(elem) {
+			elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
+		});
+	})
+</script>
+
+	<div class="text-center mt25">
+		<button type="button" class="btn bg_dark_grey btn-lg"><i class="icon_circle_prev"></i>이전</button>
+		<button type="button" class="btn bg_org btn-lg ml5"><i class="icon_circle_next"></i>다음</button>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">
+	<!-- quick  -->
+	<div id="quickMenu" class="quick d_iblock">
+		<button type="button" onclick="$('#todayRoom').addClass('active')">오늘본숙소<span class=" sr-only">목록보기</span></button>
+	</div>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+
+
+
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

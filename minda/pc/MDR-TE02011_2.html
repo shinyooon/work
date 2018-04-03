@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<!-- 2017-06-13 로고 이미지 변경 -->
+			<h1 class="logo"><a href="index.html"><img src="http://www.theminda.com/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<!--// 2017-06-13 로고 이미지 변경 -->
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">숙소 <span class="icon_up">up</span></a></li>
+					<li class="i4"><a href="">트립</a></li>
+					<li class="i2"><a href="">정보 <span class="icon_new">new</span></a></li>
+					<li class="i5">
+						<a href="">부가상품</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+                    $(function() {
+                        $util = $('.userbx');
+                        $util.on('focusin', function() {
+                            $(this).addClass('open');
+                        });
+
+                    })
+				</script>
+			</nav>
+			<div class="hd-r">
+				<!-- 2017-06-13 태그 순서 위로 올림 -->
+				<!-- 로그인 후 -->
+				<!-- div class="util">
+                    <div class="userbx">
+                        <a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">나의 가이드북</a></li>
+                            <li><a href="">나의 숙소예약</a></li>
+                            <li><a href="">정보수정</a></li>
+                            <li><a href="">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+				<!-- 로그인 전 -->
+				<div class="util active">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="dep2">
+						<strong class="sr-only">마이페이지</strong>
+						<ul class="clearfix">
+							<li><a href="/mypage/mypage_home.php">MY홈</a></li>
+							<li><a href="/mypage/my_reservation.php" class="active">숙소 예약 내역</a></li>
+							<!-- <li><a href="/mypage/booking_tour.php" >투어,티켓/패스 예약내역</a></li> -->
+							<li><a href="/mypage/guidebook.php">나의 가이드북</a></li>
+							<li><a href="/mypage/my_modify.php">나의정보</a></li>
+							<li><a href="/mypage/my_rate.php">나의 활동</a></li>
+							<li><a href="/mypage/my_save.php">포인트/캐쉬/쿠폰</a></li>
+							<li><a href="/mypage/my_eurail_list.php">유레일패스 예약</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href="">민다톡톡</a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href="">할인&amp;이벤트</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<!-- <button type="button" class="icon_srch_grey">검색</button> -->
+					<!-- 2017-06-13 silde-wrap 클래스 삭제 -->
+					<div class="input-group">
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_grey">검색</button>
+							</span>
+						<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="키워드를 입력해주세요">
+							<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+						<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+	<!-- #container -->
+	<div id="container">
+		<!-- 페이지시작 -->
+		<div class="content w1100">
+			<!-- 서브 헤더 -->
+			<!--<header class="sub_hd">-->
+				<!--<h2>나의예약</h2>-->
+			<!--</header>-->
+			<!-- 예약상세정보 -->
+			<section>
+				<h3 class="sub_title d_iblock">
+					예약상세 정보
+				</h3>
+				<!-- 2017-10-30 edit 상단 버튼 삭제 <div class="side_wrp">-->
+				<!--<div class="side_wrp">-->
+					<!--<button type="button" class="btn btn_border_grey"><i class="icon_cancel"></i>예약취소</button>-->
+				<!--</div>-->
+				<table class="tb v3 tb_frm">
+					<caption class="sr-only">예약상세 정보</caption>
+					<tbody>
+					<tr>
+						<th scope="row">예약번호</th>
+						<td colspan="3">1509072321297 -  <span class="color_red">예약대기 </span></td>
+					</tr>
+					<tr>
+						<th scope="row">숙소명</th>
+						<td colspan="3">쾰른로뎀민박 (독일 &gt; 쾰른)</td>
+					</tr>
+					<tr>
+						<th scope="row">객실</th>
+						<td colspan="3">11 bed 여성 도미토리</td>
+					</tr>
+					<tr>
+						<th scope="row">체크인</th>
+						<td>2017-11-14</td>
+						<th scope="row">체크아웃</th>
+						<td>2017-11-23</td>
+					</tr>
+					<tr>
+						<th scope="row">체크인 예정시각</th>
+						<td>오전 1시</td>
+						<th scope="row">도착예정지/시각</th>
+						<td>ㅁ, 오전 2시</td>
+					</tr>
+					</tbody>
+				</table>
+				<!-- 2017-10-30 edit -->
+				<p class="alert_info mt15">체크인 예정시각이 변경될 경우, 원활한 체크인을 위해 숙소에 연락하시거나 숙박자 정보를 변경해주세요. </p>
+				<!--// 2017-10-30 edit -->
+			</section>
+			<!-- 예약정보 -->
+			<!-- 2017-10-30 eidt : 예약 대기에서는 해당 영역이 없었는데 추가됨 -->
+			<div class="row res_finish v2 mt60">
+				<div class="col-sm-4 bg_mint">
+					<h3 class="fs20">숙박자 정보</h3>
+					<div class="side_wrp res-finish__top-btn">
+						<button type="button" class="btn res-finish__btn-edit">수정</button>
+					</div>
+					<hr class="hr2 res-finish__top-line">
+					<dl class="dl_pay">
+						<dt>이름</dt>
+						<dd>홍길동</dd>
+						<dt>성별</dt>
+						<dd>여성</dd>
+						<dt>이메일</dt>
+						<dd>andom@minbackdanawa.com</dd>
+						<dt>핸드폰</dt>
+						<dd>100-0000-0000</dd>
+						<dt>현지연락처</dt>
+						<dd>100-0000-0000</dd>
+						<dt>카카오톡 ID</dt>
+						<dd>100-0000-0000</dd>
+					</dl>
+				</div>
+				<div class="col-sm-8">
+					<p class="pos-center res-finish__msg-wait">현재 숙소로부터 예약가능 여부를 기다리는 중입니다.</p>
+				</div>
+			</div>
+			<!--// 2017-10-30 eidt -->
+			<!-- 예약 상세내용 -->
+			<section>
+				<h3 class="sub_title">
+					예약 상세내용
+				</h3>
+				<table class="tb tb_fixed">
+					<caption class="sr-only">예약 상세내용</caption>
+					<colgroup>
+						<col style="width:10%">
+						<col style="width:40%">
+						<col style="width:25%">
+						<col style="width:10%">
+						<col style="width:15%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col">날짜</th>
+						<th scope="col">객실유형</th>
+						<th scope="col">1박 단가</th>
+						<th scope="col">인원</th>
+						<th scope="col">요금</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="2">2016.03.22</td>
+						<td>
+							<span class="color_blk">남성도미토리룸</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="color_blk">플라워</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격(2인)</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="2">2016.03.22</td>
+						<td>
+							<span class="color_blk">남성도미토리룸</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="color_blk">플라워</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격(2인)</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="2">2016.03.22</td>
+						<td>
+							<span class="color_blk">남성도미토리룸</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="color_blk">플라워</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격(2인)</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					</tbody>
+				</table>
+				<table class="tb_total tb_fixed">
+					<tbody>
+					<tr>
+						<td>
+							<p class="alert_info">나머지 숙박요금 <span class="color_red">￡351.00</span>은 체크인시 해당 숙소에 직접 결제하시면 됩니다.</p>
+						</td>
+						<td class="td_total">
+							<dl>
+								<dt>예약금(10%)</dt>
+								<dd><span class="color_org">￡15 </span>(\19,100)</dd>
+								<dt>숙소 직접결제액(체크인시)</dt>
+								<dd><span class="color_org">(+)￡135</span></dd>
+								<dt class="total color_org">총 합계 금액</dt>
+								<dd class="total color_org">￡150</dd>
+							</dl>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</section>
+			<!-- 2017-10-30 eidt 버튼 아이콘 삭제, 예약취소 추가 -->
+			<div class="text-center pa40">
+				<button type="button" class="btn btn-lg bg_blk">예약취소</button>
+				<button type="button" class="btn btn-lg bg_org ml10">목록으로</button>
+			</div>
+			<!--// 2017-10-30 eidt -->
+		</div>
+
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+<div class="fix_btm">>
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+<div class="modal fade" id="modalInfoEdit" tabindex="-1" role="dialog">
+	<div class="modal-dialog info-eidt-pop">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<h1>숙박자 정보 수정</h1>
+		<div class="content pb0">
+			<form id="frmBookReq" name="frmBookReq">
+				<input type="hidden" id="bookno" name="bookno" value="TG1505276425118">
+				<div class="tbl-wrap">
+					<table class="tb nobor tb_frm">
+						<caption class="sr-only">숙박자 정보 수정</caption>
+						<colgroup>
+							<col style="width:150px">
+							<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">이름 <span class="color_red">*</span></th>
+							<td><input type="text" name="name" id="req_name"  class="form-control-basic plh_grey" title="이름" value="" placeholder="이름을 입력해 주세요."></td>
+						</tr>
+						<tr>
+							<th scope="row">성별 <span class="color_red">*</span></th>
+							<td>
+								<label class="inline-radio radio_label ml10 ">
+									<input type="radio" msg="성별을 입력하세요." name="sex" value="m">남성
+								</label>
+								<label class="inline-radio radio_label on">
+									<input type="radio" msg="성별을 입력하세요." name="sex" value="f" checked=""> 여성
+								</label>
+								<label class="inline-radio radio_label">
+									<input type="radio" msg="성별을 입력하세요." name="sex" value="mf" checked=""> 남성&amp;여성
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">체크인 예정시각 <span class="color_red">*</span></th>
+							<td>
+								<div class="tb_bx eidt-info__checkin">
+                                    <span class="edit-info__checkin--1">
+                                        <select class="form-control-basic select_checkin_am" label="체크인 예정 오전/오후">
+                                            <option value="">선택</option>
+                                            <option value="AM">오전</option>
+                                            <option value="PM">오후</option>
+									    </select>
+                                    </span>
+									<span class="edit-info__checkin--2">
+                                        <select class="form-control-basic select_checkin_time" required="" label="체크인 예정시각">
+										    <option>선택</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                    </span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">도착예정지/시각 <span class="color_red">*</span></th>
+							<td>
+								<div class="tb_bx eidt-info__arrive">
+                                    <span class="edit-info__arrive--1">
+                                        <input type="text" name="name" class="form-control-basic plh_grey" title="도착예정지" value="" placeholder="도착장소">
+                                    </span>
+									<span class="edit-info__arrive--2">
+                                        <select class="form-control-basic select_checkin_am" label="도착예정 오전/오후">
+                                            <option value="">선택</option>
+                                            <option value="AM">오전</option>
+                                            <option value="PM">오후</option>
+									    </select>
+                                    </span>
+									<span class="edit-info__arrive--3">
+                                        <select class="form-control-basic select_checkin_time" required="" label="도착 예정시각">
+										    <option>선택</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                    </span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일 <span class="color_red">*</span></th>
+							<td><input type="text" name="email" id="req_email" class="form-control-basic plh_grey" title="이메일" placeholder="메일 주소를 입력해주세요."></td>
+						</tr>
+						<tr>
+							<th scope="row" class="pt20">핸드폰 <span class="color_red">*</span></th>
+							<td>
+								<div class="tb_bx">
+									<input type="text" name="mobile" id="req_mobile" maxlength="30" class="form-control-basic plh_grey" title="핸드폰 번호" placeholder="핸드폰 번호를 입력해주세요.">
+								</div>
+
+								<p class="pt5 color_mint">안내전화시 사용될 번호이니 정확하게 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">현지연락처</th>
+							<td>
+								<input type="text" name="phone" id="req_phone" maxlength="30" class="form-control-basic plh_grey" title="현지연락처" placeholder="현지 연락처를 입력해주세요.">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">카카오톡 ID</th>
+							<td><input type="text" name="kakao" id="req_kakao" maxlength="20" class="form-control-basic plh_grey" title="카카오톡" value="" placeholder="카카오톡 ID를 입력해주세요."></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="text-center pa40">
+					<button type="button" class="btn btn-md bg_org" onclick="fnBookReq();">저장</button>
+					<button type="button" class="btn btn-md bg_grey2 ml10" data-dismiss="modal">취소</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.res-finish__btn-edit').click(function(){
+            $('#modalInfoEdit').modal();
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D] 닫기만 있는 메뉴 class="page_clse" -->
+<body class="page_clse">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1><a href="/">로마지도 보기</a></h1>
+		<a class="icon_hd_clse" href="">닫기</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+
+<!-- 지도 -->
+	<!-- [D] 아래 배그라운드 이미지는 데모용-->
+<div id="map" class="map" style=" background:url(_temp/map.jpg) no-repeat 50% -2px; background-size:cover">
+
+	<!-- 지도영역 -->
+
+	<!-- 마크 -->
+	<span class="markerSights" style="position:absolute;top:100px;right:100px"></span>
+	<span class="markerTraffic" style="position:absolute;top:150px;right:200px"></span>
+	<a class="markerBasic" href="#" style="position:absolute;top:200px;right:100px" data-map="1"></a>
+	<a class="markerPlus" href="#" style="position:absolute;top:250px;right:100px" data-map="2"></a>
+	<a class="markerPower" href="#" style="position:absolute;top:250px;right:200px" data-map="3"></a>
+	<span class="markerIcon" style="position:absolute;top:300px;right:50px"></span>
+	<!-- 사이드컨트롤 -->
+	<div class="control_wrp">
+		<!-- 줌컨트롤 -->
+		<div class="zoom_control">
+			<button type="button" class="zoomin">지도확대</button>
+			<button type="button" class="zoomout">지도축소</button>
+		</div>
+	</div>
+</div>
+
+
+<!-- 지도목록 10개 -->
+<div class="btm_fixed">
+	<div id="mapLst" class="swiper-container">
+		<ul class="room_lst swiper-wrapper">
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="swiper-slide">
+				<div class="media" href="">
+					<div class="media-left">
+						<div class="tmb_wrp">
+							<a href=""><img src="_temp/room.png" alt=""></a>
+							<div class="ribbon_wrp">
+								<i class="icon_ribbon_wish">위시리스트</i>
+							</div>
+						</div>
+					</div>
+					<div class="media-body">
+						<div class="star_wrp">
+							<!-- 별점 -->
+							<span class="starrating" title="8.0">
+								<span style="width:80%">8.0</span>
+							</span>
+							<!-- 신규 -->
+							<span class="label bg_org">신규</span>
+						</div>
+						<h3 class="ellipsis">
+							<!-- 즉시 -->
+							<i class="icon_now"></i>
+							로마 자고가 하우스 (Jagoga House)
+						</h3>
+						<div class="price">
+							<s class="before_price color_grey">€42</s>
+							<span class="current_price">€30</span>
+							<span class="label bg_mint">할인</span>
+							<span class="label bg_ylw">쿠폰</span>
+						</div>
+						<div class="meta">
+							<a href="" class="item_reviw">리뷰(<span>14</span>)</a>
+							<i class="split"></i>
+							<a href="" class="item_wish">위시리스트(<span>32</span>)</a>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
+
+<script>
+// 슬라이드 : http://idangero.us/swiper/api
+jQuery(function($){
+	var swiper = new Swiper('#mapLst', {
+		pagination: '#mapLst .swiper-pagination',
+		paginationType: 'progress'
+	});
+	// 클릭
+	$('#map').on('click','[data-map]',function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		swiper.slideTo($(this).data('map'));
+		return false;
+	});
+});
+</script>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!-- yuna 로고 이미지 및 텍스트 추가 -->
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--// yuna 로고 이미지 및 텍스트 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="" class="active">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!-- yuna 아이콘 삭제 color_org삭제 -->
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account"><!-- <i class="icon_user_org"></i> -->[테스트] 희아게스트하우스님</a>
+						<!-- <a href="/member/logout.php" class="btn">정보수정</a> -->
+						<a href="/member/logout.php" class="btn">로그아웃</a>
+						<!--yuna: 추가 -->
+						<a href="" class="btn btn-xs link-go"><span class="icon_house_org mr5"></span>투어 페이지 바로가기</a>
+					</div>
+				</div>
+			</div>
+			<!-- yuna 수정 -->
+			<div class="hd_gnb clearfix w1260">
+				<nav class="pull-left">
+					<ul class="gnb clearfix">
+						<li><a href="">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="" class="active">통계/정산</a></li>
+						<li><a href="">파트너 지원</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--// yuna 수정 -->
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap">
+				<aside class="content_aside">
+					<h2 class="aside_tit">통계/정산</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">정산내역</a></li>
+							<li><a href="">수익통계</a></li>
+							<li class="active"><a href="">순위별 통계</a></li>
+							<li><a href="">리뷰통계</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- content_body -->
+				<div class="content_body clearfix">
+					<!-- stats-area-wrap -->
+					<div class="stats-area-wrap row mb70">
+						<div class="col-xs-6">
+							<div class="tit-area clearfix">
+								<h3 class="sub_title mt10 pull-left">판매수익 TOP 10</h3>
+							</div>
+							<div class="tbl-wrap3 ">
+								<table class="tb tb-default text-center">
+									<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+										<col style="width:55px">
+										<col>
+										<col style="width:100px">
+										<col style="width:100px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>상품명</th>
+											<th>수익</th>
+											<th>비율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="color_red">1</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어파리워킹투어파리워킹투어파리워킹투어</span></td>
+											<td class="color_red">35,000 원</td>
+											<td class="color_red">52.41%</td>
+										</tr>
+										<tr>
+											<td class="color_red">2</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">35,000 원</td>
+											<td class="color_red">28.4%</td>
+										</tr>
+										<tr>
+											<td class="color_red">3</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">35,000 원</td>
+											<td class="color_red">10%</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>35,000 원</td>
+											<td>4%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tit-area clearfix">
+								<h3 class="sub_title mt10 pull-left">여행자들이 많이 예약한 상품 TOP 10</h3>
+							</div>
+							<div class="tbl-wrap3 ">
+								<table class="tb tb-default text-center">
+									<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+										<col style="width:55px">
+										<col>
+										<col style="width:100px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>상품명</th>
+											<th>예약확정</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="color_red">1</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어파리워킹투어파리워킹투어파리워킹투어</span></td>
+											<td class="color_red">42</td>
+										</tr>
+										<tr>
+											<td class="color_red">2</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">40</td>
+										</tr>
+										<tr>
+											<td class="color_red">3</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">35</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>30</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>20</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>10</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>9</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>7</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tit-area clearfix">
+								<h3 class="sub_title pull-left">만족도 높은 상품 TOP 10</h3>
+							</div>
+							<div class="tbl-wrap3 ">
+								<table class="tb tb-default text-center">
+									<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+										<col style="width:55px">
+										<col>
+										<col style="width:100px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>상품명</th>
+											<th>평점</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="color_red">1</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어파리워킹투어파리워킹투어파리워킹투어</span></td>
+											<td class="color_red">5.0</td>
+										</tr>
+										<tr>
+											<td class="color_red">2</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">4.9</td>
+										</tr>
+										<tr>
+											<td class="color_red">3</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">4.5</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>4.0</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>3.7</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>3.2</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>3.0</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>2.6</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>1.5</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>1.0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tit-area clearfix">
+								<h3 class="sub_title pull-left">만족도가 낮은 상품 TOP 10</h3>
+							</div>
+							<div class="tbl-wrap3 ">
+								<table class="tb tb-default text-center">
+									<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+										<col style="width:55px">
+										<col>
+										<col style="width:100px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>상품명</th>
+											<th>평점</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="color_red">1</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어파리워킹투어파리워킹투어파리워킹투어</span></td>
+											<td class="color_red">5.0</td>
+										</tr>
+										<tr>
+											<td class="color_red">2</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">4.9</td>
+										</tr>
+										<tr>
+											<td class="color_red">3</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">4.5</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>4.0</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>3.7</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="text-left"><span class="ellipsis"></span></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tit-area clearfix">
+								<h3 class="sub_title pull-left">여행자들이 많이 저장한 상품 TOP 10</h3>
+							</div>
+							<div class="tbl-wrap3 ">
+								<table class="tb tb-default text-center">
+									<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+										<col style="width:55px">
+										<col>
+										<col style="width:100px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>상품명</th>
+											<th>저장 수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="color_red">1</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어파리워킹투어파리워킹투어파리워킹투어</span></td>
+											<td class="color_red">저장 수</td>
+										</tr>
+										<tr>
+											<td class="color_red">2</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">42</td>
+										</tr>
+										<tr>
+											<td class="color_red">3</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">35</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>33</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>28</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>21</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>15</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>8</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>5</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tit-area clearfix">
+								<h3 class="sub_title pull-left">여행자들이 많이 취소한 상품 TOP 10</h3>
+							</div>
+							<div class="tbl-wrap3 ">
+								<table class="tb tb-default text-center">
+									<caption class="sr-only"> 리뷰 검색 항목</caption>
+									<colgroup>
+										<col style="width:55px">
+										<col>
+										<col style="width:100px">
+										<col style="width:100px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>상품명</th>
+											<th>예약취소</th>
+											<th>취소율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="color_red">1</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어파리워킹투어파리워킹투어파리워킹투어</span></td>
+											<td class="color_red">42</td>
+											<td class="color_red">10%</td>
+										</tr>
+										<tr>
+											<td class="color_red">2</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">41</td>
+											<td class="color_red">9%</td>
+										</tr>
+										<tr>
+											<td class="color_red">3</td>
+											<td class="color_red text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td class="color_red">38</td>
+											<td class="color_red">8%</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>30</td>
+											<td>4%</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>28</td>
+											<td>3%</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>28</td>
+											<td>2.9%</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>25 원</td>
+											<td>2%</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>22</td>
+											<td>2%</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>15</td>
+											<td>0.9%</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td class="text-left"><span class="ellipsis">파리워킹투어</span></td>
+											<td>12</td>
+											<td>0.2%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!--// stats-area-wrap -->
+				</div>
+				<!--// content_body -->
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

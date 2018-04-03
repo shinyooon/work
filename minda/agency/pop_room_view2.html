@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<!-- <link rel="stylesheet" href="css/jquery.bxslider.min.css"> -->
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body--hidden">
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<? include "inc/rev_form.html" ?>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!-- ly -->
+	<div class="ly full fade ly-rev">
+		<!-- ly__wrap -->
+		<div class="ly__wrap">
+			<!-- ly__header -->
+			<div class="ly__header">
+				<div class="tit-wrap--hidden">
+					<h1>예약 신청하기</h1>
+				</div>
+				<button type="button" class="modal__btn-clse ly__header__btn">
+					<span class="ly__header__icon">닫기</span>
+				</button>
+			</div>
+			<!--// ly__header -->
+			<!-- ly__con -->
+			<div class="ly__con">
+				<!-- ly__left -->
+				<div class="ly__left">
+					<!-- ly__left__header -->
+					<div class="ly__left__header">
+						<button type="button" class="ly__btn-back"><span class="ly__icon-back"></span></button>
+						<!-- ly__tab -->
+						<div class="ly__tab">
+							<ul class="ly__tab-list">
+								<li class="ly__tab-item ly__tab-item--active">
+									<button type="button" class="ly__tab-btn">
+										<span class="ly__tab-icon ly__tab-icon--1"></span>
+										직접 예약하기
+									</button>
+								</li>
+								<li class="ly__tab-item">
+									<button type="button" class="ly__tab-btn">
+										<span class="ly__tab-icon ly__tab-icon--2"></span>
+										민다 추천받기
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!--// ly__tab -->
+					</div>
+					<!--// ly__left__header -->
+					<!-- ly__left__con -->
+					<div class="ly__left__con">
+						<!-- view -->
+						<div class="view">
+							<div class="tit-wrap--hidden">
+								<h2>숙소상세</h2>
+							</div>
+							<section class="view-partner">
+								<div class="view-partner__col view-partner__prof">
+									<img src="http://www.theminda.com/data/member/profile_img/201706/1496261405_flowerparis.jpg" alt="" class="view-partner__img"/>
+								</div>
+								<div class="view-partner__col view-partner__desc">
+									<span class="view-partner__name">로마 인스테이션(Innstation)</span>
+									<p class="view-partner__txt">안녕하세요? 로마 인스테이션(Innstation) 입니다.</p>
+								</div>
+							</section>
+							<section class="view__tab">
+								<ul class="view__tab-list nav" role="tablist">
+									<li class="view__tab-item active"><a href="#view_rev" class="view__tab-btn">객실 예약</a></li>
+									<li class="view__tab-item"><a href="#view_intro" class="view__tab-btn">숙소 소개</a></li>
+									<li class="view__tab-item"><a href="#view_info" class="view__tab-btn">추가정보</a></li>
+									<li class="view__tab-item"><a href="#view_map" class="view__tab-btn">위치/오시는 방법</a></li>
+									<li class="view__tab-item"><a href="#view_review" class="view__tab-btn">리뷰</a></li>
+								</ul>
+							</section>
+							<section class="view-intro">
+								<div class="view-intro__main">
+									<div class="view-intro__img-wrap">
+										<ul class="view-intro__slider">
+											<li class="view-intro__slide"><img src="http://www.theminda.com/data/goods/0_587331e683ec5.jpg" alt="숙소 상세 이미지" class="view-intro__slide-img" /></li>
+											<li class="view-intro__slide"><img src="http://www.theminda.com/data/goods/7_587331e69435b.jpg" alt="숙소 상세 이미지" class="view-intro__slide-img"/></li>
+											<li class="view-intro__slide"><img src="http://www.theminda.com/data/goods/8_587331e6a375a.jpg" alt="숙소 상세 이미지" class="view-intro__slide-img"/></li>
+											<li class="view-intro__slide"><img src="http://www.theminda.com/data/goods/3_56a8d672c5a85jpeg" alt="숙소 상세 이미지" class="view-intro__slide-img"/></li>
+										</ul>
+										<div class="view-intro__slide-ctrl">
+											<span class="view-intro__slide-prev"></span>
+											<span class="view-intro__slide-cnt"></span>
+											<span class="view-intro__slide-next"></span>
+										</div>
+									</div>
+									<div class="view-intro__spec">
+										<dl class="view-intro__spec-dl view-intro__review">
+											<dt class="view-intro__spec-tit">종합평점</dt>
+											<dd class="view-intro__spec-txt">
+												<div class="starrating">
+													<span class="star-wrap--lg--green">
+														<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+													</span>
+													<span class="star-wrap__cnt">4.78</span>
+												</div>
+												<p class="view-intro__review-txt"><a href="#view_review" class="view-intro__review-link"><span class="view-intro__review-link--point">93</span>명이 작성한 리뷰보기</a></p>
+											</dd>
+										</dl>
+										<dl class="view-intro__spec-dl">
+											<!-- <dt class="view-intro__spec-tit">커미션</dt>
+											<dd class="view-intro__spec-txt">있음</dd> -->
+											<dt class="view-intro__spec-tit">위치</dt>
+											<dd class="view-intro__spec-txt">떼르미니역 24번 플랫폼에서 도보 3분</dd>
+											<dt class="view-intro__spec-tit">총 수용인원</dt>
+											<dd class="view-intro__spec-txt">50명</dd>
+											<dt class="view-intro__spec-tit">보유객실</dt>
+											<dd class="view-intro__spec-txt">도미토리, 일반실, 독채</dd>
+											<dt class="view-intro__spec-tit">객실금액</dt>
+											<dd class="view-intro__spec-txt">
+												<ul class="view-intro__spec-room">
+													<li class="view-intro__room-type">도미토리<span class="view-intro__room-price">€30~</span></li>
+													<li class="view-intro__room-type">개인실<span class="view-intro__room-price">€70~</span></li>
+													<li class="view-intro__room-type">2인실<span class="view-intro__room-price">€30~</span></li>
+													<li class="view-intro__room-type">3인실<span class="view-intro__room-price">€120~</span></li>
+													<li class="view-intro__room-type">4인실<span class="view-intro__room-price">€150~</span></li>
+													<li class="view-intro__room-type">5인실<span class="view-intro__room-price">€180~</span></li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</section>
+							<!-- //view-intro -->
+							<section id="view_rev" class="view-rev">
+								<div class="tit-wrap">
+									<h3 class="sub-tit">객실 예약</h3>
+								</div>
+								<div class="srch-room view-rev__room">
+									<div class="view-rev__date-set">
+										<div class="input-group">
+											<span class="input-wrap input-wrap__cal view-rev__checkin-date">
+												<input type="text" title="체크인 날짜" placeholder="체크인" class="input-cal">
+											</span>
+											<span class="input-wrap input-wrap__select view-rev__day">
+												<select title="숙박일 수">
+													<option>숙박일수</option>
+													<option>1박</option>
+													<option>2박</option>
+													<option>3박</option>
+													<option>4박</option>
+													<option>5박</option>
+													<option>6박</option>
+													<option>7박</option>
+													<option>8박</option>
+													<option>9박</option>
+													<option>10박</option>
+													<option>11박</option>
+													<option>12박</option>
+													<option>13박</option>
+													<option>14박</option>
+													<option>15박</option>
+												</select>
+											</span>
+										</div>
+									</div>
+									<div class="srch-room__result">
+										<div class="tit-wrap">
+											<p class="result-txt">총<span class="result-txt--point">101개</span>의 객실이 있습니다.</p>
+											<div class="tit__right">
+												<p>가격 기준일 : 2017-08-22</p>
+											</div>
+										</div>
+										<!-- srch-room__list -->
+										<ul class="srch-room__list">
+											<li class=" srch-room__item__row srch-room__item">
+												<div class="srch-room__item__col srch-room__img-col">
+													<a href="" class="srch-room__item-link">
+														<div class="srch-room__img-wrap">
+															<img src="http://www.theminda.com/data/goods/1_59b9d5a7670c3.jpg" alt="" class="srch-room__img">
+														</div>
+													</a>
+												</div>
+												<div class="srch-room__info srch-room__item__col">
+													<a href="" class="srch-room__item-link">
+														<div class="srch-room__name">
+															<span class="srch-room__type-tit">콘도형</span>
+															<strong>큰큰방</strong>
+														</div>
+														<div class="srch-room__desc">
+															<dl class="srch-room__spec">
+																<dt>객실정원</dt><dd>1~5명</dd><dt>최소예약</dt><dd>1박이상</dd>
+															</dl>
+															<dl class="srch-room__facility">
+																<dt>시설</dt>
+																<dd>에어컨, 냉장고, 테이블</dd>
+															</dl>
+														</div>
+													</a>
+												</div>
+												<div class="srch-room__item__col srch-room__price">
+													<!-- <span class="input-wrap input-wrap__select--2">
+														<select title="검색결과 정렬">
+															<option>선택</option>
+															<option>1박</option>
+															<option>2박</option>
+														</select>
+													</span> -->
+													<p class="srch-room__price-txt">1인 1박 <span class="srch-room__price--point">€ 30</span></p>
+													<!-- [D] 일반실, 콘도형 일 때 초과인원 금액 노출 -->
+													<p class="srch-room__price-txt2">(1명 초과시 1인 1박 <span class="srch-room__price--point">€20</span>)</p>
+												</div>
+											</li>
+											<li class=" srch-room__item__row srch-room__item">
+												<div class="srch-room__item__col srch-room__img-col">
+													<a href="" class="srch-room__item-link">
+														<div class="srch-room__img-wrap">
+															<img src="http://www.theminda.com/data/goods/1_59b9d5a7670c3.jpg" alt="" class="srch-room__img">
+														</div>
+													</a>
+												</div>
+												<div class="srch-room__info srch-room__item__col">
+													<a href="" class="srch-room__item-link">
+														<div class="srch-room__name">
+															<span class="srch-room__type-tit">도미토리</span>
+															<strong>여성 도미토리</strong>
+														</div>
+														<div class="srch-room__desc">
+															<dl class="srch-room__spec">
+																<dt>객실정원</dt><dd>1~5명</dd><dt>최소예약</dt><dd>1박이상</dd>
+															</dl>
+															<dl class="srch-room__facility">
+																<dt>시설</dt>
+																<dd>에어컨, 냉장고, 테이블</dd>
+															</dl>
+														</div>
+													</a>
+												</div>
+												<div class="srch-room__item__col srch-room__price">
+													<!-- <span class="input-wrap input-wrap__select--2">
+														<select title="검색결과 정렬">
+															<option>선택</option>
+															<option>1박</option>
+															<option>2박</option>
+														</select>
+													</span> -->
+													<p class="srch-room__price-txt">1인 1박 <span class="srch-room__price--point">€ 30</span></p>
+												</div>
+											</li>
+											<li class=" srch-room__item__row srch-room__item srch-room__item--disabled">
+												<div class="srch-room__item__col srch-room__img-col">
+													<a href="" class="srch-room__item-link">
+														<div class="srch-room__img-wrap">
+															<img src="http://www.theminda.com/data/goods/1_59b9d5a7670c3.jpg" alt="" class="srch-room__img">
+														</div>
+													</a>
+												</div>
+												<div class="srch-room__info srch-room__item__col">
+													<a href="" class="srch-room__item-link">
+														<div class="srch-room__name">
+															<span class="srch-room__type-tit">도미토리</span>
+															<strong>여성 도미토리</strong>
+														</div>
+														<div class="srch-room__desc">
+															<dl class="srch-room__spec">
+																<dt>객실정원</dt><dd>1~5명</dd><dt>최소예약</dt><dd>1박이상</dd>
+															</dl>
+															<dl class="srch-room__facility">
+																<dt>시설</dt>
+																<dd>에어컨, 냉장고, 테이블</dd>
+															</dl>
+														</div>
+													</a>
+												</div>
+												<div class="srch-room__item__col srch-room__price">
+													<!-- <span class="input-wrap input-wrap__select--2">
+														<select title="검색결과 정렬">
+															<option>선택</option>
+															<option>1박</option>
+															<option>2박</option>
+														</select>
+													</span> -->
+													<p class="srch-room__price-txt">1인 1박 <span class="srch-room__price--point">€ 30</span></p>
+												</div>
+											</li>
+										</ul>
+										<!--// srch-room__list -->
+									</div>
+								</div>
+								<div class="view-rev__right">
+									<div class="view-rev__right-wrap">
+										<div class="view-rev__date">
+											<span class="view-rev__date-tit">체크인/체크아웃</span>
+											<span class="view-rev__date-num">017-09-13 ~ 2017-09-16 (3박)</span>
+										</div>
+										<!-- <ul class="view-rev__list">
+											<li class="view-rev__item">
+												<span class="view-rev__item-txt">
+													<span class="view-rev__item-tit">남성 도미토리-1</span>
+													<span class="view-rev__item-people">인원 : 1인</span>
+												</span>
+												<span class="view-rev__item-price">
+													<span class="view-rev__price-num">€60</span>
+													<button type="button" class="view-rev__btn-del">삭제</button>
+												</span>
+											</li>
+										</ul>
+										<div class="view-rev__item view-rev__item-total">
+											<span class="view-rev__item-txt">
+												<span class="view-rev__item-tit">합계 금액</span>
+											</span>
+											<span class="view-rev__item-price">
+												<span class="view-rev__price-num">€60</span>
+												<span class="view-rev__price-won">(246,800원)</span>
+											</span>
+										</div>
+										<div class="view-rev__item view-rev__item-deposit">
+											<span class="view-rev__item-txt">
+												<span class="view-rev__item-tit">예약금</span>
+											</span>
+											<span class="view-rev__item-price">
+												<span class="view-rev__price-num">€60</span>
+												<span class="view-rev__price-won">(246,800원)</span>
+											</span>
+										</div> -->
+										<div class="view-rev__before-msg">
+											<strong class="view-rev__before-msg--point">여행사 예약체결이 되지 않은 숙소입니다.</strong>
+											<p class="view-rev__before-txt">예약 요청하기 버튼을 누르시면<br /> 추천예약으로 진행되며, 담당자 확인 후<br /> 예약 가능 여부에 대해 안내드립니다.</p>
+										</div>
+									</div>
+									<div class="view-rev__right__info">
+										<dl class="view-rev__right__info-wrap">
+											<dt class="view-rev__right__info-tit">숙박자 정보</dt>
+											<dd class="view-rev__right__info-txt"><span class="input-wrap input-wrap__select">
+												<select title="체크인 예정 시각">
+													<option>체크인 예정시각</option>
+													<option>00:00</option>
+													<option>01:00</option>
+													<option>02:00</option>
+													<option>03:00</option>
+													<option>04:00</option>
+													<option>05:00</option>
+													<option>06:00</option>
+													<option>07:00</option>
+													<option>08:00</option>
+													<option>09:00</option>
+													<option>10:00</option>
+													<option>11:00</option>
+													<option>12:00</option>
+													<option>13:00</option>
+													<option>14:00</option>
+													<option>15:00</option>
+													<option>16:00</option>
+													<option>17:00</option>
+													<option>18:00</option>
+													<option>19:00</option>
+													<option>20:00</option>
+													<option>21:00</option>
+													<option>22:00</option>
+													<option>23:00</option>
+												</select>
+											</span></dd>
+											<dd class="view-rev__right__info-txt"><span class="input-wrap">
+												<input type="text" title="도착예정지" placeholder="도착예정지" />
+											</span></dd>
+											<dd class="view-rev__right__info-txt"><span class="input-wrap input-wrap__select">
+												<select title="도착 예정 시각">
+													<option>도착시각</option>
+													<option>00:00</option>
+													<option>01:00</option>
+													<option>02:00</option>
+													<option>03:00</option>
+													<option>04:00</option>
+													<option>05:00</option>
+													<option>06:00</option>
+													<option>07:00</option>
+													<option>08:00</option>
+													<option>09:00</option>
+													<option>10:00</option>
+													<option>11:00</option>
+													<option>12:00</option>
+													<option>13:00</option>
+													<option>14:00</option>
+													<option>15:00</option>
+													<option>16:00</option>
+													<option>17:00</option>
+													<option>18:00</option>
+													<option>19:00</option>
+													<option>20:00</option>
+													<option>21:00</option>
+													<option>22:00</option>
+													<option>23:00</option>
+												</select>
+											</span></dd>
+										</dl>
+									</div>
+									<div class="view-rev__right__btn-wrap">
+										<a href="" class="view-rev__right__btn">예약 요청하기</a>
+									</div>
+								</div>
+							</section>
+							<!-- // view-rev -->
+							<section id="view_intro" class="view-intro">
+								<div class="tit-wrap">
+									<h3 class="sub-tit">숙소 소개</h3>
+								</div>
+								<div class="view-intro__desc">
+									<p class="view-intro__txt">안녕하세요 :) 로마 인스테이션(Innstation)입니다.<br /><br /> 저희 로마 인스테이션(Innstaion)은<br /> · 연인, 가족, 출장, 배낭 여행객들을 위한 이탈리아 정식 허가를 받은 호스텔입니다.<br /> · 가족과같은마음으로 풍부한영양식 조식과 석식을 제공합니다<br /> · 위치 짱입니다. 로마 테르미니역에서 도보 2분거리입니다.<br /> · 청결합니다. 1인 1시트로 전문 세탁소에 맡겨 청결하게 관리합니다.<br /> · 편리합니다. 각 방마다 전용 화장실과 샤워실, 에어컨, TV, 헤어 드라이어, 무선 인터넷 등 편의시설이 완비되어 있습니다.<br /><br /> 어렵게 시간을 내어 로마를 방문해주시는 여러분들께 늘 아름다운 추억을 남겨드릴 수 있도록 최선을 다하겠습니다.<br /><br /> 저희 로마 인스테이션(Innstaion)은<br /> · 연인, 가족, 출장, 배낭 여행객들을 위한 이탈리아 정식 허가를 받은 호스텔입니다.<br /> · 가족과같은마음으로 풍부한영양식 조식과 석식을 제공합니다<br /> · 위치 짱입니다. 로마 테르미니역에서 도보 2분거리입니다.<br /> · 청결합니다. 1인 1시트로 전문 세탁소에 맡겨 청결하게 관리합니다.<br /> · 편리합니다. 각 방마다 전용 화장실과 샤워실, 에어컨, TV, 헤어 드라이어, 무선 인터넷 등<br /><br /> 편의시설이 완비되어 있습니다.<br /> 어렵게 시간을 내어 로마를 방문해주시는 여러분들께 늘 아름다운 추억을 남겨드릴 수 있도록 최선을 다하겠습니다.</p>
+								</div>
+							</section>
+							<!-- //view-intro -->
+							<section id="view_info" class="view-info">
+								<div class="view-service">
+									<div class="tit-wrap">
+										<h3 class="sub-tit">부가시설 및 서비스</h3>
+									</div>
+									<div class="view-info__row">
+										<div class="view-info__col view-service__public">
+											<div class="view-service__tit">공용시설</div>
+											<div class="view-info__row">
+												<ul class="view-info__col view-service__list">
+													<li class="view-service__item view-service__item">레스토랑</li>
+													<li class="view-service__item view-service__item">휴게실</li>
+													<li class="view-service__item view-service__item--disabled">카페</li>
+													<li class="view-service__item view-service__item--disabled">정원</li>
+													<li class="view-service__item view-service__item--disabled">수영장 - 유료</li>
+													<li class="view-service__item view-service__item--disabled">스파시설 - 유료</li>
+													<li class="view-service__item view-service__item">헬스시설 - 유료</li>
+													<li class="view-service__item view-service__item">게스트 부엌</li>
+													<li class="view-service__item view-service__item">전자렌지</li>
+													<li class="view-service__item view-service__item">커피포트</li>
+													<li class="view-service__item view-service__item--disabled">토스트기</li>
+													<li class="view-service__item view-service__item--disabled">바베큐시설</li>
+													<li class="view-service__item view-service__item--disabled">주차가능 - 차고 주차(조건부무료</li>
+													<li class="view-service__item view-service__item--disabled">개인사물함</li>
+												</ul>
+												<ul class="view-info__col view-service__list">
+													<li class="view-service__item view-service__item">엘리베이터</li>
+													<li class="view-service__item view-service__item">공용PC</li>
+													<li class="view-service__item view-service__item">Wifi</li>
+													<li class="view-service__item view-service__item">프린터 사용</li>
+													<li class="view-service__item view-service__item">팩스 사용</li>
+													<li class="view-service__item view-service__item--disabled">TV</li>
+													<li class="view-service__item view-service__item--disabled">헤어드라이기</li>
+													<li class="view-service__item view-service__item">다리미</li>
+												</ul>
+											</div>
+										</div>
+										<div class="view-info__col view-service__bath">
+											<div class="view-service__tit">욕실</div>
+											<div class="view-info__row">
+												<ul class="view-info__col view-service__list">
+													<li class="view-service__item view-service__item--disabled">화장실(16개)</li>
+													<li class="view-service__item view-service__item">샤워실(16개)</li>
+													<li class="view-service__item view-service__item">수건</li>
+													<li class="view-service__item view-service__item">비누</li>
+													<li class="view-service__item view-service__item--disabled">치약</li>
+													<li class="view-service__item view-service__item--disabled">수건</li>
+													<li class="view-service__item view-service__item">샴푸</li>
+													<li class="view-service__item view-service__item">린스</li>
+													<li class="view-service__item view-service__item">바디샴푸</li>
+													<li class="view-service__item view-service__item--disabled">1회용 칫솔</li>
+												</ul>
+											</div>
+										</div>
+										<div class="view-info__col view-service__etc">
+											<div class="view-service__tit">기타서비스</div>
+											<div class="view-info__row">
+												<ul class="view-info__col view-service__list">
+													<li class="view-service__item view-service__item">공항픽업</li>
+													<li class="view-service__item view-service__item">짐 보관 서비스</li>
+													<li class="view-service__item view-service__item">자전거 대여 - 유료</li>
+													<li class="view-service__item view-service__item--disabled">24시간 출입자유</li>
+													<li class="view-service__item view-service__item--disabled">여행투어 제공</li>
+													<li class="view-service__item view-service__item--disabled">신용카드 결제가능</li>
+													<li class="view-service__item view-service__item">세탁 - 조건부 무료</li>
+													<li class="view-service__item view-service__item">국제전화 무료(한국)</li>
+													<li class="view-service__item view-service__item">키보증금</li>
+													<li class="view-service__item view-service__item">흡연가능</li>
+													<li class="view-service__item view-service__item--disabled">외국인 숙박불가</li>
+													<li class="view-service__item view-service__item--disabled">유아 숙박불가</li>
+													<li class="view-service__item view-service__item--disabled">공항픽업</li>
+													<li class="view-service__item view-service__item--disabled">어린이 숙박불가</li>
+													<li class="view-service__item view-service__item--disabled">애완동물 동반가능</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="view-food">
+									<div class="tit-wrap">
+										<h3 class="sub-tit">식사 및 간식</h3>
+									</div>
+									<div class="view-food__row">
+										<div class="view-food__col">
+											<dl class="view-food__list">
+												<dt class="view-food__time">한식</dt>
+												<dd class="view-food__desc">(06시부터 7시30분까지) (무료)</dd>
+												<dt class="view-food__time view-food__time--disabled">중식</dt>
+												<dd class="view-food__desc">(없음)</dd>
+												<dt class="view-food__time">석식</dt>
+												<dd class="view-food__desc">한식 (18시30분부터 19시30분까지) (무료)</dd>
+											</dl>
+										</div>
+										<div class="view-food__col">
+											<dl class="view-food__desc">
+												<dt>부가설명</dt>
+												<dd>다양한 계절 과일 제공</dd>
+												<dd>다양한 계절 과일 제공</dd>
+												<dd>다양한 계절 과일 제공</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<!--// view-food -->
+								<div class="view-info__row">
+									<div class="view-info__col">
+										<div class="tit-wrap">
+											<h3 class="sub-tit">숙소 근처 스팟</h3>
+										</div>
+									</div>
+									<div class="view-info__col">
+										<div class="tit-wrap">
+											<h3 class="sub-tit">숙소 이용 규칙</h3>
+										</div>
+									</div>
+								</div>
+								<div class="view-info__row">
+									<div class="view-info__col view-spot">
+										<div class="view-spot__box">
+											- 파씨 아이스크림 가게 : 도보 5분<br /> - 콜로세움 : 도보 15분<br /> - 로마시내 중심지 : 도보 30분 이내<br /> - 마켓(휴일에도 오픈) : 도보 4분 (테르미니역과 마리아성당 옆) <br /> - 공항가실 때와 열차를 이용하시는 분은 기차역이나 버스역이 5분 거리에 있어서 교통이 <br /> 최고 편리합니다.<br /> - 가이드투어 모임장소도보로 5~10분 거리~
+										</div>
+									</div>
+									<div class="view-info__col view-rule">
+										<div class="view-rule__box">
+											- 체크인 시간 : 오후 2시 이후 (오전 체크인시 짐보관 은 가능)<br /> - 체크아웃 시간 : 오전 10시 까지(10시~14시까지 청소시간..자리를 비워주셔야합니다)<br /> - 체크 인/아웃시 짐 보관가능<br /> - 밤 12시까지 귀가하기<br /> - 밤 12시까지 샤워가능<br /> *** 체크인 하루전 꼭~ 카톡이나 전화연락 주시기 바랍니다.
+										</div>
+									</div>
+								</div>
+								<div class="view-info__row">
+									<div class="view-info__col">
+										<div class="tit-wrap">
+											<h3 class="sub-tit">부가 유료서비스</h3>
+										</div>
+									</div>
+									<div class="view-info__col">
+										<div class="tit-wrap">
+											<h3 class="sub-tit">기타 특이사항</h3>
+										</div>
+									</div>
+								</div>
+								<div class="view-info__row">
+									<div class="view-info__col view-charge">
+										<div class="view-charge__box">
+											- 공항픽업 : 50유로(1~4인기준. 1인 추가시 10유로) 새벽 06시이전. <br /> 밤 23시이후 추가요금 10유로.<br /> - 세탁(1회당) : 5유로<br /> * 가고파민박 숙박자에게 각종 투어 할인 서비스 제공<br /> - 로마시내 투어, 바티칸 투어, 남부투어, 명품 아울렛투어 등 투어 예약가능.<br /> - 가이드투어 : 로마시내 / 바티칸 각각<br /> 학생 25 → (할인) (입장료. 교통비 별도)<br /> 성인 30 → (할인) (입장료. 교통비 별도)<br /> - 남부투어: 학생 50유로(입장료 별도)<br /> 성인 50유로(입장료 별도)<br /> - 로마시내, 바티칸, 남부투어 총 3개의 투어 진행시 별도의 할인서비스 제공
+										</div>
+									</div>
+									<div class="view-info__col view-etc">
+										<div class="view-etc__box">
+											-성수기 시즌에는 예약상황에따라 도미토리는 방을 옮길수도 있습니다.이점 유의해주세요~ㅎㅎ<br /> -도미토리에는 욕실용품 제공안함.(수건은 없으시면 빌려 드립니다.)<br /> - 5박 이상 숙박시 세탁 무료서비스1회.<br /> - 로마지도 무료제공<br /> - 로마관광 상세한설명.<br /><br /> - 1박예약 원하실경우 별도로 문의주세요~<br /><br /> **단체예약은 꼭 사전에 문의를주세요~
+										</div>
+									</div>
+								</div>
+								<div class="view-alert">
+									<p class="view-alert__txt">
+										민다의 숙소정보는 숙소예약을 위한 참고자료로 해당 숙소측에서 직접 관리하고 있으며 숙소 내 자체 변동이나 기타사유로 실제와 차이가 있을 수 있습니다.<br /> 업데이트 되지 않은 정보로 인한 직/간접 피해는 민다에서 책임지지 않음을 양지하시기 바랍니다.
+									</p>
+								</div>
+							</section>
+							<!--//view-info -->
+							<section id="view_map" class="view-map">
+								<div class="tit-wrap">
+									<h3 class="sub-tit">위치/오시는 방법</h3>
+								</div>
+								<div class="view-map__box">
+									<div class="view-map__api">
+										<img src="img/@sample_map.jpg" alt="" />
+									</div>
+									<dl class="view-map__info">
+										<dt class="view-map__info-tit">주소</dt>
+										<dt class="view-map__info-desc">VIA RATTAZZI 33 roma .italia.</dt>
+										<dt class="view-map__info-tit">위치</dt>
+										<dt class="view-map__info-desc">떼르미니역 24번 플랫폼에서 도보 4분, 지하철, 버스역까지 도보 5~6분, 모든 로마 가이드투어 모임장소 도보 5분</dt>
+										<dt class="view-map__info-tit">오시는 방법</dt>
+										<dt class="view-map__info-desc">※ 도착하시기전 꼭~ 카톡이나 전화연락을 주시기바람니다! <br />체크인기간은 오후 15시이후입니다. 짐보관 가능합니다.<br /> ※ 공항이나 다른 나라에서 오시는 분들은 거의 90%가 로마 떼르미니 역에서 하차하십니다.<br /><br /> * 떼르미니역에서 오시는 방법<br /> - 24번기차 플렛폼에서 좌측 출구로 역을 나오시면 도로앞에 맥도날드가 보입니다.<br /> - 맥도날드에서 좌측의 via giovanni giolitti 거리를 따라 직진하시다가 4번째 골목길로 via rattazzi 거리를따라 직진하시면<br /> 33번지에 초인종4번 GAGOPA로 적혀있습니다.<br /> - 초인종 4번을 짧게 두번을 누르시고요 1층입니다.<br /><br /> * 티부르티나 역에서 오시는 방법<br /> - 지하철 B를 타시고 테르미니역에 오셔서 위와 같은 방법으로 오세요.<br /><br /> * 참피노 공항에서 오시는 방법~<br /> - 공항에서 떼르미니역으로 오는 직행버스를 이용하세요.(요금 4유로) <br /><br /> * 피우미치노 공항에서 오시는 방법~<br /> - 공항에서 떼르미니역으로 오는 공항열차.혹은 직행 버스를 이용하세요.열차요금 14~15유로. 버스는 5~6유로<br /> - 밤 늦은시간에 도착하시는 분들은 바우처에 있는 연락처로 연락주시면 픽업해 드립니다. <br /> 공항픽업도 가능합니다.~</dt>
+									</dl>
+									<div class="view-map__img">
+										<img src="img/@sample_location.jpg" alt="" />
+									</div>
+								</div>
+							</section>
+							<!--//view-map -->
+							<section id="view_review" class="view-review">
+								<div class="tit-wrap">
+									<h3 class="sub-tit">리뷰</h3>
+									<span class="tit-wrap__txt">리뷰의 신뢰도를 위해 실제로 숙박하신 분들만 작성 가능합니다.</span>
+								</div>
+								<div class="review view-review__con">
+									<ul class="review__list">
+										<li class="review__item">
+											<div class="review__top">
+												<span class="review__nickname">blackcy</span>
+												<span class="review__date">2017.08.21</span>
+											</div>
+											<div class="review__right__top">
+												<p class="review__rev-info">2017-08-18부터 2박 / 남성 도미토리 / 25~29세 남성</p>
+											</div>
+											<div class="review__info">
+												<dl class="review__info-list">
+													<dt class="review__info-tit review__info-tit--hidden">평균평점</dt>
+													<dd class="review__info-score">
+														<div class="starrating">
+															<span class="star-wrap">
+																<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+															</span>
+															<span class="star-wrap__cnt">4.78</span>
+														</div>
+													</dd>
+													<dt class="review__info-tit">위치</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">시설</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">스텝</dt>
+													<dd class="review__info-score">5.00</dd>
+												</dl>
+											</div>
+											<div class="review__desc">
+												<p class="review__desc-txt">
+													개인적으로 인테리어도 너무 깔끔해서 좋았어요. 그리고 음식중에 소고기 무국 정말 맛있었어요! 진리에요ㅋㅋ
+												</p>
+											</div>
+										</li>
+										<li class="review__item">
+											<div class="review__top">
+												<span class="review__nickname">태평양</span>
+												<span class="review__date">2017.08.21</span>
+											</div>
+											<div class="review__right__top">
+												<p class="review__rev-info">2017-08-14부터 3박 / 남성 도미토리 / 20~24세 남성</p>
+											</div>
+											<div class="review__info">
+												<dl class="review__info-list">
+													<dt class="review__info-tit review__info-tit--hidden">평균평점</dt>
+													<dd class="review__info-score">
+														<div class="starrating">
+															<span class="star-wrap">
+																<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+															</span>
+															<span class="star-wrap__cnt">4.78</span>
+														</div>
+													</dd>
+													<dt class="review__info-tit">위치</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">시설</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">스텝</dt>
+													<dd class="review__info-score">5.00</dd>
+												</dl>
+											</div>
+											<div class="review__desc">
+												<p class="review__desc-txt">
+													숙소위치, 서비스 너무나 완벽했습니다. <br />런던, 파리 한인민박에서 지내다가 여기 인스테이션 오니까 호텔인줄 알았어요.<br />후기 잘 안쓰는데 너무 좋아서 남깁니다. 다음 로마에 가도 여기 숙소 머물고 싶어요.
+												</p>
+											</div>
+										</li>
+										<li class="review__item">
+											<div class="review__top">
+												<span class="review__nickname">하라</span>
+												<span class="review__date">2017.08.21</span>
+											</div>
+											<div class="review__right__top">
+												<p class="review__rev-info">2017-08-14부터 3박 / 남성 도미토리 / 20~24세 남성</p>
+											</div>
+											<div class="review__info">
+												<dl class="review__info-list">
+													<dt class="review__info-tit review__info-tit--hidden">평균평점</dt>
+													<dd class="review__info-score">
+														<div class="starrating">
+															<span class="star-wrap">
+																<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+															</span>
+															<span class="star-wrap__cnt">4.78</span>
+														</div>
+													</dd>
+													<dt class="review__info-tit">위치</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">시설</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">스텝</dt>
+													<dd class="review__info-score">5.00</dd>
+												</dl>
+											</div>
+											<div class="review__desc">
+												<p class="review__desc-txt">
+													떼르미니역 1분거리라 흑인들이 주변에 돌아다니지만 밤 늦게 아니면 괜찮아요.<br /> 시설도 깨끗하고 매일 청소에 수건 갈아주고 물, 과일까지 필요한 것들 다 구비되어있어요. <br /> 무엇보다 정성스러운 아침, 저녁 식사에 놀랐어요! 에어컨도 빵빵하고 정말 편한 곳이었어요.<br /> 이 가격에 이런 서비스라니 놀랐고 추천해요
+												</p>
+											</div>
+										</li>
+										<li class="review__item">
+											<div class="review__top">
+												<span class="review__nickname">blackcy</span>
+												<span class="review__date">2017.08.21</span>
+											</div>
+											<div class="review__right__top">
+												<p class="review__rev-info">2017-08-18부터 2박 / 남성 도미토리 / 25~29세 남성</p>
+											</div>
+											<div class="review__info">
+												<dl class="review__info-list">
+													<dt class="review__info-tit review__info-tit--hidden">평균평점</dt>
+													<dd class="review__info-score">
+														<div class="starrating">
+															<span class="star-wrap">
+																<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+															</span>
+															<span class="star-wrap__cnt">4.78</span>
+														</div>
+													</dd>
+													<dt class="review__info-tit">위치</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">시설</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">스텝</dt>
+													<dd class="review__info-score">5.00</dd>
+												</dl>
+											</div>
+											<div class="review__desc">
+												<p class="review__desc-txt">
+													개인적으로 인테리어도 너무 깔끔해서 좋았어요. 그리고 음식중에 소고기 무국 정말 맛있었어요! 진리에요ㅋㅋ
+												</p>
+											</div>
+										</li>
+										<li class="review__item">
+											<div class="review__top">
+												<span class="review__nickname">태평양</span>
+												<span class="review__date">2017.08.21</span>
+											</div>
+											<div class="review__right__top">
+												<p class="review__rev-info">2017-08-14부터 3박 / 남성 도미토리 / 20~24세 남성</p>
+											</div>
+											<div class="review__info">
+												<dl class="review__info-list">
+													<dt class="review__info-tit review__info-tit--hidden">평균평점</dt>
+													<dd class="review__info-score">
+														<div class="starrating">
+															<span class="star-wrap">
+																<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+															</span>
+															<span class="star-wrap__cnt">4.78</span>
+														</div>
+													</dd>
+													<dt class="review__info-tit">위치</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">시설</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">스텝</dt>
+													<dd class="review__info-score">5.00</dd>
+												</dl>
+											</div>
+											<div class="review__desc">
+												<p class="review__desc-txt">
+													숙소위치, 서비스 너무나 완벽했습니다. <br />런던, 파리 한인민박에서 지내다가 여기 인스테이션 오니까 호텔인줄 알았어요.<br />후기 잘 안쓰는데 너무 좋아서 남깁니다. 다음 로마에 가도 여기 숙소 머물고 싶어요.
+												</p>
+											</div>
+										</li>
+										<li class="review__item">
+											<div class="review__top">
+												<span class="review__nickname">하라</span>
+												<span class="review__date">2017.08.21</span>
+											</div>
+											<div class="review__right__top">
+												<p class="review__rev-info">2017-08-14부터 3박 / 남성 도미토리 / 20~24세 남성</p>
+											</div>
+											<div class="review__info">
+												<dl class="review__info-list">
+													<dt class="review__info-tit review__info-tit--hidden">평균평점</dt>
+													<dd class="review__info-score">
+														<div class="starrating">
+															<span class="star-wrap">
+																<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+															</span>
+															<span class="star-wrap__cnt">4.78</span>
+														</div>
+													</dd>
+													<dt class="review__info-tit">위치</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">시설</dt>
+													<dd class="review__info-score">5.00</dd>
+													<dt class="review__info-tit">스텝</dt>
+													<dd class="review__info-score">5.00</dd>
+												</dl>
+											</div>
+											<div class="review__desc">
+												<p class="review__desc-txt">
+													떼르미니역 1분거리라 흑인들이 주변에 돌아다니지만 밤 늦게 아니면 괜찮아요.<br /> 시설도 깨끗하고 매일 청소에 수건 갈아주고 물, 과일까지 필요한 것들 다 구비되어있어요. <br /> 무엇보다 정성스러운 아침, 저녁 식사에 놀랐어요! 에어컨도 빵빵하고 정말 편한 곳이었어요.<br /> 이 가격에 이런 서비스라니 놀랐고 추천해요
+												</p>
+											</div>
+										</li>
+									</ul>
+									<div class="review__btm-btn">
+										<div class="pagination srch-room__pagination">
+											<a href="" class="pagination__prev"><span class="pagination__icon--prev">이전목록</span></a>
+											<a href="" class="pagination__num pagination__num--active">1</a>
+											<a href="" class="pagination__num">2</a>
+											<a href="" class="pagination__num">3</a>
+											<a href="" class="pagination__num">4</a>
+											<a href="" class="pagination__num">5</a>
+											<a href="" class="pagination__next"><span class="pagination__icon--next">다음목록</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="view-review__result">
+									<div class="review__total">
+										<div class="tit-wrap">
+											<h4 class="review__total-tit">종합평점</h4>
+										</div>
+										<div class="starrating">
+											<span class="star-wrap--lg">
+												<span class="srch-room__star star-wrap__item" style=" width:90%"></span>
+											</span>
+											<span class="star-wrap__cnt">4.78</span>
+											<span class="star-wrap__cnt-detail">12,030명 참여</span>
+										</div>
+										<dl class="review__total-info">
+											<dt class="review__total-info__tit">위치</dt>
+											<dd class="review__total-info__score">4.28</dd>
+											<dt class="review__total-info__tit">시설</dt>
+											<dd class="review__total-info__score">4.48</dd>
+											<dt class="review__total-info__tit">스텝</dt>
+											<dd class="review__total-info__score">3.45</dd>
+										</dl>
+									</div>
+									<div class="review__total-rating">
+										<dl class="review__rating-list">
+											<dt class="review__rating-tit">5 별점</dt>
+											<dd class="review__rating-desc">
+												<span class="review__rating-bar" style="width:70%"></span>
+												<span class="review__rating-num">384</span>
+											</dd>
+											<dt class="review__rating-tit">4 별점</dt>
+											<dd class="review__rating-desc">
+												<span class="review__rating-bar" style="width:20%"></span>
+												<span class="review__rating-num">22</span>
+											</dd>
+											<dt class="review__rating-tit">3 별점</dt>
+											<dd class="review__rating-desc">
+												<span class="review__rating-bar" style="width:10%"></span>
+												<span class="review__rating-num">10</span>
+											</dd>
+											<dt class="review__rating-tit">2 별점</dt>
+											<dd class="review__rating-desc">
+												<span class="review__rating-bar" style="width:5%"></span>
+												<span class="review__rating-num">1</span>
+											</dd>
+											<dt class="review__rating-tit">1 별점</dt>
+											<dd class="review__rating-desc">
+												<span class="review__rating-bar" style="width:0%"></span>
+												<span class="review__rating-num">0</span>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</section>
+							<!--//view-review -->
+						</div>
+						<!--// view -->
+					</div>
+					<!--// ly__left__con -->
+				</div>
+				<!--// ly__left -->
+				<!-- ly__right -->
+				<div class="ly__right">
+					<div class="rev-list">
+						<div class="tit-wrap">
+							<h3 class="tit">예약 목록</h3>
+						</div>
+						<div class="rev-list__direct">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">직접 예약</h3>
+							</div>
+							<div class="rev-list__box">
+								<ul class="rev-list__list">
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__loc">파리</div>
+										<div class="rev-list__name">파리 방진게스트하우스</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">여성 도미토리</span><span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">3박</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">1명</span><span class="rev-list__detail">1박 €20</span><span class="rev-list__detail">총 €60</span>
+											</div>
+										</div>
+									</li>
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__loc">파리</div>
+										<div class="rev-list__name">파리 방진게스트하우스</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">여성 도미토리</span><span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">3박</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">3명</span><span class="rev-list__detail">1박 €20</span><span class="rev-list__detail">총 €60</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="rev-list__recomm">
+							<div class="tit-wrap">
+								<h3 class="sub-tit">추천 예약</h3>
+							</div>
+							<div class="rev-list__box">
+								<ul class="rev-list__list">
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__name">베네치아</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">1명</span><span class="rev-list__detail">3박</span><span class="rev-list__detail">체크인 예정시각 14시</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">도미토리 객실로 부탁드려요.</span>
+											</div>
+										</div>
+									</li>
+									<li class="rev-list__item">
+										<button class="rev-list__clse"><span class="rev-list__icon-clse">삭제</span></button>
+										<div class="rev-list__name">로마</div>
+										<div class="rev-list__info">
+											<div class="rev-list__spec">
+												<span class="rev-list__detail">체크인 2017-07-15</span><span class="rev-list__detail">2명</span><span class="rev-list__detail">4박</span><span class="rev-list__detail">체크인 예정시각 14시</span>
+											</div>
+											<div class="rev-list__price">
+												<span class="rev-list__detail">도미토리 객실로 부탁드려요.</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btm-btn">
+							<a href="" class="btm-btn__btn--green">최종선택완료</a>
+						</div>
+					</div>
+				</div>
+				<!--// ly__right -->
+			</div>
+			<!--// ly__con -->
+		</div>
+		<!--// ly__wrap -->
+	</div>
+	<!--// ly -->
+	<!-- 요구사항 보기 -->
+	<div class="modal fade modal__roomdetail">
+		<div class="modal-dialog">
+			<!-- modal__contents -->
+			<div class="modal__contents">
+				<!-- modal__hd -->
+				<div class="modal__hd">
+					<h1 class="modal__tit">객실 상세보기 </h1>
+				</div>
+				<!--// modal__hd -->
+				<!-- modal__body -->
+				<div class="modal__body modal__roomdetail__body">
+					<div class="roomdetail__img-wrap">
+						<ul class="roomdetail__slider">
+							<li class="roomdetail__slide"><img src="http://www.theminda.com/data/goods/0_587331e683ec5.jpg" alt="숙소 상세 이미지" class="roomdetail__slide-img" /></li>
+							<li class="roomdetail__slide"><img src="http://www.theminda.com/data/goods/7_587331e69435b.jpg" alt="숙소 상세 이미지" class="roomdetail__slide-img"/></li>
+							<li class="roomdetail__slide"><img src="http://www.theminda.com/data/goods/8_587331e6a375a.jpg" alt="숙소 상세 이미지" class="roomdetail__slide-img"/></li>
+							<li class="roomdetail__slide"><img src="http://www.theminda.com/data/goods/3_56a8d672c5a85jpeg" alt="숙소 상세 이미지" class="roomdetail__slide-img"/></li>
+						</ul>
+						<div class="roomdetail__slide-ctrl">
+							<span class="roomdetail__slide-prev"></span>
+							<span class="roomdetail__slide-cnt"></span>
+							<span class="roomdetail__slide-next"></span>
+						</div>
+					</div>
+					<div class="modal__roomdetail__info">
+						<dl class="modal__roomdetail__spec">
+							<dt class="roomdetail__name"><span class="roomdetail__roomtype">도미토리</span>여성 도미토리-1</dt>
+							<dd class="roomdetail__sepc-txt">객실정원 : 1~5명</dd>
+							<dd class="roomdetail__sepc-txt">최소예약 : 1박이상</dd>
+							<dd class="roomdetail__sepc-txt">시설 : 에어컨, 냉장고, 테이블</dd>
+						</dl>
+						<p class="modal__roomdetail__desc">- 싱글침대 5개 <br />- 객실 내 에어컨 시설이 되어 있고 방마다 전용 화장실, 샤워실 있습니다.</p>
+					</div>
+					<div class="btm-btn">
+						<button type="button" class="btm-btn__btn--green modal__btn-clse">확인</button>
+					</div>
+				</div>
+				<!--// modal__body -->
+			</div>
+			<!--// modal__contents -->
+		</div>
+	</div>
+	<!--// 요구사항 보기 -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/Layer.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		lnbCtrl.active(0);
+		var ly_rev = new Layer($('.ly-rev'));
+		ly_rev.open();
+		lyTab = new Tab('ly__tab');
+		lyTab = new Tab('view__tab');
+		imgSlide.init();
+
+		fixTab.init();
+		fixTab.initEvent();
+		viewTabControl.init()
+		viewTabControl.initEvent();
+		var p_roomdetail = new Layer($('.modal__roomdetail'));
+		$(".srch-room__item-link").click(function(e){
+			e.preventDefault();
+			p_roomdetail.open();
+			setTimeout(function(){
+				detailSlide.init();
+			},50);
+		});
+		var reviewScroll = new ScrollNav($(".view-intro__review-link"));
+	});
+	var imgSlide = {
+		cnt :null,
+
+		init : function(){
+			var _this = this;
+			this.cnt = $('.view-intro__slide').length;
+			$('.view-intro__slider').bxSlider({
+				//controls:false,
+				moveSlides:1,
+				slideMargin:0,
+				infiniteLoop: true,
+				touchEnabled:false,
+				pager:false,
+				nextSelector: '.view-intro__slide-next',
+				prevSelector: '.view-intro__slide-prev',
+				//hideControlOnEnd : true,
+				onSliderLoad: function(currentIndex){
+					$('.view-intro__slide-cnt').html("<span class='view-intro__slide-current'>"+(currentIndex+1)+"</span>" +" / " +_this.cnt);
+				},
+				onSlideBefore: function ($slideElement, oldIndex, newIndex){
+					$('.view-intro__slide-cnt').html("<span class='view-intro__slide-current'>"+(newIndex+1)+"</span>" +" / " +_this.cnt);
+				}
+			});
+		}
+	}
+
+	var detailSlide = {
+		cnt :null,
+		init : function(){
+			var _this = this;
+			this.cnt = $('.roomdetail__slide').length;
+			$('.roomdetail__slider').bxSlider({
+				//controls:false,
+				moveSlides:1,
+				slideMargin:0,
+				infiniteLoop: true,
+				pager:false,
+				touchEnabled:false,
+				nextSelector: '.roomdetail__slide-next',
+				prevSelector: '.roomdetail__slide-prev',
+				//hideControlOnEnd : true,
+				onSliderLoad: function(currentIndex){
+					$('.roomdetail__slide-cnt').html("<span class='roomdetail__slide-current'>"+(currentIndex+1)+"</span>" +" / " +_this.cnt);
+				},
+				onSlideBefore: function ($slideElement, oldIndex, newIndex){
+					$('.roomdetail__slide-cnt').html("<span class='roomdetail-current'>"+(newIndex+1)+"</span>" +" / " +_this.cnt);
+				}
+			});
+		}
+	}
+	var fixTab={
+		$ly : null,
+		$tab : null,
+		fix_pos : null,
+		scrollTop : null,
+
+		init : function(){
+			this.$ly = $('.ly');
+			this.$tab = $('.view__tab');
+			this.scrollTop = this.$tab.scrollTop();
+			this.fix_pos = this.$tab.position().top;
+		},
+		initEvent : function(){
+			var _this = this;
+			this.$ly.on('scroll',function(e){
+				_this.scrollTop = $(this).scrollTop();
+				if(_this.scrollTop>=_this.fix_pos){
+					_this.$tab.addClass('is-fixed');
+				}else{
+					_this.$tab.removeClass('is-fixed');
+				}
+			});
+		}
+	}
+	var viewTabControl={
+		$ly : null,
+		ly_h : null,
+		scrollTop : null,
+		$tab_btn : null,
+		$href : null,
+		$scrollItems : null,
+		$scrollItem : null,
+		lastId : null,
+
+		init:function(){
+			var _this = this;
+			this.$ly = $('.ly');
+			this.ly_h = this.$ly.outerHeight(true);
+			this.$tab_btn = $('.view__tab-btn');
+			var scrollnav = new ScrollNav(this.$tab_btn)
+			this.$scrollItems = this.$tab_btn.map(function(){
+				_this.$scrollItem = $($(this).attr("href"));
+				if (_this.$scrollItem.length) { return _this.$scrollItem; }
+			});
+		},
+		initEvent:function(){
+			var _this = this;
+
+			this.$ly.on('scroll',function(e){
+				_this.scrollTop = $(this).scrollTop()-57;
+				var cur = _this.$scrollItems.map(function(){
+					if ($(this).position().top-400 < _this.scrollTop) return this;
+				});
+				cur = cur[cur.length-1];
+				var id = cur && cur.length ? cur[0].id : "";
+				// if((_this.$ly[0].scrollHeight - _this.scrollTop) - _this.ly_h<300){
+				// 	_this.$tab_btn.closest('.view__tab-item').removeClass('view__tab-item--active');
+				// 	$('.view__tab-item:last-child').addClass('view__tab-item--active');
+				// }
+				if (_this.lastId !== id) {
+					_this.lastId = id;
+					_this.$tab_btn
+					.closest('.view__tab-item').removeClass('view__tab-item--active')
+					.end().filter("[href='#"+id+"']").closest('.view__tab-item').addClass('view__tab-item--active');
+				}
+			});
+		}
+	}
+	var dateToday = new Date();
+	var dateMax = new Date();
+	dateMax.setDate(dateToday.getDate() + 180);
+	$('.input-cal').daterangepicker({
+		minDate : dateToday,
+		maxDate : dateMax,
+		locale: {
+			format: 'YYYY-MM-DD',
+			cancelLabel: '닫기',
+			"daysOfWeek": [
+			"<span class='th-sun'>S</span>",
+			"M",
+			"T",
+			"W",
+			"T",
+			"F",
+			"<span class='th-sat'>S</span>"
+			],
+			"monthNames": [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월"
+			]
+		},
+		singleDatePicker: true,
+		showDropdowns: true,
+		parentEl: ".input-wrap__cal",
+		autoUpdateInput: false,
+		autoApply:false
+	});
+	$('.input-cal').on('apply.daterangepicker', function(ev, picker) {
+		$(this).val(picker.startDate.format('YYYY-MM-DD'));
+	});
+
+</script>
+</body>
+</html>

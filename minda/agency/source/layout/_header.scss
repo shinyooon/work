@@ -1,0 +1,35 @@
+.header {
+	&__wrap{
+		height:$header__h;
+		padding:0 30px;
+		background-color:$color__wh;
+		@include box-shadow();
+		&:after{
+			@include clearboth();
+		}
+	}
+	&__logo {
+		float:left;
+		padding:26px 0 0 0;
+	}
+	&__logotxt{
+		@include text(#333,18px,$fw__500);
+		margin-left:15px;
+	}
+	&__right {
+		float:right;
+		text-align:right;
+		width:50%;
+	}
+	&__info {
+		padding:33px 0 0 0;
+	}
+	&__txt{
+		@include list-inline-dot();
+		@include text($color__default,16px,$fw__400);
+	}
+	&__txt--point{
+		color:$color__green;
+		text-decoration:underline;
+	}
+}

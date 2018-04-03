@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+	<!-- header -->
+	<header id="hd">
+		<div class="header">
+			<h1 class="logo"><a href="/"><img src="/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1">
+						<a href="javascript:showNationList('#category_001');">숙소 </a>
+					</li>
+					<li class="i4"><a href="">트립</a></li>
+					<li class="i2"><a href="">정보 </a></li>
+					<li class="i5"><!-- 티켓패스 개편완료 후 링크 변경/ticketpass/ticketpass_list.php -->
+						<a href="">티켓/상품<!--2016-12-14수정 --></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<!-- <li><a href="/ticketpass/ticketpass_list.php" >티켓/패스</a></li> -->
+								<li><a href="">융프라우 할인권</a></li>
+								<li><a href="">유레일패스</a></li>
+								<li><a href="" class="active">여행자 보험</a></li>
+								<li><a href="">포켓 와이파이</a></li>
+								<li><a href="">공연/티켓</a></li>
+								<li><a href="">유럽기차</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="hd-r">
+				<div class="util active">
+					<div id="div_login_btn" class="util" style="display:none">
+						<a href=""> 로그인</a>
+						<a href="">회원가입</a>
+					</div>
+					<div id="div_top_user_menu">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org" id="top_user_name">유나</span>님 <img id="top_user_profile_img" src="/cust/img/admin_profile_none.png" alt="" onerror="this.src='/cust/img/admin_profile_none.png'"></a>
+							<ul class="dropdown-menu">
+								<li><a href="">마이민다</a></li>
+								<li><a href="">숙소 예약 내역</a></li>
+								<li><a href="">트립 예약내역</a></li>
+								<li><a href="">저장 목록</a></li>
+								<li><a href="">정보 수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+						<div class="dep2">
+							<strong class="sr-only">마이민다</strong>
+							<ul class="clearfix">
+								<li><a href="">마이민다</a></li>
+								<li><a href="">숙소 예약 내역</a></li>
+								<li><a href="">트립 예약내역</a></li>
+								<!-- <li><a href="/mypage/booking_tour.php" >트립 예약내역</a></li> -->
+								<li><a href="">저장 목록</a></li>
+								<li><a href="">정보 수정</a></li>
+								<li><a href="" class="active">나의 활동</a></li>
+								<li><a href="">포인트/캐쉬/쿠폰</a></li>
+								<li><a href="">유레일패스 예약</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href="">커뮤니티</a><!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티</a></li>
+								<li><a href="">구인·구직</a></li>
+								<li><a href="">사고·팔고</a></li>
+								<li><a href="">톡톡 릴레이</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href="">할인&amp;이벤트</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">땡처리 할인</a></li>
+								<li><a href="">비수기 할인</a></li>
+								<li><a href="">숙소 쿠폰</a></li>
+								<li><a href="">민다 이벤트</a></li>
+								<li><a href="">숙소 이벤트</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 상단 검색창은 아이콘 클릭으로만 검색이 작동해야 합니다.페이지 하단에 생길수 있는 다른 페이지의 폼입력과 구분이 되지 않을수 있기 때문에 -->
+				<form method="get" name="fmSearchKeyMinbak" id="fmSearchKeyMinbak" action="/main/total_search.php" onsubmit="return false;" class="srch_wrp">
+					<input type="hidden" name="part" value="keyword_search">
+					<!-- 전달되는 키워드는 구분자('__SP__')로 구분 하여 전달 -->
+					<input type="hidden" name="keywords" id="keywords" value="">
+					<input type="hidden" name="country">
+					<input type="hidden" name="city">
+					<input type="hidden" name="unit">
+					<!-- <button type="button" class="icon_srch_gnb">검색</button> -->
+					<!-- <div class="silde-wrap"> -->
+					<div class="input-group">
+                            <span class="btn-wrap">
+                                <button type="button" id="city_search_btn" class="icon_srch_grey">검색</button>
+                            </span>
+						<span class="input-wrap">
+                                <input type="text" name="keyword" id="keyword" class="form-control" value="" data-part="main_keyword" data-autosubmitid="fmSearchKeyMinbak" placeholder="검색어를 입력하세요." title="검색어 입력" autocomplete="off" style="ime-mode:active;">
+                            </span>
+						<span class="close-btn-wrap">
+                                <button type="button" class="icon_date_close" style="display: none;">검색 취소</button>
+                            </span>
+						<!-- <div id="webProxy" class="web_automatic top_automatic" style="top:46px;width:840px;border:0px;"></div> -->
+					</div>
+					<!-- </div> -->
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- #container -->
+	<div id="container">
+		<!-- 페이지시작 -->
+		<div class="content w1100">
+			<!-- 서브 헤더 -->
+			<header class="sub_hd">
+				<h2>나의 활동</h2>
+			</header>
+			<!-- 탭메뉴 -->
+			<ul class="basic_step2 tb_fixed">
+				<li><a href="/mypage/my_rate.php">리뷰</a></li>
+				<li><a href="/mypage/my_qna.php">숙소/트립 문의</a></li>
+				<li class="active"><a href="/mypage/my_m2m.php">고객센터 문의</a></li>
+				<!--li><a href="">내가 쓴 글</a></li-->
+			</ul>
+			<div class="well alert_big mt60">
+				<ul class="lst_type_rect pt20 pb20">
+					<li>[답변완료] 상태의 글을 클릭하시면 해당 문의에 대한 민다의 답변을 보실 수 있습니다.</li>
+					<li>분류 등록에 맞지 않는 문의는 사전 통보 없이 해당 분류로 이동 될 수 있습니다.</li>
+				</ul>
+			</div>
+			<section>
+				<h3 class="sub_title d_iblock">고객센터 문의하기</h3>
+				<form>
+					<table class="tb tb_frm tb_fixed">
+						<caption class="sr-only">고객센터 문의</caption>
+						<colgroup>
+							<col style="width:155px">
+							<col>
+						</colgroup>
+						<tbody>
+						<!-- 2017-05-17 add -->
+						<tr>
+							<th scope="row">서비스</th>
+							<td>
+								<label for="upper_cate1" class="inline-radio radio_label mb0 "> <input type="radio" name="upper_cate" id="upper_cate1" value="3" onchange="setCate(this.value,'cate','')">숙소</label>
+								<label for="upper_cate2" class="inline-radio radio_label mb0 "> <input type="radio" name="upper_cate" id="upper_cate2" value="4" onchange="setCate(this.value,'cate','')">트립</label>
+								<label for="upper_cate3" class="inline-radio radio_label mb0 "> <input type="radio" name="upper_cate" id="upper_cate3" value="6" onchange="setCate(this.value,'cate','')">기타</label>
+							</td>
+						</tr>
+						<!--// 2017-05-17 add -->
+						<tr>
+							<th scope="row">분류</th>
+							<td>
+								<select class="d_iblock w140 no_style">
+									<option>분류선택</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>
+								<input type="text" class="no_style" placeholder="제목을 입력해주세요.">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">문의내용</th>
+							<td>
+								<textarea class="no_style" rows="10" placeholder="내용을 입력해주세요."></textarea>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="text-center mt25">
+						<button class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>등록</button>
+						<button type="button" class="btn bg_dark_grey btn-lg ml5" onclick="history.go(-1);"><i class="icon_circle_cancle"></i>취소</button>
+					</div>
+				</form>
+			</section>
+		</div>
+		<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh">information</strong>
+				<div class="ft_info_txt">
+					<span>㈜민다</span>
+					<span>대표 : 김윤희</span>
+					<span>사업자등록번호 : 101-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt">
+					<span>이메일 : help@theminda.com</span>
+					<span>고객센터 : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span>운영시간 : 평일 10시~12시/13시~18시(주말, 공휴일 휴무)</span>
+				</div>
+				<div class="ft_info_txt">
+					<address>서울특별시 중구 동호로15길 27 종하빌딩 A동 5층</address>
+				</div>
+				<div class="footer__right__top">
+					<ul class="footer__partner-list">
+						<li class="footer__partner-item bar"><a href="" class="footer__partner-link">숙소/트립 파트너 홈</a></li>
+						<li class="footer__partner-item"><a href="" class="footer__partner-link">여행사 예약관리 홈</a></li>
+					</ul>
+					<ul class="about_lst clearfix">
+						<li><a href="" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+						<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+						<li><a href="" class="btn">고객센터 문의</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="" target="_blank">회사소개</a></li>
+					<li><a href="" target="_blank">파트너 가입</a></li>
+					<li><a href="">취소환불규정</a></li>
+					<li><a href="">고객센터</a></li>
+					<li class="bar"><a href="">공지사항</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018628116" target="_blank">사업자정보확인</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright? Minda Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+<div class="fix_btm">
+	<!-- quick  -->
+	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">상단으로이동</a>
+</div>
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+
+</html>

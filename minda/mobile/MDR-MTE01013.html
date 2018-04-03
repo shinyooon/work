@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D]
+	1. 뒤로가기가 있는 메뉴 class="page_back"
+-->
+<body class="page_back">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1>예약정보-예약가능</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+		<!-- 페이지 시작-->
+
+		<!-- 예약상세정보 -->
+		<section class="pa10 bg_wh">
+			<h2 class="mt10 mb10 fs15 color_blk">예약 상세정보</h2>
+			<dl class="dl_line clearfix">
+				<dt>예약번호</dt>
+				<dd>1509072321297 <span class="color_red">[예약가능]</span></dd>
+				<dt>숙소명</dt>
+				<dd class="v2">쾰른로뎀민박<span class="color_grey d_block">독일&gt;쾰른</span></dd>
+				<dt>객실</dt>
+				<dd class="v2 ellipsis">
+
+					11 bed 여성 도미토리
+
+				</dd>
+				<dt>체크인</dt>
+				<dd>2017-11-14</dd>
+				<dt>체크아웃</dt>
+				<dd>2017-11-23</dd>
+				<dt>체크인예정시각</dt>
+				<dd>오전 1시</dd>
+				<dt>도착예정지/시각</dt>
+				<dd>ㅁ / 오전 2시</dd>
+			</dl>
+            <p class="fs11 mt15 mb7 color_blk"><span class="color_org">*</span>체크인 예정시각이 변경될 경우, 원활한 체크인을 위해 숙소에 연락하시거나 숙박자 정보를 변경해주세요.</p>
+			<section class="info-bx-wrap ma0">
+				<!-- 2017-10-30 eidt -->
+				<div class="btn-wrap mt10">
+					<button onclick="AppInvokeMoveToCurrentTitleFrame('http://v2.theminda.com/m/1.0/grp_minbak/minbak_settlement.html?bookno=1509072321297', '__back__white__','결제', '__none__', '','y', 'bg_black_font_white')" type="button" class="btn btn-xl btn-block bg_mint">결제하기</button>
+					<!--<div class="btn-wrap mt10">-->
+						<!--<button type="button" class="btn btn-xl btn-block bg_dark_grey" onclick="showBookInfoChangeForm();">예약자 정보 수정</button>-->
+					<!--</div>-->
+				</div>
+			</section>
+		</section>
+		<div class="frm_wrp">
+			<!-- 숙박자 정보 -->
+			<section class="bx">
+				<!-- 2017-10-30 eidt 상세내용 순서 및 체크인,체크아웃 삭제 -->
+				<div class="bx_hd_wrp rev-result__hd">
+					<h2 class="bx_hd">숙박자 정보</h2>
+					<button type="button" class="btn btn-lg bg_dark_grey side rev-result__btn-edit">수정</button>
+				</div>
+				<div class="bx_cnt">
+					<dl class="dl_lst v2">
+						<dt>이름</dt>
+						<dd>홍길동</dd>
+						<dt>성별</dt>
+						<dd>남자</dd>
+                        <dt>이메일</dt>
+                        <dd>bluesky@naver.com</dd>
+                        <dt>핸드폰</dt>
+                        <dd>010-0202-2222</dd>
+                        <dt>현지 연락처</dt>
+                        <dd>010-0202-2222</dd>
+                        <dt>카카오톡 ID</dt>
+                        <dd>bluesky</dd>
+						<!--<dt>체크인 예정시각</dt>
+						<dd>AM 3시</dd>
+						<dt>도착예정지/시각</dt>
+						<dd>로마기차역 PM 시</dd>-->
+					</dl>
+				</div>
+                <!--// 2017-10-30 eidt -->
+			</section>
+
+			<!-- 입금안내 -->
+			<!--<section class="bx w1">
+				<h2 class="bx_hd">입금안내</h2>
+				<div class="bx_cnt">
+					<dl class="dl_lst v2">
+						<dt class="mt3">입금액</dt>
+						<dd class="color_red fs14 fw500 mb7">20,300원</dd>
+						<dt>입금기한</dt>
+						<dd>2016년 03월 31일 06:59 까지</dd>
+					</dl>
+				</div>
+			</section>-->
+
+			<!-- 예약 상세정보 -->
+			<section class="bx mt10 detail_bx">
+				<h2 class="bx_hd">예약 상세정보</h2>
+				<div class="bx_cnt">
+					<h3 class="bx_hd2">2016.03.30</h3>
+					<hr class="hr">
+					<dl class="dl_lst">
+						<dt>객실명</dt>
+						<dd><span class="color_org">도미토리</span> - 남성도미토리룸</dd>
+						<dt>인원</dt>
+						<dd>1인&pound; 25 x 2명</dd>
+						<dt>요금</dt>
+						<dd>&pound; 50</dd>
+					</dl>
+					<hr class="hr">
+					<dl class="dl_lst">
+						<dt>객실명</dt>
+						<dd><span class="color_org">도미토리</span> - 남성도미토리룸</dd>
+						<dt>인원</dt>
+						<dd>1인&pound; 25 x 2명</dd>
+						<dt>요금</dt>
+						<dd>&pound; 50</dd>
+					</dl>
+				</div>
+				<div class="bx_cnt">
+					<h3 class="bx_hd2">2016.03.30</h3>
+					<hr class="hr">
+					<dl class="dl_lst">
+						<dt>객실명</dt>
+						<dd><span class="color_org">개인실</span> - 플라워</dd>
+						<dt>인원</dt>
+						<dd>1인&pound; 25 x 2명</dd>
+						<dt>요금</dt>
+						<dd>&pound; 50</dd>
+					</dl>
+				</div>
+				<div class="tb_total">
+					<dl>
+						<dt>예약금(10%)</dt>
+						<dd><span class="color_org">&pound;15 </span>( &#8361; 19,100)</dd>
+						<dt>숙소 직접결제액(체크인시)</dt>
+						<dd><span class="color_org">(+)&pound;135</span></dd>
+						<dt class="total color_org">총 합계 금액</dt>
+						<dd class="total color_org">&pound;150</dd>
+					</dl>
+				</div>
+			</section>
+			<!-- 2017-10-30 eidt : 취소 환불 규정 버튼 삭제 -->
+			<section class="info-bx-wrap ma0">
+				<!--<div class="btn-wrap mt10">-->
+					<!--<a class="btn btn-lg d_block bg_grey" href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_mypage/my_reservation_rule.html?bookno=1509072321297&amp;minbak_code=1120');" target="_blank">취소환불규정 보기</a>-->
+				<!--</div>-->
+				<div class="btn-wrap mt10">
+					<button onclick="BookCancel(3, '1509072321297', '2017-10-30', '2017-11-14')" type="button" class="btn btn-block btn-xl bg_light_grey4 color_wh">예약취소</button>
+				</div>
+			</section>
+			<!--// 2017-10-30 eidt -->
+		</div>
+
+		<!-- //페이지 끝-->
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

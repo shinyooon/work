@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body class="page_back bg_wh">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<h1>1:1 문의</h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix">
+			<nav>
+				<ul class="tab6 tb_bx">
+					<li><a href="">민다 고객센터</a></li>
+					<li class="active"><a href="">판매자 문의</a></li><!-- 활성화시 active클래스 추가 -->
+				</ul>
+			</nav>
+			<!-- 페이지 시작-->
+			<div class="cnt_wrp">
+				<p class="color_mint fs11">※상품 별 문의는 해당 상품의 상세페이지 하단을 통해 판매자에게 문의하시기 바랍니다.</p>
+				<!-- 문의 리스트 -->
+				<ul class="inquiry_lst lst_style_cmt mt30">
+					<li class="view">
+						<div class="view_hd">
+							<span class="meta"><span class="color_mint mr5">투어/체험</span>예약변경/취소/환불 관련</span>
+							<h2 class="title">예약취소를 했는데. 언제 환불되나요?</h2>
+							<span class="meta date">2015.04.06</span>
+							<span class="label bg_org">접수완료</span>
+							<!-- 편집버튼 -->
+							<div class="cmt_btn_wrp dropdown">
+								<button type="button" class="no_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-option-horizontal"></i><span class="sr-only">수정/삭제 열기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="">수정</a></li>
+									<li><a href="">삭제</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="view">
+						<div class="view_hd">
+							<span class="meta"><span class="color_mint mr5">투어/체험</span>예약변경/취소/환불 관련</span>
+							<h2 class="title">예약취소를 했는데. 언제 환불되나요?</h2>
+							<span class="meta date">2015.04.06</span>
+							<a href="" class="label bg_grey">답변보기</a>
+							<!-- 편집버튼 -->
+							<div class="cmt_btn_wrp dropdown">
+								<button type="button" class="no_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-option-horizontal"></i><span class="sr-only">삭제 열기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="">삭제</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="view">
+						<div class="view_hd">
+							<span class="meta"><span class="color_mint mr5">투어/체험</span>예약변경/취소/환불 관련</span>
+							<h2 class="title">예약취소를 했는데. 언제 환불되나요?</h2>
+							<span class="meta date">2015.04.06</span>
+							<a href="" class="label bg_grey">답변보기</a>
+							<!-- 편집버튼 -->
+							<div class="cmt_btn_wrp dropdown">
+								<button type="button" class="no_style" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-option-horizontal"></i><span class="sr-only">삭제 열기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="">삭제</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- 페이징 -->
+				<nav class="text-center">
+					<ul class="pagination clearfix">
+						<li class="prev"><a href="">이전페이지목록보기</a></li>
+						<li>2/7</li>
+						<li class="next"><a href="">다음페이지목록보기</a></li>
+					</ul>
+				</nav>
+			</div>
+			<script>
+			$(function() {
+				$('a.icon_open').click(function() {
+					$(this).toggleClass('on').parent().prev().slideToggle(150);
+					return false;
+				});
+			})
+			</script>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft" class="bg_blk">
+			<div>
+				<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+				<a href="" target="_blank" class="icon_blog ml2">민다블로그보기</a>
+				<a href="" class="btn ml2">1:1 문의</a>
+				<a href="" class="btn ml2">앱 다운로드</a>
+			</div>
+			<p>
+				(주)사막 사업자등록번호 : 010-86-28116 FAX : 02-722-3478
+			</p>
+			<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+			<ul class="list-inline">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">고객센터</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="color_org">개인정보취급방침</a></li>
+				<li><a href="">PC버전</a></li>
+			</ul>
+		</div>
+		<!-- fixed button-->
+		<div id="quick">
+			<a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+			<a class="icon_mn2" href="#">Menu</a>
+		</div>
+	</div>
+	<!-- //wrap -->
+	<!-- modal : coupon -->
+	<div id="mdAlert" class="modal fade md_alert" tabindex="-1" role="dialog">
+		<div class="modal-dialog wid_md">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<p class="fs14 color_blk fw500">댓글을 삭제하시겠습니까?</p>
+			<div class="text-center mt15">
+				<button type="button" class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>확인</button>
+				<button type="button" class="btn bg_dark_grey btn-lg ml5" data-dismiss="modal"><i class="icon_circle_cancle"></i>취소</button>
+			</div>
+		</div>
+	</div>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

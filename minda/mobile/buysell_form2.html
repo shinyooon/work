@@ -1,0 +1,80 @@
+<? include "inc/top.html" ?>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a> </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">사고ㆍ팔고</a></h1>
+    <div class="header__right">
+        <a href="/m/1.0/grp_main/search.html?type=tour&amp;area=001" class="header__btn-write">수정</a>
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix has-fnb">
+    <!-- 페이지 시작-->
+    <!-- 탭 -->
+    <!-- [D] 2017-01-03 탭 추가-->
+    <!-- community-form__wrap-->
+    <div class="community-form__wrap">
+        <!-- community-form -->
+        <form class="community-form">
+            <dl class="community-form__dl">
+                <dt class="community-form__tit">분류선택</dt>
+                <dd>
+                    <span class="input__wrap--radio"><input id="radio-buy" type="radio" name="radio_community"><label class="input__wrap--label" for="radio-buy">사고</label></span>
+                    <span class="input__wrap--radio"><input id="radio-sell" type="radio" name="radio_community" checked="checked"><label class="input__wrap--label" for="radio-sell">팔고</label></span>
+                </dd>
+                <dt class="community-form__tit">제목</dt>
+                <dd>
+                    <span class="input__wrap"><input id="tit_community" type="text" placeholder="제목을 입력해주세요." title="구사고구팔고제목 입력" value="피렌체 한인민박 양도"></span>
+                </dd>
+                <dt class="community-form__tit">내용</dt>
+                <dd>
+                    <span class="input__wrap"><textarea title="사고ㆍ팔고 내용 입력" placeholder="내용을 입력해주세요.">피렌체 중앙역에선 10분이내 중앙시장에선 3분도 채 되지 않는 거리에
+리모델링한 집으로 집이 굉장히 깨끗하고 조용합니다
+방은 3개이며 화장실은 2개입니다
+12명 숙박 가능하구요
+화장실이 굉장히 넓어요
+그리고 빨래를 널 수 있는 테라스도 있습니다
+소규모로 시작하실 분들
+혼자 운영하시기에 아주 적당합니다
+비자 발급 방법도 알려드립니다</textarea>
+                    </span>
+                </dd>
+            </dl>
+            <div class="community-form__btm-btn btn__group">
+                <div class="btn-wrap community-form__btm-cancel"><a href="" class="community-form__btn-cancle">취소</a></div>
+                <div class="btn-wrap"><a href="" class="community-form__btn-write">수정</a></div>
+            </div>
+        </form>
+        <!--// community-form -->
+    </div>
+    <!--// community-form__wrap-->
+</div>
+<!-- //container -->
+<!-- fixed button-->
+<div id="quick">
+    <a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+</div>
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $(document).on('click', '.bx-slide__btn' ,function(){
+            $(this).closest('.bx-slide__wrap').toggleClass('is-open');
+        })
+
+        //퍼블리싱 확인을 위한 스크립트 개발시 삭제
+        $('.nav-btm li').removeClass('active');
+        $('.nav-btm li').eq(4).addClass('active');
+    })
+</script>
+
+</html>

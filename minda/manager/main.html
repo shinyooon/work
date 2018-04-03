@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>[민다관리자]</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<link rel="stylesheet" href="http://v2.theminda.com/admin/style.css" type="text/css">
+	<link rel="stylesheet" href="http://v2.theminda.com/admin/ui.css" type="text/css">
+	<!-- <link rel="stylesheet" href="http://v2.theminda.com/admin/css/common.css" type="text/css"> -->
+	<!-- <link rel="stylesheet" href="http://v2.theminda.com/admin/css/layout.css" type="text/css"> -->
+	<!-- <link rel="stylesheet" href="css/layout.css" type="text/css"> -->
+	<!--
+<link rel="shortcut icon" href="../http://v2.theminda.com/admin/img//i_mlogo.ico">
+-->
+	<link rel="shortcut icon" href="../http://v2.theminda.com/admin/img//i_minda_logo.ico">
+	<!-- 	<style>
+	body {
+		margin: 0 0 0 10px;
+		background: url(http://v2.theminda.com/admin/img//top_bg.gif) repeat-x;
+	}
+	</style> -->
+	<script src="http://v2.theminda.com/lib/js/common.js"></script>
+	<script src="http://v2.theminda.com/lib/js/chkForm.js"></script>
+	<script src="http://v2.theminda.com/lib/js/popupLayer.js"></script>
+	<script src="http://v2.theminda.com/lib/js/selectCategory.js"></script>
+	<script src="http://v2.theminda.com/lib/js/cssRound.js"></script>
+	<!-- 도시별통계 날짜 자동 오류 수정 je -->
+	<!--<script src="http://v2.theminda.com/lib/js/prototype.js"></script>-->
+	<script src="http://v2.theminda.com/lib/js/jquery.js"></script>
+	<script>
+	var $j = jQuery.noConflict();
+	</script>
+	<script src="http://v2.theminda.com/lib/js/jquery.cookie.js"></script>
+</head>
+
+<body>
+	<div align="center" class="wrap main">
+		<!-- yuna : wrap추가, 메인페이지 일때 main 클래스 추가 -->
+		<div id="layout_container">
+			<!-- 상단 대메뉴바 -->
+			<div id="layout_top" class="header">
+				<!-- yuna : header 추가 -->
+				<div class="left">
+					<h1 class="logo"><a href="../index.php"><img src="http://v2.theminda.com/admin/img/common/logo_org.png" alt="민다 로고"/><span class="txt"></span>관리자</a></h1>
+				</div>
+				<div class="center">
+					<!-- 활성화 시 active 클래스 추가 -->
+					<a href="" class="active">기본 설정</a>
+					<a href="">숙소 관리</a>
+					<a href="">숙소 예약 관리</a>
+					<a href="">숙소 게시판 관리</a>
+					<a href="">여행정보 관리</a>
+					<a href="">여행정보 관리</a>
+					<a href=""> 통계관리</a>
+					<a href="">자동발송 메일/문자</a>
+				</div>
+				<div class="right">
+					<a href="../../index.php" target="_blank">사용자 홈</a>
+					<a href="http://webmail.minbakdanawa.com/" target="_blank">메일</a>
+					<a href="http://www.samack.com/freeboard/zboard.php?id=test1" target="_blank">인트라넷</a>
+					<a href="../../member/logout.php?mode=admin">로그아웃</a>
+				</div>
+			</div>
+			<!--// header end -->
+			<!-- 왼쪽 메뉴바 -->
+			<div class="container">
+				<!-- yuna : container 클래스로 layout_left, layout_main 감쌈  -->
+				<div id="layout_left" class="lnb">
+					<!-- yuna : lnb 추가 -->
+				</div>
+				<!--// lnb end-->
+				<style>
+				.forToggleClass {
+					display: none;
+				}
+				</style>
+				<script>
+				$j("#menu div.title").click(function() {
+					$j(this).next().toggleClass("forToggleClass");
+				});
+				</script>
+				<!-- 본문영역 -->
+				<div id="layout_main" class="contents"><!-- yuna contents 클래스 추가 -->
+					<style>
+					.tb1 th {
+						font: bold 8pt tahoma !important;
+						letter-spacing: 0 !important;
+					}
+
+					.memo {
+						border: 1px dotted #cccccc;
+						padding: 5px;
+						background: #f7f7f7;
+						margin: 2px 0;
+						position: relative;
+					}
+
+					.memo p {
+						margin: 2px 0;
+					}
+
+					.memo .bt {
+						position: absolute;
+						right: 5px;
+						top: -15px;
+					}
+
+					.yoil_0 {
+						color: red;
+					}
+
+					.yoil_6 {
+						color: blue;
+					}
+
+					#layout_main {
+						margin-left: 0;
+						width: 100%;
+					}
+
+					.tbm th {
+						border-bottom: 1px solid #666666;
+						padding: 3px;
+					}
+
+					.tbm td ul {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+
+					.tbm td ul li {
+						position: relative;
+						padding: 2px;
+					}
+
+					.tbm td ul li span {
+						position: absolute;
+						right: 0;
+					}
+
+					.tbm td ul li span a {
+						color: blue;
+						font: bold 8pt tahoma;
+						text-decoration: underline;
+					}
+
+					.tbm td ul li span i {
+						color: blue;
+						font: bold 8pt tahoma;
+						font-style: normal;
+					}
+
+					.content p {
+						margin: 2px;
+					}
+					</style>
+					<script>
+					function _expand() {
+						var mode = $j('#clock_expand').slideToggle('slow', function() {
+							//$('expand_img').src = (this.style.display=="block") ? "../img/expand_up.gif" : "../img/expand_dn.gif";
+						});
+					}
+					</script>
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td valign="top" width="220" nowrap="">
+									<b>SMS</b> : minbak(잔여:<b>4,764</b>건) <a href="javascript:popup('http://softindex.co.kr/pg/sms.php?cid=minbak',400,500)">[충전]</a>
+									<br>
+									<br>
+									<table width="100%" border="1" cellpadding="2" bordercolor="#cccccc" style="border-collapse:collapse">
+										<tbody>
+											<tr bgcolor="eeeeee">
+												<th><a href="../goods/unit.php"><u>환율</u></a>(<a href="../status/exchange.php"><u>그래프</u></a>)</th>
+												<th>어제</th>
+												<th>오늘</th>
+											</tr>
+											<tr align="center">
+												<td bgcolor="eeeeee">유로</td>
+												<td>
+													<font color="gray">1,348</font>
+												</td>
+												<td>1,349</td>
+											</tr>
+											<tr align="center">
+												<td bgcolor="eeeeee">파운드</td>
+												<td>
+													<font color="gray">1,692</font>
+												</td>
+												<td>1,694</td>
+											</tr>
+											<tr align="center">
+												<td bgcolor="eeeeee">달러</td>
+												<td>
+													<font color="gray">1,194</font>
+												</td>
+												<td>1,195</td>
+											</tr>
+											<tr align="center">
+												<td bgcolor="eeeeee">엔화</td>
+												<td>
+													<font color="gray">11.25</font>
+												</td>
+												<td>11.26</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td width="100%" valign="top">
+									<table width="100%">
+										<tbody>
+											<tr>
+												<th width="20%">런던</th>
+												<th width="20%">파리</th>
+												<th width="20%">뉴욕</th>
+												<th width="20%">밴쿠버/LA</th>
+												<th width="20%">싱가폴</th>
+											</tr>
+											<tr align="center">
+												<td>
+													<script src="http://www.clocklink.com/embed.js"></script>
+													<script type="text/javascript" language="JavaScript">
+													obj = new Object;
+													obj.clockfile = "5012-black.swf";
+													obj.TimeZone = "UnitedKingdom_London";
+													obj.width = 151;
+													obj.height = 50;
+													obj.wmode = "transparent";
+													showClock(obj);
+													</script>
+												</td>
+												<td>
+													<script src="http://www.clocklink.com/embed.js"></script>
+													<script type="text/javascript" language="JavaScript">
+													obj = new Object;
+													obj.clockfile = "5012-black.swf";
+													obj.TimeZone = "France_Paris";
+													obj.width = 151;
+													obj.height = 50;
+													obj.wmode = "transparent";
+													showClock(obj);
+													</script>
+												</td>
+												<td>
+													<script src="http://www.clocklink.com/embed.js"></script>
+													<script type="text/javascript" language="JavaScript">
+													obj = new Object;
+													obj.clockfile = "5012-black.swf";
+													obj.TimeZone = "USA_Albany";
+													obj.width = 151;
+													obj.height = 50;
+													obj.wmode = "transparent";
+													showClock(obj);
+													</script>
+												</td>
+												<td>
+													<script src="http://www.clocklink.com/embed.js"></script>
+													<script type="text/javascript" language="JavaScript">
+													obj = new Object;
+													obj.clockfile = "5012-black.swf";
+													obj.TimeZone = "USA_LosAngeles";
+													obj.width = 151;
+													obj.height = 50;
+													obj.wmode = "transparent";
+													showClock(obj);
+													</script>
+												</td>
+												<td>
+													<script src="http://www.clocklink.com/embed.js"></script>
+													<script type="text/javascript" language="JavaScript">
+													obj = new Object;
+													obj.clockfile = "5012-black.swf";
+													obj.TimeZone = "Singapore_SingaporeCity";
+													obj.width = 151;
+													obj.height = 50;
+													obj.wmode = "transparent";
+													showClock(obj);
+													</script>
+												</td>
+											</tr>
+											<tr align="center">
+												<td colspan="5">
+													<div align="right" style="padding:0 10px 3px 0;font:8pt 돋움;letter-spacing:-1px;">
+														<a href="javascript:_expand()">[▼세계시간보기]</a>
+													</div>
+													<div id="clock_expand" style="display:none">
+														<embed src="http://www.clocklink.com/clocks/world001-blue.swf?TimeZone=GMT0900" width="930" height="500" wmode="transparent" type="application/x-shockwave-flash">
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<br> * 회색 폰트 숫자는 전일 데이타 입니다.
+					<table class="tbm" width="100%" cellspacing="15">
+						<tbody>
+							<tr align="left">
+								<th width="10%">총 예약</th>
+								<th width="13%" style="position:relative">총 게재민박 <span style="position:absolute;right:0"><a href="../goods/list.php?confirm=2&amp;usebook=1&amp;member_confirm=2" style="color:blue;text-decoration:underline;">1,522</a> 개</span></th>
+								<th width="18%">예약관련</th>
+								<th width="16%">게시판관리</th>
+								<th width="15%">서비스관리</th>
+								<th width="13%">회원관리</th>
+								<th width="15%">여행사관련</th>
+							</tr>
+							<tr>
+								<td valign="top">
+									<ul>
+										<li>확정수 <span>210,051 건</span></li>
+										<!--  속도가 느려서 숨김 -->
+										<!-- <li>숙박수 <span>571,603 건</span></li>	-->
+										<li>숙박수 <span>------ 건</span></li>
+										<li> </li>
+										<li>오픈된 국가<span>53 개</span></li>
+										<li>오픈된 도시<span>186 개</span></li>
+									</ul>
+								</td>
+								<td valign="top">
+									<ul>
+										<li>서비스중
+											<font color="aaaaaa">(게재)</font> <span><a href="../goods/list.php?confirm=2&amp;usebook=1&amp;usebookingsystem=y&amp;member_confirm=2&amp;is_goods=1">1,505</a>개</span></li>
+										<li>예약불가
+											<font color="aaaaaa">(게재)</font> <span><a href="../goods/list.php?confirm=2&amp;usebook=1&amp;usebookingsystem=n&amp;member_confirm=2&amp;is_goods=1">17</a> 개</span></li>
+										<li>종료예정 <span><a href="../goods/list.php?confirm=1&amp;usebook=1&amp;usebookingsystem=n&amp;member_confirm=2&amp;is_goods=1">0</a> 개</span></li>
+										<li>오픈예정 <span><a href="../goods/list.php?confirm=1&amp;usebook=1&amp;usebookingsystem=y&amp;member_confirm=2&amp;is_goods=1">4</a> 개</span></li>
+										<li>신규 <span><a href="../goods/list.php?confirm=1&amp;usebook=1&amp;usebookingsystem=y&amp;member_confirm=2&amp;is_goods=0&amp;mtype[]=1&amp;mtype[]=2&amp;mtype[]=4&amp;mtype[]=8&amp;mtype[]=16&amp;mtype[]=32&amp;mtype[]=64&amp;mtype[]=128&amp;mtype[]=256&amp;ishostel=x">21</a> 개</span></li>
+										<li>여행사가능 <span><a href="../goods/list.php?confirm=2&amp;usebook=1&amp;usebookingsystem=y&amp;member_confirm=2&amp;_agency_book=o">1,030</a> 개</span></li>
+									</ul>
+								</td>
+								<td valign="top">
+									<ul>
+										<li>실입금액 <span><i><b class="gray">131,300</b> / <a href="../status/b2c.day.php">39,700</a></i> 원</span></li>
+										<li>전체예약 <span><i><b class="gray">5</b> / <a href="../reserve/list.php?step=default&amp;bookdt[]=2016-11-08">4</a></i> 건</span></li>
+										<li>확정수 <span><i><b class="gray">4</b> / <a href="../reserve/list.php?step=confirm">2</a></i> 건</span></li>
+										<li>숙박수 <span><i><b class="gray">13</b> / <a href="../reserve/list.php?step=confirm">10</a></i> 건</span></li>
+										<li>가능수/대기수 <span><a href="../reserve/list.php?step=default&amp;astep=3">26</a> / <a href="../reserve/list_standby.php?step=standby">15</a> 건</span></li>
+
+									</ul>
+								</td>
+								<td valign="top">
+									<ul>
+										<li>민박주1:1문의<span><i>0</i> / <a href="../board/cs.php?id=qna">11</a> 개</span></li>
+										<li>여행자1:1문의<span><i>0</i> / <a href="../board/list.m2m.php">13</a> 개</span></li>
+										<li>QnA(오늘/대기) <span><a href="../board/qna.php?regdt[]=2016-11-08">0</a> / <a href="../board/qna.php?reply=3">158</a> 개</span></li>
+										<!-- <li>단체숙박문의 <span><a href="../board/reqgroup.php">0</a> / <a href="../board/reqgroup.php?step=1">0</a> 개</span></li> -->
+										<li>리뷰 <span><i><b class="gray">1</b> / <a href="../board/parity.list.php?regdt[]=2016-11-08">0</a></i> 개</span></li>
+										<li>새소식/이벤트<span><i><b class="gray">0</b></i> / <a href="../board/list.news.php?regdt[]=2016-11-08">0</a> 개</span></li>
+
+									</ul>
+								</td>
+								<td valign="top">
+									<ul>
+										<!-- yuna 일정/스팟 목록 으로 이동 -->
+										<li>SMS발송 <span><i><b class="gray">5</b> / 4</i> 건</span></li>
+										<li>컨텐츠수정로그<span><i><b class="gray">0</b></i> / <a href="../goods/log.contents.php?state=1">1,305</a> 개</span></li>
+										<!--// yuna 일정/스팟 목록 으로 이동 -->
+										<li>땡처리신청 <span><a href="../goods/room.php?state[]=1&amp;status=3">26</a> / <a href="../goods/room.php?status=4">1</a> 개</span></li>
+										<!-- <li>얼리버드 <span><a href="../goods/room2.php?state[]=1&amp;status=3">0</a> / <a href="../goods/room2.php?status=2">0</a> 개</span></li> -->
+										<!-- <li>유레일예약대기<span><a href="../reserve/eurail.php?step=1">0</a> 개</span></li> -->
+										<li>광고입찰 <span><a href="../goods/bidding.php">0</a> 개</span></li>
+										<li>현재진행중인광고수 <span><a href="../goods/list.power.php?status=2">10</a> 개</span></li>
+										<li>숙소예약금 <span><i>1,084</i> / <i><b class="gray">0</b></i> / <a href="../goods/cancel_rule_mng.php?req_state_cd=1">17</a> 개</span></li>
+										<!-- yuna 일정/스팟 목록 추가 -->
+										<li>일정 <span><i><a href="">100</a></i> / <a href=""> 5</a>개</i> </span></li>
+										<li>스팟 <span><i><a href="">100</a></i> / <a href=""> 5</a>개</i> </span></li>
+										<!--// yuna 일정/스팟 목록 추가 -->
+									</ul>
+								</td>
+								<td valign="top">
+									<ul>
+										<li>여행자 <span><a href="../member/list.php">203,178</a> 명</span></li>
+										<li>여행자신규 <span><i><b class="gray">0</b> / <a href="../member/list.php?regdt[]=2016-11-08">0</a></i> 명</span></li>
+									</ul>
+								</td>
+								<td valign="top">
+									<ul>
+										<li>여행사회원 <span><a href="../member/list.agency.php">689</a> / <a href="../member/list.agency.php?regdt[]=2016-11-08">0</a> 명</span></li>
+										<li>수익 <span><i><b class="gray">0</b> / 0</i> 원</span></li>
+										<li>대기/진행<span>
+		<i><a href="../reserve/list.agency_v2.php?step=10">13</a></i> /
+		<i><a href="../reserve/list.agency_v2.php?step=13">5</a></i>
+		건</span></li>
+										<li>입금대기/확정 <span>
+		<i><a href="../reserve/list.agency_v2.php?step=20">31</a></i> /
+		<i><a href="../reserve/list.agency_v2.php?step=30&amp;paydtt[]=2016-11-08">0</a></i>
+		건</span></li>
+										<li>1:1문의<span><i>0</i> / <a href="../board/abbs.php?id=mycs">0</a> 개</span></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div align="right" style="padding-bottom:5px">
+						<label class="hand">
+							<input type="checkbox" class="adview" align="absmiddle">광고</label> <span style="padding:0 5px;color:gray;">|</span>
+						<a href="../basis/scheduler.php" style="font:bold 8pt tahoma">[more]</a>
+					</div>
+					<table class="tb1">
+						<tbody>
+							<tr>
+								<th>
+									<a href="javascript:popupLayer('../basis/p.scheduler.php?day=2016-11-14')" class="yoil_1">2016-11-14</a> (月)
+								</th>
+								<td>
+									<table width="100%">
+										<tbody>
+											<tr>
+												<td width="100" class="small">
+													<b class="red">N</b> <a href="../basis/indb.php?mode=schedule_confirm&amp;mid=lastand&amp;day=2016-11-14&amp;idx=1')">[완료]</a>
+													<a href="javascript:popupLayer('../basis/p.scheduler.php?mid=lastand&amp;day=2016-11-14&amp;idx=1')">[수정]</a>
+													<a href="../basis/indb.php?mode=d.scheduler&amp;mid=lastand&amp;day=2016-11-14&amp;idx=1" onclick="return confirm('삭제하시겟습니까?')">[삭제]</a>
+												</td>
+												<td width="80">
+													<b>라앤</b>
+												</td>
+												<td>
+													<div class="content">
+														<p><strong><font color="#57048c">미쯔님 생일</font></strong></p>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<a href="javascript:popupLayer('../basis/p.scheduler.php?day=2016-11-15')" class="yoil_2">2016-11-15</a> (火)
+								</th>
+								<td>
+									<table width="100%">
+										<tbody>
+											<tr>
+												<td width="100" class="small">
+													<b class="red">N</b> <a href="../basis/indb.php?mode=schedule_confirm&amp;mid=lastand&amp;day=2016-11-15&amp;idx=1')">[완료]</a>
+													<a href="javascript:popupLayer('../basis/p.scheduler.php?mid=lastand&amp;day=2016-11-15&amp;idx=1')">[수정]</a>
+													<a href="../basis/indb.php?mode=d.scheduler&amp;mid=lastand&amp;day=2016-11-15&amp;idx=1" onclick="return confirm('삭제하시겟습니까?')">[삭제]</a>
+												</td>
+												<td width="80">
+													<b>라앤</b>
+												</td>
+												<td>
+													<div class="content">
+														<p><strong><font color="#57048c">이프님 생일</font></strong></p>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //contents end -->
+			</div>
+			<!--// container end-->
+			<!-- 하단영역 -->
+			<div id="layout_bottom" class="footer">
+				<!-- yuna footer 클래스 추가 -->
+				Copyright (c)2008 <b>icnsoft</b> co. All rights reserved.
+			</div>
+		</div>
+	</div>
+	<script>
+	jQuery(function($){
+		var con_width = $('.wrap').width();
+		var new_width = '100%';
+		if (con_width < 1460) {
+			new_width = '1460px';
+		}
+		$('.wrap').css('width' ,new_width );
+	});
+	</script>
+</body>
+
+</html>

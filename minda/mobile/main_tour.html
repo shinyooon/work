@@ -1,0 +1,225 @@
+<? include "inc/top_main.html" ?>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a>    </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">트립</a></h1>
+    <div class="header__right">
+        <!-- 타이틀 우측 3번쨰 버튼 -->
+        <!-- 타이틀 우측 2번쨰 버튼 -->
+        <!-- 타이틀 우측 버튼 -->
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- container -->
+<div id="container">
+    <div id="contents" class="main-contents">
+        <section class="sub-top-area mt0 pb0">
+            <ul class="rev-form">
+                <li>
+                    <form action="." onsubmit="return false;">
+							<span class="input-ctrl input-wrap input-city">
+								<div class="txt-bx">
+									<input id="sword" type="search" name="search"
+                                           onkeydown="if(event.keyCode==13){searchTrip();}" title="도시명"
+                                           class="no_style d-block autocomplete input_with_clear_btn"
+                                           placeholder="도시명 또는 트립명을 입력하세요." autocomplete="off">
+								</div><button type="button" class="icon_clse_input" style="display: none;">입력취소</button>
+								<input id="category" type="hidden" value="">
+							</span>
+                    </form>
+                </li>
+            </ul>
+            <div class="btn-area">
+                <a onclick="searchTrip();" class="btn-gradient">트립검색</a>
+            </div>
+        </section>
+        <section class="main-city-area">
+            <ul id="ul_city" class="list-best-city">
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','로마');location.href='http://localhost/m/1.0/tg/list.html?category=001003001'"
+                       class="btn">로마</a>
+                </li>
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','파리');location.href='http://localhost/m/1.0/tg/list.html?category=001002001'"
+                       class="btn">파리</a>
+                </li>
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','바르셀로나');location.href='http://localhost/m/1.0/tg/list.html?category=001004001'"
+                       class="btn">바르셀로나</a>
+                </li>
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','오사카');location.href='http://localhost/m/1.0/tg/list.html?category=003002002'"
+                       class="btn">오사카</a>
+                </li>
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','삿포로');location.href='http://localhost/m/1.0/tg/list.html?category=003002003'"
+                       class="btn">삿포로</a>
+                </li>
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','샌프란시스코');location.href='http://localhost/m/1.0/tg/list.html?category=005001014'"
+                       class="btn">샌프란시스코</a>
+                </li>
+                <li>
+                    <a href="javascript:"
+                       onclick="ga('send','event','mo_trip_subindex','click','라스베가스');location.href='http://localhost/m/1.0/tg/list.html?category=005001007'"
+                       class="btn">라스베가스</a>
+                </li>
+            </ul>
+            <div class="btn-area">
+                <a href="javascript:"
+                   onclick="ga('send','event','mo_trip_subindex','click','전체도시');location.href='http://localhost/m/1.0/grp_main/search.html?type=tour'"
+                   class="d-block">전체도시보기<span class="icon-main-spr icon-arr-r"></span></a>
+            </div>
+        </section>
+        <!-- 2018-03-19 add -->
+        <div class="trip-main__banner-area">
+            <div class="banner__trip-custom">
+                <a href="https://goo.gl/forms/ad3fJxOS24xoE1jI3" target="_blank">
+                    <p class="txt">나만의 맞춤투어를 해보고 싶다면?</p>
+                </a>
+            </div>
+        </div>
+        <!--// 2018-03-19 add -->
+        <section class="tour-contents">
+            <article class="pt10">
+                <div class="tit-wrap clearfix">
+                    <h3 class="tit">민박투어</h3>
+                </div>
+                <ul class="list-item">
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema1.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">민다에만 있는</span>
+                                <span class="txt2">72개의 투어가 있습니다.</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema2.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">무료로</span>
+                                <span class="txt2">112개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <div class="tit-wrap clearfix">
+                    <h3 class="tit">현지투어</h3>
+                </div>
+                <ul class="list-item">
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema3.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">역사를</span>
+                                <span class="txt2">72개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema4.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">음식을</span>
+                                <span class="txt2">112개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema5.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">라이프스타일을</span>
+                                <span class="txt2">32개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <div class="tit-wrap clearfix">
+                    <h3 class="tit">체험/액티비티</h3>
+                </div>
+                <ul class="list-item">
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema6.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">물에서</span>
+                                <span class="txt2">72개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema7.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">땅에서</span>
+                                <span class="txt2">112개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="img/main/img_tour_thema8.jpg" alt=""/>
+                            </div>
+                            <p class="pos-center">
+                                <span class="txt1">하늘에서</span>
+                                <span class="txt2">2개의 투어가 있습니다</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <!-- 2018-03-19 eidt : 상단에 있던 배너 하단으로 이동 -->
+        <div class="trip-main__banner-area">
+            <div class="banner__trip-kakao">
+                <a href="https://pf.kakao.com/_aHXxcxl" target="_blank" title="민다트립 카카오톡 플러스친구 페이지로 이동">
+                <!--<a href="javascript:AppInvokeOpenNewPage('http://pf.kakao.com/_aHXxcxl','y','y');"
+                   title="민다트립 카카오톡 플러스친구 페이지로 이동">-->
+                    <img src="/m/1.0/cust/img/banner/banner_trip_kakao.jpg" alt="kakaoTalk 플러스친구. 민다트립 카카오톡 실시간 문의"
+                         class="banner__trip-kakao-img">
+                </a>
+            </div>
+        </div>
+        <!--// 2018-03-19 eidt -->
+    </div>
+    <!-- contents -->
+</div>
+<!-- //container -->
+<!-- Footer -->
+<? include "inc/fnb.html" ?>
+<!-- fixed button-->
+</div>
+<!-- //wrap -->
+</body>
+
+</html>

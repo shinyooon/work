@@ -1,0 +1,119 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header.html" ?>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- <span class="sub_bg"></span> -->
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <? include "inc/event_top.html" ?>
+
+
+            <!-- 이벤트 내용 시작 -->
+            <div style="margin: 0px auto; position: relative; max-width: 1080px;"><img
+                style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201712/usim/img.jpg">
+                <h1 class="sr-only">유럽 통합 유심 쓰리심 이벤트. 특별 할인가</h1>
+                <p class="sr-only">29,500원. 매일매일 선착순 40개. 유럽여행의 필수품. 영국 쓰리심을 민다에서 특별할인가로 구입할 수 있는 절호의 기회!</p>
+                <dl class="sr-only">
+                    <dt>이벤트 기간</dt>
+                    <dd>2017년 12월 18일부터 판매 시작(전체 수량 소진 시 이벤트 종료)</dd>
+                    <dt>이벤트내용</dt>
+                    <dd>매일 40개 한정으로 선착순 할인가 판매</dd>
+                </dl>
+                <ul class="sr-only">
+                    <li>데이터 12GB(9GB)</li>
+                    <li>음성통화 300분</li>
+                    <li>문자 3,000건</li>
+                    <li>이용기간 30일</li>
+                </ul>
+                <!-- 지금 구매하기  버튼-->
+                <a href="http://theminda.com/tg/view.php?itemno=1951&category=001001001"
+                   class="no_style event__usim-link"
+                   style="display:block;position:absolute;left:32.2%;top:55.1%;width:35.7%;height:1.7%"
+                   onclick="ga('send','event','event_page_button','click','button_event_usim');"><span class="sr-only">지금 구매하기</span></a>
+                <!--// 지금 구매하기  버튼-->
+                <dl class="sr-only">
+                    <dt>사용 가능 국가(42개국)</dt>
+                    <dd>영국</dd>
+                    <dd>뉴질랜드</dd>
+                    <dd>네덜란드</dd>
+                    <dd>네덜란드</dd>
+                    <dd>노르웨이</dd>
+                    <dd>독일</dd>
+                    <dd>덴마크</dd>
+                    <dd>라트비아</dd>
+                    <dd>루마니아</dd>
+                    <dd>룩셈부르크</dd>
+                    <dd>리투아니아</dd>
+                    <dd>마카오</dd>
+                    <dd>맨섬</dd>
+                    <dd>몰타</dd>
+                    <dd>벨기에</dd>
+                    <dd>리히텐슈타인</dd>
+                    <dd>불가리아</dd>
+                    <dd>스리랑카</dd>
+                    <dd>스웨덴</dd>
+                    <dd>스위스</dd>
+                    <dd>스페인</dd>
+                    <dd>슬로바키아</dd>
+                    <dd>슬로베니아</dd>
+                    <dd>아이슬란드</dd>
+                    <dd>아일랜드</dd>
+                    <dd>그리스</dd>
+                    <dd>오스트리아</dd>
+                    <dd>이스라엘</dd>
+                    <dd>이탈리아</dd>
+                    <dd>에스토니아</dd>
+                    <dd>인도네시아</dd>
+                    <dd>지브롤터</dd>
+                    <dd>채널 제도</dd>
+                    <dd>체코</dd>
+                    <dd>크로아티아</dd>
+                    <dd>키프로스</dd>
+                    <dd>포르투칼</dd>
+                    <dd>폴란드</dd>
+                    <dd>프랑스</dd>
+                    <dd>핀란드</dd>
+                    <dd>헝가리</dd>
+                    <dd>호주</dd>
+                    <dd>홍콩</dd>
+                </dl>
+                <dl class="sr-only">
+                    <dt>꼭 확인해주세요!</dt>
+                    <dd>해당 상품은 주문 후 각 공항 수령처에서 직접 수령하는 상품입니다.</dd>
+                    <dd>수령방법 및 사용방법 등 상세내용은 상품페이지에서 확인 부탁드립니다.</dd>
+                    <dd>이벤트 내용은 업체 사정으로 인해 변경될 수 있습니다.</dd>
+                    <dd>일일 특별할인 상품 수량(40개)은 조기마감될 수 있으며, 그 이후로는 정상가로 판매됩니다.</dd>
+                    <dd>전체 수량 소진 시 이벤트는 종료되며, 이벤트 종료에 대해서는 별도 공지하지 않습니다.</dd>
+                    <dd>이벤트 관련문의는 상품페이지의 Q&A 게시판을 이용해주시길 바랍니다.</dd>
+                </dl>
+            </div>
+            <script type="text/javascript"> $(function() {
+                var href = '';
+                var filter = 'win16|win32|win64|mac';
+                $('.event__usim-link').click(function(e) {
+                    href = $(this).attr('href');
+                    if (navigator.platform) {
+                        if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {/*Mobile*/} else {/*PC*/
+                            e.preventDefault();
+                            AppInvokeOpenNewPage(href, 'y', 'y');
+                        }
+                    }
+                });
+            });</script>
+            <!-- 이벤트 내용 끝 -->
+
+            <? include "inc/event_bottom.html" ?>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<? include "inc/bottom.html" ?>

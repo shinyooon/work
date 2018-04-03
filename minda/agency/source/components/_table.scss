@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+@mixin d-table($hasrow:false){
+
+	@if($hasrow==true){
+		&__row{
+		display: table;
+		width:100%;
+		table-layout:fixed;
+		}
+		&__col{
+			display:table-cell;
+			vertical-align:middle;
+		}
+	}
+	@else{
+		display: table;
+		width:100%;
+		table-layout:fixed;
+		&__col{
+			display:table-cell;
+			vertical-align:middle;
+		}
+	}
+
+}
+
+@mixin table(){
+	&__hd, &__body, &__ft{
+	}
+	&__row{
+		display: table;
+		width:100%;
+		table-layout:fixed;
+	}
+	&__col{
+		display:table-cell;
+		padding:10px 5px;
+		vertical-align:middle;
+		&:first-child{
+			padding-left:20px;
+		}
+		&:last-child{
+			padding-right:20px;
+		}
+	}
+	&__hd{
+		.table__col{
+			background-color:$color__fafafa;
+			text-align:center;
+			font-size:13px;
+			height:50px;
+		}
+		@include border-btm();
+	}
+	&__col__tit{
+		background-color:$color__fafafa;
+		text-align:center;
+		font-size:13px;
+	}
+	&__body{
+		background-color:$color__wh;
+		.table__row{
+			&:not(:last-child){
+				@include border-btm();
+			}
+		}
+		.table__col__tit{
+			width:104px;
+			text-align:left;
+			border-bottom-width:0;
+			padding-left:20px;
+		}
+	}
+	&__ft{
+		background-color:$color__fafafa;
+	}
+	&--v2{
+		.table__col{
+			padding:15px 20px 15px 20px;
+			vertical-align: top;
+			height:70px;
+		}
+		.table__col__tit{
+			vertical-align:middle;
+			padding:15px 10px 15px 20px;
+		}
+		.table__hd{
+			.table__col{
+				background-color:$color__fafafa;
+				text-align:center;
+				font-size:13px;
+				height:50px;
+				padding-left:0;
+				padding-right:0;
+			}
+			@include border-btm();
+		}
+
+	}
+}
+@mixin col-align-left ($params) {
+	.table__body{
+		.table__col--#{$params}{
+			text-align:left;
+			padding-left:20px;
+			padding-right:20px;
+		}
+	}
+}
+
+@mixin col-bar(){
+	&:not(:last-child){
+		background-image:url(../img/bg_bar.jpg);
+		background-position:right center;
+		background-repeat:no-repeat;
+	}
+}
+
+.table{
+	@include table();
+}
+
+.notice, .faq, .one-to-one,.membership,.term, .rev-manage__list-wrap,.rev-manage__detail,.rev-manage__view{
+	.table{
+		@include box-style();
+	}
+}
+.notice__list,.faq__list, .one-to-one__list, .membership__list, .rev-manage__list,.rev-manage__detail__customer-info,.rev-manage__detail__rev-detail, .rev-manage__detail__result,.rev-manage__view__rev-info,.rev-manage__view__customer-info,.rev-manage__view__roomlist,.rev-manage__view__pay-info,.rev-manage__view__minda-recom,.rev-manage__view__pay,.rev-from__roomlist,.info-manage__person, .info-manage__account,.info-coupon,.biz-history,.biz-total,.stats__wrap,.coupon-history,.coupon-total,.coupon-list,.rev-manage__view__refund,.table__join__privacy{
+	.table__body{
+		.table__row{
+			@include text($color__blk,15px);
+			@include border-btm();
+		}
+		.table__col{
+			height:70px;
+			padding-left:40px;
+			padding-right:40px;
+			position:relative;
+			padding-top:0;
+			padding-bottom:0;
+			line-height:18px;
+			/* &:not(:last-child):after{
+				content:'';
+				display:block;
+				position:absolute;
+				top:50%;
+				@include css3-prefix('transform', translate(0,-50%));
+				right: 0;
+				width:1px;
+				height:22px;
+				background-color:$color__eee;
+			} */
+			@include col-bar();
+		}
+	}
+}
+
+
+.notice__view, .faq__view, .one-to-one__view, .rev-manage__detail__rev-info,.rev-manage__view__req{
+	.table__body{
+		@include text($color__blk,15px);
+		line-height:25px;
+		.table__col{
+			height:70px;
+			padding:22px 30px 21px;
+			position:relative;
+		}
+		.table__col__tit{
+			padding-left:20px;
+			padding-right:20px;
+			color:$color__default;
+			font-size:13px;
+			vertical-align:middle;
+		}
+	}
+}
+
+.rev-manage__detail__rev-info{
+	.table__body{
+		.table__col__tit{
+			width:123px;
+			letter-spacing:-1px;
+			white-space:nowrap;
+		}
+	}
+
+}
+
+.rev-manage__detail__rev-detail,.rev-manage__view__rev-direct, .rev-manage__view__rev-recom,.rev-manage__view__rev-recom--2, .rev-from__roomlist,.info-manage__person,.rev-manage__view__minda-recom,.info-manage__basic-list{
+	.table__ft{
+		.table__col{
+			height:70px;
+			text-align:right;
+		}
+	}
+}
+.table__privacy, .table__trust,.table__cancel{
+	text-align:center;
+	color:$color__blk;
+	.table__hd{
+		border-top:2px solid $color__blk;
+		font-weight:500;
+		.table__col{
+			height:40px;
+		}
+	}
+	.table__col{
+		border-right:1px solid $color__eee;
+		&:first-child{
+			border-left:1px solid $color__eee;
+		}
+	}
+	.table__body{
+		.table__row{
+			border-bottom-width:0;
+		}
+	}
+	.table__body{
+		.table__col{
+			border-bottom:1px solid $color__eee;
+			line-height:20px;
+			padding:17px 10px;
+		}
+	}
+}
+
+.info-manage__person,.info-manage__account{
+	.table__body{
+		.table__col{
+			vertical-align:middle;
+			padding:0 20px;
+		}
+	}
+}
+
+
+.join-term__bx {
+	table{
+		width:100%;
+		text-align:center;
+		margin:10px 0;
+		@include border-radius(5px);
+		th,td{
+			@include border(1px,$color__eee);
+			color:$color__default;
+		}
+		caption{
+			margin-bottom:5px;
+		}
+	}
+	thead{
+		th{
+			background-color:$color__fafafa;
+			font-weight:$fw__500;
+			font-size:13px;
+			line-height:16px;
+			padding:11px 40px;
+			text-align:center;
+		}
+	}
+	tbody{
+		th,td{
+			padding:11px 30px;
+			text-align:center;
+			word-break: keep-all;
+		}
+	}
+}

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/normalize.css">
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/domestic/m/common/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/domestic/m/common/css/main.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/domestic/m/common/css/sub.css">
+
+	<!-- <link rel="stylesheet" href="http://v2.theminda.com/cust/css/jquery.bxslider.css"> -->
+	<!-- <link rel="stylesheet" href="http://v2.theminda.com/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/cust/css/nanoscroller.css"> -->
+	<!-- <link rel="stylesheet" href="http://v2.theminda.com/cust/css/common.css"> -->
+<!--    <link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css"> -->
+
+	<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+	header {position:fixed;top:0;background:#fff;z-index:50;width:100%;height:120px;}
+	#wrap {position:relative;padding:60px 0 0 0;}
+	h1 {padding:10px;font-size:25px;}
+	.tb-filelist th, .tb-filelist td {padding:5px;}
+	.tb-filelist tbody td {font-size:13px;}
+	td.ing {color:red;}
+	.link,.link:hover,.link:active,.link:focus{text-decoration:underline;}
+	.tab-content>.tab-pane {display:none;padding:0 20px 20px;}
+	.tab-content>.tab-pane.active {display:block;}
+	.tab-content {/*padding-bottom:50px;*/vertical-align:top;margin-top:80px;}
+	.state {color:#004fd3;}
+	.state.ing {color:red;}
+	.room_detail_hd [class*=basic_step] {line-height:50px;}
+	.room_detail_hd .basic_step2 li a {font-size:15px;}
+	.lnb-guide{margin-left:10px;}
+	.lnb-guide li a {padding:8px 20px;font-size:17px;}
+	.lnb-guide li.active a {background-color:#dadada !important;}
+	h3 {font-size:22px;font-weight:600;margin: 30px 0 10px}
+	h4{padding:3px 0 3px 10px;font-weight:bold;color:#8c5d1a;}
+	h5 {margin:20px 0 5px;color:#333;font-weight:bold;}
+	xmp{margin:0;display:inline-block;}
+	.list-default li {margin-bottom:10px;}
+	.lnb-guide{clear:both;}
+	/*.lnb-guide {position:fixed;top:85px;width:100%;left:10px;background-color:#fff;z-index:20}*/
+	pre {padding:10px 10px 0;margin:10px 0;}
+	pre code {display:block;margin-bottom:-25px;color:#7a1c3d;}
+	.code-view-area {align-items:flex-start;margin:0 -10px;align-items:stretch;}
+	.code-view-area + .code-view-area  {margin-top:20px;}
+	.code-view-area > * {-webkit-flex:1; flex:1;margin:0 10px;border:1px solid #efefef;}
+	.code-view-area .view{align-items:stretch;border-width:0}
+	.code-view-area.d-flex .view {width:380px;-webkit-flex:initial;flex:initial;}
+	.code-view-area.d-flex .view-inner {border:20px solid #efefef;width:100%!important;flex:none}
+	.code-view-area.d-flex .view-inner + .view-inner{margin-top:-20px;}
+	.code-view-area .view-inner.color{height:100px;width:auto;min-width:auto}
+	#color .view-inner.color, #icon .view-inner.bx {min-height:100px;width:150px;min-width:150px;text-align:center;position:relative}
+	 #icon .view-inner.bx .class{width:100%;position:absolute;left:0;right:0;bottom:0;line-height:1.1em}
+	.code-view-area .view-inner {flex:initial;width:380px;min-width:360px;border:10px solid #efefef;border-top-width:20px;border-bottom-width:20px}
+	.code-view-area .view-inner:first-child{border-left-width:20px;width:390px;min-width:370px}
+	.code-view-area .view-inner:last-child{border-right-width:20px;width:390px;min-width:370px}
+	.code-view-area .tit-code-view {background-color:#ffda99;padding:5px 10px;color:#fff;}
+	.cp_embed_wrapper {overflow:hidden;}
+	.cp_embed_wrapper > iframe {margin:-55px 0 -7px;}
+	a, a:hover, a:focus, a:active {color:#333;}
+</style>
+</head>
+
+<body>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<header class="clearfix">
+			<h1 class="pull-left">인생숙소  스타일 가이드</h1>
+			<ul class="r-t-area" text-right">
+				<li class="pa10"><a href="g_web.html" class="color_red" style="font-size:18px;font-weight:bold;border-bottom:1px solid red">&lt; 웹가이드 바로가기</a></li>
+				<!-- <li class="active"><a href="g_mobile.html">모바일 </a></li> -->
+			</ul>
+			<ul class="lnb-guide d-flex">
+				<li class="active"><a href="#pd_list" data-toggle="tab" class="btn d_block bg_grey btn-lg">상품 목록</a></li>
+				<li><a href="#list" data-toggle="tab" class="btn d_block bg_grey btn-lg">리스트</a></li>
+				<li><a href="#tab" data-toggle="tab" class="btn d_block bg_grey btn-lg">탭</a></li>
+				<li><a href="#button" data-toggle="tab" class="btn d_block bg_grey btn-lg">버튼</a></li>
+				<li><a href="#icon" data-toggle="tab" class="btn d_block bg_grey  btn-lg">아이콘</a></li>
+				<li><a href="#input" data-toggle="tab" class="btn d_block bg_grey btn-lg">입력폼</a></li>
+				<li><a href="#table" data-toggle="tab" class="btn d_block bg_grey btn-lg">테이블</a></li>
+				<li><a href="#color" data-toggle="tab" class="btn d_block bg_grey btn-lg">컬러/텍스트</a></li>
+				<li><a href="#pop" data-toggle="tab" class="btn d_block bg_grey btn-lg">팝업/box</a></li>
+				<!-- <li><a href="#slide" data-toggle="tab" class="btn d_block bg_grey btn-lg">슬라이드</a></li> -->
+			</ul>
+		</header>
+		<div class="tab-content tb_bx tb_fixed">
+			<!-- 가이드 contents-->
+			<div class="tb_cell" style="width:200px; vertical-align:top;">
+				<h2 class="sr-only">가이드</h2>
+			</div>
+			<div class="tab-content pl30 pr30 pt30 tb_cell" style="text-align:left;">
+				<!-- 상품목록 -->
+				<div class="tab-pane active" id="pd_list">
+					<h3>상품목록</h3>
+					<div class="code-view-area">
+						<div class="view d-flex">
+							<div class="view-inner">
+								<h4>- 숙소 목록</h4>
+								<ul class="list-item-type2">
+									<li>
+										<a href="">
+										<div class="d-tb">
+											<div class="img-wrap pr">
+												<img src="http://www.theminda.com/data/goods/0_587331e683ec5.jpg" alt="" class="pos-center swiper-lazy" />
+											</div>
+											<div class="info-wrap">
+												<strong class="tit twoline"><span class="icon-cm icon-rightnow">즉시예약</span>제주를 여행하는 히치 하이커를 위한 제주 하이커 게스트하우스</strong>
+												<div class="r-t-area">
+												<button type="button" class="no-style btn-save"><span class="icon-cm icon-save" onclick="">저장</span></button>
+												</div>
+												<div class="btm-into-area color-grey">
+												<div class="price"><span class="room-type">토미토리</span><span class="price-before">25,000원</span><span class="after-price">15,000원~</span></div>
+												<div class="cnt">후기 15</div>
+												</div>
+											</div>
+										</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="view-inner">
+								<h4>- 숙소 상세 > 객실 목록</h4>
+								<ul class="list-item-type2">
+									<li>
+										<a href="">
+											<div class="d-tb">
+												<div class="img-wrap pr">
+													<img src="http://www.theminda.com/data/goods/0_57ff31bc315ce.jpg" alt="" class="pos-center">
+												</div>
+												<div class="info-wrap">
+													<span class="room-type color-grey">개인실</span>
+													<strong class="tit ellipsis">부산 해운대 게스트하우스</strong>
+													<div class="btm-into-area color-grey">
+														<div class="price"><span class="room-type">토미토리</span><span class="price-before"> 25,000원</span><span class="after-price color-red">15,000원~</span></div>
+														<div class="cnt">4명 ~ 7명 숙박가능</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="disabled">
+										<span class="txt-disabled pos-center">예약불가</span>
+										<a href="">
+											<div class="d-tb">
+												<div class="img-wrap pr">
+													<img src="http://www.theminda.com/data/goods/0_587331e683ec5.jpg" alt="" class="pos-center">
+												</div>
+												<div class="info-wrap">
+													<span class="room-type color-grey">개인실</span>
+													<strong class="tit ellipsis">이상해솔라빔 개인실</strong>
+													<div class="btm-into-area color-grey">
+														<div class="price"><span class="room-type">토미토리</span><span class="price-before">25,000원</span><span class="after-price color-red">15,000원~</span></div>
+														<div class="cnt">4명 ~ 7명 숙박가능</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="view-inner">
+								<h4>- 할인 숙소 > 비수기 할인</h4>
+								<div class="discount-list-wrap">
+									<ul class="list-item-type2">
+										<li>
+											<a href="">
+												<div class="d-tb">
+													<div class="img-wrap pr">
+														<img src="http://www.theminda.com/data/goods/0_55791a81d82f4.JPG" alt="" class="pos-center">
+													</div>
+													<div class="info-wrap">
+														<strong class="tit twoline"><span class="icon-cm icon-rightnow">즉시예약</span>제주를 여행하는 히치 하이커를 위한제주를 여행하는 히치 하이커를 위한제주를 여행하는 히치 하이커를 위한</strong>
+														<!-- 저장될때 on 클래스 추가 -->
+														<div class="r-t-area">
+															<button type="button" class="no-style btn-save"><span class="icon-cm icon-save" onclick="">저장</span></button>
+														</div>
+														<div class="btm-into-area color-grey">
+															<div class="date"><p class="txt-date">2017-3-29 ~ 2017-11-15</p></div>
+															<div class="list-dot">
+																<div class="per color-red fw700">75%</div>
+																<div class="price"><span class="price-before">25,000원</span><span class="after-price color-red fw700">15,000원~</span></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="view-inner">
+								<h4>- 할인 숙소 > 땡처리</h4>
+								<div class="discount-list-wrap">
+									<ul class="list-item-type2">
+										<li>
+											<a href="">
+												<div class="d-tb">
+													<div class="img-wrap pr">
+														<img src="http://www.theminda.com/data/room/80a4406d2caef834a99ac0e77856f714" alt="" class="pos-center">
+													</div>
+													<div class="info-wrap">
+														<strong class="tit twoline">4인실(2층침대)</strong>
+														<!-- 저장될때 on 클래스 추가 -->
+														<div class="r-t-area">
+															<button type="button"  class="no-style btn-save"><span class="icon-cm icon-save" onclick="">저장</span></button>
+														</div>
+														<div class="btm-into-area color-grey">
+															<div class="date"><p class="txt-date">2017-3-29 ~ 2017-11-15</p></div>
+															<div class="list-dot">
+																<div class="per color-red fw700">75%</div>
+																<div class="price"><span class="price-before">25,000원</span><span class="after-price color-red fw700">15,000원~</span></div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="txt-right partner-info">
+													<p class="fs13 color-grey ellipsis">제주 마이마더 게스트하우스</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex code-view-area">
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="600" data-theme-id="30641" data-slug-hash="eRBjbR" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="eRBjbR" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/eRBjbR/">eRBjbR</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p></div>
+					</div>
+					<h3>목록 - 라인 type</h3>
+					<div class="code-view-area">
+						<div class="view d-flex">
+							<div class="view-inner">
+								<h4>- 기본 라인 목록</h4>
+								<ul class="list-line">
+									<li><a href="" class="link-arr-r no-bg">당일예약</a></li>
+									<li><a href="" class="link-arr-r">공지사항</a></li>
+								</ul>
+							</div>
+							<div class="view-inner">
+								<section class="setting-area">
+									<h4>- 환경설정</h4>
+									<ul class="list-line">
+										<li class="pd20">
+											<div class="d-tb">
+												<div class="tit-wrap">버전 1.7.4</div>
+												<div class="btn-input2">
+													<a href="" class="btn btn-default bg-grey">업데이트</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex code-view-area">
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="RZNdWq" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="RZNdWq" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/RZNdWq/">RZNdWq</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+				<!--// 상품목록 -->
+				<div class="tab-pane" id="list">
+					<h3>점 리스트</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>- 점 리스트 type1</h4>
+								<div class="list-dot">
+									<div>가로 점 1</div>
+									<div>가로 점 2</div>
+									<div>가로 점 3</div>
+								</div>
+							</div>
+							<div class="view-inner">
+								<h4>- 점 리스트 type2</h4>
+								<ul class="list-dot2">
+									<li>평일(월~금) 오전 10시~12시,  오후 1시 ~ 6시까지 운영합니다.</li>
+									<li>토/일,법정 공휴일은 운영하지  않습니다. </li>
+								</ul>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="JyoVJQ" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="JyoVJQ" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/JyoVJQ/">JyoVJQ</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>dl (타이틀이 있는) 리스트</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>- 세로형</h4>
+								<dl class="list-dl">
+									<dt>이메일</dt>
+									<dd>
+										 talkyfull@gmail.com
+									</dd>
+									<dt>휴대전화</dt>
+									<dd class="bx-input" style="margin-bottom:0">
+										<span class="input-wrap"><input type="text" title="휴대전화 번호" class="no-style pl-grey" placeholder="ex)010-0000-0000"/></span>
+									</dd>
+								</dl>
+							</div>
+							<div class="view-inner">
+								<h4>- 가로형</h4>
+								<dl class="dl-inline">
+									<dt>최소예약</dt>
+									<dd>1박 이상</dd>
+									<dt>객실정원</dt>
+									<dd>4명 ~ 7명 숙박가능</dd>
+									<dt>시설</dt>
+									<dd>주방시설, 에어컨, 전자레인지, 커피포트, 전용욕실</dd>
+								</dl>
+							</div>
+							<div class="view-inner">
+								<h4>- 가로형 (type2)</h4>
+								<dl class="d-tb dl-info">
+									<dt>합계금액</dt>
+									<dd class="txt-right">80,000원</dd>
+								</dl>
+								<dl class="d-tb dl-info">
+									<dt>숙소 직접결제액 </dt>
+									<dd class="txt-right">64,000원</dd>
+								</dl>
+								<dl class="d-tb dl-info total-price-area">
+									<dt>총 결제금액</dt>
+									<dd class="txt-right"><strong class="color-red">16,000 원</strong></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="530" data-theme-id="30641" data-slug-hash="ayzrdv" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="ayzrdv" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/ayzrdv/">ayzrdv</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>ol  리스트</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<ol class="list-ol">
+									<li><strong class="color-blue num">Step 1</strong>충전할 금액 입력 후 확인</li>
+									<li><strong class="color-blue num">Step 2</strong>전용계좌 발급받기</li>
+									<li><strong class="color-blue num">Step 3</strong>전용계좌로 입금하기</li>
+								</ol>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="185" data-theme-id="30641" data-slug-hash="NvPVdO" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="NvPVdO" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/NvPVdO/">NvPVdO</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="tab">
+					<h3>탭</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>- 좁은 간격 </h4>
+								<ul class="list-tap bg-l-grey">
+									<li><a href="">준비 중인 여행</a></li>
+									<li class="on"><a href="">지난 여행</a></li>
+									<li><a href="">환불진행상황</a></li>
+								</ul>
+							</div>
+							<div class="view-inner">
+								<h4>- 넓은 가격 </h4>
+								<section class="tap-area">
+									<ul class="list-tap v2 bg-l-grey">
+										<li class="on"><a href="">이용약관</a></li>
+										<li><a href="">개인정보취급방침</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="JyGxOg" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="JyGxOg" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/JyGxOg/">JyGxOg</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="button">
+					<h3>라우드 버튼</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>- 라운드 버튼 </h4>
+								<div class="btn-area">
+									<a href="" class="btn btn-rnd bg-grey">길찾기</a>
+								</div>
+							</div>
+							<div class="view-inner">
+								<h4>- 라운드 버튼 리스트 세로 </h4>
+								<div class="btn-area">
+									<ul class="list-btn">
+										<li class=""><a href="" class="btn-rnd bg-primary btn-login">로그인</a></li>
+										<li><a href="" class="btn btn-rnd bg-grey">길찾기</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="view-inner">
+								<h4>- 라운드 버튼 리스트 가로</h4>
+								<div class="d-tb">
+									<div class="btn-area">
+										<button type="button" class="btn btn-rnd bg-grey btn-save">취소</button>
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn btn-rnd bg-primary btn-save">적용</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="420" data-theme-id="30641" data-slug-hash="dzYzBP" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="dzYzBP" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/dzYzBP/">dzYzBP</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>기본 버튼</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>- default 버튼(그레이 bg) </h4>
+								<button type="button" class="btn btn-default bg-grey">사용</button>
+							</div>
+							<div class="view-inner">
+								<h4>- 버튼 작은 사이즈</h4>
+								<a href="" class="btn btn-sm bg-grey">후기쓰기</a>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="202" data-theme-id="30641" data-slug-hash="LjpWgK" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="LjpWgK" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/LjpWgK/">LjpWgK</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>버튼 with 화살표</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>with 오른쪽 화살표</h4>
+								<div class="list-line">
+									<a href="" class="link-arr-r">당일예약</a>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="150" data-theme-id="30641" data-slug-hash="rzOpWp" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="rzOpWp" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/rzOpWp/">rzOpWp</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>switch 버튼</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<button type="button" class="btn btn-rnd btn-switch">
+									<span class="on">ON</span>
+									<span class="off">OFF</span>
+								</button>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="150" data-theme-id="30641" data-slug-hash="prjrBL" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="prjrBL" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/prjrBL/">prjrBL</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">JS</div>
+							<p data-height="150" data-theme-id="30641" data-slug-hash="prjrBL" data-default-tab="js" data-user="shinyooon" data-embed-version="2" data-pen-title="prjrBL" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/prjrBL/">prjrBL</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="icon">
+					<h3>icon</h3>
+					<div class="code-view-area">
+						<div class="view d-flex">
+							<div class="view-inner bx bg-grey">
+								<span class="icon-cm icon-srch"></span>
+								<p class="class">icon-cm icon-srch</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-save"></span>
+								<p class="class">icon-cm icon-save</p>
+							</div>
+							<div class="view-inner bx on">
+								<span class="icon-cm icon-save"></span>
+								<p class="class">on > icon-cm icon-save</p>
+							</div>
+							<div class="view-inner bx btm-nav">
+								<div class="on">
+									<span class="icon-cm icon-save"></span>
+									<p class="class">btm-nav > on > icon-cm icon-save</p>
+								</div>
+							</div>
+							<div class="view-inner bx bg-grey">
+								<span class="icon-cm icon-clse-wh"></span>
+								<p class="class">icon-cm icon-clse-wh</p>
+							</div>
+							<div class="view-inner bx bg-grey">
+								<span class="icon-cm icon-spot"></span>
+								<p class="class">icon-cm icon-spot</p>
+							</div>
+							<div class="view-inner bx bg-grey">
+								<span class="icon-cm icon-date"></span>
+								<p class="class">icon-cm icon-date</p>
+							</div>
+							<div class="view-inner bx bg-grey">
+								<span class="icon-cm icon-person2"></span>
+								<p class="class">icon-cm icon-person2</p>
+							</div>
+							<div class="view-inner bx bg-grey">
+								<span class="icon-cm icon-clse-input"></span>
+								<p class="class">icon-cm icon-clse-input</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-rightnow"></span>
+								<p class="class">icon-cm icon-rightnow</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-map"></span>
+								<p class="class">icon-cm icon-map</p>
+							</div>
+						</div>
+						<div class="view d-flex">
+							<div class="view-inner bx">
+								<span class="icon-cm icon-filter"></span>
+								<p class="class">icon-cm icon-filter</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-srch2"></span>
+								<p class="class">icon-cm icon-srch2</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-mypage"></span>
+								<p class="class">icon-cm icon-mypage</p>
+							</div>
+							<div class="view-inner bx on">
+								<span class="icon-cm icon-mypage"></span>
+								<p class="class">on > icon-cm icon-mypage</p>
+							</div>
+							<div class="view-inner bx btm-nav">
+								<span class="icon-cm icon-more"></span>
+								<p class="class">btm-nav>icon-cm icon-more</p>
+							</div>
+							<div class="view-inner bx btm-nav">
+								<div class="on">
+									<span class="icon-cm icon-more"></span>
+								</div>
+								<p class="class">btm-nav> on > icon-cm icon-more</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-home"></span>
+								<p class="class">icon-cm icon-home</p>
+							</div>
+							<div class="view-inner bx on">
+								<span class="icon-cm icon-home"></span>
+								<p class="class">on > icon-cm icon-home</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-clse-blk"></span>
+								<p class="class">icon-cm icon-clse-blk</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-plus"></span>
+								<p class="class">icon-cm icon-plus</p>
+							</div>
+							<div class="view-inner bx btn-txt-more">
+								<span class="icon-cm icon-clse"></span>
+								<p class="class">btn-more > icon-clses</p>
+							</div>
+						</div>
+						<div class="view d-flex">
+							<div class="view-inner bx">
+								<span class="icon-spr-share icon-fb"></span>
+								<p class="class">icon-spr-share icon-fb</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-spr-share icon-tw"></span>
+								<p class="class">icon-spr-share icon-tw</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-spr-share icon-ka"></span>
+								<p class="class">icon-spr-share icon-ka</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-spr-share icon-url"></span>
+								<p class="class">icon-spr-share icon-url</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-prev"></span>
+								<p class="class">icon-cm icon-prev</p>
+							</div>
+							<div class="view-inner bx">
+								<span class="icon-cm icon-next"></span>
+								<p class="class">icon-cm icon-next</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="input">
+					<h3>input(연한 회색 placeholder)</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner list-input ">
+								<div class="bx-input"><span class="input-wrap"><input type="text" title="전화번호" class="no-style pl-grey" placeholder="ex)ex@minda.com"></span></div>
+								<div class="bx-input error"><span class="input-wrap"><input type="text" title="전화번호" class="no-style pl-grey" placeholder="ex)ex@minda.com"></span></div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="150" data-theme-id="30641" data-slug-hash="JyYWvz" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="JyYWvz" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/JyYWvz/">JyYWvz</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>checkbox</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<span class="input-chk"><input type="checkbox" name="" id="filter2_4" class="sr-only" title=""><label for="filter2_4">콘도형</label></span>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="105" data-theme-id="30641" data-slug-hash="jLbLxL" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="jLbLxL" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/jLbLxL/">jLbLxL</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>radio</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<span class="input-rdo"><input type="radio" name="cancel-r" id="cancel1" class="sr-only" title="" /><label for="cancel1">원하는 정보가 없거나 충분치 않아서</label></span>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="105" data-theme-id="30641" data-slug-hash="LjpjJo" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="LjpjJo" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/LjpjJo/">LjpjJo</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>select</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<div class="bx-input">
+									<span class="input-wrap">
+										<select title="쿠폰선택" class="select arr-b">
+											<option>선택</option>
+											<option>쿠폰1</option>
+											<option>쿠폰2</option>
+										</select>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="200" data-theme-id="30641" data-slug-hash="prjrLd" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="prjrLd" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/prjrLd/">prjrLd</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>slider</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<span class="slider-wrap pr">
+									<div class="range-area"><div id="slider-range"></div></div>
+									<div class="price-area clearfix">
+										<span class="price1"><input type="text" id="min-price" readonly="readonly" class="no-style color-grey" title="최소 가격"></span>
+										<span class="price2"><input type="text" id="max-price" readonly="readonly" class="no-style color-grey" title="최대 가격"></span>
+									</div>
+								</span>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="gxaxoa" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="gxaxoa" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/gxaxoa/">gxaxoa</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">JS</div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="gxaxoa" data-default-tab="js" data-user="shinyooon" data-embed-version="2" data-pen-title="gxaxoa" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/gxaxoa/">gxaxoa</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>input with button</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<div class="d-tb">
+									<div class="input-area vta-m">
+										<div class="bx-input"><span class="input-wrap"><input type="text" class="no-style pl-grey" title=""></span>
+										</div>
+									</div>
+									<div class="btn-input"><button type="button" class="btn btn-default bg-grey">사용</button></div>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="205" data-theme-id="30641" data-slug-hash="rzOwBO" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="rzOwBO" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/rzOwBO/">rzOwBO</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>동의하기</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<div class="agree-wrap pr">
+									<span class="input-chk"><input type="checkbox" name="" id="agree" class="sr-only" title="" /><label for="agree">취소환불규정에 동의합니다.</label></span>
+									<div class="r-t-area"><a href="" class="color-primary txt-line">약관보기</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="150" data-theme-id="30641" data-slug-hash="prjrQa" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="prjrQa" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/prjrQa/">prjrQa</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+					<h3>수량 up down</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner bg-primary">
+								<div id="div_quantity" class="quantity-wrap">
+	    							<div class="d-flex">
+	    								<span class="minus-area"><button type="button" class="no-style btn-minus"><span class="icon-cm icon-minus">인원 1명 감소</span></button></span>
+	    								<span class="cnt-area txt-center">
+	    									<span id="span_ea" class="txt-cnt">1명</span>
+	    									<input name="ea" type="text" id="ea" class="no-style sr-only s_input_ea" value="1" title="인원 수">
+	    								</span>
+	    								<span class="plus-area"><button type="button" class="no-style btn-plus"><span class="icon-cm icon-plus">인원 1명 증가</span></button></span>
+	    							</div>
+	    						</div>
+							</div>
+							<div class="view-inner">
+								<div id="div_quantity_room" class="quantity-wrap blk">
+									<div class="d-flex">
+										<span class="minus-area"><button type="button" class="no-style btn-minus"><span class="icon-cm icon-minus">인원 1명 감소</span></button></span>
+										<span class="cnt-area txt-center">
+											<span class="txt-cnt">1명</span>
+											<input type="text" id="ea_room" class="no-style sr-only s_input_ea" value="1" title="인원 수">
+										</span>
+										<span class="plus-area"><button type="button" class="no-style btn-plus"><span class="icon-cm icon-plus">인원 1명 증가</span></button></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="prjrQa" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="prjrQa" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/prjrQa/">prjrQa</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">JS</div>
+							<p data-height="300" data-theme-id="30641" data-slug-hash="prjrQa" data-default-tab="js" data-user="shinyooon" data-embed-version="2" data-pen-title="prjrQa" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/prjrQa/">prjrQa</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="table">
+					<h3>테이블</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<div class="tbl-wrap">
+									<table class="tb-rule" summary="취소일기준 환불액과 포인트적립에 관한 규정 표입니다.">
+										<caption>취소환불규정 표</caption>
+										<thead>
+											<tr>
+												<th scope="col">취소일<br /><span class="small">현지 체크인<br />날짜 기준</span></th>
+												<th scope="col">환불액<br /><span class="small">총 숙박요금 기준</span></th>
+												<th scope="col">포인트 적립<br /><span class="small">총 숙박요금 <br />기준</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>30일 전 취소</td>
+												<td>전액환불<br /><span class="small color-d-grey">포인트/쿠폰 <br />결제액 제외</span></td>
+												<td>없음</td>
+											</tr>
+											<tr>
+												<td>29일 ~ <br />4일 전 취소</td>
+												<td>취소수수료<br /><span class="small color-d-grey">총 숙박요금의 10%</span><br />공제후 환불</td>
+												<td>8%</td>
+											</tr>
+											<tr>
+												<td>3일 전 ~ <br />당일 취소 및 <br />No-Show</td>
+												<td>환불불가</td>
+												<td>없음</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="txt color-grey">취소 시 포인트 적립은 포인트/쿠폰 결제액을 제외하고 적립됩니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="490" data-theme-id="30641" data-slug-hash="XameRL" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="XameRL" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/XameRL/">XameRL</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="color">
+					<h3>color</h3>
+					<div class="code-view-area">
+						<div class="view d-flex">
+							<div class="view-inner color">
+								<span class="color-blk">#333 <br />color-blk</span>
+							</div>
+							<div class="view-inner color">
+								<span class="color-grey">#aaa <br />color-grey</span>
+							</div>
+							<div class="view-inner color">
+								<span class="color-l-grey">#ccc <br />color-l-grey</span>
+							</div>
+							<div class="view-inner color">
+								<span class="color-d-grey">#999 <br />color-d-grey</span>
+							</div>
+							<div class="view-inner color">
+								<span class="color-primary">#00c3b <br />color-primary</span>
+							</div>
+							<div class="view-inner color">
+								<span class="color-red">#e93d3d<br />color-red</span>
+							</div>
+							<div class="view-inner color bg-primary">
+								<span class="color-wh">#fff<br />color-wh</span>
+							</div>
+						</div>
+					</div>
+					<h3>background</h3>
+					<div class="code-view-area">
+						<div class="view d-flex">
+							<div class="view-inner color bg-blk">
+								<span class="color-wh">#333 <br />bg-blk </span>
+							</div>
+							<div class="view-inner color bg-grey">
+								<span class="color-wh">#aaa <br />bg-grey</span>
+							</div>
+							<div class="view-inner color bg-l-grey">
+								<span>#f3f3f3 <br />bg-l-grey</span>
+							</div>
+							<div class="view-inner color bg-primary">
+								<span class="color-wh">#00c3bd<br />bg-primary</span>
+							</div>
+							<div class="view-inner color">
+								<span class="color-wh">#333 <br />bg-blk </span>
+							</div>
+							<div class="view-inner color bg-purple">
+								<span class="color-wh">#333 <br />bg-purple</span>
+							</div>
+						</div>
+					</div>
+					<h3>font-family</h3>
+					<div class="code-view-area">
+						<div class="view d-flex">
+							<div class="view-inner color">
+								<span class="font-lato">Lato<br />font-lato</span>
+							</div>
+							<div class="view-inner color">
+								<span class="font-nmj">나눔명조<br />font-nmj</span>
+							</div>
+						</div>
+					</div>
+					<h3>title</h3>
+					<div class="d-flex code-view-area">
+						<div class="view">
+							<div class="view-inner">
+								<h4>- title type1</h4>
+								<div class="tit-wrap"><p class="sub-tit">결제정보</p></div>
+								<div class="tit-wrap"><p class="sub-tit"><span class="icon-cm icon-rightnow">즉시예약</span>즉시예약</p></div>
+							</div>
+							<div class="view-inner">
+								<h4>- title type2</h4>
+								<div class="tit-wrap"><h2 class="sub-tit2">후기를 올려주세요!</h2></div>
+								<div class="tit-wrap"><h2 class="sub-tit2 v2">비밀번호를 입력해주세요</h2></div>
+							</div>
+						</div>
+						<div class="code-area">
+							<div class="tit-code-view">HTML </div>
+							<p data-height="250" data-theme-id="30641" data-slug-hash="NvGXJg" data-default-tab="html" data-user="shinyooon" data-embed-version="2" data-pen-title="NvGXJg" class="codepen">See the Pen <a href="https://codepen.io/shinyooon/pen/NvGXJg/">NvGXJg</a> by YUNAH SHIN (<a href="https://codepen.io/shinyooon">@shinyooon</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- lib -->
+
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	<script src="http://v2.theminda.com/cust/js/bootstrap-slider.js"></script>
+	<script type="text/javascript" src="http://v2.theminda.com/domestic/m/common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://v2.theminda.com/domestic/m/common/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://v2.theminda.com/domestic/m/common/js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="http://v2.theminda.com/domestic/m/common/js/moment.min.js"></script>
+	<script type="text/javascript" src="http://v2.theminda.com/domestic/m/common/js/jquery.comiseo.daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/cust/js/jquery.bxslider.min.js"></script>
+	<script src="http://v2.theminda.com/domestic/m/common/js/ui.js?v=3"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 100000,
+			values: [0, 30000],
+			slide: function( event, ui ) {
+				$("#min-price").val(ui.values[0]+'원');
+				$("#max-price").val(ui.values[1]+'원');
+			}
+			});
+			$( "#min-price").val($( "#slider-range" ).slider( "values", 0 )+'원');
+			$( "#max-price").val($( "#slider-range" ).slider( "values", 1 )+'원');
+
+			$('.btn-switch').click(function(){
+				$(this).toggleClass('on');
+			});
+
+			var quantity1 = new QantityCtrl($('#div_quantity_room'));
+			var quantity2 = new QantityCtrl($('#div_quantity'));
+
+		});
+	</script>
+</body>
+</html>

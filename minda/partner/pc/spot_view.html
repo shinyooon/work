@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master"><!-- [D] 숙소주홈 class="master" -->
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="hd_top">
+			<div class="w1260 clearfix">
+				<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_big.png" alt="MINDA 파트너홈"></a></h1>
+				<nav class="d_iblock nav-center">
+					<ul class="clearfix">
+						<li><a href="" class="active">숙소</a></li>
+						<li><a href="">여행정보</a></li>
+						<li><a href="">여행상품</a></li>
+					</ul>
+				</nav>
+				<div class="hd_side">
+					<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+
+<!-- 페이지시작 -->
+
+<div class="content w1260">
+	<aside class="content_aside">
+		<nav class="snb snb-lg">
+			<ul>
+				<li class="active"><a href="">스팟</a></li>
+				<li><a href="">일정</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- 컨텐츠 영역 -->
+	<div class="content_body admin_room_wrp clearfix">
+		<div class="alertmsg">
+			<div>
+				<span>* 오픈전 상태 입니다.</span>
+				<a href="" class="btn btn-xs btn_border">오픈 요청하기</a>
+			</div>
+			<a href="" class="btn btn-xs bg_grey">수정</a>
+		</div>
+		<!-- 스팟상세타이틀 -->
+		<div class="room_detail_hd room_nearby_spot">
+			<div class="spot_detail">
+				<div class="tmbwrp"><img src="http://v2.theminda.com/manager/common/img/photo.png" alt=""></div>
+				<div class="explain_txt">
+					<span>이탈리아 피렌체</span>
+					<span class="split color_blk">Muse dOrsay</span>
+					<h2>기차역을 박물관으로 활용한 오르세 미술관</h2>
+					<div class="rating_wrp">
+						<span class="starrating ver_org" title="4.25">
+							<span style="width:40.25%">4.25</span>
+						</span>
+						<strong class="color_org">(24)</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 스팟 상세내용 -->
+		<div id="detailContent" class="spot_view_body">
+			<!-- 탭 -->
+			<nav id="tabNav" class="scroll_nav">
+				<ul class="nav nav-justified">
+					<li class="is"><a href="#view1">정보</a></li>
+					<li><a href="#view2">추천이유</a></li>
+					<li><a href="#view3">리뷰(4)</a></li>
+				</ul>
+				<div class="side_btn_wrp">
+					<a href="" class="btn bg_org btn-xs"><i class="icon_cal"></i>포함 일정보기</a>
+					<a href="" class="btn bg_blue btn-xs ml5"><i class="icon_ticket_wh"></i>티켓 구매하기</a>
+					<div class="split">
+						<button type="button" class="no_style btn" data-toggle="button"><i class="icon_like_mint"></i>저장</button><span class="color_mint ml3">( 32 )</span>
+					</div>
+					<div class="dropdown split">
+						<button type="button" class="no_style" data-toggle="dropdown"><i class="icon_link"></i>공유</button>
+						<ul class="dropdown-menu social_lst clearfix">
+							<li><a href="" class="icon_link_face">페이스북에 공유하기</a></li>
+							<li><a href="" class="icon_link_twi">트위터에 공유하기</a></li>
+							<li><a href="" class="icon_link_kakao">카카오톡에 공유하기</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- 정보 -->
+			<section id="view1" class="spot_info">
+				<h3 class="sr-only">스팟 정보</h3>
+				<div class="spot_gellery">
+					<div class="slider_bx">
+						<!-- 큰 이미지 -->
+						<ul class="gallery_big_slider">
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+							<li><img src="_temp/spotslide.jpg" alt=""></li>
+						</ul>
+						<!-- 슬라이드컨트롤 -->
+						<div id="galleryNum" class="gallery_num">
+							<span class="current color_org"></span>/<span class="total"></span>
+						</div>
+						<ul id="bxControls" class="gallery_Controls">
+							<li class="bxprev"></li>
+							<li class="bxnext"></li>
+						</ul>
+					</div>
+					<div class="spot_info_detail">
+						<dl class="dl-horizontal">
+							<dt>영업시간</dt>
+							<dd>오전10 ~ 오후6시</dd>
+							<dt>소요시간</dt>
+							<dd>최소1시간 ~ 최대3시간</dd>
+							<dt>입장료</dt>
+							<dd>&euro;54.00(71,820원)</dd>
+							<dt>주소</dt>
+							<dd>261 Caledonian Road, London N1 1EE<br>- 숙소에서 <i class="icon_cycle">자전거로</i> 5분</dd>
+							<dt>홈페이지</dt>
+							<dd><a href="http://www.museedorsay.com" target="_blank">http://www.museedorsay.com</a></dd>
+						</dl>
+						<a href="" class="btn btn_border_grey"><i class="icon_map_org"></i>지도보기</a>
+					</div>
+				</div>
+			</section>
+			<!-- 추천이유 -->
+			<section id="view2" class="spot_reason">
+				<h3 class="sub_title">추천이유</h3>
+				<div class="view">
+					<header class="viewhd clearfix">
+						<span class="tmbwrp"><img src="_temp/spotmb.jpg" alt=""></span>
+						<div class="spot_view_tit">
+							<a href="" target="_blank">파리 퐁피두 민박&amp;콘도</a>
+							<span class="split"><i class="icon_location"></i> 숙소근처 스팟</span>
+							<span class="date">2016.01.06</span>
+						</div>
+					</header>
+					<div class="viewbody">
+						스팟에 대한 설명글을 출력합니다.스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다
+						<img src="_temp/spot.jpg" alt="">
+						스팟에 대한 설명글을 출력합니다.스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다
+					</div>
+				</div>
+				<div class="spot_reason_bx view">
+					<header class="viewhd clearfix">
+						<span class="tmbwrp"><img src="http://v2.theminda.com/manager/common/img/default.png" alt=""></span>
+						<div class="spot_view_tit">
+							<h4 class="color_org">파리 퐁피두 민박&amp;콘도</h4>
+							<span>파리 퐁피두 민박&amp;콘도</span>
+							<span class="split"><i class="icon_location"></i> 숙소근처 스팟</span>
+							<span class="split"><i class="icon_thumb"></i> 추천스팟</span>
+							<span class="date split">2016.01.06</span>
+						</div>
+					</header>
+					<div class="viewbody">
+						스팟에 대한 설명글을 출력합니다.스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다스팟에 대한 설명글을 출력합니다
+					</div>
+					<a href="" class="more">더보기<i class="caret"></i></a>
+				</div>
+			</section>
+			<!-- 리뷰 -->
+			<section id="view3" class="spot_review">
+				<h3 class="sub_title">리뷰<span class="color_org">(24)</span></h3>
+				<!-- 리뷰리스트 -->
+				<ul class="review_lst">
+					<li class="user_review_wrp">
+						<div class="media">
+							<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+							<div class="meta">
+								<span class="user d_block">rkgud0119</span>
+								<div class="rating_wrp">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+								</div>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">
+							유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+							친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+							관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+							알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+						</p>
+					</li>
+					<li class="user_review_wrp">
+						<div class="media">
+							<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+							<div class="meta">
+								<span class="user d_block">rkgud0119</span>
+								<div class="rating_wrp">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+								</div>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">
+							유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+							친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+							관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+							알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+						</p>
+					</li>
+					<li class="user_review_wrp">
+						<div class="media">
+							<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+							<div class="meta">
+								<span class="user d_block">rkgud0119</span>
+								<div class="rating_wrp">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+								</div>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">
+							유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+							친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+							관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+							알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+						</p>
+					</li>
+					<li class="user_review_wrp">
+						<div class="media">
+							<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+							<div class="meta">
+								<span class="user d_block">rkgud0119</span>
+								<div class="rating_wrp">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+								</div>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">
+							유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+							친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+							관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+							알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+						</p>
+					</li>
+					<li class="user_review_wrp">
+						<div class="media">
+							<span class="tmbwrp"><img src="_temp/pf2.png" alt=""></span>
+							<div class="meta">
+								<span class="user d_block">rkgud0119</span>
+								<div class="rating_wrp">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+								</div>
+								<span class="date">2016.04.06</span>
+							</div>
+						</div>
+						<p class="txt">
+							유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무
+							친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나
+							관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이
+							알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+						</p>
+					</li>
+				</ul>
+				<!-- 페이징 -->
+				<nav class="text-center">
+					<ul class="pagination clearfix">
+						<li class="prev"><a href="">이전페이지목록보기</a></li>
+						<li><a href="">1</a></li>
+						<li><a href="" class="active">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li class="next"><a href="">다음페이지목록보기</a></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+		<a href="" class="split">숙소주 이용약관</a>
+		<a href="" class="split">숙소주 광고이용약관</a>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+
+<script>
+$(function  () {
+	var w=$(window),
+	$body=$('body'),
+	viewBody=$("#detailContent"),
+	spotOther=$("#spotOther");
+
+	w.scroll(function(){
+		var sT=w.scrollTop(),
+		startPos=viewBody.offset().top;
+
+		if(sT>startPos){
+			$body.addClass('view_scroll');
+		} else {
+			$body.removeClass('view_scroll');
+		}
+	});
+
+	// scrollspy : http://getbootstrap.com/javascript/#scrollspy
+	$body.scrollspy({target:'#tabNav', offset:170});
+
+	// lnb
+	$('#tabNav a').click(function(){
+		$(this).parent().addClass('on').siblings().removeClass('on');
+		scrollMove($(this).attr('href'),100);
+		return false;
+	});
+
+	//슬라이드
+	spotViewSlider();
+	function spotViewSlider () {
+		var gallery = $('.gallery_big_slider').bxSlider({
+			sliderWidth: 630,
+			pager: false,
+			nextSelector: '#bxControls .bxnext',
+			prevSelector: '#bxControls .bxprev',
+			infiniteLoop:true,
+			onSliderLoad: function(currentIndex){
+				$('.gallery_big_slider').closest('.slider_bx').addClass('bx_open');
+				$('#galleryNum .current').text(currentIndex + 1);
+			},
+			onSlideBefore: function ($slideElement, oldIndex, newIndex){
+				$('#galleryNum .current').text(newIndex + 1);
+			}
+		});
+		//숙소공개 슬라이드-슬라이드컨트롤
+		var total = gallery.getSlideCount();
+		$("#galleryNum .total").text(total);
+	}
+
+})
+</script>
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 여행사 예약관리 홈 민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="skip--hidden">
+		<a href="#gnb" class="skip__link">Skip to global navigation content</a>
+		<a href="#contents" class="skip__link">Skip to main content</a>
+	</div>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!--// header -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- side__left  -->
+			<? include "inc/lnb.html" ?>
+			<!--// side__left  -->
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="membership">
+					<div class="tit-wrap">
+						<h3 class="tit">멤버십 안내</h3>
+						<p class="membership__toptxt">항상 민다를 이용해 주시는 파트너 회원님들께 더 많은 혜택을 드리고자 멤버십 제도를 운영하고 있습니다.</p>
+					</div>
+					<div class="table membership__list">
+						<div class="table__hd">
+							<div class="table__row">
+								<span class="table__col table__col--1">등급</span>
+								<span class="table__col table__col--2">조건</span>
+								<span class="table__col table__col--3">커미션</span>
+								<span class="table__col table__col--4">할인쿠폰</span>
+							</div>
+						</div>
+						<div class="table__body">
+							<div class="table__row">
+								<span class="table__col table__col--1"><span class="membership__grade-icon grade__icon--master"></span>MASTER</span>
+								<span class="table__col table__col--2">분기별 예약완료 숙박 수 최상위 파트너</span>
+								<span class="table__col table__col--3">5%</span>
+								<span class="table__col table__col--4">5,000원권 10장</span>
+							</div>
+							<div class="table__row">
+								<span class="table__col table__col--1"><span class="membership__grade-icon grade__icon--platinum"></span>PLATINUM</span>
+								<span class="table__col table__col--2">지난달 예약완료 숙박 수 120박 이상</span>
+								<span class="table__col table__col--3">4.5%</span>
+								<span class="table__col table__col--4">5,000원권 10장</span>
+							</div>
+							<div class="table__row">
+								<span class="table__col table__col--1"><span class="membership__grade-icon grade__icon--gold"></span>GOLD</span>
+								<span class="table__col table__col--2">지난달 예약완료 숙박 수 60박 이상</span>
+								<span class="table__col table__col--3">3.5%</span>
+								<span class="table__col table__col--4">5,000원권 3장 / 3,000원권 5장</span>
+							</div>
+							<div class="table__row">
+								<span class="table__col table__col--1"><span class="membership__grade-icon grade__icon--silver"></span>SILVER</span>
+								<span class="table__col table__col--2">지난달 예약완료 숙박 수 30박 이상</span>
+								<span class="table__col table__col--3">3%</span>
+								<span class="table__col table__col--4">3,000원권 5장</span>
+							</div>
+							<div class="table__row">
+								<span class="table__col table__col--1"><span class="membership__grade-icon grade__icon--bronze"></span>BRONZE</span>
+								<span class="table__col table__col--2">조건없음</span>
+								<span class="table__col table__col--3">3% <br />(최초 예약 시 5% 적용)</span>
+								<span class="table__col table__col--4">-</span>
+							</div>
+						</div>
+					</div>
+					<div class="mebership__info">
+						<ul class="mebership__info-list">
+							<li class="mebership__info-item">지난달 예약 실적을 기준으로 멤버십을 구분하여 <span class="mebership__info--point">등급별로 커미션을 적용</span>하고, 예약 시 사용할 수 있는 <span class="mebership__info--point">할인쿠폰을 제공</span>합니다.</li>
+							<li class="mebership__info-item">할인쿠폰은 비즈머니와 함께 사용할 수 있으며, 할인쿠폰의 유효기간은 발급일로부터 <span class="mebership__info--point">1년</span>입니다.</li>
+							<li class="mebership__info-item">멤버십 등급 산출 조건은 <span class="mebership__info--point">예약 완료된 예약 건</span>에 한해서만 적용됩니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--// contents -->
+		</div>
+		<!--// container -->
+		<!-- footer -->
+		<? include "inc/footer.html" ?>
+		<!--// footer -->
+	</div>
+	<!--// wrap -->
+	<!--js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			lnbCtrl.active(3,3);
+		});
+	</script>
+</body>
+</html>

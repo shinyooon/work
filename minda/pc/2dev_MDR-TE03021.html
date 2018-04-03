@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- 인쇄팝업 700px -->
+<div class="pop">
+	<header class="pop_hd clearfix">
+		<h1 class="pull-left"><img src="/cust/img/logo_wh.png" alt="minda"></h1>
+		<div class="pull-right">
+			<button type="button" class="btn btn_wh"><i class="icon_voucher_wh"></i> 바우처 프린트</button>
+			<button type="button" class="btn btn_wh ml5"><i class="icon_mail_wh"></i> 이메일 보내기</button>
+		</div>
+	</header>
+	<div class="pop_cnt">
+		<h2 class="main_title color_dark_grey text-center mb20">바우처</h2>
+		<!-- 예약정보 -->
+		<table class="tb v3 tb_fixed mb30">
+			<caption class="sr-only">주문상세 정보</caption>
+			<colgroup>
+				<col style="width:125px">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">주문번호</th>
+					<td>1458531395965 -  <b class="color_red">예약완료</b><a href="" class="btn btn-xs btn_border_red" style="margin:-3px 0 0 7px">배송조회</a></td>
+				</tr>
+				<tr>
+					<th scope="row">구분</th>
+					<td>투어</td>
+				</tr>
+				<tr>
+					<th scope="row">도시</th>
+					<td>이탈리아 피렌체</td>
+				</tr>
+				<tr>
+					<th scope="row">상품명</th>
+					<td>
+						<div class="color_blk mb10">투어제목입니다. 등록된 투어명 전체 노출. 2줄까지 표시 가능해요가나다라마바다사마아</div>
+						<div class="options">
+							<span class="label label_grey">옵션</span>
+							<span>오전 - 성인1인 투어가가가가가가가가</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사용예정일</th>
+					<td>2016-00-00</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- 결제정보 -->
+		<section class="mb30">
+			<h3 class="sub_title">
+				결제 정보
+			</h3>
+			<table class="tb2">
+				<caption class="sr-only">결제 정보</caption>
+				<colgroup>
+					<col style="width:60%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">결제수단</th>
+						<th class="tb2_border">결제금액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<dl>
+								<dt class="color_blk fw700">신용카드</dt>
+								<dd class="mt5">씨티카드  ( 452125***********, 일시불)</dd>
+								<dd class="color_light_grey mt5">결제 승인일 : 2016-00-00 00:00:00</dd>
+							</dl>
+						</td>
+						<!-- 결제금액 -->
+						<td class="tb2_border pr">
+							<dl class="dl_pay" style="margin-bottom:60px">
+								<dt class="color_blk">합계</dt>
+								<dd class="text-right"><span class="color_red">66,300</span> <small class="color_org">원</small></dd>
+								<dt>수수료</dt>
+								<dd class="text-right"><span class="color_blk">18,000</span> <small>원</small></dd>
+								<dt>할인금액</dt>
+								<dd class="text-right"><span class="color_blk">-9,000</span> <small>원</small></dd>
+							</dl>
+							<div class="total_count fixed_btm clearfix pa20">
+								<h4 class="pull-left">총 결제금액</h4>
+								<div class="price pull-right">
+									<strong class="color_org">1,423,800</strong> 원
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- 취소환불규정 -->
+		<section class="mb30">
+			<h3 class="sr-only">취소환불규정</h3>
+			<p class="mb15 fs18 fw500"><span class="color_mint">로마 자고가 하우스(Jagoga House)</span>의 취소환불규정</p>
+			<div class="room_refund">
+				<table class="tb tb_fixed">
+					<caption class="sr-only">날짜별 환불규정</caption>
+					<thead>
+						<tr>
+							<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+							<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+							<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">30일 전 취소</td>
+							<td class="text-center">전액환불<span class="d_block">(포인트/쿠폰 결제액 제외)</span></td>
+							<td class="text-center">없음</td>
+						</tr>
+						<tr>
+							<td class="text-center">29~22일 전 취소</td>
+							<td class="text-center">70%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">21일~15일 전 취소</td>
+							<td class="text-center">60%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">14일~4일 전 취소</td>
+							<td class="text-center">50%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+							<td class="text-center">40%</td>
+							<td class="text-center">없음</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="mt15">※ 취소시 포인트 적립은 포인트/쿠폰 결제액은 제외하고 적립됩니다.</p>
+			</div>
+		</section>
+		<div class="bx_org sm pa20">
+			<h4 class="mb10 fs16 color_org"><i class="glyphicon glyphicon-info-sign"></i> 주의사항</h4>
+			<ul class="lst_type_dot">
+				<li>티켓이 훼손된 경우 등 상품가치를 상실한 경우에는 환불이 불가능합니다.</li>
+				<li>취소 접수 후 5일이내 상품을 다시 반품해 주셔야 합니다.</li>
+				<li>반품에 따른 배송비는 소비자 부담이며, 발송되었던 모든 상품이 회수되어야 합니다.</li>
+				<li>티켓을 분실할 경우 재발행 되지 않습니다.</li>
+				<li>티켓 유효기간이 20일 미만으로 남았을 경우 환불이 불가능합니다.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

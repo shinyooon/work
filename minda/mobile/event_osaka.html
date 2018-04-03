@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> 공항 픽업서비스 이벤트 |  민다 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<style type="text/css">
+		h2,h3,h4 {line-height:0}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- event-pickup-wrap -->
+		<header id="hd" class="transparent">
+			<h1 class="sr-only">민다</h1>
+			<a class="icon_close_wh hd-l" href="#"></a>
+			<a onclick="showShare();" class="icon_hd_link btn btn_like hd-r"></a>
+		</header>
+		<div id="container" class="clearfix no-hd event_201703">
+			<div class="top-img-wrap">
+				<span id="event_hd" class="scroll-pos"></span>
+				<img src="http://theminda.com/event/img/201703/osaka/img_top.jpg" alt="통큰할인 50%부터 3월 한 달간 여행자들께 드리는 최소 반값 할인! 여행경비 줄인 만큼 더 많이 여행하세요." style="width:100%" />
+				<div class="sort-area">
+					<select class="select-sort-list" title="숙소 정렬">
+						<option>낮은 가격순</option>
+						<option>마감 임박순</option>
+					</select>
+				</div>
+			</div>
+			<div class="room-list-wrap event_osaka pt25">
+				<ul class="list-room row list-room2">
+					<!-- room -->
+					<li data-edate="2017-03-10" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=6711" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/1_58bbac24ea7be.JPG" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk fs12">오사카 난바 오렌지하우스 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 1일 ~ 3월 10일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,500~ </strong>
+									<s>￥9,000~</s>
+									<span class="color_blue pull-right">3인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-22" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=6107" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/5_57af460f69eac.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk fs11">오사카민박 유히가오카 하우스 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 1일 ~ 3월 22일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥5,100~</strong>
+									<s>￥10,200~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-25" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=4577" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_5894133651199.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk fs11">오사카 난바NO.1 하우스 1호점</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 2일 ~ 3월 25일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,750~ </strong>
+									<s>￥9,500~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-31" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=6843" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/1_5877299c15b39.jpg" alt="" style="min-height:130%;top:62%"/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 마사이찌 하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 3일 ~ 3월 31일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,000~</strong>
+									<s>￥8,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-31" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5367" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/4_578752064bb7b.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 보라네 민박 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 3일 ~ 3월 31일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥5,000~</strong>
+									<s>￥10,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-10" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5399" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_57fef639eb1c9.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 영민박</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 10일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥3,750~</strong>
+									<s>￥7,500~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-22" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=7013" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58abe41f83ff9.png" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 블루하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 11일 ~ 3월 22일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥3,500~</strong>
+									<s>￥7,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-13" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=4837" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_57b50d6ab88e8.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk fs11">오사카 자코텔 난바 구로몬점</h4>
+								<span class="d_block type">도미토리</span>
+								<span class="d_block color_blk date">3월 13일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥1,250~</strong>
+									<s>￥2,500~</s>
+									<span class="color_blue pull-right">1인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-16" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=4603" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_588758deaeaa7.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 히토미홈 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 16일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥7,000~</strong>
+									<s>￥14,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-24" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5181" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58b90bf1749d4.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 오하요 민박 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 24일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,000~ </strong>
+									<s>￥8,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-27" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5579" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_5853b6da4961f.png" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 오봉하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 27일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥5,000~</strong>
+									<s>￥10,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-31" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5637" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58327c9569455.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 쉼터 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 31일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥5,000~</strong>
+									<s>￥10,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-31" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5643" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_573b1772df4d8.png" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 쉼터 2호점 </h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 31일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,500~ </strong>
+									<s>￥9,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-31" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=7055" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58b92b6e509f9.JPG" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 prince space 1호점</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 31일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥5,100~</strong>
+									<s>￥10,200~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-31" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5855" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_578832132f19b.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 비투비하우스</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 13일 ~ 3월 31일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥5,000~</strong>
+									<s>￥10,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-14" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=4773" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/4_57bf0c873d038.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 자코텔 한인민박 </h4>
+								<span class="d_block type">개인실, 콘도형</span>
+								<span class="d_block color_blk date">3월 14일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥2,000~ </strong>
+									<s>￥4,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-21" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=2488" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_5722bf277cb07.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">파크in오사카</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 14일 / 21일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,000~</strong>
+									<s>￥8,000~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-15" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=5509" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_5893d8074fe12.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 마루하우스</h4>
+								<span class="d_block type">도미토리, 개인실, 콘도형</span>
+								<span class="d_block color_blk date">3월 15일</span>
+								<span class="price mt5 d_block clearfix">
+									<strong class="color_red">￥1,250~</strong>
+									<s>￥2,500~</s>
+									<span class="color_blue pull-right">1인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-16" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=7021" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58a68b277837e.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 우리집</h4>
+								<span class="d_block type">콘도형</span>
+								<span class="d_block color_blk date">3월 16일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,900~ </strong>
+									<s>￥9,800~</s>
+									<span class="color_blue pull-right">2인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<!-- room -->
+					<li data-edate="2017-03-30" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=3753" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/9_557915558774b.PNG" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 굿모닝하우스</h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3월 16일 / 23일 / 30일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥4,500~ </strong>
+									<s>￥9,000~</s>
+									<span class="color_blue pull-right">4인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+
+					<!-- room -->
+					<li data-edate="2017-03-30" class="col-xs-6"><!-- [D] 판매 종료시 closed클래스 추가 -->
+						<a href="http://www.theminda.com/main/view.php?goodsno=3364" target="_blank">
+							<div class="thumb pr">
+								<img src="http://www.theminda.com/data/goods/0_58622d2454102.jpg" alt=""/>
+							</div>
+							<div class="info">
+								<h4 class="color_blk">오사카 한마당 </h4>
+								<span class="d_block type">개인실</span>
+								<span class="d_block color_blk date">3월 16일 / 23일 / 30일</span>
+								<span class="price mt5 d_block">
+									<strong class="color_red">￥2,000~ </strong>
+									<s>￥4,000~</s>
+									<span class="color_blue pull-right">1인</span>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!-- //wrap -->
+	<!-- modal : share -->
+	<div id="mdShare" class="modal fade share_pop" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="text-center pa10">
+				<div class="mb20">
+					<a class="icon_sns_fb" href="#">페이스북</a>
+					<a class="icon_sns_tw" href="#">트위터</a>
+					<a class="icon_sns_kakao" href="#">카카오톡</a>
+					<a class="icon_sns_url" href="#">URL</a>
+				</div>
+				<button type="button" class="btn btn-default bg_silver btn-block btn-xl" data-dismiss="modal" aria-label="Close">취소</button>
+			</div>
+		</div>
+	</div>
+	<script>
+	jQuery(function($) {
+		var $w = $(window);
+		var event_city_pos =  $('.city-wrap').offset().top;
+		var $pop_event  = $('.event_201703');
+		$w.scroll(function() {
+			var st = $w.scrollTop();
+			if(st>event_city_pos){
+				$pop_event.addClass('fixed');
+			}else{
+				$pop_event.removeClass('fixed');
+			}
+		})
+		$('.pop_event .city_name').on('change', function(){
+			scrollMove('#' + $(this).val(),70);
+			return false;
+		});
+	});
+	function showShare(){
+		$("#mdShare").modal();
+	}
+	</script>
+	<!-- js -->
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

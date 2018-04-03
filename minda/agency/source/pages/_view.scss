@@ -1,0 +1,790 @@
+.view{
+	.sub-tit{
+		font-size:20px;
+		line-height:1em;
+		margin:50px 0 15px 10px;
+		& + .tit-wrap__txt{
+			margin-top:31px;
+		}
+	}
+	.view-rev{
+		&:after{
+			@include clearboth();
+		}
+	}
+	.view-rev__room,.view-review__con{
+		width:694px;
+		float:left;
+		margin-right:24px;
+	}
+	.view-rev__right,.view-review__result{
+		width:301px;
+		float:left;
+	}
+	.view-rev__date-set, .view__tab-list, .view-intro__main, .view-rev__right-wrap, .view-service>.view-info__row>.view-info__col,.view-food__row,.view-review__resultm, .view-rev__right__info{
+		@include box-style(0,0,0,0);
+	}
+	.view-service__item, .view-food__time{
+		font-size:13px;
+		padding-left:17px;
+		position:relative;
+		&:after{
+			content:'';
+			@include icon-chk-spr(10px,7px,0,-50px);
+			position:absolute;
+			top:5px;
+			left:0;
+		}
+		&--disabled{
+			text-decoration:line-through;
+			@include opacity(0.3);
+		}
+	}
+}
+.view-food,.view-spot, .view-rule, .view-charge, .view-etc{
+	.sub-tit{
+		margin-top:30px;
+	}
+}
+.view-partner{
+	margin:10px 0 20px;
+	@include d-table();
+	&__prof{
+		width:89px;
+		img{
+			width:89px;
+			@include border-radius(50%);
+		}
+	}
+	&__desc{
+		padding-left:12px;
+		color:$color__grey;
+	}
+	&__name{
+		@include text($color__grey,30px,$fw__500);
+		display:block;
+		line-height:1em;
+	}
+	&__txt{
+		margin-top:8px;
+	}
+}
+
+.view__tab{
+	height:57px;
+	margin-bottom:20px;
+	&.is-fixed{
+		.view__tab-list{
+			position:fixed;
+			top:0;
+			left:50%;
+			margin-left:-768px;
+			z-index:3002;
+			width:1600px - $popup-right__w - 81px;
+		}
+	}
+	&-list{
+		@include d-table();
+
+	}
+	&-item{
+		position:relative;
+		display:table-cell;
+		&--active{
+			.view__tab-btn{
+				color:$color__green;
+			}
+		}
+		&:not(:last-child):after{
+			content:'';
+			position:absolute;
+			top:20px;
+			bottom:20px;
+			right:0;
+			width:1px;
+			background-color:$color__eee;
+		}
+	}
+	&-btn{
+		display:block;
+		@include text($color__blk,18px,$fw__400);
+		text-align:center;
+		padding:21px 0;
+	}
+}
+
+.view-intro__slide, .roomdetail__slide{
+	overflow:hidden;
+	&-img{
+		min-width:100%;
+		height:auto;
+		@include pos-center();
+	}
+	&-ctrl{
+		@include border-radius(4px);
+		position:absolute;
+		left:5px;
+		bottom:5px;
+		z-index:10;
+		height:40px;
+		background-color:$color__wh;
+		display:table;
+
+		.bx-prev, .bx-next{
+			display:block;
+			width:34px;
+			height:40px;
+			@include sr-only(true);
+			position:relative;
+			z-index:20;
+		}
+	}
+	&-prev,&-next{
+		display:table-cell;
+		text-align:center;
+		vertical-align:middle;
+		position:relative;
+		&:after{
+			content:'';
+			@include icon-cm-spr(5px,10px,-8px,-78px);
+			@include pos-center();
+			z-index:10;
+		}
+	}
+	&-prev{
+		&:after{
+			background-position: -22px -78px;
+		}
+	}
+	&-cnt{
+		display:table-cell;
+		vertical-align:middle;
+		width:36px;
+		text-align:center;
+		letter-spacing:-1px;
+	}
+	&-current{
+		color:$color__blk;
+	}
+
+}
+.view-intro{
+	&__img-wrap, &__spec{
+		float:left;
+	}
+	&__img-wrap{
+		width:694px;
+		position:relative;
+	}
+	&__spec{
+		width:325px;
+	}
+
+	&__slider{
+		height:482px;
+		overflow:hidden;
+	}
+	&__slide{
+		height:482px;
+	}
+}
+.view-intro__spec{
+	&-dl{
+		padding:30px 20px;
+		@include list-dl(85px);
+		&:not(:last-child){
+			@include border-btm();
+		}
+	}
+	.view-intro__review{
+		margin-bottom:0
+	}
+	.view-intro__review-link{
+		font-size:13px;
+		text-decoration:underline;
+		display:inline-block;
+		margin-top:3px;
+		font-weight:300;
+		&--point{
+			color:$color__green;
+		}
+	}
+	.view-intro__spec-tit{
+		@include text($color__aaa,15px);
+	}
+	.view-intro__spec-txt{
+		@include text($color__blk,15px,500);
+		line-height:18px;
+	}
+	.view-intro__spec-room{
+		margin-top:-10px
+	}
+	.view-intro__room-type{
+		line-height:35px;
+	}
+	.view-intro__room-price{
+		color:$color__green;
+		margin-left:3px
+	}
+}
+.view-intro__desc{
+	@include box-style(30px,20px,30px,20px);
+	.view-intro__txt{
+		line-height:24px;
+		color:$color__grey;
+	}
+}
+
+.view-rev{
+	.tit-wrap{
+		.result-txt{
+			margin-bottom: 15px;
+		}
+		.tit__right{
+			bottom:15px;
+		}
+	}
+	.view-rev__room{
+	}
+	.srch-room__img-col{
+        &:first-child{
+            width:161px;
+            height:98px;
+            padding-left:25px;
+        }
+        .srch-room__img-wrap{
+            width:136px;
+            height:98px;
+            position:relative;
+			overflow:hidden;
+		}
+		.srch-room__img{
+			position:absolute;
+			top:50%;
+			left:0;
+			width:136px;
+            min-height:98px;
+            @include tranform(0,-50%);
+		}
+	}
+	.srch-room__type-tit{
+        @include text($color__blk,15px);
+		display:block;
+		margin-bottom:10px;
+	}
+	.srch-room__desc{
+		margin:-3px 0 0 0;
+		font-size:13px;
+		line-height:20px;
+	}
+	.srch-room__spec,.srch-room__facility{
+		@include list-inline-dl();
+		dt:after{
+			content:' : ';
+		}
+		dd{
+			@include list-inline-dot();
+		}
+	}
+	.srch-room__price{
+        padding-top:0;
+        padding-bottom:0;
+		width:138px;
+		text-align:right;
+		.input-wrap__select--2{
+			width:85px;
+			border:0;
+			background-color:$color__f3f3f3;
+			margin-bottom:16px;
+			select{
+				height:31px;
+				font-size:12px;
+			}
+			&:after{
+				@include opacity(0.6);
+			}
+		}
+		&-txt{
+			font-size: 15px;
+			text-align:right;
+		}
+        &-txt2{
+            font-size:12px;
+            line-height:12px;
+            margin-top:6px;
+        }
+		&--point{
+			color:$color__green;
+		}
+	}
+	.srch-room__item--disabled{
+		.srch-room__item__col:before{
+			content:'';
+			display:block;
+			position:absolute;
+			top:0;
+			right:0;
+			left:0;
+			bottom:0;
+			z-index:5;
+		}
+		@include opacity(0.65);
+	}
+    .srch-room__btn-room-cal{
+        width:85px;
+        margin-bottom:8px;
+    }
+
+}
+.view-rev{
+	.view-rev__date-set{
+		overflow:visible;
+	}
+}
+.view-rev__date-set{
+	margin-bottom:30px;
+	padding:15px 5px;
+	.input-group{
+		@include input-group(10px,340px);
+		padding:15px;
+	}
+	.view-rev__checkin-date{
+		width:200px;
+	}
+	.view-rev__day{
+		width:100px;
+	}
+}
+.view-rev__right__info-wrap{
+	padding:20px 15px;
+}
+.view-rev__right__info{
+	margin-top:5px;
+}
+.view-rev__right__info-tit{
+	@include text($color__blk,15px,400);
+	margin:0 0 15px 5px;
+}
+.view-rev__right__info-txt{
+	margin-bottom:10px;
+	.input-wrap{
+		width:100%;
+	}
+}
+.view-rev__right{
+	&__btn-wrap{
+		margin-top:5px;
+	}
+	&__btn{
+		@include border-radius(4px);
+		@include text($color__wh,18px,500);
+		text-align:center;
+		display:block;
+		background-color:$color__green;
+		width:100%;
+		padding:22px 0;
+	}
+
+}
+.view-rev__item,.view-rev__date,.view-rev__price-result{
+	padding:20px;
+	&:after{
+		@include clearboth();
+	}
+	@include border-btm();
+}
+.view-rev__date{
+	background-color:$color__fafafa;
+	font-size:13px;
+	@include border-btm();
+	&-tit{
+		display:block;
+		margin-bottom:7px;
+	}
+	&-num{
+		display:block;
+		@include text($color__blk,15px,500)
+	}
+}
+
+.view-rev__item{
+	@include text($color__blk,18px);
+	&-txt{
+		float:left;
+	}
+	&-tit{
+		@include text($color__blk,18px);
+		display:block;
+	}
+	&-people,.view-rev__price-won{
+		display:block;
+		@include text($color__aaa,13px);
+		margin-top:7px;
+	}
+	&-price{
+		float:right;
+		text-align:right;
+		.view-rev__price-num{
+			display:block;
+			font-weight:500;
+		}
+	}
+	.view-rev__btn-del{
+		display:block;
+		padding:5px 8px;
+		margin-top:6px;
+	}
+	&.view-rev__item-deposit{
+		.view-rev__price-num{
+			color:#42c3bf;
+		}
+	}
+}
+.view-rev__before-msg{
+	background-color:$color__wh;
+	padding:25px 20px 24px;
+	font-size:15px;
+	line-height:25px;
+	&--point{
+		color:$color__green;
+		display:block;
+	}
+}
+.view-rev__before-txt{
+}
+.view-info{
+	clear:both;
+	@include d-table(true);
+	& >.view-info__row{
+		border-spacing:10px 0;
+		margin:0 -10px;
+		width:calc(100% + 20px);
+		&> .view-info__col{
+			vertical-align:top;
+		}
+	}
+}
+.view-service{
+	& >.view-info__row{
+		border-spacing:10px 0;
+		margin:0 -10px;
+		width:calc(100% + 20px);
+		&> .view-info__col{
+			margin:0 5px;
+			vertical-align:top;
+		}
+	}
+	&__tit{
+		background-color:$color__fafafa;
+		@include text($color__blk,15px,400);
+		padding:21px;
+		@include border-btm(#eee);
+	}
+	&__list{
+		padding:22px 10px 30px;
+		vertical-align:top;
+	}
+	&__public{
+		width:50%;
+	}
+	&__item{
+		&:not(:last-child){
+			margin-bottom:24px;
+		}
+	}
+}
+
+.view-food{
+	@include d-table(true);
+	&__list{
+		@include list-dl(60px,24px);
+	}
+	&__desc{
+		@include list-dl(70px,10px);
+		dt{
+			@include text($color__blk,15px,500);
+		}
+		dd{
+			@include list-bar();
+			font-size:13px;
+		}
+	}
+	&__col{
+		padding:20px;
+		vertical-align:top;
+		&:not(:last-child){
+			border-right:1px solid $color__eee;
+		}
+	}
+}
+.view-spot, .view-rule, .view-charge, .view-etc{
+	@include box-style(0px,0px,0px,0px);
+}
+.view-spot__box, .view-rule__box, .view-charge__box, .view-etc__box{
+	z-index:2;
+	padding:20px;
+	font-size:13px;
+	line-height:22px;
+}
+.view-alert{
+	margin:30px 0 0 10px;
+}
+.view-alert__txt{
+	position:relative;
+	padding-left:57px;
+	font-size:13px;
+	line-height:22px;
+	&:after{
+		content:'';
+		display:block;
+		@include icon-cm-spr(32px,32px,-134px,-99px);
+		position:absolute;
+		left:0;
+		top:50%;
+		margin-top:-16px
+	}
+}
+
+.view-map{
+	&__box{
+		@include box-style(10px,10px,10px,10px);
+	}
+	&__info{
+		padding:0 10px;
+		&-tit{
+			margin:30px 0 10px;
+			@include text($color__blk,15px,500);
+		}
+		&-desc{
+			font-size:13px;
+			line-height:22px;
+		}
+	}
+	&__img{
+		margin:30px 10px 0 10px;
+	}
+}
+
+.view-review{
+	.tit-wrap{
+		.tit-wrap__txt{
+			margin-top:54px;
+		}
+	}
+}
+.review__rating-list{
+	@include list-dl(50px,22px);
+	font-size:15px;
+	.review__rating-desc{
+		position:relative;
+		margin-right:40px;
+		height:13px;
+		background-color:$color__eee;
+	}
+	.review__rating-bar{
+		display:inline-block;
+		height:13px;
+		max-width:100%;
+		background-color:$color__green;
+	}
+	.review__rating-num{
+		position:absolute;
+		width:40px;
+		right:-40px;
+		top:-2px;
+		text-align:right;
+	}
+}
+.modal__roomdetail{
+	.modal-dialog{
+		margin-top:70px;
+	}
+	.roomdetail__img-wrap,.roomdetail__slider,.roomdetail__slide{
+		height:333px;
+	}
+	.roomdetail__img-wrap{
+		position:relative;
+	}
+	.modal__roomdetail__info{
+		padding:25px 0 0;
+		color:$color__default;
+	}
+	.roomdetail__name{
+		@include text($color__blk,20px,500);
+		margin-bottom:12px;
+		.roomdetail__roomtype{
+			@include text($color__default,15px);
+			display:block;
+			margin-bottom:2px;
+		}
+	}
+	.roomdetail__sepc-txt{
+		font-size:15px;
+		line-height:24px;
+	}
+	.modal__roomdetail__desc{
+		font-size:13px;
+		margin-top:19px;
+		line-height:20px;
+	}
+}
+.modal__room-calendar{
+    .modal__tit{
+        float:left;
+    }
+}
+.room-calendar__hd-price{
+    float:left;
+    margin:3px 0 0 20px;
+    @include text($color__green,22px);
+    letter-spacing:-1.1px;
+}
+.room-calendar{
+    table{
+        width:100%;
+        table-layout:fixed;
+    }
+    .month{
+        text-align:center;
+        padding:18px 0 0 0;
+    }
+    .select_month{
+        @include text($color__blk,24px,bold);
+    }
+    .room-calendar__icon{
+        @include icon-cm-spr(11px,21px,-21px,-89px);
+        @include sr-only(true);
+        &--next{
+           background-position:-10px -89px;
+        }
+    }
+    .prev,
+    .next{
+        display:block;
+        width:51px;
+        height:30px;
+    }
+    .prev{
+        float:left;
+    }
+    .next{
+        float:right;
+    }
+    .day{
+        @include text($color__default,15px,bold);
+        th{
+            text-align:center;
+            font-weight: $fw__700;
+            padding:48px 0 19px;
+        }
+        th:first-child,
+        th:last-child{
+            color:$color__green;
+        }
+    }
+    tbody{
+        td{
+            border:1px solid $color__f3f3f3;
+            &.is-disabled{
+                background-color:#fcfcfc;
+                .date{
+                    color:$color__ccc;
+                }
+
+            }
+        }
+    }
+    .room-calendar__td-wrap{
+        height:100px;
+        position:relative;
+        padding:3px 11px 11px;
+    }
+    .date{
+        display:inline-block;
+        line-height:1em;
+    }
+    .price{
+        position:absolute;
+        bottom:11px;
+        left:11px;
+        font-size:16px;
+        line-height:18px;
+        span{
+            display:block;
+        }
+    }
+    .price--before{
+        color:#ddd;
+        text-decoration:line-through;
+    }
+    .room{
+        position:absolute;
+        top:7px;
+        right:7px;
+        padding:2px 0;
+        @include border-radius(9px);
+        background-color:$color__f3f3f3;
+        min-width:37px;
+        height:18px;
+        text-align:center;
+        @include text($color__aaa,12px);
+        line-height:1em;
+        letter-spacing:0;
+        .current{
+            color:$color__blk;
+        }
+    }
+    .select{
+        .room-calendar__td-wrap{
+            &:after{
+                content:'';
+                display:block;
+                position:absolute;
+                background-color:rgba(39,200,131,0.2);
+                top:-1px;
+                left:-1px;
+                bottom:-1px;
+                right:-1px;
+            }
+        }
+        &--last{
+            .room-calendar__td-wrap{
+                &:after{
+                    right:50px;
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius:50px;
+                }
+            }
+        }
+    }
+	.disabled{
+		background-color:rgba(238,238,238,0.35);
+		.room-calendar__td-wrap{
+			background:url(#{$path}/img/bg_cal_disabled.png?v=#{$img_version}) 0 0 no-repeat;
+		}
+	}
+}
+.room-calendar__info-list{
+	margin-top:24px;
+	@include list-inline-dl();
+	dt{
+		width:30px;
+		height:30px;
+	}
+	dd{
+		margin:0 20px 0 7px;
+        color:#888;
+		&:last-child{
+			margin-right:0;
+		}
+	}
+	.room-calendar__info-default{
+		border:1px solid #efefef;
+	}
+	.room-calendar__info-disabled{
+		@include icon-cm-spr(30px,30px,-53px,-89px);
+	}
+	.room-calendar__info-selected{
+		background-color:#d4f4e6;
+	}
+}

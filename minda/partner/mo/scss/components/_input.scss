@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+input {
+	outline: none;
+}
+
+@mixin input-group($spacing :5px,$width : 100%){
+	display:table;
+	margin-left:-$spacing;
+	margin-right:-$spacing;
+	border-spacing:$spacing 0;
+	@if $width == 100%{
+		width:calc(#{$width} + #{$spacing*2});
+	}
+	@else {
+		width:$width + $spacing*2;
+	}
+	.input-wrap, .btn-wrap, .input-group__mid, .input-wrap__file{
+		display:table-cell !important;
+		vertical-align:middle;
+	}
+	.input-group__mid{
+		padding:0 1px;
+		text-align:center;
+	}
+}
+
+.input-group{
+	@include input-group();
+}
+
+.input-wrap{
+	@include border(1px, #ddd);
+	@include border-radius(6px);
+	display:inline-block;
+	vertical-align:middle;
+	position:relative;
+	input,select,textarea{
+		border:0;
+		background-color:transparent;
+		@include css3-prefix('box-shadow', none);
+		@include text($color__blk);
+		@include box-sizing();
+		width:100%;
+		display:block;
+		padding:0 13px;
+		-webkit-appearance:none;
+		&:-ms-input-placeholder{
+			color:$color__ccc;
+		}
+		&::-moz-placeholder{
+			color:$color__ccc;
+		}
+		&::-webkit-input-placeholder{
+			color:$color__ccc;
+		}
+	}
+
+	textarea{
+		padding:16px;
+		color:$color__blk;
+		min-height:110px;
+		resize:none;
+	}
+	input[type=text],input[type=password],select{
+		height:38px;
+	}
+	select{
+		padding-left:11px;
+		color:$color__blk;
+	}
+	.input-wrap__btn-del{
+		@include icon-spr(20px,20px,-38px,-40px);
+		position:absolute;
+		right:11px;
+		top:50%;
+		margin-top:-10px;
+	}
+}
+.input-wrap__select{
+	overflow:hidden;
+	&:after{
+		content:'';
+		@include icon-spr(13px,7px,0, -20px);
+		position:absolute;
+		right:11px;
+		top:50%;
+		margin-top:-3px;
+	}
+}
+.input-wrap__chk, .input-wrap__radio{
+	display:inline-block;
+	position:relative;
+	min-width:110px;
+	height:24px;
+	color:$color__default;
+	&:before {
+	}
+	input {
+		display:block;
+		width:23px;
+		height:23px;
+		@include opacity(0);
+		position:absolute;
+		top:-4px;
+		left:0;
+		margin:0;
+	}
+	input + label{
+		display:inline-block;
+		padding-left:30px;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		&:focus{
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+	}
+	input + label:before {
+		content:'';
+		display:inline-block;
+		width:23px;
+		height:23px;
+		@include border(#ccc);
+		@include border-radius(3px);
+		position:absolute;
+		top:-4px;
+		left:0;
+		background-color:$color__wh;
+	}
+}
+
+.input-wrap__chk{
+	input + label:before {
+		@include border-radius(3px);
+	}
+	input:checked + label:before{
+		background-color:$color__primary;
+		border-width:0;
+		@include icon-spr(23px,23px,5px,7px);
+	}
+	&.input-wrap__chk--sm{
+		input + label{
+			padding-left:27px;
+		}
+		input + label:before{
+			width:20px;
+			height:20px;
+		}
+		input:checked + label:before{
+			background-position:4px 7px;
+		}
+	}
+}
+
+.input-wrap__radio{
+	input + label:before {
+		@include border-radius(23px);
+		top:50%;
+		margin-top:-14px;
+	}
+	input:checked + label:before{
+		background-color:$color__primary;
+		border-color:$color__primary;
+	}
+	input + label{
+		line-height:em(20px);
+		color:$color__blk;
+		position:relative;
+	}
+	&--hidden{
+		input{
+			@include sr-only();
+			@include opacity(0);
+			position:absolute;
+		}
+		input + label{
+			color:$color__ccc;
+		}
+		input:checked + label{
+			color:$color__blk;
+		}
+	}
+}
+.input-wrap__textarea{
+	display:block;
+	width:100%;
+}
+.input-wrap__cal{
+	&:after{
+		content:'';
+		//@include icon-cm-spr(19px,19px,-122px,-72px);
+		position:absolute;
+		right: 10px;
+		top:50%;
+		margin-top:-8px;
+	}
+	input{
+		padding-right:40px;
+	}
+	&--2{
+		input{
+			width:50%;
+			float:left;
+		}
+	}
+}
+.input-wrap__file{
+	input[type=file]{
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+		width:100%;
+		z-index:10;
+		@include opacity(0);
+		cursor:pointer;
+	}
+}
+
+
+.login__input-wrap{
+	background-color:$color__f3f3f3;
+	@include border-radius(22px);
+	display:block;
+	height:44px;
+	font-size:em(17px);
+	border-width:0;
+}
+.login__input-wrap{
+	input[type=text],input[type=password]{
+		height:44px;
+		line-height:43px;
+		padding:0 20px;
+	}
+
+}

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="header clearfix">
+			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+			<nav class="hd-nav">
+				<ul class="gnb">
+					<li class="i1"><a href="">한인숙소 <span class="icon_up">up</span></a></li>
+					<li class="i2"><a href="">스팟 <span class="icon_new">new</span></a></li>
+					<li class="i3"><a href="">일정</a></li>
+					<li class="i4"><a href="">투어</a></li>
+					<li class="i5">
+						<a href="">티켓/패스</a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">티켓/패스</a></li>
+								<li><a href="">유레일패스/기차표</a></li>
+								<li><a href="">렌터카</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<script>
+				$(function() {
+					$util = $('.userbx');
+					$util.on('focusin', function() {
+						$(this).addClass('open');
+					});
+
+				})
+				</script>
+			</nav>
+			<div class="hd-r">
+				<ul class="gnb right-gnb clear">
+					<li class="i6">
+						<a href=""><span class="icon_comm">커뮤니티</span></a>
+						<!-- [D] class="active" 추가시 dep2 보여짐 -->
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="">커뮤니티홈</a></li>
+								<li><a href="">톡톡릴레이</a></li>
+								<li><a href="" class="active">구인ㆍ구직</a></li>
+								<li><a href="">사고ㆍ팔고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="i7">
+						<a href=""><span class="icon_discount">할인&amp;이벤트</span></a>
+						<div class="dep2">
+							<ul class="clearfix">
+								<li><a href="" class="active">이벤트</a></li>
+								<li><a href="">민다특가</a></li>
+								<li><a href="">쿠폰존</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form action="." class="srch_wrp">
+					<button type="button" class="icon_srch_gnb">검색</button>
+					<div class="silde-wrap">
+						<div class="input-group" >
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_gnb">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="도시명을 입력하세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="util">
+					<div class="userbx">
+						<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+						<ul class="dropdown-menu">
+							<li><a href="">나의 가이드북</a></li>
+							<li><a href="">나의 숙소예약</a></li>
+							<li><a href="">정보수정</a></li>
+							<li><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dep2_bg"></div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+<!-- 페이지시작 -->
+<div class="content w1100">
+	<!-- loaction -->
+	<div class="bread_crumb text-right">
+		<ul class="d_iblock clearfix">
+			<li><a href="">홈</a></li>
+			<li><a href="">마이페이지</a></li>
+			<li><a href="">투어,티켓/패스 예약내역</a></li>
+			<li>진행중인 예약</li>
+		</ul>
+	</div>
+	<section class="mypage">
+		<h2 class="center_title">투어,티켓/패스 예약내역</h2>
+		<!-- 탭 -->
+		<ul class="basic_step2 tb_fixed">
+			<li class="active"><a href="">진행중인 예약</a></li>
+			<li><a href="">지난 예약</a></li>
+			<li><a href="">환불 진행 상황</a></li>
+		</ul>
+		<!-- 주문상세정보 -->
+		<section>
+			<h3 class="sub_title d_iblock">주문상세 정보</h3>
+			<div class="side_wrp">
+				<button type="button" class="btn btn_border_grey"><i class="icon_cancel"></i>예약취소</button>
+				<button type="button" class="btn btn_border_mint"><i class="icon_print_mint"></i>바우처 프린트</button>
+			</div>
+			<table class="tb v3 tb_fixed">
+				<caption class="sr-only">주문상세 정보</caption>
+				<colgroup>
+					<col style="width:165px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">주문번호</th>
+						<td>1458531395965 -  <b class="color_red">예약완료</b><a href="" class="btn btn-xs btn_border_red" style="margin:-3px 0 0 7px">배송조회</a></td>
+					</tr>
+					<tr>
+						<th scope="row">구분</th>
+						<td>투어</td>
+					</tr>
+					<tr>
+						<th scope="row">도시</th>
+						<td>이탈리아 피렌체</td>
+					</tr>
+					<tr>
+						<th scope="row">상품명</th>
+						<td>
+							<div class="color_blk mb10">투어제목입니다. 등록된 투어명 전체 노출. 2줄까지 표시 가능해요가나다라마바다사마아</div>
+							<div class="options">
+								<span class="label label_grey">옵션</span>
+								<span>오전 - 성인1인 투어가가가가가가가가</span>
+								<span>오전 - 성인1인 투어가가가가가가가가</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">사용예정일</th>
+						<td>2016-00-00</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- 결제정보 -->
+		<section>
+			<h3 class="sub_title">결제정보</h3>
+			<table class="tb2 tb_pay_total tb_fixed">
+				<caption class="sr-only">결제정보</caption>
+				<colgroup>
+					<col span="3">
+					<col style="width:375px">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">주문</th>
+						<th scope="col">수수료</th>
+						<th scope="col">할인금액</th>
+						<th scope="col" class="tb2_border">결제금액</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="3">
+							<dl class="dl-horizontal total_price_account">
+								<dt class="color_blk fw500">실시간 계좌이체</dt>
+								<dd>
+									우리은행 1005-521-2525525(예금주 : 홍길동)
+									<span class="d_block color_light_grey mt3">결제일 : 2016-00-00 11:48:56</span>
+								</dd>
+							</dl>
+						</td>
+						<td>
+							<dl class="dl-horizontal total_count">
+								<dt class="color_wh">총 결제금액</dt>
+								<dd class="text-right"><b class="color_org">1,423,800</b>원</dd>
+							</dl>
+						</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<!-- 주문 -->
+						<td>
+							<dl class="dl_pay">
+								<dt>합계</dt>
+								<dd class="text-right">1,409,400<small>원</small></dd>
+								<dt>배송비</dt>
+								<dd class="text-right">5,400<small>원</small></dd>
+								<dt class="color_blk fw500 btm_total">총합계</dt>
+								<dd class="text-right color_red btm_total">1,414,800<small>원</small></dd>
+							</dl>
+						</td>
+						<!-- 수수료 -->
+						<td>
+							<dl class="dl_pay">
+								<dt>예약 수수료</dt>
+								<dd class="text-right">9,400<small>원</small></dd>
+								<dt>발권 및 처리 수수료</dt>
+								<dd class="text-right">9,400<small>원</small></dd>
+								<dt class="color_blk fw500 btm_total">총합계</dt>
+								<dd class="text-right color_red btm_total">18,800<small>원</small></dd>
+							</dl>
+						</td>
+						<!-- 할인금액 -->
+						<td>
+							<dl class="dl_pay">
+								<dt>포인트할인</dt>
+								<dd class="text-right">-3,000<small>P</small></dd>
+								<dt>쿠폰할인</dt>
+								<dd class="text-right">-3,000<small>원</small></dd>
+								<dt>캐시할인</dt>
+								<dd class="text-right">-3,000<small>원</small></dd>
+								<dt class="color_blk fw500 btm_total">총합계</dt>
+								<dd class="text-right color_red btm_total">18,800<small>원</small></dd>
+							</dl>
+						</td>
+						<!-- 결제금액 -->
+						<td class="tb2_border pr">
+							<dl class="dl_pay">
+								<dt class="color_blk">예약금 (10%)쿠폰</dt>
+								<dd class="text-right"><span class="color_red">66,300</span> <small class="color_org">원</small></dd>
+								<dt>포인트할인</dt>
+								<dd class="text-right"><span class="color_blk">-3,000</span> <small>P</small></dd>
+								<dt>쿠폰 할인</dt>
+								<dd class="text-right"><span class="color_blk">-3,000</span> <small>원</small></dd>
+								<dt>캐시사용</dt>
+								<dd class="text-right"><span class="color_blk">-2,000</span> <small>원</small></dd>
+							</dl>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- 배송지정보 -->
+		<section>
+			<h3 class="sub_title d_iblock">배송지 정보</h3>
+			<table class="tb tb_delivery tb_fixed">
+				<caption class="sr-only">배송지 정보</caption>
+				<colgroup>
+					<col style="width:165px">
+					<col span="2">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">수령인</th>
+						<td>홍길동</td>
+						<td rowspan="4">
+							<strong class="fs20 fw400 color_blk">주문자 정보</strong>
+							<dl class="dl_room_info mt15">
+								<dt class="icon_user_grey">주문자이름</dt>
+								<dd>홍길동</dd>
+								<dt class="icon_mail">메일</dt>
+								<dd>korczak@minbackdanawa.com</dd>
+								<dt class="mt0 mr20">전화번호</dt>
+								<dd>100-0000-0000</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">연락척</th>
+						<td>전화 : 02-0000-0000,  핸드폰 : 010-2222-0000</td>
+					</tr>
+					<tr>
+						<th scope="row">배송지</th>
+						<td>(우)07021 서울시 종로구 율곡로 174 창경빌딩 5층</td>
+					</tr>
+					<tr>
+						<th scope="row">배송요청사항(메모)</th>
+						<td>경비실에 맡겨주세요~</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- 취소활불규정 -->
+		<section>
+			<h3 class="sub_title">취소환불규정</h3>
+			<p class="mb15 fs20 fw500"><span class="color_mint">로마 자고가 하우스(Jagoga House)</span>의 취소환불규정</p>
+			<!-- 취소환불규정 -->
+			<div class="room_refund">
+				<table class="tb tb_fixed">
+					<caption class="sr-only">날짜별 환불규정</caption>
+					<thead>
+						<tr>
+							<th scope="col" class="fw500">취소일<span class="d_block color_grey">현지 체크인 날짜 기준</span></th>
+							<th scope="col" class="fw500">환불액<span class="d_block color_grey">총 숙박요금 기준</span></th>
+							<th scope="col" class="fw500">포인트 적립<span class="d_block color_grey">총 숙박요금 기준</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">30일 전 취소</td>
+							<td class="text-center">전액환불<span class="d_block">(포인트/쿠폰 결제액 제외)</span></td>
+							<td class="text-center">없음</td>
+						</tr>
+						<tr>
+							<td class="text-center">29~22일 전 취소</td>
+							<td class="text-center">70%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">21일~15일 전 취소</td>
+							<td class="text-center">60%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">14일~4일 전 취소</td>
+							<td class="text-center">50%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">3일~당일취소 및 NO-SHOW</td>
+							<td class="text-center">40%</td>
+							<td class="text-center">없음</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="mt15">※ 취소시 포인트 적립은 포인트/쿠폰 결제액은 제외하고 적립됩니다.</p>
+			</div>
+			<div class="mt30">
+				<strong class="minda_term">민박다나와 취소환불규정</strong><a href="" class="btn btn-xs btn_border_grey">규정보기</a>
+			</div>
+		</section>
+		<div class="text-center pa40">
+		<button type="button" class="btn btn-lg bg_org"><i class="icon_list"></i> 목록으로</button>
+	</div>
+	</section>
+</div>
+
+<!-- //페이지시작 -->
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<div class="w1100 footer">
+			<div class="ft_top">
+				<strong class="font_lato color_wh mb3">information</strong>
+				<div class="ft_info_txt fs13">
+					<span>(주)사막</span>
+					<span>대표 : 김윤회</span>
+					<span>사업자등록번호 : 010-86-28116</span>
+					<span>관광사업등록증 : 제2014-000025호</span>
+					<span>통신판매업신고 : 제 01-5470호</span>
+				</div>
+				<div class="ft_info_txt fs13">
+					<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+					<span>TEL : 1661-2892</span>
+					<span>FAX : 02-722-3478</span>
+					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
+					<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무</span>
+				</div>
+				<ul class="about_lst clearfix">
+					<li><a href="" target="_blank" class="icon_face">민다페이스북보기</a></li>
+					<li><a href="" target="_blank" class="icon_blog">민다블로그보기</a></li>
+					<li><a href="" class="btn btn_border_grey">고객센터 문의</a></li>
+				</ul>
+			</div>
+			<div class="ft_btm clearfix">
+				<ul class="fnb pull-left clearfix">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">민박등록신청</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="" class="color_org">개인정보취급방침</a></li>
+					<li><a href="">민박다나와 취소환불규정</a></li>
+					<li><a href="">사이트맵</a></li>
+					<li><a href="">고객센터</a></li>
+					<li><a href="">공지사항</a></li>
+				</ul>
+				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

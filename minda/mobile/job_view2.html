@@ -1,0 +1,106 @@
+<? include "inc/top.html" ?>
+<!-- header -->
+<header id="hd" class="header " style="position: absolute;">
+    <div class="header__left">
+        <a id="btn_top_back" class="icon_hd_back"><span class="header__icon-back"></span></a> </div>
+    <h1 class="header__tit"><a href="javascript:;" class="header__tit-link">구인ㆍ구직</a></h1>
+    <div class="header__right">
+        <a onclick="$('#mdShare').modal();" class="icon_hd_link"><span class="header__icon-share">공유하기</span></a>
+    </div>
+    <!-- 검색 바 -->
+</header>
+<!-- //header -->
+<!-- #container -->
+<div id="container" class="clearfix has-fnb">
+    <!-- 페이지 시작-->
+    <!-- community-view__wrap-->
+    <div class="community-view__wrap">
+        <!-- community-view -->
+        <div class="community-view">
+            <strong class="community-list__tit"><span class="community-list__type community-list__type--point">[구인] </span>앤티크하우스 베네치아에서 스탭,직원을 앤티크하우스 베네치아에서 스탭,직원을</strong>
+            <div class="community-list__btm">
+                <ul class="community-list__info">
+                    <li><span class="community-list__partner">러브베네치아러브베네치아러브베네치아러브베네치아러브베네치아</span></li>
+                    <li><span class="community-list__date">2018.01.04</span></li>
+                </ul>
+                <ul class="community-list__cnt">
+                    <li><span class="community-list__comment">댓글 <span class="community-list__cnt-num">999</span></span></li>
+                    <li><span class="community-list__view">조회 <span class="community-list__cnt-num">999</span></span></li>
+                </ul>
+            </div>
+            <div class="community-view__content">
+                <p class="community-view__content-txt">
+                    런던에서 근무하실 분 모집합니다. 런던에서 근무하실 분
+                    모집합니다. 런던에서 근무하실 분 모집합니다. 런던에서
+                    근무하실 분 모집합니다. 런던에서 근무하실 분 모집
+                    합니다. 런던에서 근무하실 분 모집합니다. 런던에서
+                    근무하실 분 모집합니다.
+                </p>
+            </div>
+        </div>
+        <!--// community-view -->
+        <!-- 댓글 comment -->
+        <div class="commnet">
+            <form class="comment-form">
+                <div class="commnet-form__top">
+                    <span class="comment-form__cnt">댓글 0</span>
+                </div>
+                <div class="comment-form__input input-group">
+                    <span class="input__wrap">
+                        <textarea title="댓글 입력"  placeholder="댓글을 입력해주세요."></textarea>
+                    </span>
+                    <span class="btn-wrap">
+                        <button type="button" class="comment-form__btn-write">등록</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <!--// 댓글 comment -->
+        <!-- community-view__btm-btn -->
+        <div class="btn__group community-view__btm-btn">
+            <div class="btn-wrap"><a href="" class="community-view__btn-del">삭제</a></div>
+            <div class="btn-wrap"><a href="" class="community-view__btn-eidt">수정</a></div>
+            <div class="btn-wrap"><a href="" class="community-view__btn-index">목록</a></div>
+        </div>
+        <!--// community-view__btm-btn -->
+    </div>
+    <!--// community-view__wrap-->
+</div>
+<!-- //container -->
+<!-- fixed button-->
+<div id="quick">
+    <a class="icon_top" href="#wrap" onClick="scrollMove();return false;">Top</a>
+</div>
+</div>
+<!-- //wrap -->
+<div id="mdShare" class="modal fade share_pop">
+    <div class="modal-dialog">
+        <div class="share-pop__icon-wrap">
+            <a id="share_facebook" class="icon_sns_fb" href="javascript:share('facebook');">페이스북</a>
+            <a id="share_twitter" class="icon_sns_tw" href="javascript:share('twitter');">트위터</a>
+            <a id="share_kakao" class="icon_sns_kakao" href="javascript:share('kakao');">카카오톡</a>
+
+            <a id="share_url" class="icon_sns_url" data-clipboard-text="http://localhost/tg/view.php?itemno=141" href="javascript:share('url');">URL</a>
+        </div>
+        <button id="share_cancel_btn" type="button" class="pop-share__btn-cancel" data-dismiss="modal" aria-label="Close">취소</button>
+    </div>
+</div>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+<script src="/m/1.0/common/js/common.js"></script>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $(document).on('click', '.bx-slide__btn' ,function(){
+            $(this).closest('.bx-slide__wrap').toggleClass('is-open');
+        })
+        //퍼블리싱 확인을 위한 스크립트 개발시 삭제
+        $('.nav-btm li').removeClass('active');
+        $('.nav-btm li').eq(4).addClass('active');
+    })
+</script>
+
+</html>

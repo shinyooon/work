@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body class="page_back bg_wh">
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<h1 class="ellipsis">2017 BEST STAY 선정숙소</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+	<!-- #container -->
+	<div id="container" class="clearfix">
+		<nav>
+			<ul class="tab6">
+				<li class="active"><a data-toggle="tab" href="#awards_rev" class="d_block">예약 부문</a></li><!-- 활성화시 active클래스 추가 -->
+                <li><a data-toggle="tab" href="#awards_facility" class="d_block">시설 부문</a></li>
+                <li><a data-toggle="tab" href="#awards_staff" class="d_block">스탭 부문</a></li>
+            </ul>
+		</nav>
+		<!-- 페이지 시작-->
+        <!-- awards -->
+		<div class="awards">
+            <div class="tab-content awards__tab-content">
+                <!-- 예약부분 우수숙소 -->
+                <div id="awards_rev" class="tab-pane fade in active">
+                    <!-- awards__notice-->
+                    <div class="dropdown awards__notice">
+                        <button class="dropdown-toggle no_style awards__notice-btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">선정기준 & 참고사항</button>
+                        <div class="awards__notice-contents">
+                            <dl>
+                                <dt class="awards__notice-tit">선정기준</dt>
+                                <dd class="awards__notice-txt">20개 이상의 숙소가 있는 도시에서 민다를 통한<br />예약확정 건이 가장 많은 상위 3개 숙소<br />(2017.01.01 ~ 2017.10.31 기준)</dd>
+                                <dt class="awards__notice-tit">참고사항 </dt>
+                                <dd class="awards__notice-txt">예약 통계를 기준으로 선정 되었으며,<br />숙소 운영과 관련하여 민다가 보증하지 않습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--// awards__notice-->
+                    <!-- awards_nation -->
+                    <div class="awards_nation">
+                        <ul class="awards_citylist">
+                            <li class="awards_city-name"><a href="#awards_rev_001001001">런던</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001002001">파리</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001003001">로마</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001003003">피렌체</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001003002">베네치아</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001004001">바르셀로나</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001004002">마드리드</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001011001">프라하</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_001005002">프랑크프루트</a></li>
+                            <li class="awards_city-name active"><a href="#awards_rev_003002001">도쿄</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_003002002">오사카</a></li>
+                            <li class="awards_city-name active"><a href="#awards_rev_005001001">뉴욕</a></li>
+                            <li class="awards_city-name"><a href="#awards_rev_005001002">LA</a></li>
+                        </ul>
+                    </div>
+                    <!--// awards_nation -->
+                    <!-- awards__city -->
+                    <div class="awards__city" id="awards_rev_001001001">
+                        <h4 class="awards__city-tit">런던</h4>
+                        <!-- awrads__list-->
+                        <ul class="awards__list">
+                            <li class="awards__room awards__room--1st"><!-- [D] 1위 숙소일 때에는 awards__room--1st가 추가됨 -->
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_5990d242bfc6f.png" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <!--
+                                                [D] 메달 클래스 규칙 (추가되는 클래스)
+                                                예약 부문 일 때 awards__medal--rev
+                                                스탭 부문 일 때 awards__medal--staff
+                                                시설 부문 일 때 awards__medal--facility
+                                            -->
+                                            <span class="awards__medal awards__medal--rev">
+                                                <span class="awards__medal-num sr-only">1</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="ellipsis awards__room-tit">런던 민박 크림하우스</p>
+                                            <p class="awards__room-intro twoline">안녕하세요? 런던 민박 크림하우스 입니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_5a0d4b20033ba.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                <span class="awards__medal awards__medal--rev">
+                                                    <span class="awards__medal-num sr-only">2</span>
+                                                </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">런해뜨(런던 해뜨는민박)</p>
+                                            <p class="awards__room-intro twoline">수용인원 10명 고객님들의 편안한 휴식을 위해 소수 인원만 받습니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__room-link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_58caddb513932.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                        <span class="awards__medal awards__medal--rev">
+                                                            <span class="awards__medal-num sr-only">3</span>
+                                                        </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">런던빅토리아펜션(1.2호점)</p>
+                                            <p class="awards__room-intro twoline">여행경비절감과 여유로운 여행을 할 수 있는 빅토리아 펜션입니다.^^</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--// awrads__list-->
+                    </div>
+                    <!--// awards__city -->
+                    <!-- awards__city -->
+                    <div class="awards__city" id="awards_rev_001002001">
+                        <h4 class="awards__city-tit">파리</h4>
+                        <!-- awrads__list-->
+                        <ul class="awards__list">
+                            <li class="awards__room awards__room--1st">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_577b536c6436c.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <span class="awards__medal awards__medal--rev">
+                                                <span class="awards__medal-num sr-only">1</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="ellipsis awards__room-tit">파리 퐁피두 민박</p>
+                                            <p class="awards__room-intro twoline">주요관광지와 한방에! 즐거운여행 시작! 파리 퐁피두민박과 함께~</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_58e3b95510d95.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <span class="awards__medal awards__medal--rev">
+                                                <span class="awards__medal-num sr-only">2</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">파리 로즈민박</p>
+                                            <p class="awards__room-intro twoline">넓은 공간으로 관광 후 편안한 휴식을책임집니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__room-link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_57ff31bc315ce.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                        <span class="awards__medal awards__medal--rev">
+                                                            <span class="awards__medal-num sr-only">3</span>
+                                                        </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">파리 해바라기 민박</p>
+                                            <p class="awards__room-intro twoline">푸짐하고 맛있는 한식제공으로 든든한여행만족 100% !</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--// awrads__list-->
+                    </div>
+                    <!--// awards__city -->
+                    <div class="awards__city" id="awards_rev_001003001">
+                        <h4 class="awards__city-tit">로마</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_001003003">
+                        <h4 class="awards__city-tit">피렌체</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_001003002">
+                        <h4 class="awards__city-tit">베네치아</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_001004001">
+                        <h4 class="awards__city-tit">바르셀로나</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_001004002">
+                        <h4 class="awards__city-tit">마드리드</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_001011001">
+                        <h4 class="awards__city-tit">프라하</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_001005002">
+                        <h4 class="awards__city-tit">프랑크프루트</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_003002001">
+                        <h4 class="awards__city-tit">도쿄</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_003002002">
+                        <h4 class="awards__city-tit">오사카</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_005001001">
+                        <h4 class="awards__city-tit">뉴욕</h4>
+                    </div>
+                    <div class="awards__city" id="awards_rev_005001002">
+                        <h4 class="awards__city-tit">LA</h4>
+                    </div>
+                </div>
+                <!-- 시설부분 우수숙소 -->
+                <div id="awards_facility" class="tab-pane fade">
+                    <!-- awards__notice-->
+                    <div class="dropdown awards__notice">
+                        <button class="dropdown-toggle no_style awards__notice-btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">선정기준 & 참고사항</button>
+                        <div class="awards__notice-contents">
+                            <dl>
+                                <dt class="awards__notice-tit">선정기준</dt>
+                                <dd class="awards__notice-txt">20개 이상의 숙소가 있는 도시의 숙소 중에서<br /> 여행자 10명 이상이 남긴 시설 부문 평점 상위 3개<br />숙소 (2017.01.01 ~2017.10.31 기준)</dd>
+                                <dt class="awards__notice-tit">참고사항 </dt>
+                                <dd class="awards__notice-txt">여행자의 리뷰 평점을 기준으로 선정되었으며,<br /> 숙소 운영과 관련하여 민다가 보증하지 않습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--// awards__notice-->
+                    <!-- awards_nation -->
+                    <div class="awards_nation">
+                        <ul class="awards_citylist">
+                            <li class="awards_city-name"><a href="#awards_facility_001001001">런던</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001002001">파리</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001003001">로마</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001003003">피렌체</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001003002">베네치아</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001004001">바르셀로나</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001004002">마드리드</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001011001">프라하</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_001005002">프랑크프루트</a></li>
+                            <li class="awards_city-name active"><a href="#awards_facility_003002001">도쿄</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_003002002">오사카</a></li>
+                            <li class="awards_city-name active"><a href="#awards_facility_005001001">뉴욕</a></li>
+                            <li class="awards_city-name"><a href="#awards_facility_005001002">LA</a></li>
+                        </ul>
+                    </div>
+                    <!--// awards_nation -->
+                    <!-- awards__city -->
+                    <div class="awards__city" id="awards_facility_001001001">
+                        <h4 class="awards__city-tit">런던</h4>
+                        <!-- awrads__list-->
+                        <ul class="awards__list">
+                            <li class="awards__room awards__room--1st"><!-- [D] 1위 숙소일 때에는 awards__room--1st가 추가됨 -->
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_5990d242bfc6f.png" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <!--
+                                                [D] 메달 클래스 규칙 (추가되는 클래스)
+                                                예약 부문 일 때 awards__medal--rev
+                                                스탭 부문 일 때 awards__medal--staff
+                                                시설 부문 일 때 awards__medal--facility
+                                            -->
+                                            <span class="awards__medal awards__medal--facility">
+                                                <span class="awards__medal-num sr-only">1</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="ellipsis awards__room-tit">런던 민박 크림하우스</p>
+                                            <p class="awards__room-intro twoline">안녕하세요? 런던 민박 크림하우스 입니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_5a0d4b20033ba.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                <span class="awards__medal awards__medal--facility">
+                                                    <span class="awards__medal-num sr-only">2</span>
+                                                </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">런해뜨(런던 해뜨는민박)</p>
+                                            <p class="awards__room-intro twoline">수용인원 10명 고객님들의 편안한 휴식을 위해 소수 인원만 받습니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__room-link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_58caddb513932.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                        <span class="awards__medal awards__medal--facility">
+                                                            <span class="awards__medal-num sr-only">3</span>
+                                                        </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">런던빅토리아펜션(1.2호점)</p>
+                                            <p class="awards__room-intro twoline">여행경비절감과 여유로운 여행을 할 수 있는 빅토리아 펜션입니다.^^</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--// awrads__list-->
+                    </div>
+                    <!--// awards__city -->
+                    <!-- awards__city -->
+                    <div class="awards__city" id="awards_facility_001002001">
+                        <h4 class="awards__city-tit">파리</h4>
+                        <!-- awrads__list-->
+                        <ul class="awards__list">
+                            <li class="awards__room awards__room--1st">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_577b536c6436c.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <span class="awards__medal awards__medal--facility">
+                                                <span class="awards__medal-num sr-only">1</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="ellipsis awards__room-tit">파리 퐁피두 민박</p>
+                                            <p class="awards__room-intro twoline">주요관광지와 한방에! 즐거운여행 시작! 파리 퐁피두민박과 함께~</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_58e3b95510d95.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <span class="awards__medal awards__medal--facility">
+                                                <span class="awards__medal-num sr-only">2</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">파리 로즈민박</p>
+                                            <p class="awards__room-intro twoline">넓은 공간으로 관광 후 편안한 휴식을책임집니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__room-link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_57ff31bc315ce.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                        <span class="awards__medal awards__medal--facility">
+                                                            <span class="awards__medal-num sr-only">3</span>
+                                                        </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">파리 해바라기 민박</p>
+                                            <p class="awards__room-intro twoline">푸짐하고 맛있는 한식제공으로 든든한여행만족 100% !</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--// awrads__list-->
+                    </div>
+                    <!--// awards__city -->
+                    <div class="awards__city" id="awards_facility_001003001">
+                        <h4 class="awards__city-tit">로마</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_001003003">
+                        <h4 class="awards__city-tit">피렌체</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_001003002">
+                        <h4 class="awards__city-tit">베네치아</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_001004001">
+                        <h4 class="awards__city-tit">바르셀로나</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_001004002">
+                        <h4 class="awards__city-tit">마드리드</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_001011001">
+                        <h4 class="awards__city-tit">프라하</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_001005002">
+                        <h4 class="awards__city-tit">프랑크프루트</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_003002001">
+                        <h4 class="awards__city-tit">도쿄</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_003002002">
+                        <h4 class="awards__city-tit">오사카</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_005001001">
+                        <h4 class="awards__city-tit">뉴욕</h4>
+                    </div>
+                    <div class="awards__city" id="awards_facility_005001002">
+                        <h4 class="awards__city-tit">LA</h4>
+                    </div>
+                </div>
+                <!-- 스탭부분 우수숙소 -->
+                <div id="awards_staff" class="tab-pane fade">
+                    <!-- awards__notice-->
+                    <div class="dropdown awards__notice">
+                        <button class="dropdown-toggle no_style awards__notice-btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">선정기준 & 참고사항</button>
+                        <div class="awards__notice-contents">
+                            <dl>
+                                <dt class="awards__notice-tit">선정기준</dt>
+                                <dd class="awards__notice-txt">20개 이상의 숙소가 있는 도시의 숙소 중에서<br /> 여행자 10명 이상이 남긴 스탭 부문 평점 상위 3개<br />숙소(2017.01.01 ~2017.10.31 기준)</dd>
+                                <dt class="awards__notice-tit">참고사항 </dt>
+                                <dd class="awards__notice-txt">여행자의 리뷰 평점을 기준으로 선정되었으며,<br /> 숙소 운영과 관련하여 민다가 보증하지 않습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--// awards__notice-->
+                    <!-- awards_nation -->
+                    <div class="awards_nation">
+                        <ul class="awards_citylist">
+                            <li class="awards_city-name"><a href="#awards_staff_001001001">런던</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001002001">파리</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001003001">로마</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001003003">피렌체</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001003002">베네치아</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001004001">바르셀로나</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001004002">마드리드</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001011001">프라하</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_001005002">프랑크프루트</a></li>
+                            <li class="awards_city-name active"><a href="#awards_staff_003002001">도쿄</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_003002002">오사카</a></li>
+                            <li class="awards_city-name active"><a href="#awards_staff_005001001">뉴욕</a></li>
+                            <li class="awards_city-name"><a href="#awards_staff_005001002">LA</a></li>
+                        </ul>
+                    </div>
+                    <!--// awards_nation -->
+                    <!-- awards__city -->
+                    <div class="awards__city" id="awards_staff_001001001">
+                        <h4 class="awards__city-tit">런던</h4>
+                        <!-- awrads__list-->
+                        <ul class="awards__list">
+                            <li class="awards__room awards__room--1st"><!-- [D] 1위 숙소일 때에는 awards__room--1st가 추가됨 -->
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_5990d242bfc6f.png" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <!--
+                                                [D] 메달 클래스 규칙 (추가되는 클래스)
+                                                예약 부문 일 때 awards__medal--rev
+                                                스탭 부문 일 때 awards__medal--staff
+                                                시설 부문 일 때 awards__medal--facility
+                                            -->
+                                            <span class="awards__medal awards__medal--staff">
+                                                <span class="awards__medal-num sr-only">1</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="ellipsis awards__room-tit">런던 민박 크림하우스</p>
+                                            <p class="awards__room-intro twoline">안녕하세요? 런던 민박 크림하우스 입니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_5a0d4b20033ba.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                <span class="awards__medal awards__medal--staff">
+                                                    <span class="awards__medal-num sr-only">2</span>
+                                                </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">런해뜨(런던 해뜨는민박)</p>
+                                            <p class="awards__room-intro twoline">수용인원 10명 고객님들의 편안한 휴식을 위해 소수 인원만 받습니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__room-link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_58caddb513932.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                        <span class="awards__medal awards__medal--staff">
+                                                            <span class="awards__medal-num sr-only">3</span>
+                                                        </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">런던빅토리아펜션(1.2호점)</p>
+                                            <p class="awards__room-intro twoline">여행경비절감과 여유로운 여행을 할 수 있는 빅토리아 펜션입니다.^^</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--// awrads__list-->
+                    </div>
+                    <!--// awards__city -->
+                    <!-- awards__city -->
+                    <div class="awards__city" id="awards_staff_001002001">
+                        <h4 class="awards__city-tit">파리</h4>
+                        <!-- awrads__list-->
+                        <ul class="awards__list">
+                            <li class="awards__room awards__room--1st">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_577b536c6436c.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <span class="awards__medal awards__medal--staff">
+                                                <span class="awards__medal-num sr-only">1</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="ellipsis awards__room-tit">파리 퐁피두 민박</p>
+                                            <p class="awards__room-intro twoline">주요관광지와 한방에! 즐거운여행 시작! 파리 퐁피두민박과 함께~</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_58e3b95510d95.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                            <span class="awards__medal awards__medal--staff">
+                                                <span class="awards__medal-num sr-only">2</span>
+                                            </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">파리 로즈민박</p>
+                                            <p class="awards__room-intro twoline">넓은 공간으로 관광 후 편안한 휴식을책임집니다.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="awards__room">
+                                <a href="" class="awards__room-link">
+                                    <div class="awards__room-img-wrap">
+                                        <img src="http://www.theminda.com/data/goods/0_57ff31bc315ce.jpg" alt="" />
+                                    </div>
+                                    <div class="awards__room-info">
+                                        <div class="awards__medal-wrap">
+                                                        <span class="awards__medal awards__medal--staff">
+                                                            <span class="awards__medal-num sr-only">3</span>
+                                                        </span>
+                                        </div>
+                                        <div class="awards__room-desc">
+                                            <p class="twoline awards__room-tit">파리 해바라기 민박</p>
+                                            <p class="awards__room-intro twoline">푸짐하고 맛있는 한식제공으로 든든한여행만족 100% !</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--// awrads__list-->
+                    </div>
+                    <!--// awards__city -->
+                    <div class="awards__city" id="awards_staff_001003001">
+                        <h4 class="awards__city-tit">로마</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_001003003">
+                        <h4 class="awards__city-tit">피렌체</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_001003002">
+                        <h4 class="awards__city-tit">베네치아</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_001004001">
+                        <h4 class="awards__city-tit">바르셀로나</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_001004002">
+                        <h4 class="awards__city-tit">마드리드</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_001011001">
+                        <h4 class="awards__city-tit">프라하</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_001005002">
+                        <h4 class="awards__city-tit">프랑크프루트</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_003002001">
+                        <h4 class="awards__city-tit">도쿄</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_003002002">
+                        <h4 class="awards__city-tit">오사카</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_005001001">
+                        <h4 class="awards__city-tit">뉴욕</h4>
+                    </div>
+                    <div class="awards__city" id="awards_staff_005001002">
+                        <h4 class="awards__city-tit">LA</h4>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <!--//  awards -->
+		<!-- //페이지 끝-->
+	</div>
+    <!--// awards -->
+	<!-- //container -->
+	<!-- Footer -->
+	<!-- fixed button-->
+	<div id="quick">
+		<a href="#wrap" class="icon_top" onclick="scrollMove($(this).attr('href'),0); return false;">Top</a>
+	</div>
+</div>
+<!-- //wrap -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="/m/1.0/cust/js/moment.min.js"></script>
+<script src="/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="/m/1.0/cust/js/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.awards_city-name a').click(function(e){
+            e.preventDefault();
+            scrollMove($(this).attr('href'),70);
+        });
+    })
+</script>
+</body>
+</html>

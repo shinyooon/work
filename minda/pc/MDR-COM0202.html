@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/cust/css/slider.css">
+<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+<link rel="stylesheet" href="/cust/css/common.dev.css">
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- 인쇄팝업 700px -->
+<div class="pop">
+	<header class="pop_hd clearfix">
+		<h1 class="pull-left"><img src="/cust/img/logo_wh.png" alt="minda"></h1>
+		<div class="pull-right">
+			<button type="button" class="btn btn_wh"><i class="icon_voucher_wh"></i> 바우처 프린트</button>
+			<button type="button" class="btn btn_wh"><i class="icon_mail_wh"></i> 이메일 보내기</button>
+		</div>
+	</header>
+	<div class="pop_cnt">
+		<!-- 예약정보 -->
+		<table class="tb v3">
+			<caption class="sr-only">예약정보</caption>
+			<tbody>
+				<tr>
+					<th scope="row">예약번호</th>
+					<td colspan="3">123151512516 - <strong class="color_red">예약완료</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">숙소명</th>
+					<td colspan="3">로마 자고가 하우스(Jagoga House) (이탈리아 &gt; 로마)</td>
+				</tr>
+				<tr>
+					<th scope="row">객실</th>
+					<td colspan="3">3 bed  여성도미토리(3인), 2인실 커플룸</td>
+				</tr>
+				<tr>
+					<th scope="row">취소마감일</th>
+					<td>
+						<span class="color_red">
+							2016-03-18 24:00<br>
+							(한국시각 기준. 체크인 4일전까지)
+						</span>
+					</td>
+					<th scope="row">체크인/체크아웃</th>
+					<td>2016-00-00 / 2016-00-00</td>
+				</tr>
+				<tr>
+					<th scope="row">체크인 예정시각</th>
+					<td>00:00</td>
+					<th scope="row">도착예정지/시각</th>
+					<td>로마기차역(3시)</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="alert_info mt15 mb30">체크인 예정시각이 변경된 경우, <span class="color_grey">바우처의</span> 숙소 연락처로 변경된 시간을 꼭 연락 <span class="color_grey">주시기 바랍니다.</span></p>
+		<!-- 숙소 기본정보 -->
+		<section class="bx_mint mb30">
+			<h2 class="pop_tit">숙소기본정보</h2>
+			<hr class="hr2 mt15 mb15">
+			<div style="line-height:2">
+				<p>
+					<i class="icon_house"></i> 로마 자고가 하우스(Jagoga House)
+					<i class="split"></i>
+					<i class="icon_home_grey"></i> via fillppo turati 140/a (00185)
+				</p>
+				<p>
+					<i class="icon_mail"></i> korczak@minbackdanawa.com
+				</p>
+				<dl class="dl_inline">
+					<dt>숙소 관리자</dt>
+					<dd>홍길동</dd>
+					<dt>전화번호</dt>
+					<dd>010-5678-5555</dd>
+					<dt>핸드폰</dt>
+					<dd>011-2312-1251</dd>
+					<dt>인터넷 전화</dt>
+					<dd>010-23425-2526</dd>
+				</dl>
+				<dl class="dl_inline">
+					<dt>홈페이지</dt>
+					<dd>www.minbackdanawa.com</dd>
+				</dl>
+			</div>
+		</section>
+		<!-- 예약 상세내용 -->
+		<section class="mb30">
+			<h2 class="pop_tit">예약 상세내용</h2>
+			<table class="tb tb_fixed">
+				<caption class="sr-only">예약 상세내용</caption>
+				<colgroup>
+					<col style="width:15%">
+					<col style="width:35%">
+					<col style="width:25%">
+					<col style="width:10%">
+					<col style="width:15%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">날짜</th>
+						<th scope="col">객실유형</th>
+						<th scope="col">1박 단가</th>
+						<th scope="col">인원</th>
+						<th scope="col">요금</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="2">2016.03.22</td>
+						<td>
+							<span class="color_blk">남성도미토리룸</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="color_blk">플라워</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격(2인)</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="2">2016.03.22</td>
+						<td>
+							<span class="color_blk">남성도미토리룸</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="color_blk">플라워</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격(2인)</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td class="text-nowrap text-center" rowspan="2">2016.03.22</td>
+						<td>
+							<span class="color_blk">남성도미토리룸</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="color_blk">플라워</span>
+						</td>
+						<td class="text-nowrap">
+							<ul>
+								<li class="clear">
+									<span class="pull-left">1인 가격(2인)</span>
+									<span class="pull-right">￡50</span>
+								</li>
+							</ul>
+						</td>
+						<td class="text-center">2명</td>
+						<td class="text-right"><span class="color_red">￡50</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="tb_total tb_fixed">
+				<caption class="sr-only">총 합계 금액</caption>
+				<tbody>
+					<tr>
+						<td>
+							<p class="alert_info">나머지 숙박요금 <span class="color_org">￡351.00</span>은 체크인시 해당 숙소에 직접 결제하시면 됩니다.</p>
+						</td>
+						<td class="td_total">
+							<dl>
+								<dt>예약금(10%)</dt>
+								<dd><span class="color_org">￡15</span>(\19,100)</dd>
+								<dt>숙소 직접결제액(체크인시)</dt>
+								<dd><span class="color_org">(+)￡135</span></dd>
+								<dt class="total color_org">총 합계 금액</dt>
+								<dd class="total color_org">￡150</dd>
+							</dl>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- 숙소 이용규칙 -->
+		<section class="mb30">
+			<h2 class="pop_tit">숙소 이용규칙</h2>
+			<div class="well">
+				<div class="media">
+					<div class="media-left pr40">
+						<img src="/cust/img/alert_doc.png" alt="">
+					</div>
+					<div class="media-body">
+						<ul class="lst_type_rect">
+							<li>체크인 : 오후 2시 이후 </li>
+							<li>체크아웃 : 오전 11시까지 (체크아웃 후 짐보관 가능) (체크인/아웃 시간의 조정이 필요할 경우, 미리 연락주세요.)</li>
+							<li>다른 기본적인 규칙은 기본적인 배려심만 지켜주시면 됩니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 숙소 찾아가는법 -->
+		<section class="mb30">
+			<h2 class="pop_tit">숙소 찾아가는법</h2>
+			<div class="well">
+				<div class="media">
+					<div class="media-left pr40">
+						<img src="/cust/img/alert_loc.png" alt="">
+					</div>
+					<div class="media-body">
+						<h3 class="mb10 fs12 color_blk">논현역에서 도보로 10분거리</h3>
+						<p>7,9호선 논현역에서 하차하여 N번 출구로 나와 약 10분가량 직진하면 OO빌딩이 보입니다. 건물로 들어오셔서
+엘레베이터 위로가기 버튼을 누르시고 엘레베이터가 도착하면 탑승하시어 10층 버튼을 누르셔서 오시면 됩니다.
+</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 민다 취소환불규정 -->
+		<section class="mb30">
+			<h2 class="pop_tit">민다 취소환불규정</h2>
+			<ul style="line-height:1.7">
+				<li>1) 체크인 30일전 취소 : 예약금 전액환불 (* 포인트 및 쿠폰결제액 제외) </li>
+				<li>2) 체크인 29일전 ~ 취소마감일 이전 취소 : 취소수수료 제외후 환불 (*취소수수료 : 총 숙박요금의 10%) </li>
+				<li>3) 취소마감일 이후 ~ 당일취소 : 예약금 전액환불불가 </li>
+			</ul>
+			<div class="well mt10">
+				<div class="media">
+					<div class="media-left pr40">
+						<img src="/cust/img/alert_data.png" alt="">
+					</div>
+					<div class="media-body">
+						<ul class="lst_type_star mb5">
+							<li>2)항에서 예약금이 총 숙박요금의 10%인 숙소인 경우에는 현금 환불액은 없습니다</li>
+							<li>2)항에서 발생하는 취소수수료는 포인트로 환급해 드립니다. (*환급수수료 : 환급액의 20%)</li>
+							<li>'포인트 환급'은 현금으로 결제된 금액에 대해서만 적용됩니다. (포인트 및 쿠폰결제액은 포인트 재환급 불가)</li>
+						</ul>
+						<a class="btn btn-default btn-xs fs12" href="" target="_blank">자세한 내용 보러가기</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="bx_org sm mt40 pa20">
+			<h4 class="mb10 fs16 color_org"><i class="glyphicon glyphicon-info-sign"></i> 꼭! 알아두세요!</h4>
+			<ul class="lst_type_num">
+				<li>한인숙소는 그 특성상 숙소주, 혹은 숙소스텝이 숙소에 24시간 상주하고 있지 않는 경우가 많으니, <span class="color_mint">체크인전 반드시 숙소로 전화연락을 취하여 체크인 안내를 받으세요.</span> ( *체크인예정시간이 변경되면 반드시 사전에 숙소에 연락하셔서 변경된 시간을
+     알려야 합니다 )</li>
+				<li>전화연락시 나라/도시에 따라 지역번호 앞에 '0'을 붙여야 하는 도시들이 있거나 전화기종,통신사에 따라 전화거는 방법이 틀릴수가 있으니, 가이드북 등을 참고하여 <span class="color_mint">나라/도시별,통신사별 전화 사용법을 미리 꼭 숙지</span> 하세요 (나라별 전화거는 형식 참고 :
+     http://minbakdanawa.com/helpcenter/v.faq.php?no=52 )</li>
+				<li>전화연락시 한 번호로 연결되지 않을 때에는 집전화 외 다른번호(ex. 핸드폰 번호 등)로도 연결을 시도해 주세요.</li>
+				<li>현지 숙박시 문제가 발생할 경우, 민다 고객센터 1661-2892(한국시각으로 평일 10:00~12:00, 13:00~18:00)로 연락 주시거나, 고객센터 운영시간이 아닌 경우 고객센터 문의로 접수해주세요.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="/cust/js/bootstrap-slider.js"></script>
+<script src="/cust/js/jquery.nanoscroller.js"></script>
+<script src="/cust/js/moment.min.js"></script>
+<script src="/cust/js/daterangepicker.js"></script>
+<script src="/cust/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="/cust/js/common.js"></script>
+</body>
+</html>

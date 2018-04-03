@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> MINDA :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<!-- [D]
+	1. 뒤로가기가 있는 메뉴 class="page_back"
+	2. 배경이 하얀색
+-->
+<body class="page_back bg_wh">
+
+<!-- wrap.screenID -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="hd">
+		<h1>숙박자 정보입력</h1>
+		<a class="icon_hd_back" href="">뒤로</a>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container" class="clearfix">
+
+<!-- 페이지 시작-->
+
+<div class="frm_wrp">
+	<!-- step -->
+	<ol class="step_resev">
+		<li class="active">01.숙박자 정보입력</li>
+		<li>02.예약금 결제</li>
+		<li>03.예약완료</li>
+	</ol>
+
+	<form class="frm">
+		<div class="form-group">
+			<input type="text" class="form-control input-lg" required placeholder="이름">
+		</div>
+		<div class="form-group">
+			<select class="form-control input-lg" required>
+				<option>성별(필수)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control input-lg" required placeholder="핸드폰 필수(필수)">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control input-lg" placeholder="전화번호">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control input-lg" placeholder="카카오톡ID">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control input-lg" required placeholder="이메일(필수)">
+		</div>
+		<div class="form-group">
+			<label class="d_block mt10 fs15 color_blk">체크인 예정시각</label>
+			<div class="row">
+				<div class="col-xs-5 pr5">
+					<select class="form-control input-lg">
+						<option>AM</option>
+						<option>PM</option>
+					</select>
+				</div>
+				<div class="col-xs-7">
+					<select class="form-control input-lg">
+						<option>시간선택</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="d_block mt10 fs15 color_blk">도착예정지/시각</label>
+			<div class="row">
+				<div class="col-xs-12 pb5">
+					<input type="text" class="form-control input-lg" placeholder="ex. ㅇㅇ기차역">
+				</div>
+				<div class="col-xs-5 pr5">
+					<select class="form-control input-lg">
+						<option>AM</option>
+						<option>PM</option>
+					</select>
+				</div>
+				<div class="col-xs-7">
+					<select class="form-control input-lg">
+						<option>시간선택</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<!-- 하단 고정 메뉴-->
+		<div class="btm_fixed pa10 bg_wh">
+			<div class="row">
+				<div class="col-xs-6 pr3">
+					<button type="button" class="btn btn-xl btn-block bg_dark_grey">취소</button>
+				</div>
+				<div class="col-xs-6 pl3">
+					<button type="button" class="btn btn-xl btn-block bg_mint">다음</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+</html>

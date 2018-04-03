@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd" class="sr-only"><!--헤더를 없을때 sr-only -->
+			<h1 class="sr-only">전체 도시보기</h1>
+		</header>
+		<!-- //header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="lst-total-city">
+				<section class="sub-top-area">
+					<form class="srch_house">
+						<input id="sword" type="text" class="no_style select_like autocomplete pl_grey" placeholder="도시, 숙소, 트립, 정보 검색" autocomplete="off">
+						<button class="icon_srch_blk">검색</button>
+					</form>
+				</section>
+				<div class="pop-hd">
+					<ul class="header-nav">
+						<li>
+							<h2><a href="">숙소</a></h2></li>
+						<li class="on">
+							<h2><a href="" class="dot-em">트립</a></h2></li><!-- 2017-05-25 eidt -->
+						<li>
+							<h2><a href="">정보</a></h2></li>
+					</ul>
+					<!-- <a class="icon_hd_clse hd-r" href="javascript:history.back();"></a> -->
+				</div>
+				<section class="total-contents">
+					<div class="left-area">
+						<ul class="tab-continent">
+							<li><a href="#popular" data-toggle="tab">인기도시</a></li>
+							<li><a href="#europe" data-toggle="tab">유럽</a></li>
+							<li><a href="#asia" data-toggle="tab">아시아</a></li>
+							<li><a href="#americas" data-toggle="tab">미주</a></li>
+							<li><a href="#pacific" data-toggle="tab">남태평양</a></li>
+							<li><a href="#africa" data-toggle="tab">아프리카</a></li>
+							<li class="active"><a href="#domestic" data-toggle="tab">국내</a></li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<article class="tab-pane" id="popular">
+							<ul class="list-item v2 list-city">
+								<li>
+									<a href="">
+										<div class="img-wrap">
+											<img src="img/main/img_osaka.png" alt="" />
+										</div>
+										<p class="pos-center">
+											<span class="txt1">오사카</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="img-wrap">
+											<img src="img/main/img_roma.png" alt="" />
+										</div>
+										<p class="pos-center">
+											<span class="txt1">로마</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="img-wrap">
+											<img src="img/main/img_pari.png" alt="" />
+										</div>
+										<p class="pos-center">
+											<span class="txt1">파리</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="img-wrap">
+											<img src="img/main/img_london.png" alt="" />
+										</div>
+										<p class="pos-center">
+											<span class="txt1">런던</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="img-wrap">
+											<img src="img/main/img_barcelona.png" alt="" />
+										</div>
+										<p class="pos-center">
+											<span class="txt1">바르셀로나</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="img-wrap">
+											<img src="img/main/img_jeju.png" alt="" />
+										</div>
+										<p class="pos-center">
+											<span class="txt1">제주</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+						</article>
+						<article class="tab-pane" id="europe">
+							<!-- 유럽 -->
+							<div class="sort-main">
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001001" alt="">영국</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="">런던</a></li>
+													<li class="col-xs-6"><a href="">맨체스터</a></li>
+													<li class="col-xs-6"><a href="">맨체스터</a></li>
+													<li class="col-xs-6"><a href="">펜잔스</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div>
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001002" alt="">프랑스</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="">파리</a></li>
+													<li class="col-xs-6"><a href="">클레르몽 페랑</a></li>
+													<li class="col-xs-6"><a href="">리옹</a></li>
+													<li class="col-xs-6"><a href="">엑상프로방스</a></li>
+													<li class="col-xs-6"><a href="">칸</a></li>
+													<li class="col-xs-6"><a href="">몽펠리에</a></li>
+													<li class="col-xs-6"><a href="">콜마르</a></li>
+													<li class="col-xs-6"><a href="">리옹</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// sort-sub-->
+								<div class="sort-sub">
+									<div>
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="">런던</a></li>
+													<li class="col-xs-6"><a href="">에딘버러</a></li>
+													<li class="col-xs-6"><a href="">맨체스터</a></li>
+													<li class="col-xs-6"><a href="">펜잔스</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// sort-sub-->
+								<!--// sort-sub-->
+								<div class="sort-sub">
+									<div>
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="">런던</a></li>
+													<li class="col-xs-6"><a href="">에딘버러</a></li>
+													<li class="col-xs-6"><a href="">맨체스터</a></li>
+													<li class="col-xs-6"><a href="">펜잔스</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// sort-sub-->
+								<!--// sort-sub-->
+								<div class="sort-sub">
+									<div>
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="">런던</a></li>
+													<li class="col-xs-6"><a href="">에딘버러</a></li>
+													<li class="col-xs-6"><a href="">맨체스터</a></li>
+													<li class="col-xs-6"><a href="">펜잔스</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// sort-sub-->
+								<!--// sort-sub-->
+								<div class="sort-sub">
+									<div>
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_001003" alt="">이탈리아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="">런던</a></li>
+													<li class="col-xs-6"><a href="">에딘버러</a></li>
+													<li class="col-xs-6"><a href="">맨체스터</a></li>
+													<li class="col-xs-6"><a href="">펜잔스</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// sort-sub-->
+							</div>
+						</article>
+						<!-- 아시아 -->
+						<article class="tab-pane" id="asia">
+							<div class="sort-main">
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003002" alt="">일본</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002001');">도쿄</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002002');">오사카</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002003');">삿포로</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002004');">고베</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002005');">후쿠오카</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002006');">교토</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003002008');">대마도</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003004" alt="">홍콩</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003004001');">홍콩</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003005" alt="">마카오</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003005001');">마카오</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003006" alt="">싱가폴</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003006001');">싱가폴</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003007" alt="">중국</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007001');">상해</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007002');">북경</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007004');">청도</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007005');">광저우</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007007');">위해</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007008');">성도</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003007009');">연길</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003008" alt="">필리핀</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003008001');">마닐라</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003008003');">세부</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003008004');">타가이타이</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003009" alt="">카타르</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003009001');">도하</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003010" alt="">사우디아라비아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003010001');">리야드</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003011" alt="">말레이시아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003011001');">쿠알라룸푸르</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003011002');">코타키나발루</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003013" alt="">태국</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003013001');">방콕</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003014" alt="">인도네시아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003014001');">자카르타</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003015" alt="">대만</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003015001');">타이페이</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003016" alt="">아랍에미리트</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003016001');">두바이</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003016002');">아부다비</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003018" alt="">캄보디아</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003018001');">씨엠립</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003021" alt="">라오스</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003021001');">비엔티안</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003022" alt="">인도</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003022001');">뉴델리</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003022002');">첸나이</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_003023" alt="">이란</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003023001');">테헤란</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<!-- 미주 -->
+						<article class="tab-pane" id="americas">
+							<div class="sort-main">
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_005001" alt="">미국</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001001');">뉴욕</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001002');">LA</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001004');">보스턴</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001005');">시카고</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001006');">올랜도</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001007');">라스베가스</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001008');">워싱턴</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001009');">미네아폴리스</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001013');">하와이(호놀룰루)</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001014');">샌프란시스코</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005001015');">필라델피아</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_005002" alt="">캐나다</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005002001');">밴쿠버</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005002002');">토론토</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005002005');">몬트리올</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=005002008');">옐로나이프</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<!-- 남태평양 -->
+						<article class="tab-pane" id="pacific">
+							<div class="sort-main">
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_007004" alt="">괌</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007004001');">괌</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_007003" alt="">사이판</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007003001');">사이판</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_007001" alt="">호주</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007001001');">시드니</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007001002');">골드코스트</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007001003');">멜버른</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007001004');">호바트</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_007002" alt="">뉴질랜드</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007002001');">오클랜드</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=007002002');">크라이스트처치</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<!-- 아프리카 -->
+						<article class="tab-pane" id="africa">
+							<div class="sort-main">
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_008001" alt="">남아공</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=008001001');">케이프타운</a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=008001002');">요하네스버그</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2><img class="img-circle" src="http://v2.theminda.com/img/country/PC/flag_008005" alt="">케냐</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=008005001');">나이로비</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<!-- 국내 -->
+						<article class="tab-pane active" id="domestic">
+							<div class="sort-main">
+								<div class="sort-sub">
+									<div class="">
+										<h2>인기도시</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">서울 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019005');">제주 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019003');">부산 <span class="cnt">99</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019007');">전주 <span class="cnt">30</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">경주 <span class="cnt">66</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2>서울 &amp; 수도권</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">서울 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019005');">인천 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019003');">가평 <span class="cnt">99</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019007');">용인 <span class="cnt">30</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">이천 <span class="cnt">66</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2>강원도</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">강릉 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019005');">양양 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019003');">동해 <span class="cnt">99</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019007');">속초 <span class="cnt">30</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">고성 <span class="cnt">66</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2>경상도 </h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">부산 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019005');">경주 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019003');">거제 <span class="cnt">99</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019007');">포항 <span class="cnt">30</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">함양 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">대구 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">인덩 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">문경 <span class="cnt">66</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2>전라도</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">전주 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019005');">순천 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019003');">광주 <span class="cnt">99</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019007');">함평 <span class="cnt">30</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">남원 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">김제 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">완도 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">완주 <span class="cnt">66</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019002');">고흥 <span class="cnt">66</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2>전라도</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">당진 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019005');">서산 <span class="cnt">105</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019003');">보은 <span class="cnt">99</span></a></li>
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019007');">공주 <span class="cnt">30</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sort-sub">
+									<div class="">
+										<h2>제주도</h2>
+										<div class="sort-sub2">
+											<div class="sort-list-box cc-list">
+												<ul class="row">
+													<li class="col-xs-6"><a href="javascript:MoveGet('http://v2.theminda.com/m/1.0/grp_minbak/minbak_list.html?search_type=area&amp;area=003019001');">제주<span class="cnt">105</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+			</div>
+			<!-- contents -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<footer id="footer">
+			<nav class="nav-btm">
+				<ul>
+					<li>
+						<a href="">
+							<span class="icon-home"></span>
+							<span class="txt">홈</span>
+						</a>
+					</li>
+					<li class="on">
+						<a href="">
+							<span class="icon-srch"></span>
+							<span class="txt">검색</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-save"></span>
+							<span class="txt">저장목록</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-my"></span>
+							<span class="txt">마이민다</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="icon-more"></span>
+							<span class="txt">더보기</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+		<!-- fixed button-->
+	</div>
+	<!-- //wrap -->
+</body>
+<!-- js -->
+<script src="http://www.theminda.com/min/f=m/1.0/cust/js/jquery.min.js"></script>
+<script src="http://v2.theminda.com/m/1.0/cust/js/main.bootstrap.min.js"></script>
+<script src="http://www.theminda.com/min/f=m/1.0/cust/js/moment.min.js"></script>
+<script src="http://www.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+<!-- js -->
+<script type="text/javascript">
+$(function() {
+	var $input = $('.input-wrap > input:text');
+	inputControl($input);
+	$input.keyup(function() {
+		inputControl($(this));
+	});
+
+});
+
+$('.icon_clse_input').click(function() {
+	$(this).siblings('input:text').val('');
+	inputControl($(this).siblings('input:text'))
+})
+
+function inputControl($input) {
+	if ($input.val()) {
+		$input.closest('.input-wrap').addClass('active');
+	} else {
+		$input.closest('.input-wrap').removeClass('active');
+	}
+}
+</script>
+
+</html>

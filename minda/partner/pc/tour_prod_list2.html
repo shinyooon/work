@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>MinDa :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/tour.css">
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="w1260 clearfix">
+					<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_big.png" alt="MINDA 파트너홈"></a></h1>
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="" class="active">숙소</a></li>
+							<li><a href="">여행정보</a></li>
+							<li><a href="">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+					</div>
+				</div>
+			</div>
+			<div class="hd_gnb">
+				<nav class="w1260">
+					<ul class="gnb clearfix">
+						<li><a href="" class="active">상품관리</a></li>
+						<li><a href="">예약관리</a></li>
+						<li><a href="">행사관리</a></li>
+						<li><a href="">정보관리</a></li>
+						<li><a href="">게시물관리</a></li>
+						<li><a href="">통계/정산</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- 페이지시작 -->
+			<div class="content w1248 tour-wrap"><!-- tour-wrap 클래스 추가 -->
+				<aside class="content_aside">
+					<h2 class="aside_tit">상품관리</h2>
+					<nav class="snb snb-lg">
+						<ul>
+							<li><a href="">승인된 상품</a></li>
+							<li class="active"><a href="">미승인 상품</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<!-- 컨텐츠 영역 -->
+				<div class="content_body clearfix">
+					<!-- body_tit2 -->
+					<div class="body_tit2 clearfix bb0">
+						<p class="pull-left txt">승인된 상품 <span class="color_mint">4개</span>등록되었습니다.</p>
+						<div class="pull-right">
+							<div class="pull-left input-area">
+								<label class="inline-checkbox basic chk_label on">
+									<input type="checkbox" checked="checked">미등록
+								</label>
+								<label class="inline-checkbox basic chk_label on ml30">
+									<input type="checkbox" checked="checked">등록대기
+								</label>
+								<label class="inline-checkbox basic chk_label on ml30">
+									<input type="checkbox" checked="checked">등록불가
+								</label>
+								<label class="inline-checkbox basic chk_label on ml30">
+									<input type="checkbox" checked="checked">미게재
+								</label>
+								<select class="form-control-basic wid_sm ml30" title="리스트 정렬 선택">
+									<option value="">가나다순</option>
+									<option value="">조회수순</option>
+									<option value="">누적수익순</option>
+									<option value="" selected="selected">등록순</option>
+								</select>
+							</div>
+							<div class="btn-area pull-right ml30">
+								<button type="button" class="btn bg_blk btn-lg btn-regist">상품등록</button>
+							</div>
+						</div>
+					</div>
+					<!--/ body_tit2 -->
+					<!-- tour-contents -->
+					<div class="tour-contents">
+						<!-- 목록 -->
+						<!-- tour_lst -->
+						<ul class="row discount_room_lst tour_lst">
+							<li class="col-xs-4">
+								<div class="poplabel-wrap">
+									<div class="poplabel dropdown">
+										<div type="button" class="btn btn-txt" data-toggle="dropdown" disabled>등록불가
+											<!-- dropdown-hover-->
+											<div class="dropdown-hover d_iblock ml5">
+												<button class="no_style"><span class="icon_help_grey bg_wh">도움말</span></button>
+												<div class="dropdown-content">
+													<div class="inner">
+														<p class="txt">단, '일별객실요금'에서 일자별로 요금을 개별<br /> 수정/저장 하셨을경우. 해당 일자의 수정된<br /> 이렵요금이 특별시즌요금보다 노출순위가<br />우선되므로, 나중에 수정/등록된'시즌요금'이<br />반영이 되지 않습니다.</p>
+													</div>
+												</div>
+											</div>
+											<!--// dropdown-hover-->
+										</div>
+									</div>
+								</div>
+								<div class="rt-area">
+									<button type="button" data-toggle="button" class="btn"><span class="icon_star2">즐겨찾기</span></button>
+								</div>
+								<a href="">
+									<div class="tmb pr">
+										<img class="img-center" src="http://www.theminda.com/data/travel/image/thumb/201609/1473148574_0.jpg" alt="">
+									</div>
+									<div class="room_info">
+										<span class="d_block mb3">이탈리아 밀라노</span>
+										<strong class="fw500 color_blk fs18">오사카 길거리 맛집투어 오사카 길거리 맛집 오사카 길거리 맛집투어</strong>
+									</div>
+									<div class="meta clearfix color_grey">
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">조회수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">저장수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">누적수익</dt>
+											<dd class="pull-right"><span class="color_mint">1,101,000 원</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">
+												<div class="rating_wrp">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+												</div>
+											</dt>
+											<dd class="pull-right"><span class="color_mint">평점 3.4</span></dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<!-- 판매중지일때 -->
+							<li class="col-xs-4">
+								<div class="poplabel-wrap">
+									<div class="poplabel dropdown">
+										<button type="button" class="btn btn-txt" data-toggle="dropdown" disabled>미개제</button>
+										<button type="button" class="btn btn-del" onclick="javascript:confirm('해당 상품을 삭제하시겠습니까?');"><span class="icon_clse">삭제</span></button>
+									</div>
+								</div>
+								<div class="rt-area">
+									<button type="button" data-toggle="button" class="btn"><span class="icon_star2">즐겨찾기</span></button>
+								</div>
+								<a href="">
+									<div class="tmb pr">
+										<img class="img-center" src="http://www.theminda.com/data/travel/image/thumb/201609/1473148574_0.jpg" alt="">
+									</div>
+									<div class="room_info">
+										<span class="d_block mb3">이탈리아 밀라노</span>
+										<strong class="fw500 color_blk fs18">오사카 길거리 맛집투어 오사카 길거리 맛집 오사카 길거리 맛집투어</strong>
+									</div>
+									<div class="meta clearfix color_grey">
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">조회수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">저장수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">누적수익</dt>
+											<dd class="pull-right"><span class="color_mint">1,101,000 원</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">
+												<div class="rating_wrp">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+												</div>
+											</dt>
+											<dd class="pull-right"><span class="color_mint">평점 3.4</span></dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<div class="poplabel-wrap">
+									<div class="poplabel dropdown">
+										<button type="button" class="btn btn-txt" data-toggle="dropdown" disabled>미등록</button>
+									</div>
+								</div>
+								<div class="rt-area">
+									<button type="button" data-toggle="button" class="btn active"><span class="icon_star2">즐겨찾기</span></button>
+								</div>
+								<a href="">
+									<div class="tmb pr">
+										<img class="img-center" src="http://www.theminda.com/data/travel/image/thumb/201609/1473148574_0.jpg" alt="">
+									</div>
+									<div class="room_info">
+										<span class="d_block mb3">이탈리아 밀라노</span>
+										<strong class="fw500 color_blk fs18">오사카 길거리 맛집투어 오사카 길거리 맛집 오사카 길거리 맛집투어</strong>
+									</div>
+									<div class="meta clearfix color_grey">
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">조회수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">저장수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">누적수익</dt>
+											<dd class="pull-right"><span class="color_mint">1,101,000 원</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">
+												<div class="rating_wrp">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+												</div>
+											</dt>
+											<dd class="pull-right"><span class="color_mint">평점 3.4</span></dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<div class="poplabel-wrap">
+									<div class="poplabel dropdown">
+										<button type="button" class="btn btn-txt" data-toggle="dropdown" disabled>등록대기</button>
+									</div>
+								</div>
+								<div class="rt-area">
+									<button type="button" data-toggle="button" class="btn"><span class="icon_star2">즐겨찾기</span></button>
+								</div>
+								<a href="">
+									<div class="tmb pr">
+										<img class="img-center" src="http://www.theminda.com/data/travel/image/thumb/201609/1473148574_0.jpg" alt="">
+									</div>
+									<div class="room_info">
+										<span class="d_block mb3">이탈리아 밀라노</span>
+										<strong class="fw500 color_blk fs18">오사카 길거리 맛집투어 오사카 길거리 맛집 오사카 길거리 맛집투어</strong>
+									</div>
+									<div class="meta clearfix color_grey">
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">조회수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">저장수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">누적수익</dt>
+											<dd class="pull-right"><span class="color_mint">1,101,000 원</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">
+												<div class="rating_wrp">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+												</div>
+											</dt>
+											<dd class="pull-right"><span class="color_mint">평점 3.4</span></dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<div class="poplabel-wrap">
+									<div class="poplabel dropdown">
+										<button type="button" class="btn btn-txt" data-toggle="dropdown" disabled>등록대기</button>
+									</div>
+								</div>
+								<div class="rt-area">
+									<button type="button" data-toggle="button" class="btn"><span class="icon_star2">즐겨찾기</span></button>
+								</div>
+								<a href="">
+									<div class="tmb pr">
+										<img class="img-center" src="http://www.theminda.com/data/travel/image/thumb/201609/1473148574_0.jpg" alt="">
+									</div>
+									<div class="room_info">
+										<span class="d_block mb3">이탈리아 밀라노</span>
+										<strong class="fw500 color_blk fs18">오사카 길거리 맛집투어 오사카 길거리 맛집 오사카 길거리 맛집투어</strong>
+									</div>
+									<div class="meta clearfix color_grey">
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">조회수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">저장수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">누적수익</dt>
+											<dd class="pull-right"><span class="color_mint">1,101,000 원</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">
+												<div class="rating_wrp">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+												</div>
+											</dt>
+											<dd class="pull-right"><span class="color_mint">평점 3.4</span></dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li class="col-xs-4">
+								<div class="poplabel-wrap">
+									<div class="poplabel dropdown">
+										<button type="button" class="btn btn-txt" data-toggle="dropdown" disabled>등록대기</button>
+									</div>
+								</div>
+								<div class="rt-area">
+									<button type="button" data-toggle="button" class="btn active"><span class="icon_star2">즐겨찾기</span></button>
+								</div>
+								<a href="">
+									<div class="tmb pr">
+										<img class="img-center" src="http://www.theminda.com/data/travel/image/thumb/201609/1473148574_0.jpg" alt="">
+									</div>
+									<div class="room_info">
+										<span class="d_block mb3">이탈리아 밀라노</span>
+										<strong class="fw500 color_blk fs18">오사카 길거리 맛집투어 오사카 길거리 맛집 오사카 길거리 맛집투어</strong>
+									</div>
+									<div class="meta clearfix color_grey">
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">조회수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">저장수</dt>
+											<dd class="pull-right"><span class="color_mint">3,511 회</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">누적수익</dt>
+											<dd class="pull-right"><span class="color_mint">1,101,000 원</span></dd>
+										</dl>
+										<dl class="clearfix dl-count">
+											<dt class="pull-left">
+												<div class="rating_wrp">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+												</div>
+											</dt>
+											<dd class="pull-right"><span class="color_mint">평점 3.4</span></dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<!--// tour_lst -->
+					</div>
+					<!--// tour-contents -->
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+			<a href="" class="split">숙소주 이용약관</a>
+			<a href="" class="split">숙소주 광고이용약관</a>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script type="text/javascript">
+	jQuery(function($) {
+		var $body = $('body');
+
+		// input
+		$body
+			.on('click', 'label.radio_label>input', function() {
+				var t = $(this);
+				$('input[type=radio][name=' + t.attr('name') + ']').parent('label').removeClass('on');
+				t.parent('label').addClass('on');
+			})
+			.on('click', 'label.chk_label>input', function() {
+				var t = $(this);
+				t.parent('label').toggleClass('on');
+			});
+	});
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>

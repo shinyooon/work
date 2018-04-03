@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<!-- 2017-09-18 미리보기 시 body--preview 클래스 추가 -->
+<body class="body--preview">
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<header id="hd" class="transparent">
+			<h1>투어/체험</h1>
+			<a class="icon_hd_back" href="">뒤로</a>
+			<div class="btnwrp">
+				<button type="button" class="icon_hd_wish btn btn_like" data-toggle="button">찜하기</button>
+				<button type="button" onclick="showShare();" class="icon_hd_link btn btn_link">공유하기</button>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="clearfix no-hd">
+			<!-- 페이지 시작-->
+			<!-- 상단 이미지 슬라이드 -->
+			<div class="room_detail_hd">
+				<div class="tmb_slide_wrp pr">
+					<div class="top-img-swiper">
+						<p class="nodata">대표 이미지를 등록해주세요.</p>
+					</div>
+				</div>
+			</div>
+			<!-- //슬라이드 -->
+			<!-- 투어이름 -->
+			<div class="item_title v2"><!-- yuna : v2 클래스 추가 -->
+				<div class="tit-top-area"><!-- yuna 새로 추가 -->
+					<span class="meta text-center">일본 오사카<i class="split"></i> 현지투어 <i class="split"></i> 숙소주 판매상품  </span>
+					<h2 class="twoline tit text-center">로마 바티칸 반나절 투어 로마 바티칸 반나절 투어 로마 바티칸 반나절 투어 로마 바티칸 반나절 투어 </h2>
+					<p class="txt-like text-center">이 투어를 좋아하는 <span class="color_mint">0명</span></p>
+				</div>
+				<!-- 별점 -->
+				<div class="price_wrp"><span class="nodata">요금을 등록해주세요.</span></div>
+				<!-- <div class="star_wrp mt5">
+					<span class="starrating lg" title="4.79">
+						<span style="width:80%"></span>
+					</span>
+					<span class="rate">4.79</span>
+					<span class="color_mint">24명</span>
+				</div> -->
+				<!-- 2016-12-07 수정 -->
+				<div class="itemwrp word_balloon clearfix">
+					<a href="" class="tb_bx">
+						<div class="tmb_wrp tb_cell">
+							<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+							<span class="badge badge_silver">은뱃지</span>
+						</div>
+
+						<div class="word tb_cell">
+							호스트가 직접 진행하는 트립<br/><span class="color_org">오사카 타코야끼 하우스</span>
+							<span class="btn">상품 더보기</span>
+						</div>
+					</a>
+				</div>
+				<!--// 2016-12-07 수정 -->
+			</div>
+			<!-- 상단탭 -->
+			<!-- 투어설명 -->
+			<div class="item_datail_wrp">
+				<!-- 일정정보 -->
+				<section id="view1" class="item_info">
+					<h2 class="sr-only">투어정보</h2>
+					<dl class="dl_lst">
+						<dt>소요시간</dt>
+						<dd><span class="nodata">소요시간을 입력해주세요.</span></dd>
+						<dt>이동수단</dt>
+						<dd><span class="nodata">이동수단을 입력해주세요.</span></dd>
+					</dl>
+					<!-- 2017-03-31 -->
+					<ul class="list-tag list-inline">
+						<li><span class="nodata">태그를 선택해주세요.</span></li>
+					</ul>
+					<p class="txt">
+						<span class="nodata">트립 소개를 입력해주세요.</span>
+					</p>
+				</section>
+				<section class="meeting_info">
+					<h2 class="sub_tit">우리 여기서 만나요</h2>
+					<div class="metting_map">
+						<a href="javascript:viewMapa();">
+							<div class="map">
+								<span class="nodata">트립 소개를 입력해주세요.</span>
+							</div>
+						</a>
+					</div>
+					<!-- <div class="metting_img">
+						<div class="info-img-area">
+							<img src="http://www.theminda.com/data/tg/image/tour/meet/201706/1497114135_No1Paris.jpg" alt="숙소 정보 이미지">
+						</div>
+					</div> -->
+				    <dl class="dl_lst">
+						<dt>만나는 시간</dt>
+						<dd><span class="nodata">만나는 시간을 입력해주세요. </span></dd>
+						<dt>만나는 장소</dt>
+						<dd><span class="nodata">만나는 장소를 입력해주세요.</span></dd>
+						<dt>찾아가는 법</dt>
+						<dd><span class="nodata">찾아가는 법을 입력해주세요.</span></dd>
+					</dl>
+				</section>
+				<!-- 코스안내 -->
+				<section id="view2" class="item_reason course_info tour_course_info">
+				<h2 class="sub_tit">트립은 이렇게 진행됩니다</h2>
+				<div class="bx_more_obj">
+				    <div class="bx_more_contents">
+				    	<span class="nodata">코스를 입력해주세요.</span>
+    				</div>
+				</div>
+				<div class="text-right bx_more pt10">
+					<a href="#"><font>더보기</font><i class="icon_more"></i></a>
+				</div>
+			</section>
+				<!-- 요금안내 2017-05-24 add -->
+				<section>
+					<h2 class="sub_tit">요금안내</h2>
+					<p class="nodata">요금을 입력해주세요.</p>
+				</section>
+				<!--// 요금안내 2017-05-24 add -->
+				<div class="basic_line_lst">
+					<!-- 포함사항 -->
+					<section>
+						<h2 class="sub_tit">포함사항</h2>
+						<p class="nodata">포함사항을 입력해주세요.</p>
+					</section>
+					<!-- 불포함사항 -->
+					<section>
+						<h2 class="sub_tit">불포함사항</h2>
+						<p class="nodata">불포함사항을 입력해주세요.</p>
+					</section>
+					<!-- 공지사항 -->
+					<section>
+						<h2 class="sub_tit">유의사항</h2>
+						<div class="txt_bx">
+						    <div>
+							본 상품에는 여행자보험이 포함되어 있지 않습니다. 여행자보험 가입을 권장합니다. <a href="https://www.trippartners.co.kr/?cafe=MDWA" onclick="ga('send','event','mo_trip_view','click','insu_text');AppInvokeOpenNewPage($(this).attr('href'), '', 'y'); return false;" class="txt_line color_org">여행자보험 바로가기 &gt;</a>
+							<br><br>
+							<p class="nodata">유의사항을 입력해주세요.</p>
+							</div>
+					</div>
+					</section>
+					<section class="pa0">
+						<a href="https://www.trippartners.co.kr/?cafe=MDWA" onclick="AppInvokeOpenNewPage($(this).attr('href'), '', 'y'); return false;" class="d_block"><img src="http://v2.theminda.com/m/1.0/cust/img/banner_insurance2.jpg" alt="" class=" wfull" /></a>
+					</section>
+					<!-- 취소 환불 규정 -->
+					<a href="" id="cancel_rule" class="sub_tit link_arr" title="내용자세히보기">취소 환불규정</a>
+					<!-- 2017-03-31 add -->
+					<!-- 인증정보 -->
+					<!-- 2017-09-18 btn_tour_certi 클래스 추가 -->
+					<a href="" id="btn_tour_certi" class="sub_tit link_arr" title="내용자세히보기"><span class="p-name ellipsis">오사카 타코야끼 하우스오사카 타코야끼 하우스오사카 타코야끼 하우스오사카 타코야끼 하우스</span>의 인증 정보</a>
+
+				</div>
+				<div class="basic_line_lst">
+					<a id="btn_qna" class="sub_tit link_arr" title="QnA 작성 페이지 이동">에이전시에게 물어보세요.</a>
+					<!-- 트립이 2개 이상일때만 노출 -->
+					<a href="http://www.theminda.com/m/1.0/partner/tg_list.html?partner_mid=No1Paris" onclick="ga('send','event','mo_trip_view','click','host_lodgingbooking_넘버원파리');" class="sub_tit link_arr" title="파트너 트립 목록페이지 이동">에이전시  트립 더보기</a>
+					<!--// 트립이 2개 이상일때만 노출 -->
+				</div>
+				<!-- <div class="room_lst_wrap">
+					<p class="txt_top">이 여행상품은 현지 숙소에서 제공하는 체험/액티비티입니다</p>
+					<ul class="room_lst">
+						<li>
+							<a href="">
+								<div class="media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://www.theminda.com/data/goods/0_57bc51f9aba6b.jpg" alt="">
+											<div class="ribbon_wrp">
+												<button class="no_style"><i class="icon_ribbon" minbak-code="1547">찜하기</i></button>
+											</div>
+										</div>
+									</div>
+									<div class="media-body">
+										<div>
+											<h3 class="twoline ">
+												<i class="icon_now "></i>런던 킹스크로스 KX HOUSE 1호점, 2호점
+												<span class="label bg_org ">신규</span>
+												<span class="label bg_ylw ">쿠폰</span>
+												<span class="label bg_mint">할인</span>
+											</h3>
+										</div>
+										<div class="price">
+											<span class="txt-room-kind">도미토리</span>
+											<s class="before_price ">￡2,000</s>
+											<span class="current_price ">￡1,000</span>
+										</div>
+										<div class="meta">
+											<div class="star_wrp d_iblock ">
+												<span class="starrating " title="4.38 ">
+													<span style="width:87.6% ">4.38</span>
+												</span>
+												<span class="color_mint"><span>100</span></span>
+											</div>
+											<i class="split "></i>
+											저장<span class="color_mint"> <span>433</span></span>
+											<i class="split "></i>
+											여행정보<span class="color_mint"> <span>100</span></span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div> -->
+				<!-- 리뷰 -->
+				<!-- <section id="view3" class="item_review">
+					<h2 class="sub_tit">리뷰 <span class="color_org">(24)</span></h2>
+					<div class="review_total">
+						<div>
+							<span id="review_avg" class="rating_wrp">
+								<span class="starrating lg ver_org" title="">
+									<span id="grade_per" style="width: 86.6%;"></span>
+								</span>
+								<strong id="grade" class="color_org">4.33</strong>
+								<i class="split"></i>
+								<span id="review_count" class="text-nowrap">339명</span>
+							</span>
+						</div>
+					</div>
+					<ul class="review_lst lst_style_cmt">
+						<li>
+							<div class="user_review_wrp itemwrp">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="_temp/pf2.png" alt="">
+									</div>
+								</div>
+								<div class="media-body">
+									<span class="user">rkgud0119</span>
+									<div class="rating_wrp">
+										<span class="starrating" title="4.25">
+								<span style="width:40.25%">4.25</span>
+										</span>
+									</div>
+									<span class="date">2016.04.06</span>
+								</div>
+								<div class="txt">
+									유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user_review_wrp itemwrp">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="_temp/pf2.png" alt="">
+									</div>
+								</div>
+								<div class="media-body">
+									<span class="user">rkgud0119</span>
+									<div class="rating_wrp">
+										<span class="starrating" title="4.25">
+								<span style="width:40.25%">4.25</span>
+										</span>
+									</div>
+									<span class="date">2016.04.06</span>
+								</div>
+								<div class="txt">
+									유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user_review_wrp itemwrp">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="_temp/pf2.png" alt="">
+									</div>
+								</div>
+								<div class="media-body">
+									<span class="user">rkgud0119</span>
+									<div class="rating_wrp">
+										<span class="starrating" title="4.25">
+								<span style="width:40.25%">4.25</span>
+										</span>
+									</div>
+									<span class="date">2016.04.06</span>
+								</div>
+								<div class="txt">
+									유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user_review_wrp itemwrp">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="_temp/pf2.png" alt="">
+									</div>
+								</div>
+								<div class="media-body">
+									<span class="user">rkgud0119</span>
+									<div class="rating_wrp">
+										<span class="starrating" title="4.25">
+								<span style="width:40.25%">4.25</span>
+										</span>
+									</div>
+									<span class="date">2016.04.06</span>
+								</div>
+								<div class="txt">
+									유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user_review_wrp itemwrp">
+								<div class="media-left">
+									<div class="tmb_wrp">
+										<img src="_temp/pf2.png" alt="">
+									</div>
+								</div>
+								<div class="media-body">
+									<span class="user">rkgud0119</span>
+									<div class="rating_wrp">
+										<span class="starrating" title="4.25">
+								<span style="width:40.25%">4.25</span>
+										</span>
+									</div>
+									<span class="date">2016.04.06</span>
+								</div>
+								<div class="txt">
+									유럽여행 마지막 로마에서3박 했습니다. 남자 사장님이 너무 친절하시게 잘 챙겨 주시고 한눈에 볼수 있게 숙소위치나 관광지가 잘 표시되어 있는 지도가 있습니다. 위치는 사장님이 알려주시는 길로만 오면 역에서 편하게 바로 갈수 있고...
+								</div>
+							</div>
+						</li>
+					</ul>
+					<nav class="text-center">
+						<ul class="pagination clearfix">
+							<li class="prev"><a href="">이전페이지목록보기</a></li>
+							<li>2/7</li>
+							<li class="next"><a href="">다음페이지목록보기</a></li>
+						</ul>
+					</nav>
+				</section> -->
+				<!--2016-12-12 문구 수정 및 a 태그 추가 -->
+				<section id="view4" class="item_review">
+					<div class="clearfix">
+						<h2 class="sub_tit">판매자 문의</h2>
+						<div class="btn-area mt0"><a class="btn btn-xl d_block bg_dark_grey" href="">문의하기</a></div>
+						<p class="fs13 mt10">문의한 내용은 <a href="" class="txt_line">고객센터 > 1:1 문의</a>에서 확인할 수 있습니다.</p>
+					</div>
+				</section>
+				<!--// 2016-12-12 문구 수정 및 a 태그 추가 -->
+			</div>
+			<!-- 인기있는 투어/체험 -->
+			<!-- <section class="nearspot2">
+				<h2 class="sub_tit">런던 여행 갈 때 인기 있는 투어/체험</h2>
+				<ul class="item_card_lst card_slide v2">
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+								<div class="price_wrp"> 1인 <span class="price">€50</span> </div>
+								<div class="meta_wrp">
+									<span class="circle_label bg_org">신규</span>
+									<span class="circle_label bg_ylw">인기</span>
+								</div>
+							</div>
+							<div class="btm_info">
+								<div class="itemwrp media">
+									<div class="media-left">
+										<div class="tmb_wrp">
+											<img src="http://v2.theminda.com/m/1.0/cust/img/default.png" alt="">
+											<span class="badge badge_gold">금뱃지</span>
+										</div>
+									</div>
+									<div class="media-body">
+										<h2 class="tit ellipsis">런던 스트리트 현지인 투어 런던 스트리트 현지인 투어런던 스트리트 현지인 투어</h2>
+										<div class="info-detail">
+											<div class="left">
+												<div class="rating_wrp color_org d_iblock">
+													<span class="starrating" title="4.25">
+														<span style="width:40.25%">4.25</span>
+													</span>
+													<span class="color_mint">24</span>
+												</div>
+												<i class="split"></i>
+												<div class="d_iblock">저장 <span class="color_mint sel_save_cnt">9</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section> -->
+			<div class="btm_fixed">
+				<button type="button" class="btn btn-xl btn-block bg_mint">투어 예약하기</button>
+			</div>
+			<!-- //페이지 끝-->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<!-- <div id="ft" class="bg_blk">
+			<div>
+				<a href="" target="_blank" class="icon_face">민다페이스북보기</a>
+				<a href="" target="_blank" class="icon_blog">민다블로그보기</a>
+				<a href="" class="btn btn_border_grey color_blk ml10">1:1 문의하기</a>
+			</div>
+			<p>
+				(주)사막 사업자등록번호 : 010-86-28116 FAX : 02-722-3478
+			</p>
+			<address>Copyright(c)samack Co.,Ltd. All rights reserved.</address>
+			<ul class="list-inline">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">고객센터</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="color_org">개인정보취급방침</a></li>
+				<li><a href="">PC버전</a></li>
+			</ul>
+		</div> -->
+	</div>
+	<!-- //wrap -->
+	<!-- modal : share -->
+	<div id="mdShare" class="modal fade share_pop" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="text-center pa10">
+				<div class="mb20">
+					<a class="icon_sns_fb" href="#">페이스북</a>
+					<a class="icon_sns_tw" href="#">트위터</a>
+					<a class="icon_sns_kakao" href="#">카카오톡</a>
+					<a class="icon_sns_url" href="#">URL</a>
+				</div>
+				<button type="button" class="btn btn-default bg_silver btn-block btn-xl" data-dismiss="modal" aria-label="Close">취소</button>
+			</div>
+		</div>
+	</div>
+	<div class="ly-pop-map">
+		<div class="ly-pop-inner">
+			<!-- header -->
+			<header id="hd">
+				<h1><a href="/">지도 보기</a></h1>
+				<a class="icon_hd_clse" href="javascript:popMapClose();">닫기</a>
+			</header>
+			<!-- //header -->
+			<!-- [D] 아래 배그라운드 이미지는 데모용-->
+			<div id="map-canvas" class="map-canvas pa0" style=" background:url(_temp/map.jpg) no-repeat 50% 0; background-size:cover">
+				<!-- 지도영역 -->
+				<!-- 마커 -->
+				<a class="markerSpot active" href="#" style="position:absolute;top:200px;right:100px;"></a>
+				<!-- 마커는 기존에 사용하던 마커 사용 -->
+			</div>
+
+		</div>
+	</div>
+	<script>
+	jQuery(function($) {
+		var w = $(window);
+		var wW = w.width();
+
+		// var top_swiper = new Swiper('.top-img-swiper', {
+		// 	//pagination: '.swiper-pagination',
+		// 	slidesPerView: 'auto',
+		// 	paginationClickable: true,
+		// 	spaceBetween: 3,
+		// 	freeMode: true,
+		// 	onInit : function(swiper){
+		// 		var total_w =0;
+		// 		var $slides = $('.top-img-swiper .swiper-slide');
+		// 		var cnt = swiper.slides.length
+		// 		for(var i=0;i<cnt+1;i++){
+		// 			total_w += $slides.eq(i).width();
+		// 		}
+		// 		if(total_w<wW){
+		// 			swiper.wrapper.css('justify-content','center');
+		// 		}
+		// 	}
+		// });
+
+		// 2016-12-06 스크립스 수정
+		// $('.swiper-container').each(function() {
+		// 	var $t = $(this),
+		// 		wrap_w = $t.width(),
+		// 		customSwiper = new Swiper($t, {
+		// 			slidesPerView: 'auto',
+		// 			paginationClickable: true,
+		// 			spaceBetween: 3,
+		// 			freeMode: true,
+		// 			//pagination: $t.find('.swiper-pagination'),
+		// 			//nextButton: $t.find('.swiper-button-next'),
+		// 			//prevButton: $t.find('.swiper-button-prev'),
+		// 			//paginationType: 'fraction'
+		// 			onInit : function(swiper){
+		// 				var total_w =0;
+		// 				var $slides = $t.find('.swiper-slide');
+		// 				var cnt = swiper.slides.length
+		// 				for(var i=0;i<cnt+1;i++){
+		// 					total_w += $slides.eq(i).width();
+		// 				}
+		// 				if(total_w<wrap_w){
+		// 					swiper.wrapper.css('justify-content','center');
+		// 				}
+		// 			}
+		// 		});
+
+		// });
+
+		// 상단탭
+		var	lastScrollTop = 0,
+			$bottomBtn = $('.btm_fixed'),
+			bottomH = $bottomBtn.innerHeight(),timer;
+
+		w.scroll(function() {
+			var st = w.scrollTop();
+			if (st > lastScrollTop){
+				$bottomBtn.css({
+					'bottom' : -bottomH,
+					transition: 'bottom .4s ease-in-out'
+				})
+			} else {
+				$bottomBtn.css({
+					'bottom' : 0,
+					transition: 'bottom .4s ease-in-out'
+				})
+			// upscroll code
+			}
+			lastScrollTop = st;
+			hdControl();
+			clearTimeout(timer);
+			timer = setTimeout( refresh , 150 );
+
+		});
+		var refresh = function () {
+			$bottomBtn.css({
+				'bottom' : 0
+			})
+		};
+
+		$('.bx_more>a').click(function(){
+			$(this).parent().prev().toggleClass('open');
+
+			var more_text_tag = $(this).find("font");
+			var more_text = more_text_tag.text();
+			if(more_text.trim()=="더보기")
+			   more_text_tag.text("접기")
+			else
+				more_text_tag.text("더보기")
+			return false;
+		});
+
+		hdControl();
+		courseCtrl.init();
+	});
+	function hdControl() {
+		var w = $(window);
+		var $hd = $('#hd')
+		var $top = $('.guide_hd');
+		var topH = $top.innerHeight();
+		var sT = w.scrollTop();
+		if (sT > topH) {
+			$hd.css({
+				background: 'rgba(255,255,255,1)',
+				transition: 'background .4s ease-in-out'
+			});
+			$hd.removeClass('transparent');
+		} else {
+			$hd.addClass('transparent');
+			$hd.css({
+				background: 'rgba(255,255,255,0)',
+				transition: 'background 0s ease-in-out'
+			});
+		}
+	}
+	$(window).load(function(){
+        $(".bx_more_obj").each(function(){
+            var dataHeight = $(this).data('height');
+            var divHeight = $(this).innerHeight();
+            var pHeight = $(this).children('.bx_more_contents').height();
+
+            if(dataHeight == undefined) dataHeight = 100; // default height
+            else $(this).height(dataHeight);
+
+            if(pHeight < dataHeight){
+               resetMorebx ($(this));
+               if(dataHeight != 100) $(this).height(divHeight);
+            }
+        });
+	});
+	function resetMorebx($el){
+		$el.siblings(".bx_more").hide();
+       	$el.addClass('open');
+       	//$(this).removeClass('bx_more_obj')
+	}
+	var courseCtrl = {
+		$courseBox :null,
+		$courseDetail : null,
+		$btn : null,
+		courseCnt : 0,
+		init:function(){
+			var _this = this;
+			this.$courseBox = $('.tour_course_info .bx_more_obj');
+			this.$courseDetail = this.$courseBox.find('.course_detail');
+			this.courseCnt = this.$courseDetail.length;
+			this.btn =$('.tour_course_info .bx_more a');
+			if(this.courseCnt<3){
+				resetMorebx(this.$courseBox);
+			}else{
+				this.hide();
+			}
+
+			this.btn.click(function(e){
+				e.preventDefault();
+				console.log('test');
+				if(_this.$courseBox.hasClass('open')){
+					_this.$courseDetail.show();
+				}else{
+					_this.hide();
+				}
+			})
+
+		},
+		hide:function(){
+			_this = this;
+			this.$courseDetail.each(function(index){
+				if(index>1){
+					_this.$courseDetail.eq(index).hide();
+				}
+			})
+		}
+	}
+	function popMapClose(){
+		$('body').removeClass('full-ly');
+		$('.ly-pop-map').fadeOut(300);
+	}
+	function viewMap()
+	{
+		// 지도 팝업 띄우기
+		$('body').addClass('full-ly');
+		$('.ly-pop-map').fadeIn(300);
+	}
+	function showShare(){
+		$("#mdShare").modal();
+	}
+
+	</script>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

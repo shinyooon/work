@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title> MINDA :: 민박다나와 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- 2016-11-25 event banner area -->
+	<div id="event-modal" class="pop_event pa0 ">
+		<div class="ma0">
+			<div class="top-img">
+				<img src="http://www.theminda.com/m/1.0/cust/img/event/201612/top.jpg" alt=""/>
+			</div>
+			<div class="city-wrap">
+				<img src="http://www.theminda.com/m/1.0/cust/img/event/201612/list_city.jpg" alt=""/>
+				<ul class="list-event-city">
+					<li class="d_iblock"><a href="#event_pari"><span>파리</span></a></li>
+					<li class="d_iblock"><a href="#event_london"><span>런던</span></a></li>
+					<li class="d_iblock" style="width:28%"><a href="#event_barcelona"><span>바르세로나</span></a></li>
+					<li class="d_iblock" style="width:18%"><a href="#event_berlin"><span>베를린</span></a></li>
+					<li class="d_iblock" style="width:18%"><a href="#event_osaka"><span>오사카</span></a></li>
+					<li class="d_iblock"><a href="#event_busan"><span>부산</span></a></li>
+				</ul>
+			</div>
+			<ul class="bg_wh event_room_list">
+				<li>
+					<span id="event_pari" class="scroll-pos"></span>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=6681')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room1.jpg" alt="파리 하울민박. 선물 : 11월 16일 ~ 12월 16일 : 5박이상 숙박시 바토뮤수 티켓 제공" /></a>
+				</li>
+				<li>
+					<span id="event_london" class="scroll-pos"></span>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=4369')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room2.jpg" alt="런해뜨(런던 해뜨는민박). 할인 : 11월 11일 ~ 2월 28일 : 뮤지컬 일등석 티켓 선착순 50명에게 50% 할인" /></a>
+				</li>
+				<li>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=1547')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room3.jpg" alt="런던 킹스크로스 KX HOUSE. 파티 : 11월 20일 ~ 3월 31일 : 맥주파티(주 2회), 선물 :11월 20일 ~ 3월 31일 : 3인이상 가족이 4박이상 예약시 과자, 과일, 음료수 세트 제공 " /></a>
+				</li>
+				<li>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=2168')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room4.jpg" alt="런던 워터루민박. 파티: 11월 15일 ~ 1월 31일 : 3박이상 숙박시 삼겹살 파티 (수, 토요일), 선물 : 11월 15일 ~ 1월 31일 : 3박이상 숙박시 무료 야경투어" /></a>
+				</li>
+				<li>
+					<span id="event_barcelona" class="scroll-pos"></span>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=5603')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room5.jpg" alt="바르셀로나 와인하우스. 선물: 12월 20일 ~ 12월 25일 : 체크인 하시는 분에게 와인 1병 제공 " /></a>
+				</li>
+				<li>
+					<span id="event_berlin" class="scroll-pos"></span>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=6647')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room6.jpg" alt="베를린 에비뉴하우스. 선물 : 1월 1일 : 새해맞이 떡국(조식)" /></a>
+				</li>
+				<li>
+					<a href="javascript:MoveGet(http://www.theminda.com/main/view.php?goodsno=6655')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room7.jpg" alt="베를린 미테하우스. 선물 : 1월 1일 : 새해맞이 떡국(조식) 12월 15일 ~ 1월 15일 : 1박당 맥주 1병씩 제공,할인 : 12월 15일 ~ 1월 15일 : 숙박비 10% (현지지불금액) 할인" /></a>
+				</li>
+				<li>
+					<span id="event_osaka" class="scroll-pos"></span>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=5295')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room8.jpg" alt="오사카 구름(9room)하우스. 선물 :  12월 15일 ~ 1월 15일 : 숙박비 10% (현지지불금액)" /></a>
+				</li>
+				<li>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=5893')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room9.jpg" alt="오사카 구름(9room)하우스 2. 선물 : 12월 1일 ~ 12월 31일 : 해당기간에 투숙시 포켓 와이파이 대여" /></a>
+				</li>
+				<li>
+					<span id="event_busan" class="scroll-pos"></span>
+					<a href="javascript:MoveGet('http://www.theminda.com/main/view.php?goodsno=3468')"><img src="http://www.theminda.com/m/1.0/cust/img/event/201612/room10.jpg" alt="부산 스토리 게스트하우스. 파티 : 11월 11일 ~ 12월 31일 : 달파티, 치맥파티" /></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--// 2016-11-25 event banner area -->
+	<!-- //wrap -->
+	<!-- js -->
+	<script>
+	jQuery(function($) {
+		var w = $(window);
+		var $event_city =  $('.pop_event .city-wrap');
+		var $pop_event  = $('.pop_event');
+		var event_city_h = $event_city.innerHeight();
+		w.scroll(function() {
+			var st = w.scrollTop();
+			event_city_pos= $('.top-img').height();
+			if(st>event_city_pos){
+				$pop_event.addClass('fixed');
+			}else{
+				$pop_event.removeClass('fixed');
+			}
+		})
+	});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/bootstrap-datepicker.min.js"></script>
+	<script src="http://v2.theminda.com/m/1.0/cust/js/common.js"></script>
+</body>
+
+</html>

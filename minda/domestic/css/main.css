@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+.swiper-wrapper .top-visual-wrap {position:relative;}
+.swiper-wrapper .main {padding:0;position:relative;}
+.swiper-container {position:relative;z-index:10;}
+.mid-swiper-container  {position:relative;background-color:#fff}
+.top-visual-container {top:0;width:100%;}
+.top-visual-wrap {position:fixed;width:100%;height:390px;top:0;left:0;z-index:5;}
+.top-visual-wrap .img-wrap {height:390px;overflow:hidden;background-size:cover;background-position:center;background-attachment:fixed;}
+.top-visual-wrap .img-wrap img{min-height:100%;}
+.top-visual-wrap .txt-wrap {position:absolute;left:20px;bottom:45px;color:#fff}
+.top-visual-wrap .logo img{display:inline-block;width:81px;margin-bottom:20px}
+.top-visual-wrap .tit {font-size:0.867em;font-weight:bold;margin-top:20px}
+.top-visual-wrap .main-txt {font-size:2.000em;line-height:1.333em;font-weight:300;color:#fff}
+.top-visual-wrap .main-txt span {display:inline-block;line-height:1em;border-bottom:1px solid #fff}
+
+.main .list-item-wrap {position:relative;z-index:10;background-color:#fff}
+.list-item-type >li {padding-top:50px;}
+.list-item-type .info-wrap {margin:0 20px;padding:0 0 20px 0;position:relative;}
+.list-item-type .info-wrap:after {content:'';display:block;width: 0; height: 0;position:absolute;bottom:-10px;left:10px;z-index:6;border-style: solid; border-width: 10px 10px 0 10px; border-color: #fff transparent transparent transparent;}
+.list-item-type .label {font-size:0.867em;color:#fff;display:inline-block;line-height:1em;padding:4px 2px;margin-bottom:8px;font-weight:300}
+.list-item-type .label * {display:inline-block;font-weight:300;line-height:1em}
+.list-item-type .btn-save{position:absolute;top:-12px;right:-10px;}
+.list-item-type .name {display:block;font-size:1.800em;line-height:1.222em;font-weight:300}
+.list-item-type .desc-area {margin:10px 0 0 0;}
+.list-item-type .desc-area .txt {line-height:1.333em}
+.list-item-type .img-wrap {height:230px;overflow:hidden;}
+.list-item-type .btm-wrap {font-size:1.133em;padding:7px;}
+
+.top-sort-wrap {background-color:#fff;padding:13px 20px 0;position:relative;z-index:10}
+.top-sort-wrap:after{content:'';display:block;border-bottom:1px solid #f3f3f3;padding-top:13px;}
+.top-visual-wrap.v2 .tit {font-size:1.067em;margin-bottom:3px;font-weight:bold}
+.top-visual-wrap.v2 .sub-tit{font-size:2.200em}
+/*.top-visual-wrap.v2 {height:238px;}
+.top-visual-wrap.v2 .img-wrap {height:238px}*/
+.top-visual-wrap.v2 .txt-wrap {left:50%;bottom:auto;text-align:center;-webkit-transform:translate(-50%,-29%);-ms-transform:translate(-50%,-29%);-moz-transform:translate(-50%,-29%);transform:translate(-50%,-29%);}
+.top-visual-wrap.v2 .main-txt {font-family:"Lato script=all rev=2";font-weight:100;font-size:2.200em;}
+.main-review .select-area {width:100px;display:inline-block;}
+
+.list-share a {display:block;text-align:center;font-weight:500;padding:17px 0}
+#footer {position:relative;z-index:10}
+#footer .hidden-con {height:1px;overflow:hidden;-webkit-transition: height .3s; transition: height .3s}
+#footer .open .hidden-con{/*height:230px;*/height:auto}
+.footer-btn-area{padding:0 7px}
+.footer-btn-area .btn{display:block;padding:10px 7px}
+.footer-btn-area li a {font-size:0.867em;position:relative;display:block;}
+.footer-btn-area li:not(:last-child) a:after{content:'';background-color:#f3f3f3;display:block;position:absolute;width:1px;height:12px;right:0;top:4px;}
+.footer-btn-area li:nth-child(1) {width:24%}
+.footer-btn-area li:nth-child(2) {width:40%}
+.list-txt +.list-txt{padding-bottom:13px !important;padding-top:10px!important}
+.hidden-con .list-txt{padding:0px 17px}
+.list-txt li {line-height:1.714em;font-weight:300}
+#footer .copyright-area {text-align:center;padding:20px 0 25px}
+#footer .copyright-area .txt{font-size:0.667em}
+#footer .info {position:relative;padding:24px 17px 15px}
+#footer .info .btn-info {position:absolute;top:25px;right:17px;font-weight:600}
+#footer .btn-info .icon-arr {width:16px;height:9px;background-position:0 -80px;vertical-align:top;margin:5px 0 0 5px;}
+#footer .open .btn-info .icon-arr {background-position:-16px -80px}
+#footer .info .btn-info .icon-arr {margin-left:5px}

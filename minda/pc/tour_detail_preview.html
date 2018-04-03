@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title>투어 상세 | 투어 | MINDA</title>
+	<!-- css -->
+	<link rel="stylesheet" href="/cust/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="/cust/css/slider.css">
+	<link rel="stylesheet" href="/cust/css/daterangepicker.css">
+	<link rel="stylesheet" href="/cust/css/nanoscroller.css">
+	<link rel="stylesheet" href="/cust/css/default.css">
+<link rel="stylesheet" href="/cust/css/common.css">
+	<link rel="stylesheet" href="/cust/css/common.dev.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<!-- <link rel="stylesheet" href="css/common.dev.css"> -->
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<!-- 2017-09-18 미리보기 시 body--preview 클래스 추가 -->
+<body class="body--preview">
+<!-- <body> -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="header clearfix">
+				<!-- 2017-06-13 로고 이미지 변경 -->
+				<h1 class="logo"><a href="index.html"><img src="http://www.theminda.com/cust/img/logo_org128x28.png" alt=""><span class="sr-only">MINDA</span></a></h1>
+				<!--// 2017-06-13 로고 이미지 변경 -->
+				<nav class="hd-nav">
+					<ul class="gnb">
+						<li class="i1"><a href="">숙소 <span class="icon_up">up</span></a></li>
+						<li class="i4"><a href="">트립</a></li>
+						<li class="i2"><a href="">정보 <span class="icon_new">new</span></a></li>
+						<li class="i5">
+							<a href="">부가상품</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">티켓/패스</a></li>
+									<li><a href="">유레일패스/기차표</a></li>
+									<li><a href="">렌터카</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<script>
+					$(function() {
+						$util = $('.userbx');
+						$util.on('focusin', function() {
+							$(this).addClass('open');
+						});
+
+					})
+					</script>
+				</nav>
+				<div class="hd-r">
+					<!-- 2017-06-13 태그 순서 위로 올림 -->
+					<!-- 로그인 후 -->
+					<!-- div class="util">
+						<div class="userbx">
+							<a href="" class="user"><span class="color_org">minda</span>님 <img src="_temp/pf2.png" alt=""></a>
+							<ul class="dropdown-menu">
+								<li><a href="">나의 가이드북</a></li>
+								<li><a href="">나의 숙소예약</a></li>
+								<li><a href="">정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div> -->
+					<!-- 로그인 전 -->
+					<div class="util">
+						<a href="/member/login.php?login_return_page=/main/index.php"> 로그인</a>
+						<a href="/member/register.php">회원가입</a>
+					</div>
+					<ul class="gnb right-gnb clear">
+						<li class="i6">
+							<a href="">민다톡톡</a>
+							<!-- [D] class="active" 추가시 dep2 보여짐 -->
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="">커뮤니티홈</a></li>
+									<li><a href="">톡톡릴레이</a></li>
+									<li><a href="" class="active">구인ㆍ구직</a></li>
+									<li><a href="">사고ㆍ팔고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="i7">
+							<a href="">할인&amp;이벤트</a>
+							<div class="dep2">
+								<ul class="clearfix">
+									<li><a href="" class="active">이벤트</a></li>
+									<li><a href="">민다특가</a></li>
+									<li><a href="">쿠폰존</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<form action="." class="srch_wrp">
+						<!-- <button type="button" class="icon_srch_grey">검색</button> -->
+						<!-- 2017-06-13 silde-wrap 클래스 삭제 -->
+						<div class="input-group">
+							<span class="btn-wrap">
+								<button type="button" class="icon_srch_grey">검색</button>
+							</span>
+							<span class="input-wrap">
+								<input type="text" class="form-control" placeholder="키워드를 입력해주세요">
+								<!-- 자동완성 -->
+								<div class="web_automatic">
+									<ul class="city">
+										<li>이탈리아, 로마</li>
+										<li>이탈리아, 베네치아</li>
+										<li>이탈리아, 밀라노</li>
+										<li>이탈리아, 나폴리</li>
+									</ul>
+								</div>
+							</span>
+							<span class="close-btn-wrap">
+								<button type="button" class="icon_date_close">검색 취소</button>
+							</span>
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<div class="dep2_bg"></div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- top-visual-area-->
+			<div class="top-visual-area">
+				<p class="pos-center"><span class="nodata">대표 이미지를 등록해주세요.</span></p>
+			</div>
+			<!--// top-visual-area-->
+			<!-- 페이지 시작 -->
+			<div class="content">
+				<!-- top-info-area -->
+				<div class="top-info-area w1100 ">
+					<!-- prod-info -->
+					<div class="prod-info clearfix">
+						<div class="explain_txt">
+							<a href="/tg/list.php?category=001003001"><span class="loc">이탈리아 로마</span></a>
+							<h2 class="tit">바티칸 박물관+저녁산책 옵션투어</h2>
+							<div class="link-area">
+								<div class="d_iblock">
+									<button type="button" class="btn no_style pa0 mywish" data-itemno="691" data-cnt="4" data-toggle="button" aria-pressed="false" onclick="javascript:toggleWishZim('wish_update','4', '691', '001003001');"><i class="icon_like_mint"></i>저장</button><span class="d_iblock color_mint ml3">( <span class="wish_num">4</span> )</span>
+								</div>
+								<div class="dropdown split d_iblock">
+									<button type="button" class="no_style" data-toggle="dropdown" aria-expanded="false"><i class="icon_blk_link mr4"></i>공유</button>
+									<ul class="dropdown-menu social_lst clearfix">
+										<li><a href="javascript:share('facebook');" class="icon_link_face">페이스북에 공유하기</a></li>
+										<li><a href="javascript:share('twitter');" class="icon_link_twi">트위터에 공유하기</a></li>
+										<li><a href="javascript:share('url');" class="icon_link_url">URL 공유하기</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="">
+							<div class="price-area">
+								<span class="color_light_grey fw300 txt"><span class="nodata">요금을 등록해주세요.</span></span>
+							</div>
+							<span class="meta ml0 color_light_grey">
+							<span class="color_light_grey">태그를 선택해주세요 </span><i class="dot"></i>이동수단을 입력해주세요<i class="dot"></i>소요시간을 입력해주세요
+						</span>
+						</div>
+						<!-- 하단 예약하기 버튼 -->
+						<div class="tour-option-area">
+							<div class="pop-resve-tour">
+								<!-- <button type="button" class="btn bg_red btn-reserv"><i class="icon_rightoff_wh tip" title="" data-placement="top" data-toggle="tooltip" data-original-title="이 트립은 대기시간 없이 즉시 예약 확정됩니다."></i>즉시예약<span class="icon_arr_lg ml17"></span></button> -->
+								<input type="hidden" id="g_ea_max" value="20">
+								<input type="hidden" id="book_sum" value="0">
+								<input type="hidden" id="ea_sum" value="0">
+								<div class="row">
+									<h3 class="sr-only">예약하기</h3>
+									<form method="post" name="bookFm" id="bookFm" action="charge.php">
+										<input type="hidden" name="itemno" id="itemno" value="691">
+										<input type="hidden" name="option" id="option" value="">
+										<div class="left-area clearfix">
+											<h4 class="tit" id="tour_resv_cal">날짜 선택</h4>
+											<div id="calendarWrp" class="daterange tour-cal-wrap">
+												<input type="text" name="date" class="input-tour-cal selecteShipDate" title="트립 날짜">
+											</div>
+										</div>
+										<div class="right-area">
+											<h4 class="tit sr-only">요금기준 선택</h4>
+											<div class="inner">
+												<ul class="basic_line_lst lst-option">
+													<li><span class="nodata">요금을 등록해주세요.</span></li>
+												</ul>
+												<dl class="total_price clearfix">
+													<dt class="pull-left fw500">총 투어요금</dt>
+													<dd class="pull-right color_red"><b class="font_lato">￦ </b><b class="font_lato" id="tprice">0</b></dd>
+												</dl>
+												<div class="btn-area">
+													<button type="button" onclick="fnReserve();return false;" class="btn btn-block color_wh bg_org btn-reserv-in"><i class="icon_rightoff_wh tip" title="" data-placement="top" data-toggle="tooltip" data-original-title="이 트립은 대기시간 없이 즉시 예약 확정됩니다."></i>즉시예약</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!--// 하단 예약하기 버튼 -->
+						</div>
+					</div>
+					<!--// prod-info -->
+					<!-- partner-info -->
+					<div class="partner-info tb_bx">
+						<a href="javascript:" onclick="ga('send','event','pc_trip_view','click','partner_name_투어핀');location.href='/tg/list.php?mid=tourpin';">
+							<div class="tmbwrp">
+								<img src="/cust/img/admin_profile_none.png" alt="">
+								<span class="badge badge_none">아직 뱃지가 없습니다. 조금만 노력해보세요!</span>
+							</div>
+							<div class="room_txt pl20">
+								<h2>투어핀</h2>
+								<div class="roominfo row">
+									<p class="color_light_grey mt5"></p>
+								</div>
+							</div>
+						</a>
+						<div class="text-right">
+							<!-- 2017-03-31 add -->
+							<div class="dropdown d_iblock">
+								<button class="btn btn-sm" onclick=" $('#pop_certi').modal();">인증정보<span class="color_red ml3">1</span></button>
+							</div>
+						</div>
+					</div>
+					<!--// partner-info -->
+				</div>
+				<!--// top-info-area -->
+				<div id="detailContent" class="prod_view">
+					<nav id="tabNav" class="scroll_nav v2">
+						<ul class="nav nav-justified">
+							<li><a href="#view1">기본정보</a></li>
+							<li><a href="#view2">미팅정보</a></li>
+							<li><a href="#view3">여행코스</a></li>
+							<li><a href="#view4">안내사항</a></li>
+							<li><a href="#view5">리뷰</a></li>
+						</ul>
+					</nav>
+					<!-- view1 : 기본 정보 -->
+					<section id="view1" class="w1100 clearfix basic-info">
+						<h3 class="sr-only">기본정보</h3>
+						<div class="left-area">
+							<h4 class="sub-tit">트립을 소개합니다</h4>
+						</div>
+						<div class="right-area">
+							<div class="bx_more_obj">
+								<div class="txt_bx" data-height="390">
+									<!--[D] height 390이상일때 더보기 버튼 추가 -->
+									<p>
+										<span class="nodata">트립 소개를 입력해주세요.</span>
+									</p>
+								</div>
+								<div class="bx_more">
+									<button type="button" class="btn no_style color_org pa0"><span class="txt">더보기</span></button>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!--// view1 : 기본 정보 -->
+					<!-- view2 : 미팅정보 -->
+					<section id="view2" class="bg_light_grey3 meeting-info">
+						<div class="w1100 clearfix">
+							<h3 class="sr-only">미팅정보</h3>
+							<div class="left-area">
+								<h4 class="sub-tit">우리 여기서 만나요</h4>
+							</div>
+							<div class="right-area row mb30">
+								<div class="map-area col-xs-6">
+									<span class="nodata">만나는 장소를 입력해주세요.</span>
+								</div>
+							</div>
+							<div class="right-area">
+								<dl class="dl-horizontal">
+									<dt>만나는 시간</dt>
+									<dd><span class="nodata">만나는 시간을 입력해주세요.</span></dd>
+									<dt>만나는 장소</dt>
+									<dd><span class="nodata">만나는 장소를 입력해주세요.</span></dd>
+									<dt>찾아가는 법</dt>
+									<dd><span class="nodata">찾아가는 법을 입력해주세요.</span></dd>
+								</dl>
+							</div>
+						</div>
+					</section>
+					<!--// view2 : 미팅정보 -->
+					<!-- view3 : 여행코스 -->
+					<section id="view3" class="w1100 clearfix course-info">
+						<h3 class="sr-only">기본 정보</h3>
+						<div class="left-area">
+							<h4 class="sub-tit">트립은 이렇게 진행됩니다</h4>
+							<ul class="lst-course pr">
+								<li class="nodata pos-center">코스를 입력해주세요.</li>
+							</ul>
+						</div>
+						<div class="right-area">
+						</div>
+					</section>
+					<!--// view3 : 여행코스 -->
+					<!-- view4 : 안내사항 -->
+					<section id="view4" class="bg_light_grey3 etc-info">
+						<div class="w1100 clearfix">
+							<h3 class="sr-only">안내사항</h3>
+							<h4 class="sub-tit">꼭! 확인하세요</h4>
+							<div class="tb_bx split_part">
+								<div>
+									<h5 class="inner-tit">포함사항</h5>
+									<p><span class="nodata">불포함사항을 입력해주세요.</span></p>
+								</div>
+								<div>
+									<h5 class="inner-tit">불포함사항</h5>
+									<p><span class="nodata">불포함사항을 입력해주세요.</span></p>
+								</div>
+							</div>
+							<div class="clear mt60">
+								<h5 class="inner-tit">유의사항</h5>
+								<p>본 상품에는 여행자보험이 포함되어 있지 않습니다. 여행자보험 가입을 권장합니다. <a href="javascript:" onclick="ga('send','event','pc_trip_view','click','insu_text');var openNewWindow=window.open('about:blank');openNewWindow.location.href='/ticketpass/insurance_calc.php';" class="ml5 color_mint deco_line" target="_blank">여행자보험 바로가기</a></p>
+								<p class="mt25"><span class="nodata">유의사항을 입력해주세요.</span></p>
+							</div>
+							<div class="clear mt60">
+								<h5 class="inner-tit">취소환불규정</h5>
+								<section class="room_refund">
+									<span class="nodata">취소환불규정을 선택해주세요.</span>
+								</section>
+								<!-- 2017-09-18 btn-minda_term 클래스 추가 -->
+								<div class="mt30">
+									<strong class="minda_term">민다 취소환불규정</strong><a href="javascript:popup('/cust/include/common_cancelrule_popup.php?type=2',590,900);" class="btn btn-xs btn_border_grey btn-minda_term">규정보기</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!--// view4 : 안내사항 -->
+					<section class="banner-area insur pb0 ">
+						<div class="w1100">
+							<a href="https://www.trippartners.co.kr/m/travel" target="_blank"><img src="/cust/img/banner/banner_insur_1100.jpg" alt="잠깐 ! 안전한 자유여행을 위해 여행자보험은 필수죠?"></a>
+						</div>
+					</section>
+					<section class="room-intro-area">
+						<div class="w1100">
+							<h4 class="sr-only">숙소트립소개</h4>
+							<div class="tb_bx split_part">
+								<div class="room_detail_lst ma0">
+									<div class="item clearfix pr">
+										<a href="">
+											<div class="pull-left thumb"> <img src="_temp/room.png" alt="">
+												<button type="button" class="icon_heart tmb_heart btn" data-toggle="button">저장안됨</button>
+											</div>
+											<div class="room_des">
+												<h3 class="tit ellipsis fs20">로마 자고가 하우스 로마 자고가 하우스	</h3>
+												<div class="price fs20">
+													<span class="roomtype fs20">콘도형 4인</span>
+													<span class="before_price">￡42~</span>
+													<span class="current_price">￡20~</span>
+													<div class="detail_wrp dropup">
+														<button type="button" class="icon_detailview dropdown-toggle" data-toggle="dropdown">상세가격더보기</button>
+														<ul class="room_detail price_lst dropdown-menu">
+															<li> <span class="roomtype">도미토리</span> <span>￡20~</span> </li>
+															<li> <span class="roomtype">개인실(1 ~ 4)</span> <span>￡50~</span> </li>
+														</ul>
+													</div>
+												</div>
+												<div class="meta clearfix mt30">
+													<ul class="dot_lst lst_inline pull-left">
+														<li class="d_iblock">
+															<span class="starrating"><span style="width:83.2%">83.2%</span> </span>
+															<span>리뷰<span class="color_mint ml3">34</span></span>
+														</li>
+														<li class="d_iblock">저장<span class="color_mint ml3">35</span></li>
+													</ul>
+													<div class="pull-right">
+														<span class="dot_lst label bg_mint fw300">
+															<span>즉시예약</span>
+														<span>전액결제</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="txt-room-intro vt-m">
+									<p class="sub_title pa0 color_default">이 트립은 현지 경험이 풍부한
+										<br />호스트가 직접 진행합니다</p>
+									<p class="fs16 color_default">숙소와 트립을 함께 예약하면 더욱 편한 여행이 될거예요.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="w1100 detail-q-area bg_light_grey3">
+						<div class="w1100 clearfix">
+							<div class="left-area pl40">
+								<h4 class="sub-tit mb0">호스트에게 <br />물어보세요!</h4>
+							</div>
+							<div class="right-area pr40">
+								<div class="cmt_edit mt0">
+									<textarea rows="5" class="form-control plh_grey" title="투어 문의 내용" placeholder="문의내용을 입력하세요."></textarea>
+									<button type="submit">문의하기</button>
+								</div>
+								<div class="txt-area mt15 color_light_grey">
+									<p class="fs13">문의한 내용은 <a href="/mypage/my_qna.php" target="_blank" class="color_mint deco_line"> 마이민다&gt;나의 활동&gt;숙소/트립문의</a>에서도 확인하실 수 있습니다.</p>
+									<p class="fs13">결제 및 시스템 문의는 고객센터에 문의해주세요. <a href="/mypage/my_m2m.php?mode=write" class="color_mint deco_line">문의하기</a></p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- view5 : 리뷰 -->
+					<section id="view5" class="review-info">
+						<div class="w1100">
+							<h3 class="sr-only">리뷰</h3>
+							<div class="clearfix review-top-area">
+								<div class="left-area">
+									<h4 class="sub-tit">투어를 받은<br />여행자들의 리얼 리뷰</h4>
+								</div>
+								<div class="right-area pl20">
+									<div class="rating_wrp xl mb3">
+										<h5 class="tit">평점</h5>
+										<div id="divParity">리뷰없음</div>
+									</div>
+									<p class="color_light_grey">리뷰의 신뢰도를 위해 실제로 트립을 구매하신 분들만 작성 가능합니다.</p>
+								</div>
+							</div>
+							<ul id="divList" class="review_lst lst_style_cmt mt0">	<li class="text-center pa20" style="height:170px;">		<span class="nodata">여행자들의 리얼한 리뷰가 곧 등록됩니다.</span>	</li></ul>
+						</div>
+					</section>
+					<!--// view5 : 리뷰 -->
+				</div>
+			</div>
+			<!--// 페이지 시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<!-- <div id="ft">
+			<div class="w1100 footer">
+				<div class="ft_top">
+					<strong class="font_lato color_wh mb3">information</strong>
+					<div class="ft_info_txt fs13">
+						<span>(주)사막</span>
+						<span>대표 : 김윤희</span>
+						<span>사업자등록번호 : 101-86-28116</span>
+						<span>관광사업등록증 : 제2014-000025호</span>
+						<span>통신판매업신고 : 제 01-5470호</span>
+					</div>
+					<div class="ft_info_txt fs13">
+						<address>서울시 종로구 율곡로 174 창경빌딩 5층</address>
+						<span>TEL : 1661-2892</span>
+						<span>FAX : 02-722-3478</span>
+						<span>운영시간 10:00~12:00 / 13:00 ~ 18:00 (월~금, 공휴일 휴무)</span>
+					</div>
+					<ul class="about_lst clearfix">
+						<li><a href="https://www.facebook.com/pages/%EB%AF%BC%EB%B0%95%EB%8B%A4%EB%82%98%EC%99%80-minbakdanawa/1472332716317239" target="_blank" class="sns"><span class="icon_face">민다페이스북보기</span></a></li>
+						<li><a href="http://blog.naver.com/minbakdanawa" target="_blank" class="sns"><span class="icon_blog">민다블로그보기</span></a></li>
+						<li><a href="/mypage/my_m2m.php?mode=write" class="btn">고객센터 문의</a></li>
+					</ul>
+				</div>
+				<div class="ft_btm clearfix">
+					<ul class="fnb pull-left clearfix">
+						<li><a href="/about/about.php" target="_blank">회사소개</a></li>
+						<li><a href="/manager/partner/partner_edit.php" target="_blank">한인숙소등록</a></li>
+						<li><a href="/document/document.php">이용약관</a></li>
+						<li><a href="/document/privacy.php" class="color_org">개인정보취급방침</a></li>
+						<li><a href="/helpcenter/rule.php">취소환불규정</a></li>
+						<li><a href="/community/list.php?id=notice">고객센터</a></li>
+						<li><a href="/community/list.php?id=notice">공지사항</a></li>
+					</ul>
+					<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
+				</div>
+			</div>
+		</div> -->
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- <div class="fix_btm">
+		<a href="#container" class="icon_top" onclick="scrollMove('#hd');return false;">상단으로이동</a>
+	</div> -->
+	<div id="pop_qustion" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog pop_qustion">
+			<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+			<h1>파리 가고파 민박에 문의하기</h1>
+			<div class="content">
+				<dl class="dl-horizontal fs17 mb20">
+					<dt class="text-left">상품명</dt>
+					<dd class="color_org">파리 워킹투어 반나절</dd>
+					<dt class="text-left mb10">문의내용</dt>
+					<dd class="d_block ml0">
+						<textarea class="form-control-basic plh_grey" row="10" title="투어 문의 내용" placeholder="문의내용을 입력하세요."></textarea>
+					</dd>
+				</dl>
+				<div class="well mb0 pr10 pl20">
+					<ul class="lst_type_rect">
+						<li>문의하신 답변은 고객님의 회원정보에 등록된 이메일로 보내드립니다.</li>
+						<li><span class="color_navy">마이민다>나의 활동>숙소/트립문의</span>에서도 확인하실 수 있습니다.</li>
+						<li>문의하기 전에 링크를 클릭하여 안내사항을 반드시 읽어주세요. <a href="" class="color_navy deco_line">숙소별 문의하기 이용안내</a></li>
+						<li>결제 및 시스템 문의는 고객센터에 문의해주세요. <a href="" class="color_navy deco_line">결제 및 시스템 문의</a></li>
+					</ul>
+				</div>
+				<div class="text-center pt30">
+					<button type="submit" class="btn btn-lg bg_mint">문의하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pop_certi" class="modal fade" tabindex="-1" role="dialog" y>
+		<div class="modal-dialog pop_certi">
+			<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+			<h1>3개의 OOOO님 인증정보</h1>
+			<div class="content">
+				<ul class="list-certi-img">
+					<li class="text-center">
+						<p class="fw400 fs20 mt20 mb15">$증명서명$</p>
+						<div class="img-area" style="width:100%;height:350px;background-color:#eeeeee">
+							//증명서 이미지가 들어갈곳 개발시 style은 삭제해주세요
+						</div>
+					</li>
+					<li class="text-center">
+						<p class="fw400 fs20 mt20 mb15">$증명서명$</p>
+						<div class="img-area" style="width:100%;height:350px;background-color:#eeeeee">
+							//증명서 이미지가 들어갈곳 개발시 style은 삭제해주세요
+						</div>
+					</li>
+					<li class="text-center">
+						<p class="fw400 fs20 mt20 mb15">$증명서명$</p>
+						<div class="img-area" style="width:100%;height:350px;background-color:#eeeeee">
+							//증명서 이미지가 들어갈곳 개발시 style은 삭제해주세요
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="btm-fixed-area bg_wh" id="divConfirm">
+		<div class="w1100">
+			<div class="text-right btn-area clearfix">
+				<p class="d_iblock txt pull-left">미리보기 페이지입니다. 저장한 정보만 노출됩니다.</p>
+				<div class="pull-right">
+					<button type="button" class="btn btn-lg w300">모바일 버전 미리보기</button>
+					<button type="button" class="btn btn-lg w300">닫기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	$(window).load(function() {
+		$('.input-tour-cal').click();
+	});
+
+	$(function() {
+		var w = $(window),
+			$body = $('body'),
+			viewBody = $("#detailContent");
+
+		w.scroll(function() {
+			var sT = w.scrollTop(),
+				startPos = viewBody.offset().top;
+
+			if (sT > startPos) {
+				$body.addClass('view_scroll');
+			} else {
+				$body.removeClass('view_scroll');
+			}
+		});
+
+		// scrollspy : http://getbootstrap.com/javascript/#scrollspy
+		$body.scrollspy({
+			target: '#tabNav',
+			offset: 170
+		});
+
+		// lnb
+		$('#tabNav a').click(function() {
+			$(this).parent().addClass('on').siblings().removeClass('on');
+			scrollMove($(this).attr('href'), 60);
+			return false;
+		});
+
+		// 여행코스
+		$('.lst-course a').click(function() {
+			scrollMove($(this).attr('href'), 80);
+			return false;
+		});
+
+
+		//슬라이드
+		courseViewSlider();
+
+		function courseViewSlider() {
+			var slider_array = [];
+			$('.gallery_big_slider').each(function(i) {
+				slider_array[i] = $(this).bxSlider({
+					sliderWidth: 630,
+					pager: false,
+					controls: false,
+					infiniteLoop: true,
+					onSliderLoad: function(currentIndex) {
+						$('.gallery_big_slider').closest('.slider_bx').addClass('bx_open');
+					}
+				});
+			});
+
+
+			$('.gallery_Controls a').bind('click', function(e) {
+				e.preventDefault();
+				var obj = $(this).closest('.slider_bx').find('.gallery_big_slider');
+				var index = $('.gallery_big_slider').index(obj);
+				if ($(this).hasClass('bxprev')) {
+					slider_array[index].goToPrevSlide();
+				} else if ($(this).hasClass('bxnext')) {
+					slider_array[index].goToNextSlide();
+				}
+			});
+		}
+
+
+		var dataHei = [];
+		$(".bx_more_obj .txt_bx").each(function(idx) {
+			dataHei[idx] = $(this).data('height');
+			if (dataHei[idx] < $(".bx_more_obj .txt_bx").eq(idx).find('p').innerHeight()) {
+				$(this).parent().addClass('over');
+			}
+		})
+		$(".bx_more_obj button").on('click', function() {
+			$(this).parents('.bx_more_obj').toggleClass('open');
+			if ($(this).parents('.bx_more_obj').hasClass('open')) {
+				$(this).find('.txt').text('닫기')
+			} else {
+				$(this).find('.txt').text('더보기')
+			}
+		});
+
+		$(document).mouseup(function(e) {
+			var popup = $(".dropdown-menu");
+			if (!$('.dropdown > .btn').is(e.target) && !popup.is(e.target) && popup.has(e.target).length == 0) {
+				popup.closest('.dropdown').removeClass('open');
+			}
+		});
+
+		$cal_input = $('.input-tour-cal');
+		var dateToday = new Date();
+		$cal_input.on({
+			'changeDate': function(e) {
+				$cal_input.val(e.format());
+			}
+		});
+		$cal_input.daterangepicker({
+			autoApply: true,
+			minDate: dateToday,
+			parentEl: '#calendarWrp',
+			singleDatePicker: true,
+			opens: 'center',
+			alwaysShowCalendars: true,
+			locale: {
+				format: 'YYYY/MM/DD',
+				"daysOfWeek": [
+					"일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"
+				],
+				"monthNames": [
+					"1월",
+					"2월",
+					"3월",
+					"4월",
+					"5월",
+					"6월",
+					"7월",
+					"8월",
+					"9월",
+					"10월",
+					"11월",
+					"12월"
+				]
+			}
+		});
+		$('.btn-reserv').click(function() {
+			$cal_input.click();
+			$(this).closest('.fix_btm').toggleClass('over');
+		})
+	})
+	</script>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="/cust/js/jquery.placeholder.js"></script>
+<script src="/cust/js/html5.js"></script>
+<script src="/cust/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="/cust/js/bootstrap-slider.js"></script>
+	<script src="/cust/js/jquery.nanoscroller.js"></script>
+	<script src="/cust/js/moment.min.js"></script>
+	<script src="/cust/js/daterangepicker.js"></script>
+	<script src="/cust/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="/cust/js/common.js"></script>
+</body>
+
+</html>

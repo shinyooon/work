@@ -1,0 +1,91 @@
+<? include "inc/top.html" ?>
+	<!-- wrap.screenID -->
+	<div id="wrap" class="page_tb">
+		<!-- header -->
+		<? include "inc/header.html" ?>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container">
+			<!-- <span class="sub_bg"></span> -->
+			<!-- 페이지시작 -->
+			<div class="content w1100">
+				<? include "inc/event_top.html" ?>
+                <!-- 이벤트 내용 시작 -->
+                <div style="margin: 0px auto; position: relative; max-width: 1080px;">
+                    <div class="pr">
+                        <img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/img1.jpg?v=2" alt="민다에 대해 말하는 리뷰 이벤트"/>
+                        <p class="sr-only">구글플레이와 애플 앱스토어에 리뷰만 남기면 모두에게 민다포인트 2,000P를 드리고 우수리뷰 작성자 10명에게 영화예매권(1인 2매) 증정</p>
+                        <dl class="sr-only">
+                            <dt>이벤트기간</dt>
+                            <dd>2018년 1월 4일부터 ~ 1월 28일까지</dd>
+                            <dt>응모방법</dt>
+                            <dd>
+                                <ol>
+                                    <li>앱스토어에서 리뷰작성하고 제출, 보내기를 누르기 직전 화면 캡쳐</li>
+                                    <li>민다 페이스북 페이지에서 앱 리뷰이벤트 게시물의 덧글로  캡쳐화면, 민다ID를 적고 업로드하면 응모완료. 네이버나 페이스북 회원가입자는 이메일주소 필수 기입</li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <div style="position:absolute;bottom:5.7%;width:100%;text-align:center;">
+                            <div class="event-review__btn-area1" style="display:none">
+                                <a href="javascript:AppInvokeOpenNewPage('http://bitly.com/mindaapp', 'y', 'y');" onclick="ga('send','event','event_page_button','click','button_event_appreview');" style="display:inline-block;width:38.3%;margin-bottom:0.3%"><img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/btn_review.png?v=2" alt="리뷰 작성하기"/></a>
+                            </div>
+                            <div class="event-review__btn-area2" style="display:none">
+                                <ul style="margin:0;padding:0">
+                                    <li style="display:inline-block;width:38.3%;margin:0 -0.3%"><a href="javascript:AppInvokeOpenNewPage('https://itunes.apple.com/kr/app/minda-minbagdanawa/id965630569?mt=8', 'y', 'y');" onclick="ga('send','event','event_page_button','click','button_event_appreview');"><img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/btn_appstore.png?v=2" alt="Download on the App Store"/></a></li>
+                                    <li style="display:inline-block;width:38.3%;margin:0 -0.3%"><a href="javascript:AppInvokeOpenNewPage('https://play.google.com/store/apps/details?id=com.anymobi.samak.minbakdanawa', 'y', 'y');" onclick="ga('send','event','event_page_button','click','button_event_appreview');"><img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/btn_googleplay.png?v=2" alt="GET IT ON Google Play" /></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <dl class="sr-only">
+                        <dt>참여자 전원</dt>
+                        <dd>현금처럼 사용할 수 있는 2,000P 증정</dd>
+                        <dt>우수 작성자</dt>
+                        <dd>10명 선정하여 영화예매권 1인 2매 증정</dd>
+                    </dl>
+                    <div class="pr">
+                        <img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/img2.jpg" alt=""/>
+                        <div style="position:absolute;bottom:7%;width:100%;text-align:center;">
+                            <a href="javascript:AppInvokeOpenNewPage('https://www.facebook.com/minbakdanawa/posts/1936294726587700', 'y', 'y');" onclick="ga('send','event','event_page_button','click','button_event_facebookupload');" style="display:inline-block;width:41.3%"><img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/btn_fb.png" alt="페이스북 댓글로 업로드하기"/></a>
+                        </div>
+                    </div>
+                    <img style="width: auto; display: inline-block; max-width: 100%;" src="/event/img/201801/review/img3.jpg" alt="" />
+                    <dl class="sr-only">
+                        <dt>유의사항 안내</dt>
+                        <dd>이벤트 기간 동안 한 ID당 1회 응모 가능합니다.</dd>
+                        <dd>우수작성자 당첨자 발표 : 1월 30일(화) 민다 페이스북 페이지에서 확인 / 참여자 전원에게 2,000P 지급</dd>
+                        <dd>이벤트 기간 내 작성된 리뷰임과 동시에 페이스북 프로필 정보 수집에 동의해주셔야 정상적으로 경품 지급이 진행됩니다.</dd>
+                        <dd>욕설, 비속어, 비방, 민다와 관련 없는 리뷰 작성 및 부정 응모 시 모두 응모 취소 처리됩니다.</dd>
+                        <dd>본 이벤트는 사전 고지없이 변경 및 조기 종료될 수 있습니다.</dd>
+                    </dl>
+                </div>
+                <script type="text/javascript">
+                    $(function() {
+                        var filter = 'win16|win32|win64|mac';
+                        if (navigator.platform) {
+                            if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+                                /*Mobile*/
+                                $('.event-review__btn-area1').show();
+                                $('.event-review__btn-area2').hide();
+                            }
+                            else {
+                                /*Mobile*/
+                                $('.event-review__btn-area1').hide();
+                                $('.event-review__btn-area2').show();
+                            }
+                        }
+                    });
+                </script>
+                <!-- 이벤트 내용 끝 -->
+                <? include "inc/event_bottom.html" ?>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+		<? include "inc/footer.html" ?>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+<? include "inc/bottom.html" ?>

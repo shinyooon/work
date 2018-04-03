@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+
+@mixin clearboth () {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+@mixin textEllpisis (){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin lineEllpisis ($line-height:20px,$lines-to-show:2){
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	max-height: $line-height*$lines-to-show; /* Fallback for non-webkit */
+	-webkit-line-clamp: $lines-to-show;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@mixin clearEllpisis ($line-height:20px,$lines-to-show:2){
+	max-height: none;
+	-webkit-line-clamp:initial;
+	overflow:visible;
+	text-overflow:initial;
+}
+
+
+@mixin boxsize () {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin opacity($value) {
+	opacity: $value;
+	// IE8 filter
+	$opacity-ie: ($value * 100);
+	filter: #{alpha(opacity=$opacity-ie)};
+}
+
+
+@mixin sr-only($hasWidth:false){
+		@if ($hasWidth ==false){
+				width:1px;
+				height:1px;
+		}
+		white-space:nowrap;
+		text-indent:130%;
+		overflow:hidden;
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 2px, $color: rgba(220,225,232,.28), $inset: "") {
+		@if ($inset != "") {
+				@include css3-prefix('box-shadow', $inset $x $y $blur $color);
+		} @else {
+				@include css3-prefix('box-shadow', $x $y $blur $color);
+		}
+}
+
+@mixin d-flex($pos:null) {
+	display:-webkit-flex;
+	display:flex;
+	@if ($pos==center){
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+}
+@mixin flex($value: 1) {
+		@include css3-prefix('flex', $value);
+}
+
+@mixin border-radius($radius: 5px) {
+		@include css3-prefix('border-radius', $radius);
+}
+
+@mixin box-sizing($type: border-box) {
+		@include css3-prefix('box-sizing', $type);
+}
+@mixin tranform($x,$y){
+		@include css3-prefix('transform',translate($x,$y));
+}
+
+//text
+@mixin text($font-color, $font-size : 1em, $font-weight: $fw__300) {
+		color: $font-color;
+		font-size: $font-size;
+		font-weight:$font-weight;
+}
+
+// list
+@mixin list-inline($margin-right:5px){
+		display:inline-block;
+		&:not(:last-child){
+				margin-right:$margin-right;
+		}
+}
+
+@mixin list-dot($size:sm, $color:$color__default){
+		position: relative;
+		&:before{
+				display:inline-block;
+				vertical-align:top;
+				position: absolute;
+		}
+		@if($size==sm){
+				padding-left:0.5em;
+				&:before{
+			content:'·';
+			left:0;
+			top:0;
+				}
+		}
+		@else if($size==lg){
+				padding-left:0.7em;
+				&:before{
+			content:'';
+			width:4px;
+			height:4px;
+			@include border-radius(50%);
+			background-color:$color;
+			left:0;
+			top:6px;
+				}
+		}
+}
+
+@mixin list-bar(){
+		padding-left:0.5em;
+		position: relative;
+		&:before{
+				content:'-';
+				display:inline-block;
+				vertical-align:top;
+				position: absolute;
+				left:0;
+				top:0;
+		}
+}
+
+@mixin list-inline-dot(){
+		display:inline-block;
+		vertical-align:top;
+		&:not(:last-child):after{
+				content:'·';
+				display:inline-block;
+				vertical-align:top;
+				margin:0 0.4em;
+		}
+}
+
+@mixin list-inline-dl(){
+		dt,dd{
+				display:inline-block;
+				vertical-align:top;
+		}
+}
+
+@mixin list-dl($dt_width,$margin-bottom:13px){
+	dt{
+			float:left;
+			width:$dt_width;
+	}
+	dd{
+			margin-left:$dt_width;
+			&:not(:last-child){
+		margin-bottom:$margin-bottom;
+			}
+	}
+}
+
+@mixin list-split(){
+	display:inline-block;
+	padding-right:0.8em;
+	margin-right:0.6em;
+	position: relative;
+	&:not(:last-child):before{
+			content:'';
+			display:inline-block;
+			position: absolute;
+			width:1px;
+			background-color:$color__eee;
+			right:0;
+			top:2px;
+			bottom:2px;
+	}
+}
+
+//common icon
+@mixin icon-spr($width,$height,$pos-x,$pos-y){
+	display:inline-block;
+	width:$width;
+	height:$height;
+	background-repeat:no-repeat;
+	background-position: $pos-x $pos-y;
+	vertical-align:top;
+}
+
+//box
+@mixin box-style($padding-top : 0, $padding-right :0 , $padding-bottm :0 , $padding-left :0){
+	padding: $padding-top $padding-right $padding-bottm $padding-left;
+	background-color:$color__wh;
+	@include border-radius();
+	@include box-shadow();
+	overflow:hidden;
+}
+
+// border
+@mixin border($border-color,$thick:1px){
+	border:$thick solid $border-color
+}
+@mixin border-btm($border-color:$color__eee, $width:1px){
+	border-bottom:$width solid $border-color
+}
+
+//position center
+@mixin pos-center(){
+	position:absolute;
+	top:50%;
+	left:50%;
+	@include css3-prefix('transform', translate(-50%,-50%));
+}
+
+@mixin nostyle() {
+	margin:0;
+	padding:0;
+	border-radius:0
+}
+
+@mixin transition($property, $duration, $ms: false) {
+	-webkit-transition: $property $duration ease-in-out;
+	-moz-transition: $property $duration ease-in-out;
+	-o-transition: $property $duration ease-in-out;
+	@if ($ms) {
+			-ms-transition: $property $duration ease-in-out;
+	}
+	transition: $property $duration ease-in-out;
+}
+
+@mixin transitionDelay($delay) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+//button
+@mixin btn ($bg-color,$size: md){
+	@include border-radius(3px);
+	display:inline-block;
+	text-align:center;
+	background-color:$bg-color;
+	@if $size == xs{
+		font-size:12px;
+		padding: 8px 10px;
+		//min-height:31px;
+		}
+	@else if $size == sm{
+		font-size:13px;
+		padding:11px 20px;
+		}
+	@else if $size == md {
+		font-size:15px;
+		font-weight:$fw__400;
+		padding:12px 20px 12px;
+		}
+	@else if $size == lg{
+		min-width:127px;
+	@include text(#fff,20px,$fw__500);
+		padding:17px 28px;
+		}
+
+	@if ($bg-color != $color__wh) and ($bg-color !=#e6eaf1) and ($bg-color != $color__f3f3f3) {
+		color:#fff;
+		}
+
+}
+
+@mixin padding($padding-top : 0, $padding-left : 20px){
+	padding:$padding-top $padding-left;
+}
+
+@mixin scroll() {
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+@mixin starrating($size:sm){
+	$width:18px;
+	$height:14px;
+	$bg_pos :0 -20px;
+	@if $size == lg{
+		$width:26px;
+		$height:20px;
+		$bg_pos : 0 -30px;
+		.starrating__wrap,.starrating__star{
+			background-image:url(#{$path}/img/icon/spr_icon_starlg.png?v=#{$img_version});
+		}
+	}@else if $size == sm{
+		.starrating__wrap,.starrating__star{
+			background-image:url(#{$path}/img/icon/spr_icon_star.png?v=#{$img_version});
+		}
+	}
+	.starrating__wrap,.starrating__star{
+		display:inline-block;
+		vertical-align:top;
+		background-size:$width auto;
+		background-repeat:repeat-x;
+		height:$height;
+	}
+	.starrating__wrap{
+		width:$width*5;
+	}
+	.starrating__star{
+		display:block;
+		background-position:$bg_pos;
+	}
+}

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.login{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	@include scroll();
+}
+.login__wrap{
+	padding:110px 40px 0;
+	min-height:640px;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow: auto;
+}
+.login__tit{
+	text-align:center;
+}
+.login__tit-txt{
+	font-size:em(20px);
+}
+.login__logo{
+	display:block;
+	width:131px;
+	margin:0 auto 20px;
+}
+.login__tit-txt{
+	font-size:em(24px);
+	font-weight:$fw__800;
+	display:block;
+	line-height:1em;
+}
+.login__help{
+	margin:24px 0 0;
+	&:after{
+		@include clearboth();
+	}
+}
+.login__save{
+	float:left;
+}
+.login__find{
+	float:right;
+	text-align:right;
+}
+.login__input-list{
+	margin-top:128px;
+	li:not(:last-child){
+		margin-bottom:30px;
+	}
+}
+.login__btm{
+	position:absolute;
+	width:100%;
+	left:0;
+	bottom:30px;
+	text-align:center;
+}
+.login__btm-txt,.login__btm-link{
+	@include text($color__aaa,em(13px))
+}
+.login__btm-link{
+	text-decoration:underline;
+}
+.find{
+	.input-wrap{
+		display:block;
+		width:100%;
+	}
+}

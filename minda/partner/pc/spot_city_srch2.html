@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master"><!-- [D] 숙소주홈 class="master" -->
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="hd_top">
+			<div class="w1260 clearfix">
+				<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_big.png" alt="MINDA 파트너홈"></a></h1>
+				<nav class="d_iblock nav-center">
+					<ul class="clearfix">
+						<li><a href="" class="active">숙소</a></li>
+						<li><a href="">여행정보</a></li>
+						<li><a href="">여행상품</a></li>
+					</ul>
+				</nav>
+				<div class="hd_side">
+					<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+
+<!-- 페이지시작 -->
+
+<div class="content w1260">
+	<aside class="content_aside">
+		<nav class="snb snb-lg">
+			<ul>
+				<li class="active"><a href="">스팟</a></li>
+				<li><a href="">일정</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- 컨텐츠 영역 -->
+	<div class="content_body admin_room_wrp clearfix">
+		<div class="body_tit clearfix">
+			<p class="pull-left fs14">홍길동님이 생성하거나 사용한 스팟이 아직 없습니다.</p>
+			<div class="pull-right">
+				<button type="button" class="btn bg_mint" onClick="jQuery('#once').fadeToggle(300);">스팟선택</button>
+
+			</div>
+		</div>
+		<div>
+			<!-- Tab -->
+			<div class="room_detail_hd">
+				<!-- 탭 -->
+				<ul class="basic_step2 tb_fixed">
+					<li class="active"><a href="">생성한 스팟</a></li>
+					<li><a href="">사용중인 스팟</a></li>
+				</ul>
+			</div>
+			<!-- 없을 때 -->
+			<div class="no_spot">
+				<div>
+					<p>
+						아직 등록한 스팟이 없습니다.<br>
+						여행자들에게 꼭 추천하고 싶은 스팟을 지금 만들어보세요.<br>
+						<!-- 등록전 출력안함 -->
+						<span class="color_mint">(비즈머니 10,000원 지급!)</span>
+					</p>
+					<button type="button" class="btn btn-lg bg_mint" data-toggle="modal" data-target="#createSpot">스팟 생성하기</button>
+				</div>
+			</div>
+			<!-- 한번만 보이는 레이어 -->
+			<div id="once" class="admin_bubble_arrow">
+				<h3 class="sub_title mt10"><span class="color_mint"><i class="icon_help_mint"></i> 도움말</span> 스팟을 선택하는 두 가지 방법</h3>
+				<h4>첫번째. 스팟을 생성할 수 있어요.</h4>
+				<ul class="lst_type_dot">
+					<li>스팟의 유일무이한 생성자로 기록됩니다. (스팟 상단에 내 프로필이 공개되요)</li>
+					<li>나만 아는 스팟! 여행자들에게 꼭 추천해주고 싶은 스팟! 을 맨 처음으로 알려줄 수 있습니다.</li>
+					<li>생성한 스팟의 개수에 따라 뱃지가 업그레이드되고 그에 따른 혜택이 주어집니다.</li>
+					<li>스팟이 오픈되면 비즈머니를 지급합니다.</li>
+				</ul>
+				<h4>두번째. 이미 생성된 스팟을 사용할 수 있어요. </h4>
+				<ul class="lst_type_dot">
+					<li>이미 생성되어 있는 스팟을 나의 추천스팟, 숙소 근처 스팟이라고 지정할 수 있습니다.</li>
+					<li>다른 사람이 먼저 만든 스팟이더라도 나의 사업자 페이지에서 생성한 스팟들과 함께 보여집니다.</li>
+					<li>나의 사업자 페이지에서 내가 등록한 추천이유와 사진, 숙소에서의 거리가 보여집니다.</li>
+					<li>물론 ‘스팟’ 메뉴에서 보여지는 스팟 내용에도 내가 등록한 추천이유와 사진이 보여집니다.</li>
+				</ul>
+				<div class="mt20 text-center">
+					<button type="button" class="btn btn_border_grey">읽었습니다. 다시는 보지 않기 &times;</button>
+				</div>
+			</div>
+			<!-- 다른 사람들이 생성한 스팟 보기 -->
+			<div class="border_org recommend_bx">
+				<div class="result_hd clearfix">
+					<h3 class="sub_title mt0 d_iblock">다른 사람들이 생성한 스팟 보기</h3>
+					<div class="result_hd_side"><a href="">더보기 +</a></div>
+				</div>
+				<ul class="row discount_room_lst spot_lst">
+					<li class="col-xs-4">
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+							</div>
+							<div class="room_info">
+								<span class="d_block mb3">이탈리아 밀라노</span>
+								<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+							</div>
+							<div class="meta clearfix color_grey">
+								<span><i class="icon_thumb"></i> 추천스팟</span>
+								<i class="split"></i>
+								<span><i class="icon_location"></i> 숙소근처</span>
+								<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+								<span><i class="icon_walking"></i> 5분</span>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<div class="span pull-left">
+								<div class="rating_wrp color_org">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+									<span>(24)</span>
+								</div>
+							</div>
+							<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+						</div>
+					</li>
+					<li class="col-xs-4">
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+							</div>
+							<div class="room_info">
+								<span class="d_block mb3">이탈리아 밀라노</span>
+								<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+							</div>
+							<div class="meta clearfix color_grey">
+								<span><i class="icon_thumb"></i> 추천스팟</span>
+								<i class="split"></i>
+								<span><i class="icon_location"></i> 숙소근처</span>
+								<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+								<span><i class="icon_walking"></i> 5분</span>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<div class="span pull-left">
+								<div class="rating_wrp color_org">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+									<span>(24)</span>
+								</div>
+							</div>
+							<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+						</div>
+					</li>
+					<li class="col-xs-4">
+						<a href="">
+							<div class="tmb pr">
+								<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+							</div>
+							<div class="room_info">
+								<span class="d_block mb3">이탈리아 밀라노</span>
+								<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+							</div>
+							<div class="meta clearfix color_grey">
+								<span><i class="icon_thumb"></i> 추천스팟</span>
+								<i class="split"></i>
+								<span><i class="icon_location"></i> 숙소근처</span>
+								<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+								<span><i class="icon_walking"></i> 5분</span>
+							</div>
+						</a>
+						<div class="clearfix btm_info">
+							<div class="span pull-left">
+								<div class="rating_wrp color_org">
+									<span class="starrating ver_org" title="4.25">
+										<span style="width:40.25%">4.25</span>
+									</span>
+									<span>(24)</span>
+								</div>
+							</div>
+							<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+		<a href="" class="split">숙소주 이용약관</a>
+		<a href="" class="split">숙소주 광고이용약관</a>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+<!--  스팟생성 -->
+<div id="createSpot" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal_admin">
+		<button type="button" class="icon_pop_close" data-dismiss="modal" aria-label="Close">닫기</button>
+		<h1>스팟이 생성되어 있는지 확인한 후 진행하시기 바랍니다.</h1>
+		<div class="pa30">
+			<!-- Tab -->
+			<div class="room_detail_hd">
+				<p class="mb10">※ 도시 검색을 하시면 이미 생성되어 있는 스팟을 선택해 바로 사용하실 수 있습니다.</p>
+				<!-- 탭 -->
+				<ul class="basic_step2 tb_fixed">
+					<li><a href="">스팟명 검색</a></li>
+					<li class="active"><a href="">도시 검색</a></li>
+				</ul>
+			</div>
+			<form class="filterwrp row mt40">
+				<div class="col-sm-11 pr15">
+					<p class="pt5">‘$도시명$’에 대한 검색결과 <strong class="color_org">55</strong>개</p>
+				</div>
+				<div class="col-sm-1">
+					<button class="btn btn-block pt5 pb5 bg_grey fs16" type="submit">도시 선택</button>
+				</div>
+			</form>
+			<!-- 목록 -->
+			<ul class="row discount_room_lst spot_lst">
+				<li class="col-xs-4">
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+					</a>
+					<!-- [D] 선택 시 class=active 추가 -->
+					<button type="button" class="btn btn_border_mint btn-block mt10">선택</button>
+				</li>
+				<li class="col-xs-4">
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+					</a>
+					<!-- [D] 선택 시 class=active 추가 -->
+					<button type="button" class="btn btn_border_mint active btn-block mt10">선택</button>
+				</li>
+				<li class="col-xs-4">
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+					</a>
+					<!-- [D] 선택 시 class=active 추가 -->
+					<button type="button" class="btn btn_border_mint active btn-block mt10">선택</button>
+				</li>
+				<li class="col-xs-4">
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+					</a>
+					<!-- [D] 선택 시 class=active 추가 -->
+					<button type="button" class="btn btn_border_mint btn-block mt10">선택</button>
+				</li>
+				<li class="col-xs-4">
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+					</a>
+					<!-- [D] 선택 시 class=active 추가 -->
+					<button type="button" class="btn btn_border_mint active btn-block mt10">선택</button>
+				</li>
+				<li class="col-xs-4">
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+					</a>
+					<!-- [D] 선택 시 class=active 추가 -->
+					<button type="button" class="btn btn_border_mint active btn-block mt10">선택</button>
+				</li>
+			</ul>
+			<!-- 페이징 -->
+			<nav class="text-center">
+				<ul class="pagination clearfix">
+					<li class="prev"><a href="">이전페이지목록보기</a></li>
+					<li><a href="">1</a></li>
+					<li><a href="" class="active">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li class="next"><a href="">다음페이지목록보기</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<script>
+$('.modal').modal();
+</script>
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+</html>

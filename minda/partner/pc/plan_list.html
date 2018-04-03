@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>MinDa :: 민박다나와 </title>
+
+<!-- css -->
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="master"><!-- [D] 숙소주홈 class="master" -->
+<a class="skip" href="#container">Skip to main content</a>
+<!-- wrap.screenID -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="hd_top">
+			<div class="w1260 clearfix">
+				<h1 class="logo"><a href="/manager/index.php"><img src="http://v2.minbakdanawa.com/manager/common/img/logo_big.png" alt="MINDA 파트너홈"></a></h1>
+				<nav class="d_iblock nav-center">
+					<ul class="clearfix">
+						<li><a href="" class="active">숙소</a></li>
+						<li><a href="">여행정보</a></li>
+						<li><a href="">여행상품</a></li>
+					</ul>
+				</nav>
+				<div class="hd_side">
+					<a href="/manager/mypage/admin_edit.php" target="_blank" class="account color_org"><i class="icon_user_org"></i>[테스트] 희아게스트하우스님</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					<a href="/member/logout.php" class="btn btn-xs btn_border_grey">통합ID</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- #container -->
+	<div id="container">
+
+<!-- 페이지시작 -->
+
+<div class="content w1260">
+	<aside class="content_aside">
+		<nav class="snb snb-lg">
+			<ul>
+				<li class="active"><a href="">스팟</a></li>
+				<li><a href="">일정</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- 컨텐츠 영역 -->
+	<div class="content_body admin_room_wrp clearfix">
+		<div class="body_tit clearfix">
+			<p class="pull-left fs14">홍길동님이 생성한 스팟은 <span class="color_red">**</span>개, 사용한 스팟은 <span class="color_red">**</span>개 입니다.</p>
+			<div class="pull-right">
+				<button type="button" class="btn bg_mint" onClick="jQuery('#once').fadeToggle(300);">스팟선택</button>
+
+			</div>
+		</div>
+		<div>
+			<!-- Tab -->
+			<div class="room_detail_hd">
+				<!-- 탭 -->
+				<ul class="basic_step2 tb_fixed">
+					<li class="active"><a href="">생성한 스팟</a></li>
+					<li><a href="">사용중인 스팟</a></li>
+				</ul>
+			</div>
+			<!-- 검색필터 -->
+			<div class="filterwrp">
+				<label class="inline-checkbox circle_org chk_label on">
+					<input type="checkbox" checked="">요청전
+				</label>
+				<label class="inline-checkbox circle_org chk_label">
+					<input type="checkbox">요청중
+				</label>
+				<label class="inline-checkbox circle_org chk_label">
+					<input type="checkbox">미승인
+				</label>
+				<label class="inline-checkbox circle_org chk_label on">
+					<input type="checkbox" checked="">종료
+				</label>
+				<label class="inline-checkbox circle_org chk_label">
+					<input type="checkbox">오픈
+				</label>
+				<label class="inline-checkbox circle_org chk_label">
+					<input type="checkbox">확인
+				</label>
+			</div>
+			<!-- 목록 -->
+			<ul class="row discount_room_lst spot_lst">
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn beforecall" data-toggle="dropdown" disabled>요청전</button>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<button type="button" class="btn bg_org btn-block mt10">오픈요청하기</button>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn calling" data-toggle="dropdown" disabled>요청중</button>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<button type="button" class="btn btn_border_grey btn-block mt10">오픈 요청중 입니다.</button>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn unreceived" data-toggle="dropdown">미승인<i class="icon_help_wh"></i></button>
+						<!-- 미승인1 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>오픈요청하신 스팟이 미승인 되었습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">생성하신 스팟은 이미 등록된 스팟이 있어서 오픈이 불가능합니다.<br>
+								기존에 등록된 스팟은 사용이 가능합니다.</p>
+								<button type="button" class="btn bg_mint btn-block mt20">스팟 사용하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="row">
+						<div class="col-xs-6 pr5"><button type="button" class="btn bg_org btn-block mt10">오픈 요청하기</button></div>
+						<div class="col-xs-6 pl5"><button type="button" class="btn bg_grey btn-block mt10">삭제하기</button></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn unreceived" data-toggle="dropdown">미승인<i class="icon_help_wh"></i></button>
+						<!-- 미승인2 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>오픈요청하신 스팟이 미승인 되었습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">생성하신 스팟은 이미 등록된 스팟이 있어서 오픈이 불가능합니다.<br>
+								기존에 등록된 스팟은 사용이 가능하여 등록된 정보를 이관
+								하여 사용하실 수 있으나 $이름$님이 작성한 내용에 다소
+								문제가 있어서 내용을 수정해주셔야 승인이 가능합니다.</p>
+								<div class="master_reason">미승인 사유</div>
+								<button type="button" class="btn bg_mint btn-block mt20">스팟 수정하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="row">
+						<div class="col-xs-6 pr5"><button type="button" class="btn bg_org btn-block mt10">오픈 요청하기</button></div>
+						<div class="col-xs-6 pl5"><button type="button" class="btn bg_grey btn-block mt10">삭제하기</button></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn unreceived" data-toggle="dropdown">미승인<i class="icon_help_wh"></i></button>
+						<!-- 미승인3 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>오픈요청하신 스팟이 미승인 되었습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">생성하신 스팟은 이미 등록된 스팟이 있어서 오픈이 불가능합니다.<br>
+								기존에 등록된 스팟은 사용이 가능하오니 등록된 정보를 이관하여 사용하실 수 있습니다.
+								</p>
+								<button type="button" class="btn bg_mint btn-block mt20">정보 이관하고 스팟 사용하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="row">
+						<div class="col-xs-6 pr5"><button type="button" class="btn bg_org btn-block mt10">오픈 요청하기</button></div>
+						<div class="col-xs-6 pl5"><button type="button" class="btn bg_grey btn-block mt10">삭제하기</button></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn unreceived" data-toggle="dropdown">미승인<i class="icon_help_wh"></i></button>
+						<!-- 미승인4 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>오픈요청하신 스팟이 미승인 되었습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">생내용을 수정하여 다시 오픈요청 해주시면<br>
+								다시 검토하도록 하겠습니다.
+								</p>
+								<div class="master_reason">미승인 사유</div>
+								<button type="button" class="btn bg_mint btn-block mt20">스팟 수정하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="row">
+						<div class="col-xs-6 pr5"><button type="button" class="btn bg_org btn-block mt10">오픈 요청하기</button></div>
+						<div class="col-xs-6 pl5"><button type="button" class="btn bg_grey btn-block mt10">삭제하기</button></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn isopen" data-toggle="dropdown">오픈<i class="icon_help_wh"></i></button>
+						<!-- 오픈 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>스팟이 오픈되었습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">일정을 등록해주셔서 감사합니다.<br>
+								앞으로 많은 여행자들에게 큰 도움이 될 것입니다.<br>
+								또 추천하고 싶은 일정이 있으면 언제든지 생성해주세요.
+								</p>
+								<button type="button" class="btn bg_mint btn-block mt20">비즈머니 1,000원 발급</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn isend" data-toggle="dropdown" disabled>종료</button>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<button type="button" class="btn bg_grey btn-block mt10">삭제하기</button>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn checking" data-toggle="dropdown">확인<i class="icon_help_wh"></i></button>
+						<!-- 확인중1 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>등록하신 사진과 추천이유 내용이 운영정책과 맞지않습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">$이름$님께서 등록하신 사진과 추천이유 내용이 운영정책과 맞지 않아  현재 해당 스팟에서 보이지 않게 처리하였습니다.<br>
+								사진은 숨김처리 되었으므로  다시 재등록하시기 바랍니다.
+								</p>
+								<div class="master_reason">추천이유 숨김처리 사유</div>
+								<p class="txt">내용을 수정하시면 검토 후 숨김처리를 해제하겠습니다.
+								더 궁금한 사항이 있으시면<br>
+								고객센터를 통해 문의 해주시기 바랍니다.
+								</p>
+								<button type="button" class="btn bg_mint btn-block mt20">스팟 수정하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn checking" data-toggle="dropdown">확인<i class="icon_help_wh"></i></button>
+						<!-- 확인중2 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>등록하신 사진과 추천이유 내용이 운영정책과 맞지않습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">$이름$님께서 등록하신 추천이유 내용이 운영정책과 맞지 않아 현재 해당 스팟에서 보이지 않게 처리하였습니다.</p>
+								<div class="master_reason">추천이유 숨김처리 사유</div>
+								<p class="txt">내용을 수정하시면 검토 후 숨김처리를 해제하겠습니다.
+								더 궁금한 사항이 있으시면<br>
+								고객센터를 통해 문의 해주시기 바랍니다.
+								</p>
+								<button type="button" class="btn bg_mint btn-block mt20">스팟 수정하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn checking" data-toggle="dropdown">확인<i class="icon_help_wh"></i></button>
+						<!-- 확인중3 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>등록하신 사진이 운영정책과 맞지않습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">$이름$님께서 등록하신 사진이 운영정책과 맞지 않아 현재 해당 스팟에서 보이지 않게 처리하였습니다.</p>
+								<div class="master_reason">사진 숨김처리 사유</div>
+								<p class="txt">더 궁금한 사항이 있으시면고객센터를 통해 문의 해주시기 바랍니다.</p>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn checking" data-toggle="dropdown">확인<i class="icon_help_wh"></i></button>
+						<!-- 확인중4 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>해당 스팟이 이미 등록되어 있습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">$이름$님 정말 죄송합니다.<br>
+								생성하신 스팟이 등록되기 전, 이미 동일한 스팟이 등록된
+								것이 뒤늦게 확인되었습니다.현재 해당 스팟은 숨김처리
+								되었으며 일정에 포함되어 있는 경우 등록되어있던 동일한
+								스팟으로 대체되었습니다.<br>
+								기존에 등록된 스팟은 사용이 가능합니다.<br>
+								스팟을 사용하시겠습니까?</p>
+								<button type="button" class="btn bg_mint btn-block mt20">스팟 사용하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+				<li class="col-xs-4">
+					<div class="poplabel dropup">
+						<button type="button" class="btn checking" data-toggle="dropdown">확인<i class="icon_help_wh"></i></button>
+						<!-- 확인중5 -->
+						<div class="dropdown-menu popover">
+							<header class="popover_hd">
+								<p>해당 스팟이 이미 등록되어 있습니다.</p>
+								<button type="button" class="icon_close_xs">팝오버닫기</button>
+							</header>
+							<div class="popover_bd">
+								<p class="txt">$이름$님 정말 죄송합니다.<br>
+								생성하신 스팟이 등록되기 전, 이미 동일한 스팟이 등록된
+								것이 뒤늦게 확인되었습니다.현재 해당 스팟은 숨김처리
+								되었으며 일정에 포함되어 있는 경우 등록되어 있던 동일한
+								스팟으로 대체되었습니다.<br>
+								기존에 등록된 스팟은 사용이 가능하오니 등록된 정보를 이관하여 사용하실 수 있습니다.<br>
+								정보를 이관하고 스팟을 사용하시겠습니까?</p>
+								<button type="button" class="btn bg_mint btn-block mt20">정보 이관하고 스팟 사용하기</button>
+							</div>
+						</div>
+					</div>
+					<a href="">
+						<div class="tmb pr">
+							<img class="img-responsive" src="_temp/tmb4.jpg" alt="">
+						</div>
+						<div class="room_info">
+							<span class="d_block mb3">이탈리아 밀라노</span>
+							<strong class="fw500 color_blk fs18"><span class="color_org">맛집</span> 이탈리아 밀라노 최고의 샌드위치 맛집 ‘빠니노 쥬스또’</strong>
+						</div>
+						<div class="meta clearfix color_grey">
+							<span><i class="icon_thumb"></i> 추천스팟</span>
+							<i class="split"></i>
+							<span><i class="icon_location"></i> 숙소근처</span>
+							<!-- icon_walking,icon_cycle,icon_car_sm,icon_train -->
+							<span><i class="icon_walking"></i> 5분</span>
+						</div>
+					</a>
+					<div class="clearfix btm_info">
+						<div class="span pull-left">
+							<div class="rating_wrp color_org">
+								<span class="starrating ver_org" title="4.25">
+									<span style="width:40.25%">4.25</span>
+								</span>
+								<span>(24)</span>
+							</div>
+						</div>
+						<div class="pull-right"><i class="icon_like_mint sm"></i> 저장 <span class="color_mint">(24)</span></div>
+					</div>
+				</li>
+			</ul>
+			<!-- 페이징 -->
+			<nav class="text-center">
+				<ul class="pagination clearfix">
+					<li class="prev"><a href="">이전페이지목록보기</a></li>
+					<li><a href="">1</a></li>
+					<li><a href="" class="active">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li class="next"><a href="">다음페이지목록보기</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<!-- //페이지시작 -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- Footer -->
+	<div id="ft">
+		<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1551-2892)</p>
+		<a href="" class="split">숙소주 이용약관</a>
+		<a href="" class="split">숙소주 광고이용약관</a>
+	</div>
+	<!-- //Footer -->
+
+
+</div>
+<!-- //wrap -->
+
+
+
+<!-- js -->
+<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+
+<!-- lib -->
+<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+<!-- common -->
+<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+</html>

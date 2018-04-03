@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100">
+	<title> 민다(민박다나와) 파트너홈 </title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/slider.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/daterangepicker.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/nanoscroller.css">
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/common.css">
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
+	<link rel="stylesheet" href="http://v2.theminda.com/manager/common/css/admin.css">
+	<script src="http://v2.theminda.com/manager/jquery.js"></script>
+	<!-- js -->
+	<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common.js"></script>
+	<script src="http://v2.theminda.com/lib/js/common.js"></script>
+	<script src="http://v2.theminda.com/lib/js/chkForm.js"></script>
+	<script src="http://v2.theminda.com/lib/js/selectCategory.js"></script>
+	<script>
+	var $j = jQuery.noConflict();
+	</script>
+</head>
+
+<body class="master">
+	<!-- [D] 숙소주홈 class="master" -->
+	<a class="skip" href="#container">Skip to main content</a>
+	<!-- wrap.screenID -->
+	<div id="wrap">
+		<!-- header -->
+		<header id="hd">
+			<div class="hd_top">
+				<div class="clearfix">
+					<!--h1 class="logo"><a href="http://v2.theminda.com/manager/"><img src="http://v2.theminda.com/manager/common/img/logo_big.png" alt="민다(민박다나와) 파트너홈"></a></h1-->
+					<h1 class="logo"><a href="http://v2.theminda.com/manager/index.php"><img src="http://v2.theminda.com/manager/common/img/logo_sm.png" alt="MINDA"><span>파트너홈</span></a></h1>
+					<!--2016-11-29 yuna nav 위치 수정, 클래스 추가 -->
+					<nav class="d_iblock nav-center">
+						<ul class="clearfix">
+							<li><a href="http://v2.theminda.com/manager/index.php">숙소</a></li>
+							<li><a href="http://v2.theminda.com/manager/travel/index.php">여행정보</a></li>
+							<li><a href="http://v2.theminda.com/manager/tg/index.php">여행상품</a></li>
+						</ul>
+					</nav>
+					<div class="hd_side">
+						<!--2016-08-31 yuna 공지사항 주석 -->
+						<!-- <a href="http://v2.theminda.com/manager/cs/notice.php" class="link_notice">공지사항</a> -->
+						<a href="" class="account">테스트 이프민바5님</a>
+						<a href="/member/logout.php" class="btn btn-xs btn_border_grey">로그아웃</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container -->
+		<div id="container" class="partner_join">
+			<!-- 페이지시작 -->
+			<div class="w1260 join-contents">
+				<header class="sub_hd">
+					<h2 class="bg_none mt0">민다 파트너 가입</h2>
+				</header>
+				<div class="content_body admin_room_wrp clearfix">
+					<div class="body_tit clearfix">
+						<p class="pull-left fs14"><b class="color_red">*</b> 표시는 필수 입력항목입니다.</p>
+					</div>
+					<table class="tb tb_frm v1 tb_fixed">
+						<caption class="sr-only">파트너 입력양식 - 필수정보</caption>
+						<colgroup>
+							<col style="width:155px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">파트너명 <b class="color_red">*</b></th>
+								<td>
+									<input type="text" class="form-control-basic wid_lg" placeholder="회사명, 숙소명등 대표되는 이름을 작성해 주세요." title="파트너명">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">아이디 <b class="color_red">*</b></th>
+								<td>
+									<input type="text" name="mid" class="form-control-basic wid_lg" title="아이디" placeholder="띄어쓰기 없이 영문 + 숫자로 4~12자 이내로 입력하세요.">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">비밀번호</th>
+								<td>
+									<input type="password" class="form-control-basic wid_lg" placeholder="띄어쓰기 없이 영숫자 조합 8~12자로 입력해주세요." title="비밀번호" placeholder="영문/숫자 조합 8~12자로 입력해주세요.">
+									<p class="color_mint mt5">※ 변경을 원하실 경우만 입력해 주세요.
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="tb tb_frm v1 tb_fixed mt30">
+						<caption class="sr-only">파트너 입력양식 - 기본정보</caption>
+						<colgroup>
+							<col style="width:155px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">비밀번호 확인</th>
+								<td>
+									<input type="password" class="form-control-basic wid_lg" title="비밀번호 확인">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">이름(실명) <b class="color_red">*</b></th>
+								<td>
+									<input type="text" class="form-control-basic wid_lg" title="이름(실명)" placeholder="대표자명을 입력하세요.">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일 <b class="color_red">*</b></th>
+								<td>
+									<input type="text" class="form-control-basic wid_md" title="이메일 앞자리 주소" onchange="fnAjaxEmail();">
+									<span class="form-control-static">@</span>
+									<input type="text" id="txtEmail2" value="minbakdanawa.com" maxlength="40" class="form-control-basic wid_md" title="이메일 뒷자리 주소">
+									<select class="form-control-basic wid_sm ml5" onchange="$('#txtEmail2').val(this.value);">
+										<option value="">직접입력</option>
+										<option value="naver.com">네이버</option>
+										<option value="hanmail.net">한메일</option>
+										<option value="hotmail.com">핫메일</option>
+										<option value="nate.com">네이트</option>
+										<option value="paran.com">파란</option>
+										<option value="empal.com">엠파스</option>
+										<option value="dreamwiz.com">드림위즈</option>
+										<option value="freechal.com">프리첼</option>
+										<option value="lycos.co.kr">라이코스</option>
+										<option value="korea.com">코리아닷컴</option>
+										<option value="gmail.com">지메일</option>
+										<option value="hanmir.com">한미르</option>
+									</select>
+									<p class="color_mint mt5">※ 승인 절차에 필요한 메일이 발송되오니 정확하게 입력해 주시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">전화번호 <b class="color_red">*</b></th>
+								<td class="tel_form">
+									<input type="text" class="form-control-basic wid_sm" title="국가번호" placeholder="국가번호">
+									<i></i>
+									<input type="text" class="form-control-basic wid_smd" title="전화번호">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">휴대폰 번호 <b class="color_red">*</b></th>
+								<td class="tel_form">
+									<input type="text" class="form-control-basic wid_sm" title="국가번호" placeholder="국가번호">
+									<i></i>
+									<input type="text" class="form-control-basic wid_smd" title="핸드폰번호">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">인터넷전화번호 </th>
+								<td>
+									<input type="text" class="form-control-basic wid_lg" title="인터넷전화번호">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">카카오톡ID</th>
+								<td>
+									<input type="text" class="form-control-basic wid_lg" title="카카오톡ID">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">프로필 사진</th>
+								<td>
+									<ul class="upload_img_lst row">
+										<li class="col-xs-3" style="width:100px;">
+											<img class="img-circle" src="http://v2.theminda.com/cust/img/admin_profile_none.png" alt="프로필 사진" style="width:88px;height:88px;cursor:pointer;" onclick="jQuery('#divImagePreview').modal();">
+										</li>
+										<li class="col-xs-3" style="margin-top:30px;">
+											<input type="file" name="images[]" id="input_file1" style="width:210px;display:inline;">
+											<input type="button" id="btnDel1" class="icon_image_close" onclick="fnImgReset(1);$('#btnDel1').hide();" title="이미지 삭제">
+										</li>
+									</ul>
+									<p class="color_mint mt5">* 자신의 이미지를 잘 살릴 수 있는 사진을 등록해주세요. (예:본인 사진, 직접 찍은 풍경 등)</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">한마디 소개</th>
+								<td>
+									<input type="text" name="comment" value="" maxlength="120" class="form-control-basic" title="한마디 소개">
+									<p class="color_mint mt5">* 나를 알릴 수 있는 한마디로 여행자들에게 적극 어필해보세요.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">홈페이지</th>
+								<td>
+									<input type="text" name="homepage" value="http://" maxlength="120" class="form-control-basic" placeholder="회사 홈페이지, 카페 또는 블로그URL" title="홈페이지주소">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="sub_title">숙소 추가정보</h3>
+					<table class="tb tb_frm v1 tb_fixed">
+						<caption class="sr-only">파트너 입력양식 - 숙소추가정보</caption>
+						<colgroup>
+							<col style="width:155px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">숙소 정산계좌</th>
+								<td>
+															<p class="color_mint mt5">* 계좌정보 수정은 '파트너 지원 &gt; 1:1문의'로 접수해 주세요.</p>
+									<!--input type="text" name="banknm" value="" maxlength="120" class="form-control-basic" style="width:120px;display:inline-block;" placeholder="은행명" title="은행명" />
+									<input type="text" name="accno" value="" maxlength="120" class="form-control-basic" style="width:160px;display:inline-block;" placeholder="계좌번호" title="계좌번호" />
+									<input type="text" name="accnm" value="" maxlength="120" class="form-control-basic" style="width:120px;display:inline-block;" placeholder="예금주" title="예금주" /-->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">무료숙박권 후원</th>
+								<td>
+									<label class="inline-checkbox basic chk_label on" for="sponsor">
+										<input type="checkbox" name="sponsor" value="1" id="sponsor" checked="checked">후원
+									</label>
+									<p class="color_mint mt5">* 무료숙박권은 앞으로 진행될 이벤트 등을 통해 민다 회원들에게 제공되며, 후원 숙소는 그로 인한 홍보효과를 얻으실 수 있습니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="sub_title">투어 추가정보</h3>
+					<table class="tb tb_frm v1 tb_fixed">
+						<caption class="sr-only">파트너 입력양식 - 숙소추가정보</caption>
+						<colgroup>
+							<col style="width:155px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">투어 정산계좌</th>
+								<td>
+									<p class="color_mint mt5">* 계좌정보 수정은 '파트너 지원 &gt; 1:1문의'로 접수해 주세요.</p>
+								</td>
+							</tr>
+							<!-- 2017-03-30 add -->
+							<tr>
+								<th scope="row" class="vta-t">가이드 투어 증명서<br /><span class="color_red fs12 fw400">민박투어 해당 없음</span></th>
+								<td>
+									<p class="color_red mb10">가이드투어 증명서를 등록한 후 바로 가이드투어 상품을 등록할 수 있습니다.</p>
+									<div class="certi-img mb8">
+										<input type="text" class="form-control-basic wid_smd mr3" placeholder="증명서 이름(최대 15자)" title="증명서 이름" />
+										<div class="upload_img_wrap d_iblock v2">
+											<input type="text" class="form-control-basic wid_lg mr3" title="증명서 이미지 이름" />
+											<button type="button" class="btn bg_dark_grey">첨부</button>
+											<input type="file" class="no_style d_iblock pr30" title="사업자등록증 업로드">
+											<input type="button" class="icon_pop_close" title="이미지 삭제">
+										</div>
+									</div>
+									<div class="certi-img mb8">
+										<input type="text" class="form-control-basic wid_smd mr3" placeholder="증명서 이름(최대 15자)" title="증명서 이름" />
+										<div class="upload_img_wrap d_iblock v2">
+											<input type="text" class="form-control-basic wid_lg mr3" title="증명서 이미지 이름" />
+											<button type="button" class="btn bg_dark_grey">첨부</button>
+											<input type="file" class="no_style d_iblock pr30" title="사업자등록증 업로드">
+											<input type="button" class="icon_pop_close" title="이미지 삭제">
+										</div>
+									</div>
+									<div class="certi-img mb8">
+										<input type="text" class="form-control-basic wid_smd mr3" placeholder="증명서 이름(최대 15자)" title="증명서 이름" />
+										<div class="upload_img_wrap d_iblock v2">
+											<input type="text" class="form-control-basic wid_lg mr3" title="증명서 이미지 이름" />
+											<button type="button" class="btn bg_dark_grey">첨부</button>
+											<input type="file" class="no_style d_iblock pr30" title="사업자등록증 업로드">
+											<input type="button" class="icon_pop_close" title="이미지 삭제">
+										</div>
+									</div>
+									<p class="color_mint fs12">현지에서 정식 허가를 받은 투어 회사임을 증명할 수 있는 증명서를 첨부해주시기 바랍니다. (JPG, GIF, PNG, BMP)</p>
+									<div class="label_add mt5">
+										<button class="btn bg_dark_grey w120 mt10" onclick="fnImgAdd();">증명서 추가</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vta-t">가이드 투어 증명서</th>
+								<td>
+									<div class="certi-img mb8">
+										<div class="upload_img_wrap d_iblock v2">
+											<p class="d_iblock txt">파리 사업자등록증</p>
+											<a href="" target="_blank" class="btn bg_grey btn_show_img">이미지보기</a>
+											<input type="button" class="icon_pop_close" title="이미지 삭제">
+										</div>
+									</div>
+									<div class="certi-img mb8">
+										<div class="upload_img_wrap d_iblock v2">
+											<p class="d_iblock txt">파리 사업자등록증</p>
+											<a href="" target="_blank" class="btn bg_grey btn_show_img">이미지보기</a>
+											<input type="button" class="icon_pop_close" title="이미지 삭제">
+										</div>
+									</div>
+									<div class="certi-img mb8">
+										<div class="upload_img_wrap d_iblock v2">
+											<p class="d_iblock txt">파리 관광청 승인 라이선스</p>
+											<a href="" target="_blank" class="btn bg_grey btn_show_img">이미지보기</a>
+											<input type="button" class="icon_pop_close" title="이미지 삭제">
+										</div>
+									</div>
+									<p class="color_mint fs12">증명서를 관리자가 확인한 후에 수정/추가하려면 ‘투어 > 파트너 지원 > 1:1문의’로 접수해 주세요. </p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="join-btm-section">
+					<div class="text-center pt50 btm-btn-area">
+						<button class="btn bg_org btn-lg w130">가입하기</button>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지시작 -->
+		</div>
+		<!-- //container -->
+		<!-- Footer 2016-10-28 수정 -->
+		<div id="ft">
+			<p class="d_iblock">Copyright &copy; <a href="" class="color_org fw700">theminda.com</a> All rights reserved. (☎ 1661-2892)</p>
+		</div>
+		<!-- //Footer -->
+	</div>
+	<!-- //wrap -->
+	<!-- js -->
+	<script>
+	$j(function() {
+
+	})
+	</script>
+	<!--[if lt IE 9]>
+<script src="http://v2.theminda.com/manager/common/js/jquery.placeholder.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/html5.js"></script>
+<script src="http://v2.theminda.com/manager/common/js/ie9.js"></script>
+<![endif]-->
+	<!-- lib -->
+	<script src="http://v2.theminda.com/manager/common/js/bootstrap-slider.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.nanoscroller.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/moment.min.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/daterangepicker.js"></script>
+	<script src="http://v2.theminda.com/manager/common/js/jquery.bxslider.min.js"></script>
+	<!-- common -->
+	<script src="http://v2.theminda.com/manager/common/js/common.js"></script>
+</body>
+
+</html>
