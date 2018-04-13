@@ -1,259 +1,866 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=1100">
-<title>MinDa :: 占싸박다놂옙占쏙옙 </title>
-
-<!-- css -->
-<link rel="stylesheet" href="/cust/css/normalize.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="/cust/css/jquery.bxslider.css">
-<link rel="stylesheet" href="/cust/css/slider.css">
-<link rel="stylesheet" href="/cust/css/daterangepicker.css">
-<link rel="stylesheet" href="/cust/css/nanoscroller.css">
-<link rel="stylesheet" href="/cust/css/default.css">
-<link rel="stylesheet" href="/cust/css/common.css">
-<link rel="stylesheet" href="/cust/css/common.dev.css">
-<!-- js -->
-<!--[if lt IE 9]>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<![endif]-->
-<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<!--<![endif]-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-<a class="skip" href="#container">Skip to main content</a>
-
+<? include "inc/top.html" ?>
 <!-- wrap.screenID -->
-<div id="wrap" class="page_tb">
+<div id="wrap" class='page_tb'>
 	<!-- header -->
-	<header id="hd">
-		<div class="header clearfix">
-			<h1 class="logo"><a href="index.html"><img src="/cust/img/logo_big.png" alt=""><span class="sr-only">MINDA</span></a></h1>
-			<nav class="hd-nav">
-				<ul class="gnb">
-					<li class="i1"><a href="">占쏙옙占싸쇽옙占쏙옙 <span class="icon_up">up</span></a></li>
-					<li class="i2"><a href="">占쏙옙占쏙옙 <span class="icon_new">new</span></a></li>
-					<li class="i3"><a href="">占쏙옙占쏙옙</a></li>
-					<li class="i4"><a href="">占쏙옙占쏙옙</a></li>
-					<li class="i5">
-						<a href="">티占쏙옙/占싻쏙옙</a>
-						<div class="dep2">
-							<ul class="clearfix">
-								<li><a href="" class="active">티占쏙옙/占싻쏙옙</a></li>
-								<li><a href="">占쏙옙占쏙옙占쏙옙占싻쏙옙/占쏙옙占쏙옙표</a></li>
-								<li><a href="">占쏙옙占쏙옙카</a></li>
-							</ul>
-						</div>
-					</li>
+	<? include "inc/header_login.html" ?>
+	<!-- //header -->
+	<!-- pop_nation -->
+	<div id="lodgingList" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog lodging-list">
+			<button type="button" class="icon_pop_close2" data-dismiss="modal" aria-label="Close">닫기</button>
+			<nav class="top_tab">
+				<ul class="clearfix">
+					<li class="active"><a href="#europe1" id="category_001">서유럽</a></li>
+					<li><a href="#europe2" id="category_002">동북유럽</a></li>
+					<li><a href="#asia" id="category_003">아시아</a></li>
+					<li><a href="#americas" id="category_005">미주</a></li>
+					<li><a href="#pacific" id="category_007">남태평양</a></li>
+					<li><a href="#africa" id="category_008">아프리카</a></li>
+					<li><a href="#test_cate" id="category_010">테스트</a></li>
 				</ul>
-				<script>
-				$(function() {
-					$util = $('.userbx');
-					$util.on('focusin', function() {
-						$(this).addClass('open');
-					});
-
-				})
-				</script>
 			</nav>
-			<div class="hd-r">
-				<ul class="gnb right-gnb clear">
-					<li class="i6">
-						<a href=""><span class="icon_comm">커占승댐옙티</span></a>
-						<!-- [D] class="active" 占쌩곤옙占쏙옙 dep2 占쏙옙占쏙옙占쏙옙 -->
-						<div class="dep2">
-							<ul class="clearfix">
-								<li><a href="">커占승댐옙티홈</a></li>
-								<li><a href="">占쏙옙占썲릴占쏙옙占쏙옙</a></li>
-								<li><a href="" class="active">占쏙옙占싸ㅿ옙占쏙옙占쏙옙</a></li>
-								<li><a href="">占쏙옙占쏙옙占싫곤옙</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="i7">
-						<a href=""><span class="icon_discount">占쏙옙占쏙옙&amp;占싱븝옙트</span></a>
-						<div class="dep2">
-							<ul class="clearfix">
-								<li><a href="" class="active">占싱븝옙트</a></li>
-								<li><a href="">占싸댐옙특占쏙옙</a></li>
-								<li><a href="">占쏙옙占쏙옙占쏙옙</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-				<form action="." class="srch_wrp">
-					<button type="button" class="icon_srch_gnb">占싯삼옙</button>
-					<div class="silde-wrap">
-						<div class="input-group" >
-							<span class="btn-wrap">
-								<button type="button" class="icon_srch_gnb">占싯삼옙</button>
-							</span>
-							<span class="input-wrap">
-								<input type="text" class="form-control" placeholder="占쏙옙占시몌옙占쏙옙 占쌉뤄옙占싹쇽옙占쏙옙">
-								<!-- 占쌘듸옙占싹쇽옙 -->
-								<div class="web_automatic">
-									<ul class="city">
-										<li>占쏙옙탈占쏙옙占쏙옙, 占싸몌옙</li>
-										<li>占쏙옙탈占쏙옙占쏙옙, 占쏙옙占쏙옙치占쏙옙</li>
-										<li>占쏙옙탈占쏙옙占쏙옙, 占싻띰옙占?/li>
-										<li>占쏙옙탈占쏙옙占쏙옙, 占쏙옙占쏙옙占쏙옙</li>
-									</ul>
-								</div>
-							</span>
-							<span class="close-btn-wrap">
-								<button type="button" class="icon_date_close">占싯삼옙 占쏙옙占?/button>
-							</span>
-						</div>
+
+
+			<!-- 내용 -->
+			<!-- 유럽 -->
+			<div id="europe1" class="tab_cnt europe1">
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">영국</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001001001">런던<span class="cnt">117</span></a></li>
+							<li><a href="/main/list.php?category=001001002">에딘버러<span class="cnt">6</span></a></li>
+							<li><a href="/main/list.php?category=001001005">맨체스터<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=001001006">펜잔스<span class="cnt">1</span></a></li>
+						</ul>
 					</div>
-				</form>
-				<div class="util">
-					<div class="userbx">
-						<a href="" class="user"><span class="color_org">minda</span>占쏙옙 <img src="_temp/pf2.png" alt=""></a>
-						<ul class="dropdown-menu">
-							<li><a href="">占쏙옙占쏙옙 占쏙옙占싱듸옙占?/a></li>
-							<li><a href="">占쏙옙占쏙옙 占쏙옙占쌀울옙占쏙옙</a></li>
-							<li><a href="">占쏙옙占쏙옙占쏙옙占쏙옙</a></li>
-							<li><a href="">占싸그아울옙</a></li>
+					<div class="v2 state_lst">
+						<strong class="tit">프랑스</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001002001">파리<span class="cnt">194</span></a></li>
+							<li><a href="/main/list.php?category=001002002">니스<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=001002005">아비뇽<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001002007">보르도<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001002015">콜마르<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001002013">클레르몽 페랑<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001002011">샤모니<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001002014">엑상프로방스<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+						<strong class="tit">이탈리아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001003001">로마<span class="cnt">55</span></a></li>
+							<li><a href="/main/list.php?category=001003002">베네치아<span class="cnt">23</span></a></li>
+							<li><a href="/main/list.php?category=001003003">피렌체<span class="cnt">34</span></a></li>
+							<li><a href="/main/list.php?category=001003004">밀라노<span class="cnt">13</span></a></li>
+							<li><a href="/main/list.php?category=001003005">나폴리<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001003006">볼로냐<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001003011">베로나<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001003012">시라쿠사<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001003015">토리노<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">몰타</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001030001">그지라<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+						<strong class="tit">스위스</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001007002">인터라켄<span class="cnt">4</span></a></li>
+							<li><a href="/main/list.php?category=001007001">루체른<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=001007007">프리부르<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">오스트리아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001006001">비엔나<span class="cnt">7</span></a></li>
+							<li><a href="/main/list.php?category=001006002">잘츠부르크<span class="cnt">3</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">벨기에</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001009001">브뤼셀<span class="cnt">6</span></a></li>
+							<li><a href="/main/list.php?category=001009002">겐트<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v4 state_lst">
+						<strong class="tit">네덜란드</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001008001">암스테르담<span class="cnt">7</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+						<strong class="tit">스페인</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001004001">바르셀로나<span class="cnt">57</span></a></li>
+							<li><a href="/main/list.php?category=001004002">마드리드<span class="cnt">17</span></a></li>
+							<li><a href="/main/list.php?category=001004004">세비야<span class="cnt">4</span></a></li>
+							<li><a href="/main/list.php?category=001004003">그라나다<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=001004009">발렌시아<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=001004012">산티아고 데 콤포스텔라<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001004008">산탄데르<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001004014">무르시아<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">포르투갈</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001022001">리스본<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+						<strong class="tit">독일</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001005001">베를린<span class="cnt">11</span></a></li>
+							<li><a href="/main/list.php?category=001005003">뮌헨<span class="cnt">9</span></a></li>
+							<li><a href="/main/list.php?category=001005004">쾰른<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=001005002">프랑크푸르트<span class="cnt">7</span></a></li>
+							<li><a href="/main/list.php?category=001005005">뒤셀도르프<span class="cnt">8</span></a></li>
+							<li><a href="/main/list.php?category=001005008">뉘른베르크<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=001005009">함부르크<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=001005014">슈투트가르트<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=001005011">브레멘<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001005013">프라이부르크<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001005012">트리베르크<span class="cnt">1</span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<div id="europe2" class="tab_cnt europe2" style="display: none">
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">체코</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001011001">프라하<span class="cnt">42</span></a></li>
+							<li><a href="/main/list.php?category=001011002">체스키크룸로프<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">헝가리</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001012001">부다페스트<span class="cnt">7</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">크로아티아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001018001">자그레브<span class="cnt">4</span></a></li>
+							<li><a href="/main/list.php?category=001018002">두브로브니크<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=001018003">스플리트<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+						<strong class="tit">폴란드</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001013003">브로츠와프<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=001013001">크라쿠프<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">슬로베니아</strong>
+
+						<ul>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">리투아니아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001017001">빌니우스<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+						<strong class="tit">스웨덴</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001019001">스톡홀름<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<!--
+                    <div class="v2 state_lst">
+                         <strong class="tit">덴마크</strong>
+
+                               <ul>
+    </ul>
+                    </div>
+                    -->
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+						<strong class="tit">러시아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001021001">모스크바<span class="cnt">7</span></a></li>
+							<li><a href="/main/list.php?category=001021002">상트페테르부르크<span class="cnt">7</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+						<strong class="tit">그리스</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001032001">아테네<span class="cnt">4</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">터키</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=001031001">이스탄불<span class="cnt">7</span></a></li>
+							<li><a href="/main/list.php?category=001031002">카파도키아<span class="cnt">2</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //유럽 -->
+
+			<!-- 아시아 -->
+			<div id="asia" class="tab_cnt asia" style="display: none">
+				<div class="division1">
+					<div class="v1 state_lst">
+						<strong class="tit">일본</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003002001">도쿄<span class="cnt">50</span></a></li>
+							<li><a href="/main/list.php?category=003002002">오사카<span class="cnt">83</span></a></li>
+							<li><a href="/main/list.php?category=003002006">교토<span class="cnt">4</span></a></li>
+							<li><a href="/main/list.php?category=003002004">고베<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=003002005">후쿠오카<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=003002003">삿포로<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=003002008">대마도<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division2">
+					<div class="v1 state_lst">
+						<strong class="tit">중국</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003007002">북경<span class="cnt">7</span></a></li>
+							<li><a href="/main/list.php?category=003007001">상해<span class="cnt">7</span></a></li>
+							<li><a href="/main/list.php?category=003007004">청도<span class="cnt">4</span></a></li>
+							<li><a href="/main/list.php?category=003007007">위해<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=003007008">성도<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=003007005">광저우<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=003007009">연길<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division3">
+					<div class="v1 state_lst">
+						<strong class="tit">대만</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003015001">타이페이<span class="cnt">2</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">홍콩</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003004001">홍콩<span class="cnt">8</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">마카오</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003005001">마카오<span class="cnt">5</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">싱가폴</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003006001">싱가폴<span class="cnt">11</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division4">
+					<div class="v1 state_lst">
+						<strong class="tit">태국</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003013001">방콕<span class="cnt">6</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">베트남</strong>
+
+						<ul>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">라오스</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003021001">비엔티안<span class="cnt">2</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">캄보디아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003018001">씨엠립<span class="cnt">2</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division5">
+					<div class="v1 state_lst">
+						<strong class="tit">인도</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003022001">뉴델리<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=003022002">첸나이<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">방글라데시</strong>
+
+						<ul>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">필리핀</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003008001">마닐라<span class="cnt">3</span></a></li>
+							<li><a href="/main/list.php?category=003008003">세부<span class="cnt">1</span></a></li>
+							<li><a href="/main/list.php?category=003008004">타가이타이<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division6">
+					<div class="v1 state_lst">
+						<strong class="tit">말레이시아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003011001">쿠알라룸푸르<span class="cnt">5</span></a></li>
+							<li><a href="/main/list.php?category=003011002">코타키나발루<span class="cnt">2</span></a></li>
+						</ul>
+					</div>
+					<div class="v1 state_lst">
+						<strong class="tit">인도네시아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003014001">자카르타<span class="cnt">2</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">이란</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003023001">테헤란<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+					<div class="v3 state_lst">
+						<strong class="tit">사우디아라비아</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003010001">리야드<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="division7">
+					<div class="v1 state_lst">
+						<strong class="tit">아랍에미리트</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003016002">아부다비<span class="cnt">2</span></a></li>
+							<li><a href="/main/list.php?category=003016001">두바이<span class="cnt">6</span></a></li>
+						</ul>
+					</div>
+					<div class="v2 state_lst">
+						<strong class="tit">카타르</strong>
+
+						<ul>
+							<li><a href="/main/list.php?category=003009001">도하<span class="cnt">1</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //아시아 -->
+
+			<!-- 미주 -->
+			<div id="americas" class="tab_cnt americas" style="display: none">
+				<div class="division_wrap">
+					<strong class="bg_tit color_org">북미</strong>
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">미국</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=005001001">뉴욕<span class="cnt">57</span></a></li>
+								<li><a href="/main/list.php?category=005001002">LA<span class="cnt">22</span></a></li>
+								<li><a href="/main/list.php?category=005001004">보스턴<span class="cnt">8</span></a></li>
+								<li><a href="/main/list.php?category=005001014">샌프란시스코<span class="cnt">7</span></a></li>
+								<li><a href="/main/list.php?category=005001008">워싱턴<span class="cnt">3</span></a></li>
+								<li><a href="/main/list.php?category=005001007">라스베가스<span class="cnt">4</span></a></li>
+								<li><a href="/main/list.php?category=005001015">필라델피아<span class="cnt">1</span></a></li>
+								<li><a href="/main/list.php?category=005001005">시카고<span class="cnt">2</span></a></li>
+								<li><a href="/main/list.php?category=005001013">하와이(호놀룰루)<span class="cnt">5</span></a></li>
+								<li><a href="/main/list.php?category=005001006">올랜도<span class="cnt">3</span></a></li>
+								<li><a href="/main/list.php?category=005001009">미네아폴리스<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+							<strong class="tit">캐나다</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=005002002">토론토<span class="cnt">6</span></a></li>
+								<li><a href="/main/list.php?category=005002001">밴쿠버<span class="cnt">4</span></a></li>
+								<li><a href="/main/list.php?category=005002005">몬트리올<span class="cnt">4</span></a></li>
+								<li><a href="/main/list.php?category=005002008">옐로나이프<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="division_wrap clearfix">
+					<strong class="bg_tit color_org">중남미</strong>
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">멕시코</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=006006001">플라야 델 카르멘<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">브라질</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=006002001">상파울루<span class="cnt">2</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">아르헨티나</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=006001001">부에노스 아이레스<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+						<div class="v3 state_lst">
+							<strong class="tit">칠레</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=006003001">산티아고<span class="cnt">3</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v2 state_lst">
+							<strong class="tit">온두라스</strong>
+
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //미주 -->
+
+			<!-- 남태평양 -->
+			<div id="pacific" class="tab_cnt pacific" style="display: none">
+				<div class="division_wrap">
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">괌</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=007004001">괌<span class="cnt">13</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+							<strong class="tit">사이판</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=007003001">사이판<span class="cnt">8</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division3">
+						<div class="v1 state_lst">
+							<strong class="tit">호주</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=007001001">시드니<span class="cnt">16</span></a></li>
+								<li><a href="/main/list.php?category=007001002">골드코스트<span class="cnt">1</span></a></li>
+								<li><a href="/main/list.php?category=007001003">멜버른<span class="cnt">8</span></a></li>
+								<li><a href="/main/list.php?category=007001004">호바트<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division4">
+						<div class="v1 state_lst">
+							<strong class="tit">뉴질랜드</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=007002001">오클랜드<span class="cnt">4</span></a></li>
+								<li><a href="/main/list.php?category=007002002">크라이스트처치<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //남태평양 -->
+
+			<!-- 아프리카 -->
+			<div id="africa" class="tab_cnt africa" style="display: none">
+				<div class="division_wrap clearfix">
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">남아공</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=008001001">케이프타운<span class="cnt">5</span></a></li>
+								<li><a href="/main/list.php?category=008001002">요하네스버그<span class="cnt">2</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="division2">
+						<div class="v1 state_lst">
+							<strong class="tit">케냐</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=008005001">나이로비<span class="cnt">1</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">마다가스카르</strong>
+
+							<ul>
+							</ul>
+						</div>
+					</div>
+					<div class="division3">
+						<div class="v1 state_lst">
+							<strong class="tit">이집트</strong>
+
+							<ul>
+								<li><a href="/main/list.php?category=008006001">카이로<span class="cnt">3</span></a></li>
+							</ul>
+						</div>
+						<div class="v2 state_lst">
+							<strong class="tit">모로코</strong>
+
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //아프리카 -->
+
+			<!-- 테스트 -->
+			<div id="test_cate" class="tab_cnt test_cate" style="display: none">
+				<div class="division_wrap clearfix">
+					<div class="division1">
+						<div class="v1 state_lst">
+							<strong class="tit">민다</strong>
+
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="dep2_bg"></div>
-	</header>
-	<!-- //header -->
+	</div>
+	<!--// pop_nation -->
 
 	<!-- #container -->
 	<div id="container">
-		<span class="sub_bg"></span>
-<!-- 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 -->
-<div class="content w1100">
-	<!-- loaction -->
-	<div class="bread_crumb text-right">
-		<ul class="d_iblock clearfix">
-			<li><a href="" class="icon_house">홈</a></li>
-			<li><a href="">占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙</a></li>
-			<li><a href="">占쏙옙占실울옙占쏙옙</a></li>
-			<li>占쏙옙占쏙옙 占쏙옙占쏙옙</li>
-		</ul>
-	</div>
-	<!-- 占쏙옙占쏙옙 占쏙옙占?-->
-	<header class="sub_hd">
-		<h2>占쏙옙占쏙옙 占쏙옙占쏙옙</h2>
-		<div class="sub_arr_wrp">
-			<a href="" class="arr_prev">占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙</a>
-			<a href="" class="arr_next">占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙</a>
-		</div>
-	</header>
-	<!-- 회占쏙옙占쏙옙占쏙옙 확占쏙옙 -->
-	<section>
-		<h3 class="sub_title">
-			회占쏙옙占쏙옙占쏙옙 확占쏙옙<br>
-			<small>회占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占싹곤옙 占쏙옙호占싹깍옙 占쏙옙占쏙옙 占쏙옙橘占싫ｏ옙占?占쌕쏙옙 占싼뱄옙 확占쏙옙占쌌니댐옙.</small>
-		</h3>
-		<form>
-			<table class="tb tb_frm tb_fixed">
-				<caption class="sr-only">회占쏙옙占쏙옙占쏙옙 확占쏙옙</caption>
-				<colgroup>
-					<col style="width:155px">
-					<col>
-				</colgroup>
-				<tbody>
-					<tr>
-						<th scope="row">占쏙옙占싱듸옙</th>
-						<td><p>asafggg</p></td>
-					</tr>
-					<tr>
-						<th scope="row">占쏙옙橘占싫?/th>
-						<td><!-- [D] 0427 占쏙옙占쏙옙占쏙옙占쏙옙 -->
-							<input type="password" class="form-control-basic wid_lg" placeholder="占쏙옙橘占싫? title="占쏙옙橘占싫ｏ옙韜占?>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="text-center mt25">
-				<button type="button" class="btn bg_org btn-lg"><i class="icon_circle_ok"></i>확占쏙옙</button>
-			</div>
-		</form>
-	</section>
-</div>
+		<!-- 페이지시작 -->
+		<div class="content w1100">
+			<!-- loaction -->
+			<!-- <div class="bread_crumb text-right">
+                <ul class="d_iblock clearfix">
+                    <li><a href="../main/index.php" class="icon_house">홈</a></li>
+                    <li><a href="mypage_home.php">마이페이지</a></li>
+                    <li><a href="my_modify.php">개인정보</a></li>
+                    <li>개인정보</li>
+                </ul>
+            </div> -->
+			<!-- 서브 헤더 -->
+			<header class="sub_hd">
+				<h2>정보 수정</h2>
+			</header>
 
-<!-- //占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 -->
+
+			<!-- 회원정보 확인 -->
+			<section>
+
+				<form name="fmMember" id="fmMember" action="../member/indb.php" method="post" onsubmit="return chk_form(this)" enctype="multipart/form-data">
+					<input type=hidden name=mode value="chkPass">
+					<input type=hidden name=mid value="shinyooon">
+					<input type=hidden name=level value="1">
+					<input type="hidden" name="o[profile_img]" value="">
+
+					<h3 class="sub_title">회원정보 수정</h3>
+					<!-- 필수양식 -->
+					<table class="tb tb_frm v1 tb_fixed">
+						<caption class="sr-only">필수양식</caption>
+						<colgroup>
+							<col style="width:155px">
+							<col>
+							<col style="width:155px">
+							<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">아이디</th>
+							<td colspan="3">
+								<p class="form-control-static">shinyooon</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">비밀번호</th>
+							<!-- [D] 0427 수정사항 -->
+							<td colspan="3">
+								<div class="password_confirm_div" style="display:block">
+									<div class="mb10">
+										<input name="password_cur" type="password" class="form-control-basic wid_lg" placeholder="비밀번호를 입력해주세요." title="비밀번호 입력">
+										<div class="password_error" style="display:none">
+											<p class="form-control-static error">비밀번호가 일치하지 않습니다.</p>
+										</div>
+									</div>
+								</div>
+								<div class="password_input_div" style="display:none">
+									<div class="mb10">
+										<input name="password" type="password" class="form-control-basic wid_lg" placeholder="신규 비밀번호" title="신규 비밀번호 입력">
+										<div class="password_valid" style="display:none">
+											<p class="form-control-static color_org">*영문/숫자 조합 8자~12자 이내로 입력하세요</p>
+										</div>
+									</div>
+									<div class="mb10">
+										<input name="password2" type="password" class="form-control-basic wid_lg" placeholder="비밀번호 확인" title="비밀번호 재입력">
+										<div class="password_valid" style="display:none">
+											<p class="form-control-static valid ">재입력 비밀번호가 일치하지 않습니다.</p>
+										</div>
+									</div>
+									<!-- <button type="button" class="btn bg_mint" onclick="javascript:passChange();">비밀번호 변경</button> -->
+								</div>
+							</td>
+							<!-- // [D] 0427 수정사항 -->
+						</tr>
+						</tbody>
+					</table>
+					<div class="additional_div" style="display:none">
+						<!-- 부가요소-->
+						<table class="tb tb_frm v1 mt25 tb_fixed">
+							<caption class="sr-only">회원가입 부가 요소</caption>
+							<colgroup>
+								<col style="width:155px">
+								<col>
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td class="tel_form" colspan="2">
+									<input name="name" id="name" value="유나" type="text" class="form-control-basic wid_lg" title="이름">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">닉네임</th>
+								<td class="tel_form" colspan="2">
+									<input name="nickname" id="nickname" value="씬윤" type="text" class="form-control-basic wid_lg" title="닉네임">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">프로필사진</th>
+								<td colspan="2">
+									<!-- 프로필사진 업로드하자 마자 올림-->
+									<div id="image_preview"><img id="previewing" width="88" height="88" src="" onerror="this.src='/cust/img/admin_profile_none.png'" /></div>
+									<input name="profile_img" id="profile_img" type="file">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">생년월일</th>
+								<td colspan="2">
+									<input name="birth_year" type="text" msg="생년월일의 연도를 입력하세요." class="form-control-basic wid_sm" maxlength="4" title="생년월일 년도 입력" value="1989"  onkeydown="return onlyNumber(event);">
+									<span class="form-control-static">년</span>
+									<input name="birth[]" type="text" msg="생년월일의 월을 입력하세요." class="form-control-basic wid_sm ml10" maxlength="2" title="생년월일 월 입력" value="08"  onkeydown="return onlyNumber(event);">
+									<span class="form-control-static">월</span>
+									<input name="birth[]" type="text" msg="생년월일의 일을 입력하세요."  class="form-control-basic wid_sm ml10" maxlength="2" title="생년월일 일 입력" value="31"  onkeydown="return onlyNumber(event);">
+									<span class="form-control-static">일</span>
+									<span class="color_blk ml20">( 성별 :
+									<label class="inline-radio radio_label ml10 ">
+										<input type="radio" msg="성별을 입력하세요." name="sex" value="m" >남
+									</label>
+									<label class="inline-radio radio_label on">
+										<input type="radio" msg="성별을 입력하세요."  name="sex" value="f" checked> 여
+									</label>
+									)
+								</span>
+								</td>
+								<!-- <th scope="row" width="300">프로필사진</th> -->
+							</tr>
+							<tr>
+								<th scope="row">전화번호</th>
+								<td class="tel_form" colspan="2">
+									<input name="phone" value="010-6316-0831" type="text" class="form-control-basic wid_lg" title="전화번호" onkeydown="return onlyNumberHypen(event);">
+								</td>
+								<!--
+                                <td rowspan="3">
+                                -->
+								<!-- 프로필사진 업로드하자 마자 올림-->
+								<!--
+                                  <div id="image_preview"><img id="previewing" width="88" height="88" src="" onerror="this.src='/cust/img/admin_profile_none.png'" /></div>
+                                  <input name="profile_img" id="profile_img" type="file">
+                                </td>
+                                -->
+							</tr>
+							<tr>
+								<th scope="row">휴대폰</th>
+								<td class="tel_form" colspan="2">
+									<input name="mobile" value="010-6316-0831" type="text" class="form-control-basic wid_lg" title="휴대폰" onkeydown="return onlyNumberHypen(event);">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일</th>
+								<td colspan="2">
+									<input name="email[]" value="yuna" required msg="이메일을 입력하세요." type="text" class="form-control-basic wid_md" title="이메일 주소 아이디부분">
+									<span class="form-control-static">@</span>
+									<input name="email[]" value="theminda.com" required msg="이메일을 입력하세요." type="text" class="form-control-basic wid_md" title="이메일 주소 도메인부분">
+									<!--
+                                    <select class="form-control-basic wid_sm ml5" title="이메일도메인선택">
+                                        <option value="">직접입력</option>
+                                    </select>
+                                     -->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">거주지</th>
+								<td colspan="2">
+									<select name="residence" class="form-control-basic wid_md" msg="거주지를 입력하세요." title="거주지선택">
+										<option value="">선택</option>
+										<option value="0" selected>서울</option>
+										<option value="1" >경기</option>
+										<option value="2" >강원</option>
+										<option value="3" >충청</option>
+										<option value="4" >경상</option>
+										<option value="5" >전라</option>
+										<option value="6" >제주</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">가입경로</th>
+								<td colspan="2">
+									<select name="referer" class="form-control-basic wid_md" msg="가입경로를 선택하세요." title="가입경로선택">
+										<option value="">선택</option>
+										<option value="0" >여행자를 통해</option>
+										<option value="1" >지인의 소개</option>
+										<option value="2" >검색 사이트를 통해</option>
+										<option value="3" selected>기타</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">마케팅정보<br>수신동의</th>
+								<td colspan="2">
+									<label class="inline-radio radio_label on">
+										<input name="denymail" value="yes" type="radio" class="receiveMail" checked> yes
+									</label>
+									<label class="inline-radio radio_label ml35 ">
+										<input name="denymail" value="no"  type="radio" class="receiveMail" > no
+									</label>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="text-center mt25">
+						<button type="button" class="btn bg_org btn-lg" onclick="javascript:onSubmit2();"><i class="icon_circle_ok"></i><span class="submit_span">회원정보 확인하기</span></button>
+					</div>
+
+				</form>
+				<div style="height:100px">
+				</div>
+				<div class="mt60 text-right withdraw_div" style="display:none">
+					<span class="d_iblock pt3 pr10">탈퇴를 원하시면 우측의 탈퇴 버튼을 눌러주세요.</span> <a href="withdraw.php" class="btn btn-xs btn_border_grey">회원탈퇴</a>
+				</div>
+			</section>
+
+		</div>
 	</div>
 	<!-- //container -->
-
 	<!-- Footer -->
-	<div id="ft">
-		<div class="w1100 footer">
-			<div class="ft_top">
-				<strong class="font_lato color_wh mb3">information</strong>
-				<div class="ft_info_txt fs13">
-					<span>(占쏙옙)占썹막</span>
-					<span>占쏙옙표 : 占쏙옙占쏙옙회</span>
-					<span>占쏙옙占쏙옙湄占싹뱄옙호 : 010-86-28116</span>
-					<span>占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 : 占쏙옙2014-000025호</span>
-					<span>占쏙옙占쏙옙퓔탑占쏙옙키占?: 占쏙옙 01-5470호</span>
-				</div>
-				<div class="ft_info_txt fs13">
-					<address>占쏙옙占쏙옙占?占쏙옙占싸깍옙 占쏙옙占쏙옙占?174 창占쏙옙占쏙옙占?5占쏙옙</address>
-					<span>TEL : 1661-2892</span>
-					<span>FAX : 02-722-3478</span>
-					<span class="font_lato">help desk <span class="color_wh">1661-2892</span></span>
-					<span>占쏘영占시곤옙 10:00~12:00 / 13:00 ~ 18:00 (占쏙옙~占쏙옙, 占쏙옙占쏙옙占쏙옙 占쌨뱄옙</span>
-				</div>
-				<ul class="about_lst clearfix">
-					<li><a href="" target="_blank" class="icon_face">占싸댐옙占쏙옙占싱쏙옙占싹븝옙占쏙옙</a></li>
-					<li><a href="" target="_blank" class="icon_blog">占싸다븝옙慣留占쏙옙占?/a></li>
-					<li><a href="" class="btn btn_border_grey">1:1 占쏙옙占쏙옙</a></li>
-				</ul>
-			</div>
-			<div class="ft_btm clearfix">
-				<ul class="fnb pull-left clearfix">
-					<li><a href="">회占쏙옙柰占?/a></li>
-					<li><a href="">占싸박듸옙絿占시?/a></li>
-					<li><a href="">占싱울옙占쏙옙</a></li>
-					<li><a href="" class="color_org">占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙賓占식?/a></li>
-					<li><a href="">占싸박다놂옙占쏙옙 占쏙옙占싫占쌀깍옙占쏙옙</a></li>
-					<li><a href="">占쏙옙占쏙옙트占쏙옙</a></li>
-					<li><a href="">占쏙옙占쏙옙占쏙옙</a></li>
-					<li><a href="">占쏙옙占쏙옙占쏙옙占쏙옙</a></li>
-				</ul>
-				<p class="pull-right fs12">Copyright&copy; samack Co., Ltd. All rights reserved.</p>
-			</div>
-		</div>
-	</div>
+	<? include "inc/footer.html" ?>
 	<!-- //Footer -->
 
 </div>
 <!-- //wrap -->
 
+<!-- todayroom -->
 <div class="fix_btm">
 	<!-- quick  -->
-	<div id="quickMenu" class="quick d_iblock">
-		<button type="button" onclick="$('#todayRoom').addClass('active')">占쏙옙占시븝옙占쏙옙占쏙옙<span class=" sr-only">占쏙옙瞿占쏙옙占?/span></button>
-	</div>
-	<a href="#container" class="icon_top" onClick="scrollMove('#container');return false;">占쏙옙占쏙옙占쏙옙占쏙옙絹占?/a>
+	<a href="#container" class="icon_top" onClick="scrollMove('#hd');return false;">상단으로이동</a>
 </div>
+<!--// todayroom -->
+
+
+<!-- pop_nation -->
+<!--// pop_nation -->
+
+<!-- pop_map -->
+<!--// pop_map-->
 
 <!-- js -->
 <!--[if lt IE 9]>
-<script src="/cust/js/jquery.placeholder.js"></script>
-<script src="/cust/js/html5.js"></script>
-<script src="/cust/js/ie9.js"></script>
+<script  src="/cust/js/jquery.placeholder.js"></script>
+<script  src="/cust/js/html5.js"></script>
+<script  src="/cust/js/ie9.js"></script>
 <![endif]-->
-
 <!-- lib -->
-<script src="/cust/js/bootstrap-slider.js"></script>
-<script src="/cust/js/jquery.nanoscroller.js"></script>
-<script src="/cust/js/moment.min.js"></script>
-<script src="/cust/js/daterangepicker.js"></script>
-<script src="/cust/js/jquery.bxslider.min.js"></script>
+<script  src="/cust/js/bootstrap-slider.js"></script>
+<script  src="/cust/js/jquery.nanoscroller.js"></script>
+<script  src="/cust/js/moment.min.js"></script>
+<script  src="/cust/js/daterangepicker.js?v=1"></script>
+<script  src="/cust/js/jquery.bxslider.min.js"></script>
+<script  src="/cust/js/jquery.number.js"></script>
 <!-- common -->
-<script src="/cust/js/common.js"></script>
+<script  src="/cust/js/common.js?v=1"></script>
+<script  src="/cust/js/common2.js?v=1"></script>
+<script  src="/lib/js/chkForm.js?v=1"></script>
+
 </body>
 </html>

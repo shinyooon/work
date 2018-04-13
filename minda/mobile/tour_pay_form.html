@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<title> MINDA :: 민박다나와 </title>
-	<!-- css -->
-	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
-	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
-	<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
-
-
-	<!-- js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-
-<body>
-	<!-- wrap.screenID -->
-	<div id="wrap">
+<? include "inc/top.html" ?>
 		<!-- header -->
 		<header id="hd" class="no_fixed">
 			<h1>예약하기</h1>
@@ -242,7 +218,7 @@
 						</ul>
 					</div>
 				</section>
-				<section class="info-bx-wrap">
+				<section class="info-bx-wrap trip-cancel__table">
 					<h2 class="sub_tit">취소환불규정</h2>
 					<div class="bx-wh pa15">
 						파트너의 취소환불 규정이 들어갈곳!!! 아래는 샘플입니다.
@@ -282,6 +258,8 @@
 								</tr>
 							</tbody>
 						</table>
+						<!-- 2018-04-04 add -->
+						<p class="trip__cancel-msg">판매자의 사정 또는 인원 미달로 인한 예약취소 시<br />여행에 불편이 없도록 즉시 안내해드리고,<br/>결제하신 예약금은 전액 환불해드립니다.</p>
 					</div>
 					<div class="btm-check-area">
 						<label class="chk_label mint">

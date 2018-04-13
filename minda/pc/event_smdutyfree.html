@@ -1,0 +1,51 @@
+<? include "inc/top.html" ?>
+<!-- wrap.screenID -->
+<div id="wrap" class="page_tb">
+    <!-- header -->
+    <? include "inc/header.html" ?>
+    <!-- //header -->
+    <!-- #container -->
+    <div id="container">
+        <!-- <span class="sub_bg"></span> -->
+        <!-- 페이지시작 -->
+        <div class="content w1100">
+            <? include "inc/event_top.html" ?>
+
+
+            <!-- 이벤트 내용 시작 -->
+            <div style="margin: 0px auto; position: relative; max-width: 1080px;">
+                <div style="position:relative">
+                    <img style="width: auto; display:block; max-width: 100%;" src="/event/img/201804/smdutyfree/img.jpg" alt="" />
+                    <h1 class="sr-only">minda X SM DUTYFREE 자유여행의 시작은 민다에서! 면세점 할인 혜택은 SM면세점에서!</h1>
+                    <p class="sr-only">특별혜택 SALE. SM면세점 할인크폰(서울,온라인,인천공항)</p>
+                    <p class="sr-only">민다를 이용해주시는 모든 분들께 다양한 혜택을 드리고자 SM면세점 할인쿠폰을 증정해드립니다.</p>
+                    <a href="#" onclick="ga('send','event','event_page_button','click','button_event_sm_dutyfree_coupon_button');" class="smdutyfree__btn-coupon" style="position:absolute;width:63.32%;height:5.6%;left:18.4%;bottom:8.4%"><span class="sr-only">SM면세점 할인쿠폰 출력하기</span></a>
+                </div>
+            </div>
+            <script type="text/javascript"> $(function() {
+                var filter = 'win16|win32|win64|mac';
+                $('.smdutyfree__btn-coupon').click(function(e) {
+                    e.preventDefault();
+                    if (navigator.platform) {
+                        if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+                            AppInvokeOpenNewPage('http://m.smdutyfree.com/coupon/k2.html?code=s006993', 'y', 'y');
+                        } else {/*PC*/
+                            window.open("http://www.smdutyfree.com/coupon/oc_kr.html?code=s006993", "SM면세점 할인쿠폰 출력하기", "width=780, height=700, toolbar=no, menubar=no, scrollbars=yes, resizable=no" );
+                        }
+                    }
+                });
+            });</script>
+            <!-- 이벤트 내용 끝 -->
+
+
+            <? include "inc/event_bottom.html" ?>
+        </div>
+        <!-- //페이지시작 -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <? include "inc/footer.html" ?>
+    <!-- //Footer -->
+</div>
+<!-- //wrap -->
+<? include "inc/bottom.html" ?>

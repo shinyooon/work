@@ -1,91 +1,68 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title> MINDA :: ¹Î¹Ú´Ù³ª¿Í </title>
-
-<!-- css -->
-<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/normalize.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/daterangepicker.css">
-<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/slider.css">
-<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.css">
-<link rel="stylesheet" href="http://v2.theminda.com/m/1.0/cust/css/common.dev.css">
-<!-- js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-
-<!-- [D] ÇÏ´Ü¿¡ ÇÈ½ºµÇ´Â ¹öÆ°ÀÌ ÀÖ´Â ÆäÀÌÁö class="page_fix" -->
-<body class="page_back page_fix">
-
-<!-- wrap.screenID -->
-<div id="wrap">
+<? include "inc/top.html" ?>
 	<!-- header -->
 	<header id="hd">
-		<h1>Ãë¼ÒÈ¯ºÒ±ÔÁ¤</h1>
-		<a class="icon_hd_clse" href="">´Ý±â</a>
+		<h1>ì·¨ì†Œí™˜ë¶ˆê·œì •</h1>
+		<a class="icon_hd_clse" href="">ë‹«ê¸°</a>
 	</header>
 	<!-- header -->
 
 	<!-- #container -->
 	<div id="container" class="clearfix">
-
-		<!-- ÆäÀÌÁö ½ÃÀÛ-->
-		<article class="cnt_bx">
-			<h1 class="color_blk fs15">Ãë¼ÒÈ¯ºÒ ±ÔÁ¤</h1>
-			<table class="tb tb_fixed mt10">
-				<caption class="sr-only">³¯Â¥º° È¯ºÒ±ÔÁ¤</caption>
-				<thead>
-					<tr>
-						<th scope="col" class="fw500">Ãë¼ÒÀÏ</th>
-						<th scope="col" class="fw500">È¯ºÒ¾×</th>
-						<th scope="col" class="fw500">Æ÷ÀÎÆ® Àû¸³</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="text-center">30ÀÏ Àü Ãë¼Ò</td>
-						<td class="text-center">Àü¾×È¯ºÒ<span class="d_block color_grey">(Æ÷ÀÎÆ®/ÄíÆù °áÁ¦¾× Á¦¿Ü)</span></td>
-						<td class="text-center">¾øÀ½</td>
-					</tr>
-					<tr>
-						<td class="text-center">29~22ÀÏ Àü Ãë¼Ò</td>
-						<td class="text-center">70%</td>
-						<td class="text-center">8%</td>
-					</tr>
-					<tr>
-						<td class="text-center">21ÀÏ~15ÀÏ Àü Ãë¼Ò</td>
-						<td class="text-center">60%</td>
-						<td class="text-center">8%</td>
-					</tr>
-					<tr>
-						<td class="text-center">14ÀÏ~4ÀÏ Àü Ãë¼Ò</td>
-						<td class="text-center">50%</td>
-						<td class="text-center">8%</td>
-					</tr>
-					<tr>
-						<td class="text-center">3ÀÏ~´çÀÏÃë¼Ò ¹× NO-SHOW</td>
-						<td class="text-center">40%</td>
-						<td class="text-center">¾øÀ½</td>
-					</tr>
-				</tbody>
-			</table>
-			<ul class="lst_type_alert mt10 mb10 fs12">
-				<li>Ãë¼ÒÀÏÀº ÇöÁö Ã¼Å©ÀÎ ³¯Â¥ ±âÁØÀÔ´Ï´Ù.</li>
-				<li>È¯ºÒ¾× ¹× Æ÷ÀÎÆ® Àû¸³Àº ÃÑ ¼÷¹Ú¿ä±Ý ±âÁØÀÔ´Ï´Ù.</li>
-				<li>Àü¾× È¯ºÒ µÉ °æ¿ì Æ÷ÀÎÆ®/ÄíÆù °áÁ¦¾×Àº Á¦¿ÜµË´Ï´Ù.</li>
-				<li>Ãë¼Ò½Ã Æ÷ÀÎÆ® Àû¸³Àº Æ÷ÀÎÆ®/ÄíÆù °áÁ¦¾×Àº Á¦¿ÜÇÏ°í Àû¸³µË´Ï´Ù. </li>
-			</ul>
-			<h4 class="fs15 color_blk">
-				¹Î´ÙÃë¼ÒÈ¯ºÒ ±ÔÁ¤ <a class="btn color_org border_org ml10" href="">º¸±â</a>
-			</h4>
-		</article>
-		<!-- //ÆäÀÌÁö ³¡-->
-
+		<div id="LyrCancel">
+			<!-- íŽ˜ì´ì§€ ì‹œìž‘-->
+			<article class="cnt_bx trip-cancel__table">
+				<h1 class="color_blk fs15">ì·¨ì†Œí™˜ë¶ˆ ê·œì •</h1>
+				<table class="tb tb_fixed mt10">
+					<caption class="sr-only">ë‚ ì§œë³„ í™˜ë¶ˆê·œì •</caption>
+					<thead>
+						<tr>
+							<th scope="col" class="fw500">ì·¨ì†Œì¼</th>
+							<th scope="col" class="fw500">í™˜ë¶ˆì•¡</th>
+							<th scope="col" class="fw500">í¬ì¸íŠ¸ ì ë¦½</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">30ì¼ ì „ ì·¨ì†Œ</td>
+							<td class="text-center">ì „ì•¡í™˜ë¶ˆ<span class="d_block color_grey">(í¬ì¸íŠ¸/ì¿ í° ê²°ì œì•¡ ì œì™¸)</span></td>
+							<td class="text-center">ì—†ìŒ</td>
+						</tr>
+						<tr>
+							<td class="text-center">29~22ì¼ ì „ ì·¨ì†Œ</td>
+							<td class="text-center">70%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">21ì¼~15ì¼ ì „ ì·¨ì†Œ</td>
+							<td class="text-center">60%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">14ì¼~4ì¼ ì „ ì·¨ì†Œ</td>
+							<td class="text-center">50%</td>
+							<td class="text-center">8%</td>
+						</tr>
+						<tr>
+							<td class="text-center">3ì¼~ë‹¹ì¼ì·¨ì†Œ ë° NO-SHOW</td>
+							<td class="text-center">40%</td>
+							<td class="text-center">ì—†ìŒ</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--<ul class="lst_type_alert mt10 mb10 fs12">
+					<li>ì·¨ì†Œì¼ì€ í˜„ì§€ ì²´í¬ì¸ ë‚ ì§œ ê¸°ì¤€ìž…ë‹ˆë‹¤.</li>
+					<li>í™˜ë¶ˆì•¡ ë° í¬ì¸íŠ¸ ì ë¦½ì€ ì´ ìˆ™ë°•ìš”ê¸ˆ ê¸°ì¤€ìž…ë‹ˆë‹¤.</li>
+					<li>ì „ì•¡ í™˜ë¶ˆ ë  ê²½ìš° í¬ì¸íŠ¸/ì¿ í° ê²°ì œì•¡ì€ ì œì™¸ë©ë‹ˆë‹¤.</li>
+					<li>ì·¨ì†Œì‹œ í¬ì¸íŠ¸ ì ë¦½ì€ í¬ì¸íŠ¸/ì¿ í° ê²°ì œì•¡ì€ ì œì™¸í•˜ê³  ì ë¦½ë©ë‹ˆë‹¤. </li>
+				</ul>-->
+				<!-- 2018-04-04 add -->
+				<p class="trip__cancel-msg">íŒë§¤ìžì˜ ì‚¬ì • ë˜ëŠ” ì¸ì› ë¯¸ë‹¬ë¡œ ì¸í•œ ì˜ˆì•½ì·¨ì†Œ ì‹œ<br />ì—¬í–‰ì— ë¶ˆíŽ¸ì´ ì—†ë„ë¡ ì¦‰ì‹œ ì•ˆë‚´í•´ë“œë¦¬ê³ ,<br />ê²°ì œí•˜ì‹  ì˜ˆì•½ê¸ˆì€ ì „ì•¡ í™˜ë¶ˆí•´ë“œë¦½ë‹ˆë‹¤.</p>
+				<h4 class="fs15 color_blk">
+					ë¯¼ë‹¤ì·¨ì†Œí™˜ë¶ˆ ê·œì • <a class="btn color_org border_org ml10" href="">ë³´ê¸°</a>
+				</h4>
+			</article>
+			<!-- //íŽ˜ì´ì§€ ë-->
+		</div>
 	</div>
 	<!-- //container -->
 
