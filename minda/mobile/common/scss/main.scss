@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@import "helpers/variables";
+@import "helpers/prefixes";
+
+@import "base/reset";
+@import "base/font";
+
+/*pages*/
+@import "pages/main";

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.skip--hidden {
+  position:relative;
+}
+.skip__link {
+  position:absolute;
+  padding:5px;
+  width:100%;
+  top:-30px;
+  background:$color__wh;
+  height:auto;
+  text-decoration:none;
+  &:focus, &:active {
+    top:0px;
+  }
+}
+html,body{
+  height:100%;
+}
+#wrap{
+  padding-top:$header__h + 3px;
+}
+.wrap{
+
+}
+.container{
+
+}
+#container{
+  &.no-hd{
+    margin-top:-($header__h+3px);
+  }
+  &.has-filter{
+    padding-bottom:60px;
+    &.has-fnb{
+      padding-bottom:55px;
+    }
+  }
+}
+.contents {
+
+}

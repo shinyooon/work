@@ -1,0 +1,66 @@
+/* AppInvokeMessageBox */
+/* msg box */
+#appinvoke_msg_box {display:none;}
+/* Overlay */
+#appinvoke_msg_box-overlay {background-color:#eeeeee;}
+/* Container */
+#appinvoke_msg_box-container {height:auto !important; width:300px; font: 16px/22px dotum; text-align:left; background:#fff; border:2px solid #996633;}
+#appinvoke_msg_box-container #msg_box_header {height:30px; line-height:30px; width:100%; background:url(../img/simpledialog/header.jpg) repeat-x; color:#ffffff; font-weight:bold;}
+#appinvoke_msg_box-container #msg_box_header span {padding-left:8px;}
+#appinvoke_msg_box-container #msg_box_message {color:#333333; font-size:14px; margin:0; padding:12px 4px 12px 8px;}
+#appinvoke_msg_box-container #msg_box_buttons_1 {line-height:26px; width:80px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box-container #msg_box_buttons_1 div {float:left; margin-left:4px; width:70px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer; z-index: 99999;} 
+#appinvoke_msg_box-container #msg_box_buttons_2 {line-height:26px; width:160px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box-container #msg_box_buttons_2 div {float:left; margin-left:4px; width:68px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+#appinvoke_msg_box-container #msg_box_buttons_3 {line-height:26px; width:240px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box-container #msg_box_buttons_3 div {float:left; margin-left:4px; width:70px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+#appinvoke_msg_box-container #msg_box_space {color:#333333; font-size:1px; margin:14px; padding:0;}
+#appinvoke_msg_box-container a.modal-close,
+#appinvoke_msg_box-container a.modal-close:link,
+#appinvoke_msg_box-container a.modal-close:active,
+#appinvoke_msg_box-container a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#ffffff;}
+#appinvoke_msg_box-container a.modal-close:hover {color:#cccccc;}
+
+/* AppInvokeMessageBoxA */
+/* msg box A */
+#appinvoke_msg_box_a {display:none;}
+/* Overlay */
+#appinvoke_msg_box_a-overlay {background-color:#eeeeee;}
+/* Container */
+#appinvoke_msg_box_a-container {height:auto !important; width:300px; font: 16px/22px dotum; text-align:left; background:#fff; border:2px solid #996633;}
+#appinvoke_msg_box_a-container #msg_box_header {height:30px; line-height:30px; width:100%; background:url(../img/simpledialog/header.jpg) repeat-x; color:#ffffff; font-weight:bold;}
+#appinvoke_msg_box_a-container #msg_box_header span {padding-left:8px;}
+#appinvoke_msg_box_a-container #msg_box_message {color:#333333; font-size:14px; margin:0; padding:12px 4px 12px 8px;}
+#appinvoke_msg_box_a-container #msg_box_buttons_1_short {line-height:26px; width:80px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_1_short div {float:left; margin-left:4px; width:70px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_1_middle {line-height:26px; width:160px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_1_middle div {float:left; margin-left:4px; width:150px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_1_long {line-height:26px; width:240px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_1_long div {float:left; margin-left:4px; width:230px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_2 {line-height:26px; width:240px; margin:0 auto; padding:10px 8px 0;} 
+#appinvoke_msg_box_a-container #msg_box_buttons_2 div {float:left; margin-left:4px; width:110px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+#appinvoke_msg_box_a-container #msg_box_space {color:#333333; font-size:1px; margin:14px; padding:0;}
+#appinvoke_msg_box_a-container a.modal-close,
+#appinvoke_msg_box_a-container a.modal-close:link,
+#appinvoke_msg_box_a-container a.modal-close:active,
+#appinvoke_msg_box_a-container a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#ffffff;}
+#appinvoke_msg_box_a-container a.modal-close:hover {color:#cccccc;}
+
+/* AppInvokeMenuList */
+/* menu list */
+#appinvoke_menu_list {display:none;}
+/* Overlay */
+#appinvoke_menu_list-overlay {background-color:#eeeeee;}
+/* Container */
+#appinvoke_menu_list-container {height:auto !important; width:300px; font: 16px/22px dotum; text-align:left; background:#fff; padding-bottom: 10px; border:2px solid #996633;}
+#appinvoke_menu_list-container #menu_list_header {height:30px; line-height:30px; width:100%; background:url(../img/simpledialog/header.jpg) repeat-x; color:#ffffff; font-weight:bold;}
+#appinvoke_menu_list-container #menu_list_header span {padding-left:8px;}
+/*#appinvoke_menu_list-container #menu_list_message {color:#333333; font-size:14px; margin:0; padding:12px 4px 12px 8px;}*/
+#appinvoke_menu_list-container #menu_list_buttons {line-height:auto; width:240px; margin:0 auto; padding:20px 8px 0;} 
+#appinvoke_menu_list-container #menu_list_buttons div {float:left; margin:0 0 7px 4px ; width:230px; height:26px; color:#666666; font-weight:bold; text-align:center; background:url(../img/simpledialog/button.gif) repeat-x; border:1px solid #bbb; cursor:pointer;} 
+/*#appinvoke_menu_list-container #menu_list_space {color:#333333; font-size:1px; margin:14px; padding:0;}*/
+#appinvoke_menu_list-container a.modal-close,
+#appinvoke_menu_list-container a.modal-close:link,
+#appinvoke_menu_list-container a.modal-close:active,
+#appinvoke_menu_list-container a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#ffffff;}
+#appinvoke_menu_list-container a.modal-close:hover {color:#cccccc;}

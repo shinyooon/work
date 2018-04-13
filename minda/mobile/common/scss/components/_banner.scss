@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.trip-list__banner-area{
+    a{
+        display:block;
+        background-color:$color__f3f3f3;
+        padding:17px;
+    }
+}
+.banner__usj{
+    background-color:#9CD6D5;
+    @include d-flex(center);
+    text-align:center;
+    height:50px;
+    &-txt{
+        @include text($color__wh,em(17px));
+        &--point{
+            font-weight:$fw__800;
+        }
+    }
+}
+.trip-list__banner-area{
+    .banner__usj{
+        margin-bottom:-17px;
+    }
+}
+.mypage__btm-banner{
+    .banner-area{
+        margin:17px 0 0 0;
+        img,
+        a{
+            display:block;
+            width:100%;
+        }
+    }
+}

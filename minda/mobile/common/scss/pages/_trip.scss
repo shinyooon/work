@@ -1,0 +1,123 @@
+@charset "UTF-8";
+.trip-top-msg {
+    text-align: center;
+    padding: 21px 0 20px;
+    background-color: $color__f3f3f3;
+    .txt {
+        font-size: em(15px);
+        color: $color__484848;
+        line-height: 19px;
+        &--point{
+            color:$color__primary;
+            font-weight:$fw__800;
+        }
+    }
+}
+
+.item_card_lst_wrp {
+    &.trip__list{
+        padding-top: 0
+    }
+}
+
+.label__coupon{
+    display:inline-block;
+    background-color:$color__mint;
+    border-radius:5px;
+    @include text($color__wh,em(11px));
+    position:relative;
+    width:75px;
+    height:18px;
+    text-align:left;
+    padding:2px 0 0 7px;
+    vertical-align:middle;
+    margin:-2px 5px 0 0;
+    &:after{
+        content:'';
+        width:10px;
+        height:18px;
+        background:url('/m/1.0/common/img/icon/bg_label_coupon.png') no-repeat;
+        @include background-size(10px,auto);
+        position:absolute;
+        right:-7px;
+        top:0;
+    }
+}
+.item_card_lst{
+    .info-detail{
+        &.has-coupon{
+            .left{
+                width:auto;
+            }
+            .right{
+                width:60%;
+            }
+        }
+    }
+}
+.item_title {
+    .star_wrp{
+        display:inline-block;
+        .color_mint,.rate{
+            font-size:em(20px);
+        }
+    }
+    .label__coupon{
+        text-align:right;
+        margin:-7px 0 0 10px;
+        padding:2px 7px 0 0;
+        &:after{
+            right:auto;
+            left:-7px;
+            background-position:0 -20px;
+        }
+    }
+}
+.trip-contact{
+    &__txt{
+        @include text($color__484848,em(15px));
+        line-height: em(24px);
+    }
+    &__link {
+        &, &:hover, &:focus {
+            @include text($color__mint, em(15px));
+            display: inline-block;
+            margin-top: 17px;
+            text-decoration: underline;
+        }
+    }
+    &__icon-custom{
+        width:69px;
+        height:83px;
+        background:url(../img/icon/icon_trip_custom.svg);
+        @include background-size(69px,83px);
+    }
+}
+.trip__list{
+    .nodata__title{
+        @include text($color__484848,em(20px));
+    }
+}
+/*2018-04-05 trip cancel notice*/
+.trip__cancel-msg {
+    @include text($color__default,em(13px));
+    line-height:19px;
+}
+.trip-option__btm{
+    .trip__cancel-msg{
+        padding:17px 0 7px;
+        text-align:center;
+    }
+}
+.trip-cancel__table{
+    & + .trip__cancel-msg{
+        padding:9px 0 0 0;
+        margin:0 0 -8px 0;
+    }
+}
+#LyrCancel{
+    .trip__cancel-msg{
+        padding:9px 0 6px;
+        margin:0;
+    }
+}

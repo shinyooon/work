@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+.header__icon-back,
+.header__icon-save,
+.header__icon-share,
+.header__icon-map,
+.header__icon-clse,
+.header__icon-arr-down
+{
+    @include sr-only(true);
+}
+.header__icon-back{
+	display:inline-block;
+	width:11px;
+	height:20px;
+    background:url(#{$path}/icon/icon_back.svg?v=#{$img_version}) no-repeat;
+	@include background-size(11px,20px);
+}
+.header__icon-clse{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url(#{$path}/icon/icon_clse.svg?v=#{$img_version}) no-repeat;
+    @include background-size(20px,20px);
+}
+.header__icon-save{
+    display:inline-block;
+    width:20px;
+    height:18px;
+    background:url(#{$path}/icon/icon_save.svg?v=#{$img_version}) no-repeat;
+    @include background-size(20px,18px);
+}
+.header__icon-map,.srch__icon-map{
+    display:inline-block;
+    width:16px;
+    height:20px;
+    background:url(#{$path}/icon/icon_map.svg?v=#{$img_version}) no-repeat;
+    @include background-size(16px,20px);
+}
+
+.header__icon-share{
+    display:inline-block;
+    width:20px;
+    height:19px;
+    background:url(#{$path}/icon/icon_share.svg?v=#{$img_version}) no-repeat;
+    @include background-size(20px,19px);
+}
+.transparent{
+	.header__icon-back,
+    .header__icon-save,
+    .header__icon-share,
+    .header__icon-map
+    {
+        -webkit-filter: grayscale(100%) brightness(5);
+        filter: grayscale(100%) brightness(5);
+	}
+}
+.active{
+    .header__icon-save{
+        background-image:url(#{$path}/icon/icon_save_mint.svg?v=#{$img_version});
+        -webkit-filter:initial;
+        filter: initial;
+    }
+}
+.srch__date-icon-cal{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    background:url(#{$path}/icon/icon_cal.svg?v=#{$img_version}) no-repeat;
+    @include background-size(14px,auto);
+    vertical-align:top;
+}
+.srch__icon-filter{
+    display:block;
+    margin:0 auto 2px;
+    width:14px;
+    height:14px;
+    background:url(#{$path}/icon/icon_filter.svg?v=#{$img_version}) no-repeat;
+    @include background-size(14px,auto);
+}
+.active{
+    .srch__icon-filter {
+        background-image:url(#{$path}/icon/icon_filter_mint.svg?v=#{$img_version});
+    }
+}
+.srch__btm{
+    .srch__icon-map{
+        width:11px;
+        height:14px;
+        display:block;
+        margin:0 auto 1px;
+        @include background-size(11px,auto);
+    }
+}
+.filter__icon{
+    &-room,&-traffic,&-restaurant,&-shopping,&-sight{
+        display:inline-block;
+        width:24px;
+        height:40px;
+        background-image:url(#{$path}/icon/legend/spr_icon_legend.png?v=#{$img_version});
+        @include background-size(120px,auto);
+        background-repeat:no-repeat;
+        padding-top:32px;
+    }
+    &-room{
+        background-position:0 0;
+    }
+    &-traffic{
+        background-position:-24px 0;
+    }
+    &-restaurant{
+        background-position:-48px 0;
+    }
+    &-shopping{
+        background-position:-72px 0;
+    }
+    &-sight{
+        background-position:-96px 0;
+    }
+}
+.active{
+    .filter__icon {
+        &-room, &-traffic, &-sight, &-restaurant, &-shopping {
+            background-position-y: -60px;
+        }
+    }
+}
+.header__icon-arr-down{
+    display:inline-block;
+    width:4px;
+    height:6px;
+    background-image:url(#{$path}/icon/icon_arr_down2.svg?v=#{$img_version});
+    background-repeat:no-repeat;
+    margin:0 0 0 12px;
+}
+.icon_fix_close{
+    background:url(#{$path}/icon/icon_clse_input.svg?v=#{$img_version}) center center no-repeat;
+    @include background-size(14px,auto);
+}
+.mark_info{
+    .icon_fix_close{
+        width:50px;
+        height:50px;
+    }
+}
+.starrating{
+    display: inline-block;
+    width: 69px;
+    height: 13px;
+    background:url(#{$path}/icon/icon_star.png?v=#{$img_version}) 0 0 repeat-x;
+    @include background-size(14px,13px);
+    vertical-align: top;
+    overflow: hidden;
+    background-repeat-y: no-repeat !important;
+    line-height: 0em;
+    font-size: 0;
+    margin-top: -2px;
+    span{
+        overflow: hidden;
+        display: block;
+        height: 13px;
+        background:url(#{$path}/icon/icon_star_on.png?v=#{$img_version}) 0 0 repeat-x;
+        @include background-size(14px,13px);
+        vertical-align: top;
+    }
+}
+.more-list__icon_new{
+    display:inline-block;
+    width:21px;
+    height:21px;
+    vertical-align:top;
+    margin:0 0 0 7px;
+    background:url(#{$path}/icon/icon_new.svg?v=#{$img_version})0 0 no-repeat;
+    @include background-size(21px,21px);
+}
+
+.share_pop{
+    .icon_sns_fb,
+    .icon_sns_tw,
+    .icon_sns_kakao,
+    .icon_sns_url{
+        display:inline-block;
+        width:60px;
+        height:60px;
+        margin:0 4px;
+        @include background-size(60px,60px);
+    }
+    .icon_sns_fb{
+        background:url(#{$path}/icon/share/icon_share_fb.svg?v=#{$img_version})0 0 no-repeat;
+    }
+    .icon_sns_tw{
+        background:url(#{$path}/icon/share/icon_share_tw.svg?v=#{$img_version})0 0 no-repeat;
+    }
+    .icon_sns_kakao{
+        background:url(#{$path}/icon/share/icon_share_ka.svg?v=#{$img_version})0 0 no-repeat;
+    }
+    .icon_sns_url{
+        background:url(#{$path}/icon/share/icon_share_url.svg?v=#{$img_version})0 0 no-repeat;
+    }
+}

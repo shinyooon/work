@@ -1,0 +1,11 @@
+/* jquery.mobile-anymobi-1.3.2.min */
+
+- http://api.jquerymobile.com/popup/
+- Popup with close button right
+
+
+* 적용 페이지
+www.bunker1.anymobi.kr/m/1.0/grp_setting/monthly_schedule.html
+
+* 용 도
+벙커1 스케쥴 페이지 팝업 효과

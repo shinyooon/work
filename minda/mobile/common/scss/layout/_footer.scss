@@ -1,0 +1,88 @@
+@charset "UTF-8";
+.fnb{
+    &__icon-home,
+    &__icon-srch,
+    &__icon-save,
+    &__icon-my,
+    &__icon-more{
+        display:block;
+        width:20px;
+        height:20px;
+        margin:0 auto;
+        path{
+            fill:$color__484848;
+        }
+    }
+    .on{
+        path{
+            fill:$color__primary;
+        }
+        .txt{
+            color:$color__primary;
+        }
+
+    }
+    &__icon-my,
+    &__icon-save{
+        padding-top:1px;
+    }
+    &__icon-more{
+        padding-top:5px;
+    }
+    &__msg{
+        background-color:$color__mint;
+        position:absolute;
+        right:0;
+        bottom:calc(100% + 10px);
+        width:150px;
+        @include text($color__wh,em(13px),$fw__500);
+        padding:10px 0 9px;
+        @include border-radius(3px);
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        animation-iteration-count: 3;
+        -webkit-animation-iteration-count: 3;
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+        &:after{
+            content:'';
+            @include triangle(10px,5px,$color__mint,bottom);
+            right:23px;
+            bottom:-5px;
+        }
+        &-txt{
+            display:block;
+            line-height:17px;
+        }
+    }
+}
+.nav-btm{
+    li{
+        &:nth-child(5){
+            a{
+                position:relative;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-5px);
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}

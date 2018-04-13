@@ -1,0 +1,63 @@
+.con-box {
+	padding: 18px 18px 40px;
+	font-size: 14px;
+	color: #333;
+	line-height: 1.5em;
+}
+.con-box h2 {
+	color: #fe504f;	
+	font-weight: normal;
+}
+.content {
+	margin-top: 28px;
+}
+
+.season-bottom{
+    font-size: 12px;
+}
+
+.bottom-link{
+    border-top: 1px solid #b5b5b5;
+	border-bottom: 1px solid #b5b5b5;
+}
+
+a {
+	display: block;
+	padding: 12px 10px 12px 18px;
+	font-size: 16px;
+	color: #333;	
+}
+a p {
+	padding-right: 8px;
+	background: url(http://img.m.minbakdanawa.com/m/1.0/common/icon_arrow_right_large.png) no-repeat right;
+	background-size: 10px 18px;
+}
+
+/*** 20160126 Honge 취소환불규정 테이블 스타일 (리스트형) ***/
+table.tb3 {
+	width: 100%;
+	border-top: 2px solid #e5e5e5;
+	border-bottom: 1px solid #d9d9d9;
+	border-collapse: collapse;
+	margin:0; padding: 0;
+}
+table.tb3 th{
+	border-bottom: 1px solid #ebebeb;
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+	color: #fff;
+	font: 10pt 돋움;
+	letter-spacing: -1;
+	background: #444;
+	text-align: center;
+	padding: 7px 0 3px 0;
+}
+table.tb3 td{
+	border-bottom: 1px solid #ebebeb;
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+	padding: 7px 1px 7px 1px;
+	text-align: center;
+	font: 10pt 돋움;
+}
+table.tb3 td.r {text-align:right; padding-right:10px;}

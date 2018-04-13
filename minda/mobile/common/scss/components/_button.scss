@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.btn__group{
+    @include d-flex();
+    .btn-wrap{
+        position:static;
+        @include flex();
+        margin:0 2.5px;
+        &:first-child{
+            margin-left:0;
+        }
+        &:last-child{
+            margin-right:0;
+        }
+    }
+}
+
+//small grey btn
+.header__btn-join,
+.header__btn-total-city,
+.header__btn-save-lsit,
+.room-list__btn-rev,
+.header__btn-map-legend,
+.header__btn-write,
+.header__btn-edit{
+    color:$color__484848;
+	@include btn($color__f3f3f3,sm);
+    min-width:60px;
+}
+.header__btn-map-legend{
+    text-align:left;
+}
+//mint large
+.login-area__btn-login,
+.community-list__btn-write,
+.community-form__btn-write,
+.community-view__btn-index,
+.comment-form__btn-write,
+.modal-footer__btn-primary{
+    @include btn($color__mint,lg);
+    display:block;
+    font-weight:$fw__800;
+    width:100%;
+}
+//grey large
+.community-form__btn-cancle,
+.community-view__btn-del,
+.community-view__btn-eidt,
+.pop-share__btn-cancel,
+.modal-footer__btn-sub{
+    @include btn($color__aaa,lg);
+    display:block;
+    font-weight:$fw__800;
+    width:100%;
+}
+//orange large
+.login-area__btn-minda{
+    @include btn($color__primary,lg);
+    display:block;
+}
+.btn-external{
+    .btn_external_naver{
+        @include btn(#1EC800,lg);
+        display:block;
+        text-align:center;
+    }
+    .btn_external_fb{
+        @include btn(#4267B2,lg);
+        display:block;
+    }
+}
+.header__btn-map-legend{
+    text-align:left;
+}
+.filter-btm {
+    padding:0 17px 17px;
+    background:transparent;
+    .btn-wrap{
+        &:first-child{
+            flex:initial;
+            width:104px;
+        }
+    }
+}
+.btn-switch{
+    width:70px;
+    @include transition(all,0.3s);
+    span{
+        @include text($color__wh,em(13px),$fw__300);
+    }
+    &:after{
+        @include transform(0,0);
+        @include transition(all,0.3s);
+    }
+    &.active{
+        &:after{
+            left:5px;
+            right:auto;
+            @include transform(36px,0);
+        }
+    }
+}

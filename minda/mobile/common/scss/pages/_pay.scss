@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.info-pay__select-list{
+    &:after{
+        @include clearboth();
+    }
+    margin:0 -5px;
+    .btn-group{
+        width:50%;
+        float:left;
+        padding: 0 5px 10px;
+        &.info-pay__btn-kakao{
+            width:100%;
+        }
+    }
+    .btn{
+        background-color:$color__wh;
+        @include text($color__484848,em(15px),$fw__500);
+        @include border-radius(3px);
+        border:1px solid $color__wh;
+        &.active{
+            border-color:$color__primary;
+            background-color:$color__wh;
+            &:after{
+                display:none;
+            }
+        }
+    }
+}
+.kakaopay{
+    &__wrap{
+        position:relative;
+    }
+    &__icon{
+        display:inline-block;
+        vertical-align:top;
+        margin:10px 0 0 5px;
+        img{
+            display:inline-block;
+            width:75px;
+            height:auto;
+            vertical-align:top;
+        }
+    }
+    &__msg{
+        position:absolute;
+        bottom:100%;
+        right:0;
+        padding-bottom:13px;
+        .inner{
+            width:auto;
+            line-height:1.1em;
+            padding:5px 10px;
+            @include text($color__default,em(13px),$fw__500);
+            letter-spacing:-1px;
+            &:before,
+            &:after{
+                left:50%;
+            }
+            &:before{
+                margin-left:-4px;
+            }
+            &:after{
+                margin-left:-3px;
+            }
+        }
+    }
+}
+.room-pay__select{
+    .btn{
+        background-color:#f0f0f0;
+        border-color:#f0f0f0;
+    }
+}

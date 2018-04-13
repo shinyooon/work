@@ -1,0 +1,38 @@
+/* 마진과 패딩의 초기화 */
+
+/* input */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote, th, td
+{ margin: 0px; padding: 0px; border: 0px ; -webkit-text-size-adjust: none;}
+
+object { display: block; }
+
+/* 헤더 폰트 사이즈 초기화 */
+h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; -webkit-text-size-adjust: none; }
+
+/* 리스트의 스타일 제거 */
+ol,ul { list-style: none; -webkit-text-size-adjust: none; }
+
+li { -webkit-text-size-adjust: none; }
+
+/* 폰트 강조 특성 초기화 */
+/* strong */
+address, caption, cite, code, dfn, em, th, var
+{ font-style: normal; font-weight: normal; }
+
+/* 테이블 스타일 초기화 */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 이미지 및 필드셋에서 보더 표시 초기화 */
+fieldset,img { border: 0; }
+
+/* 캡션과 테이블헤더 텍스트 정렬 초기화 */
+caption,th { text-align: left; }
+
+/* 인용구 표시 초기화 */
+q:before, q:after { content: ''; }
+
+form { margin: 0px; }
+
+a { text-decoration: none; color: #333; }
+
+input,select{border-radius:0;outline:none;background:none;}

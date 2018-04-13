@@ -1,0 +1,462 @@
+@charset "utf-8";
+@import "reset.css";
+@import "simplemodal.css";
+
+/*--- float clear ---*/
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix{zoom:1;}
+
+/* --- all --- */
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;}
+
+body {
+	position: relative;
+	font-family: gulim, sans-serif;
+	font-size: 12px;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*-- side-menu --*/
+	html.mm-opened .mm-page {
+		box-shadow: none;
+	}
+	.mm-list>li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
+		border: none;
+	}
+	.mm-selected {
+		background-color: #272c2a;
+	}
+	.mm-menu {
+		z-index: 0;
+		border-right: 3px solid rgba(0,0,0,0.4);
+	}
+	.mm-menu > .mm-list {
+		padding: 0;
+		font-size: 15px;
+		color: #fff;
+		background-color: #2c302f;
+	}
+	.mm-list .user-info {
+		padding: 8px;
+		background-color: #202422;
+	}
+	.mm-list .user-info .icon {
+		padding: 0 5px 0 10px;
+	}
+	.mm-list .user-info .icon img {
+		display: block;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+	}
+	.mm-list .user-info .text {
+		padding-top: 3px;
+		font-size: 17px;
+	}
+	.mm-list .user-info .text a {
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 12px;
+		width: 62px;
+		height: 26px;
+	}
+	.mm-list .user-info .text .logout {
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_logout_normal.png) no-repeat center;
+		background-size: 100% 100%;
+	}
+	.mm-list .user-info .text .logout:active {
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_logout_pressed.png) no-repeat center;
+		background-size: 100% 100%;
+	}
+	.mm-list .user-info .text .login {
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_login_normal.png) no-repeat center;
+		background-size: 100% 100%;
+	}
+	.mm-list .user-info .text .login:active {
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_login_pressed.png) no-repeat center;
+		background-size: 100% 100%;
+	}
+
+
+
+	.mm-list > li > a.list-form {
+		display: block;
+		margin: 0;
+		padding: 0 14px;
+		color: #a8adab;
+		border-bottom: 1px solid #232826;
+	}
+	.mm-list > li.mm-selected > a.list-form {
+		color: #747977;
+	}
+	.mm-list .list-form img {
+		margin-right: 5px;
+		width: 32px;
+		height: 32px;
+		vertical-align: middle;
+	}
+	.mm-list .list-form > table {
+		width: 100%;
+	}
+	.mm-list .list-form td.left {
+		width: 32px;
+	}
+	.mm-list .list-form td.right {
+		position: relative;
+		padding-right: 40px;
+	}
+	.mm-list .list-form .title {
+		padding: 10px 0;
+		height: 100%;
+	}
+	.mm-list .my-page {
+		position: relative;
+		padding: 18px 15px;
+		font-size: 12px;
+		font-weight: bold;
+		color: #ffd735;
+		text-align: center;
+		background-color: #232826;
+	}
+	.mm-list .my-page .text {
+		position: absolute;
+		top: 14px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 69px;
+		background-color: #2c312f;
+	}
+	.mm-list .my-page .center-line {
+		width: inherit;
+		height: 1px;
+		background-color: #49edf3;
+	}
+	.mm-list .list-form .number {
+		position: absolute;
+		top: 20%;
+		right: 10px;
+		width: 23px;
+		height: 23px;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/icon_new.png) no-repeat center;
+		background-size: 100%;
+	}
+
+	/*-- Main Header --*/
+	#header {
+		position: fixed;
+		width: 100%;
+		height: 43px;
+		line-height: 43px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		z-index: 99;
+	}
+
+	#header .search {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 42px;
+		height: 100%;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_top_bar_search.png) no-repeat center;
+		background-size: 22px 22px;
+	}
+
+	.main-header {
+		background-color: #202423;
+	}
+	.main-header h1.logo {
+		margin: 0 auto;
+		width: 92px;
+		height: 43px;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/top_bar_logo.png) center center no-repeat transparent;
+		background-size: 92px 20px;
+	}
+	.side-menu-open {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 10px;
+		width: 40px;
+		height: 43px;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_top_bar_menu.png) center center no-repeat transparent;
+		background-size: 22px 17px;
+	}
+
+	/*-- Common Header --*/
+	.cc-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 43px;
+		font-size: 18px;
+		color: #fff;
+		text-align: center;
+		z-index: 9999;
+		background-color: #202423;
+		border-bottom: 1px solid #666;
+	}
+	.cc-header.bg-white {
+		color: #333;
+		background-color: #fff;
+	}
+	.cc-header li {
+		position: relative;
+	}
+	.cc-header li:nth-of-type(1) {
+		width: 80px;
+	}
+	.cc-header li:nth-of-type(2) {
+
+	}
+	.cc-header li:nth-of-type(3) {
+		padding-right: 12px;
+		width: 80px;
+	}
+	.cc-header .prev-btn {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 42px;
+		height: 100%;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_top_bar_back.png) no-repeat center;
+		background-size: 14px 24px;
+	}
+	.cc-header .search {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 42px;
+		height: 100%;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_top_bar_search.png) no-repeat center;
+		background-size: 22px 22px;
+	}
+	.cc-header .close {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 42px;
+		height: 100%;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_top_bar_close.png) no-repeat center;
+		background-size: 20px 20px;
+	}
+	.cc-header h1 {
+		font-size: 18px;
+	}
+	.cc-header.bg-white .m-title {
+		margin-bottom: 3px;
+		font-size: 14px;
+	}
+	.cc-header.bg-white .s-title {
+		font-size: 10px;
+	}
+	.cc-header.bg-white .prev-btn {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 42px;
+		height: 100%;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_top_bar_back_black.png) no-repeat center;
+		background-size: 14px 24px;
+	}
+	.cc-header.bg-white .close {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 42px;
+		height: 100%;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/btn_x_delete.png) no-repeat center;
+		background-size: 20px 20px;
+	}
+	.cc-header .text-link {
+	    right: 0;
+		display: block;
+		padding: 10px 0;
+		width: 100%;
+		font-size: 15px;
+		color: #fe504f;
+	}
+
+	.cc-header .text-link-green {
+		display: block;
+		padding: 10px 0;
+		width: 100%;
+		font-size: 15px;
+		color: #25b275;
+	}
+	.cc-header .c-green {
+		color: #25b275;
+	}
+
+
+/*-- footer --*/
+	#footer {
+		width: 100%;
+		padding: 15px 0 80px;
+		font-size: 8px;
+		color: #666;
+		text-align: center;
+		background-color: #202423;
+		z-index: 9999;
+	}
+	#footer > div > a {
+		display: inline-block;
+		margin: 0 auto 10px;
+		padding: 5px 0;
+		width: 90px;
+		font-size: 11px;
+		color: #999;
+		text-align: center;
+		letter-spacing: -0.1em;
+		border: 1px solid #4a4a4a;
+	}
+	#footer > ul > li {
+		line-height: 1.3em;
+		text-align: center;
+	}
+	#footer > ul > li:last-child {
+		margin-top: 14px;
+	}
+	#footer > ul > li > span {
+		padding: 0 3px;
+	}
+	#footer > ul > li > em {
+		color: #e26e10;
+	}
+	#footer > ul > li > i {
+		font-style: normal;
+	}
+@media all and (min-width : 641px) and (max-width : 720px) {
+	#footer {
+		font-size: 10px;
+	}
+	#footer > div > a { width: 110px; font-size: 13px; }
+}
+
+@media all and (min-width : 721px) {
+	#footer {
+		font-size: 12px;
+	}
+	#footer > div > a { width: 130px; font-size: 15px; }
+}
+
+/***************  Common CSS  ***************/
+.container {
+	padding-top: 43px;
+	margin-bottom: 30px;
+}
+
+/* --- List --- */
+	.cc-list {
+		display: table;
+		width: 100%;
+	}
+	.cc-list > ul {
+		display: table-row;
+	}
+	.cc-list > ul > li {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+/* --- star rating --- */
+	.cc-rating-star {
+		display: inline-block;
+		position: relative;
+		top: 1px;
+		width: 55px;
+		height: 11px;
+		background-color: #bbb;
+	}
+	.cc-rating-star .stars {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 55px;
+		height: 11px;
+		background: url(http://img.m.minbakdanawa.com/m/1.0/common/icon_star.png);
+		background-size: 11px 11px;
+		z-index: 1;
+	}
+	.cc-rating-star .star-color {
+		width: 100%;
+		height: 100%;
+		background-color : #e36f0d;
+	}
+/* --- button --- */
+	.cc-search-btn {
+		display: block;
+		margin: 0 18px;
+		height: 45px;
+		line-height: 45px;
+		font-size: 18px;
+		color: #fff;
+		text-align: center;
+		background-color: #fe504f;
+	}
+
+	.cc-share {
+		display: inline-block;
+		margin-right: 6px;
+		width: 31px;
+		height: 31px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url(http://img.m.minbakdanawa.com/m/1.0/common/icon_send.png);
+	}
+	.jcc-bookmark {
+		display: inline-block;
+		margin-right: 6px;
+		width: 31px;
+		height: 31px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url(http://img.m.minbakdanawa.com/m/1.0/common/icon_heart_normal.png);
+	}
+	.jcc-bookmark.active {
+		background-image: url(http://img.m.minbakdanawa.com/m/1.0/common/icon_heart_selected.png);
+	}
+
+/*-- readmore button CSS --*/
+	a.readmore-js-toggle {
+		display: inline;
+		padding: 3px 0;
+		font-size: 14px;
+	}
+	a.readmore-js-toggle.open {
+		color: #44ccfe;
+	}
+	a.readmore-js-toggle.close {
+		display: none;
+		color: #44ccfe;
+	}
+	.con-box .reply a.readmore-js-toggle {
+		margin-left: 20px;
+	}
+
+.m-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255,255,255);
+	color: #000;
+	text-align: center;
+	padding: 50% 0;
+}

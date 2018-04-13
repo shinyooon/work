@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/*use only ios */
+.voucher-area .voucher-top .list-dot {padding-top:2px;}
+.voucher-area .voucher-date {display:flex;padding:19px 0 15px;}
+.voucher-area .voucher-date .date-wrap dt {margin-bottom:6px}

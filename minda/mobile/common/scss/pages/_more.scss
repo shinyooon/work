@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*
+pages : more(list), community
+*/
+
+/* more */
+.more-list{
+    &:not(.more-list__discount){
+        li:not(:last-child){
+            @include border-btm();
+        }
+    }
+    & + .more-list{
+        background-color:$color__f7f7f7;
+        padding-top:17px;
+    }
+    & + .more-list__app{
+        padding-top:0;
+    }
+}
+.more-list__link,.more-list__app li{
+    display:block;
+    padding:18px 17px;
+    @include arr-r();
+    background-color:$color__wh;
+    &,&:hover,&:active,&:focus{
+        @include text($color__484848,em(17px),$fw__500);
+    }
+}
+.more-list__discount{
+    @include d-flex();
+    @include border-btm();
+    li{
+        @include flex();
+        &:not(:last-child){
+            border-right:1px solid $color__eee;
+        }
+    }
+    .more-list__link{
+        padding-top:13px;
+        padding-bottom:13px;
+        &:after{
+            top:auto;
+            height:auto;
+            bottom:17px;
+        }
+    }
+    &-txt, &-num{
+        color:$color__red;
+        display:block;
+    }
+    &-txt{
+        font-size:em(13px);
+    }
+    &-num{
+        font-size:em(20px);
+        font-weight:500;
+        margin:1px 0 13px;
+    }
+    &-tit{
+        @include text($color__484848,em(15px),$fw__300);
+    }
+}
+.more-cs{
+    padding:38px 17px;
+    background-color:$color__f7f7f7;
+    &__dl{
+        dt{
+            @include text($color__484848,em(17px),$fw__500);
+            margin-bottom:5px;
+        }
+        dd{
+            @include text($color__default,em(13px));
+            line-height:23px;
+        }
+    }
+    &__txt--point,&__link-1to1{
+        &, &:hover,&:active,&:focus{
+            color:$color__mint;
+            text-decoration:underline;
+        }
+    }
+    &__link-1to1{
+        display:inline-block;
+        margin-top:15px;
+    }
+}
+
+.more-list__app{
+    li{
+        &:after{
+            display:none;
+        }
+        border-bottom:0;
+    }
+    .pr{
+        padding:0;
+        @include text($color__484848,em(17px),$fw__500);
+    }
+    .btn-switch{
+        right:0;
+    }
+    .my_activity{
+        margin-top:0!important;
+    }
+    .basic_line_lst{
+        background-color:$color__f7f7f7;
+        border-top:0;
+        padding-top:17px;
+    }
+}
+
+/* community */
+.community-list{
+    & > li{
+        @include border-btm();
+        & > a{
+            display:block;
+            padding:18px 17px;
+        }
+    }
+    &__tit{
+        display:block;
+        @include textEllpisis();
+        @include text($color__484848,em(17px),$fw__500);
+    }
+    &__type{
+        &--point{
+            color:$color__mint;
+        }
+    }
+    &__btm{
+        &:after{
+            @include clearboth();
+        }
+        margin:9px 0 0 0;
+    }
+    &__info,
+    &__cnt{
+        li{
+            @include list-split($color__ccc);
+            @include text($color__aaa,em(13px),$fw__300);
+        }
+    }
+    &__info{
+        float:left;
+        width:60%;
+    }
+    &__cnt{
+        width:40%;
+        float:right;
+        text-align:right;
+    }
+    &__partner{
+        display:inline-block;
+        max-width:55%;
+        vertical-align:middle;
+        @include textEllpisis();
+        @include media-sm(){
+            max-width:76px;
+        }
+    }
+}
+.community-list{
+    &__info,
+    &__cnt{
+        li{
+            display:inline;
+            &:not(:last-child){
+                margin-right:6px;
+                padding-right:10px;
+            }
+        }
+    }
+}
+.community-list__btm-btn,
+.community-form__btm-btn,
+.community-view__btm-btn{
+    padding:0px 17px 17px;
+    margin-top:40px;
+}
+.community-form__btm-btn{
+    .community-form__btm-cancel{
+        @include flex(initial);
+        width:100px;
+    }
+}
+.community-form{
+    &__btm-btn{
+        margin:40px 0 0 0;
+    }
+    &__dl{
+        padding:0 17px;
+    }
+}
+.community-form__tit{
+    margin:27px 0 7px;
+    @include text($color__484848,em(17px),$fw__500);
+}
+
+.community-view{
+    padding:27px 17px;
+    .community-list__tit{
+        overflow:visible;
+        white-space:initial;
+        text-overflow: initial;
+    }
+    &__content{
+        border-top:1px solid $color__eee;
+        padding:17px 0 0 0;
+        margin:17px 0 0 0;
+    }
+    &__content-txt{
+        @include text($color__484848,em(15px),$fw__300);
+        line-height: 25px;
+    }
+}
+.community-view__btm-btn{
+    .btn-wrap{
+        @include flex(initial);
+        width:100px;
+        @include media-sm{
+            @include flex(1);
+        }
+        &:last-child{
+            @include flex(1);
+            width:auto;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+.login-area,
+.join-area{
+    padding:60px 17px 70px;
+    .input__wrap{
+        input[type=text],
+        input[type=password]{
+            height:48px;
+        }
+    }
+    .btn-external{
+        padding:20px 0 0 0;
+        margin:20px 0 0 0;
+    }
+    .login-link-area{
+        font-size:15px;
+    }
+    .btn_external_naver,
+    .btn_external_fb{
+        text-align:center;
+        padding-left:0;
+        padding-right:0;
+    }
+    .login-area__btn-minda{
+        position:relative;
+    }
+    .icon_internal{
+        &.minda{
+            width:20px;
+            height:12px;
+            position:absolute;
+            top:50%;
+            margin-top:-6px;
+            left:15px;
+        }
+    }
+    .icon_external{
+        &.naver,
+        &.fb{
+            background:none;
+        }
+        &.naver{
+            width:20px;
+            height:17px;
+            margin-top:-8.5px;
+        }
+        &.fb{
+            width:20px;
+            height:20px;
+            margin-top:-10px;
+        }
+    }
+    .login__svg-minda,
+    .login__svg-naver,
+    .login__svg-fb-bg{
+        fill:$color__wh;
+    }
+    .login__svg-fb-f{
+        fill:#4267B2;
+    }
+}
+.login-area__join{
+    border-top:1px solid #eee;
+    padding:20px 0 0;
+    margin:60px 0 0 0;
+}
+.login-area__join-txt{
+    @include text($color__red,em(15px));
+    text-align:center;
+    margin-bottom:7px;
+}
+.login-area__link-find{
+    @include text($color__484848,em(15px),$fw__300);
+}
+
+.join-area{
+    .btn-internal{
+        .login-area__btn-minda{
+            @include btn($color__primary,lg);
+            display:block;
+        }
+    }
+}

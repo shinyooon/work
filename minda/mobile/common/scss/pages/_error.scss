@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*404 and error page*/
+.svg__logo{
+    fill:$color__primary;
+}
+.page-error{
+    text-align:center;
+    font-family:'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic','dotum';
+    &__icon-logo{
+        display:inline-block;
+        width:100px;
+        margin:40px 0 0 0;
+    }
+    &__img{
+        width:150px;
+        display:inline-block;
+        margin:40px 0 0 0;
+        img{
+            display:inline-block;
+            width:100%;
+        }
+    }
+    &__tit{
+        @include text($color__blk,em(28px),$fw__800);
+        margin:19px 0 0 0;
+    }
+    &__desc {
+        @include text($color__blk,em(15px),$fw__300);
+        margin:7px 0 0 0;
+        line-height:em(24px);
+    }
+    &__btn{
+        display:inline-block;
+        @include text($color__wh,em(18px),$fw__400);
+        @include border-radius(3px);
+        padding:13px 20px 12px;
+        background:$color__primary;
+        margin:53px 0 0 0;
+        &:hover,
+        &:focus,
+        &:active{
+            color:$color__wh;
+        }
+    }
+}
+@include media-mobile-base{
+    .page-error {
+        &__icon-logo {
+            width: 150px;
+            margin:80px 0 0 0;
+        }
+        &__img{
+            width:250px;
+        }
+        &__tit{
+            font-size:em(50px);
+            margin:45px 0 0 0;
+        }
+        &__desc {
+            font-size:em(18px);
+            margin:17px 0 0 0;
+            line-height:em(31px);
+        }
+        &__btn{
+            margin:50px 0 0 0;
+        }
+    }
+}

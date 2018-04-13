@@ -1,0 +1,42 @@
+@charset "UTF-8";
+$header__h: 60px;
+$dep__h : 50px;
+$fnb__h : 48px;
+
+// colors
+$color__primary : #f58850;
+$color__wh: #fff;
+$color__blk: #333;
+$color__mint: #42c3bf;
+$color__484848: #484848;
+$color__red: #e93d3d;
+$color__green : #27c883;
+$color__l-blue : #b7c8d2;
+$color__main-bg: #edf0f5;
+$color__txt-grey: #8c929c;
+$color__fafafa : #fafafa;
+$color__f3f3f3 :#f3f3f3;
+$color__f7f7f7 :#f7f7f7;
+$color__f9f9f9 : #f9f9f9;
+$color__ccc : #ccc;
+$color__aaa: #aaa;
+$color__eee: #eee;
+$color__default : #888;
+//legend-color
+$color__traffic:#C081D2;
+$color__restaurant:#D8AD36;
+$color__shopping:#70BF75;
+$color__sight:#42C3BF;
+//font-weight
+$fw__800 : 800;
+$fw__500 : 500;
+$fw__400 : 400;
+$fw__300 : 300;
+// path
+$path: "/m/1.0/common/img";
+$path_back: "/m/1.0/cust/img";
+$img_version :"1.0";
+
+//mediaquery
+$mobile__sm-width : 360px;
+$mobile__md-width : 480px;

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.room-list__discount{
+    position:absolute;
+    bottom:0;
+    left:0;
+    @include text($color__wh,em(13px));
+    background-color:rgba(233,61,61,0.8);
+    padding:4px 6px 3px;
+    min-width:46px;
+    text-align:center;
+}
+.room-list__btm-cnt{
+    ul{
+        li{
+            @include list-split($color__ccc);
+        }
+    }
+}
+.item_title{
+    .price--won{
+        color:$color__484848;
+        margin:0 0 0 5px;
+    }
+}
+
+.room-detail__room-list{
+    .room-list__btm{
+        &:after{
+            @include clearboth();
+        }
+    }
+    .price{
+        float:left;
+        @include text($color__484848,em(15px),$fw__500);
+        margin:0;
+    }
+    .current_price{
+        color:$color__red;
+    }
+    .meta {
+        margin:3px 0 0 0;
+    }
+    .item{
+        &.disabled{
+            position:relative;
+            &:after{
+                content:'예약불가';
+                @include d-flex('center');
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                background-color:rgba(238,238,238,0.85);
+                @include text($color__484848,em(20px),$fw__500);
+                z-index:20;
+            }
+        }
+    }
+}
+
+.room-list__btn-rev{
+    position:absolute;
+    right:0;
+    bottom:3px;
+}
+.discount_room__type,
+.discount_room__date{
+    display:block;
+    @include text($color__aaa,em(13px),16px);
+}
+.discount_room_lst{
+    .room_info{
+        margin:3px 0 0;
+    }
+}
+.discount_room__type{
+    margin:0 0 3px;
+}

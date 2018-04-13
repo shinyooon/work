@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+/* search area */
+.total-srch-area{
+    .icon_srch_blk {
+        background-image: url(/m/1.0/cust/img/ico_srch_lgblk.png);
+        background-size: auto 20px;
+        box-shadow: none !important;
+        width: 40px;
+        bottom: 0;
+        background-position: center;
+    }
+    .srch-form {
+        position: relative;
+        input[type=text] {
+            padding: 0;
+            height: 27px;
+            font-size: 16px;
+            color: #3a3a3a;
+        }
+    }
+}
+
+/* input width x button */
+.input-ctrl {
+    display: flex;
+    display: -webkit-flex;
+    padding: 9px;
+    input,
+    button {
+        height: auto;
+    }
+    .txt-bx {
+        -webkit-flex: 1;
+        flex: 1;
+        input {
+            width: 100%;
+            height: 27px;
+            line-height: 1.7em
+        }
+    }
+    .icon_clse_input {
+        background-image: url(/m/1.0/cust/img/icon_clse_input.png);
+        width: 30px;
+        height: auto;
+        background-size: 14px auto;
+        background-position: right center;
+        position:static;
+    }
+}
+
+/* bottom fixed nav */
+.nav-btm {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ededed;
+    z-index: 15;
+    li{
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 8px 0 6px;
+        &.on{
+            a{
+                color: #f76900;
+            }
+        }
+        a{
+            display: block;
+            width: 50px;
+            height: 34px;
+            font-size: 10px;
+            line-height: 1em;
+            margin: 0 auto;
+            color: #484848;
+        }
+    }
+    [class^=icon-]{
+        display: block;
+        width: 23px;
+        height: 20px;
+        background-image: url(/m/1.0/cust/img/main/spr_main_btm.png);
+        background-size: 200px auto;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        background-repeat: no-repeat
+    }
+    .on{
+        [class^=icon-] {
+            background-image: url(/m/1.0/cust/img/main/spr_main_btmon.png)
+        }
+    }
+    .icon-home {
+        max-width: 21px;
+        background-position: 0 0
+    }
+    .icon-srch {
+        background-position: -40px 0
+    }
+    .icon-save {
+        background-position: -80px 0
+    }
+    .icon-my {
+        background-position: -120px 0
+    }
+    .icon-more {
+        background-position: -160px 0
+    }
+    .txt {
+        display: block;
+        font-size: 10px;
+        font-family: 'Malgun Gothic';
+        line-height: 1em;
+        margin-top: 3px;
+    }
+}
+
+/*auto complete list*/
+.list-auto {
+    display: none;
+    position: absolute;
+    z-index: 50;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #d6d6d6;
+    li{
+        display: block;
+        overflow: hidden;
+        padding: 3px 45px;
+        border-bottom: 1px solid #e1e1e1;
+        background: #f3f3f3;
+        font-size: 1.143em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 42px;
+        color: #333;
+        background-image: url(/m/1.0/cust/img/icon_loc_grey.png);
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        background-size: 15px auto;
+        &:after{
+            background: url(/m/1.0/cust/img/icon_loc_grey.png) 20px 50% no-repeat;
+            background-size: auto 23px;
+        }
+        &:hover{
+            background-color: #57c1be;
+            background-image: url(/m/1.0/cust/img/icon_loc.png);
+            color: #FFF
+        }
+        &:hover,
+        &:active,
+        &:focus{
+            background-color: #ececec;
+        }
+    }
+    a{
+        .mark{
+            font-weight: 700;
+        }
+    }
+}
+
+/*banner trip kakaotalk*/
+.banner__trip-kakao {
+    background-color: #ffe100;
+    text-align: center;
+    img{
+        display: inline-block;
+        width: 100%;
+        max-width: 360px;
+        min-width: 300px;
+    }
+}
+.trip-main__banner-area {
+    .banner__trip-kakao,
+    .banner__trip-custom{
+        margin: 10px 0 -10px;
+    }
+}
+
+.myquestion__banner-area{
+    .banner__trip-kakao{
+        margin: -1px 0 10px;
+    }
+}
+
+.faq-list {
+    padding-bottom: 30px;
+}
+
+.faq-list {
+    .pagination{
+        padding-bottom: 0;
+    }
+}
+
+
+/* 해피투게더 이벤트 배너 2018-02-09 데이빗 */
+.happy-together-warp {
+    width:100%;
+    background: #9cd6d5;
+    height: 50px;
+
+    .happy-together-container {
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff;
+        line-height:51px;
+
+        &.payend {
+            ul {
+                text-align: left;
+                float: left;
+                padding:9px 0 4px 20px;
+                li {
+                    font-size: 15px;
+                    letter-spacing:-0.9px;
+                    line-height:18px;
+                    padding:0;
+                }
+            }
+
+            .btn {
+                width: 80px;
+                height: 40px;
+                margin:5px 20px 0 0;
+                padding:0 20px;
+                border-radius: 20px;
+                color: #42c3bf;
+                font-size: 15px;
+                line-height: 41px;
+                float:right;
+                background:url(/m/1.0/cust/img/btn_happytogether.png) 53px center #fff no-repeat;
+                -webkit-background-size: 5px auto;
+                background-size:5px auto;
+                letter-spacing:-0.9px;
+                text-align:left;
+            }
+        }
+
+        span {
+            text-align: center;
+            font-size: 15px;
+            color: #ffffff;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
