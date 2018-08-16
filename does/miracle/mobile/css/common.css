@@ -1,0 +1,37 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* Global Styles */
+html{width: 100%;height: 100%;-webkit-text-size-adjust: none;}    
+body {margin: 0; padding: 0; -webkit-text-size-adjust:none; font-family: NanumGothic, Arial, sans-serif; }
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0;border:0;}
+body,input,textarea,select,button,table{font-size:13px;}
+body{position:relative;background-color:#fff;color:#000;overflow-x: hidden;}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+table{border-collapse:collapse}
+legend, caption, hr { display:none; }
+em,address{font-style:normal}
+a {border: 0; text-decoration: none; margin: 0; padding: 0;}
+img {max-width: 100%; height: auto; border: 0; vertical-align:top; }
+
+#skipToContent a,#skipToContent a:hover, #skipToContent a:visited{display:block;height:1px;overflow:hidden;margin: 0 0px -1px 0; white-space:nowrap;}
+#skipToContent a:active, #skipToContent a:focus{height:auto;border:1px solid #ccc; padding:10px;text-align:center; color: #515f71;}
+ 
+#wrap {width:100%; padding:0px;margin:0 auto; height: auto;}
+#wrap .inner {max-width:640px; min-width:320px; margin:0 auto; }
+#wrap #header {background:#fff;}
+#wrap #header .inner {position:relative;}
+#wrap #header .inner .contents_wrap {padding:3% 0; overflow:hidden;}
+#wrap #header h1{position:absolute; top:13%; left:5%; width:14%;z-index: 9999;}
+#wrap #header ul {background:url("../images/header_list.png") no-repeat; width:56%; background-size:100% auto; float:right; padding:2.5% 0; margin:0 3% 0 0; }
+#wrap #header ul li{text-indent:-1000em; overflow:hidden;width:1px; height:1px;}
+#wrap #footer {background:url("../images/footer_bg.jpg") repeat-x; background-size:auto 100%;}
+.popup_bg {position:absolute; width:100%; height:100%; top:0; left:0; background:#000; z-index: 20; opacity:0.7; display:none;}
+@media screen and (max-width: 340px) {
+}
+@media screen and (min-width: 350px) and (max-width: 470px)  {
+}
+@media screen  and (orientation: landscape) {
+}
+

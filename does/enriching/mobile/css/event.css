@@ -1,0 +1,15 @@
+#contents.join {background:#f7f7f7;}
+#contents #event {}
+#contents #event .event1 {border-bottom:3px solid #ff5e5e;}
+#contents #event .event1 .content_wrap h3 a {display:block;}
+#contents #event .event1_desc {border-bottom:3px solid #ff5e5e; display:none;}
+#contents #event .event_desc{padding:5%;}
+#contents #event .event_btn {text-align:center; width:45%; margin:0 auto; padding:0 0 5% 0;}
+#contents #event .event2 {border-bottom:3px solid #51c1c2;}
+#contents #event .event2 .content_wrap h3 a {display:block;}
+#contents #event .event2_desc {border-bottom:3px solid #51c1c2; display:none;}
+@media screen  and (orientation: landscape) {
+
+
+}
+

@@ -1,0 +1,189 @@
+<xml version='1.0' encoding='euc-kr'>
+<content language='kr'> 
+
+	<videoDomain>
+		<![CDATA[http://does.kr/collection/everland/video/]]>
+	</videoDomain>
+	
+	<imgDomain>
+		<![CDATA[http://does.kr/collection/everland/images/360/]]>
+	</imgDomain>
+	
+	<txtDomain>
+		<![CDATA[http://does.kr/collection/everland/txt/]]>
+	</txtDomain>
+
+	<sndDomain>
+		<![CDATA[http://does.kr/collection/everland/snd/]]>
+	</sndDomain>
+	
+	<everland360>
+		<video>
+			<![CDATA[360_everland.mp4]]>
+		</video>
+		
+		<cuePoints>
+			<cue startFrame="0" duration="1" type ="2" action="3">
+				<video>
+					<![CDATA[360_intro.f4v]]>
+				</video>
+			</cue>
+			<cue startFrame="575" duration="1" type ="2" action="3">
+				<video>
+					<![CDATA[360_scene_ROCKSPINE.f4v]]>
+				</video>
+			</cue>
+			<cue startFrame="1080" duration="1" type ="2" action="3">
+				<video>
+					<![CDATA[360_scene_ANCIENT_TEMPLE.f4v]]>
+				</video>
+			</cue>
+			<cue startFrame="1373" duration="1" type ="2" action="3">
+				<video>
+					<![CDATA[360_scene_GREATE_WATERHALL.f4v]]>
+				</video>
+			</cue>
+			<cue startFrame="1800" duration="1" type ="2" action="3">
+				<video>
+					<![CDATA[360_scene_GREATE_SAVANA.f4v]]>
+				</video>
+			</cue>
+				<cue startFrame="1916" duration="1" type ="2" action="3">
+				<video>
+					<![CDATA[360_scene_RED_SWAMP.f4v]]>
+				</video>
+			</cue>
+		</cuePoints>
+		
+		<ost>
+			<![CDATA[360_LOST_VALLEY_SONG.mp3]]>
+		</ost>
+		<mr>
+			<![CDATA[360_LOST_VALLEY_SONG_MR.mp3]]>
+		</mr>
+		<tracking>
+			<item>
+				<txt>
+					<![CDATA[camel.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_camel.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_camel.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[barbarysheep.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_barbarysheep.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_barbarysheep.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[elephant.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_elephant.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_elephant.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[lion.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_lion.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_lion.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[zebra.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_zebra.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_zebras.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[giraffe.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_giraffe.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_giraffe.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[flamingo.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_flamingo.png]]>
+				</img>
+				<video>
+					<![CDATA[360_animal_flamingo.flv]]>
+				</video>
+			</item>
+			
+			
+			
+			
+			<item>
+				<txt>
+					<![CDATA[rockspine.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_rockspine.png]]>
+				</img>
+				<video>
+					<![CDATA[360_scene_zebras.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[greatewaterhall.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_greatwaterhall.png]]>
+				</img>
+				<video>
+					<![CDATA[360_scene_zebras.flv]]>
+				</video>
+			</item>
+			<item>
+				<txt>
+					<![CDATA[greateSavana.txt]]>
+				</txt>
+				<img>
+					<![CDATA[360_btn_greatsavannah.png]]>
+				</img>
+				<video>
+					<![CDATA[360_scene_zebras.flv]]>
+				</video>
+			</item>
+			
+			
+			
+			
+			
+		
+		</tracking>
+	</everland360>
+	
+</content> 
+</xml>

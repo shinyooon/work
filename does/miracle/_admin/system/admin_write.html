@@ -1,0 +1,169 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_top.html";?>
+
+		<div class="path">시스템 관리  >  관리자 관리</div>
+
+ <?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_gnb.html";?>
+ <?if(!strstr($mc_login_authority,"m201")){script_alert_ok("권한이 없습니다.","/");}?>
+
+		<div id="container">
+			<div class="topNavi">
+				<h3>관리자관리</h3>
+			</div><!--// class="topNavi" -->
+<?
+$table_name = "MC_ADMIN";
+$num = $_REQUEST['num'];
+$motion = $_REQUEST['motion'];
+if($num){
+	$r = mysql_fetch_array(mysql_query("select * from $table_name where num = $num "));
+}
+?>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function inputOK(){
+		 var f = document.input_f;
+		 if(!f.admin_id.value){
+			alert("아이디가 필요합니다.");
+			f.admin_id.focus();
+			return;
+		 }
+		 if(f.admin_id.value.length<4){
+			alert("아이디가 4자이상 필요합니다.");
+			f.admin_id.focus();
+			return;
+		 }
+		 if(!f.admin_pw.value){
+			alert("비밀번호가 필요합니다.");
+			f.admin_pw.focus();
+			return;
+		 }
+		 if(f.admin_pw.value.length<4){
+			alert("비밀번호가 4자이상 필요합니다.");
+			f.admin_pw.focus();
+			return;
+		 }
+		f.submit();
+	}
+	function idcheck(){
+		hidden_f.location.replace('manager_idcheck.php?admin_id='+document.getElementById("admin_id").value);
+	}
+
+ $(document).ready(function() {
+		$("#checkAll").click(function() {
+			 $("input[type=checkbox]:checkbox").each(function() {
+				 $(this).attr("checked", true);
+			 });
+		 });
+		 $("#uncheckAll").click(function() {
+			 $("input[type=checkbox]:checkbox").each(function() {
+				 $(this).attr("checked", false);
+			 });
+		 });
+});
+
+
+//-->
+</SCRIPT>
+			<div class="content">
+				<!--p class="top_txt">웹접근성을 준수하기 위해서 이미지를 등록하실 경우에는 반드시 등록한 이미지에 대한 대체텍스트를 함께 입력해 주셔야 합니다.<br />텍스트는 이미지 내용을 충분히 설명할 수 있어야 하며, 이미지 내에 텍스트가 있을 경우에는 해당 텍스트와 동일한 내용으로 대체텍스트를 입력해 주셔야 합니다.</p -->
+				<form action="admin_write_ok.php" name="input_f" method=post>
+				<input type="hidden" name="num" value="<?=$num?>">
+				<input type="hidden" name="cla" value="<?=$r[cla]?>">
+				<table class="board03">
+					<colgroup><col width="116"/><col width="*"/></colgroup>
+					<tr>
+						<td class="border_none"><p class="tit_base">• 기본정보</p></td>
+						<td class="border_none"><p class="txt_attention"><span class="col_ff0000">&#42;</span>는 필수입력항목입니다.</p></td>
+					</tr>
+					<tr>
+						<th scope="row">ID  <span class="col_ff0000">*</span></th>
+						<td>
+						<?if($r["admin_id"]){?>
+							<?=$r["admin_id"]?><input type="hidden" name="admin_id" class="w670" maxlength=20 value="<?=$r["admin_id"]?>"/>
+						<?}else{?>
+						<input type="text" name="admin_id" class="w670" maxlength=20/>
+						<?}?></td>
+					</tr>
+					<tr>
+						<th scope="row">비밀번호  <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="admin_pw" class="w670" maxlength=20 value="<?=$r["admin_pw"]?>"/></td>
+					</tr>
+					<tr>
+						<th scope="row">관리자 이름 <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="admin_nm" class="w670" maxlength=20 value="<?=$r["admin_nm"]?>"/></td>
+					</tr>
+					<!--tr>
+						<th scope="row">연락처(TEL)</th>
+						<td><input type="text" name="" class="w60 tCenter"/>  <input type="text" name="" class="w60 tCenter"/>  <input type="text" name="" class="w60 tCenter"/></td>
+					</tr>
+					<tr>
+						<th scope="row">연락처(Mobile)</th>
+						<td><input type="text" name="" class="w60 tCenter"/>  <input type="text" name="" class="w60 tCenter"/>  <input type="text" name="" class="w60 tCenter"/</td>
+					</tr-->
+
+					<tr>
+						<th scope="row">E-MAIL</th>
+						<td><input type="text" name="admin_email" class="w670" maxlength=100 value="<?=$r["email"]?>"/></td>
+					</tr>
+
+					<tr>
+						<th scope="row">관리메뉴</th>
+						<td>
+							<div class="check_wrap">
+								<div class="check_sect">
+									<dl>
+										<!--dt><input type="checkbox" name="" value=""/>쇼핑뉴스</dt-->
+										<dd><input type="checkbox" name="chk[]" value="m101" <?if(strstr($r['authority'],"m101")){?>checked<?}?>/>등록된재능</dd>
+										<dd><input type="checkbox" name="chk[]" value="m105" <?if(strstr($r['authority'],"m105")){?>checked<?}?>/>스타재능</dd>
+										<dd><input type="checkbox" name="chk[]" value="m102" <?if(strstr($r['authority'],"m102")){?>checked<?}?>/>재능다운로드</dd>
+										<dd><input type="checkbox" name="chk[]" value="m103" <?if(strstr($r['authority'],"m103")){?>checked<?}?>/>스타재능다운로드</dd>
+										<dd><input type="checkbox" name="chk[]" value="m104" <?if(strstr($r['authority'],"m104")){?>checked<?}?>/>최근재능관리</dd>
+										<dd><input type="checkbox" name="chk[]" value="m201" <?if(strstr($r['authority'],"m201")){?>checked<?}?>/>관리자관리</dd>
+									</dl>
+
+								</div><!--// class="check_sect" -->
+								<!--div class="check_sect">
+									<dl>
+										<dt><input type="checkbox" name="" value=""/>쇼핑뉴스</dt>
+										<dd><input type="checkbox" name="" value=""/>등록된재능</dd>
+										<dd><input type="checkbox" name="" value=""/>재능다운로드</dd>
+										<dd><input type="checkbox" name="" value=""/>스타재능다운로드</dd>
+										<dd><input type="checkbox" name="" value=""/>최근재능관리</dd>
+										<dd><input type="checkbox" name="" value=""/>관리자 관리</dd>
+									</dl>
+
+								</div-->
+
+							</div><!--// class="menu_wrap" -->
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="border_none">
+							<div class="btn_area">
+								<a href="javascript:inputOK()"><span class="btn456093">저장</span></a>
+								<a href="javascript:document.input_f.reset()"><span class="btn5f5f5f">취소</span></a>
+								<a href="admin_list.html"><span class="btnbebebe">목록</span></a>
+							</div>
+						</td>
+					</tr>
+
+				</table><!--// table "info_table" -->
+
+
+			</div><!--// class="content" -->
+
+		</div><!--// id="container" -->
+
+	</div><!--// id="right" -->
+
+
+</div><!--// id="wrapper" -->
+</body>
+</html>
+
+
+
+
+
+
+
+

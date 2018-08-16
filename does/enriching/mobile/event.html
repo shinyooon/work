@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>인리칭 이벤트 - Enriching Company</title>
+		<? include "include/header.html" ?>
+    				<div id="contents">
+    					<section id="event">
+    						<article class="event1">
+    							<div class="content_wrap"><h3><a href="javascript:onEvent1();"><img src="images/event/event1_title.jpg" alt="인리칭 컴퍼니의 주주가 되어주세요! 이벤트 기간 : 10월 1일~ 세상이 풍요로워 질 때까지" /></a></h3></div>
+    						</article>
+    						<article class="event1_desc">
+    							<div class="content_wrap">
+    								<p class="event_desc"><img src="images/event/event1_desc.png" alt="세상을 풍요롭게 하는 회사, 인리칭 컴퍼니 지금 홈페이지에서 인리칭 컴퍼니의 주주가 되어주세요. 마음만 있다면 누구나 주주가 될 수 있습니다. 이벤트 기간 : 10월 1일 ~ 세상이 풍요로워 질 때까지 경품 : 선착순 1만명 편의점 카페라떼, 참여방법 : 주주 가입 완료 후 이벤트에 응모해주세요." /></p>
+    								<div class="event_btn"><a href="javascript:goEvent();"><img src="images/event/event1_btn.png" alt="이벤트 참여하기" /></a></div>
+    							</div>
+    						</article>
+    						<article class="event2">
+    							<div class="content_wrap"><h3><a href="javascript:onEvent2();"><img src="images/event/event2_title.jpg" alt="인리칭 아이디어 제안하고 향기로운 커피를 마셔요! 이벤트 기간 : 10월 1일 ~ 세상이 풍요로워 질 때까지" /></a></h3></div>
+    						</article>
+    						<article class="event2_desc">
+    							<div class="content_wrap">
+    								<p class="event_desc"><img src="images/event/event2_desc.png" alt="지금 인리칭 회의실에서는 세상을 풍요롭게 할 아이디어를 이야기 하고 있습니다. 여러분들도 함께 의견을 주세요, 참여하신 분들 중 추첨하여 선물을 드립니다. 이벤트 기간 :  10월 1일 ~ 세상이 풍요로워 질 때까지. 경품 : 600명에게 인제리너스 카페라떼 2잔. 참여방법 : 인리칭 회의실에서 아이디어 제안 후 이벤트에 응모해주세요." /></p>
+    								<div class="event_btn"><a href="<%=webServer%>/online.jsp"><img src="images/event/event2_btn.png" alt="이벤트 참여하기" /></a></div>
+    							</div>
+    						</article>
+    						
+    					</section>
+    					
+    				</div>
+    				<!-- contents end -->
+					<? include "include/footer.html" ?>
+				</div> <!-- end girds -->
+		</div> <!-- end wrapper -->
+	</body> <!-- end body -->
+</html>
+<script type="text/javascript">
+	$('#gnb li a').setImgButton(3, true, true);
+	
+	
+	
+function onEvent1(){
+	$('.event1_desc').slideToggle(1000, "easeInOutExpo", function(){
+		resize();
+	});
+}
+function onEvent2(){
+	$('.event2_desc').slideToggle(1000, "easeInOutExpo", function(){
+		resize();
+	});
+}
+	
+function goEvent(){
+		
+	if(User.level == "1"){
+		alert("이미 응모 하셨습니다.");
+	}else if(User.level == "0"){
+		eventConfirm();
+	}else{
+		notLogin();
+		
+	}
+	
+}
+</script>

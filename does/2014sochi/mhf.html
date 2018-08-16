@@ -1,0 +1,295 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi" />
+<link rel="shortcut icon" href="http://m.samsung.com/common/img/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="http://m.samsung.com/common/img/siteicon.png" />
+<link rel="apple-touch-icon-precomposed" href="http://m.samsung.com/common/img/android.png" />
+<link rel="stylesheet" type="text/css" href="http://m.samsung.com/sec/common/css/samsung.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://m.samsung.com/common/css/respond.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://m.samsung.com/common/css/accfix.css" media="screen" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="http://m.samsung.com/common/css/ie8lte.css" media="screen" />
+<![endif]-->
+<script type='text/javascript' src='http://m.samsung.com/common/js/jquery.min.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/respond.min.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/jquery.touchSwipe.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/uilib.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/sec/common/js/ui.js'></script>
+<!-- Dev Add JS -->
+<script type='text/javascript' src='http://m.samsung.com/common/js/jquery.preload-min.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/jquery.url.js'></script>
+<script type="text/javascript" src='http://m.samsung.com/common/js/jquery.json-2.3.min.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/facebook.js'></script>
+<!-- Search Script -->
+<script type="text/javascript">
+//<![CDATA[
+var g_searchSiteCode = 'sec';
+//]]>
+</script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/search.js'></script>
+<script type='text/javascript' src='http://m.samsung.com/common/js/jquery.search.qc.js'></script>
+<!-- Brightcove -->
+<script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+<script type="text/javascript" src="http://m.samsung.com/common/js/customPlayerManager.js"></script>
+<script type="text/javascript" src="http://m.samsung.com/common/sec/js/customPlayerSetup.js"></script>
+
+<title>삼성 갤럭시 S4 | SAMSUNG</title>
+<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi"> -->
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no"/> 
+<meta name="keywords" content="galaxys4" />
+<meta name="description" content="galaxys4" />
+<meta property="og:title" content="galaxys4" />
+<meta property="og:type" content="" />
+<meta property="og:url" content="http://m.samsung.com/sec/galaxys4/" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="galaxys4" />
+<meta property="fb:admins" content="100001586225071" />
+
+</head>
+<body>
+<div id="wrap">
+<div id="accLink">
+<a href="#container">본문 바로가기</a>
+</div>
+	<div id="header">
+		<h1><a href="/sec"><img src="http://m.samsung.com/common/img/logo.png" alt="SAMSUNG" /></a></h1>
+		<div id="gnb">
+		<ul>
+			<li class="home"><a href="/sec"><img src="http://m.samsung.com/common/img/ico_gnb_home.png" alt="홈" />홈</a></li>
+			<li class="product"><a href="/sec/products/category"><img src="http://m.samsung.com/common/img/ico_gnb_product.png" alt="제품" />제품</a></li>
+			<li class="support"><a href="/sec/support/main/supportMain.do"><img src="http://m.samsung.com/common/img/ico_gnb_support.png" alt="고객지원" />고객지원</a></li>
+			<li class="search"><a href="/sec/common/search.html"><img src="http://m.samsung.com/common/img/ico_gnb_search.png" alt="검색" />검색</a></li>
+		</ul>
+		</div>
+	</div>
+	<!-- Search Area -->
+	<div id="searchBox">
+		<form name="frmSearch" id="search_form" method="get" onsubmit="javascript:fnSearch(); return false;" action="/sec/function/espsearch/low/searchResult_mobile">
+		<fieldset>
+			<legend class="invisible">검색</legend>
+			<input name="mkeyword" id="mkeyword" type="text" class="iText" title="키워드를 입력하세요" value="" maxlength="35" />
+			<button type="reset" class="resetBtn"><img src="http://m.samsung.com/common/img/btn_reset.png" width="20" height="18" alt="Reset" /></button>
+			<input type="button" class="iSubmit" value="검색" id="mobile.support.search" onclick="javascript:fnSearch();" />
+			<div class="autoCompletion" id="autoCompletion"></div>
+		</fieldset>
+		<div class="searchOption">
+			<strong>인기 :</strong>
+			<ul id="popular"></ul>
+		</div>
+		<div class="searchResult">
+			<fieldset>
+				<legend class="invisible">결과 내 검색</legend>
+				<span><input id="mresearch" name="" type="checkbox"/><label for="mresearch">결과 내 검색</label></span>
+			</fieldset>
+		</div>
+		</form>
+		<form id="frmSubmit" name="frmSubmit" method="get" action="/sec/function/espsearch/low/searchResult_mobile"></form>
+	</div>
+	<!-- //Search Area -->
+	<hr />
+	<div id="container">
+
+<style type="text/css">
+.sns{ padding:10px 0 0 20px;}
+ p.fb{ float:left; margin-right:3px;}
+ p.tw{ float:left; width:95px; margin-top:2px; overflow:hidden;}
+ .fb_iframe_widget span iframe {z-index:9999}
+</style>
+<div id="fb-root"></div>
+<input type="hidden" id="microsite" name="microsite" value="microsite"/>
+<script type="text/javascript">
+//document.domain = "samsung.com";
+</script>
+<script type="text/javascript">
+(function(){
+	// viewport meta tag
+	var _metaViewport = document.getElementById("metaViewport");
+	// viewport meta tag
+	window.addEventListener("orientationchange", function() {
+		_metaViewport.removeAttribute("content");
+		_metaViewport.setAttribute("content" , "width=800, target-densitydpi=400, user-scalable=yes");
+		setTimeout(function(){
+			_metaViewport.setAttribute("content" , "width=800, target-densitydpi=400, user-scalable=no");
+		} , 100);
+	}, false);
+})();
+</script>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+	function resizeIFrameContents(_height) {
+		var _iframeContents = document.getElementById("iframeContent");
+		//if(_height != 0 && _iframeContents) { // modify 20130220
+			//_iframeContents.setAttribute("height", _height);
+		//}
+		if(_iframeContents) { // modify 20130220
+			_iframeContents.setAttribute("height", _height);
+		}
+	}
+</script>
+<script language='JavaScript' type='text/javascript'>
+function resizeFrame2(num){
+	var iframeObj = document.getElementById("ifrm_");
+	iframeObj.style.height = num;
+}
+</script>
+
+	<div id="content">
+		<div class="sns" style="display:none">
+			<p class="fb">
+			<fb:like href="http://m.samsung.com/sec/galaxys4/" send="false" layout="button_count" width="100" show_faces="true"></fb:like>
+			</p>
+			<p class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko">트윗하기</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</p>
+        </div>
+  <!-- 컨텐츠 -->
+			<div style="position:relative;width:100%; height:100%;" id="iframeDiv">
+				<iframe src="index.html" width="100%" height="100%" frameborder="0" title="SMART AIRCON" scrolling="no" name="iframecontents" id="iframecontents"></iframe>
+			</div>
+
+			<script>
+				function scrollmove(_posY, _time){
+					$('html,body').animate({scrollTop:_posY}, _time);
+				}
+			</script>
+  <!-- 컨텐츠 -->
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+		function goToPcSite(){
+			goToPcVer('/sec/galaxys4/');
+		}
+	//]]>
+	</script>
+
+	<script type="text/javascript">
+	$(function(){ setTimeout(loaded, 100); }); function loaded(){ window.scrollTo(0, 102); }//주소창 숨기기
+	</script>
+	
+
+
+	<!-- Omniture Log Script -->
+	<form name="form" method="post" id="form" action="">
+		<input type="hidden" name="pageTrack" id="pageTrack" value="main" />
+	</form>
+	<!-- //Omniture Log Script -->
+	<div id="social">
+		<p><a href="http://www.facebook.com/SamsungTomorrow" target="_blank"><img src="http://m.samsung.com/common/img/ico_facebook.png" alt="Facebook"/>
+			</a><em id="footerFbCount"></em>좋아요
+		</p>
+		<div class="socialLink">
+			<a href="http://twitter.com/samsungtomorrow" target="_blank"><img src="http://m.samsung.com/common/img/ico_twitter_sns.png" alt="Twitter" /></a>
+		</div>
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function(){
+		$('#footerFbCount').loadFacebookLikeCount({
+			internalUrl : '/sec/facebookData',
+			url : "http://graph.facebook.com/SamsungTomorrow"
+		});
+		getPopular();
+	});
+	//]]>
+	</script>
+	</div>
+	<hr />
+	<div id="footer">
+		<ul>
+			<li><a href="/sec/news">뉴스</a></li>
+			<li><a href="/sec/info/privacy.html"><em>개인정보취급방침</em></a></li>
+			<li><a href="/sec/info/legal.html">이용약관</a></li>
+			<li><a href="/sec/info/contactus.html" onclick="javascript:goToContactus();">문의</a></li>
+			<li><a id="pcVerOmni" href="#" onclick="javascript:goToPcSite(); return false;">PC 버전</a></li>
+		</ul>
+		<p class="country"><a href="/sec/function/ipredirection/ipredirectionLocalList.html" title="Change Region"><img src="http://m.samsung.com/common/img/ico_state_sec.gif" alt="Korea"></a></p>
+		<p class="copyright">Copyright &copy; 1995-2013 SAMSUNG. All rights reserved.</p>
+	</div>
+</div>
+<!-- Dev Add js -->
+<script type="text/javascript">
+//<![CDATA[
+	function goToContactus(){
+		s_control_click('events', 'event19', 'event19', 'o', 'footer contact us');
+		return false;
+	}
+	
+	function goToPcVer(path){
+		s_control_click('events', 'event46', 'event46', 'o', 'pc version click');
+		
+		//alert('pcVer responseUrl :' + responseUrl);
+		jQuery.cookie('userDevice', 'pc', {path:'/', domain : '.samsung.com'});
+		if(jQuery.cookie('userDevice') != 'pc'){
+			jQuery.cookie('userDevice', 'pc', {path:'/'});
+		}
+		if(jQuery.cookie('userDevice') != 'pc'){
+			jQuery.cookie('userDevice', 'pc');
+		}
+		
+		var url = 'http://www.samsung.com' + path;
+		location.href = url;
+	}
+	
+	$(document).ready(function(){
+		var resource = ''+location.href;
+		//alert(resource);
+		var className = null;
+		
+		if ( resource.indexOf('product') > 0 ){
+			className = 'product';
+		}else if(resource.indexOf('consumer') > 0 ){
+			if ( resource.indexOf('-support') > 0){
+				className = 'support';
+			}else if(resource.indexOf('-retail') > 0){
+				className = 'support';
+			}else if(resource.indexOf('-shopping') > 0 ){
+				className = 'support';
+			}else{
+				className = 'product';
+			}
+		}else if(resource.indexOf('support') > 0){
+			className = 'support';
+		}
+		
+		var segment = $.url(resource).segment();
+		if(segment.length == 1){
+			className = 'home';
+		}
+		
+		//alert(className);
+		if(className != null){
+			$('#wrap').addClass(className);
+		}
+		fe_header();
+	});
+//]]>
+</script>
+<!-- Omni Common -->
+<script type="text/javascript" src="http://m.samsung.com/common/js/omni/s_code_p3_mobile.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	try {
+	var sitecd = getSiteCode();
+			 var taginfo = getTextNode("pathindicatorENG");
+			 if ( taginfo == false) {
+						tagURL(sitecd);
+			 } else {
+						tagPathindicator(sitecd,"pathindicatorENG");
+			 }
+	}catch (e) {
+	}
+//]]>
+</script>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_include/top_program.php";?>
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_check.php";?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>미라클 마켓 관리자</title>
+<link rel="stylesheet" type="text/css" href="/_admin/css/style.css" />
+<script type="text/javascript" src="/_admin/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/_admin/js/common.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="lnb">
+		<div style="width:100%;margin:25px 0 -50px -5px;text-align:center;"><h3><img src="/images/intro/s1_txt4.png" alt="1.25 미라클마켓" /></h3> </div>
+		<div style="width:98%;height:1px;background-color:#dddddd;"></div>
+		<div class="menu">
+			<ul class="menu_list">
+				<?if(strstr($mc_login_authority,"m101")){?>
+				<li <?if(strstr($phpself,"item_")){?>style="background-color:#eeeeee"<?}?>><a href="/_admin/item/item_list.html"><span>등록된재능</span></a></li>
+				<?}?>
+				<?if(strstr($mc_login_authority,"m105")){?>
+				<li <?if(strstr($phpself,"star_")){?>style="background-color:#eeeeee"<?}?>><a href="/_admin/item/star_list.html"><span>스타재능</span></a></li>
+				<?}?>
+				<?if(strstr($mc_login_authority,"m102")){?>
+				<li <?if(strstr($phpself,"downitem")){?>style="background-color:#eeeeee"<?}?>><a href="/_admin/item/downitem.html"><span>재능다운로드</span></a></li>
+				<?}?>
+				<?if(strstr($mc_login_authority,"m103")){?>
+				<li <?if(strstr($phpself,"downstar")){?>style="background-color:#eeeeee"<?}?>><a href="/_admin/item/downstar.html"><span>스타재능다운로드</span></a></li>
+				<?}?>
+				<?if(strstr($mc_login_authority,"m104")){?>
+				<li <?if(strstr($phpself,"recent")){?>style="background-color:#eeeeee"<?}?>><a href="/_admin/item/recent.html"><span>최근재능관리</span></a></li>
+				<?}?>
+				<?if(strstr($mc_login_authority,"m201")){?>
+				<li <?if(strstr($phpself,"admin_")){?>style="background-color:#eeeeee"<?}?>><a href="/_admin/system/admin_list.html"><span>관리자관리</span></a></li>
+				<?}?>
+
+
+				<!--li><a href="#"><span>팝업관리</span></a></li>
+				<li class="sub"><a href="#"><span>쿠폰관리</span></a></li>
+				<li class="sub_list">
+					<div class="sub_menu">
+						<ul class="sub_list">
+							<li><a href="#">쿠폰관리</a></li>
+							<li><a href="#">쿠폰템플릿관리</a></li>
+							<li><a href="#">쿠폰이용현황</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#"><span>통계관리</span></a></li>
+				<li class="sub current"><a href="#"><span>시스템관리</span></a></li>
+				<li class="sub_list" style="display:block;">
+					<div class="sub_menu">
+						<ul class="sub_list">
+							<li><a href="#">메뉴관리</a></li>
+							<li  class="cate_on"><a href="#">관리자자관리</a></li>
+							<li><a href="#">코드관리</a></li>
+						</ul>
+					</div>
+				</li-->
+			</ul>
+		</div>
+	</div><!--// id="lnb" -->
+
+	<div id="right">
+		<div id="gnb">
+

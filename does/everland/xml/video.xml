@@ -1,0 +1,15 @@
+<xml version='1.0' encoding='euc-kr'>
+	<content language='kr'> 
+		<video>
+			<item><![CDATA[intro.flv]]></item>
+			<item><![CDATA[column-left.flv]]></item>
+			<item><![CDATA[column-right.flv]]></item>
+			<item><![CDATA[car-loop.flv]]></item>
+		</video>
+		<info>
+			<introPlayTime>
+				<![CDATA[5.905]]>
+			</introPlayTime>
+		</info>
+	</content> 
+</xml>

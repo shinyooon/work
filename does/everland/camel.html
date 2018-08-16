@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Samsung" />
+<!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+<title>낙타 | 바위 협곡 | 탐험하기 | LOST VALLEY</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<meta name="description" content="LOST VALLE." />
+<meta name="keywords" content="LOST VALLE" />
+<link rel="stylesheet" type="text/css" href="css/style.css"  />
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="skipToContent"><a href="#contents" class="skip">본문 바로가기</a></div>
+<div id="wrapper">
+	<!-- header -->
+	<div id="header">
+	<!-- login -->
+		<div id="login">
+			<ul>
+				<li class="btn_login btnOverPng"><a href="#"><img src="images/common/btn_login.png" alt="login"/></a></li>
+				<li class="btn_facebook btnOverPng"><a href="#"><img src="images/common/btn_facebook.png" alt="facebook"/></a></li>
+				<li class="btn_twitter btnOverPng"><a href="#"><img src="images/common/btn_twitter.png" alt="twitter"/></a></li>	
+			</ul>
+		</div>
+		<!-- //login -->
+		<div id="header_conatiner">
+			<div id="logo"><a href="index.html"><img src="images/common/logo.png" alt="로스트 밸리 어드벤처"/></a></div>
+			<ul>
+			<li class="first btnOverPng"><a href="about.html"><img src="images/common/menu01.png" alt="로스트 밸리란"/></a></li>
+			<li class="btnOverPng"><a href="adventure.html"><img src="images/common/menu02_over.png" alt="탐험하기" class="over"/></a></li>
+			<li class="btnOverPng"><a href="storybook.html"><img src="images/common/menu03.png" alt="스토리북"/></a></li>
+			<li class="btnOverPng"><a href="/service/front/lost/lostValleyStdList.el"><img src="images/common/menu04.png" alt="학습노트"/></a></li>
+			<li class="btnOverPng"><a href="food.html"><img src="images/common/menu05.png" alt="Food&amp;Gift"/></a></li>
+			<li class="btnOverPng"><a href="tvc.html"><img src="images/common/menu06.png" alt="갤러리"/></a></li>
+			<li class="btnOverPng"><a href="event3.html"><img src="images/common/menu07.png" alt="이벤트"/></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- contents -->
+	<div id="contents" data-depth="1">
+		<div id="container">
+			<div id="bg_line_top"></div>
+			<!-- main_container -->
+				<div class="animal_conatiner">
+					<div class="animal_content">
+						<div class="animal_visual">
+							<div class="animal_img"><img src="images/adventure/animal/camel_img.png" alt=""/></div>
+							
+							<div id="btnContainer">
+								<div class="animal_videobtn animal_videobtn_center">
+									<div id="video_btn"><img src="images/adventure/animal/video_btn_camel.png" alt="" /></div>
+									<script type="text/javascript">
+										$(function(){
+											var flashID = "video_btn";
+											var _playerWidth = 42;
+											var _playerHeight = 68;
+											var _videoUrl = "../video/animal_thumb_camel.flv";
+											var params = {wmode:"transparent"};
+											var flashvars = {videoUrl:_videoUrl,_width:_playerWidth,_height:_playerHeight};
+											swfobject.embedSWF("swf/FLVLoopPlayer.swf", flashID, _playerWidth, _playerHeight, "11.0.0","/swf/expressInstall.swf", flashvars, params, {});
+										});
+									</script>										
+								</div>
+								<div class="video_btn_img video_btn_img_center"><a href="#"><img src="images/adventure/animal/video_btn.png" alt="영상으로 체험하기"/></a></div>								
+							</div>
+							<div class="animal_player">
+								<div id="animal_flash_video1"></div>
+								<script type="text/javascript">
+									$(function(){
+										var flashID = "animal_flash_video1";
+										var _videoUrl = "../video/animal_detail_camel.flv";
+										var params = {wmode:"opaque"};
+										var flashvars = {videoUrl:_videoUrl};
+										swfobject.embedSWF("swf/player.swf", flashID, 392, 462, "11.0.0","/swf/expressInstall.swf", flashvars, params, {});
+									});
+								</script>	
+								<div class="player_closebtn"><a href="#"><img src="images/adventure/animal/player_close_btn.png" alt="플레이어 닫기" /></a></div>																
+							</div>								
+							<div class="animal_360btn">
+								<div id="adventure_360btn"></div>
+								<script type="text/javascript">
+										$(function(){
+											var flashID = "adventure_360btn";
+											var _playerWidth = 170;
+											var _playerHeight = 90;
+											var _videoUrl = "../video/360_btn.flv";
+											var params = {wmode:"transparent"};
+											var flashvars = {videoUrl:_videoUrl,_width:_playerWidth,_height:_playerHeight};
+											swfobject.embedSWF("swf/FLVLoopPlayer.swf", flashID, _playerWidth, _playerHeight, "11.0.0","/swf/expressInstall.swf", flashvars, params, {});
+										});
+									</script>										
+								<a href="#"><img class="advcamera_360" src="images/adventure/animal/360camera_btn.png" alt="360 어드벤처 카메라로 체험하기"/></a>
+							</div>
+						</div>
+						<div class="animal_info">
+							<h1 class="animal_title"><img src="images/adventure/animal/camel_title.png" alt="낙타(Bactrian Camel)"/></h1>
+							<div class="backBtn"><a href="rockspine.html"><img src="images/adventure/animal/barbary_sheep_backBtn.png" alt="바위협곡으로 돌아가기"/></a></div>
+							<ul class="animal_tab">
+								<li class="animal_tab_1"><a href="#"><img src="images/adventure/animal/camel_1_over.png" alt="낙타는요?"/></a></li>
+								<li class="animal_tab_2"><a href="#"><img src="images/adventure/animal/camel_2.png" alt="낙타의 특징"/></a></li>
+							</ul>
+							<div class="animal_feature">
+								<ul class="animal_feature_1">
+									<li>
+									쌍봉낙타는 등에 두 개의 혹을 가지고 있는데, 이 속에는 물이 아니라 지방이 들어있어요. 혹에 에너지를 저장하는 것이지요.
+									</li>
+									<li>
+									혹에 지방을 저장하는 이유는 체내의 지방 중 많은 부분을 혹에 저장해서, 더운 날씨에 체온 조절을 쉽게 하기 위해서 에요. 혹이 아닌 다른 곳에 지방이 흩어져 있으면 체온 조절을 위한 에너지 사용이 쉽지 않기 때문이에요.
+									</li>
+									<li>먹이가 부족하여 혹 속의 지방을 소모해버리면 혹이 작아지기도 하고 많이 저장된 경우에는 혹이 한쪽으로 치우치기도 해요. 영양상태가 정상적으로 돌아오면 다시 원래 모습으로 돌아와요.
+									</li>
+									<li>보기와는 달리 수영을 잘해요.</li>
+									<li>오랫동안 물을 마시지 않고 견딜 수 있어요. 원래 몸 속에 있어야 하는 물의 양의 40%까지 사용해도 살아남을 수 있어요.</li>
+								</ul>
+								<div class="animal_feature_2">
+								<dl class="page1">	
+								  <dt>학명</dt>
+								    <dd><span class="italic">Camelus bactrianus</span></dd>
+								  <dt>분류</dt>
+								    <dd>우제목 낙타과</dd>
+								   <dt>멸종등급</dt>
+								    <dd>없음 <br />※ 고비 사막의 야생 무리만이 가축 낙타들로부터 분리된 유일한 야생 무리로서 보전 중요성 高 : IUCN 적색목록 멸종위기종 (CR, Critically Endangered)</dd>
+								   <dt>분포</dt>
+								    <dd>원래 카자흐스탄, 몽골, 중국의 북쪽지역에 서식했지만 현재 가축화가 되어 널리 분포해요.</dd>
+								   <dt>서식지</dt>
+								    <dd>사막, 스텝 등 건조한 지역 (겨울에는 강가의 스텝, 눈이 녹으면 사막)낙타의 원 서식지는 추울 때는 영하 29도 까지 내려가고 여름에는 영상 38도까지 기온이 올라간대요.</dd>
+								 </dl>
+								 <dl class="page2">   
+								   <dt>먹이</dt>
+								    <dd>모든 종류의 식물 (주로 관목) 물이나 영양이 부족한 극한 상황에서 다른 동물을 먹기도 하고, 사람들이 만들어 놓은 텐트 등을 먹기도 해요.</dd>
+								   <dt>크기</dt>
+								    <dd>몸길이 3m, 어깨높이 1.8~2.3m, 몸무게 600~1000kg</dd>
+								   <dt>사회구조</dt>
+								    <dd>대개 단독생활을 하며 간혹 30마리 정도 무리를 이루는 것이 관찰되기도 해요.</dd>
+								</dl>
+								<ul class="pageBtn">
+									<li class="page1_btn"><a href="#"><img src="images/adventure/animal/page1_btn_over.png" alt="낙타는요? 첫 번째 페이지" /></a></li>
+									<li class="page2_btn"><a href="#"><img src="images/adventure/animal/page2_btn.png" alt="낙타는요? 두번째 페이지" /></a></li>
+								</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="rightMenu rockMenu">
+						<div class="rightMenu_title"><img src="images/adventure/animal/animal_snb_title.png" alt="바위협곡의 동물들"/></div>
+						<div class="select_effect">
+							<a href=""><span class="effect"><img src="images/adventure/animal_on_ani.png" alt="" /></span></a>
+						</div>
+						<ul class="rightMenu_list">
+							<li class="animalBtn"><a href="barbarysheep.html"><img src="images/adventure/animal/rock_menu1.png" alt="바바리양"/></a></li>
+							<li class="animalBtn"><a href="camel.html"><img class="over" src="images/adventure/animal/rock_menu2_over.png" alt="낙타"/></a></li>
+							<li class="animalBtn"><a href="oryx.html"><img src="images/adventure/animal/rock_menu3.png" alt="흰오릭스"/></a></li>		
+						</ul>
+					</div>	
+				</div>			
+			<!-- //main_container -->
+			<div id="bg_line_bottom"></div>
+			<div id="mycard">
+				<div id="mycard_container">
+					<div class="mycard_btn"><a href="#"><img src="images/common/card_btn.png" alt="MY CARD"/></a></div>
+					<div class="mycard_bg">
+						<div class="mycard_info">
+							<p class="mycard_title">로스트 밸리 동물카드 모으기!</p>
+							<p class="mycard_text">로스트 밸리 홈페이지의<br />탐험하기 메뉴에서 동물카드를 모아보세요.<br />모든 동물 카드를 모으면<br />온라인 탐사 자격증을 만드실 수 있습니다.</p>
+						</div>
+						<ul class="mycard_list">
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bg_pillar_left"></div>
+		<div id="bg_pillar_right"></div>
+		<div id="map_btn"><a href="adventure.html"><img src="images/adventure/animal/btn_map.png" alt="MAP으로 바로가기"/></a></div>
+	</div>
+	<!-- //contents -->
+</div>
+</body>
+</html>

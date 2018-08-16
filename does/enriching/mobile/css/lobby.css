@@ -1,0 +1,34 @@
+#contents.lobby {background:#f5f1e5}
+#contents #lobby {background:#f5f1e5}
+#contents #lobby .visual {}
+#contents #lobby .idcard {margin-top: -80px;position: relative;}
+#contents #lobby .idcard .content_wrap {}
+#contents #lobby .idcard .content_wrap {max-width:640px; margin:0 auto; padding:0 0 50px 0;}
+#contents #lobby .idcard .content_wrap .idcard_con{background:url("../images/main/idcard/idcard_bg.png") no-repeat;background-size:100% auto; padding:13% 5% 14% 8%; width:66%; margin:0 auto;-webkit-background-size:100% auto; }
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_left{width:22%; float:left; height:100%; margin:0 10% 0 0; }
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_left .idcard_img {width:100%; border:4px solid #e2e2e2;}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right {display:inline-block;width:67%;}
+
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text {}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text:after {content:" "; display:block; clear:both;}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idcard_top_text {display:block; width:63%; margin:0 0 1.5% 0;height:0; padding:0 0 6% 0}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idcard_name{display:block; float:left;font-size:23px; font-szie:#ff4949; font-weight:bold;}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idcard_mark {display:block; float:left; width:10%; margin:0 2% 0 0;}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idacrd_text_end {display:block; float:left; font-size:23px;color:#959595;margin:0 0 0 0;}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_menu {clear:both; margin:3% 0 0 0;}
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_menu li {padding:3.5% 0%; border-bottom:1px solid #f0f0ef; }
+#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_menu li.last {border:none;}
+#contents #lobby .idcard .content_wrap .idcard_footer {margin:0% 0 0 0; width:32%;}
+
+@media screen and (max-width: 340px) {
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idcard_name{font-size:0.8em;}
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idacrd_text_end {font-size:0.8em;}
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_menu {clear:both; margin:1% 0 0 0;}
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_menu li {padding:1.5% 0%;}
+}
+@media screen and (min-width: 350px) and (max-width: 470px)  {
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idcard_name{font-size:1.0em;}
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_text .idacrd_text_end {font-size:1.0em;}
+	#contents #lobby .idcard .content_wrap .idcard_con .idcard_right .idcard_menu li {padding:2% 0%;}
+}
+

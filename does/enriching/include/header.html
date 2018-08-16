@@ -1,0 +1,86 @@
+	<meta name="description" content="" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"  />
+		<link rel="stylesheet" type="text/css" href="css/index.css"  />
+		<script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script_ya.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<style>
+			#user_profiles {position: absolute;left: 0;top: 0;}
+		</style>
+		
+	</head>
+
+	<body>
+		<div id="skipToContent"><a href="#contents">본문 바로가기</a></div>
+		<div id="wrap">
+		<div id="wrap_inner">
+			<div id="header">
+				<h1><a href="index.html"><img src="images/common/logo.jpg" alt="enriching Company" /></a></h1>
+				<div class="header_right">
+						<ul class="topmenu">
+							<li class="first">
+								<? if(isLogin){ ?>
+									<span class="mypage"><a href="javascript:mypage();" class="menu_item"><img src="images/common/mypage.png" alt="마이페이지" /></a></span>
+								<? }else{ ?>
+									<span class="join"><a href="javascript:join();" class="menu_item"><img src="images/common/join.png" alt="주주가입" /></a></span>
+								<? } ?>
+								
+								
+							</li>
+							<li>
+								<? if(isLogin){ ?>
+									<span class="logout"><a href="javascript:logout();" class="menu_item"><img src="images/common/logout.png" alt="로그아웃" /></a></span>
+								<? }else{ ?>
+									<span class="login"><a href="javascript:login();" title="팝업 열림" class="menu_item"><img src="images/common/login.png" alt="로그인" /></a></span>
+								<? } ?>
+								
+								
+							</li>
+						</ul>
+						<? if(!isLogin){ ?>
+						<div class="login_container">
+							<div class="login_section">
+							
+							
+
+
+									<ul class="sns">
+										<li><a href="javascript:loginFB();" title="새창 열림" class="menu_item"><img src="images/common/login/login_fb.png" alt="Login with Facebook" /></a></li>
+										<li><a href="javascript:loginTW();" title="새창 열림" class="menu_item"><img src="images/common/login/login_tw.png" alt="Login with Twitter" /></a></li>
+									</ul>
+
+									<iframe src="login_form.jsp" width="184" height="115" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+									
+									<ul class="login_find">
+										<li><a href="javascript:findID();" class="menu_item" title="새창 열림"><img src="images/common/login/btn_findid.png" alt="아이디 찾기" /></a></li>
+										<li class="last"><a href="javascript:findPW();" class="menu_item" title="새창 열림"><img src="images/common/login/btn_findpw.png" alt="비밀번호 찾기" /></a></li>
+									</ul>
+									<div class="close_btn"><a href="javascript:closeLoginPopup();" class="menu_item" title="로그인 팝업 닫기"><img src="images/common/login/login_close_btn.png" alt="닫기" /></a></div>
+
+							</div>
+						</div>
+						<? } ?>
+						<h2 class="hiddenText">글로벌 네비게이션</h2>
+						<ul id="gnb">
+							<li class="first"><a href="about.html" class="gnb_menu"><img src="images/common/menu01.png" alt="인리칭 컴퍼니" /><img src="images/common/01.gif" class="gnb_gif gnb_gif1" alt="" /></a></li>
+							<li><a href="online_meeting.html" class="gnb_menu"><img src="images/common/menu03.png" alt="인리칭 회의실" /><img src="images/common/03.gif" class="gnb_gif gnb_gif3" alt="" /></a></li>
+							<li><a href="offline_meeting.html" class="gnb_menu"><img src="images/common/menu02.png" alt="인리칭 주주총회" /><img src="images/common/02.gif" class="gnb_gif gnb_gif2" alt=""/></a></li>
+							
+							<li><a href="event.html" class="gnb_menu"><img src="images/common/menu04.png" alt="인리칭 이벤트" /><img src="images/common/04.gif" class="gnb_gif gnb_gif4" alt="" /></a></li>
+							<li><a href="contents.html" class="gnb_menu"><img src="images/common/menu05.png" alt="인리칭 컨텐츠" /><img src="images/common/05.gif" class="gnb_gif gnb_gif5" alt="" /></a></li>
+						</ul>
+						<div class="move_bar_container"><div class="move_bar"></div></div>
+						
+				</div>
+				<div class="header_shadow"></div>
+			</div>
+			<!-- header end-->
+			
+			

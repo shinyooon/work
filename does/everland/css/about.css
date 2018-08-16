@@ -1,0 +1,78 @@
+/* About 페이지 2013.04.23　Sunny added */
+.about_container .about_nav {position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.about_container .about_nav .about_01 {position: absolute; top: 60px; left: 92px;}
+.about_container .about_nav .about_01 a {display: block; width: 97px; height: 76px;background: url("../images/about/about_nav.png") 0 0 no-repeat; text-indent: -9999999px; font-size: 0; overflow: hidden;}
+.about_container .about_nav .about_01 a:hover, .about_container .about_nav .about_01 a.current {background-position: -94px 0;}
+.about_container .about_nav .about_02 {position: absolute; top: 140px; left: 99px;}
+.about_container .about_nav .about_02 a {display: block; width: 97px; height: 70px;background: url("../images/about/about_nav.png") -8px -76px no-repeat; text-indent: -9999999px; font-size: 0; overflow: hidden;}
+.about_container .about_nav .about_02 a:hover, .about_container .about_nav .about_02 a.current {background-position: -102px -76px;}
+.about_container .about_nav .about_03 {position: absolute; top: 212px; left: 99px;}
+.about_container .about_nav .about_03 a {display: block; width: 97px; height: 70px;background: url("../images/about/about_nav.png") -7px -145px no-repeat; text-indent: -9999999px; font-size: 0; overflow: hidden;}
+.about_container .about_nav .about_03 a:hover, .about_container .about_nav .about_03 a.current {background-position: -101px -145px;}
+.about_container .about_nav .about_04 {position: absolute; top: 75px; left: 932px;}
+.about_container .about_nav .about_04 a {display: block; width: 97px; height: 76px;background: url("../images/about/about_nav.png") -208px 0 no-repeat; text-indent: -9999999px; font-size: 0; overflow: hidden;}
+.about_container .about_nav .about_04 a:hover, .about_container .about_nav .about_04 a.current {background-position: -302px 0;}
+.about_container .about_nav .about_05 {position: absolute; top: 157px; left: 933px;}
+.about_container .about_nav .about_05 a {display: block; width: 97px; height: 70px;background: url("../images/about/about_nav.png") -208px -79px no-repeat; text-indent: -9999999px; font-size: 0; overflow: hidden;}
+.about_container .about_nav .about_05 a:hover, .about_container .about_nav .about_05 a.current {background-position: -302px -79px;}
+.about_container .about_nav .about_06 {position: absolute; top: 224px; left: 938px;}
+.about_container .about_nav .about_06 a {display: block; width: 97px; height: 70px;background: url("../images/about/about_nav.png") -209px -142px no-repeat; text-indent: -9999999px; font-size: 0; overflow: hidden;}
+.about_container .about_nav .about_06 a:hover, .about_container .about_nav .about_06 a.current {background-position: -303px -142px;}
+
+.about_container ul.about_left {top: 30px; left: 205px; position: absolute; width: 360px;}
+.about_container ul.about_left li {float: left; width: 360px; }
+.about_container ul.about_left li.align_img {text-align: center;}
+.about_container ul.about_left li.left_heading {padding: 27px 0 35px; background: url("../images/about/01_line_bg.png") center top no-repeat;}
+.about_container ul.about_left li.left_heading p {font-size: 13px; color: #1f1f1f; text-align: center; padding-top: 6px;}
+.about_container ul.about_left li.left_heading h2 {font-size: 15px; color: #1f1f1f; text-align: center;}
+.about_container ul.about_left li.note {padding: 10px 0 10px 70px; width: 290px;}
+.about_container ul.about_left li.note p{font-size: 12px;color: #1f1f1f; }
+.about_container ul.about_left li.note span {color: #4b0000; font-size: 12px;}
+.about_container ul.about_left li.first {padding:10px 0 0 32px;}
+
+.about_container ul.about_right {top: 30px; left: 570px; position: absolute; width: 360px; }
+.about_container ul.about_right li {float: left; width: 360px;}
+.about_container ul.about_right li.copy p {font-size: 12.5px; color: #1f1f1f; padding-left: 20px; padding-bottom: 15px;}
+.about_container ul.about_right li.right_title {padding: 0 0 13px;}
+.about_container ul.about_right li.first {padding-top:5px 0 0 15px;;}
+
+.about_container ul.about_left li.first_02 {padding:30px 0 0 35px;  width: 315px;}
+.about_container ul.about_left li.last_02 {padding:20px 0 0; text-align: center;  width: 360px;}
+.about_container ul.about_left li.left_frame {width: 277px; height: 205px;}
+.about_container ul.about_left li.first_03 {padding:30px 0 5px 10px;  width: 350px;}
+.about_container ul.about_left li.last_03 {padding:0; position: relative;  width: 350px; }
+.about_container ul.about_left li.last_03 img {position: absolute; top: -25px; right: 0;}
+.about_container ul.about_left li.first_05 {padding:30px 0 0 10px;  width: 350px;}
+.about_container ul.about_left li.first_mov {padding:38px 0 0 25px;  width: 341px; height: 235px;background: url("../images/about/left_mov_frame.png") center top no-repeat;}
+
+
+.about_container ul.about_right li.first_02 {padding:30px 0 5px 35px;  width: 315px;}
+.about_container ul.about_right li.right_title_02 {padding: 0 0 13px 10px; width: 350px;}
+.about_container ul.about_right li.first_03 {padding:30px 0 10px 25px;  width: 325px;}
+.about_container ul.about_right li.btn_03 {text-align: center; width: 350px; padding-bottom: 10px; }
+.about_container ul.about_right li.btn_03 .popup_03 {display:none;width: 820px; height: 470px;background: url("../images/about/03_popup_bg.png") center top no-repeat; position: absolute; top: -10px; left: -500px; margin: 0; padding: 120px 90px 0; }
+.about_container ul.about_right li.btn_03 .popup_03 a.close_btn {position: absolute; top: 20px; right: 50px; }
+.about_container ul.about_right li.btn_03 .popup_03 h2 {text-align: -9999999999px; font-size: 0; height: 0; width: 0; overflow: hidden; display: block;}
+.about_container ul.about_right li.btn_03 .popup_03 h3 {text-align: -9999999999px; font-size: 0; height: 0; width: 0; overflow: hidden; display: block;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list {float: left; margin: 0; padding: 0; list-style: none;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li {float: left; margin: 0; padding: 0;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li p, .about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list2 li p {color:#250e04; font-size: 12px; padding-top: 5px;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li h4 {padding-bottom: 8px;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li.first {width: 195px; height: 248px; padding: 22px 0 0;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li.second {width: 205px; height: 230px; padding: 40px 0 0; }
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li.third {width: 195px; height: 240px;padding: 30px 0 0 6px;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list li.forth {width: 188px; height: 240px;padding: 30px 0 0 20px;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list2 {float: left; margin: 0; padding: 37px 0 0 20px; list-style: none;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list2 li {float: left; margin: 0; padding: 0;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list2 li.fifth {width: 244px; height: 90px;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list2 li.sixth {width: 311px; height: 90px;}
+.about_container ul.about_right li.btn_03 .popup_03 ul.amphi_list2 li.seventh {width: 230px; height: 90px;}
+
+.about_container ul.about_right li.copy_03 p{font-size: 12.5px; color: #1f1f1f; padding: 0 20px 0 30px;}
+.about_container ul.about_right li.first_05 {padding: 30px 0 20px 5px; width: 345px;}
+.about_container ul.about_right li.copy_05 {padding-bottom: 12px;}
+.about_container ul.about_right li.copy_05 p{font-size: 12.5px; color: #1f1f1f; padding: 0 20px 10px 30px;}
+.about_container ul.about_right li.last_05 {padding: 10px 0 20px 5px; width: 345px;}
+.about_container ul.about_right li.copy {letter-spacing:-1px; padding:0 0 0 10px;}
+.about_container ul.about_right li.first_06 {padding: 20px 0 20px 15px; width: 335px;}
+/* 2013.04.23　Sunny added */

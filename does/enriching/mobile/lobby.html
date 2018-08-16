@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>마이페이지 - Enriching Company</title>
+		<? include "include/header.html" ?>
+		<% 
+			if(!isLogin){
+				response.sendRedirect(index);
+			}
+		%>
+
+    				<div id="contents" class="lobby">
+    					<section id="lobby">
+    						<article class="visual">
+    							<div class="content_wrap"><img src="images/loop/lobby/lobby_640x600_bg.jpg" alt="" /></div>
+    						</article>
+    						<article class="idcard">
+    							<div class="content_wrap">
+    								<div class="idcard_con">
+    									<div class="idcard_left">
+    										<div class="idcard_img"><img src="<%=image%>" alt="프로필 이미지" style="width:100%;height:auto;" /></div>
+    									</div>
+    									<div class="idcard_right">
+    										<p class="idcard_text">
+    												<span class="idcard_top_text">
+    													<% if(choice != null && choice.equals("1")){ %>
+															<img src="images/main/idcard/idcard_theme1.jpg" alt="소상공인 돕기를 응원하는" />
+														<% } else if(choice != null && choice.equals("2")){ %>
+															<img src="images/main/idcard/idcard_theme2.jpg" alt="다문화가정 후원 돕기를 응원하는" />
+														<% } else if(choice != null && choice.equals("3")){ %>
+															<img src="images/main/idcard/idcard_theme3.jpg" alt="세대 격차 줄이기를 응원하는" />
+														<% } else if(choice != null && choice.equals("4")){ %>
+															<img src="images/main/idcard/idcard_theme4.jpg" alt="자연환경 돌보기를 응원하는" />
+														<% } %>
+    													<br />
+    												</span>
+    												<span class="idcard_mark">
+    													<% if(choice != null && choice.equals("1")){ %>
+															<img src="images/main/idcard/idcard_mark1.jpg" alt="" />
+														<% } else if(choice != null && choice.equals("2")){ %>
+															<img src="images/main/idcard/idcard_mark2.jpg" alt="" />
+														<% } else if(choice != null && choice.equals("3")){ %>
+															<img src="images/main/idcard/idcard_mark3.jpg" alt="" />
+														<% } else if(choice != null && choice.equals("4")){ %>
+															<img src="images/main/idcard/idcard_mark4.jpg" alt="" />
+														<% } %>
+    												</span>
+    												<span class="idcard_name"><%=name%></span>
+    												<span class="idacrd_text_end">주주</span>
+    										</p>
+    										<ul class="idcard_menu">
+    											<li><img src="images/main/idcard/idcard_menu01.jpg" alt="인리칭 컴퍼니의 새로운 소식" /></li>
+    											<li><a href="<%=webServer%>/offline.jsp"><img src="images/main/idcard/idcard_menu02.jpg" alt="11월 24일 인리칭 주주총회가 열립니다." /></a></li>
+    											<li class="last"><a href="<%=webServer%>/online.jsp"><img src="images/main/idcard/idcard_menu03.jpg" alt="인리칭 회의실에서 함께 이야기를 나누어 보세요." /></a></li>
+    										</ul>
+    									</div>
+    								</div>
+    								<!-- idcard_con end-->
+    							</div>
+    						</article>
+    					</section>
+    					
+    				</div>
+    				<!-- contents end -->
+					<? include "include/footer.html" ?>
+				</div> <!-- end girds -->
+		</div> <!-- end wrapper -->
+	</body> <!-- end body -->
+</html>
+
+<script type="text/javascript">
+	var loadedCount = 0;
+	var imgTotal = 13;
+	$(document).ready(function(){
+		
+		$('.visual .content_wrap').css({'position':'relative'}).append('<div class="loop_img_container" style="position:absolute;left:0;top:0px;width:100%;"><img src="' + imgServer + '/images/loop/lobby/transparent.png" alt="" /></div>');
+		
+		for (var i=1;i<=imgTotal;i++){
+			var n = i<10 ? "0"+i : i;
+			var imgs = '<img src="' + imgServer + '/images/loop/lobby/lobby_640x437_'+n+'.jpg' +'" alt="" class="loop_imgs" id="loop_img_'+i+'" style="position:relative;display:none;width:100%;height:auto;" />';
+			$('.loop_img_container').append(imgs);
+			$('#loop_img_'+i).load(function(){
+				loadedCount++;
+				if(loadedCount == imgTotal){
+					loopInterval();
+				}
+			});
+		}
+		
+		
+	});
+	
+</script>

@@ -1,0 +1,122 @@
+@import url('note3.css');
+@import url('gear.css');
+@import url('acc.css');
+@import url('multimedia.css');
+@import url('event.css');
+
+@font-face {
+	font-family: 'NanumGothicBold';
+	src: url('../fonts/NanumGothicBoldCompact.eot');
+	src: url('../fonts/NanumGothicBoldCompact.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/NanumGothicBoldCompact.woff') format('woff'),
+		 url('../fonts/NanumGothicBoldCompact.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal; 
+}
+
+@font-face {
+    font-family:'NanumGothic';
+    src: url('../fonts/NanumGothicCompact.eot');
+    src: url('../fonts/NanumGothicCompact.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/NanumGothicCompact.woff') format('woff'),
+         url('../fonts/NanumGothicCompact.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+
+html{width: 100%;height: 100%;-webkit-text-size-adjust: none;}    
+body {margin: 0; padding: 0; -webkit-text-size-adjust:none; font-family: NanumGothic, Arial, sans-serif; }
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0;border:0;}
+body,input,textarea,select,button,table{font-size:13px;}
+body{position:relative;background-color:#fff;color:#000;overflow-x: hidden;}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+table{border-collapse:collapse}
+legend, caption, hr { display:none; }
+em,address{font-style:normal}
+a {border: 0; text-decoration: none; margin: 0; padding: 0;}
+img {max-width: 100%; height: auto; border: 0; vertical-align:top; }
+
+
+#skipToContent a,#skipToContent a:hover, #skipToContent a:visited{display:block;height:1px;overflow:hidden;margin: 0 0px -1px 0; white-space:nowrap;}
+#skipToContent a:active, #skipToContent a:focus{height:auto;border:1px solid #ccc; padding:10px;text-align:center; color: #515f71;}
+.hiddenText {text-indent:-1000em; overflow:hidden; width:1px; height:1px;}
+ 
+/*Page container*/
+.m-wrapper{width:100%; padding:0px;margin:0 auto; height: auto;}
+
+/*Column container*/
+.m-grids{width:auto; width:100%; clear:both; margin:0 0 0 -0%; list-style:none; /* So we can make grids out of lists. */position: relative;	overflow:hidden;  /* Clear the floats */}
+	
+[class^="m-grid-"]{float:left; margin:0 0% 0 0;}
+.m-grids [class^="m-grid-"]{margin:0 0 0 0%;}
+.m-grid-1{ width:100%; margin:0; }
+.content_wrap {max-width:320px; margin:0 auto; position:relative;}
+
+	/* Header */
+	header .logo_section {background:#000;}
+	header #logo {max-width:320px; margin:0 auto;}  
+	header #nav {background:url("../images/common/nav_bg.jpg") repeat-x; background-size:320px auto; -webkit-background-size:320px auto;}
+	header #nav ul {max-width:320px; margin:0 auto;}
+	header #nav ul:after {content:" "; display:block; clear:both;}
+	header #nav li{float:left; background:url("../images/common/nav_bar.jpg") right 50% no-repeat; background-size:1px 50%; -webkit-background-size:1px 50%}
+	header #nav li a{display:block;}
+	header #nav li:nth-child(1){width:20.4%; padding:0 1px 0 0;}
+	header #nav li:nth-child(2){width:16%; padding:0 1px 0 0;}
+	header #nav li:nth-child(3){width:13.0%; padding:0 1px 0 0;}
+	header #nav li:nth-child(4){width:30.0%; padding:0 1px 0 0;}
+	header #nav li:nth-child(5){width:19%; background:none;}
+	header .nav_shadow {background:url("../images/common/nav_shadow.jpg") repeat-x; height:5px;}
+	header .sub_container {background:#828282;}
+	
+	/* Section */
+	section article {margin: 0; padding: 0; width: 100%;}
+	section article.index_music .content_wrap{margin-top:20px; width:300px; margin:0 auto; margin-bottom:20px;}
+	section article.popup_beanpole {display:none; position:absolute; top:67px; background:#fff; height:100%;}
+	section article.popup_beanpole ul, section article.popup_beanpole dl {text-indent: -1000em; font-size:1px; overflow:hidden;}
+	section article.popup_beanpole h1 {margin:16px 0 18px 16px; width:282px;}
+	section article.popup_beanpole dl {width:279px; height:90px; background:url("../images/index/beanpole_dl.jpg") no-repeat; background-size:279px auto; margin:23px 0 18px 16px;}
+	section article.popup_beanpole ul {width:266px; height:193px; background:url("../images/index/beanpole_ul.jpg") no-repeat; background-size:266px auto; margin:0 0 24px 16px;}
+	section article.popup_beanpole .beanpole_btn {width:110px; margin:0 auto;}
+	section article.popup_beanpole .beanpole_btn a{display:block;}
+	section article.popup_music {display:none; background:#fff; height:100%;}
+	section article.popup_music .content_wrap {width:304px; margin:0 auto;}
+	section article.popup_music .vedio_area {margin:0 0 0 8px;}
+	section article.popup_music h1 {width:247px; margin:15px 0 18px 2px;}
+	section article.popup_music ul {margin:0 0 0 8px}
+	section article.popup_music ul  dl{margin:15px 0 0px 0;}
+	section article.popup_music ul li h2 {width:300px;}
+	section article.popup_music ul li dl { margin:5px 0 0 20px;}
+	section article.popup_music ul li:nth-child(1) dl {width:239px; height:62px; background:url("../images/index/music_dl1.png") no-repeat; background-size:239px auto; text-indent:-1000em; overflow:hidden;}
+	section article.popup_music ul li:nth-child(1) p {width:198px; margin:7px 0 20px 20px;}	
+	section article.popup_music ul li:nth-child(2) dl { width:265px; height:77px; background:url("../images/index/music_dl2.png") no-repeat; background-size:265px auto; text-indent:-1000em; overflow:hidden;}
+	section article.popup_music ul li:nth-child(2) p {width:261px;margin:7px 0 20px 20px;}
+	section article.popup_music ul li:nth-child(3) dl { width:255px; height:47px; background:url("../images/index/music_dl3.png") no-repeat; background-size:255px auto; text-indent:-1000em; overflow:hidden;}
+	section article.popup_music ul li:nth-child(4) dl { width:280px; height:75px; background:url("../images/index/music_dl4.png") no-repeat; background-size:280px auto; text-indent:-1000em; overflow:hidden;}
+	section article.popup_music .music_txt2 {width:265px; margin:10px 0 15px 10px;}
+	section article.popup_music .music_btn2 {width:118px; margin:0 auto; margin-bottom:20px;margin-top:17px;}
+	section article.popup_music .music_txt {width:270px; padding:10px 0 27px 0; border-top:1px solid #787878;}
+	section article.popup_music .music_btn {width:287px; margin:0 auto; margin-bottom:25px; }
+	section article.popup_music .music_btn a{display:block;}
+	
+	/* Common Footer */
+	#contents {width:100%;}
+	#contents #container {width:100%;}
+	#contents #container .top_btn {width:13%; float:right; margin:0 6.5% 5% 0;}
+	#contents #container .common_arrow {position:fixed; width:100%; max-width:320px; top:310px; height:auto;}
+	#contents #container .common_arrow:after {content:" "; display:block; clear:both;}
+	#contents #container .common_arrow li{width:10%; max-width:32px; max-height:66px;}
+	#contents #container .common_arrow li a{display:block; width:100%;}
+	#contents #container .common_arrow li:nth-child(1) {position:fixed; left:0; top:310px}
+	#contents #container .common_arrow li:nth-child(2) {position:fixed; right:0; top:310px}
+@media screen and (max-width: 340px) {
+
+}
+@media screen and (min-width: 350px) and (max-width: 470px)  {
+
+}
+@media screen  and (orientation: landscape) {
+
+}
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Samsung" />
+<!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+<title>일런드 | 그레이트 사바나 | 탐험하기 | LOST VALLEY</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<meta name="description" content="LOST VALLE." />
+<meta name="keywords" content="LOST VALLE" />
+<link rel="stylesheet" type="text/css" href="css/style.css"  />
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="skipToContent"><a href="#contents" class="skip">본문 바로가기</a></div>
+<div id="wrapper">
+	<!-- header -->
+	<div id="header">
+	<!-- login -->
+		<div id="login">
+			<ul>
+				<li class="btn_login btnOverPng"><a href="#"><img src="images/common/btn_login.png" alt="login"/></a></li>
+				<li class="btn_facebook btnOverPng"><a href="#"><img src="images/common/btn_facebook.png" alt="facebook"/></a></li>
+				<li class="btn_twitter btnOverPng"><a href="#"><img src="images/common/btn_twitter.png" alt="twitter"/></a></li>	
+			</ul>
+		</div>
+		<!-- //login -->
+		<div id="header_conatiner">
+			<div id="logo"><a href="index.html"><img src="images/common/logo.png" alt="로스트 밸리 어드벤처"/></a></div>
+			<ul>
+			<li class="first btnOverPng"><a href="about.html"><img src="images/common/menu01.png" alt="로스트 밸리란"/></a></li>
+			<li class="btnOverPng"><a href="adventure.html"><img src="images/common/menu02_over.png" alt="탐험하기" class="over"/></a></li>
+			<li class="btnOverPng"><a href="storybook.html"><img src="images/common/menu03.png" alt="스토리북"/></a></li>
+			<li class="btnOverPng"><a href="/service/front/lost/lostValleyStdList.el"><img src="images/common/menu04.png" alt="학습노트"/></a></li>
+			<li class="btnOverPng"><a href="food.html"><img src="images/common/menu05.png" alt="Food&amp;Gift"/></a></li>
+			<li class="btnOverPng"><a href="tvc.html"><img src="images/common/menu06.png" alt="갤러리"/></a></li>
+			<li class="btnOverPng"><a href="event3.html"><img src="images/common/menu07.png" alt="이벤트"/></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- contents -->
+	<div id="contents" data-depth="1">
+		<div id="container">
+			<div id="bg_line_top"></div>
+			<!-- main_container -->
+				<div class="animal_conatiner">
+					<div class="animal_content">
+						<div class="animal_visual">
+							<div class="animal_img"><img src="images/adventure/animal/eland_img.png" alt=""/></div>
+							
+							<div id="btnContainer">
+								<div class="animal_videobtn animal_videobtn_center">
+									<div id="video_btn"><img src="images/adventure/animal/video_btn_eland.png" alt="" /></div>
+									<script type="text/javascript">
+										$(function(){
+											var flashID = "video_btn";
+											var _playerWidth = 42;
+											var _playerHeight = 68;
+											var _videoUrl = "../video/animal_thumb_eland.flv";
+											var params = {wmode:"transparent"};
+											var flashvars = {videoUrl:_videoUrl,_width:_playerWidth,_height:_playerHeight};
+											swfobject.embedSWF("swf/FLVLoopPlayer.swf", flashID, _playerWidth, _playerHeight, "11.0.0","/swf/expressInstall.swf", flashvars, params, {});
+										});
+									</script>										
+								</div>
+								<div class="video_btn_img video_btn_img_center"><a href="#"><img src="images/adventure/animal/video_btn.png" alt="영상으로 체험하기"/></a></div>
+							</div>	
+							<div class="animal_player">
+								<div id="animal_flash_video1"></div>
+								<script type="text/javascript">
+									$(function(){
+										var flashID = "animal_flash_video1";
+										var _videoUrl = "../video/animal_detail_eland.flv";
+										var params = {wmode:"opaque"};
+										var flashvars = {videoUrl:_videoUrl};
+										swfobject.embedSWF("swf/player.swf", flashID, 392, 462, "11.0.0","/swf/expressInstall.swf", flashvars, params, {});
+									});
+								</script>
+								<div class="player_closebtn"><a href="#"><img src="images/adventure/animal/player_close_btn.png" alt="플레이어 닫기" /></a></div>																	
+							</div>							
+							<div class="animal_360btn">
+								<div id="adventure_360btn"></div>
+								<script type="text/javascript">
+										$(function(){
+											var flashID = "adventure_360btn";
+											var _playerWidth = 170;
+											var _playerHeight = 90;
+											var _videoUrl = "../video/360_btn.flv";
+											var params = {wmode:"transparent"};
+											var flashvars = {videoUrl:_videoUrl,_width:_playerWidth,_height:_playerHeight};
+											swfobject.embedSWF("swf/FLVLoopPlayer.swf", flashID, _playerWidth, _playerHeight, "11.0.0","/swf/expressInstall.swf", flashvars, params, {});
+										});
+									</script>										
+								<a href="#"><img class="advcamera_360" src="images/adventure/animal/360camera_btn.png" alt=" 360 어드벤처 카메라로 체험하기"/></a>
+							</div>
+						</div>
+						<div class="animal_info">
+							<h1 class="animal_title"><img src="images/adventure/animal/eland_title.png" alt="일런드(ELAND)"/></h1>
+							<div class="backBtn savannah_backBtn"><a href="greatsavannah.html"><img src="images/adventure/animal/savannah_back_btn.png" alt="그레이트 사바나로 돌아가기" /></a></div>
+							<ul class="animal_tab">
+								<li class="animal_tab_1"><a href="#"><img src="images/adventure/animal/eland_1_over.png" alt="일런드는요?"/></a></li>
+								<li class="animal_tab_2"><a href="#"><img src="images/adventure/animal/eland_2.png" alt="일런드의 특징"/></a></li>
+							</ul>
+							<div class="animal_feature">
+								<div class="animal_feature_1">
+								<ul class="page1">
+									<li>
+									암수 모두 뿔을 가지고 있으며, 뿔은 나선형으로 꼬여 있는 모양이에요. 최대 120cm까지 자라요.
+
+									</li>
+									<li>
+									일런드는 싸울 때 뿔을 사용하기도 하고, 나무에 매달린 과일을 먹기 위해 뿔로 나무줄기를 쓰러뜨리기도 해요.
+									</li>
+									<li>점프를 아주 잘해서 제자리에서 3m까지 뛰기도 해요. 육중한 몸을 가지고 있지만 시속 70km까지 뛸 수 있는 순발력도 가지고 있어요.</li>
+									<li>수컷은 머리 앞 부분에 흙 또는 자신의 오줌을 묻혀서 영역을 표시할 곳에 비비는 행동을 해요.</li>
+									<li>일런드의 뿔은 싸울 때 쓰이기도 하고, 나무에 매달린 과일을 먹기 위해 나무줄기를 쓰러뜨리는 등 여러 역할을 수행해요.</li>
+								</ul>	
+								<ul class="page2">
+									<li>가뭄으로 물이 없을 때에는 땀으로 수분이 빠져나가는 걸 막기 위해 땀을 내지 않고 체온이 올라가게 놔 두어요.</li>
+									<li>성숙한 수컷은 다른 일런드에게 자신의 위치를 알리기 위해 걸을 때마다 무릎에서 딸깍하는 소리를 내요.</li>
+								</ul>
+								<ul class="pageBtn">
+									<li class="page1_btn"><a href="#"><img src="images/adventure/animal/page1_btn_over.png" alt="일런드는요? 첫번째 페이지" /></a></li>
+									<li class="page2_btn"><a href="#"><img src="images/adventure/animal/page2_btn.png" alt="일런드는요? 두번째 페이지" /></a></li>
+									</ul>
+								</div>
+								<dl class="animal_feature_2">
+								  <dt>학명</dt>
+								    <dd><span class="italic">Taurotragus oryx</span></dd>
+								  <dt>분류</dt>
+								    <dd>우제목 소과</dd>
+								   <dt>멸종등급</dt>
+								    <dd>IUCN 적색목록 약관심종(LC, Least Concern)</dd>
+								   <dt>분포</dt>
+								    <dd>수단 남부에서 탄자니아까지(남쪽 사바나와 남서쪽 건조지역)</dd>
+								   <dt>서식지</dt>
+								    <dd>덤불과 나무가 산재하는 시골, 교외에서 주로 발견</dd>
+								   <dt>먹이</dt>
+								    <dd>새로 난 잎, 과일, 꼬투리, 종자</dd>
+								   <dt>크기</dt>
+								    <dd>몸길이 수컷 240~345cm, 암컷 200~280cm, 꼬리길이 50~90 cm, 몸무게 수컷 400~942 kg, 암컷 300~600kg</dd>
+								   <dt>사회구조</dt>
+								    <dd>5~50마리까지 군집생활을 한답니다.무리내의 수컷사이에는 서열이 있고 대부분의 성숙한 수컷은 단독생활을 해요.</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="rightMenu savannahMenu">
+						<div class="rightMenu_title"><img src="images/adventure/animal/savannah_rightMenu_title.png" alt=""/></div>
+						<div class="select_effect">
+							<a href=""><span class="effect"><img src="images/adventure/animal_on_ani.png" alt="" /></span></a>
+						</div>
+						<ul class="rightMenu_list">
+							<li class="animalBtn"><a href="giraffe.html"><img src="images/adventure/animal/savannah_menu1.png" alt="기린"/></a></li>
+							<li class="animalBtn li2"><a href="zebra.html"><img src="images/adventure/animal/savannah_menu2.png" alt="얼룩말"/></a></li>
+							<li class="animalBtn"><a href="eland.html"><img class="over" src="images/adventure/animal/savannah_menu3_over.png" alt="일런드"/></a></li>
+							<li class="animalBtn"><a href="sableantelope.html"><img src="images/adventure/animal/savannah_menu4.png" alt="세이블앤틸롭"/></a></li>
+							<li class="animalBtn"><a href="ostrich.html"><img src="images/adventure/animal/savannah_menu5.png" alt="타조"/></a></li>		
+						</ul>
+					</div>	
+				</div>			
+			<!-- //main_container -->
+			<div id="bg_line_bottom"></div>
+			<div id="mycard">
+				<div id="mycard_container">
+					<div class="mycard_btn"><a href="#"><img src="images/common/card_btn.png" alt="MY CARD"/></a></div>
+					<div class="mycard_bg">
+						<div class="mycard_info">
+							<p class="mycard_title">로스트 밸리 동물카드 모으기!</p>
+							<p class="mycard_text">로스트 밸리 홈페이지의<br />탐험하기 메뉴에서 동물카드를 모아보세요.<br />모든 동물 카드를 모으면<br />온라인 탐사 자격증을 만드실 수 있습니다.</p>
+						</div>
+						<ul class="mycard_list">
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bg_pillar_left"></div>
+		<div id="bg_pillar_right"></div>
+		<div id="map_btn"><a href="adventure.html"><img src="images/adventure/animal/btn_map.png" alt="MAP으로 바로가기"/></a></div>
+	</div>
+	<!-- //contents -->
+</div>
+
+</body>
+</html>

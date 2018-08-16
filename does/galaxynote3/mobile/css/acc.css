@@ -1,0 +1,32 @@
+#container.acc .inner{width:90%; margin:0 auto; margin-top:10%; margin-bottom:10%;}
+#container.acc .content_wrap {max-width:320px;}
+
+#container.acc .acc_list >li {border-bottom:1px solid #a0a0a0; margin-bottom:10%;}
+#container.acc .acc_list >li:nth-child(5) {border:none;}
+#container.acc .acc_list >li:nth-child(1) h3{width:33.5%; margin:0 auto;}
+#container.acc .acc_list >li:nth-child(2) h3{width:40%; margin:0 auto;}
+#container.acc .acc_list >li:nth-child(3) h3{width:39%; margin:0 auto;}
+#container.acc .acc_list >li:nth-child(4) h3{width:61%; margin:0 auto;}
+#container.acc .acc_list >li:nth-child(5) h3{width:34.5%; margin:0 auto;}
+#container.acc .acc_list >li:nth-child(3) .acc_main_btn li:nth-child(1){margin:0 0 0 26%;}
+#container.acc .acc_list >li:nth-child(4) .acc_main_btn li:nth-child(1){margin:0 0 0 26%;}
+#container.acc .acc_list >li:nth-child(5) .acc_main_btn li:nth-child(1){margin:0 0 0 26%;}
+
+#container.acc .acc_list li .acc_main_img{width:58.5%; margin:0 auto; margin-bottom:9%}
+#container.acc .acc_list li .acc_main_btn {width:72%; margin:0 auto; margin-bottom:6%; margin-top:4%}
+#container.acc .acc_list li .acc_main_btn:after {content:"" ; display:block; clear:both;}
+#container.acc .acc_list li .acc_main_btn li {float:left; width:48%; margin:0 2.5% 0 0;}
+#container.acc .acc_list li .acc_main_btn li:nth-child(2){margin:0;}
+
+
+#container.acc_sub .content_wrap {max-width:320px;}
+#contents #container.acc_sub .acc_top ul{position:absolute; top:10%;width:100%;}
+#contents #container.acc_sub .acc_top ul li {position:absolute;width:3.8%;}
+#contents #container.acc_sub .acc_top ul li:nth-child(1) {left:0;}
+#contents #container.acc_sub .acc_top ul li:nth-child(2) {right:0;}
+#contents #container.acc_sub .acc_top {margin:0 auto; position:relative; width:90%; margin-top:10%; margin-bottom:12%;}
+#contents #container.acc_sub .acc_top .title {width:68%; margin:0 auto;}
+#contents #container.acc_sub .inner{width:80%; margin:0 auto;}
+#contents #container.acc_sub .inner h4{margin:5% 0 5% 0;}
+#contents #container.acc_sub .inner .desc {margin:0 0 8% 0;}
+#contents #container.acc_sub .inner .acc_sub_btn{width:50%; margin:0 auto; margin-bottom:7%;}

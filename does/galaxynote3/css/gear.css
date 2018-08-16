@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*thirty Event*//*http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/images*/
+.ir{visibility:hidden;overflow:hidden;height:0px;width:0px;margin:0;padding:0;font-size:0;position:absolute;left:-100000px;}
+
+#contents .gear_container {width:100%;height:1720px;background:url("../images/event_gear/galaxygear_full_bg.png") 0 47px repeat-x;padding-top:47px;overflow:hidden;}
+#contents .gear_contents{position:relative;width:1000px;height:1720px;background:url("../images/event_gear/bg.jpg") no-repeat;margin:0 auto;}
+#contents .gear_contents .gear_top{position:relative;width:1000px;height:317px;margin:0 auto;}
+#contents .gear_contents .gear_top h1 {padding:21px 0 10px 7px;}
+#contents .gear_contents .gear_top h2 {padding:0 0 10px 0;}
+#contents .gear_contents .gear_top p {padding:0 0 16px 7px;}
+#contents .gear_contents .gear_top .about_event{width:507px;height:67px;background:url('../images/event_gear/galaxygear_04.png') no-repeat;margin:0 0 23px 7px;}
+#contents .gear_contents .gear_top .about_event li{text-indent:-1000px;overflow:hidden;}
+#contents .gear_contents .gear_video{padding:52px 0 0 196px;}
+#contents .gear_contents .festival{margin-top:21px;}
+#contents .gear_contents .festival .list{}
+#contents .gear_contents .festival .list:after {content:" "; display:block; clear:both;}
+#contents .gear_contents .festival .list li{width:328px;float:left;margin-right:5px;}
+#contents .gear_contents .festival .list li.middle{margin-right:11px;}
+#contents .gear_contents .festival .list li.last{margin-right:0;}
+#contents .gear_contents .festival .list li span{display:block;} 
+#contents .gear_contents .festival .list li .title{padding:0 0 17px 9px;}
+#contents .gear_contents .festival .list li h3{padding:0 0 14px 9px;}
+#contents .gear_contents .festival .list li .method{display:block;width:319px;height:85px;margin:0 0 3px 9px;}
+#contents .gear_contents .festival .list li .method li{text-indent:-1000px;overflow:hidden;}
+#contents .gear_contents .festival .list li .method_01{background:url('../images/event_gear/galaxygear_07.png') no-repeat;}
+#contents .gear_contents .festival .list li .method_02{background:url('../images/event_gear/galaxygear_12.png') no-repeat;}
+#contents .gear_contents .festival .list li .method_03{background:url('../images/event_gear/galaxygear_17.png') no-repeat;}
+#contents .gear_contents .festival .list li .img{padding:0 0 15px 0;}
+#contents .gear_contents .festival .list li .warn{display:block;width:275px;height:87px;margin-left:22px;}
+#contents .gear_contents .festival .list li .warn li{text-indent:-1000px;overflow:hidden;}
+#contents .gear_contents .festival .list li .warn_01{background:url('../images/event_gear/galaxygear_09.png') no-repeat;}
+#contents .gear_contents .festival .list li .warn_02{background:url('../images/event_gear/galaxygear_14.png') no-repeat;}
+#contents .gear_contents .festival .list li .warn_03{background:url('../images/event_gear/galaxygear_19.png') no-repeat;}
+#contents .gear_contents .btn{margin-top:15px;text-align:center;}
+#contents .gear_contents .information{margin-top:68px;}
+#contents .gear_contents .information h4{padding:0 0 15px 16px;}
+#contents .gear_contents .information .info_txt{width:909px;height:244px;background:url('../images/event_gear/galaxygear_22.png') no-repeat;margin:0 0 0 16px;}
+#contents .gear_contents .information .info_txt li{text-indent:-1000em;overflow:hidden;}
+
+#popup{display:none;position:absolute;width:358px;height:358px;z-index:80;top:50%;left:50%;margin-left:-179px;margin-top:-179px;}
+#popup a.close_btn{position:absolute;display:block;width:40px;height:40px;top:35px;right:9px;z-index:80;}
+#bg{display:none; background:#000;  position: absolute; top:0; left: 0; right: 0; bottom: 0;
+	/* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  /* IE 5-7 */
+  filter: alpha(opacity=70);
+  /* Netscape */
+  -moz-opacity: 0.7;
+  /* Safari 1.x */
+  -khtml-opacity: 0.7;
+  /* Good browsers */
+  opacity: 0.7; z-index: 50 }

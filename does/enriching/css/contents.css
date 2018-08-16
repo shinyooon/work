@@ -1,0 +1,67 @@
+#contents.contents {background:#fff;}
+#contents #container.contents {width:100%; background:none; padding:0; margin:0;}
+#contents #container.contents .contents_container {}
+#contents #container.contents .contents_container .inner {width:520px; margin:0 auto; padding:52px 0 0 480px; position:relative; height:281px;}
+#contents #container.contents .contents_container .inner .contents_desc {margin:20px 0 0 0;}
+#contents #container.contents .contents_container .inner .contents_btn {position:absolute; top:50%; right:0; margin: -29px 0 0 0;}
+#contents #container.contents .contents_container .contents_detail { display:none;background:url("../images/contents/contents_detail_bg.jpg");}
+#contents #container.contents .contents_container.music .contents_detail {background:url("../images/contents/contents_detail_bg.jpg");display:none;}
+#contents #container.contents .contents_container .contents_detail .detail_inner {width:1000px; margin:0 auto; padding:45px 0 65px 0;position:relative;}
+#contents #container.contents .contents_container.webtoon  .contents_detail {border-bottom:2px solid #318143; background:url("../images/contents/contents_detail_bg.jpg");}
+#contents #container.contents .contents_container.webtoon  .contents_detail .detail_inner {width:1000px; margin:0 auto; padding:65px 0 165px 0; position:relative;}
+#contents #container.contents .contents_container .contents_detail .detail_inner .close_btn {position:absolute; top:0; right:0;}
+#contents #container.contents .contents_container.music .inner .contents_img {position:absolute; top:52px; left:-30px;}
+#contents #container.contents .contents_container.music {background:#d7eff7;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list:after {content:""; display:block; clear:both;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list {*zoom:1; width:965px; margin:0 auto;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list > li{float:left; margin:20px 20px 0 0; background:url("../images/contents/contents1_li_bg.png") no-repeat; width:190px; height:401px; padding:20px 17px 0 19px; position:relative;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list > li.clear_margin{margin:20px 0 0 0;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list .music_list_contents .li1{margin:0 0 28px 0;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list .music_list_contents .li2 {margin:0 0 7px 0;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list .music_list_contents .li3 {margin: 0 0 12px 0;}
+#contents #container.contents .contents_container.music .contents_detail .detail_inner .music_list .music_list_contents .li5 {position:absolute; bottom:20px; left:50%; margin:0 0 0 -57px;}
+#contents #container.contents .contents_container.webtoon {background:url("../images/contents/contents2_bg.jpg") no-repeat;}
+#contents #container.contents .contents_container.webtoon .inner{width:520px; margin:0 auto; padding:37px 0 0 480px; height:296px;}
+#contents #container.contents .contents_container.webtoon .inner .contents_img {position:absolute; top:32px; left:20px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .detail_inner_top {*zoom:1; width:960px; margin:0 auto;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .detail_inner_top:after {content:""; clear:both; display:block;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_btn {*zoom:1; width:300px; margin:0 auto;float:left;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_btn:after {content:""; clear:both; display:block;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_btn li {float:left; margin:0 0 0 7px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_btn li.li2 {margin: 0 0px 0 7px; display:none;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_btn li.li3 {float:right;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_btn li.li4 {float:right;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .share_btn {float:right; display:inline-block; width:260px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .share_btn li {float:left; margin:0 0 0 7px;}
+
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list {width:960px; margin:0 auto; margin-top:12px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_top{width:960px; height:20px; background:url("../images/contents/webtoon_list_top.png") no-repeat;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle:after{content:""; display:block; clear:both;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle {*zoom:1;width:840px; background:url("../images/contents/webtoon_list_middle.png") repeat-y; padding:22px 60px}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle.webtoon_list_thumb{display:block;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle li{width:840px; /*border-bottom:1px solid #e6e6e6;*/padding:0 0 15px 0; margin:0 0 15px 0;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle li.last{border:none; margin:0}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle li span{display:block; float:left;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle li .thumb{margin:0 35px 0 0; width:125px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle li .title {width:560px; padding:33px 0 0 0; height:14px; font-size:14px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle li .date { padding:33px 0 0 0; height:14px; font-size:14px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_bottom{width:960px; height:24px; background:url("../images/contents/webtoon_list_bottom.png") no-repeat;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle.webtoon_contents{display:none; text-align:center; padding:20px 40px 20px 40px; width:880px; }
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle.webtoon_contents .webtoon_contents_top{text-align:left; border-bottom:1px solid #e6e6e6; margin:0 0 40px 0; padding:0 0 24px 0; *zoom:1; height:18px; font-size:15px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle.webtoon_contents .webtoon_contents_top:ater {content:""; display:block; clear:both;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle.webtoon_contents .webtoon_contents_top span.title {float:left;display:block; font-size:15px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle.webtoon_contents .webtoon_contents_top span.date {float:right;display:block; font-size:15px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container{display:none; width:960px; height:166px;margin:0 auto; background:url("../images/contents/webtoon_thumb_bg.png") no-repeat; margin-top:30px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container ul.thumbnail_list{*zoom:1; width:860px; margin:0px 0 0 65px; padding:28px 0 0 0; text-align:center;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container ul.thumbnail_list:after {content:""; display:block; clear:both;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container ul.thumbnail_list li{/*float:left;*/ margin:0 32px 0 0; }
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container .thumbnail_arrow {position:absolute; width:907px; top:50%; margin:-5px 0 0 0; left:25px}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container .thumbnail_arrow li.left{position:absolute;left:0; }
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .thumbnail_list_container .thumbnail_arrow li.right{position:absolute;right:0; }
+.popup_bg {display:none; z-index:70;width:100%; height:100%; background:#000; position:absolute; top:0; left:0; -ms-filter: alpha(opacity=70);filter: alpha(opacity=70);opacity:0.7; -moz-opacity:0.7;}
+#contents #container.contents .contents_container.webtoon .contents_detail .writer_popup {display:none; z-index:85;width:400px; height:343px; padding:37px 30px; background:url("../images/contents/contents_popup_bg.png") no-repeat; position:absolute; top:50%; left:50%; margin:-208px 0 0 -230px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .writer_popup .popup_title {margin:0 0 44px 0;}
+#contents #container.contents .contents_container.webtoon .contents_detail .writer_popup .close_btn {position:absolute; right:-5px; top:45px;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle .webtoon_contents_inner .webtpon1_1 {background:url("../images/contents/webtoon1_1.jpg") center 0 no-repeat; height:23230px; width:682px; margin:0 auto; text-indent:-1000em;}
+#contents #container.contents .contents_container.webtoon .contents_detail .detail_inner .webtoon_list_middle .webtoon_contents_inner .hiddenText{text-indent:-1000em;}
+

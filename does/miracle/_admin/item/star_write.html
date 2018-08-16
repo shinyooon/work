@@ -1,0 +1,154 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_top.html";?>
+
+		<div class="path">재능 관리  >  스타재능</div>
+
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_gnb.html";?>
+<?if(!strstr($mc_login_authority,"m105")){script_alert_ok("권한이 없습니다.","/");}?>
+
+<?
+$table_name = "MC_BBS";
+$seq = $_REQUEST['seq'];
+$motion = $_REQUEST['motion'];
+if($seq){
+	$r = mysql_fetch_array(mysql_query("select * from $table_name where seq = $seq "));
+	$ca1 = $r['cate1'];
+	$ca2 = $r['cate2'];
+	$tel_r = explode("-",$r['utel']);
+	$t1 = $tel_r[0];
+	$t2 = $tel_r[1];
+	$t3 = $tel_r[2];
+}
+if(!$r['cla']) $r['cla']="s";
+if($r["gmarketseq"]==0)$r["gmarketseq"] = "";
+?>
+			<SCRIPT LANGUAGE="JavaScript">
+			<!--
+
+				function inputOK(){
+					 var f = document.input_f;
+					 if(!f.title.value){
+						alert("스타이름이 필요합니다.");
+						f.title.focus();
+						return;
+					 }
+
+					f.submit();
+				}
+
+				function downOK(seq){
+					document.down_f.m.value = seq;
+					document.down_f.submit();
+				}
+			//-->
+			</SCRIPT>
+		<div id="container">
+			<div class="topNavi">
+				<h3>스타 관리</h3>
+			</div><!--// class="topNavi" -->
+
+			<div class="content">
+				<form action="/apply/download.html" method=post name="down_f">
+				<input type="hidden" name='seq' value="<?=$r['seq']?>">
+				<input type="hidden" name='m' value="4">
+				</form>
+				<form action="star_write_ok.php" name="input_f" method=post enctype="multipart/form-data">
+				<input type="hidden" name="cla" value="<?=$r['cla']?>">
+				<input type="hidden" name="seq" value="<?=$r['seq']?>">
+				<table class="board03">
+					<colgroup><col width="116"/><col width="*"/></colgroup>
+					<tr>
+						<td class="border_none"><p class="tit_base">• 기본정보</p></td>
+						<td class="border_none"><p class="txt_attention"><span class="col_ff0000">&#42;</span>는 필수입력항목입니다.</p></td>
+					</tr>
+					<tr>
+						<th scope="row">상태  <span class="col_ff0000">*</span></th>
+						<td><select name="status">
+							<option value="n">no display</option>
+							<option value="y" <?if($r['status']=="y"){?>selected<?}?>>display</option>
+							</select></td>
+					</tr>
+					<tr>
+						<th scope="row">스타이름  <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="title" class="w670" maxlength=50 value="<?=stripslashes($r['title'])?>"/></td>
+					</tr>
+
+					<tr>
+						<th scope="row">이미지</th>
+						<td>
+						썸  네 일 : <input type="file" name="attach1" class="w570" maxlength=500 /> 130 * 62
+						<br>큰이미지 : <input type="file" name="attach2" class="w570" maxlength=500 /> 404 * 398
+						<br>타 이  틀 : <input type="file" name="attach3" class="w570" maxlength=500 /> 392 * 126
+						<br>
+						<?if($r['thumb1']){?><span style='float:left;margin-left:5px'><a href="<?=$r["attach1"]?>" target=_blank><img src="<?=$r["thumb1"]?>"></a><br><a href="javascript:downOK(1)">[이미지다운로드]</a></span> <?}?>
+						<?if($r['thumb2']){?><span style='float:left;margin-left:5px'><a href="<?=$r["attach2"]?>" target=_blank><img src="<?=$r["thumb2"]?>"></a><br><a href="javascript:downOK(2)">[이미지다운로드]</a></span> <?}?>
+						<?if($r['thumb3']){?><span style='float:left;margin-left:5px'><a href="<?=$r["attach3"]?>" target=_blank><img src="<?=$r["thumb3"]?>"></a><br><a href="javascript:downOK(3)">[이미지다운로드]</a></span> <?}?>
+						</td>
+					</tr>
+
+					<!--tr>
+						<th scope="row">미리보기링크</th>
+						<td>
+						<input type="text" name="ulink" class="w670" maxlength=200 value="<?=$r["ulink"]?>"/>
+						<br><a href="<?=$r["ulink"]?>" target=_blank><?=$r["ulink"]?></a>
+						</td>
+					</tr-->
+
+
+					<tr>
+						<th scope="row">첨부파일</th>
+						<td>
+						<input type="file" name="attach4" class="w670" maxlength=500 />
+						<?if($r["filename4"]){?><br><a href="javascript:downOK(4)">[첨부파일 다운로드 : <?=$r["filename4"]?>]</a><?}?>
+						</td>
+					</tr>
+
+					<!--tr>
+						<th scope="row">상세설명 <span class="col_ff0000">*</span></th>
+						<td><textarea name="content" style="width:670px;height:120px"><?=$r["content"]?></textarea></td>
+					</tr>
+
+					<tr-->
+						<th scope="row">지마켓고유번호 <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="gmarketseq" class="w170" maxlength=10 value="<?=$r["gmarketseq"]?>"/></td>
+					</tr>
+
+					<tr>
+						<th scope="row">지마켓판매URL <span class="col_ff0000">*</span></th>
+						<td>
+						<input type="text" name="gmarketurl" class="w670" maxlength=200 value="<?=$r["gmarketurl"]?>"/>
+						<br>* http 부터 써주세요 (지마켓 고유번호와 링크를 모두 넣고 저장하면 등록완료로 변경 됩니다.)
+						</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2" class="border_none">
+							<div class="btn_area">
+								<a href="javascript:inputOK()"><span class="btn456093">저장</span></a>
+								<a href="javascript:document.input_f.reset()"><span class="btn5f5f5f">취소</span></a>
+								<a href="star_list.html"><span class="btnbebebe">목록</span></a>
+							</div>
+						</td>
+					</tr>
+
+				</table><!--// table "info_table" -->
+
+
+			</div><!--// class="content" -->
+
+		</div><!--// id="container" -->
+
+	</div><!--// id="right" -->
+
+
+</div><!--// id="wrapper" -->
+</body>
+</html>
+
+
+
+
+
+
+
+

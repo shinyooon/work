@@ -1,0 +1,79 @@
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, width=device-width, user-scalable=0"/> 
+		<meta name="format-detection" content="telephone=no"> <!-- Turning off iPhone number detection -->
+		<link href="css/common.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script src="js/easing.js" type="text/javascript"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript"></script>
+		<script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/global.js" type="text/javascript"></script>
+		<script src="js/common.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<div id="skipToContent"><a href="#contents">본문 바로가기</a></div>
+		<div class="m-wrapper">
+				<div class="m-grids">
+					<header>
+						<nav id="main_nav">
+							<ul id="topnav">
+								<li><a href="#" title="팝업열림(글로벌 네비게이션)" onclick="onMenu();"><img src="images/common/menu.gif" alt="글로벌 네비게이션 보기" /></a></li>  
+								<li><h1><a href="index2.html"><img src="images/common/logo.gif" alt="Enriching Company" /></a></h1></li>
+								<li><a href="#" title="팝업열림(로그인 팝업)" onclick="onLogin();"><img src="images/common/mypage.gif" alt="로그인 팝업 보기" /></a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+    				</header><!-- end header -->
+    				
+    				<div class="login_section">
+    					
+						<? if(isLogin){ ?>
+						<div class="logout">
+							<ul>
+								<li>
+									<span class="title"><img src="images/common/login/mypage_text.png" alt="mypage" /></span>
+									<a href="javascript:mypage();"><img src="images/common/login/mypage.png" alt="마이페이지" /></a>
+								
+								</li>
+								<li>
+									<span class="title"><img src="images/common/login/logout_text.png" alt="logout" /></span>
+									<a href="javascript:logout();"><img src="images/common/login/logout.png" alt="로그아웃" /></a>
+									
+								</li>
+							</ul>
+						</div>
+						<? }else{ ?>
+						<form>
+								
+								<p class="login_sns_text"><img src="images/common/login/login_sns.png" alt="SNS Login" /></p>
+								<ul class="login_sns">
+									<li><a href="javascript:loginFB();" title="새창 열림" class="menu_item"><img src="images/common/login/login_fb.png" alt="페이스북으로 로그인" /></a></li>
+									<li><a href="javascript:loginTW();" title="새창 열림" class="menu_item"><img src="images/common/login/login_tw.png" alt="트위터로 로그인" /></a></li>
+								</ul>
+								
+								
+								<p class="login_idpw_text"><img src="images/common/login/login_idpw.png" alt="ID/PASSWORD Login" /></p>
+								<ul class="login_input_area">
+									<li class="login_id"><input type="text" id="user_id" name="" maxlength="10" /><label for="user_id">아이디</label></li>
+									<li class="login_pw"><input type="password" id="user_pw" name="" maxlength="12" /><label for="user_pw">비밀번호</label></li>
+								</ul>
+								<div class="login_btn"><a href="javascript:loginDefault();"><img src="images/common/login/login_btn.png" alt="로그인" /></a></div>
+								<div class="login_find"><a href="javascript:findID();"><img src="images/common/login/login_find_id.png" alt="아이디 패스워드찾기" /></a></div>
+						</form>
+						
+						<div class="login_join">
+							<p class="login_join_text"><img src="images/common/login/login_join_text.png" alt="아직 주주가 아니신가요? 주주로 가입해주세요." /></p>
+							<div class="login_join_btn"><a href="javascript:join();"><img src="images/common/login/login_join_btn.png" alt="인리칭 컴퍼니 주주되기" /></a></div>
+						</div>
+						<? } ?>
+    				</div>
+    				<h2 class="hiddenText">글로벌 네비게이션</h2>
+    				<nav id="left_nav">
+    					<ul id="gnb">
+    						<li><a href="about.html"><img src="images/common/menu01_off.jpg" alt="인리칭 컴퍼니" /></a></li>
+    						<li><a href="offline.html"><img src="images/common/menu02_off.jpg" alt="인리칭 주주모임" /></a></li>
+    						<li><a href="online.html"><img src="images/common/menu03_off.jpg" alt="인리칭 회의식" /></a></li>
+    						<li><a href="event.html"><img src="images/common/menu04_off.jpg" alt="인리칭 이벤트" /></a></li>
+    						<li><a href="contents.html"><img src="images/common/menu05_off.jpg" alt="인리칭 컨텐츠" /></a></li>
+    					</ul>
+    				</nav>

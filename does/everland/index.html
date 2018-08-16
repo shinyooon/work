@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Samsung" />
+<!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+<title>LOST VALLEY</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<meta name="description" content="LOST VALLE." />
+<meta name="keywords" content="LOST VALLE" />
+<link rel="stylesheet" type="text/css" href="css/style.css"  />
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var uAgent = navigator.userAgent.toLowerCase();
+var mobilePhones = new Array('iphone','ipod','android','blackberry','windows ce','nokia','webos','opera mini','sonyericsson','opera mobi','iemobile');
+for(var i=0;i<mobilePhones.length;i++)
+if(uAgent.indexOf(mobilePhones[i]) != -1)
+if(uAgent.indexOf("android")!=-1){
+	if(uAgent.indexOf("obile")!=-1){
+		if(navigator.userAgent.match(/SHW-M180S/)!=null ||navigator.userAgent.match(/SHW-M480S/)!=null ||navigator.userAgent.match(/SHW-M480K/)!=null ||navigator.userAgent.match(/SHW-M480W/)!=null ||navigator.userAgent.match(/SHV-E140S/)!=null ||navigator.userAgent.match(/SHV-E140K/)!=null ||navigator.userAgent.match(/SHV-E140L/)!=null ||navigator.userAgent.match(/SHV-E150S/)!=null ||navigator.userAgent.match(/SHW-M380S/)!=null ||navigator.userAgent.match(/SHW-M380/)!=null ||navigator.userAgent.match(/SHV-E230S/)!=null ||navigator.userAgent.match(/SHV-E230L/)!=null ||navigator.userAgent.match(/SHV-E230K/)!=null ){
+			
+		}else{
+			document.location="mobile/index.html";
+		}
+	}
+}	else{
+		document.location="mobile/index.html";
+}
+</script>
+</head>
+<body>
+<div id="skipToContent"><a href="#contents" class="skip">본문 바로가기</a></div>
+<div id="wrapper">
+	<!-- header -->
+	<div id="header">
+		<!-- login -->
+		<div id="login">
+			<ul>
+			<li class="btn_login btnOverPng"><a href="#"><img src="images/common/btn_login.png" alt="login"/></a></li>
+			<li class="btn_facebook btnOverPng"><a href="#"><img src="images/common/btn_facebook.png" alt="facebook"/></a></li>
+			<li class="btn_twitter btnOverPng"><a href="#"><img src="images/common/btn_twitter.png" alt="twitter"/></a></li>	
+			</ul>
+		</div>
+		<!-- //login -->
+		<div id="header_conatiner">
+			<div id="logo"><a href="index.html"><img src="images/common/logo.png" alt="로스트 밸리 어드벤처"/></a></div>
+			<ul>
+			<li class="first btnOverPng"><a href="about.html"><img src="images/common/menu01.png" alt="로스트 밸리란"/></a></li>
+			<li class="btnOverPng"><a href="adventure.html"><img src="images/common/menu02.png" alt="탐험하기" id="secondBtn"/></a></li>
+			<li class="btnOverPng"><a href="storybook.html"><img src="images/common/menu03.png" alt="스토리북"/></a></li>
+			<li class="btnOverPng"><a href="/service/front/lost/lostValleyStdList.el"><img src="images/common/menu04.png" alt="학습노트"/></a></li>
+			<li class="btnOverPng"><a href="food.html"><img src="images/common/menu05.png" alt="Food&amp;Gift"/></a></li>
+			<li class="btnOverPng"><a href="tvc.html"><img src="images/common/menu06.png" alt="갤러리"/></a></li>
+			<li class="btnOverPng"><a href="event3.html"><img src="images/common/menu07.png" alt="이벤트"/></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- contents -->
+	<div id="contents"  data-depth="-1" style="max-width: 1340px;">
+		<h1 class="blind">로스트 밸리 어드벤처</h1>
+		<div id="container" style="height: 650px;width: 1340px;">
+			<!-- main_container -->
+			<div id="main_container">
+				<!--<div class="samsunglife_index"><img src="images/samsunglife.png" alt="로스트 밸리는 삼성생명과 함께 합니다"></div>-->
+				<div id="intro">
+					<div class="skip_intro"><a href="adventure.html"><img src="images/intro-first.jpg" alt="지금부터 로스트 밸리의 신비로운 전설이 시작됩니다(메인 페이지로 이동)"/></a></div>
+					<div class="main_intro"><img src="images/main.jpg" alt=""/></div>
+					<script type="text/javascript">
+						var $window = $(window);
+						var flashID = "intro";
+						var sendDataToFlash = function(){
+							try{
+								document.getElementById(flashID).setWidowSize(getWindowWidth());	
+							}catch(err){
+
+							}
+							
+						}
+						var getWindowWidth = function(){
+							var winWidth = $window.width();
+							return winWidth
+						}
+						var _data;
+						var initalize = function(){
+							//init flash
+							var params = {wmode:"transparent"};
+							var url = "adventure.html";
+							var flashvars = {
+								windowWidth:getWindowWidth(),
+								navigateURL:url
+							};
+							swfobject.embedSWF("swf/intro.swf", flashID, "1340", "650", "11.0.0","/swf/expressInstall.swf", flashvars, params, {});	
+
+							//init window resize event
+							$window.resize(function(){
+								sendDataToFlash();
+							})
+
+							$("#mycard").css('width','1200px');
+							$("#mycard").css('display','none');
+							$(".main_pop1").css('display','none');
+							$(".main_pop2").css('display','none');
+							$("#container").css('height','639px');
+						}
+						$(function(){
+							initalize();
+						});
+						var finishIntro = function(){
+							$("#mycard").css('display','block');
+							$(".main_pop1").css('display','block');
+							$(".main_pop2").css('display','block');
+							$(".main_pop1").css('right','190px');
+							$(".main_pop2").css('right','110px');
+							mycardFnc();
+							initalizeDocument();
+							var imgName = $("#secondBtn").attr("src").slice(0,-4);
+							$("#secondBtn").attr("src" , imgName + "_over.png");
+						}
+						
+					</script>
+				</div>
+			</div>
+			<!-- //main_container -->
+			<div id="mycard">
+				<div id="mycard_container">
+					<div class="mycard_btn"><a href="#"><img src="images/common/card_btn.png" alt="MY CARD"/></a></div>
+					<div class="mycard_bg">
+						<div class="mycard_info">
+							<p class="mycard_title">로스트 밸리 동물카드 모으기!</p>
+							<p class="mycard_text">로스트 밸리 홈페이지의<br />탐험하기 메뉴에서 동물카드를 모아보세요.<br />모든 동물 카드를 모으면<br />온라인 탐사 자격증을 만드실 수 있습니다.</p>
+						</div>
+						<ul class="mycard_list">
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+							<li><img src="images/common/card_lock.png" alt="blocked"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="main_pop2"><a href="event3.html"><img src="images/main_pop2.png" alt="학습노트 만들기 이벤트 바로가기"/></a></div>
+	</div>
+	<!-- //contents -->
+</div>
+</body>
+</html>

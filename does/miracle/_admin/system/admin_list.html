@@ -1,0 +1,164 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_top.html";?>
+
+		<div class="path">시스템 관리  >  관리자 관리</div>
+
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_gnb.html";?>
+<?if(!strstr($mc_login_authority,"m201")){script_alert_ok("권한이 없습니다.","/");}?>
+
+<?
+$i=0;
+$search_sql = "";
+$table_name = "MC_ADMIN";
+
+$num = $_REQUEST['num'];
+$motion = $_REQUEST['motion'];
+$da1 = $_REQUEST['da1'];
+$da2 = $_REQUEST['da2'];
+$sw = $_REQUEST['sw'];
+$sj = $_REQUEST['sj'];
+
+
+If($motion=="e" And $num){
+	mysql_query("update $table_name set del_date = now(), del_ip='$ip', del_id='$mc_admin_id' where num=$num ");
+}
+if($motion=="a"){
+	for($i=0;$i<sizeof($check_r);$i++){
+		$num = $check_r[$i];
+		mysql_query("update $table_name set del_date = now(), del_ip='$ip', del_id='$mc_admin_id' where num=$num ");
+	}
+}
+
+If($sw){
+	if($sj=="1") $search_sql .= " and admin_id like '%$sw%' ";
+	if($sj=="2") $search_sql .= " and admin_nm like '%$sw%' ";
+}
+If($da1) $search_sql .= " and cast(write_date as char(10)) >= '$da1' ";
+If($da2) $search_sql .= " and cast(write_date as char(10)) <= '$da2' ";
+
+
+	$re = mysql_query("select * from $table_name where del_date is null $search_sql");
+	$total = mysql_affected_rows();
+
+?>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function eraseDEL(txt){
+		if(confirm("정말로 지우시겠습니까?")){
+			location.replace('?motion=e&num='+txt);
+		}
+	}
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function searchOK(){
+		document.search_f.submit();
+	}
+//-->
+</SCRIPT>
+		<div id="container">
+			<div class="topNavi">
+				<h3>관리자관리</h3>
+			</div><!--// class="topNavi" -->
+
+			<div class="content">
+
+				<table class="board01" style="width:1000px;">
+					<colgroup><col width="*"/><col width="*"/><col width="*"/><col width="*"/><col width="*"/><col width="*"/><col width="80"/><col width="*"/></colgroup>
+					<thead>
+					<tr>
+						<form name="search_f">
+						<td colspan="8" class="border_none">
+							<div class="search_box">
+								<select name="sj">
+									<option value="1">관리자ID</option>
+									<option value="2" <?if($sj=="2"){?>selected<?}?>>관리자이름</option>
+								</select>
+								<input type="text" class="w270" name="sw" maxlength=20 value="<?=$sw?>" onkeydown="if (event.keyCode == 13) searchOK()"/>
+								<a href="javascript:searchOK()"><span class="btna6a6a6">검색</span></a>
+							</div><!--// class="search_box" -->
+						</td>
+						</form>
+					</tr>
+					<tr>
+						<td colspan="8" class="border_none">
+							<!--div class="list_etc">
+								<a href="#"><span class="btn_select01">전체선택</span></a>&nbsp;
+								<a href="#"><span class="btn_select02">선택해제</span></a>&nbsp;&nbsp;&nbsp;
+								• 총 게시물 : 20개[1/20page]
+							</div -->
+						</td>
+					</tr>
+					<tr>
+						<th scope="col">번호</th>
+						<!--th scope="col">권한구분</th-->
+						<th scope="col">관리자 ID</th>
+						<th scope="col">관리자 이름</th>
+						<!--th scope="col">연락처(tel)</th>
+						<th scope="col">연락처(mobile)</th-->
+						<th scope="col">E-mail</th>
+						<!--th scope="col">게시여부</th>
+						<!--th scope="col">PW초기화</th-->
+						<th scope="col">로그인일시</th>
+						<th scope="col">등록일</th>
+						<th scope="col">삭제</th>
+					</tr>
+					</thead>
+					<tbody>
+<?
+	$sql = "select * from $table_name where del_date is null  $search_sql order by num DESC limit $start_no, $list_qty ";
+	$re= mysql_query($sql);
+	while($r=mysql_fetch_array($re)){
+		$no = $total - $i - ($pno-1)*$list_qty;
+?>
+					<tr>
+						<td><?=$no?></td>
+						<td><a href="admin_write.html?num=<?=$r['num']?>"><?=$r['admin_id']?></a></td>
+						<td><?=$r['admin_nm']?></td>
+						<td><?=$r['admin_email']?></td>
+						<td><?=$r['login_date']?></td>
+						<td><?=$r['write_date']?></td>
+						<td ><a href="javascript:eraseDEL(<?=$r['num']?>)"><span class="btna6a6a6">삭제</span></td>
+					</tr>
+	<?
+	$i++;
+	}// while?>
+
+
+					<tr>
+						<td colspan="11" class="border_none">
+							<div class="btn_area2">
+								<!--p class="fl_left"><a href="#"><span class="btnbebebe2">선택삭제</span></a></p-->
+								<p class="fl_right">
+									<!--a href="#"><span class="btn456093">설정저장</span></a-->
+									<a href="admin_write.html"><span class="btn5f5f5f">신규등록</span></a>
+								</p>
+							</div><!--// class="btn_area2" -->
+
+
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_paging.html";?>
+
+						</td>
+					</tr>
+					</tbody>
+				</table><!--// table "board01" -->
+
+
+			</div><!--// class="content" -->
+
+		</div><!--// id="container" -->
+
+	</div><!--// id="right" -->
+
+
+</div><!--// id="wrapper" -->
+</body>
+</html>
+
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_include/dbclose.php";?>
+
+
+
+
+
+

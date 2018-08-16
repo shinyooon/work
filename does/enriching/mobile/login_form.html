@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, width=device-width, user-scalable=0"/> 
+		<meta name="format-detection" content="telephone=no"> <!-- Turning off iPhone number detection -->
+		<title>인리칭 컨텐츠 - Enriching Company</title>
+		<link href="<%=webServer%>/css/common.css" rel="stylesheet" type="text/css">
+		<style>
+			html,body{background: transparent !important; position:absolute !important;}
+		</style>
+		<%@ include file="/include/header_script.jsp" %>
+		<script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script_ya.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+
+
+
+	<form id="loginFrom" method="post" accept-charset="utf-8" action="proc/login_check.jsp">
+		<fieldset>
+			<legend>로그인</legend>
+
+				<div class="login_form">
+
+
+					<ul class="input_area">
+						<li><input type="text" id="user_id" name="id" class="input_id" maxlength="10" /><label for="user_id">아이디</label></li>
+						<li><input type="password" id="user_pw" name="password" class="input_pw" maxlength="12" /><label for="user_pw">비밀번호</label></li>
+						<li><input type="hidden" name="type" value="default" /></li>
+						<li><input type="hidden" name="image" id="login_image" value="" /></li>
+						<li><input type="hidden" name="displayName" id="login_name" value="" /></li>
+						<li><input type="hidden" name="redirect" value="<%=webServer%>/login_form.jsp" /></li>
+					</ul>
+					<div class="login_btn">
+						<a href="javascript:loginDefault();" class="login_btn_a arr_btn" >
+							<img src="images/common/login/login_btn_txt.png" alt="Login" />
+							<span><img src="images/common/login/btn_arr.png" alt="" /></span>
+						</a>
+						
+					</div>
+				</div>
+
+			</fieldset>
+			
+		</form>
+
+	</body>
+</html>
+
+
+<%
+
+	String result = request.getParameter("result");
+	String callback = request.getParameter("callback");
+
+	if(result != null){
+
+		out.print("<script>parent."+callback+"({'result':'"+result+"'})</script>");
+
+	}
+
+
+%>
+
+
+
+
+

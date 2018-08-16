@@ -1,0 +1,296 @@
+
+header .event_sub {width:95%; margin:0 auto;}
+header .event_sub:after {content:" "; display:block; clear:both;}
+header .event_sub li{float:left;}
+header .event_sub li:nth-child(1) {border-bottom: 1px dotted #cdcdcd; width:150px;padding:10px 15px 9px 19px;background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/event_sub_bg.jpg") right -1px no-repeat; background-size:15px auto; -webkit-background-size:15px auto;}
+header .event_sub li:nth-child(2) {border-bottom: 1px dotted #cdcdcd; width:100px;padding:10px 19px 9px 0px;/*background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/event_sub_bg.jpg") right -1px no-repeat; background-size:15px auto; -webkit-background-size:15px auto;*/}
+header .event_sub li:nth-child(3) {/*border-bottom: 1px dotted #cdcdcd;*/ width:90px;padding:0 30px 2px 80px;/*background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/event_sub_bg.jpg") right 1px no-repeat; background-size:15px auto; -webkit-background-size:15px auto;*/}
+.content_wrap.event{max-width:320px; }
+
+header .event_sub_1 {width:95%; margin:0 auto;}
+header .event_sub_1:after {content:" "; display:block; clear:both;}
+header .event_sub_1 li{float:left;}
+header .event_sub_1 li:nth-child(1) {width:93px; border-bottom: 1px dotted #cdcdcd; padding:3px 14px 1px 40px;background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/event_sub_bg.jpg") right 50% no-repeat; background-size:15px auto; -webkit-background-size:15px auto;}
+header .event_sub_1 li:nth-child(2) {border-bottom: 1px dotted #cdcdcd; width:110px; padding:8px 40px 1px 0px; }
+header .event_sub_1 li:nth-child(3) {width:113px; padding:0 14px 5px 45px;}
+
+
+
+
+#container.event button { cursor: pointer; border:0;}
+/*event > main*/
+#container.event .main { margin: 0 auto; background:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/bg-new.jpg) 50% 0% repeat-x #d5d5d5 ;  background-size:5px 793px; overflow: hidden; }
+
+#container.event .main .inner { max-width: 320px; margin: 0 auto; }
+#container.event .main .event-info { position: relative; height: 285px; margin-bottom: 120px;  text-align: center; }
+#container.event .main .event-info .title { padding: 18px 0 6px 0; width:204px; margin:0 auto;}
+#container.event .main .event-info p { padding: 6px 0;}
+#container.event .main .event-info .dice-image { position: absolute; right: 0; bottom:-140px; }
+#container.event .main .event-info .btn-start { background:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-start.png); width:123px; height: 33px; background-size: 123px 33px; text-indent: -99999em; cursor: pointer; border: 0; position: absolute; left:18px; bottom: -70px; display: none; }
+#container.event .main .event-info .loading { font-weight: bold; position: absolute; left:30px; bottom:-70px;}
+#container.event .main .notice { background: url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/notice.png); width: 300px; height: 341px; text-indent: -9999em; margin: 10px; background-size:300px 341px; margin-bottom: 50px;}
+
+/*event > quiz*/
+#container.event .quiz { margin: 0 auto; background:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/quiz-bg.jpg) 50% 0% repeat-x #d5d5d5 ;  background-size: 640px 405px; overflow: hidden; height: 405px; display: none; }
+#container.event .quiz .inner { max-width: 320px; margin: 0 auto; position: relative; height: 100%; }
+#container.event .quiz .dice-container { display: block; position: relative; }
+#container.event .quiz .dice {  position: absolute; left:50%;   }
+
+#container.event .quiz .dice img { position: absolute; top:0; margin-left: -72px; }
+#container.event .quiz .dice-container .dice-shadow { position: absolute; display:none; top: 126px;left: 10px; }
+#container.event .quiz .btn-hint { position: absolute; top:0; right: 10px; background:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-hint.png) no-repeat; width: 66px; height: 94px; background-size: 66px 94px; text-indent: -9999em; border:0; }
+#container.event .quiz .gage { position: absolute ; bottom: 0; left: 50%; margin-left: -90px; width: 194px; height: 79px; }
+#container.event .quiz .gage li { position: absolute; top:0; left: 0; display: none;}
+#container.event .quiz .gage li.active { display: block;}
+#container.event .quiz .event-start { position: absolute; top:200px; left:0; right: 0; text-align: center; display: none;}
+
+#container.event .quiz .ox { background:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/ox-split.png) 50% 0 no-repeat; height: 44px; background-size: 2px 44px; bottom:80px; position: absolute; left:50%; width: 2px; }
+#container.event .quiz .ox button { background: transparent no-repeat;  background-size: 100px 50px; width: 50px; height: 50px; position: absolute; top: -2px; left:50%; text-indent: -9999em;}
+#container.event .quiz .ox button:active,#container.event .quiz .ox button.active { background-position: -50px 0;}
+#container.event .quiz .ox .btn-o { background-image:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-o.png); margin-left: -65px;}
+#container.event .quiz .ox .btn-x { background-image:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-x.png); margin-left: 15px;}
+#container.event .quiz .btn-start-large{ background:url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-start-large.png) no-repeat; background-size: 107px 31px; width: 107px; height: 31px; display: block; margin: 28px auto; text-indent: -9999em; }
+#container.event .quiz  .question { position: absolute; text-align: center; width: 100%; top:190px;}
+
+#container.event .quiz .quiz-area { display: none; }
+ 
+#container.event .quiz .hint { position: absolute; top:0; left:0; border-top:1px solid #aaa; width: 100%; height:100%; background:#fff; display: none; }
+#container.event .quiz .hint .btn-hide-hint { position: absolute; top:10px ; right: 10px;}
+
+/*event>apply*/
+#container.event .apply { display: none;  }
+#container.event .apply .inner { width: 300px; margin: 0 auto; padding: 20px 10px; background:#fff;}
+#container.event .apply .inner h1 { margin-bottom: 4px; }
+#container.event .apply .inner h2 { margin-bottom: 2px;}
+#container.event .apply .inner p { margin-bottom: 6px;  }
+#container.event .apply .inner ul { margin-bottom: 6px; }
+#container.event .apply .inner ul li:nth-child(1){margin:0 0 5px 0}
+#container.event .apply .inner form { padding-top:8px;}
+#container.event .apply .inner em  {display: block ; margin-bottom: 6px;}
+#container.event .apply .inner .block { margin-bottom: 5px;}
+.input-block { margin-bottom: 10px; position: relative; line-height: 28px;}
+.input-block label { position: absolute; top:7px; left:0; line-height: 28px; display: block;}
+.input-block .input-content { position: relative; margin-left: 80px; }
+.input-block .input-content input {border:1px solid #ccc; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; padding: 4px; font-size: 14px; font-family: 'NanumGothic', '나눔고딕', arial, sans-serif; background:#eaeaea;}
+#container.event .apply .user-info { padding: 10px 0 0 0 ; margin-bottom: 10px; border-top:1px solid #bbb; border-bottom: 1px solid #bbb;}
+
+#container.event .apply .agreebox { padding: 10px; background:#585858; margin: 20px -10px;   }
+#container.event .apply .agreebox .action { float:right;}
+#container.event .apply .agreebox .action label { margin-right: 10px;}
+#container.event .apply .agreebox .action input[type="radio"] { margin:0 4px; vertical-align: top;}
+
+
+#container.event .apply .btns {text-align: center; padding: 10px;}
+
+#container.event .apply .btns button { border:0; cursor: pointer; text-indent: -9999em; margin: 2px;  display: inline-block;  }
+#container.event .apply .btn-apply { background: url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-apply.png) 50% 50% no-repeat; width: 93px; height: 27px; background-size:92px 26px; }
+#container.event .apply .btn-cancel { background: url(http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event/btn-cancel.png) 50% 50% no-repeat; width: 93px; height: 27px; background-size:92px 26px; }
+
+.dice-dummy { display: none; }
+
+/*.sviewEvent*/
+.sviewEvent{width:320px; margin:0 auto; height:457px;background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/sviewEvent/sview_event_text.png") no-repeat 50% 50%;background-size:100%;overflow:hidden;}
+.sviewEvent_container {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/sviewEvent/sview_event_bg.jpg") repeat-x; background-size:320px auto;}
+
+/*value package event*/
+#container.event3 {background:#f7f7f7}
+#container.event3 .content_wrap .inner{width:88%; margin:0 auto;}
+#container.event3 .content_wrap .inner h3 {width:89%; padding:8% 0 10% 0;}
+#container.event3 .content_wrap .inner .h5_1{width:19%; margin:5% 0 0 0;}
+#container.event3 .content_wrap .inner .h5_2{width:30%;} 
+#container.event3 .content_wrap .inner .h5_3{width:20%;}
+#container.event3 .content_wrap .inner .desc {margin:2% 0 7% 0;} 
+#container.event3 .content_wrap .inner .desc2 {margin:4% 0 1% 0;}
+#container.event3 .content_wrap .inner .desc3 {margin:0.5% 0 7% 0;}
+#container.event3 .content_wrap .inner .txt5 {border-top:1px solid #787878; border-bottom:1px solid #787878; padding:5% 0;margin:10% 0;} 
+#container.event3 .content_wrap .inner .desc_line {margin:0 0 5% 0; padding:3% 0 0 0; border-top:1px solid #787878;} 
+#container.event3 .content_wrap .inner .desc_line2 {margin:5% 0 0 0; padding:7% 0 15% 0; border-top:1px solid #787878; text-align:center;}
+#container.event3 .content_wrap .inner .desc_line2 img{width:144px;}  
+
+/*bluebox_event*/
+
+#container.bluebox .bluebox_top{background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/bluebox/blue_top_bg.jpg") center top no-repeat #393d46; height:216px; background-size:320px auto;  -webkit-background-size:320px auto; padding:15px 0 25px 0;}
+#container.bluebox .inner {width:286px; margin:0 auto;}
+#container.bluebox .bluebox_top .inner h3 {width:183px;}
+#container.bluebox .bluebox_top .inner p {width:279px; margin:9px 0 0 0;}
+#container.bluebox .inner .bluebox_info {margin:15px 0 0 0;}
+#container.bluebox .inner .bluebox_info >li {margin:0 0 20px 0;}
+#container.bluebox .inner .bluebox_info >li:nth-child(1){width:156px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(2){width:123px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(3){width:288px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(4){width:263px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(5){width:268px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(5) ul li {margin:15px 0 0 0;}
+#container.bluebox .inner .bluebox_info >li:nth-child(5) ul li:nth-child(1){width:243px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(5) ul li:nth-child(2){width:241px;}
+#container.bluebox .inner .bluebox_info >li:nth-child(5) ul li:nth-child(3){width:256px;}
+#container.bluebox .inner .bluebox_info li:nth-child(8){width:267px;}
+#container.bluebox .inner .bluebox_btn {width:170px; margin:0 auto; margin-top:11px; margin-bottom:46px;}
+
+/*fashion week_event*/
+#container.fashion {position:relative;}
+#container.fashion section.show {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/fashion/fashion_bg1.jpg") no-repeat center 0 #261a34; background-size:320px auto; -webkit-background-size:320px auto; height:818px;}
+#container.fashion section.show .inner {width:295px; margin:0 auto; padding:0 0 0 25px}
+#container.fashion section.show .inner .event1 h2 {width:196px; padding:15px 0 23px 0;}
+#container.fashion section.show .inner .event1 .map {top:323px; left:124px;}
+#container.fashion section.show .inner .event1 h3 {width:234px; margin:0 0 10px 2px;}
+#container.fashion section.show .inner .event1 .desc {width:268px; margin:0 0 13px 2px;}
+#container.fashion section.show .inner .event1 .fashion_img {width:270px; margin:0 0 40px 2px;}
+#container.fashion section.show .inner .event2 h3 {width:262px; margin:0 0 20px 2px;}
+#container.fashion section.show .inner .event2 .desc {width:259px; margin:0 0 20px 2px;}
+#container.fashion section.show .inner .event2 .fashion_img {width:211px; margin:0 0 0 50px;}
+#container.fashion section.show .inner .event2 .map {top:139px; left:161px;}
+#container.fashion section.colabo {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/fashion/fashion_bg2.jpg") no-repeat center 0 #261a34; background-size:320px auto; -webkit-background-size:320px auto; height:395px;}
+#container.fashion .event1, #container.fashion .event2, #container.fashion .event3, #container.fashion .event4  {position:relative;}
+#container.fashion section.colabo .inner {width:298px; margin:0 auto; padding:0 0 0 22px}
+#container.fashion section.colabo .inner .event3 {padding:46px 0 0 0;}
+#container.fashion section.colabo .inner .event3 h3 {width:236px;margin:0 0 0 3px}
+#container.fashion section.colabo .inner .event3 h4 {width:272px; margin:48px 0 0px 0;}
+#container.fashion section.colabo .inner .event3 ul li:nth-child(1) .desc {width:252px; margin:0 0 25px 0;}
+#container.fashion section.colabo .inner .event3 ul li:nth-child(2) .desc {width:189px;}
+#container.fashion section.colabo .inner .event3 .map.map1 {top:294px; left:47px;}
+#container.fashion section.colabo .inner .event3 .map.map2 {top:370px; left:50px;}
+#container.fashion .map {width:53px; position:absolute;}
+#container.fashion .popup_bg {display:none; width:100%; height:100%; background:#000; position:absolute; z-index:80; top:0; left:0; -ms-filter: alpha(opacity=70);filter: alpha(opacity=70);opacity:0.7; -moz-opacity:0.7;}
+#container.fashion .popup_beaker {display:none; top:81%; left:50%; margin:-160px 0 0 -159px; position:absolute; z-index: 100;}
+#container.fashion .popup_beaker .popup_close_btn {position:absolute; width:16px; top:20px; right:20px;}
+
+/* blushpink event */
+#container.event_pink {}
+#container.event_pink .pink_contents {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_bg.jpg") repeat-x; background-size:25px auto;}
+#container.event_pink .pink_contents .pink_inner {max-width:320px; margin:0 auto;}
+#container.event_pink .pink_contents .pink_inner .contents_top {padding:22px 0 20px 25px; background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_img1.png") no-repeat 12px 95px; background-size:63px 89px;}
+#container.event_pink .pink_contents .pink_inner .contents_top h2 {width:268px;}
+#container.event_pink .pink_contents .pink_inner .contents_top p {width:213px; margin:20px 0 0 55px;}
+#container.event_pink .pink_contents .pink_inner .pink_vedio_area {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_vedio_bg.png") no-repeat; height:181px; background-size:307px 199px; padding: 8px 27px 0 27px;}
+#container.event_pink .pink_contents .pink_inner .event {padding:0 0px 0 25px; position:relative;}
+#container.event_pink .pink_contents .pink_inner .event h3{width:64px; margin:0 0 7px 0;}
+#container.event_pink .pink_contents .pink_inner .event1 {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_event1_img.png") no-repeat center 195px; background-size:274px auto; padding:0 0 30px 25px; height:340px;}
+#container.event_pink .pink_contents .pink_inner .event1 h4 {margin:0 0 8px 0; width:270px}
+#container.event_pink .pink_contents .pink_inner .event1 p {margin:0 0 14px 0; width:230px;}
+#container.event_pink .pink_contents .pink_inner .event1 .pink_event_btn {width:167px; margin:0 auto; margin-top:27px;}
+#container.event_pink .pink_contents .pink_inner .event1 dl{background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_event1_dl.png") no-repeat; background-size:203px auto; text-indent:-1000em; width:254px; height:46px; margin:0 0 135px 0;}
+#container.event_pink .pink_contents .pink_inner .event1 .pink_event_img {width:87px; position:absolute; bottom:0; right:36px;}
+#container.event_pink .pink_contents .pink_inner .event2 {margin:17px 0 30px 0; padding-bottom:30px;}
+#container.event_pink .pink_contents .pink_inner .event2 h4 {margin:0 0 8px 0; width:268px;}
+#container.event_pink .pink_contents .pink_inner .event2 p {margin:0 0 14px 0; width:249px;}
+#container.event_pink .pink_contents .pink_inner .event2 .pink_event_btn {width:167px; margin:0 auto;}
+#container.event_pink .pink_contents .pink_inner .event2 dl{background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_event2_dl.png") no-repeat; background-size:266px auto; text-indent:-1000em; width:266px; height:160px; margin:0 0 20px 0;}
+#container.event_pink .pink_contents .pink_inner .event2 .map_btn.map1 {position:absolute; left:180px; top:165px; width:51px;}
+#container.event_pink .pink_contents .pink_inner .event2 .map_btn.map2 {position:absolute; left:180px; top:204px; width:51px;}
+#container.event_pink .pink_contents .pink_inner .event2 .pink_event_img {width:90px; position:absolute; bottom:-10; right:85px;}
+#container.event_pink .pink_contents .pink_inner .event2 .pink_event_btn {width:211px; margin:0 auto;}
+#container.event_pink .pink_contents .pink_inner .event3 {padding-bottom: 30px}
+#container.event_pink .pink_contents .pink_inner .event3 dl{background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/pink_event3_dl.png") no-repeat; background-size:276px auto; text-indent:-1000em; width:276px; height:62px; margin:0 0 12px 0;}
+#container.event_pink .pink_contents .pink_inner .event3 h4 {width:269px;}
+#container.event_pink .pink_contents .pink_inner .event3 p {margin:7px 0 14px 0; width:272px;}
+#container.event_pink .pink_contents .pink_inner .event3 .pink_event_btn {width:167px; margin:0 auto;}
+#container.event_pink .popup_bg {display:none; background:#000;-ms-filter: alpha(opacity=70);filter: alpha(opacity=70);opacity:0.7; -moz-opacity:0.7; position:absolute; width:100%; height:100%; top:0; left:0;}
+#container.event_pink .map_popup {display:none; position:absolute; top:64%; left:50%; width:318px; height:160px; margin:-80px 0 0 -159px}
+#container.event_pink .map_popup .popup_close_btn {position:absolute; top:20px; right:20px; }
+#container.event_pink .sns_popup {display:none; width:246px; height:159px; background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/sns_bg.png") no-repeat; background-size:246px 159px; position:absolute; top:65%; left:50%; margin:-74px 0 0 -123px; text-align:center;}
+#container.event_pink .sns_popup p {width:201px; margin:0 auto; margin-top:30px; margin-bottom:18px;}
+#container.event_pink .sns_popup ul {width:125px; margin:0 auto; margin-bottom:18px;}
+#container.event_pink .sns_popup ul:after{content:""; display:block; clear:both;}
+#container.event_pink .sns_popup ul li{float:left; width:32px; margin:0 5px 0 0;}
+#container.event_pink .sns_popup ul li:nth-child(1){margin:0 10px 0 0; width:66px}
+#container.event_pink .sns_popup ul li:nth-child(2){margin:0; width:44px;}
+#container.event_pink .sns_popup div {width:68px;margin:0 auto;}
+#container.event_pink .sns_popup .popup_close_btn {position:absolute; top:7px; right:10px;}
+#container .apply {display:none;}
+#container .apply .inner { width: 300px; margin: 0 auto; padding: 20px 10px; background:#fff;}
+#container .apply .inner h1 { margin-bottom: 4px; }
+#container .apply .inner h2 { margin-bottom: 2px;}
+#container .apply .inner p { margin-bottom: 6px;  }
+#container .apply .inner ul { margin-bottom: 6px; }
+#container .apply .inner ul li:nth-child(1){margin:0 0 5px 0}
+#container .apply .inner form { padding-top:8px;}
+#container .apply .inner em  {display: block ; margin-bottom: 6px;}
+#container .apply .inner .block { margin-bottom: 5px;}
+#container .input-block { margin-bottom: 10px; position: relative; line-height: 28px;}
+#container .input-block label { position: absolute; top:7px; left:0; line-height: 28px; display: block;}
+#container .input-block .input-content { position: relative; margin-left: 80px; }
+#container .input-block .input-content input {border:1px solid #ccc; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; padding: 4px; font-size: 14px; font-family: 'NanumGothic', '나눔고딕', arial, sans-serif; background:#eaeaea;}
+#container .apply .user-info { padding: 10px 0 0 0 ; margin-bottom: 10px; border-top:1px solid #bbb; border-bottom: 1px solid #bbb;}
+
+#container .apply .agreebox { padding: 10px; background:#585858; margin: 20px -10px;   }
+#container .apply .agreebox .action { float:right;}
+#container .apply .agreebox .action label { margin-right: 10px;}
+#container .apply .agreebox .action input[type="radio"] { margin:0 4px; vertical-align: top;}
+
+
+#container .apply .btns {text-align: center; padding: 10px;}
+#container .apply .btns.swingo {width:160px; margin:0 auto; padding: 10px;}
+
+#container .apply .btns button { border:0; cursor: pointer; text-indent: -9999em; margin: 2px;  display: inline-block;  }
+#container .apply .btn-apply { background: url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/btn-apply.png") 50% 50% no-repeat; width: 92px; height: 26px; background-size:92px 26px; }
+#container .apply .btn-cancel { background: url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/btn-cancel.png") 50% 50% no-repeat; width: 92px; height: 26px; background-size:92px 26px; }
+/*event_swingo*/
+#container.event_swingo {position:relative; background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/swingo_bg.jpg") repeat-x; background-size:auto 722px; height:660px;}
+#container.event_swingo .swingo_contents{}
+#container.event_swingo .swingo_contents .swingo_inner {max-width:279px; margin:0 auto; padding:20px 0 0 0;}
+#container.event_swingo .swingo_contents .swingo_inner h3 {width:277px; margin:0 0 14px 0;}
+#container.event_swingo .swingo_contents .swingo_inner .desc {width:274px; margin:0 0 13px 0;}
+#container.event_swingo .swingo_contents .swingo_inner dl {text-indent:-1000em; background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/swingo2_dl.png") no-repeat; background-size:274px auto; height:240px; margin:0 0 15px 0;}
+#container.event_swingo .swingo_contents .swingo_inner h4 {float:left; width:151px; margin:0 25px 0 -10px;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_btn1 {width:112px; display:inline-block; margin: 3px 0 0 0;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_popup {display:none; z-index: 80; width:318px; position:absolute; background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/swingo_popup.png") no-repeat; height:503px; top:50%; left:50%; margin:-251px 0 0 -159px; background-size:318px auto;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_popup h5 {text-indent:-1000em;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_popup ol {text-indent:-1000em;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_popup .swingo_popup_btn {width:17px; position:absolute; top:20px; right:20px;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_txt {margin:17px 0 12px 0;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_btn2 {margin:0 0 25px 0;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_btn2:after{content:""; display:block; clear:both;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_btn2 li:nth-child(1) {width:114px; float:left; margin:0 7px 0 0;}
+#container.event_swingo .swingo_contents .swingo_inner .swingo_btn2 li:nth-child(2) {width:123px; float:left;}
+#container.event_swingo .swingo_contents .swingo_inner h5 {width:70px;}
+#container.event_swingo .swingo_contents .swingo_inner .event_swingo_info {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/swingo2_txt5.png") no-repeat; width:230px; background-size:230px auto; text-indent: -1000em; height:60px;}
+#container.event_swingo .popup_bg {display:none; width:100%; height:100%; background:#000; position:absolute; z-index:80; top:0; left:0; -ms-filter: alpha(opacity=70);filter: alpha(opacity=70);opacity:0.7; -moz-opacity:0.7;}
+/*Swingo_apply*/
+#container.swingo_apply {background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/swingo_bg.jpg") repeat-x; background-size:auto 931px;}
+#container.swingo_apply .swingo_contents{}
+#container.swingo_apply .swingo_contents .swingo_inner {max-width:279px; margin:0 auto; padding:15px 0 0 0;}
+#container.swingo_apply.swingo_contents .swingo_inner h3 {width:258px; margin:0 0 0 0px}
+#container.swingo_apply .swingo_contents .swingo_inner .subtitle {width:271px; margin:15px 0 0 0; }
+#container.swingo_apply .swingo_contents .swingo_inner dl{background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/pink/swingo_dl.png") no-repeat; text-indent:-1000em; background-size:274px auto; height:168px; margin:18px 0 0 0;}
+#container.swingo_apply .swingo_contents .swingo_inner .swingo_btn {width:133px; margin:0 auto; padding:10px 0;}
+#container.swingo_apply .apply {display:block;}
+#container.swingo_apply .apply .inner {background:none; width:280px;}
+#container.swingo_apply .swingo_btn2 {text-align:center; border-top:1px solid #bebebe;padding:15px 0; margin:3px 0 0 0;}
+
+/*lions*/
+#container.lions{background:#222f52;}
+#container.lions .content_wrap{background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/lions/bg.jpg") center top no-repeat;height:363px;background-size:320px auto;-webkit-background-size:320px auto;}
+#container.lions .content_wrap .inner {width:308px;margin:0 auto;}
+#container.lions .content_wrap .inner .em {position:absolute;display:block;width:40px;top:5px;right:6px;}
+#container.lions .content_wrap .inner h3 {width:237px;padding:17px 0 0 19px;}
+#container.lions .content_wrap .inner h4 {width:276px;padding:188px 0 0 19px;}
+#container.lions .content_wrap .inner h5 {width:240px;padding:10px 0 0 19px;}
+#container.lions .content_wrap .inner p {width:230px;padding:10px 0 0 19px;}
+
+/* galaxygear event */
+#container.event_gear {}
+#container.event_gear .content_wrap {position:relative;}
+#container.event_gear .content_wrap .gear_inner {max-width:320px;margin:0 auto;background:url("http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event_gear/bg.jpg") no-repeat;background-size:320px auto;-webkit-background-size:320px auto;height:287px;}
+#container.event_gear .content_wrap .gear_inner h3{width:108px;padding:11px 0 0 19px;}
+#container.event_gear .content_wrap .gear_inner h4{width:202px;padding:8px 0 0 15px;}
+#container.event_gear .content_wrap .gear_inner p{width:167px;padding:6px 0 0 19px;}
+#container.event_gear .content_wrap .gear_inner span{display:block;}
+#container.event_gear .content_wrap .gear_inner span.text{width:113px;padding:7px 0 0 19px;}
+#container.event_gear .content_wrap .gear_inner span.date{width:158px;padding:5px 0 0 19px;}
+#container.event_gear .content_wrap .gear_inner ul{display:block;width:292px;height:86px;margin:8px 0 0 12px;background:url('http://img.local.sec.samsung.com/comLocal/event/1309_galaxynote3/mobile/images/event_gear/galaxygear_06.png') no-repeat;background-size:292px auto;-webkit-background-size:292px auto;}
+#container.event_gear .content_wrap .gear_inner ul li{text-indent:-999px;overflow:hidden;}
+#container.event_gear .content_wrap .gear_inner span.info{width:165px;padding:10px 0 0 12px;}
+
+/* galaxy note3 sochigold */
+#container.event_sochi {}
+#container.event_sochi .content_wrap {}
+#container.event_sochi .content_wrap .gear_inner{max-width:320px;margin:0 auto;background:url("../images/sochi/bg_mobile.jpg") no-repeat;background-size:320px auto;-webkit-background-size:320px auto;height:480px;}
+#container.event_sochi .content_wrap .gear_inner h3{width:94px;padding:23px 0 0 31px;}
+#container.event_sochi .content_wrap .gear_inner h4{width:182px;padding:26px 0 0 31px;}
+#container.event_sochi .content_wrap .gear_inner p{width:253px;padding:11px 0 0 31px;}
+#container.event_sochi .content_wrap .gear_inner span{display:block;}
+#container.event_sochi .content_wrap .gear_inner span.date{width:171px;padding:8px 0 0 31px;}
+#container.event_sochi .content_wrap .gear_inner ul{width:157px;height:121px;padding:82px 0 0 31px;background:url('../images/sochi/sgf_mobile_05.png') 100% 100% no-repeat;background-size:157px auto;-webkit-background-size:157px auto;}
+#container.event_sochi .content_wrap .gear_inner ul li{text-indent:-999px;overflow:hidden;}
+#container.event_sochi .content_wrap .gear_inner span.info{width:157px;padding:18px 0 0 31px;}

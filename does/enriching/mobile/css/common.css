@@ -1,0 +1,171 @@
+/* Global Styles */
+@import url('index.css');
+@import url('about.css');
+@import url('lobby.css');
+@import url('event.css');
+@import url('online.css');
+@import url('offline.css');
+@import url('join.css');
+@import url('find.css');
+@import url('contents.css');
+
+html{width: 100%;height: 100%;-webkit-text-size-adjust: none;}    
+body {margin: 0; padding: 0; -webkit-text-size-adjust:none; font-family: NanumGothic, Arial, sans-serif; }
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0;border:0;}
+body,input,textarea,select,button,table{font-size:13px;}
+body{position:relative;background-color:#fff;color:#000;overflow-x: hidden;}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+table{border-collapse:collapse}
+legend, caption, hr { display:none; }
+em,address{font-style:normal}
+a {border: 0; text-decoration: none; margin: 0; padding: 0;}
+img {max-width: 100%; height: auto; border: 0; vertical-align:top; }
+.clear {clear: both;}
+
+@media \0screen {
+  img { width: auto; /* for ie 8 */ } 
+  }
+  
+@font-face {
+	font-family: 'NanumGothicBold';
+	src: url('../font/NanumGothicBoldCompact.eot');
+	src: url('../font/NanumGothicBoldCompact.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NanumGothicBoldCompact.woff') format('woff'),
+		 url('../font/NanumGothicBoldCompact.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal; 
+}
+
+@font-face {
+    font-family:'NanumGothic';
+    src: url('../font/NanumGothicCompact.eot');
+    src: url('../font/NanumGothicCompact.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumGothicCompact.woff') format('woff'),
+         url('../font/NanumGothicCompact.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+
+#skipToContent a,#skipToContent a:hover, #skipToContent a:visited{display:block;height:1px;overflow:hidden;margin: 0 0px -1px 0; white-space:nowrap;}
+#skipToContent a:active, #skipToContent a:focus{height:auto;border:1px solid #ccc; padding:10px;text-align:center; color: #515f71;}
+.hiddenText {text-indent:-1000em; overflow:hidden; width:1px; height:1px;}
+ 
+#top {float: left; margin: 0; padding: 0; height: 0; width: 0;}
+/*Page container*/
+.m-wrapper{width:100%; padding:0px;margin:0 auto; height: auto;}
+
+/*Column container*/
+.m-grids{width:auto; width:100%; clear:both; margin:0 0 0 -0%; list-style:none; /* So we can make grids out of lists. */position: relative;	overflow:hidden;  /* Clear the floats */}
+	
+[class^="m-grid-"]{float:left; margin:0 0% 0 0;}
+.m-grids [class^="m-grid-"]{margin:0 0 0 0%;}
+.m-grid-1{ width:100%; margin:0; }
+
+	/* Header */
+	header {position:absolute; top: 0; left: 0; width: 100%; margin: 0; padding: 0; z-index: 10; background: #ff4040;}
+	header#index {position:absolute; top: 0; left: 0; width: 100%; margin: 0; padding: 0; z-index: 10; background: #ff4040;}
+	
+	nav#main_nav { margin: 0; padding: 0;  width: 100%; height: 50px;}
+	
+	ul#topnav {float: left; margin: 0; padding: 0; width: 100%; position: relative; }
+	ul#topnav li {float: left; margin: 0; padding: 0; height: 50px; position: relative;}
+	ul#topnav li:first-child {width: 15%; height: 50px; text-align: center;}	
+	ul#topnav li:first-child a{display: block; width: 60px; position: absolute; top: 0; left: 0; padding: 12px 4% 0 4%; height: 38px; background: #e93636; }
+	ul#topnav li:nth-child(2) {width: 70%; height: 44px; padding: 6px 0 0; text-align: center;}
+	ul#topnav li:nth-child(2) a {margin: 0 auto; display: block;}
+	ul#topnav li:nth-child(2) a img  {width: 100%; max-width: 100px; margin: 0; padding:0; }
+	ul#topnav li:nth-child(3) {width: 15%; text-align: center; height: 50px;  }
+	ul#topnav li:nth-child(3) a{ display: block; width: 60px; height: 38px; padding: 12px 4% 0 4%; background: #e93636; position: absolute; top: 0; right: 0;}
+	
+	/*gnb*/
+	nav#left_nav { margin: 0; padding: 0;  width:50%;  position:absolute; top:50px; height:97%; border-right:1px solid #d2d2d2; z-index:99; background:#fff; max-width:278px;display: none;}
+	nav#left_nav #gnb li{width:100%; border-bottom:1px solid #efefef;}
+	nav#left_nav #gnb li a {display:block;}
+	
+	.ease {
+	/*transition*/
+	-webkit-transition:all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+	-moz-transition:all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+	-o-transition:all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+	transition:all 0.6s cubic-bezier(0.7, 0, 0.3, 1);;
+	}
+
+	
+	/*login_section*/
+	.login_section {position:absolute; top:50px;  height:97%; width:50%; border-left:1px solid #d2d2d2; z-index:99; background:#f8f8f8;max-width:278px;display: none;}
+	.login_section .login_sns_text{width:39%;}
+	.login_section .login_sns {margin:4% 0 0% 0;}
+	.login_section .login_sns li {margin:0 0 3% 0;}
+	.login_section .login_sns li a {display:block;}
+	.login_section .login_sns {margin:4% 0 0% 0;}
+	.login_section .logout {padding:15% 8% 10% 8%;;background:#fff;}
+	.login_section .logout li {margin:0 0 12% 0;}
+	.login_section .logout li a{display:block;}
+	.login_section .logout li .title {display:block; margin:3% 0;}
+	.login_section .logout li:nth-child(1) .title{width:32%;}
+	.login_section .logout li:nth-child(2) .title{width:27%;}
+	
+	.login_section .login_idpw_text {margin:17% 0 5% 0; width:82%;}
+	.login_section form {padding:8% 8% 15% 8%;  background:#fff;}
+	.login_section form ul.login_input_area li {margin:0 0 3% 0;}
+	.login_section form ul.login_input_area li.login_id input {background:url("../images/common/login/login_id_input.png") no-repeat; width:80%; max-height:45px; padding:6.5% 10%; background-size:100% auto;-webkit-background-size:100% auto;}
+	.login_section form ul.login_input_area li.login_pw input {background:url("../images/common/login/login_pw_input.png") no-repeat; width:80%; max-height:45px; padding:6.5% 10%;background-size:100% auto;-webkit-background-size:100% auto;}
+	.login_section form ul.login_input_area li label {display:none;}
+	.login_section form .login_btn {margin:5px 0 15px 0;}
+	.login_section form .login_btn a {display:block;}
+	.login_section form .login_find {width:70%;}
+	.login_section .login_join { padding:10% 8% 0 8%;}
+	.login_section .login_join .login_join_text {width:80%;}
+	.login_section .login_join .login_join_btn {margin:8% 0 0 0;}
+	.login_section .login_join .login_join_btn a{display:block;}
+	
+	
+	/* Section */
+	section {float: left; margin: 0; padding: 49px 0 0; width: 100%; background: #fff;}
+	section article {margin: 0; padding: 0; float: left; width: 100%;}
+	section article .content_wrap {margin: 0 auto; max-width: 640px;}
+	
+	/* Common Footer */
+	footer {float: left; width: 100%; margin: 0;  background: #fff; border-top: 1px solid #dedede; position:relative; z-index:999;}
+	footer .footer {width: 90%; margin: 0; padding: 4% 5%;  background: #fff; position: relative;min-height:27px;}
+	footer .footer .copyright {width: 60%; max-width: 362px; margin: 0; padding: 0;}
+	footer .footer .copyright img {width: 100%; }
+	footer .footer .privacy {position: absolute; top:56%; right: 5%; width: 12%; padding: 0; text-align: right;}
+	footer .footer .privacy img {width: 100%; max-width: 86px;}
+
+@media screen and (max-width: 340px) {
+	.login_section form ul.login_input_area li.login_id input {padding:4.5% 10%;}
+	.login_section form ul.login_input_area li.login_pw input {padding:4.5% 10%;}
+}
+@media screen and (min-width: 350px) and (max-width: 470px)  {
+	.login_section form ul.login_input_area li.login_id input {padding:5.5% 10%;}
+	.login_section form ul.login_input_area li.login_pw input {padding:5.5% 10%;}
+}
+@media screen  and (orientation: landscape) {
+	/* Common Top Nav */
+	nav#main_nav { margin: 0; padding: 0;  width: 100%; height: 30px; background: url("../images/common/top_nav_bg.png") left bottom repeat-x; background-size: auto 30px;}
+	ul#topnav {float: left; margin: 0; padding: 0; width: 100%; position: relative; }
+	ul#topnav li {float: left; margin: 0; padding: 0; height: 50px; position: relative;}
+	ul#topnav li:first-child {width: 15%; height: 50px; text-align: center;}	
+	ul#topnav li:first-child a{display: block; width: 60px; position: absolute; top: 0; left: 0; padding: 12px 4% 0 4%; height: 38px; background: #e93636; }
+	ul#topnav li:nth-child(2) {width: 70%; height: 44px; padding: 6px 0 0; text-align: center;}
+	ul#topnav li:nth-child(2) a {margin: 0 auto; display: block;}
+	ul#topnav li:nth-child(2) a img  {width: 100%; max-width: 100px; margin: 0; padding:0; }
+	ul#topnav li:nth-child(3) {width: 15%; text-align: center; height: 50px;  }
+	ul#topnav li:nth-child(3) a{ display: block; width: 60px; height: 38px; padding: 12px 4% 0 4%; background: #e93636; position: absolute; top: 0; right: 0;}
+
+	
+	section article {margin: 0; padding: 0; float: left; width: 100%;}
+	section article .content_wrap {margin: 0 auto; max-width: 640px;}
+	
+	/* Common Footer */
+	footer {float: left; width: 100%; margin: 0;  background: #fff; border-top: 1px solid #dedede; z-index: 200;position: relative;}
+	footer .footer {width: 90%; margin: 0; padding: 2% 5%;  background: #fff; position: relative;min-height:44px;}
+	footer .footer .copyright {width: 60%; max-width: 362px; margin: 0; padding: 0;}
+	footer .footer .copyright img {width: 100%; }
+	footer .footer .privacy {position: absolute; top:56%; right: 5%; width: 12%; padding: 0; text-align: right;}
+	footer .footer .privacy img {width: 100%; max-width: 86px;}
+}
+

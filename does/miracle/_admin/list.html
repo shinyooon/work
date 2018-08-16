@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>미라클 마켓 관리자</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<STYLE>
+A:link {selector-dummy : expression(this.hideFocus=true);}
+A:visited {selector-dummy : expression(this.hideFocus=true);}
+A:hover {color:#8f867b;text-decoration: underline;selector-dummy : expression(this.hideFocus=true);}
+A:active {selector-dummy : expression(this.hideFocus=true);}
+body {font:12px 맑은고딕, Malgun Gothic, tahoma, 돋움,dotum; color:#202020;}
+td {
+	font-family:맑은고딕, Malgun Gothic, tahoma, 돋움,dotum;
+	font-size:8pt;
+	color:666666;
+	line-height:18px;
+	height:22px;
+}
+th {
+	font-family:맑은고딕, Malgun Gothic, tahoma, 돋움,dotum;
+	font-size:9pt;
+	height:22px;
+}
+h1{font-size:18px;}
+table{border:1px solid #999999;border-collapse:collapse;clear:both;margin-bottom:5px;width:1300px;}
+table.worksheet th{text-align:left;border:1px solid #999999;font-weight:bold;padding:3px 0 3px 10px;background:white;color:black;}
+table.worksheet th.depth{text-align:center !important;background:#000 !important;color:#ffffff !important;padding:5px 0 !important;}
+table.worksheet th.dp1{background:#fffff0 !important;}
+
+table.worksheet td{padding:3px 0;text-align:center;border:1px solid #999999;letter-spacing:-0.05em;}
+table.worksheet td.end{background:#ffff00;}
+table.worksheet td.design{background:pink;}
+table.worksheet td.flash{background:#ff0f00;}
+table.worksheet td.del{background:#af0f00;}
+table.worksheet td.cont{text-align:left;padding-left:5px;}
+
+.tred{font-weight:bold;color:red;}
+
+table.worksheet1 th{text-align:left;border:1px solid #999999;font-weight:bold;padding:3px 0 3px 10px;background:#e7e7e7;color:black;}
+table.worksheet1 th.depth{text-align:center !important;background:#000 !important;color:#ffffff !important;padding:5px 0 !important;}
+table.worksheet1 th.dp1{background:#e7e7e7 !important;}
+
+table.worksheet1 td{padding:3px 0;text-align:center;border:1px solid #999999;letter-spacing:-0.05em;background:#e7e7e7;}
+table.worksheet1 td.end{background:#ffff00;}
+table.worksheet1 td.design{background:#e7e7e7;}
+table.worksheet1 td.flash{background:#e7e7e7;}
+table.worksheet1 td.del{background:#e7e7e7;}
+table.worksheet1 td.cont{text-align:left;padding-left:5px;}
+
+
+
+</STYLE>
+
+</head>
+<body>
+
+
+
+
+<h1>미라클 마켓 관리자 코딩 정의</h1>
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th class="depth" colspan="3">Menu & Depth</th>
+		<th class="depth" rowspan="2">코딩<br>완료</th>
+		<th class="depth" rowspan="2">링크</th>
+		<th class="depth" rowspan="2">비고</th>
+	</tr>
+	<tr>
+		<th class="depth">1 Depth</th>
+		<th class="depth">2 Depth</th>
+		<th class="depth">3 Depth </th>
+	</tr>
+	<tr>
+		<th>로그인</th>
+		<td></td>
+		<td></td>
+		<td class="end"></td>
+		<td><a href="/_admin/login.html" target="blank">/_admin/login.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	
+</table>
+
+
+
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th></th>
+		<td>쇼핑뉴스</td>
+		<td>리스트</td>
+		<td class="end"></td>
+		<td><a href="/_admin/news/news_list.html" target="blank">/_admin/news/news_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기/읽기</td>
+		<td class="end"></td>
+		<td><a href="/_admin/news/news_write.html" target="blank">/_admin/news/news_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+</table>
+
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th>공지사항</th>
+		<td>공지사항</td>
+		<td>리스트</td>
+		<td class="end"></td>
+		<td><a href="/_admin/notice/notice_list.html" target="blank">/_admin/notice/notice_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기/읽기</td>
+		<td class="end"></td>
+		<td><a href="/_admin/notice/notice_write.html" target="blank">/_admin/notice/notice_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+</table>
+
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th></th>
+		<td>브랜드 관리</td>
+		<td>리스트</td>
+		<td class="end"></td>
+		<td><a href="/_admin/show/brand_list.html" target="blank">/_admin/show/brand_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기/읽기</td>
+		<td class="end"></td>
+		<td><a href="/_admin/show/brand_write.html" target="blank">/_admin/show/brand_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+</table>
+
+
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th>Customer Service</th>
+		<td>편의시설관리</td>
+		<td>리스트(west)</td>
+		<td class="end"></td>
+		<td><a href="/_admin/customer/convenience_west_list.html" target="blank">/_admin/customer/convenience_west_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기(west)</td>
+		<td class="end"></td>
+		<td><a href="/_admin/customer/convenience_west_write.html" target="blank">/_admin/customer/convenience_west_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td>FAQ관리</td>
+		<td>리스트</td>
+		<td class="end"></td>
+		<td><a href="/_admin/customer/faq_list.html" target="blank">/_admin/customer/faq_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기/읽기</td>
+		<td class="end"></td>
+		<td><a href="/_admin/customer/faq_write.html" target="blank">/_admin/customer/faq_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+</table>
+
+
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th>팝업관리</th>
+		<td>팝업관리</td>
+		<td>리스트</td>
+		<td class="end"></td>
+		<td><a href="/_admin/popup/popup_list.html" target="blank">/_admin/popup/popup_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기/읽기</td>
+		<td class="end"></td>
+		<td><a href="/_admin/popup/popup_write.html" target="blank">/_admin/popup/popup_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+</table>
+
+
+
+<table class="worksheet" cellspacing=0 cellpadding=0  border="0" align="left" >
+	<colgroup>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="150"/>
+	<col width="50"/>
+	<col width="300"/>
+	<col width="*"/>
+	</colgroup>
+	<tr>
+		<th></th>
+		<td>관리자관리</td>
+		<td>리스트</td>
+		<td class="end"></td>
+		<td><a href="/_admin/system/admin_list.html" target="blank">/_admin/system/admin_list.html</a></td>
+		<td class="cont"></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<td>쓰기/읽기</td>
+		<td class=""></td>
+		<td><a href="/_admin/system/admin_write.html" target="blank">/_admin/system/admin_write.html</a></td>
+		<td class="cont"></td>
+	</tr>
+</table>
+
+</body>
+</html>
+
+

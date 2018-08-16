@@ -1,0 +1,39 @@
+#contents #about {}
+#contents #about .about_top{border-bottom:3px solid #ff4040; }
+#contents #about .about_top .content_wrap {position:relative; }
+#contents #about .about_top .content_wrap h3{position:absolute; top:15%; left:5%; width:48%;}
+
+#contents #about .about_con1 {border-bottom:3px solid #ff4040;}
+#contents #about .about_con1 .about_con_top {border-bottom:1px solid #c5c5c5;}
+#contents #about .about_con1 .about_con_top h4{width:55%; margin:5% 0 5% 0;}
+#contents #about .about_con1 .about_con_top h4 img{}
+#contents #about .about_con1 .content_wrap{width:90%; margin:0 auto;max-width:576px;}	
+#contents #about .about_con1 .content_wrap .vedio_area {margin:5% 0 0 0;}
+#contents #about .about_con1 .content_wrap .vedio_btn {margin:15px 0 35px 0; width:33%;}
+#contents #about .about_con1 .content_wrap .desc {margin:28px 0 7% 0; width:79%}
+#contents #about .about_con1 .content_wrap .about_con1_t {width:72%;}
+#contents #about .about_con1 .content_wrap .about_con1_2 {width:64%; margin:0 0 2% 0;}
+#contents #about .about_con1 .content_wrap .about_con1_ul {}
+#contents #about .about_con1 .content_wrap .about_con1_ul li {padding:4.5% 0 4.5% 0; background:url("../images/common/dot_h.jpg") 0 bottom repeat-x;}
+#contents #about .about_con1 .content_wrap .about_con1_ul li.last {background:none;}
+
+
+#contents #about .about_con2 {border-bottom:3px solid #ff4040;}
+#contents #about .about_con2 .about_con_top {border-bottom:1px solid #c5c5c5;}
+#contents #about .about_con2 .about_con_top h4{width:65%; margin:5% 0 5% 0;}
+#contents #about .about_con2 .content_wrap{width:90%; margin:0 auto;max-width:576px;}	
+#contents #about .about_con2 .content_wrap .desc {margin:5% 0 10% 0;}
+
+#contents #about .about_con3 {border-bottom:3px solid #ff4040;}
+#contents #about .about_con3 .about_con_top {border-bottom:1px solid #c5c5c5;}
+#contents #about .about_con3 .about_con_top h4{width:61%; margin:5% 0 5% 0;}
+#contents #about .about_con3 .content_wrap{width:90%; margin:0 auto;max-width:576px;}	
+#contents #about .about_con3 .content_wrap .desc {margin:6% 0 10% 0;}
+#contents #about .about_con3 .content_wrap .about_con3_img {margin:5% 0 0 0;}
+
+about_con3
+@media screen  and (orientation: landscape) {
+
+
+}
+

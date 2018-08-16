@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, textarea, button, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size:12px; line-height:1.5em; color:#777; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height:1;margin: 0;padding: 0; font-family: 'Nanum Gothic', san-sarif;}
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration:none; }
+a:hover { text-decoration:none; }
+legend, caption, hr { display:none; }
+em { font-style:normal; }
+img { vertical-align:top; border:none;}
+html {}
+body {width:100%;}
+
+
+#skipToContent a,#skipToContent a:hover, #skipToContent a:visited{display:block;height:1px;overflow:hidden;margin: 0 0px -1px 0; white-space:nowrap;}
+#skipToContent a:active, #skipToContent a:focus{height:auto;border:1px solid #ccc; padding:10px;text-align:center; color: #515f71;}
+.hiddentxt {width:1px; height:1px; overflow:hidden; text-indent:-1000em;}
+
+
+#wrap {min-width:980px; width:100%; margin:0 auto; overflow:hidden;}
+#wrap .inner {width:980px; margin:0 auto;}
+
+/*header*/
+#header {border-top: 3px solid #22b24c; height:56px;  background:url("../images/common/menu_line.png") repeat-x; position:fixed; top:0; width:100%; z-index: 100;}
+#header:after {content:""; display:block; clear:both;}
+#header h1 {float:left; margin:0px 0 0 0;}
+#header #nav {*zoom:1; float:right;}
+#header #nav:after {content:""; display:block; clear:both;}
+#header #nav li{float:left;position: relative;}
+#header #nav li.last {margin:0;}
+#header #nav li.li1 {width: 212px;}
+#header #nav li.li2 {width: 159px;}
+#header #nav li.li3 {width: 183px;}
+#header #nav li.li4 {width: 116px;}
+#header #nav li .back {background-color: #2db051;width: 100%;height: 0;position: absolute;left: 0;top: 0;z-index: 10;overflow: hidden;}
+#header #nav li a {display:block; padding:18px 20px;z-index: 1;}
+
+
+/*게시판 페이지 숫자*/
+#contents .pageNum {text-align:center;}
+#contents .pageNum a {display:inline-block; width:30px; height:18px; background:url("../images/common/num_bg.png") no-repeat; font-size:13px; text-align:center; padding:6px 0; line-height:17px; }
+#contents .pageNum a.on {background-position:0 -30px; color:#fff;}
+/*popup*/
+#contents .popup {width:858px; position:absolute; left:50%; margin: 0 0 0 -427px; z-index:110; }
+#contents .popup .top {height:76px; background:url("../images/common/popup_top.png") no-repeat;}
+#contents .popup .middle {background:url("../images/common/popup_middle.png") repeat-y; padding:40px 112px 0 110px;}
+#contents .popup .bottom {height:76px; background:url("../images/common/popup_bottom.png") no-repeat;}
+#contents .popup a.close_btn {position:absolute; top:78px; right:79px;}
+#contents .popup .popup_list_top {background:url("../images/mylist/list_top_bg.png") no-repeat; height:13px; overflow:hidden; padding:12px 0 12px 0; text-align:left; }
+#contents .popup .popup_list_top li {float:left; color:#fff; font-size:13px; line-height:13px;  }
+#contents .popup .popup_list_num .num {margin:0 5px 0 5px;}
+#contents .popup .popup_list_num .num a{display:inline-block; margin:0 5px 0 5px; line-height:12px; color:#666666;}
+/*footer*/
+#footer {background:#efefef; height:364px;}
+#footer .inner {padding:67px 0 0 0;}
+#footer .inner h2 {float:left; width:108px; margin:7px 45px 0 0;}
+#footer .inner ul {width:606px; height:234px; background:url("../images/common/notice_ul.png") 21px 0 no-repeat; border-left:1px solid #bbbbbb; display:inline-block;}
+#footer .inner ul li {text-indent:-1000em; overflow:hidden; font-size:0px; width:1px; height:1px;}
+.gmarket_frame {height:569px; background:#fff; padding-top:45px;}
+.gmarket_frame  iframe {width:100%;}

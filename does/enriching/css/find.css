@@ -1,0 +1,23 @@
+.findid_step1 {width:273px; height:298px; padding:55px 43px; background:url("../images/find/find_bg.png") no-repeat; text-align:left;}
+.findid_subtitle{margin:20px 0 0 0; padding:0 0 23px 0; background:url("../images/common/footer_line.png") 0 bottom repeat-x;}
+.findid_step1 form {height:85px; padding:50px 0 0 0;}
+.findid_step1 form input {display:inline-block; width:155px; height:27px; background:url("../images/find/find_input_bg.png") no-repeat; padding:3px 15px;color:#000;}
+.findid_step1 form span.title {width:54px; display:block; float:left; padding:10px 0 0 0; height:23px;}
+.find_btn {padding:27px 0 0 0; background:url("../images/common/footer_line.png") 0 top repeat-x;text-align: center;}
+.find_close_btn {position:absolute; top:30px; right:-5px;}
+.findid_step2 {width:273px; height:298px; padding:55px 43px; background:url("../images/find/find_bg.png") no-repeat; text-align:left;display: none;}
+.findid_step2 .findid_con {height:95px; padding:40px 0 0 0; text-align:center; font-size:14px; line-height:1.5em;}
+.findid_step2 .findid_con span.findid_id {font-size:15px; font-weight:bold;}
+
+.findpw_step1 {width:273px; height:298px; padding:55px 43px; background:url("../images/find/find_bg.png") no-repeat; text-align:left;}
+.findpw_step1 form {height:125px; margin:40px 0 0 0;}
+.findpw_step1 form input {display:inline-block; width:155px; height:19px; background:url("../images/find/find_input_bg.png") no-repeat; padding:7px 15px;color:#000;}
+.findpw_step1 form ul li{margin:0 0 10px 0; height:33px;}
+.findpw_step1 form span.title {width:54px; display:block; float:left; padding:10px 0 0 0; height:23px;}
+.findpw_step1 .find_btn, .findpw_step2 .find_btn {padding:17px 0 0 0; background:url("../images/common/footer_line.png") 0 top repeat-x} {padding:17px 0 0 0; background:url("../images/common/footer_line.png") 0 top repeat-x}
+.findpw_step2 {width:273px; height:298px;padding:55px 43px; background:url("../images/find/find_bg.png") no-repeat; text-align:left;display: none;}
+.findpw_step2 form {height:142px; margin:23px 0 0 0;}
+.findpw_step2 form input {display:inline-block; width:106px; height:16px; background:url("../images/find/findpw_inpput_bg.png") no-repeat; padding:4px 15px;color:#000;}
+.findpw_step2 form ul li{margin:0 0 12px 0; height:54px;}
+.findpw_step2 form span.title {width:91px; display:block; float:left; padding:7px 0 0 0; height:14px;}
+.findpw_step2 form span.pw_text {display:block;margin:7px 0 0 91px;}

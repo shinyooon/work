@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>아이디 찾기/비밀번호 찾기 - Enriching Company</title>
+		<? include "include/header.html" ?>
+    				<div id="contents" class="find">
+    				
+    					<section class="find find_submit">
+							<article class="visual">
+								<div class="content_wrap">
+									<h3><img src="images/find/find_title.png" alt="아이디/비밀번호 찾기" /></h3>
+								</div>
+							</article>
+							<article class="find_contents">
+								<div class="content_wrap">
+								<form class="find_form" name="reqPCCForm" method="post" action = "" onsubmit="return openPCCWindow()">
+									<input type="hidden" name="reqInfo"     value = "<%=reqInfo%>">
+									<input type="hidden" name="retUrl"      value = "<%=retUrl%>">
+									<div class="find_con1">
+										<h4 class="find_id_title"><img src="images/find/find_id_title1.png" alt="아이디 찾기 -회원가입시 등록한 이름을 아래에 입력하신 후 인증하기 버튼을 눌려주세요." /></h4>
+									
+										<div class="find_id_form">
+											<span class="title"><label for="find_id_name"><img src="images/find/find_name_t.png" alt="이름" /></label></span>
+											<input type="text" id="find_id_name" name="" title="이름"  />
+										</div>
+										<div class="find_btn id_btn"><a href="javascript:authFindId();"><img src="images/find/find_btn.png" alt="인증하기" /></a></div>
+									</div>
+									<div class="find_con2">
+										<h4 class="find_pw_title"><img src="images/find/find_pw_title.png" alt="비밀번호 재발급 - 비밀번호 재발급 회원가입시 등록한 이름과 아이디를 아래에 입력하신 후 인증하기 버튼을 눌러주세요." /></h4>
+									
+										<ul class="find_id_form find_id_form">
+											<li>
+												<span class="title"><label for="find_pw_name"><img src="images/find/find_name_t.png" alt="이름" /></label></span>
+												<input type="text" id="find_pw_name" name="" title="이름"  />
+											</li>
+											<li class="last"><span class="title"><label for="find_pw_id"><img src="images/find/find_id_t.png" alt="아이디" /></label></span>
+												<input type="text" id="find_pw_id" name="" title="아이디"  />
+											</li>
+										</ul>
+										<div class="find_btn pw_btn"><a href="javascript:authFindPw();"><img src="images/find/find_btn.png" alt="인증하기" /></a></div>
+									</div>
+									
+								</form>
+								</div>
+							</article>
+    					</section>
+    					
+    					
+    					
+    					<section class="find find_id">
+							<article class="visual id">
+								<div class="content_wrap">
+									<h3><img src="images/find/find_id_title.png" alt="ID/PASSWORD 아이디 찾기" /></h3>
+								</div>
+							</article>
+							<article class="find_contents">
+								<div class="content_wrap">
+									<div class="find_id_wrap">
+										<p class="find_id_con">주주님께서 회원가입시 등록하신 아이디는<br />[ 
+										<span class="find_join_id">honggildong</span>
+										]입니다
+										<p>
+										<div class="find_btn"><a href="javascript:confirmFind();"><img src="images/find/find_id_btn.png" alt="확인" /></a></div>
+									</div>
+									
+								</div>
+							</article>
+    					</section>
+    					
+    					
+    					
+    					<section class="find find_pw">
+							<article class="visual pw">
+								<div class="content_wrap">
+									<h3><img src="images/find/change_pw_title.png" alt="PASSWORD. 새로운 비밀번호 설정하기" /></h3>
+								</div>
+							</article>
+							<article class="find_contents">
+								<div class="content_wrap">
+								<form class="findpw_form">
+									<div class="findpw_con">
+										<p class="find_pw_text"><img src="images/find/change_pw_text.png" alt="변경하실 비밀번호를 입력하신 후 확인버튼을 눌러주세요." /><p>
+									
+										<ul class="findpw_input">
+											<li>
+												<span class="title"><label for="change_pw"><img src="images/find/find_pw_t.png" alt="변경할 비밀번호" /></label></span>
+												<input type="password" id="change_pw" name="" title="변경할 비밀번호"  />
+												<p class="text"><img src="images/find/change_pw_text2.png" alt="영문/숫자/특수문자 혼용 6~12자 가능, 영문 대소문자를 구별합니다." /></p>
+											</li>
+											<li><span class="title"><label for="change_pw_chk"><img src="images/find/find_pw_check_t.png" alt="비밀번호 확인" /></label></span>
+												<input type="password" id="change_pw_chk" name="" title="비밀번호 확인"  />
+												<p class="text"><img src="images/find/change_pw_text3.png" alt="비밀번호 확인을 위해 동일한 비밀번호를 한번 더 입력해주세요." /></p>
+											</li>
+										</ul>
+										<div class="findpw_btn"><a href="javascript:changePW();"><img src="images/find/change_pw_btn.png" alt="수정완료" /></a></div>
+									</div>
+									
+								</form>
+								</div>
+							</article>
+    					</section>
+    					
+    					
+    					
+    				</div>
+    				<!-- contents end -->
+					<%@ include file="include/footer.jsp" %>
+				</div> <!-- end girds -->
+		</div> <!-- end wrapper -->
+
+
+
+	</body> <!-- end body -->
+</html>
+
+
+
+<script type="text/javascript">
+
+var type;
+
+function authFindId(){
+	
+	
+	if($('#find_id_name').val() == ""){
+		alert("이름을 입력해 주세요.");
+		$('#find_id_name').focus();
+		return;
+	}
+	type = "id";
+	openPCCWindow();
+}
+
+function authFindPw(){
+	
+	if($('#find_pw_name').val() == ""){
+		alert("이름을 입력해 주세요.");
+		$('#find_pw_name').focus();
+		return;
+	}
+	if($('#find_pw_id').val() == ""){
+		alert("아이디를 입력해 주세요.");
+		$('#find_pw_id').focus();
+		return;
+	}
+	type = "pw";
+	openPCCWindow();
+}
+
+
+function confirmFind(){
+	window.location = indexURL;
+	
+}
+
+getPhoneNumber = function(data){
+
+	if(data.result == "Y"){
+	
+		if(type == "id"){
+			$.ajax({
+			  type: "POST",
+			  url: "/proc/getid_proc.jsp",
+			  data: { userName:$('#find_id_name').val(), userPhone:data.phone.p1 + data.phone.p2 + data.phone.p3, auth:"success" } ,
+			  dataType: 'jsonp'
+			});
+		}else if(type == "pw"){
+			$.ajax({
+			  type: "POST",
+			  url: "/proc/pwAuth.jsp",
+			  data: { userName:$('#find_pw_name').val(), userPhone:data.phone.p1 + data.phone.p2 + data.phone.p3, loginID:$('#find_pw_id').val() } ,
+			  dataType: 'jsonp'
+			});
+		
+		}
+	
+	}
+	
+
+	
+}
+
+getIDComplete = function(data){
+	
+	
+	
+	
+	if(data.result == "success"){
+		$('.find_join_id').html(data.id);
+	
+		$('.find_submit').hide();
+		$('.find_id').show();
+	} else {
+		alert("가입되지 않았거나 정보가 올바르지 않습니다.");
+	}
+	
+	
+	
+}
+
+
+pwAuthComplete = function(data){
+	
+	if(data.result == "success"){
+		$('.find_submit').hide();
+		$('.find_pw').show();
+	} else {
+		alert("가입되지 않았거나 정보가 올바르지 않습니다.");
+	}
+	
+	changePW = function(){
+	
+		if($('#change_pw').val() == ""){
+			alert("비밀번호를 입력해 주세요.");
+			$('#change_pw').focus();
+			return;
+		}
+		
+		if($('#change_pw_chk').val() == ""){
+			alert("동일한 비밀번호를 한번 더 입력해 주세요.");
+			$('#change_pw_chk').focus();
+			return;
+		}
+		if(!fnCheckPassword("", $('#change_pw').val())){
+			$('#change_pw').focus();
+			return false;
+		}
+		if($('#change_pw').val() != $('#change_pw_chk').val()){
+			alert("비밀번호 확인칸과 동일한 비밀번호를 입력해 주세요.");
+			$('#change_pw').focus();
+			return;
+		}
+	
+		
+	
+	
+		$.ajax({
+		  type: "POST",
+		  url: "/proc/pwChange_proc.jsp",
+		  data: { loginID:data.id, userPhone:data.phone, changePW:$('#change_pw').val(), auth:"success" } ,
+		  dataType: 'jsonp'
+		});
+		
+		
+		changePWComplete = function(data){
+			
+			if(data.result == "success"){
+				alert("비밀번호 변경이 완료되었습니다.");
+				confirmFind();
+			}else if(data.result == "failed"){
+				alert("정보가 올바르지 않습니다.");
+			}
+			
+		}
+		
+		
+		
+	}
+	
+}
+
+
+
+
+</script>
+
+
+
+
+

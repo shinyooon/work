@@ -1,0 +1,218 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_top.html";?>
+
+		<div class="path">재능 관리  >  등록된재능</div>
+
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_admin/admin_include/admin_gnb.html";?>
+<?if(!strstr($mc_login_authority,"m101")){script_alert_ok("권한이 없습니다.","/");}?>
+
+<?
+$table_name = "MC_BBS";
+$seq = $_REQUEST['seq'];
+$motion = $_REQUEST['motion'];
+if($seq){
+	$r = mysql_fetch_array(mysql_query("select * from $table_name where seq = $seq "));
+	$ca1 = $r['cate1'];
+	$ca2 = $r['cate2'];
+	$tel_r = explode("-",$r['utel']);
+	$t1 = $tel_r[0];
+	$t2 = $tel_r[1];
+	$t3 = $tel_r[2];
+}
+if(!$r['cla']) $r['cla']="c";
+if($r["gmarketseq"]==0)$r["gmarketseq"] = "";
+?>
+			<SCRIPT LANGUAGE="JavaScript">
+			<!--
+
+				$(document).ready(function(){
+					<?if($ca1){?>
+					$("#apply_category").val("<?=$ca1?>");
+					setTimeout(function(){
+						cate_select(document.input_f);
+						<?if($ca2){?>$("#apply_category2").val("<?=$ca2?>");<?}?>
+					},300);
+					<?}?>
+				});
+
+				function inputOK(){
+					 var f = document.input_f;
+					 if(!f.title.value){
+						alert("미라클이름이 필요합니다.");
+						f.title.focus();
+						return;
+					 }
+
+					f.submit();
+				}
+
+				function cate_select(formname){
+					var f = formname;
+					var ca2_se = formname.ca2;
+					var ca1_in = f.ca1.selectedIndex;
+					if(ca1_in==0 || ca1_in==4){
+						ca2_se.options.length = 0;
+						ca2_se.options[0]  = new Option("선택", "");
+					}
+					if(ca1_in==1){
+						ca2_se.options.length = <?=sizeof($ca11_array)?>;
+						ca2_se.options[0]  = new Option("선택", "");
+						<?for($i=1;$i<sizeof($ca11_array);$i++){?>
+						ca2_se.options[<?=$i?>]  = new Option("<?=$ca11_array[$i]?>", "<?=$i?>");
+						<?}?>
+					}
+					if(ca1_in==2){
+						ca2_se.options.length = <?=sizeof($ca12_array)?>;
+						ca2_se.options[0]  = new Option("선택", "");
+						<?for($i=1;$i<sizeof($ca12_array);$i++){?>
+						ca2_se.options[<?=$i?>]  = new Option("<?=$ca12_array[$i]?>", "<?=$i?>");
+						<?}?>
+					}
+					if(ca1_in==3){
+						ca2_se.options.length = <?=sizeof($ca13_array)?>;
+						ca2_se.options[0]  = new Option("선택", "");
+						<?for($i=1;$i<sizeof($ca13_array);$i++){?>
+						ca2_se.options[<?=$i?>]  = new Option("<?=$ca13_array[$i]?>", "<?=$i?>");
+						<?}?>
+					}
+				}
+				function downOK(seq){
+					document.down_f.m.value = seq;
+					document.down_f.submit();
+				}
+			//-->
+			</SCRIPT>
+		<div id="container">
+			<div class="topNavi">
+				<h3>재능 관리</h3>
+			</div><!--// class="topNavi" -->
+
+			<div class="content">
+				<form action="/apply/download.html" method=post name="down_f">
+				<input type="hidden" name='seq' value="<?=$r['seq']?>">
+				<input type="hidden" name='m' value="4">
+				</form>
+				<form action="item_write_ok.php" name="input_f" method=post enctype="multipart/form-data">
+				<input type="hidden" name="cla" value="<?=$r['cla']?>">
+				<input type="hidden" name="seq" value="<?=$r['seq']?>">
+				<table class="board03">
+					<colgroup><col width="116"/><col width="*"/></colgroup>
+					<tr>
+						<td class="border_none"><p class="tit_base">• 기본정보</p></td>
+						<td class="border_none"><p class="txt_attention"><span class="col_ff0000">&#42;</span>는 필수입력항목입니다.</p></td>
+					</tr>
+					<tr>
+						<th scope="row">상태  <span class="col_ff0000">*</span></th>
+						<td><select name="status">
+							<option value="n">확인중</option>
+							<option value="y" <?if($r['status']=="y"){?>selected<?}?>>등록완료</option>
+							<option value="r" <?if($r['status']=="r"){?>selected<?}?>>등록불가</option>
+							</select></td>
+					</tr>
+					<tr>
+						<th scope="row">미라클이름  <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="title" class="w670" maxlength=50 value="<?=stripslashes($r['title'])?>"/></td>
+					</tr>
+					<tr>
+						<th scope="row">카테고리  <span class="col_ff0000">*</span></th>
+						<td>
+							<select name="ca1" id="apply_category" onchange="cate_select(this.form)">
+														<option value="">선택</option>
+														<?for($i=1;$i<sizeof($ca1_array);$i++){?>
+														<option value="<?=$i?>"><?=$ca1_array[$i]?></option>
+														<?}?>
+							</select>
+							<select name="ca2" id="apply_category2" >
+								<option value="">선택</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이미지</th>
+						<td>
+						<input type="file" name="attach1" class="w670" maxlength=500 />
+						<input type="file" name="attach2" class="w670" maxlength=500 />
+						<input type="file" name="attach3" class="w670" maxlength=500 />
+						<br>
+						<?if($r['thumb1']){?><span style='float:left;margin-left:5px'><a href="<?=$r["attach1"]?>" target=_blank><img src="<?=$r["thumb1"]?>"></a><br><a href="javascript:downOK(1)">[이미지다운로드]</a></span> <?}?>
+						<?if($r['thumb2']){?><span style='float:left;margin-left:5px'><a href="<?=$r["attach2"]?>" target=_blank><img src="<?=$r["thumb2"]?>"></a><br><a href="javascript:downOK(2)">[이미지다운로드]</a></span> <?}?>
+						<?if($r['thumb3']){?><span style='float:left;margin-left:5px'><a href="<?=$r["attach3"]?>" target=_blank><img src="<?=$r["thumb3"]?>"></a><br><a href="javascript:downOK(3)">[이미지다운로드]</a></span> <?}?>
+						</td>
+					</tr>
+
+					<tr>
+						<th scope="row">이름 <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="unm" class="w670" maxlength=20 value="<?=$r["unm"]?>"/></td>
+					</tr>
+					<tr>
+						<th scope="row">연락처 <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="t1" class="w170" maxlength=3 value="<?=$t1?>"/> <input type="text" name="t2" class="w170" maxlength=4 value="<?=$t2?>"/> <input type="text" name="t3" class="w170" maxlength=4 value="<?=$t3?>"/></td>
+					</tr>
+
+
+					<tr>
+						<th scope="row">미리보기링크</th>
+						<td>
+						<input type="text" name="ulink" class="w670" maxlength=200 value="<?=$r["ulink"]?>"/>
+						<br><a href="<?=$r["ulink"]?>" target=_blank><?=$r["ulink"]?></a>
+						</td>
+					</tr>
+
+
+					<tr>
+						<th scope="row">첨부파일</th>
+						<td>
+						<input type="file" name="attach4" class="w670" maxlength=500 />
+						<?if($r["filename4"]){?><br><a href="javascript:downOK(4)">[첨부파일 다운로드 : <?=$r["filename4"]?>]</a><?}?>
+						</td>
+					</tr>
+
+					<tr>
+						<th scope="row">상세설명 <span class="col_ff0000">*</span></th>
+						<td><textarea name="content" style="width:670px;height:120px"><?=$r["content"]?></textarea></td>
+					</tr>
+
+					<tr>
+						<th scope="row">지마켓고유번호 <span class="col_ff0000">*</span></th>
+						<td><input type="text" name="gmarketseq" class="w170" maxlength=10 value="<?=$r["gmarketseq"]?>"/></td>
+					</tr>
+
+					<tr>
+						<th scope="row">지마켓판매URL <span class="col_ff0000">*</span></th>
+						<td>
+						<input type="text" name="gmarketurl" class="w670" maxlength=200 value="<?=$r["gmarketurl"]?>"/>
+						<br>* http 부터 써주세요 (지마켓 고유번호와 링크를 모두 넣고 저장하면 등록완료로 변경 됩니다.)
+						</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2" class="border_none">
+							<div class="btn_area">
+								<a href="javascript:inputOK()"><span class="btn456093">저장</span></a>
+								<a href="javascript:document.input_f.reset()"><span class="btn5f5f5f">취소</span></a>
+								<a href="item_list.html"><span class="btnbebebe">목록</span></a>
+							</div>
+						</td>
+					</tr>
+
+				</table><!--// table "info_table" -->
+
+
+			</div><!--// class="content" -->
+
+		</div><!--// id="container" -->
+
+	</div><!--// id="right" -->
+
+
+</div><!--// id="wrapper" -->
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<?
+	$k=0;
+	$last_pno = (int)(($total-1) / $list_qty)+1;
+	$start_pno = (int)(($pno-1) / $list_size)* $list_size + 1;
+	if(($start_pno + $list_size-1) > $last_pno) $end_pno = $last_pno; else $end_pno = $start_pno + $list_size - 1 ;
+	if($start_pno - $list_size > 0 ) $s_pno = $start_pno - $list_size; else $s_pno = 1;
+	if($end_pno + 1 <$last_pno ) $e_pno =  $end_pno + 1; else $e_pno = $last_pno;
+?>
+							<div id="paging">
+								<a href="?pno=<?=$s_pno?>&da1=<?=$da1?>&da2=<?=$da2?>&sw=<?=$sw?>&sj=<?=$sj?>&ca1=<?=$ca1?>&ca2=<?=$ca2?>"><img src="/_admin/images/common/btn_pre.png" alt="" /></a>
+								<?for($i=$start_pno;$i<=$end_pno;$i++){
+									$k++;
+									if($k>$list_size+1) break;
+									?>
+									<a href="?pno=<?=$i?>&da1=<?=$da1?>&da2=<?=$da2?>&sw=<?=$sw?>&sj=<?=$sj?>&ca1=<?=$ca1?>&ca2=<?=$ca2?>"><span
+										<?if($i == $pno){?>
+										class="on"
+									<?}else{?>
+									<?}?>
+									><?=$i?></span></a>
+								<?}?>
+								<a href="?pno=<?=$e_pno?>&da1=<?=$da1?>&da2=<?=$da2?>&sw=<?=$sw?>&sj=<?=$sj?>&ca1=<?=$ca1?>&ca2=<?=$ca2?>"><img src="/_admin/images/common/btn_next.png" alt="" /></a>
+							</div>

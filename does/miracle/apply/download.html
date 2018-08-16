@@ -1,0 +1,38 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_include/top_program.php";?>
+<?
+$seq = injection_filter_int(emt($_POST,"seq"));
+$m = injection_filter_length(emt($_POST,"m"),1);
+
+if($seq) $r = mysql_fetch_array(mysql_query("select * from MC_BBS where del_yn='n' and seq='$seq'"));
+if($r[0]){
+	if($m=="4"){
+		$filename = $r['filename4'];
+		$filename2 = $r['afile'];
+	}
+	if($m=="3"){
+		$filename = $r['filename3'];
+		$filename2 = $r['attach3'];
+	}
+	if($m=="2"){
+		$filename = $r['filename2'];
+		$filename2 = $r['attach2'];
+	}
+	if($m=="1"){
+		$filename = $r['filename1'];
+		$filename2 = $r['attach1'];
+	}
+	$filename = iconv("UTF-8","EUC-KR",$filename) ? iconv("UTF-8","EUC-KR",$filename) : $filename;
+	$fd=fopen($_SERVER['DOCUMENT_ROOT'].$filename2,'r');
+	if($fd){
+		header("Content-type: application/x-msdownload");
+		header("Content-Disposition: attachment;filename=".$filename);
+		header('Content-length: '.filesize($_SERVER['DOCUMENT_ROOT'].$filename2));
+		fpassthru($fd);
+	}
+	else{script_view("파일이 없습니다..");}
+}
+else{
+	script_view("파일이 없습니다.");
+}
+?>
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_include/dbclose.php";?>

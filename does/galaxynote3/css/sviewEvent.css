@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* event */
+/*SView Event*/
+.tlt{visibility:hidden;overflow:hidden;height:0px;width:0px;margin:0;padding:0;font-size:0;position:absolute;left:-100000px;}
+.sview_container{position:relative;height:500px;background:url('../images/sviewEvent/sview_main_bg.gif')}
+.sviewCont{position:relative;width:1000px;height:500px;margin:0 auto;}
+.sviewCont h1.sview_title{position:absolute;top:68px;left:78px;width:490px;height:89px;background:url('../images/sviewEvent/sview_tit_01.png') no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewCont p.sview_subtitle{position:absolute;top:168px;left:78px;width:459px;height:68px;background:url('../images/sviewEvent/sview_tit_02.png') no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewCont ul.sview_text{position:absolute;top:246px;left:78px;width:438px;height:187px;background:url('../images/sviewEvent/sview_txt.png') no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewCont ul.sview_text li{font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewCont a.sn_chk{position:absolute;display:block;top:375px;left:379px;width:110px;height:25px;background:url("../images/sviewEvent/sview_chk_btn.png") no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewCont a.join{position:absolute;display:block;top:442px;left:336px;width:308px;height:47px;background:url("../images/sviewEvent/sview_go_btn.png") no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;z-index:10;}
+.sviewCont .join_end{position:absolute;display:block;top:447px;left:336px;width:308px;height:47px;background:url("../images/sviewEvent/sview_go_btn_end.png") no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;z-index:10;}/*131017 수정*/
+.sviewCont .itemImg{position:absolute;top:175px;left:544px;z-index:1;}/*131017 수정*/
+.sviewCont p.noti{position:absolute;top:454px;left:648px;width:300px;height:38px;z-index:2;background:url('../images/sviewEvent/sview_noti.png') no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewCont .sview_info{position:absolute;top:90px;left:570px;z-index:1;}/*131017 수정*/
+.shade_bg{width:100%;height:100%;position:fixed;top:0;left:0;z-index:999;background-image:url("../images/sviewEvent/popup_bg.png"); display: none;}
+.popup{display:none;position:absolute;width:550px;height:400px;top:50%;left:50%;margin-top:-200px;margin-left:-275px;background:url("../images/sviewEvent/serial_chk.jpg") 0 0 no-repeat;z-index:1000;}
+.popup a.close_btn{position:relative;top:9px;float:right;margin-right:11px}
+#footer{position:relative;width:100%;min-width:1000px;height:250px;margin:-250px auto 0;}
+.sview_footer_container{position:relative;height:250px;background:url('../images/sviewEvent/sview_footer_bg.gif')}
+.sviewFooter{position:relative;width:1000px;height:250px;margin:0 auto;}
+.sviewFooter h3{position:absolute;top:8px;left:78px;width:239px;height:24px;background:url('../images/sviewEvent/sview_note_01.png') no-repeat;font-size:0;line-height:999px;vertical-align:top;overflow:hidden;}
+.sviewFooter ul{position:absolute;top:8px;left:334px;width:605px;height:236px;background:url('../images/sviewEvent/sview_note_02.png') no-repeat;overflow:hidden;}
+.sviewFooter ul li{font-size:0;line-height:999px;vertical-align:top;}

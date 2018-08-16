@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>가입방법 선택하기 - Enriching Company</title>
+		<? include "include/header.html" ?>
+    				<div id="contents" class="join">
+    					<section id="join">
+							<article class="visual">
+								<div class="content_wrap">
+									<h3><img src="images/join/join_title.png" alt="JOIN US - 인리칭 컴퍼니 주주 가입하기" /></h3>
+								</div>
+							</article>
+							<article class="join_step">
+								<div class="content_wrap">
+									<h4><img src="images/join/join_step1.png" alt="STEP1. 주주 가입 방법을 선택해 주세요." /></h4>
+									<p class="join_step1_text"><img src="images/join/join_step1_text.png" alt="주주가입은 페이스북, 트위터, 일반회원가입으로 가능합니다." /></p>
+									<ul class="join_way">
+										<li><a href="javascript:loginFB('join');" title = "새창"><img src="images/join/join_way1.png" alt="페이스북으로 가입하기" /></a></li>
+										<li><a href="javascript:loginTW('join');" title = "새창"><img src="images/join/join_way2.png" alt="트위터로 가입하기" /></a></li>
+										<li class="last"><a href="join_step2.html" title = "사이트에서 가입하기 페이지로 이동"><img src="images/join/join_way3.png" alt="사이트에서 가입하기" /></a></li>
+									</ul>
+								</div>
+							</article>
+    					</section>
+    					
+    				</div>
+    				<!-- contents end -->
+					<? include "include/footer.html" ?>
+				</div> <!-- end girds -->
+		</div> <!-- end wrapper -->
+
+	</body> <!-- end body -->
+
+</html>
+<script type="text/javascript">
+	
+	getPhoneNumber = function(data){
+
+		if(data.result == "Y"){
+			$('#join2_phone1').val(data.phone.p1);
+			$('#join2_phone2').val(data.phone.p2);
+			$('#join2_phone3').val(data.phone.p3);
+		}
+
+	}
+
+	var type = getURLParameter('type');
+
+	if(type == "event"){
+		$('.join_step').hide();
+		$('.join_event').show();
+	}else{
+		
+	}
+	
+	
+</script>

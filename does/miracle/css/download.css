@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*내가 구매한 미라클 보기*/
+#contents.board {width:780px; height:550px; position:relative;}
+#contents.board .popup.purchase {position:static; text-align:center; width:634px; height:488px; background:url("../images/mylist/download_bg.png") no-repeat; padding:43px 53px 0 53px; margin:0 auto; left:0; margin-top:20px;}
+#contents.board .popup.purchase .middle{ padding:40px 112px 30px 110px; height:511px; }
+#contents.board .popup.purchase .txt {margin:10px 0 25px 0; }
+#contents.board .popup.purchase .popup_list_top {text-align:left}
+#contents.board .popup.purchase .purchase_list {text-align:left; margin:0 0 22px 0;}
+#contents.board .popup.purchase .purchase_list li {padding:9px 0; border-bottom:1px solid #e5e5e5; line-height:1px;}
+#contents.board .popup.purchase .purchase_list span {display:inline-block;  font-size:12px;}
+#contents.board .popup.purchase .date {width:123px; padding: 0 0 0 18px;}
+#contents.board .popup.purchase .title {width:414px;}
+#contents.board .popup.purchase .my_list_contents iframe {margin:45px 0 0 0; width:391px; height:310px;}
+#contents.board .popup.purchase .my_list_contents {position:absolute;  width:393px; height:364px; top:50%; left:50%; margin:-182px 0 0 -192px; background: url("../images/mylist/download_sub_bg.png") no-repeat; display:none;}
+#contents.board .popup.purchase .my_list_contents .mylist_img {width:145px; height:145px; border:4px solid #fff; margin:0 auto; margin-top:45px;}
+#contents.board .popup.purchase .my_list_contents .mylist_title {font-size:15px; color:#48979b; margin:15px 0 26px 0; font-weight:bold;line-height:15px;}
+#contents.board .popup.purchase .my_list_contents .mylist_date_area {margin:0 0 8px 0; color:#476364; font-size:13px; font-weight:bold;line-height:13px;}
+#contents.board .popup.purchase .my_list_contents .mylist_date_area .mylist_date { color:#476364; font-size:13px; font-weight:bold; line-height:13px;}
+#contents.board .popup.purchase .my_list_contents .txt {display:block;color:#476364; margin:0 0 18px 0;  font-size:10px;font-weight:bold; line-height:10px;}
+#contents.board .popup.purchase .my_list_contents .sub_close {position:absolute; top:10px; right:10px;}

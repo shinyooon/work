@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>갤러리아 명품관 관리자</title>
+<link rel="stylesheet" type="text/css" href="/_admin/css/style.css" />
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function inputOK(){
+		var f = document.input_f;
+		if(!f.admin_id.value){
+			alert('아이디를 써주세요');
+			f.admin_id.focus();
+			return false;
+		}
+		if(!f.admin_passwd.value){
+			alert('비밀번호를 써주세요');
+			f.admin_passwd.focus();
+			return false;
+		}
+		return true;
+	}
+//-->
+</SCRIPT>
+</head>
+<body onload="document.input_f.admin_id.focus();" id="index">
+<form action="login_ok.php" method=post name="input_f" onsubmit="return inputOK()">
+	<div id="login">
+		<div class="i_head">
+			<img src="/images/intro/s1_txt4.png" alt="미라클마켓 홈페이지 관리자입니다. 아이디와 비밀번호를 입력하신 후 Login 버튼을 눌러주세요." />
+		</div>
+
+		<div class="i_login">
+			<ul>
+				<li>
+					<dl>
+						<dt>ID</dt>
+						<dd><input name="admin_id" type="text" class="input03"   maxlength=12 tabindex=1  value="miracle" AUTOCOMPLETE="off"  style="ime-mode:disabled"/></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>PW</dt>
+						<dd><input name="admin_passwd" type="password" class="input03"  maxlength=12 tabindex=2  value="miracle" AUTOCOMPLETE="off" style="ime-mode:disabled" /></dd>
+					</dl>
+				</li>
+			</ul>
+			<p class="btn_login"><input type="image"  src="/_admin/images/btn_login.png" alt="login" /></p>
+		</div>
+		<div class="copy">
+			<img src="/_admin/images/copyright.png" alt="copyright" />
+		</div>
+	</div>
+	</form>
+
+</BODY>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+
+.selectphoto_content2 .post {background:none;}
+
+.selectphoto_content2 .post .post_right .post_upload input.select_photo {height:auto; width:170px;}
+.selectphoto_content2 .post .post_right .post_upload input.upload_photo {height:auto; width:60px;}
+
+textarea {overflow: hidden;}
+
+
+
+.selectphoto_content .facebook {background:none;overflow: hidden;width: 510px;}
+.selectphoto_content .facebook .photo_list_container {width: 510px;height: 255px;overflow: hidden;position: relative;}
+.selectphoto_content .facebook .photo_list_contents {width: 510px;height: 250px;position: absolute;left: 0;top: 0;}
+.selectphoto_content .facebook .photo_list {height:250px; width:510px;}
+.selectphoto_content .facebook .photo_list li{float:left; padding:0; width:82px; height:82px;margin: 0 1px 1px 0;overflow: hidden;border: 1px solid #ddd;position: relative;}
+.selectphoto_content .facebook .photo_list li div.active {width: 83px;height: 83px;background: url("../images/photo/photo_select.png") no-repeat;position: absolute;left: 0px;top: 0px;}
+
+
+.receiver1_content .receiver_con {position: absolute;}
+.receiver3_content .receiver3_con {position: absolute;}
+
+#flashContents {z-index: 10;}
+
+.input_text {background: url("../images/transparent.png") !important;}
+
+
+
+.receiver2_v_img {width: 290px;height: 214px;position: relative;overflow: hidden;}
+.receiver2_h_img {width: 270px;height: 366px;position: relative;overflow: hidden;}

@@ -1,0 +1,29 @@
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_include/top_program.php";?>
+						<ul class="marketList">
+<?
+$query = injection_filter_length(emt($_GET,"query"),500);
+$limits = " limit 0,10";
+$rs = mysql_query("select * from MC_BBS where  del_yn='n' and cla='c' $query order by section ,ranking desc, seq desc $limits ");  // status='y' and view_yn='y' and gmarketurl !='' and
+
+						while($r=mysql_fetch_array($rs)){
+?>
+							<li>
+								<a href="<?=$r['gmarketurl']?>" target="_blank">
+									<span class="img"><img src="<?=$r['thumb1']?>" alt="재능 나눔 이미지" /></span>
+									<span class="title"><?=strcut($r['title'],40)?></span>
+									<span class="name">by <?=$r['unm']?></span>
+									<span class="btn"><img src="images/market/buy_btn.png" alt="구매하기" /></span>
+								</a>
+							</li>
+						<?}?>
+
+						</ul>
+						<div class="pageNum">
+							<a class="pagePrev" href="#"><img src="images/common/arrow_l.png" alt="이전페이지" /></a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a class="pageNext" href="#"><img src="images/common/arrow_r.png" alt="다음페이지" /></a>
+						</div>
+<?include_once $_SERVER["DOCUMENT_ROOT"]."/_include/dbclose.php";?>
